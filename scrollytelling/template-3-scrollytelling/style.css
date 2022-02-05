@@ -1,0 +1,297 @@
+/*MAIN STYLE TEMPLATE*/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,700;1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+.container {
+    width: 90%;
+    display:block;
+    font-family: 'Open Sans', sans-serif;
+    margin: auto;
+}
+
+.title-section {
+    width:100%;
+    font-family: 'Noto Sans', sans-serif;
+    max-width: 600px;
+    margin: 3rem auto 5rem auto;
+    text-align: center;
+}
+
+.title-section .title .text h2{
+    font-weight: 700;
+    font-size: 3.1rem;
+    margin: 0 auto 3rem auto;
+}
+
+.title-section .title .text p{
+    font-weight: 300;
+    margin: 0 auto 1.2rem auto;
+    max-width: 700px;
+    line-height: 1.8rem;
+}
+
+.subhead {
+    color: #888;
+}
+
+h3 {
+    font-size: 1.8rem;
+    line-height: 3rem;
+    margin: 3rem auto auto auto;
+}
+
+.meta {
+    width:100%;
+    max-width: 600px;
+    margin: 3rem auto 5rem auto;
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.body-section {
+    width:100%;
+    max-width: 650px;
+    margin: 0 auto 0 auto;
+    text-align: left;
+}
+
+.body-section p{
+    font-size:1.2rem;
+    line-height: 2.1rem;
+}
+
+.graphic{
+    margin: 0 auto;
+}
+
+.data-source{
+    color: #888;
+    font-size: 0.9rem;
+    line-height: 1.6rem;
+    max-width: 650px;
+    margin: 3rem auto 3rem auto;
+}
+
+.end-credit{
+    color: #888;
+    font-size: 1rem;
+    line-height: 2rem;
+    max-width: 650px;
+    margin: auto;
+}
+
+.profile {
+    display: flex;
+    width: 80%;
+    margin: auto;
+}
+
+.profile > div {
+    margin:1rem;
+}
+
+.profpic {
+    background-color: rgb(200,200,200);
+    width:100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.profname {
+    margin-left: 30px!important;
+}
+
+.name {
+    font-size: 2rem;
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 700;
+}
+
+.profile-bar {
+    background-color: rgb(200,200,200);
+    width:100%;
+    height:2px;
+    max-width: 650px;
+    border-radius: 1px;
+}
+
+.section-bar {
+    background-color: rgb(200,200,200);
+    width:100%;
+    height:4px;
+    max-width: 650px;
+    margin: 5rem auto auto auto;
+    border-radius: 2px;
+}
+
+/* MAIN STYLE RESPONSIVE */
+
+@media screen and (max-width: 720px) {
+    .title-section .title .text h2 {
+        font-size: 2rem;
+        line-height: 2.4rem;
+    }
+    .end-credit{
+        font-size: 0.9rem;
+        line-height: 1.8rem;
+    }
+    .data-source{
+        font-size: 0.8rem;
+        line-height: 1.4rem;
+    }
+    .body-section p{
+        font-size:1.1rem;
+        line-height: 1.8rem;
+    }
+    .meta {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+    h3 {
+        font-size: 1.5rem;
+        line-height: 2.4rem;
+    }
+
+    .profile {
+        display: flex;
+        width: 100%;
+        margin: auto;
+    }
+    
+    .profile > div {
+        margin:1rem;
+    }
+
+    .profpic {
+        background-color: rgb(200,200,200);
+        width:80px!important;
+        height: 80px!important;
+        border-radius: 50%;
+    }
+    
+    .profname {
+        margin-left: 5px!important;
+    }
+    
+    .name {
+        font-size: 1.2rem;
+        font-family: "Noto Sans", sans-serif;
+        font-weight: 700;
+    }
+
+}
+/* END MAIN STYLE TEMPLATE*/
+
+/* SCROLLYTELLING STYLE */
+
+#scrolly {
+    margin-top: 5rem;
+    position: relative;
+    font-family: "Open Sans", sans-serif;
+  }
+
+.scroll-article {
+    position: absolute;
+    bottom:0;
+    width: 100%;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    -webkit-transform: translate3d(0, 0, 1);
+    -moz-transform: translate3d(0, 0, 1);
+    transform: translate3d(0, 0, 1);
+}
+
+.graph {
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    background-color: #8a8a8a;
+    z-index: 1;
+}
+
+.graph p {
+    text-align: center;
+    padding: 1rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -moz-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-size: 8rem;
+    font-weight: 900;
+    color: #fff;
+}
+
+.step {
+    width: 100%;
+    max-width: 650px;
+    position: relative;
+    margin: 0 0 2rem 0;
+    
+    /*background-color: #3b3b3b;*/
+
+}
+
+.step-text {
+    background-color: lightblue;
+    position: absolute;
+    width: 100%;
+    top:0;
+    opacity: 75%;
+    border-radius: 1rem;
+}
+
+.step:last-child {
+    margin-bottom: 0;
+}
+
+/*.step.is-active {
+    background-color: goldenrod;
+}*/
+
+.step p {
+    padding: 1rem;
+    text-align: center;
+    font-size: 1.2rem;
+    line-height: 2.1rem;
+    text-align: left;
+    margin:0;
+}
+
+.spacer {
+    margin: 0px!important;
+}
+
+/* SCROLLYTELLING RESPONSIVE */
+
+
+@media screen and (max-width: 719px) {
+    
+    #scrolly {
+        width: 100%;
+    }
+    .scroll-article {
+        width:90%;
+        margin:auto;
+    }
+
+    .step {
+        width: 100%;
+    }
+
+    .step p {
+        font-size:1.1rem;
+        line-height: 1.8rem;
+    }
+
+}
+
+/* CONTENT */
+
+.modelviewer {
+    width:100%;
+    height: 100%;
+}

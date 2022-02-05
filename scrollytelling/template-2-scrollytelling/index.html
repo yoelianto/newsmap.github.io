@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+    <!--NO TITLE HEAD-->
+
+    <!--GOOGLE FONTS-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+
+    <!--CUSTOM CSS-->
+    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+
+    <!--D3-FORMAT-->
+    <script src="https://d3js.org/d3-format.v2.min.js"></script>
+
+    <!--JQUERY-->
+    <script
+        src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs="
+        crossorigin="anonymous">
+    </script>
+
+    <!--THREE-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r123/three.min.js"></script>
+
+    <!--D3-->
+    <script src='https://d3js.org/d3.v5.min.js'></script>
+
+    <!--INTERSECTION OBSERVER-->
+    <script src="https://unpkg.com/intersection-observer@0.5.1/intersection-observer.js"></script>
+    <!--STICKY FILL-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/stickyfill/2.1.0/stickyfill.min.js"></script>
+    <!--SCROLLAMA-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollama/2.2.1/scrollama.min.js"></script>
+
+</head>
+
+<body>
+
+  <main class="container">
+
+    <section class="title-section">
+        <div class="title">
+            <div class="text">
+                <h2>Excepteur Sint Occaecat Cupidatat Non Proident</h2>
+                <!--SUBJUDUL APABILA DIPERLUKAN-->
+                <p class="subhead">Artikel tester, isinya berupa artikel dengan tambahan infografik "scrollytelling". Di bagian paling bawah
+                    ditambahkan template profil pekerja artikel yang baru.
+                    Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui
+                    ratione voluptatem sequi nesciunt.
+                </p>
+            </div>
+        </div>
+    </section>
+    
+    <!--CREDIT-->
+    <aside class="meta">
+        <div class="author">Oleh <strong>Nama Penulis</strong> & <strong>Nama Lainnya</strong></div>
+        <div class="tanggal">99 Bulan 2021</div>
+    </aside>
+
+    <!--ISI ARTIKEL-->
+    <section class="body-section">
+        <h3>Quisque et scelerisque magna</h3>
+
+        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
+            architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui
+            ratione voluptatem sequi nesciunt.</p>
+
+        <h3>Mauris sit amet lobortis lacus</h3>
+
+        <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora
+            incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid
+            ex ea commodi consequatur?</p>
+        <p>Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo
+            voluptas nulla pariatur?</p>
+    </section>
+
+
+<!--SCROLLAMA PART-->
+    <section id="scrolly">
+        <figure class="graph">
+            <p>0</p>
+        </figure>
+        
+      <article class="scroll-article">
+        <div class="step" data-step="1">
+            <div class="step-text" id="st-1">
+                <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora
+                    incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+            </div>
+        </div>
+        <div class="step" data-step="2">
+            <div class="step-text" id="st-2">
+                <p> Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui
+                    ratione voluptatem sequi nesciunt.</p>
+            </div>
+        </div>
+        <div class="step" data-step="3">
+            <div class="step-text" id="st-3">
+                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
+                    architecto beatae vitae dicta sunt explicabo.</p>
+            </div>
+        </div>
+        <div class="step" data-step="4">
+            <div class="step-text" id="st-4">
+                <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora
+                    incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+            </div>
+        </div>
+      </article>
+
+      
+    </section>
+
+    <section id="outro"></section>
+<!--END SCROLLAMA PART-->
+
+<!--ISI ARTIKEL-->
+<section class="body-section">
+    <h3>Quisque et scelerisque magna</h3>
+
+    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
+        architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui
+        ratione voluptatem sequi nesciunt.</p>
+
+    <h3>Mauris sit amet lobortis lacus</h3>
+
+    <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora
+        incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid
+        ex ea commodi consequatur?</p>
+    <p>Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo
+        voluptas nulla pariatur?</p>
+</section>
+
+<!-- CREDIT -->
+<div class="section-bar"></div>
+
+        <section class="end-credit">
+            <div class="profile" id="p1">
+                <div class="profpic"></div>
+                <div class="profname">
+                    <div class="role">Penulis</div>
+                    <div class="name">Nama Penulis</div>
+                </div>
+            </div>
+            <div class="profile-bar"></div>
+            <div class="profile" id="p1">
+                <div class="profpic"></div>
+                <div class="profname">
+                    <div class="role">Penata Grafis</div>
+                    <div class="name">Nama Penata Grafis</div>
+                </div>
+            </div>
+            <div class="profile-bar"></div>
+            <div class="profile" id="p1">
+                <div class="profpic"></div>
+                <div class="profname">
+                    <div class="role">Periset</div>
+                    <div class="name">Nama Periset</div>
+                </div>
+            </div>
+            <div class="profile-bar"></div>
+            <br>
+            Sumber: Pellentesque lacus sem, aliquam vel tincidunt vitae, luctus ut mauris. Vestibulum quis lacus turpis. Integer ultrices ornare molestie. Fusce at lacus tristique urna consectetur cursus ut eu nisi.<br>
+
+        </section>
+
+
+  </main>
+
+
+ <!-- <div class='debug'></div> -->
+
+ <script src="main.js">
+   
+ </script>
+
+</body>
+</html>
