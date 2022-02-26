@@ -31,7 +31,7 @@ const fetchImage = (async () => {
 
 <style>
     .title {
-        font-family: 'Matroska';
+        font-family: 'MATROSKA';
         margin-left: 6%;
     }
     .slider-container {

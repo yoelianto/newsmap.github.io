@@ -61,7 +61,7 @@ return await response.json()
         justify-content: space-between;
     }
     .title {
-            font-family: 'Matroska';
+            font-family: 'MATROSKA';
     }
     .viewall {
         color: #004EFF;

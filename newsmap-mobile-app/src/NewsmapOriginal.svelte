@@ -14,7 +14,7 @@
 
 <style>
     .title {
-        font-family: 'Matroska';
+        font-family: 'MATROSKA';
         margin-left: 6%;
         margin-top: 1rem;
     }
