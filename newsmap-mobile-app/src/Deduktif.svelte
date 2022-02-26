@@ -33,7 +33,7 @@
 
 <style>
     .deduktif {
-        font-family: 'Druk Wide Bold';
+        font-family: 'Matroska';
         margin-left: 6%;
         margin-top: 1rem;
         margin-bottom:40vw;
