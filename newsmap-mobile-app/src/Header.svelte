@@ -70,6 +70,7 @@
 </nav>
 
 <style>
+    
     .container {
         height:35vw;
         z-index: 99;
@@ -121,4 +122,32 @@
         font-weight:700; 
         margin: 1rem 1rem;
     }
+    @media only screen and (min-width: 420px) {
+		.container {
+			height: 30vw;
+		}
+	}
+
+    @media only screen and (min-width: 600px) {
+		.container {
+			height: 25vw;
+		}
+	}
+
+	@media only screen and (min-width: 800px) {
+		.container {
+			height: 20vw;
+		}
+	}
+
+	@media only screen and (min-width: 1000px) {
+		.container {
+			height: 15vw;
+		}
+	}
+    @media only screen and (min-width: 1200px) {
+		.container {
+			height: 10vw;
+		}
+	}
 </style>

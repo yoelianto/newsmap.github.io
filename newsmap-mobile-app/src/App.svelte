@@ -7,6 +7,7 @@
 	import News from './News.svelte'
 	import Podcast from './Podcast.svelte'
 	import Menu from './Menu.svelte'
+	import Rewara from './Rewara.svelte'
 
 	let margin;
 	let y;
@@ -24,6 +25,7 @@
 		<Sentiment />
 		<Original />
 		<Deduktif />
+		<Rewara title='REWARA'/>
 		<News title='TRENDING NOW'/>
 		<News title='PUBLIC NEWS'/>
 		<Podcast />
@@ -50,6 +52,21 @@
 		flex-direction: column;
 	}
 
-	@media (min-width: 640px) {
+	@media only screen and (max-width: 600px) {
+		main {
+			max-width: 600px;
+		}
+	}
+
+	@media only screen and (max-width: 800px) {
+		main {
+			max-width: 600px;
+		}
+	}
+
+	@media only screen and (max-width: 1000px) {
+		main {
+			max-width: 800px;
+		}
 	}
 </style>
