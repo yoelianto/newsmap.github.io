@@ -1084,7 +1084,7 @@ var app = (function () {
     			attr_dev(h4, "class", "menu svelte-1gh0swr");
     			attr_dev(h4, "id", h4_id_value = /*list*/ ctx[14].id);
     			toggle_class(h4, "selected", /*list*/ ctx[14].active === true);
-    			add_location(h4, file$9, 54, 20, 1612);
+    			add_location(h4, file$9, 54, 20, 1608);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, h4, anchor);
@@ -1173,26 +1173,26 @@ var app = (function () {
     			if (!src_url_equal(img.src, img_src_value = "./image/logo-jurno-web.svg")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "Logo Jurno Website");
     			attr_dev(img, "class", "svelte-1gh0swr");
-    			add_location(img, file$9, 49, 12, 1394);
+    			add_location(img, file$9, 49, 12, 1390);
     			attr_dev(div0, "class", "header-logo svelte-1gh0swr");
-    			add_location(div0, file$9, 48, 8, 1355);
+    			add_location(div0, file$9, 48, 8, 1351);
     			attr_dev(div1, "class", "headertext svelte-1gh0swr");
-    			add_location(div1, file$9, 52, 12, 1522);
+    			add_location(div1, file$9, 52, 12, 1518);
     			attr_dev(div2, "class", "bar svelte-1gh0swr");
     			set_style(div2, "left", /*$barPosition1*/ ctx[2] * 25 + 8.5 + "vw");
-    			add_location(div2, file$9, 63, 12, 1936);
+    			add_location(div2, file$9, 63, 12, 1932);
     			attr_dev(div3, "class", "bar svelte-1gh0swr");
     			set_style(div3, "left", /*$barPosition2*/ ctx[3] * 25 + 8.5 + "vw");
-    			add_location(div3, file$9, 64, 12, 2011);
+    			add_location(div3, file$9, 64, 12, 2007);
     			attr_dev(div4, "class", "bar svelte-1gh0swr");
     			set_style(div4, "left", /*$barPosition3*/ ctx[4] * 25 + 8.5 + "vw");
-    			add_location(div4, file$9, 65, 12, 2086);
+    			add_location(div4, file$9, 65, 12, 2082);
     			attr_dev(div5, "class", "header-menu svelte-1gh0swr");
-    			add_location(div5, file$9, 51, 8, 1483);
+    			add_location(div5, file$9, 51, 8, 1479);
     			attr_dev(div6, "class", "container svelte-1gh0swr");
     			add_render_callback(() => /*div6_elementresize_handler*/ ctx[10].call(div6));
-    			add_location(div6, file$9, 47, 4, 1295);
-    			add_location(nav, file$9, 46, 0, 1284);
+    			add_location(div6, file$9, 47, 4, 1291);
+    			add_location(nav, file$9, 46, 0, 1280);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -1308,10 +1308,10 @@ var app = (function () {
 
     	let menus = [
     		{
-    			menu: 'Newsmap',
+    			menu: 'Jurno',
     			id: 0,
     			active: true,
-    			link: "#newsmap"
+    			link: "#jurno"
     		},
     		{
     			menu: 'Original',
@@ -1469,7 +1469,7 @@ var app = (function () {
     		c: function create() {
     			p = element("p");
     			p.textContent = "An error occurred!";
-    			add_location(p, file$8, 18, 16, 534);
+    			add_location(p, file$8, 18, 16, 532);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -1502,7 +1502,7 @@ var app = (function () {
     			attr_dev(img, "class", "imggrid svelte-1fgwnog");
     			if (!src_url_equal(img.src, img_src_value = /*data*/ ctx[2][0].url)) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", /*data*/ ctx[2][0].title);
-    			add_location(img, file$8, 16, 16, 427);
+    			add_location(img, file$8, 16, 16, 425);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, img, anchor);
@@ -1532,7 +1532,7 @@ var app = (function () {
     		c: function create() {
     			p = element("p");
     			p.textContent = "...waiting";
-    			add_location(p, file$8, 14, 16, 366);
+    			add_location(p, file$8, 14, 16, 364);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -1562,7 +1562,7 @@ var app = (function () {
     		c: function create() {
     			p = element("p");
     			p.textContent = "An error occurred!";
-    			add_location(p, file$8, 31, 16, 996);
+    			add_location(p, file$8, 31, 16, 994);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -1667,9 +1667,9 @@ var app = (function () {
     			attr_dev(img, "class", "imggrid svelte-1fgwnog");
     			if (!src_url_equal(img.src, img_src_value = /*data*/ ctx[2][/*i*/ ctx[5] + 1].url)) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", /*data*/ ctx[2][/*i*/ ctx[5] + 1].title);
-    			add_location(img, file$8, 27, 24, 832);
+    			add_location(img, file$8, 27, 24, 830);
     			attr_dev(div, "class", "grid4 svelte-1fgwnog");
-    			add_location(div, file$8, 26, 20, 787);
+    			add_location(div, file$8, 26, 20, 785);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -1701,7 +1701,7 @@ var app = (function () {
     		c: function create() {
     			p = element("p");
     			p.textContent = "...waiting";
-    			add_location(p, file$8, 23, 16, 677);
+    			add_location(p, file$8, 23, 16, 675);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -1731,7 +1731,7 @@ var app = (function () {
     		c: function create() {
     			p = element("p");
     			p.textContent = "An error occurred!";
-    			add_location(p, file$8, 44, 16, 1458);
+    			add_location(p, file$8, 44, 16, 1456);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -1836,9 +1836,9 @@ var app = (function () {
     			attr_dev(img, "class", "imggrid svelte-1fgwnog");
     			if (!src_url_equal(img.src, img_src_value = /*data*/ ctx[2][/*i*/ ctx[5] + 5].url)) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", /*data*/ ctx[2][/*i*/ ctx[5] + 5].title);
-    			add_location(img, file$8, 40, 24, 1294);
+    			add_location(img, file$8, 40, 24, 1292);
     			attr_dev(div, "class", "grid4 svelte-1fgwnog");
-    			add_location(div, file$8, 39, 20, 1249);
+    			add_location(div, file$8, 39, 20, 1247);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -1870,7 +1870,7 @@ var app = (function () {
     		c: function create() {
     			p = element("p");
     			p.textContent = "...waiting";
-    			add_location(p, file$8, 36, 16, 1139);
+    			add_location(p, file$8, 36, 16, 1137);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -1900,7 +1900,7 @@ var app = (function () {
     		c: function create() {
     			p = element("p");
     			p.textContent = "An error occurred!";
-    			add_location(p, file$8, 57, 16, 1920);
+    			add_location(p, file$8, 57, 16, 1918);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -2005,9 +2005,9 @@ var app = (function () {
     			attr_dev(img, "class", "imggrid svelte-1fgwnog");
     			if (!src_url_equal(img.src, img_src_value = /*data*/ ctx[2][/*i*/ ctx[5] + 9].url)) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", /*data*/ ctx[2][/*i*/ ctx[5] + 9].title);
-    			add_location(img, file$8, 53, 24, 1756);
+    			add_location(img, file$8, 53, 24, 1754);
     			attr_dev(div, "class", "grid9 svelte-1fgwnog");
-    			add_location(div, file$8, 52, 20, 1711);
+    			add_location(div, file$8, 52, 20, 1709);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -2039,7 +2039,7 @@ var app = (function () {
     		c: function create() {
     			p = element("p");
     			p.textContent = "...waiting";
-    			add_location(p, file$8, 49, 16, 1601);
+    			add_location(p, file$8, 49, 16, 1599);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -2144,17 +2144,17 @@ var app = (function () {
     			div3 = element("div");
     			info_3.block.c();
     			attr_dev(div0, "class", "grid1 svelte-1fgwnog");
-    			add_location(div0, file$8, 12, 8, 296);
+    			add_location(div0, file$8, 12, 8, 294);
     			attr_dev(div1, "class", "grid1 svelte-1fgwnog");
-    			add_location(div1, file$8, 21, 8, 607);
+    			add_location(div1, file$8, 21, 8, 605);
     			attr_dev(div2, "class", "grid1 svelte-1fgwnog");
-    			add_location(div2, file$8, 34, 8, 1069);
+    			add_location(div2, file$8, 34, 8, 1067);
     			attr_dev(div3, "class", "grid1 svelte-1fgwnog");
-    			add_location(div3, file$8, 47, 8, 1531);
+    			add_location(div3, file$8, 47, 8, 1529);
     			attr_dev(div4, "class", "grid svelte-1fgwnog");
-    			add_location(div4, file$8, 11, 4, 268);
+    			add_location(div4, file$8, 11, 4, 266);
     			set_style(article, "margin-top", /*margin*/ ctx[0] + "px");
-    			attr_dev(article, "id", "newsmap");
+    			attr_dev(article, "id", "jurno");
     			attr_dev(article, "class", "svelte-1fgwnog");
     			add_location(article, file$8, 10, 0, 210);
     		},
@@ -2305,7 +2305,7 @@ var app = (function () {
     		c: function create() {
     			div4 = element("div");
     			p = element("p");
-    			p.textContent = "NEWSMAP ORIGINAL";
+    			p.textContent = "JURNO ORIGINAL";
     			t1 = space();
     			div3 = element("div");
     			div2 = element("div");
@@ -2317,13 +2317,13 @@ var app = (function () {
     			attr_dev(p, "class", "title svelte-18p8q9g");
     			add_location(p, file$7, 5, 4, 68);
     			attr_dev(div0, "class", "sub-title svelte-18p8q9g");
-    			add_location(div0, file$7, 8, 12, 177);
+    			add_location(div0, file$7, 8, 12, 175);
     			attr_dev(div1, "class", "card-title svelte-18p8q9g");
-    			add_location(div1, file$7, 9, 12, 236);
+    			add_location(div1, file$7, 9, 12, 234);
     			attr_dev(div2, "class", "inner-card svelte-18p8q9g");
-    			add_location(div2, file$7, 7, 8, 139);
+    			add_location(div2, file$7, 7, 8, 137);
     			attr_dev(div3, "class", "card svelte-18p8q9g");
-    			add_location(div3, file$7, 6, 4, 111);
+    			add_location(div3, file$7, 6, 4, 109);
     			attr_dev(div4, "class", "container");
     			attr_dev(div4, "id", "original");
     			add_location(div4, file$7, 4, 0, 25);

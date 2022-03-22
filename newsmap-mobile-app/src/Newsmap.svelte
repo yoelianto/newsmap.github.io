@@ -8,7 +8,7 @@
 </script>
 
 
-<article style="margin-top:{margin}px" id="newsmap">
+<article style="margin-top:{margin}px" id="jurno">
     <div class="grid">
         <div class="grid1">
             {#await fetchImage}

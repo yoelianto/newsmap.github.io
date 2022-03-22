@@ -23,7 +23,7 @@
     const barPosition3 = tweened(0, tweenConfig3);
 
     let menus = [
-        {menu:'Newsmap',id:0, active:true, link:"#newsmap"},
+        {menu:'Jurno',id:0, active:true, link:"#jurno"},
         {menu:'Original',id:1, active:false, link:"#original"},
         {menu:'Deduktif',id:2, active:false, link:"#deduktif"},
         {menu:'Podcast',id:3, active:false, link:"#podcast"}

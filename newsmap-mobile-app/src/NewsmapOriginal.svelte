@@ -3,7 +3,7 @@
 </script>
 
 <div class="container" id="original">
-    <p class="title">NEWSMAP ORIGINAL</p>
+    <p class="title">JURNO ORIGINAL</p>
     <div class="card">
         <div class="inner-card">
             <div class="sub-title">Original Newsmap</div>
