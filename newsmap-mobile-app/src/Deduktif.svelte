@@ -94,7 +94,7 @@
         width:70%;
         margin-bottom:0.8rem;
         color: white;
-        font-family: 'Jost';
+        font-family: 'Roboto';
     }
     .title {
         font-size: 1.25rem;

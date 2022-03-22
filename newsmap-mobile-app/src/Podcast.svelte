@@ -68,7 +68,7 @@ return await response.json()
     }
     .viewall {
         color: #004EFF;
-        font-family: 'SF Pro Text';
+        font-family: 'Roboto';
         font-size:0.8rem;
     }
     
@@ -93,7 +93,7 @@ return await response.json()
     }
     .playlist-title {
         margin: 0;
-        font-family: 'SF Pro Text';
+        font-family: 'Roboto';
         font-weight: bolder;
     }
     .playlist {
@@ -113,7 +113,7 @@ return await response.json()
     }
     .poddetail {
         width:60vw;
-        font-family: 'SF Pro Text';
+        font-family: 'Roboto';
         font-weight: bold;
     }
     .duration {

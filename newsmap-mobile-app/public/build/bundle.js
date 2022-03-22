@@ -1,27 +1,7 @@
 
 (function(l, r) { if (!l || l.getElementById('livereloadscript')) return; r = l.createElement('script'); r.async = 1; r.src = '//' + (self.location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1'; r.id = 'livereloadscript'; l.getElementsByTagName('head')[0].appendChild(r) })(self.document);
-var app = (function (animateScroll) {
+var app = (function () {
     'use strict';
-
-    function _interopNamespace(e) {
-        if (e && e.__esModule) return e;
-        var n = Object.create(null);
-        if (e) {
-            Object.keys(e).forEach(function (k) {
-                if (k !== 'default') {
-                    var d = Object.getOwnPropertyDescriptor(e, k);
-                    Object.defineProperty(n, k, d.get ? d : {
-                        enumerable: true,
-                        get: function () { return e[k]; }
-                    });
-                }
-            });
-        }
-        n["default"] = e;
-        return Object.freeze(n);
-    }
-
-    var animateScroll__namespace = /*#__PURE__*/_interopNamespace(animateScroll);
 
     function noop() { }
     const identity = x => x;
@@ -809,6 +789,269 @@ var app = (function (animateScroll) {
         };
     }
 
+    var _ = {
+      $(selector) {
+        if (typeof selector === "string") {
+          return document.querySelector(selector);
+        }
+        return selector;
+      },
+      extend(...args) {
+        return Object.assign(...args);
+      },
+      cumulativeOffset(element) {
+        let top = 0;
+        let left = 0;
+
+        do {
+          top += element.offsetTop || 0;
+          left += element.offsetLeft || 0;
+          element = element.offsetParent;
+        } while (element);
+
+        return {
+          top: top,
+          left: left
+        };
+      },
+      directScroll(element) {
+        return element && element !== document && element !== document.body;
+      },
+      scrollTop(element, value) {
+        let inSetter = value !== undefined;
+        if (this.directScroll(element)) {
+          return inSetter ? (element.scrollTop = value) : element.scrollTop;
+        } else {
+          return inSetter
+            ? (document.documentElement.scrollTop = document.body.scrollTop = value)
+            : window.pageYOffset ||
+                document.documentElement.scrollTop ||
+                document.body.scrollTop ||
+                0;
+        }
+      },
+      scrollLeft(element, value) {
+        let inSetter = value !== undefined;
+        if (this.directScroll(element)) {
+          return inSetter ? (element.scrollLeft = value) : element.scrollLeft;
+        } else {
+          return inSetter
+            ? (document.documentElement.scrollLeft = document.body.scrollLeft = value)
+            : window.pageXOffset ||
+                document.documentElement.scrollLeft ||
+                document.body.scrollLeft ||
+                0;
+        }
+      }
+    };
+
+    const defaultOptions = {
+      container: "body",
+      duration: 500,
+      delay: 0,
+      offset: 0,
+      easing: cubicInOut,
+      onStart: noop,
+      onDone: noop,
+      onAborting: noop,
+      scrollX: false,
+      scrollY: true
+    };
+
+    const _scrollTo = options => {
+      let {
+        offset,
+        duration,
+        delay,
+        easing,
+        x=0,
+        y=0,
+        scrollX,
+        scrollY,
+        onStart,
+        onDone,
+        container,
+        onAborting,
+        element
+      } = options;
+
+      if (typeof offset === "function") {
+        offset = offset();
+      }
+
+      var cumulativeOffsetContainer = _.cumulativeOffset(container);
+      var cumulativeOffsetTarget = element
+        ? _.cumulativeOffset(element)
+        : { top: y, left: x };
+
+      var initialX = _.scrollLeft(container);
+      var initialY = _.scrollTop(container);
+
+      var targetX =
+        cumulativeOffsetTarget.left - cumulativeOffsetContainer.left + offset;
+      var targetY =
+        cumulativeOffsetTarget.top - cumulativeOffsetContainer.top + offset;
+
+      var diffX = targetX - initialX;
+    	var diffY = targetY - initialY;
+
+      let scrolling = true;
+      let started = false;
+      let start_time = now() + delay;
+      let end_time = start_time + duration;
+
+      function scrollToTopLeft(element, top, left) {
+        if (scrollX) _.scrollLeft(element, left);
+        if (scrollY) _.scrollTop(element, top);
+      }
+
+      function start(delayStart) {
+        if (!delayStart) {
+          started = true;
+          onStart(element, {x, y});
+        }
+      }
+
+      function tick(progress) {
+        scrollToTopLeft(
+          container,
+          initialY + diffY * progress,
+          initialX + diffX * progress
+        );
+      }
+
+      function stop() {
+        scrolling = false;
+      }
+
+      loop(now => {
+        if (!started && now >= start_time) {
+          start(false);
+        }
+
+        if (started && now >= end_time) {
+          tick(1);
+          stop();
+          onDone(element, {x, y});
+        }
+
+        if (!scrolling) {
+          onAborting(element, {x, y});
+          return false;
+        }
+        if (started) {
+          const p = now - start_time;
+          const t = 0 + 1 * easing(p / duration);
+          tick(t);
+        }
+
+        return true;
+      });
+
+      start(delay);
+
+      tick(0);
+
+      return stop;
+    };
+
+    const proceedOptions = options => {
+    	let opts = _.extend({}, defaultOptions, options);
+      opts.container = _.$(opts.container);
+      opts.element = _.$(opts.element);
+      return opts;
+    };
+
+    const scrollContainerHeight = containerElement => {
+      if (
+        containerElement &&
+        containerElement !== document &&
+        containerElement !== document.body
+      ) {
+        return containerElement.scrollHeight - containerElement.offsetHeight;
+      } else {
+        let body = document.body;
+        let html = document.documentElement;
+
+        return Math.max(
+          body.scrollHeight,
+          body.offsetHeight,
+          html.clientHeight,
+          html.scrollHeight,
+          html.offsetHeight
+        );
+      }
+    };
+
+    const setGlobalOptions = options => {
+    	_.extend(defaultOptions, options || {});
+    };
+
+    const scrollTo = options => {
+      return _scrollTo(proceedOptions(options));
+    };
+
+    const scrollToBottom = options => {
+      options = proceedOptions(options);
+
+      return _scrollTo(
+        _.extend(options, {
+          element: null,
+          y: scrollContainerHeight(options.container)
+        })
+      );
+    };
+
+    const scrollToTop = options => {
+      options = proceedOptions(options);
+
+      return _scrollTo(
+        _.extend(options, {
+          element: null,
+          y: 0
+        })
+      );
+    };
+
+    const makeScrollToAction = scrollToFunc => {
+      return (node, options) => {
+        let current = options;
+        const handle = e => {
+          e.preventDefault();
+          scrollToFunc(
+            typeof current === "string" ? { element: current } : current
+          );
+        };
+        node.addEventListener("click", handle);
+        node.addEventListener("touchstart", handle);
+        return {
+          update(options) {
+            current = options;
+          },
+          destroy() {
+            node.removeEventListener("click", handle);
+            node.removeEventListener("touchstart", handle);
+          }
+        };
+      };
+    };
+
+    const scrollto = makeScrollToAction(scrollTo);
+    const scrolltotop = makeScrollToAction(scrollToTop);
+    const scrolltobottom = makeScrollToAction(scrollToBottom);
+
+    var animateScroll = /*#__PURE__*/Object.freeze({
+        __proto__: null,
+        setGlobalOptions: setGlobalOptions,
+        scrollTo: scrollTo,
+        scrollToBottom: scrollToBottom,
+        scrollToTop: scrollToTop,
+        makeScrollToAction: makeScrollToAction,
+        scrollto: scrollto,
+        scrolltotop: scrolltotop,
+        scrolltobottom: scrolltobottom
+    });
+
     /* src\Header.svelte generated by Svelte v3.46.4 */
     const file$9 = "src\\Header.svelte";
 
@@ -1096,7 +1339,7 @@ var app = (function (animateScroll) {
     		});
 
     		$$invalidate(1, menus[id].active = true, menus);
-    		animateScroll__namespace.scrollTo({ element: menus[id].link, offset: -150 });
+    		scrollTo({ element: menus[id].link, offset: -150 });
     		barPosition1.set(id);
     		barPosition2.set(id);
     		barPosition3.set(id);
@@ -1125,7 +1368,7 @@ var app = (function (animateScroll) {
     		cubicInOut,
     		quintInOut,
     		tweened,
-    		animateScroll: animateScroll__namespace,
+    		animateScroll,
     		height,
     		tweenConfig1,
     		tweenConfig2,
@@ -2071,15 +2314,15 @@ var app = (function (animateScroll) {
     			t3 = space();
     			div1 = element("div");
     			div1.textContent = "Kenapa Bimbel Bisa Booming Banget";
-    			attr_dev(p, "class", "title svelte-7168h3");
+    			attr_dev(p, "class", "title svelte-18p8q9g");
     			add_location(p, file$7, 5, 4, 68);
-    			attr_dev(div0, "class", "sub-title svelte-7168h3");
+    			attr_dev(div0, "class", "sub-title svelte-18p8q9g");
     			add_location(div0, file$7, 8, 12, 177);
-    			attr_dev(div1, "class", "card-title svelte-7168h3");
+    			attr_dev(div1, "class", "card-title svelte-18p8q9g");
     			add_location(div1, file$7, 9, 12, 236);
-    			attr_dev(div2, "class", "inner-card svelte-7168h3");
+    			attr_dev(div2, "class", "inner-card svelte-18p8q9g");
     			add_location(div2, file$7, 7, 8, 139);
-    			attr_dev(div3, "class", "card svelte-7168h3");
+    			attr_dev(div3, "class", "card svelte-18p8q9g");
     			add_location(div3, file$7, 6, 4, 111);
     			attr_dev(div4, "class", "container");
     			attr_dev(div4, "id", "original");
@@ -2470,37 +2713,37 @@ var app = (function (animateScroll) {
     			t6 = space();
     			p = element("p");
     			p.textContent = "DEDUKTIF";
-    			attr_dev(img, "class", "authorprofile svelte-d75abe");
+    			attr_dev(img, "class", "authorprofile svelte-11y9vrb");
     			if (!src_url_equal(img.src, img_src_value = "https://via.placeholder.com/600/24f355")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "author profile");
     			add_location(img, file$5, 10, 24, 262);
-    			attr_dev(div0, "class", "profile svelte-d75abe");
+    			attr_dev(div0, "class", "profile svelte-11y9vrb");
     			add_location(div0, file$5, 9, 20, 215);
-    			attr_dev(div1, "class", "left svelte-d75abe");
+    			attr_dev(div1, "class", "left svelte-11y9vrb");
     			add_location(div1, file$5, 8, 16, 175);
-    			attr_dev(div2, "class", "excerpt svelte-d75abe");
+    			attr_dev(div2, "class", "excerpt svelte-11y9vrb");
     			add_location(div2, file$5, 14, 20, 466);
-    			attr_dev(div3, "class", "right svelte-d75abe");
+    			attr_dev(div3, "class", "right svelte-11y9vrb");
     			add_location(div3, file$5, 13, 16, 425);
-    			attr_dev(div4, "class", "contentbot svelte-d75abe");
+    			attr_dev(div4, "class", "contentbot svelte-11y9vrb");
     			add_location(div4, file$5, 7, 12, 133);
-    			attr_dev(div5, "class", "author svelte-d75abe");
+    			attr_dev(div5, "class", "author svelte-11y9vrb");
     			add_location(div5, file$5, 22, 24, 955);
-    			attr_dev(div6, "class", "title svelte-d75abe");
+    			attr_dev(div6, "class", "title svelte-11y9vrb");
     			add_location(div6, file$5, 23, 24, 1024);
-    			attr_dev(div7, "class", "detail svelte-d75abe");
+    			attr_dev(div7, "class", "detail svelte-11y9vrb");
     			add_location(div7, file$5, 21, 20, 909);
-    			attr_dev(div8, "class", "headline svelte-d75abe");
+    			attr_dev(div8, "class", "headline svelte-11y9vrb");
     			add_location(div8, file$5, 20, 16, 865);
     			attr_dev(div9, "class", "contenttop");
     			add_location(div9, file$5, 19, 12, 823);
-    			attr_dev(div10, "class", "content svelte-d75abe");
+    			attr_dev(div10, "class", "content svelte-11y9vrb");
     			add_location(div10, file$5, 6, 8, 98);
-    			attr_dev(div11, "class", "bottom svelte-d75abe");
+    			attr_dev(div11, "class", "bottom svelte-11y9vrb");
     			add_location(div11, file$5, 5, 4, 68);
-    			attr_dev(p, "class", "deduktif svelte-d75abe");
+    			attr_dev(p, "class", "deduktif svelte-11y9vrb");
     			add_location(p, file$5, 29, 4, 1184);
-    			attr_dev(div12, "class", "container svelte-d75abe");
+    			attr_dev(div12, "class", "container svelte-11y9vrb");
     			attr_dev(div12, "id", "deduktif");
     			add_location(div12, file$5, 4, 0, 25);
     		},
@@ -2706,15 +2949,15 @@ var app = (function (animateScroll) {
     			p1 = element("p");
     			t3 = text(t3_value);
     			t4 = space();
-    			attr_dev(img, "class", "imgthumb svelte-174hxwb");
+    			attr_dev(img, "class", "imgthumb svelte-4j48tv");
     			if (!src_url_equal(img.src, img_src_value = /*data*/ ctx[2][/*i*/ ctx[5]].url)) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", /*data*/ ctx[2][/*i*/ ctx[5]].title);
     			add_location(img, file$4, 18, 24, 528);
-    			attr_dev(p0, "class", "author svelte-174hxwb");
+    			attr_dev(p0, "class", "author svelte-4j48tv");
     			add_location(p0, file$4, 19, 24, 616);
-    			attr_dev(p1, "class", "article-title svelte-174hxwb");
+    			attr_dev(p1, "class", "article-title svelte-4j48tv");
     			add_location(p1, file$4, 20, 24, 670);
-    			attr_dev(div, "class", "news svelte-174hxwb");
+    			attr_dev(div, "class", "news svelte-4j48tv");
     			add_location(div, file$4, 17, 20, 484);
     		},
     		m: function mount(target, anchor) {
@@ -2805,11 +3048,11 @@ var app = (function (animateScroll) {
     			div1 = element("div");
     			div0 = element("div");
     			info.block.c();
-    			attr_dev(p, "class", "title svelte-174hxwb");
+    			attr_dev(p, "class", "title svelte-4j48tv");
     			add_location(p, file$4, 10, 4, 232);
-    			attr_dev(div0, "class", "slider svelte-174hxwb");
+    			attr_dev(div0, "class", "slider svelte-4j48tv");
     			add_location(div0, file$4, 12, 8, 306);
-    			attr_dev(div1, "class", "slider-container svelte-174hxwb");
+    			attr_dev(div1, "class", "slider-container svelte-4j48tv");
     			add_location(div1, file$4, 11, 4, 266);
     			attr_dev(div2, "class", "container");
     			add_location(div2, file$4, 9, 0, 203);
@@ -3037,11 +3280,11 @@ var app = (function (animateScroll) {
     			div = element("div");
     			img = element("img");
     			t = space();
-    			attr_dev(img, "class", "imgpod svelte-xtys25");
+    			attr_dev(img, "class", "imgpod svelte-11fq9lb");
     			if (!src_url_equal(img.src, img_src_value = /*data*/ ctx[2][/*i*/ ctx[5]].url)) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", /*data*/ ctx[2][/*i*/ ctx[5]].title);
     			add_location(img, file$3, 24, 24, 754);
-    			attr_dev(div, "class", "podcast svelte-xtys25");
+    			attr_dev(div, "class", "podcast svelte-11fq9lb");
     			add_location(div, file$3, 23, 20, 707);
     		},
     		m: function mount(target, anchor) {
@@ -3227,17 +3470,17 @@ var app = (function (animateScroll) {
     			t5 = space();
     			attr_dev(i_1, "class", "fa fa-play");
     			add_location(i_1, file$3, 38, 42, 1279);
-    			attr_dev(div0, "class", "play svelte-xtys25");
+    			attr_dev(div0, "class", "play svelte-11fq9lb");
     			add_location(div0, file$3, 38, 24, 1261);
     			attr_dev(div1, "class", "podtitle");
     			add_location(div1, file$3, 40, 28, 1390);
     			attr_dev(div2, "class", "podauthor");
     			add_location(div2, file$3, 41, 28, 1463);
-    			attr_dev(div3, "class", "poddetail svelte-xtys25");
+    			attr_dev(div3, "class", "poddetail svelte-11fq9lb");
     			add_location(div3, file$3, 39, 24, 1337);
-    			attr_dev(div4, "class", "duration svelte-xtys25");
+    			attr_dev(div4, "class", "duration svelte-11fq9lb");
     			add_location(div4, file$3, 43, 24, 1550);
-    			attr_dev(div5, "class", "podlist svelte-xtys25");
+    			attr_dev(div5, "class", "podlist svelte-11fq9lb");
     			add_location(div5, file$3, 37, 20, 1214);
     		},
     		m: function mount(target, anchor) {
@@ -3362,19 +3605,19 @@ var app = (function (animateScroll) {
     			t6 = space();
     			div2 = element("div");
     			info_1.block.c();
-    			attr_dev(p0, "class", "title svelte-xtys25");
+    			attr_dev(p0, "class", "title svelte-11fq9lb");
     			add_location(p0, file$3, 14, 8, 415);
-    			attr_dev(p1, "class", "viewall svelte-xtys25");
+    			attr_dev(p1, "class", "viewall svelte-11fq9lb");
     			add_location(p1, file$3, 15, 8, 453);
-    			attr_dev(div0, "class", "title-container svelte-xtys25");
+    			attr_dev(div0, "class", "title-container svelte-11fq9lb");
     			add_location(div0, file$3, 13, 4, 376);
-    			attr_dev(div1, "class", "album svelte-xtys25");
+    			attr_dev(div1, "class", "album svelte-11fq9lb");
     			add_location(div1, file$3, 18, 8, 531);
-    			attr_dev(p2, "class", "playlist-title svelte-xtys25");
+    			attr_dev(p2, "class", "playlist-title svelte-11fq9lb");
     			add_location(p2, file$3, 31, 8, 986);
-    			attr_dev(div2, "class", "playlist svelte-xtys25");
+    			attr_dev(div2, "class", "playlist svelte-11fq9lb");
     			add_location(div2, file$3, 32, 8, 1034);
-    			attr_dev(div3, "class", "inner svelte-xtys25");
+    			attr_dev(div3, "class", "inner svelte-11fq9lb");
     			add_location(div3, file$3, 17, 4, 502);
     			attr_dev(div4, "class", "container");
     			attr_dev(div4, "id", "podcast");
@@ -3773,15 +4016,15 @@ var app = (function (animateScroll) {
     				each_blocks[i].c();
     			}
 
-    			attr_dev(img, "class", "imgthumb svelte-14bm207");
+    			attr_dev(img, "class", "imgthumb svelte-1jqqvam");
     			if (!src_url_equal(img.src, img_src_value = /*data*/ ctx[2][0].url)) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", /*data*/ ctx[2][0].title);
     			add_location(img, file$1, 17, 20, 548);
-    			attr_dev(p, "class", "article-title svelte-14bm207");
+    			attr_dev(p, "class", "article-title svelte-1jqqvam");
     			add_location(p, file$1, 18, 20, 632);
     			attr_dev(div, "class", "firstnews");
     			add_location(div, file$1, 16, 16, 503);
-    			attr_dev(ul, "class", "othernews svelte-14bm207");
+    			attr_dev(ul, "class", "othernews svelte-1jqqvam");
     			add_location(ul, file$1, 20, 20, 722);
     		},
     		m: function mount(target, anchor) {
@@ -3855,9 +4098,9 @@ var app = (function (animateScroll) {
     			p = element("p");
     			t0 = text(t0_value);
     			t1 = space();
-    			attr_dev(p, "class", "article-title svelte-14bm207");
+    			attr_dev(p, "class", "article-title svelte-1jqqvam");
     			add_location(p, file$1, 23, 32, 878);
-    			attr_dev(li, "class", "news svelte-14bm207");
+    			attr_dev(li, "class", "news svelte-1jqqvam");
     			add_location(li, file$1, 22, 28, 827);
     		},
     		m: function mount(target, anchor) {
@@ -3944,11 +4187,11 @@ var app = (function (animateScroll) {
     			div1 = element("div");
     			div0 = element("div");
     			info.block.c();
-    			attr_dev(p, "class", "title svelte-14bm207");
+    			attr_dev(p, "class", "title svelte-1jqqvam");
     			add_location(p, file$1, 10, 8, 281);
-    			attr_dev(div0, "class", "rewara svelte-14bm207");
+    			attr_dev(div0, "class", "rewara svelte-1jqqvam");
     			add_location(div0, file$1, 12, 12, 363);
-    			attr_dev(div1, "class", "rewara-container svelte-14bm207");
+    			attr_dev(div1, "class", "rewara-container svelte-1jqqvam");
     			add_location(div1, file$1, 11, 8, 319);
     			attr_dev(div2, "class", "container");
     			add_location(div2, file$1, 9, 4, 248);
@@ -4131,10 +4374,10 @@ var app = (function (animateScroll) {
     	let current;
 
     	function header_height_binding(value) {
-    		/*header_height_binding*/ ctx[2](value);
+    		/*header_height_binding*/ ctx[1](value);
     	}
 
-    	let header_props = { y: /*y*/ ctx[1] };
+    	let header_props = {};
 
     	if (/*margin*/ ctx[0] !== void 0) {
     		header_props.height = /*margin*/ ctx[0];
@@ -4197,11 +4440,11 @@ var app = (function (animateScroll) {
     			create_component(menu.$$.fragment);
     			attr_dev(link, "rel", "stylesheet");
     			attr_dev(link, "href", "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
-    			add_location(link, file, 18, 1, 453);
+    			add_location(link, file, 17, 1, 445);
     			attr_dev(div, "class", "container svelte-18hvwtu");
-    			add_location(div, file, 22, 1, 591);
+    			add_location(div, file, 21, 1, 583);
     			attr_dev(main, "class", "svelte-18hvwtu");
-    			add_location(main, file, 21, 0, 583);
+    			add_location(main, file, 20, 0, 575);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -4305,7 +4548,6 @@ var app = (function (animateScroll) {
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('App', slots, []);
     	let margin;
-    	let y;
     	const writable_props = [];
 
     	Object.keys($$props).forEach(key => {
@@ -4328,20 +4570,18 @@ var app = (function (animateScroll) {
     		Menu,
     		Rewara,
     		Video,
-    		margin,
-    		y
+    		margin
     	});
 
     	$$self.$inject_state = $$props => {
     		if ('margin' in $$props) $$invalidate(0, margin = $$props.margin);
-    		if ('y' in $$props) $$invalidate(1, y = $$props.y);
     	};
 
     	if ($$props && "$$inject" in $$props) {
     		$$self.$inject_state($$props.$$inject);
     	}
 
-    	return [margin, y, header_height_binding];
+    	return [margin, header_height_binding];
     }
 
     class App extends SvelteComponentDev {
@@ -4367,5 +4607,5 @@ var app = (function (animateScroll) {
 
     return app;
 
-})(animateScroll);
+})();
 //# sourceMappingURL=bundle.js.map

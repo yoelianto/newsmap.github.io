@@ -11,7 +11,6 @@
 	import Video from './Video.svelte'
 
 	let margin;
-	let y;
 
 </script>
 
@@ -21,7 +20,7 @@
 
 <main>
 	<div class="container">
-		<Header bind:height={margin} y={y}/>
+		<Header bind:height={margin} />
 		<Newsmap margin={margin}/>
 		<Sentiment />
 		<Original />

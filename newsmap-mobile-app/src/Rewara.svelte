@@ -60,7 +60,7 @@
             object-fit: cover;
         }
         .article-title {
-            font-family: 'Jost';
+            font-family: 'Roboto';
             font-size: 1rem;
             font-weight:700;
             color:#363636;

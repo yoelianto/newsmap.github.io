@@ -33,7 +33,7 @@
         align-items: center;
     }
     .inner-card {
-        font-family: 'Jost';
+        font-family: 'Roboto';
         width:75%;
         height:70%;
         display: flex;
