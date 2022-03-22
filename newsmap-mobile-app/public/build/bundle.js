@@ -1,7 +1,27 @@
 
 (function(l, r) { if (!l || l.getElementById('livereloadscript')) return; r = l.createElement('script'); r.async = 1; r.src = '//' + (self.location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1'; r.id = 'livereloadscript'; l.getElementsByTagName('head')[0].appendChild(r) })(self.document);
-var app = (function () {
+var app = (function (animateScroll) {
     'use strict';
+
+    function _interopNamespace(e) {
+        if (e && e.__esModule) return e;
+        var n = Object.create(null);
+        if (e) {
+            Object.keys(e).forEach(function (k) {
+                if (k !== 'default') {
+                    var d = Object.getOwnPropertyDescriptor(e, k);
+                    Object.defineProperty(n, k, d.get ? d : {
+                        enumerable: true,
+                        get: function () { return e[k]; }
+                    });
+                }
+            });
+        }
+        n["default"] = e;
+        return Object.freeze(n);
+    }
+
+    var animateScroll__namespace = /*#__PURE__*/_interopNamespace(animateScroll);
 
     function noop() { }
     const identity = x => x;
@@ -789,269 +809,6 @@ var app = (function () {
         };
     }
 
-    var _ = {
-      $(selector) {
-        if (typeof selector === "string") {
-          return document.querySelector(selector);
-        }
-        return selector;
-      },
-      extend(...args) {
-        return Object.assign(...args);
-      },
-      cumulativeOffset(element) {
-        let top = 0;
-        let left = 0;
-
-        do {
-          top += element.offsetTop || 0;
-          left += element.offsetLeft || 0;
-          element = element.offsetParent;
-        } while (element);
-
-        return {
-          top: top,
-          left: left
-        };
-      },
-      directScroll(element) {
-        return element && element !== document && element !== document.body;
-      },
-      scrollTop(element, value) {
-        let inSetter = value !== undefined;
-        if (this.directScroll(element)) {
-          return inSetter ? (element.scrollTop = value) : element.scrollTop;
-        } else {
-          return inSetter
-            ? (document.documentElement.scrollTop = document.body.scrollTop = value)
-            : window.pageYOffset ||
-                document.documentElement.scrollTop ||
-                document.body.scrollTop ||
-                0;
-        }
-      },
-      scrollLeft(element, value) {
-        let inSetter = value !== undefined;
-        if (this.directScroll(element)) {
-          return inSetter ? (element.scrollLeft = value) : element.scrollLeft;
-        } else {
-          return inSetter
-            ? (document.documentElement.scrollLeft = document.body.scrollLeft = value)
-            : window.pageXOffset ||
-                document.documentElement.scrollLeft ||
-                document.body.scrollLeft ||
-                0;
-        }
-      }
-    };
-
-    const defaultOptions = {
-      container: "body",
-      duration: 500,
-      delay: 0,
-      offset: 0,
-      easing: cubicInOut,
-      onStart: noop,
-      onDone: noop,
-      onAborting: noop,
-      scrollX: false,
-      scrollY: true
-    };
-
-    const _scrollTo = options => {
-      let {
-        offset,
-        duration,
-        delay,
-        easing,
-        x=0,
-        y=0,
-        scrollX,
-        scrollY,
-        onStart,
-        onDone,
-        container,
-        onAborting,
-        element
-      } = options;
-
-      if (typeof offset === "function") {
-        offset = offset();
-      }
-
-      var cumulativeOffsetContainer = _.cumulativeOffset(container);
-      var cumulativeOffsetTarget = element
-        ? _.cumulativeOffset(element)
-        : { top: y, left: x };
-
-      var initialX = _.scrollLeft(container);
-      var initialY = _.scrollTop(container);
-
-      var targetX =
-        cumulativeOffsetTarget.left - cumulativeOffsetContainer.left + offset;
-      var targetY =
-        cumulativeOffsetTarget.top - cumulativeOffsetContainer.top + offset;
-
-      var diffX = targetX - initialX;
-    	var diffY = targetY - initialY;
-
-      let scrolling = true;
-      let started = false;
-      let start_time = now() + delay;
-      let end_time = start_time + duration;
-
-      function scrollToTopLeft(element, top, left) {
-        if (scrollX) _.scrollLeft(element, left);
-        if (scrollY) _.scrollTop(element, top);
-      }
-
-      function start(delayStart) {
-        if (!delayStart) {
-          started = true;
-          onStart(element, {x, y});
-        }
-      }
-
-      function tick(progress) {
-        scrollToTopLeft(
-          container,
-          initialY + diffY * progress,
-          initialX + diffX * progress
-        );
-      }
-
-      function stop() {
-        scrolling = false;
-      }
-
-      loop(now => {
-        if (!started && now >= start_time) {
-          start(false);
-        }
-
-        if (started && now >= end_time) {
-          tick(1);
-          stop();
-          onDone(element, {x, y});
-        }
-
-        if (!scrolling) {
-          onAborting(element, {x, y});
-          return false;
-        }
-        if (started) {
-          const p = now - start_time;
-          const t = 0 + 1 * easing(p / duration);
-          tick(t);
-        }
-
-        return true;
-      });
-
-      start(delay);
-
-      tick(0);
-
-      return stop;
-    };
-
-    const proceedOptions = options => {
-    	let opts = _.extend({}, defaultOptions, options);
-      opts.container = _.$(opts.container);
-      opts.element = _.$(opts.element);
-      return opts;
-    };
-
-    const scrollContainerHeight = containerElement => {
-      if (
-        containerElement &&
-        containerElement !== document &&
-        containerElement !== document.body
-      ) {
-        return containerElement.scrollHeight - containerElement.offsetHeight;
-      } else {
-        let body = document.body;
-        let html = document.documentElement;
-
-        return Math.max(
-          body.scrollHeight,
-          body.offsetHeight,
-          html.clientHeight,
-          html.scrollHeight,
-          html.offsetHeight
-        );
-      }
-    };
-
-    const setGlobalOptions = options => {
-    	_.extend(defaultOptions, options || {});
-    };
-
-    const scrollTo = options => {
-      return _scrollTo(proceedOptions(options));
-    };
-
-    const scrollToBottom = options => {
-      options = proceedOptions(options);
-
-      return _scrollTo(
-        _.extend(options, {
-          element: null,
-          y: scrollContainerHeight(options.container)
-        })
-      );
-    };
-
-    const scrollToTop = options => {
-      options = proceedOptions(options);
-
-      return _scrollTo(
-        _.extend(options, {
-          element: null,
-          y: 0
-        })
-      );
-    };
-
-    const makeScrollToAction = scrollToFunc => {
-      return (node, options) => {
-        let current = options;
-        const handle = e => {
-          e.preventDefault();
-          scrollToFunc(
-            typeof current === "string" ? { element: current } : current
-          );
-        };
-        node.addEventListener("click", handle);
-        node.addEventListener("touchstart", handle);
-        return {
-          update(options) {
-            current = options;
-          },
-          destroy() {
-            node.removeEventListener("click", handle);
-            node.removeEventListener("touchstart", handle);
-          }
-        };
-      };
-    };
-
-    const scrollto = makeScrollToAction(scrollTo);
-    const scrolltotop = makeScrollToAction(scrollToTop);
-    const scrolltobottom = makeScrollToAction(scrollToBottom);
-
-    var animateScroll = /*#__PURE__*/Object.freeze({
-        __proto__: null,
-        setGlobalOptions: setGlobalOptions,
-        scrollTo: scrollTo,
-        scrollToBottom: scrollToBottom,
-        scrollToTop: scrollToTop,
-        makeScrollToAction: makeScrollToAction,
-        scrollto: scrollto,
-        scrolltotop: scrolltotop,
-        scrolltobottom: scrolltobottom
-    });
-
     /* src\Header.svelte generated by Svelte v3.46.4 */
     const file$9 = "src\\Header.svelte";
 
@@ -1126,7 +883,7 @@ var app = (function () {
     	return block;
     }
 
-    function create_fragment$9(ctx) {
+    function create_fragment$a(ctx) {
     	let nav;
     	let div6;
     	let div0;
@@ -1266,7 +1023,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_fragment$9.name,
+    		id: create_fragment$a.name,
     		type: "component",
     		source: "",
     		ctx
@@ -1275,7 +1032,7 @@ var app = (function () {
     	return block;
     }
 
-    function instance$9($$self, $$props, $$invalidate) {
+    function instance$a($$self, $$props, $$invalidate) {
     	let $barPosition1;
     	let $barPosition2;
     	let $barPosition3;
@@ -1339,7 +1096,7 @@ var app = (function () {
     		});
 
     		$$invalidate(1, menus[id].active = true, menus);
-    		scrollTo({ element: menus[id].link, offset: -150 });
+    		animateScroll__namespace.scrollTo({ element: menus[id].link, offset: -150 });
     		barPosition1.set(id);
     		barPosition2.set(id);
     		barPosition3.set(id);
@@ -1368,7 +1125,7 @@ var app = (function () {
     		cubicInOut,
     		quintInOut,
     		tweened,
-    		animateScroll,
+    		animateScroll: animateScroll__namespace,
     		height,
     		tweenConfig1,
     		tweenConfig2,
@@ -1410,13 +1167,13 @@ var app = (function () {
     class Header extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$9, create_fragment$9, safe_not_equal, { height: 0 });
+    		init(this, options, instance$a, create_fragment$a, safe_not_equal, { height: 0 });
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
     			tagName: "Header",
     			options,
-    			id: create_fragment$9.name
+    			id: create_fragment$a.name
     		});
 
     		const { ctx } = this.$$;
@@ -2061,7 +1818,7 @@ var app = (function () {
     	return block;
     }
 
-    function create_fragment$8(ctx) {
+    function create_fragment$9(ctx) {
     	let article;
     	let div4;
     	let div0;
@@ -2216,7 +1973,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_fragment$8.name,
+    		id: create_fragment$9.name,
     		type: "component",
     		source: "",
     		ctx
@@ -2225,7 +1982,7 @@ var app = (function () {
     	return block;
     }
 
-    function instance$8($$self, $$props, $$invalidate) {
+    function instance$9($$self, $$props, $$invalidate) {
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('Newsmap', slots, []);
 
@@ -2261,13 +2018,13 @@ var app = (function () {
     class Newsmap extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$8, create_fragment$8, safe_not_equal, { margin: 0 });
+    		init(this, options, instance$9, create_fragment$9, safe_not_equal, { margin: 0 });
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
     			tagName: "Newsmap",
     			options,
-    			id: create_fragment$8.name
+    			id: create_fragment$9.name
     		});
 
     		const { ctx } = this.$$;
@@ -2291,7 +2048,7 @@ var app = (function () {
 
     const file$7 = "src\\NewsmapOriginal.svelte";
 
-    function create_fragment$7(ctx) {
+    function create_fragment$8(ctx) {
     	let div4;
     	let p;
     	let t1;
@@ -2351,7 +2108,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_fragment$7.name,
+    		id: create_fragment$8.name,
     		type: "component",
     		source: "",
     		ctx
@@ -2360,7 +2117,7 @@ var app = (function () {
     	return block;
     }
 
-    function instance$7($$self, $$props) {
+    function instance$8($$self, $$props) {
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('NewsmapOriginal', slots, []);
     	const writable_props = [];
@@ -2375,13 +2132,13 @@ var app = (function () {
     class NewsmapOriginal extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$7, create_fragment$7, safe_not_equal, {});
+    		init(this, options, instance$8, create_fragment$8, safe_not_equal, {});
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
     			tagName: "NewsmapOriginal",
     			options,
-    			id: create_fragment$7.name
+    			id: create_fragment$8.name
     		});
     	}
     }
@@ -2566,7 +2323,7 @@ var app = (function () {
     	return block;
     }
 
-    function create_fragment$6(ctx) {
+    function create_fragment$7(ctx) {
     	let div1;
     	let div0;
 
@@ -2620,7 +2377,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_fragment$6.name,
+    		id: create_fragment$7.name,
     		type: "component",
     		source: "",
     		ctx
@@ -2629,7 +2386,7 @@ var app = (function () {
     	return block;
     }
 
-    function instance$6($$self, $$props, $$invalidate) {
+    function instance$7($$self, $$props, $$invalidate) {
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('Sentiment', slots, []);
 
@@ -2651,13 +2408,13 @@ var app = (function () {
     class Sentiment extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$6, create_fragment$6, safe_not_equal, {});
+    		init(this, options, instance$7, create_fragment$7, safe_not_equal, {});
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
     			tagName: "Sentiment",
     			options,
-    			id: create_fragment$6.name
+    			id: create_fragment$7.name
     		});
     	}
     }
@@ -2666,7 +2423,7 @@ var app = (function () {
 
     const file$5 = "src\\Deduktif.svelte";
 
-    function create_fragment$5(ctx) {
+    function create_fragment$6(ctx) {
     	let div12;
     	let div11;
     	let div10;
@@ -2781,7 +2538,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_fragment$5.name,
+    		id: create_fragment$6.name,
     		type: "component",
     		source: "",
     		ctx
@@ -2790,7 +2547,7 @@ var app = (function () {
     	return block;
     }
 
-    function instance$5($$self, $$props) {
+    function instance$6($$self, $$props) {
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('Deduktif', slots, []);
     	const writable_props = [];
@@ -2805,13 +2562,13 @@ var app = (function () {
     class Deduktif extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$5, create_fragment$5, safe_not_equal, {});
+    		init(this, options, instance$6, create_fragment$6, safe_not_equal, {});
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
     			tagName: "Deduktif",
     			options,
-    			id: create_fragment$5.name
+    			id: create_fragment$6.name
     		});
     	}
     }
@@ -3017,7 +2774,7 @@ var app = (function () {
     	return block;
     }
 
-    function create_fragment$4(ctx) {
+    function create_fragment$5(ctx) {
     	let div2;
     	let p;
     	let t0;
@@ -3088,7 +2845,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_fragment$4.name,
+    		id: create_fragment$5.name,
     		type: "component",
     		source: "",
     		ctx
@@ -3097,7 +2854,7 @@ var app = (function () {
     	return block;
     }
 
-    function instance$4($$self, $$props, $$invalidate) {
+    function instance$5($$self, $$props, $$invalidate) {
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('News', slots, []);
     	let { title = '' } = $$props;
@@ -3133,13 +2890,13 @@ var app = (function () {
     class News extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$4, create_fragment$4, safe_not_equal, { title: 0 });
+    		init(this, options, instance$5, create_fragment$5, safe_not_equal, { title: 0 });
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
     			tagName: "News",
     			options,
-    			id: create_fragment$4.name
+    			id: create_fragment$5.name
     		});
     	}
 
@@ -3544,7 +3301,7 @@ var app = (function () {
     	return block;
     }
 
-    function create_fragment$3(ctx) {
+    function create_fragment$4(ctx) {
     	let div4;
     	let div0;
     	let p0;
@@ -3666,7 +3423,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_fragment$3.name,
+    		id: create_fragment$4.name,
     		type: "component",
     		source: "",
     		ctx
@@ -3675,7 +3432,7 @@ var app = (function () {
     	return block;
     }
 
-    function instance$3($$self, $$props, $$invalidate) {
+    function instance$4($$self, $$props, $$invalidate) {
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('Podcast', slots, []);
 
@@ -3702,13 +3459,13 @@ var app = (function () {
     class Podcast extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$3, create_fragment$3, safe_not_equal, {});
+    		init(this, options, instance$4, create_fragment$4, safe_not_equal, {});
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
     			tagName: "Podcast",
     			options,
-    			id: create_fragment$3.name
+    			id: create_fragment$4.name
     		});
     	}
     }
@@ -3790,7 +3547,7 @@ var app = (function () {
     	return block;
     }
 
-    function create_fragment$2(ctx) {
+    function create_fragment$3(ctx) {
     	let nav;
     	let div;
     	let each_value = /*menus*/ ctx[0];
@@ -3861,7 +3618,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_fragment$2.name,
+    		id: create_fragment$3.name,
     		type: "component",
     		source: "",
     		ctx
@@ -3870,7 +3627,7 @@ var app = (function () {
     	return block;
     }
 
-    function instance$2($$self, $$props, $$invalidate) {
+    function instance$3($$self, $$props, $$invalidate) {
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('Menu', slots, []);
 
@@ -3931,13 +3688,13 @@ var app = (function () {
     class Menu extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$2, create_fragment$2, safe_not_equal, {});
+    		init(this, options, instance$3, create_fragment$3, safe_not_equal, {});
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
     			tagName: "Menu",
     			options,
-    			id: create_fragment$2.name
+    			id: create_fragment$3.name
     		});
     	}
     }
@@ -4156,7 +3913,7 @@ var app = (function () {
     	return block;
     }
 
-    function create_fragment$1(ctx) {
+    function create_fragment$2(ctx) {
     	let div2;
     	let p;
     	let t0;
@@ -4227,7 +3984,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_fragment$1.name,
+    		id: create_fragment$2.name,
     		type: "component",
     		source: "",
     		ctx
@@ -4236,7 +3993,7 @@ var app = (function () {
     	return block;
     }
 
-    function instance$1($$self, $$props, $$invalidate) {
+    function instance$2($$self, $$props, $$invalidate) {
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('Rewara', slots, []);
     	let { title = '' } = $$props;
@@ -4272,13 +4029,13 @@ var app = (function () {
     class Rewara extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$1, create_fragment$1, safe_not_equal, { title: 0 });
+    		init(this, options, instance$2, create_fragment$2, safe_not_equal, { title: 0 });
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
     			tagName: "Rewara",
     			options,
-    			id: create_fragment$1.name
+    			id: create_fragment$2.name
     		});
     	}
 
@@ -4288,6 +4045,58 @@ var app = (function () {
 
     	set title(value) {
     		throw new Error("<Rewara>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+    }
+
+    /* src\Video.svelte generated by Svelte v3.46.4 */
+
+    function create_fragment$1(ctx) {
+    	const block = {
+    		c: noop,
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+    		m: noop,
+    		p: noop,
+    		i: noop,
+    		o: noop,
+    		d: noop
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_fragment$1.name,
+    		type: "component",
+    		source: "",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    function instance$1($$self, $$props) {
+    	let { $$slots: slots = {}, $$scope } = $$props;
+    	validate_slots('Video', slots, []);
+    	const writable_props = [];
+
+    	Object.keys($$props).forEach(key => {
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<Video> was created with unknown prop '${key}'`);
+    	});
+
+    	return [];
+    }
+
+    class Video extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, instance$1, create_fragment$1, safe_not_equal, {});
+
+    		dispatch_dev("SvelteRegisterComponent", {
+    			component: this,
+    			tagName: "Video",
+    			options,
+    			id: create_fragment$1.name
+    		});
     	}
     }
 
@@ -4388,11 +4197,11 @@ var app = (function () {
     			create_component(menu.$$.fragment);
     			attr_dev(link, "rel", "stylesheet");
     			attr_dev(link, "href", "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
-    			add_location(link, file, 17, 1, 417);
+    			add_location(link, file, 18, 1, 453);
     			attr_dev(div, "class", "container svelte-18hvwtu");
-    			add_location(div, file, 21, 1, 555);
+    			add_location(div, file, 22, 1, 591);
     			attr_dev(main, "class", "svelte-18hvwtu");
-    			add_location(main, file, 20, 0, 547);
+    			add_location(main, file, 21, 0, 583);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -4518,6 +4327,7 @@ var app = (function () {
     		Podcast,
     		Menu,
     		Rewara,
+    		Video,
     		margin,
     		y
     	});
@@ -4557,5 +4367,5 @@ var app = (function () {
 
     return app;
 
-})();
+})(animateScroll);
 //# sourceMappingURL=bundle.js.map
