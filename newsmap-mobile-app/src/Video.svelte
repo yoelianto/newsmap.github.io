@@ -57,7 +57,7 @@
         .article-title {
             font-family: 'Roboto';
             font-size: 1rem;
-            font-weight:400;
+            font-weight:00;
             color:white;
             white-space: normal;
             line-height: 1rem;

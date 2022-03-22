@@ -3734,9 +3734,11 @@ var app = (function () {
 
     // (20:8) {#each menus as list, key}
     function create_each_block$2(ctx) {
-    	let div;
+    	let div1;
+    	let div0;
     	let img;
     	let img_src_value;
+    	let img_alt_value;
     	let t0;
     	let h4;
     	let t1_value = /*list*/ ctx[2].menu + "";
@@ -3746,32 +3748,44 @@ var app = (function () {
 
     	const block = {
     		c: function create() {
-    			div = element("div");
+    			div1 = element("div");
+    			div0 = element("div");
     			img = element("img");
     			t0 = space();
     			h4 = element("h4");
     			t1 = text(t1_value);
     			t2 = space();
-    			if (!src_url_equal(img.src, img_src_value = "")) attr_dev(img, "src", img_src_value);
-    			attr_dev(img, "alt", "");
-    			attr_dev(img, "class", "svelte-1ruhryj");
-    			add_location(img, file$3, 21, 12, 625);
-    			attr_dev(h4, "class", "menutext svelte-1ruhryj");
+    			if (!src_url_equal(img.src, img_src_value = /*list*/ ctx[2].source)) attr_dev(img, "src", img_src_value);
+    			attr_dev(img, "alt", img_alt_value = /*list*/ ctx[2].menu);
+    			attr_dev(img, "class", "svelte-rs7yoy");
+    			add_location(img, file$3, 22, 16, 779);
+    			attr_dev(div0, "class", "circle svelte-rs7yoy");
+    			add_location(div0, file$3, 21, 12, 741);
+    			attr_dev(h4, "class", "menutext svelte-rs7yoy");
     			attr_dev(h4, "id", h4_id_value = /*list*/ ctx[2].id);
-    			add_location(h4, file$3, 22, 12, 658);
-    			attr_dev(div, "class", "menu svelte-1ruhryj");
-    			toggle_class(div, "selected", /*list*/ ctx[2].active === true);
-    			add_location(div, file$3, 20, 8, 552);
+    			add_location(h4, file$3, 25, 12, 854);
+    			attr_dev(div1, "class", "menu svelte-rs7yoy");
+    			toggle_class(div1, "selected", /*list*/ ctx[2].active === true);
+    			add_location(div1, file$3, 20, 8, 668);
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, div, anchor);
-    			append_dev(div, img);
-    			append_dev(div, t0);
-    			append_dev(div, h4);
+    			insert_dev(target, div1, anchor);
+    			append_dev(div1, div0);
+    			append_dev(div0, img);
+    			append_dev(div1, t0);
+    			append_dev(div1, h4);
     			append_dev(h4, t1);
-    			append_dev(div, t2);
+    			append_dev(div1, t2);
     		},
     		p: function update(ctx, dirty) {
+    			if (dirty & /*menus*/ 1 && !src_url_equal(img.src, img_src_value = /*list*/ ctx[2].source)) {
+    				attr_dev(img, "src", img_src_value);
+    			}
+
+    			if (dirty & /*menus*/ 1 && img_alt_value !== (img_alt_value = /*list*/ ctx[2].menu)) {
+    				attr_dev(img, "alt", img_alt_value);
+    			}
+
     			if (dirty & /*menus*/ 1 && t1_value !== (t1_value = /*list*/ ctx[2].menu + "")) set_data_dev(t1, t1_value);
 
     			if (dirty & /*menus*/ 1 && h4_id_value !== (h4_id_value = /*list*/ ctx[2].id)) {
@@ -3779,11 +3793,11 @@ var app = (function () {
     			}
 
     			if (dirty & /*menus*/ 1) {
-    				toggle_class(div, "selected", /*list*/ ctx[2].active === true);
+    				toggle_class(div1, "selected", /*list*/ ctx[2].active === true);
     			}
     		},
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(div);
+    			if (detaching) detach_dev(div1);
     		}
     	};
 
@@ -3818,10 +3832,10 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			attr_dev(div, "class", "menubar svelte-1ruhryj");
-    			add_location(div, file$3, 18, 4, 485);
-    			attr_dev(nav, "class", "container svelte-1ruhryj");
-    			add_location(nav, file$3, 17, 0, 456);
+    			attr_dev(div, "class", "menubar svelte-rs7yoy");
+    			add_location(div, file$3, 18, 4, 601);
+    			attr_dev(nav, "class", "container svelte-rs7yoy");
+    			add_location(nav, file$3, 17, 0, 572);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -3887,25 +3901,29 @@ var app = (function () {
     			menu: 'Home',
     			id: 0,
     			active: true,
-    			link: "#newsmap"
+    			link: "#newsmap",
+    			source: "./image/home.svg"
     		},
     		{
     			menu: 'Search',
     			id: 1,
     			active: false,
-    			link: "#search"
+    			link: "#search",
+    			source: "./image/search.svg"
     		},
     		{
     			menu: 'Jurno',
     			id: 2,
     			active: false,
-    			link: "#original"
+    			link: "#original",
+    			source: "./image/artikel.svg"
     		},
     		{
     			menu: 'Podcast',
     			id: 3,
     			active: false,
-    			link: "#podcast"
+    			link: "#podcast",
+    			source: "./image/podcast.svg"
     		}
     	];
 
@@ -4427,13 +4445,13 @@ var app = (function () {
     			p = element("p");
     			t1 = text(t1_value);
     			t2 = space();
-    			attr_dev(img, "class", "imgthumb svelte-1qhfo8i");
+    			attr_dev(img, "class", "imgthumb svelte-fvm256");
     			if (!src_url_equal(img.src, img_src_value = /*data*/ ctx[2][/*i*/ ctx[5]].url)) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", /*data*/ ctx[2][/*i*/ ctx[5]].title);
     			add_location(img, file$1, 18, 28, 609);
-    			attr_dev(p, "class", "article-title svelte-1qhfo8i");
+    			attr_dev(p, "class", "article-title svelte-fvm256");
     			add_location(p, file$1, 19, 28, 701);
-    			attr_dev(div, "class", "news svelte-1qhfo8i");
+    			attr_dev(div, "class", "news svelte-fvm256");
     			add_location(div, file$1, 17, 24, 561);
     		},
     		m: function mount(target, anchor) {
@@ -4522,11 +4540,11 @@ var app = (function () {
     			div1 = element("div");
     			div0 = element("div");
     			info.block.c();
-    			attr_dev(p, "class", "title svelte-1qhfo8i");
+    			attr_dev(p, "class", "title svelte-fvm256");
     			add_location(p, file$1, 10, 8, 281);
-    			attr_dev(div0, "class", "slider svelte-1qhfo8i");
+    			attr_dev(div0, "class", "slider svelte-fvm256");
     			add_location(div0, file$1, 12, 12, 363);
-    			attr_dev(div1, "class", "slider-container svelte-1qhfo8i");
+    			attr_dev(div1, "class", "slider-container svelte-fvm256");
     			add_location(div1, file$1, 11, 8, 319);
     			attr_dev(div2, "class", "container");
     			add_location(div2, file$1, 9, 4, 248);
