@@ -47,7 +47,7 @@
 <nav>
     <div class="container" bind:clientHeight={height}>
         <div class="header-logo">
-            <h1>Newsmap.id (logo)</h1>
+            <img src="./image/logo-jurno-web.svg" alt="Logo Jurno Website">
         </div>
         <div class="header-menu">
             <div class="headertext">
@@ -70,12 +70,19 @@
 </nav>
 
 <style>
-    
+    .header-logo{
+        width: 100%;
+        display: flex;
+    }
+    img {
+        margin:1rem auto;
+        height:5rem;
+    }
     .container {
-        height:35vw;
+        height:40vw;
         z-index: 99;
         position: fixed;
-        background-color: #EAE9E5;
+        background-color: #eefffc;
         width:100vw;
     }
     .headertext {
@@ -89,7 +96,7 @@
     .menu {
         width:25vw;
         text-align: center;
-        color:#B9B5A8;
+        color:#ef5959;
     }
     .header-menu {
         display: flex;
@@ -99,12 +106,12 @@
     .bar {
         width:12.5vw;
         height:0.25rem;
-        background-color: #2EAFBE;
+        background-color: #A4D9D2;
         border-radius: 0.25rem;
         display: block;
         position: absolute;
         z-index: 200;
-        bottom: 1rem;
+        top: 9rem;
         left: 8.5vw;
         width: 10vw;
         pointer-events: none;
@@ -120,34 +127,6 @@
         font-family: 'Jost';
         font-size:1rem;
         font-weight:700; 
-        margin: 1rem 1rem;
+        margin: 0.2rem 1rem;
     }
-    @media only screen and (min-width: 420px) {
-		.container {
-			height: 30vw;
-		}
-	}
-
-    @media only screen and (min-width: 600px) {
-		.container {
-			height: 25vw;
-		}
-	}
-
-	@media only screen and (min-width: 800px) {
-		.container {
-			height: 20vw;
-		}
-	}
-
-	@media only screen and (min-width: 1000px) {
-		.container {
-			height: 15vw;
-		}
-	}
-    @media only screen and (min-width: 1200px) {
-		.container {
-			height: 10vw;
-		}
-	}
 </style>

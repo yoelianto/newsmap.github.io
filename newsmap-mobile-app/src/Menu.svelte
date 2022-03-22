@@ -37,7 +37,7 @@
         z-index: 100;
         width:100vw;
         height:100px;
-        background-color: #FCFCFD;
+        background-color: #A4D9D2;
         border-radius: 2rem 2rem 0 0;
     }
     .menubar {
@@ -47,7 +47,7 @@
         justify-content: space-evenly;
     }
     .menu {
-        color:#CEC9B9;
+        color:#eefffc;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -63,13 +63,13 @@
     img {
         width:10vw;
         height:10vw;
-        background-color: #CEC9B9;
+        background-color: #eefffc;
         border-radius: 50%;
     }
     .selected {
-        color:black;
+        color:#242053;
     }
     .selected img {
-        background-color: black;
+        background-color: #242053;
     }
 </style>

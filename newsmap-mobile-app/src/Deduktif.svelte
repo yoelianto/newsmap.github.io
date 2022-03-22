@@ -33,10 +33,13 @@
 
 <style>
     .deduktif {
-        font-family: 'MATROSKA';
+        font-family: 'Roboto Mono';
+        font-weight:700;
+        font-size:1.5rem;
         margin-left: 6%;
         margin-top: 1rem;
         margin-bottom:40vw;
+        color: #242053;
     }
     .container {
         display: flex;
@@ -46,7 +49,7 @@
     .bottom {
         display: flex;
         flex-direction: row;
-        background-color: #A5000B;
+        background-color: #ef5959;
         height: 50vw;
         border-radius: 0 0 0 2rem;
     }

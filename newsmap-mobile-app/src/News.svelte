@@ -31,8 +31,11 @@ const fetchImage = (async () => {
 
 <style>
     .title {
-        font-family: 'MATROSKA';
+        font-family: 'Roboto Mono';
+        font-weight:700;
+        font-size:1.5rem;
         margin-left: 6%;
+        color: #242053;
     }
     .slider-container {
         overflow-x: scroll;

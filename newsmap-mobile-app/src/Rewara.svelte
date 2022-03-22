@@ -35,7 +35,9 @@
     
     <style>
         .title {
-            font-family: 'MATROSKA';
+            font-family: 'Roboto Mono';
+            font-weight:700;
+            font-size:1.5rem;
             margin-left: 6%;
         }
         .rewara-container {
@@ -65,6 +67,9 @@
             white-space: normal;
             line-height: 1rem;
             margin: 0;
+        }
+        li::marker{
+            color:#202523;
         }
         .slider-container::-webkit-scrollbar {
             display: none;

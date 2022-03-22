@@ -52,21 +52,6 @@
 		flex-direction: column;
 	}
 
-	@media only screen and (max-width: 600px) {
-		main {
-			max-width: 600px;
-		}
-	}
-
-	@media only screen and (max-width: 800px) {
-		main {
-			max-width: 600px;
-		}
-	}
-
-	@media only screen and (max-width: 1000px) {
-		main {
-			max-width: 800px;
-		}
+	@media (min-width: 640px) {
 	}
 </style>

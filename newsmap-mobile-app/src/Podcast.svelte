@@ -61,11 +61,14 @@ return await response.json()
         justify-content: space-between;
     }
     .title {
-            font-family: 'MATROSKA';
+        font-family: 'Roboto Mono';
+        font-weight:700;
+        font-size:1.5rem;
+        color: #242053;
     }
     .viewall {
         color: #004EFF;
-        font-family: -apple-system, 'Open Sans';
+        font-family: 'SF Pro Text';
         font-size:0.8rem;
     }
     
@@ -90,7 +93,7 @@ return await response.json()
     }
     .playlist-title {
         margin: 0;
-        font-family: -apple-system, 'Open Sans';
+        font-family: 'SF Pro Text';
         font-weight: bolder;
     }
     .playlist {
@@ -110,7 +113,7 @@ return await response.json()
     }
     .poddetail {
         width:60vw;
-        font-family: -apple-system, 'Open Sans';
+        font-family: 'SF Pro Text';
         font-weight: bold;
     }
     .duration {
