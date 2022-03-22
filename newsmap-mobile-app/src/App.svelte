@@ -8,6 +8,7 @@
 	import Podcast from './Podcast.svelte'
 	import Menu from './Menu.svelte'
 	import Rewara from './Rewara.svelte'
+	import Video from './Video.svelte'
 
 	let margin;
 	let y;
