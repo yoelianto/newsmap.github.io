@@ -2,7 +2,7 @@
     let menus = [
         {menu:'Home',id:0, active:true, link:"#newsmap"},
         {menu:'Search',id:1, active:false, link:"#search"},
-        {menu:'Newsmap',id:2, active:false, link:"#original"},
+        {menu:'Jurno',id:2, active:false, link:"#original"},
         {menu:'Podcast',id:3, active:false, link:"#podcast"}
     ]
 

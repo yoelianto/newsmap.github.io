@@ -28,6 +28,7 @@
 		<Rewara title='REWARA'/>
 		<News title='TRENDING NOW'/>
 		<News title='PUBLIC NEWS'/>
+		<Video title='YOUTUBE SHORTS'/>
 		<Podcast />
 		<Menu />
 	</div>

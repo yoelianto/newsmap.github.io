@@ -39,6 +39,7 @@
             font-weight:700;
             font-size:1.5rem;
             margin-left: 6%;
+            color: #242053;
         }
         .rewara-container {
             width:88vw;
@@ -71,13 +72,7 @@
         li::marker{
             color:#202523;
         }
-        .slider-container::-webkit-scrollbar {
-            display: none;
-        }
-        .slider-container {
-            -ms-overflow-style: none;  /* IE and Edge */
-            scrollbar-width: none;  /* Firefox */
-        }
+
         .othernews {
             margin: 0;
             display: flex;
