@@ -7,7 +7,7 @@
     <div class="card">
         <div class="bottom"></div>
         <div class="inner-card">
-            <div class="sub-title">Original Newsmap</div>
+            <div class="sub-title">Original Jurno</div>
             <div class="card-title">Kenapa Bimbel Bisa Booming Banget</div>
         </div>
     </div>

@@ -2314,7 +2314,7 @@ var app = (function () {
     			t2 = space();
     			div3 = element("div");
     			div1 = element("div");
-    			div1.textContent = "Original Newsmap";
+    			div1.textContent = "Original Jurno";
     			t4 = space();
     			div2 = element("div");
     			div2.textContent = "Kenapa Bimbel Bisa Booming Banget";
@@ -2325,7 +2325,7 @@ var app = (function () {
     			attr_dev(div1, "class", "sub-title svelte-takyf8");
     			add_location(div1, file$8, 9, 12, 211);
     			attr_dev(div2, "class", "card-title svelte-takyf8");
-    			add_location(div2, file$8, 10, 12, 270);
+    			add_location(div2, file$8, 10, 12, 268);
     			attr_dev(div3, "class", "inner-card svelte-takyf8");
     			add_location(div3, file$8, 8, 8, 173);
     			attr_dev(div4, "class", "card svelte-takyf8");
