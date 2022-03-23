@@ -105,10 +105,10 @@ let podcast = [
         width:250px;
         margin-right:0.5rem;
     }
-    .imgpod {
+    /* .imgpod {
         width:100%;
         border-radius: 0.5rem;
-    }
+    } */
     .playlist-title {
         margin: 0;
         font-family: 'Roboto';

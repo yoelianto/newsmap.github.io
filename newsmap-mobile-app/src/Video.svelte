@@ -5,24 +5,48 @@
             const response = await fetch('https://jsonplaceholder.typicode.com/photos')
         return await response.json()
         })()
+
+    let shorts = [
+        {
+            url:"https://www.youtube.com/embed/NpmK3cW9MU4",
+            title:"Why Deadpool's Skin Doesn't REGENERATE? #Shorts"
+        },
+        {
+            url:"https://youtube.com/embed/Jm5s6N0R0pM",
+            title:"This is the best first project for programmers 👩‍💻 #technology #programming #software #career"
+        },
+        {
+            url:"https://youtube.com/embed/8mvNzU7DpO4",
+            title:"If You Don’t Understand Short Circuiting Your App Will Break"
+        },
+        {
+            url:"https://youtube.com/embed/AZGuWPhuyrg",
+            title:"Terrifying Aztec Death Whistle"
+        },
+        {
+            url:"https://youtube.com/embed/a_tCJbHmtKs",
+            title:"this lamp makes you colorblind"
+        }
+    ]
     </script>
     
     <div class="container">
-        <p class="title">{title}</p>
+        <h4 class="title">{title}</h4>
         <div class="slider-container">
             <div class="slider">
-                {#await fetchImage}
+                <!-- {#await fetchImage}
                 <p>...waiting</p>
-                {:then data}
-                    {#each {length: 10} as _, i}
+                {:then data} -->
+                    {#each shorts as short}
                         <div class="news">
-                            <img class='imgthumb' src={data[i].url} alt={data[i].title} />
-                            <p class="article-title">{data[i].title}</p>
+                            <iframe class="imgthumb" src={short.url} title={short.title} frameborder=0 allowfullscreen></iframe>
+                            <!-- <p class="article-title">{short.title}</p> -->
                         </div>
+                        
                     {/each}
-                {:catch error}
+                <!-- {:catch error}
                     <p>An error occurred!</p>
-                {/await}
+                {/await} -->
             </div>
         </div>
     </div>
@@ -59,13 +83,14 @@
             font-size: 1rem;
             font-weight:00;
             color:white;
+            position: absolute;
             white-space: normal;
             line-height: 1rem;
             margin: 0;
-            position:absolute;
             bottom:0;
             left:0;
             padding:1rem;
+            z-index: 50;
         }
         .slider-container::-webkit-scrollbar {
             display: none;
