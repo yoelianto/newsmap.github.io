@@ -8,6 +8,21 @@ const fetchPlaylist = (async () => {
     const response = await fetch('https://jsonplaceholder.typicode.com/todos')
 return await response.json()
 })()
+
+let podcast = [
+    {
+        title:"Krisis Berkepanjangan Juventus dan Rasisme dalam Sepakbola Indonesia",
+        url:"https://open.spotify.com/embed/episode/1FfFIT7mH6Q71FCiEWD8un?utm_source=generator"
+    },
+    {
+        title:"48 Jam Bersama European Super League",
+        url:"https://open.spotify.com/embed/episode/7wnWNQzmeJ4jfrwTlgyVY5?utm_source=generator"
+    },
+    {
+        title:"Bukan Lautan, Tapi Liga Champions Kolam Real Madrid",
+        url:"https://open.spotify.com/embed/episode/2EvI4lCuOCMTBrvdXK2zui?utm_source=generator"
+    },
+]
 </script>
 
 <div class="container" id="podcast">
@@ -17,17 +32,17 @@ return await response.json()
     </div>
     <div class="inner">
         <div class="album">
-            {#await fetchImage}
+            <!-- {#await fetchImage}
             <p>...waiting</p>
-            {:then data}
-                {#each {length: 2} as _, i}
+            {:then data} -->
+                {#each podcast as pod, i}
                     <div class="podcast">
-                        <img class='imgpod' src={data[i].url} alt={data[i].title} />
+                        <iframe style="border-radius:12px" src={pod.url} title={pod.title} width="250" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
                     </div>
                 {/each}
-            {:catch error}
+            <!-- {:catch error}
                 <p>An error occurred!</p>
-            {/await}
+            {/await} -->
         </div>
         <p class="playlist-title">Playlist</p>
         <div class="playlist">
@@ -83,9 +98,12 @@ return await response.json()
         flex-direction: row;
         justify-content: space-between;
         margin-bottom:2rem;
+        overflow-x: scroll;
+        overflow-y: hidden;
     }
     .podcast {
-        width:41vw;
+        width:250px;
+        margin-right:0.5rem;
     }
     .imgpod {
         width:100%;

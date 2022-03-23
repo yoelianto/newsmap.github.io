@@ -1725,7 +1725,7 @@ var app = (function () {
     }
 
     // (44:12) {:catch error}
-    function create_catch_block_1$1(ctx) {
+    function create_catch_block_1(ctx) {
     	let p;
 
     	const block = {
@@ -1745,7 +1745,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_catch_block_1$1.name,
+    		id: create_catch_block_1.name,
     		type: "catch",
     		source: "(44:12) {:catch error}",
     		ctx
@@ -1755,7 +1755,7 @@ var app = (function () {
     }
 
     // (38:12) {:then data}
-    function create_then_block_1$1(ctx) {
+    function create_then_block_1(ctx) {
     	let each_1_anchor;
     	let each_value_1 = { length: 4 };
     	validate_each_argument(each_value_1);
@@ -1813,7 +1813,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_then_block_1$1.name,
+    		id: create_then_block_1.name,
     		type: "then",
     		source: "(38:12) {:then data}",
     		ctx
@@ -1864,7 +1864,7 @@ var app = (function () {
     }
 
     // (36:31)                   <p>...waiting</p>              {:then data}
-    function create_pending_block_1$1(ctx) {
+    function create_pending_block_1(ctx) {
     	let p;
 
     	const block = {
@@ -1884,7 +1884,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_pending_block_1$1.name,
+    		id: create_pending_block_1.name,
     		type: "pending",
     		source: "(36:31)                   <p>...waiting</p>              {:then data}",
     		ctx
@@ -2106,9 +2106,9 @@ var app = (function () {
     		current: null,
     		token: null,
     		hasCatch: true,
-    		pending: create_pending_block_1$1,
-    		then: create_then_block_1$1,
-    		catch: create_catch_block_1$1,
+    		pending: create_pending_block_1,
+    		then: create_then_block_1,
+    		catch: create_catch_block_1,
     		value: 2,
     		error: 6
     	};
@@ -3204,138 +3204,45 @@ var app = (function () {
 
     function get_each_context$3(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[3] = list[i];
-    	child_ctx[5] = i;
+    	child_ctx[4] = list[i];
+    	child_ctx[6] = i;
     	return child_ctx;
     }
 
     function get_each_context_1(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[3] = list[i];
-    	child_ctx[5] = i;
+    	child_ctx[8] = list[i];
+    	child_ctx[6] = i;
     	return child_ctx;
     }
 
-    // (28:12) {:catch error}
-    function create_catch_block_1(ctx) {
-    	let p;
-
-    	const block = {
-    		c: function create() {
-    			p = element("p");
-    			p.textContent = "An error occurred!";
-    			add_location(p, file$4, 28, 16, 913);
-    		},
-    		m: function mount(target, anchor) {
-    			insert_dev(target, p, anchor);
-    		},
-    		p: noop,
-    		d: function destroy(detaching) {
-    			if (detaching) detach_dev(p);
-    		}
-    	};
-
-    	dispatch_dev("SvelteRegisterBlock", {
-    		block,
-    		id: create_catch_block_1.name,
-    		type: "catch",
-    		source: "(28:12) {:catch error}",
-    		ctx
-    	});
-
-    	return block;
-    }
-
-    // (22:12) {:then data}
-    function create_then_block_1(ctx) {
-    	let each_1_anchor;
-    	let each_value_1 = { length: 2 };
-    	validate_each_argument(each_value_1);
-    	let each_blocks = [];
-
-    	for (let i = 0; i < each_value_1.length; i += 1) {
-    		each_blocks[i] = create_each_block_1(get_each_context_1(ctx, each_value_1, i));
-    	}
-
-    	const block = {
-    		c: function create() {
-    			for (let i = 0; i < each_blocks.length; i += 1) {
-    				each_blocks[i].c();
-    			}
-
-    			each_1_anchor = empty();
-    		},
-    		m: function mount(target, anchor) {
-    			for (let i = 0; i < each_blocks.length; i += 1) {
-    				each_blocks[i].m(target, anchor);
-    			}
-
-    			insert_dev(target, each_1_anchor, anchor);
-    		},
-    		p: function update(ctx, dirty) {
-    			if (dirty & /*fetchImage*/ 1) {
-    				each_value_1 = { length: 2 };
-    				validate_each_argument(each_value_1);
-    				let i;
-
-    				for (i = 0; i < each_value_1.length; i += 1) {
-    					const child_ctx = get_each_context_1(ctx, each_value_1, i);
-
-    					if (each_blocks[i]) {
-    						each_blocks[i].p(child_ctx, dirty);
-    					} else {
-    						each_blocks[i] = create_each_block_1(child_ctx);
-    						each_blocks[i].c();
-    						each_blocks[i].m(each_1_anchor.parentNode, each_1_anchor);
-    					}
-    				}
-
-    				for (; i < each_blocks.length; i += 1) {
-    					each_blocks[i].d(1);
-    				}
-
-    				each_blocks.length = each_value_1.length;
-    			}
-    		},
-    		d: function destroy(detaching) {
-    			destroy_each(each_blocks, detaching);
-    			if (detaching) detach_dev(each_1_anchor);
-    		}
-    	};
-
-    	dispatch_dev("SvelteRegisterBlock", {
-    		block,
-    		id: create_then_block_1.name,
-    		type: "then",
-    		source: "(22:12) {:then data}",
-    		ctx
-    	});
-
-    	return block;
-    }
-
-    // (23:16) {#each {length: 2} as _, i}
+    // (38:16) {#each podcast as pod, i}
     function create_each_block_1(ctx) {
     	let div;
-    	let img;
-    	let img_src_value;
+    	let iframe;
+    	let iframe_src_value;
     	let t;
 
     	const block = {
     		c: function create() {
     			div = element("div");
-    			img = element("img");
+    			iframe = element("iframe");
     			t = space();
-    			attr_dev(img, "class", "imgpod svelte-1axkqx5");
-    			if (!src_url_equal(img.src, img_src_value = /*data*/ ctx[2][/*i*/ ctx[5]].url)) attr_dev(img, "src", img_src_value);
-    			attr_dev(img, "alt", /*data*/ ctx[2][/*i*/ ctx[5]].title);
-    			add_location(img, file$4, 24, 24, 754);
-    			attr_dev(div, "class", "podcast svelte-1axkqx5");
-    			add_location(div, file$4, 23, 20, 707);
+    			set_style(iframe, "border-radius", "12px");
+    			if (!src_url_equal(iframe.src, iframe_src_value = /*pod*/ ctx[8].url)) attr_dev(iframe, "src", iframe_src_value);
+    			attr_dev(iframe, "title", /*pod*/ ctx[8].title);
+    			attr_dev(iframe, "width", "250");
+    			attr_dev(iframe, "height", "152");
+    			attr_dev(iframe, "frameborder", "0");
+    			iframe.allowFullscreen = "";
+    			attr_dev(iframe, "allow", "autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture");
+    			add_location(iframe, file$4, 39, 24, 1334);
+    			attr_dev(div, "class", "podcast svelte-1pq1fsr");
+    			add_location(div, file$4, 38, 20, 1287);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
-    			append_dev(div, img);
+    			append_dev(div, iframe);
     			append_dev(div, t);
     		},
     		p: noop,
@@ -3348,44 +3255,14 @@ var app = (function () {
     		block,
     		id: create_each_block_1.name,
     		type: "each",
-    		source: "(23:16) {#each {length: 2} as _, i}",
+    		source: "(38:16) {#each podcast as pod, i}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (20:31)               <p>...waiting</p>              {:then data}
-    function create_pending_block_1(ctx) {
-    	let p;
-
-    	const block = {
-    		c: function create() {
-    			p = element("p");
-    			p.textContent = "...waiting";
-    			add_location(p, file$4, 20, 12, 597);
-    		},
-    		m: function mount(target, anchor) {
-    			insert_dev(target, p, anchor);
-    		},
-    		p: noop,
-    		d: function destroy(detaching) {
-    			if (detaching) detach_dev(p);
-    		}
-    	};
-
-    	dispatch_dev("SvelteRegisterBlock", {
-    		block,
-    		id: create_pending_block_1.name,
-    		type: "pending",
-    		source: "(20:31)               <p>...waiting</p>              {:then data}",
-    		ctx
-    	});
-
-    	return block;
-    }
-
-    // (47:12) {:catch error}
+    // (62:12) {:catch error}
     function create_catch_block$1(ctx) {
     	let p;
 
@@ -3393,7 +3270,7 @@ var app = (function () {
     		c: function create() {
     			p = element("p");
     			p.textContent = "An error occurred!";
-    			add_location(p, file$4, 47, 16, 1682);
+    			add_location(p, file$4, 62, 16, 2430);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -3408,14 +3285,14 @@ var app = (function () {
     		block,
     		id: create_catch_block$1.name,
     		type: "catch",
-    		source: "(47:12) {:catch error}",
+    		source: "(62:12) {:catch error}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (36:12) {:then data}
+    // (51:12) {:then data}
     function create_then_block$1(ctx) {
     	let each_1_anchor;
     	let each_value = { length: 10 };
@@ -3476,14 +3353,14 @@ var app = (function () {
     		block,
     		id: create_then_block$1.name,
     		type: "then",
-    		source: "(36:12) {:then data}",
+    		source: "(51:12) {:then data}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (37:16) {#each {length: 10} as _, i}
+    // (52:16) {#each {length: 10} as _, i}
     function create_each_block$3(ctx) {
     	let div5;
     	let div0;
@@ -3491,7 +3368,7 @@ var app = (function () {
     	let t0;
     	let div3;
     	let div1;
-    	let t1_value = /*data*/ ctx[2][/*i*/ ctx[5]].title + "";
+    	let t1_value = /*data*/ ctx[3][/*i*/ ctx[6]].title + "";
     	let t1;
     	let t2;
     	let div2;
@@ -3515,19 +3392,19 @@ var app = (function () {
     			div4.textContent = "15.00";
     			t5 = space();
     			attr_dev(i_1, "class", "fa fa-play");
-    			add_location(i_1, file$4, 38, 42, 1279);
-    			attr_dev(div0, "class", "play svelte-1axkqx5");
-    			add_location(div0, file$4, 38, 24, 1261);
+    			add_location(i_1, file$4, 53, 42, 2027);
+    			attr_dev(div0, "class", "play svelte-1pq1fsr");
+    			add_location(div0, file$4, 53, 24, 2009);
     			attr_dev(div1, "class", "podtitle");
-    			add_location(div1, file$4, 40, 28, 1390);
+    			add_location(div1, file$4, 55, 28, 2138);
     			attr_dev(div2, "class", "podauthor");
-    			add_location(div2, file$4, 41, 28, 1463);
-    			attr_dev(div3, "class", "poddetail svelte-1axkqx5");
-    			add_location(div3, file$4, 39, 24, 1337);
-    			attr_dev(div4, "class", "duration svelte-1axkqx5");
-    			add_location(div4, file$4, 43, 24, 1550);
-    			attr_dev(div5, "class", "podlist svelte-1axkqx5");
-    			add_location(div5, file$4, 37, 20, 1214);
+    			add_location(div2, file$4, 56, 28, 2211);
+    			attr_dev(div3, "class", "poddetail svelte-1pq1fsr");
+    			add_location(div3, file$4, 54, 24, 2085);
+    			attr_dev(div4, "class", "duration svelte-1pq1fsr");
+    			add_location(div4, file$4, 58, 24, 2298);
+    			attr_dev(div5, "class", "podlist svelte-1pq1fsr");
+    			add_location(div5, file$4, 52, 20, 1962);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div5, anchor);
@@ -3553,14 +3430,14 @@ var app = (function () {
     		block,
     		id: create_each_block$3.name,
     		type: "each",
-    		source: "(37:16) {#each {length: 10} as _, i}",
+    		source: "(52:16) {#each {length: 10} as _, i}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (34:31)               <p>...waiting</p>              {:then data}
+    // (49:31)               <p>...waiting</p>              {:then data}
     function create_pending_block$1(ctx) {
     	let p;
 
@@ -3568,7 +3445,7 @@ var app = (function () {
     		c: function create() {
     			p = element("p");
     			p.textContent = "...waiting";
-    			add_location(p, file$4, 34, 12, 1103);
+    			add_location(p, file$4, 49, 12, 1851);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -3583,7 +3460,7 @@ var app = (function () {
     		block,
     		id: create_pending_block$1.name,
     		type: "pending",
-    		source: "(34:31)               <p>...waiting</p>              {:then data}",
+    		source: "(49:31)               <p>...waiting</p>              {:then data}",
     		ctx
     	});
 
@@ -3603,22 +3480,15 @@ var app = (function () {
     	let p2;
     	let t6;
     	let div2;
+    	let each_value_1 = /*podcast*/ ctx[1];
+    	validate_each_argument(each_value_1);
+    	let each_blocks = [];
+
+    	for (let i = 0; i < each_value_1.length; i += 1) {
+    		each_blocks[i] = create_each_block_1(get_each_context_1(ctx, each_value_1, i));
+    	}
 
     	let info = {
-    		ctx,
-    		current: null,
-    		token: null,
-    		hasCatch: true,
-    		pending: create_pending_block_1,
-    		then: create_then_block_1,
-    		catch: create_catch_block_1,
-    		value: 2,
-    		error: 6
-    	};
-
-    	handle_promise(/*fetchImage*/ ctx[0], info);
-
-    	let info_1 = {
     		ctx,
     		current: null,
     		token: null,
@@ -3626,11 +3496,11 @@ var app = (function () {
     		pending: create_pending_block$1,
     		then: create_then_block$1,
     		catch: create_catch_block$1,
-    		value: 2,
-    		error: 6
+    		value: 3,
+    		error: 7
     	};
 
-    	handle_promise(/*fetchImage*/ ctx[0], info_1);
+    	handle_promise(/*fetchImage*/ ctx[0], info);
 
     	const block = {
     		c: function create() {
@@ -3644,30 +3514,34 @@ var app = (function () {
     			t3 = space();
     			div3 = element("div");
     			div1 = element("div");
-    			info.block.c();
+
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].c();
+    			}
+
     			t4 = space();
     			p2 = element("p");
     			p2.textContent = "Playlist";
     			t6 = space();
     			div2 = element("div");
-    			info_1.block.c();
-    			attr_dev(p0, "class", "title svelte-1axkqx5");
-    			add_location(p0, file$4, 14, 8, 415);
-    			attr_dev(p1, "class", "viewall svelte-1axkqx5");
-    			add_location(p1, file$4, 15, 8, 453);
-    			attr_dev(div0, "class", "title-container svelte-1axkqx5");
-    			add_location(div0, file$4, 13, 4, 376);
-    			attr_dev(div1, "class", "album svelte-1axkqx5");
-    			add_location(div1, file$4, 18, 8, 531);
-    			attr_dev(p2, "class", "playlist-title svelte-1axkqx5");
-    			add_location(p2, file$4, 31, 8, 986);
-    			attr_dev(div2, "class", "playlist svelte-1axkqx5");
-    			add_location(div2, file$4, 32, 8, 1034);
-    			attr_dev(div3, "class", "inner svelte-1axkqx5");
-    			add_location(div3, file$4, 17, 4, 502);
+    			info.block.c();
+    			attr_dev(p0, "class", "title svelte-1pq1fsr");
+    			add_location(p0, file$4, 29, 8, 988);
+    			attr_dev(p1, "class", "viewall svelte-1pq1fsr");
+    			add_location(p1, file$4, 30, 8, 1026);
+    			attr_dev(div0, "class", "title-container svelte-1pq1fsr");
+    			add_location(div0, file$4, 28, 4, 949);
+    			attr_dev(div1, "class", "album svelte-1pq1fsr");
+    			add_location(div1, file$4, 33, 8, 1104);
+    			attr_dev(p2, "class", "playlist-title svelte-1pq1fsr");
+    			add_location(p2, file$4, 46, 8, 1734);
+    			attr_dev(div2, "class", "playlist svelte-1pq1fsr");
+    			add_location(div2, file$4, 47, 8, 1782);
+    			attr_dev(div3, "class", "inner svelte-1pq1fsr");
+    			add_location(div3, file$4, 32, 4, 1075);
     			attr_dev(div4, "class", "container");
     			attr_dev(div4, "id", "podcast");
-    			add_location(div4, file$4, 12, 0, 334);
+    			add_location(div4, file$4, 27, 0, 907);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -3681,32 +3555,56 @@ var app = (function () {
     			append_dev(div4, t3);
     			append_dev(div4, div3);
     			append_dev(div3, div1);
-    			info.block.m(div1, info.anchor = null);
-    			info.mount = () => div1;
-    			info.anchor = null;
+
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].m(div1, null);
+    			}
+
     			append_dev(div3, t4);
     			append_dev(div3, p2);
     			append_dev(div3, t6);
     			append_dev(div3, div2);
-    			info_1.block.m(div2, info_1.anchor = null);
-    			info_1.mount = () => div2;
-    			info_1.anchor = null;
+    			info.block.m(div2, info.anchor = null);
+    			info.mount = () => div2;
+    			info.anchor = null;
     		},
     		p: function update(new_ctx, [dirty]) {
     			ctx = new_ctx;
+
+    			if (dirty & /*podcast*/ 2) {
+    				each_value_1 = /*podcast*/ ctx[1];
+    				validate_each_argument(each_value_1);
+    				let i;
+
+    				for (i = 0; i < each_value_1.length; i += 1) {
+    					const child_ctx = get_each_context_1(ctx, each_value_1, i);
+
+    					if (each_blocks[i]) {
+    						each_blocks[i].p(child_ctx, dirty);
+    					} else {
+    						each_blocks[i] = create_each_block_1(child_ctx);
+    						each_blocks[i].c();
+    						each_blocks[i].m(div1, null);
+    					}
+    				}
+
+    				for (; i < each_blocks.length; i += 1) {
+    					each_blocks[i].d(1);
+    				}
+
+    				each_blocks.length = each_value_1.length;
+    			}
+
     			update_await_block_branch(info, ctx, dirty);
-    			update_await_block_branch(info_1, ctx, dirty);
     		},
     		i: noop,
     		o: noop,
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(div4);
+    			destroy_each(each_blocks, detaching);
     			info.block.d();
     			info.token = null;
     			info = null;
-    			info_1.block.d();
-    			info_1.token = null;
-    			info_1 = null;
     		}
     	};
 
@@ -3735,14 +3633,38 @@ var app = (function () {
     		return await response.json();
     	})();
 
+    	let podcast = [
+    		{
+    			title: "Krisis Berkepanjangan Juventus dan Rasisme dalam Sepakbola Indonesia",
+    			url: "https://open.spotify.com/embed/episode/1FfFIT7mH6Q71FCiEWD8un?utm_source=generator"
+    		},
+    		{
+    			title: "48 Jam Bersama European Super League",
+    			url: "https://open.spotify.com/embed/episode/7wnWNQzmeJ4jfrwTlgyVY5?utm_source=generator"
+    		},
+    		{
+    			title: "Bukan Lautan, Tapi Liga Champions Kolam Real Madrid",
+    			url: "https://open.spotify.com/embed/episode/2EvI4lCuOCMTBrvdXK2zui?utm_source=generator"
+    		}
+    	];
+
     	const writable_props = [];
 
     	Object.keys($$props).forEach(key => {
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<Podcast> was created with unknown prop '${key}'`);
     	});
 
-    	$$self.$capture_state = () => ({ fetchImage, fetchPlaylist });
-    	return [fetchImage];
+    	$$self.$capture_state = () => ({ fetchImage, fetchPlaylist, podcast });
+
+    	$$self.$inject_state = $$props => {
+    		if ('podcast' in $$props) $$invalidate(1, podcast = $$props.podcast);
+    	};
+
+    	if ($$props && "$$inject" in $$props) {
+    		$$self.$inject_state($$props.$$inject);
+    	}
+
+    	return [fetchImage, podcast];
     }
 
     class Podcast extends SvelteComponentDev {
