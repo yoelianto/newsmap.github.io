@@ -23,6 +23,7 @@
                 
                 <div class="headline">
                     <img class="header" src={deduktifheader} alt="" >
+                    <div class="headerbottom"></div>
                     <div class="detail">
                         <div class="author">oleh {author}</div>
                         <div class="title">{title}</div>   
@@ -56,6 +57,14 @@
         background-color: #ef5959;
         height: 50vw;
         border-radius: 0 0 0 2rem;
+    }
+    .headerbottom{
+        background: linear-gradient(0deg, rgba(36,32,83,0.9) 0%, rgba(36,32,83,0) 100%);
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        height:70%;
+        border-radius:0 0 0.5rem 0.5rem;
     }
     .content {
         width:88vw;

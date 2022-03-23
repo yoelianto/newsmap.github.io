@@ -2675,9 +2675,9 @@ var app = (function () {
     const file$6 = "src\\Deduktif.svelte";
 
     function create_fragment$6(ctx) {
+    	let div13;
     	let div12;
     	let div11;
-    	let div10;
     	let div4;
     	let div1;
     	let div0;
@@ -2687,26 +2687,28 @@ var app = (function () {
     	let div3;
     	let div2;
     	let t2;
+    	let div10;
     	let div9;
-    	let div8;
     	let img1;
     	let img1_src_value;
     	let t3;
-    	let div7;
     	let div5;
     	let t4;
+    	let div8;
+    	let div6;
     	let t5;
     	let t6;
-    	let div6;
     	let t7;
+    	let div7;
     	let t8;
+    	let t9;
     	let p;
 
     	const block = {
     		c: function create() {
+    			div13 = element("div");
     			div12 = element("div");
     			div11 = element("div");
-    			div10 = element("div");
     			div4 = element("div");
     			div1 = element("div");
     			div0 = element("div");
@@ -2716,86 +2718,92 @@ var app = (function () {
     			div2 = element("div");
     			div2.textContent = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo doloribus maxime exercitationem, distinctio est aperiam eveniet ullam assumenda quae corporis voluptatum quasi consequuntur impedit! Quaerat?";
     			t2 = space();
+    			div10 = element("div");
     			div9 = element("div");
-    			div8 = element("div");
     			img1 = element("img");
     			t3 = space();
-    			div7 = element("div");
     			div5 = element("div");
-    			t4 = text("oleh ");
-    			t5 = text(/*author*/ ctx[3]);
-    			t6 = space();
+    			t4 = space();
+    			div8 = element("div");
     			div6 = element("div");
-    			t7 = text(/*title*/ ctx[0]);
-    			t8 = space();
+    			t5 = text("oleh ");
+    			t6 = text(/*author*/ ctx[3]);
+    			t7 = space();
+    			div7 = element("div");
+    			t8 = text(/*title*/ ctx[0]);
+    			t9 = space();
     			p = element("p");
     			p.textContent = "DEDUKTIF";
-    			attr_dev(img0, "class", "authorprofile svelte-1p5csai");
+    			attr_dev(img0, "class", "authorprofile svelte-knygkq");
     			if (!src_url_equal(img0.src, img0_src_value = /*authorprofileimage*/ ctx[1])) attr_dev(img0, "src", img0_src_value);
     			attr_dev(img0, "alt", /*authorprofilealt*/ ctx[2]);
     			add_location(img0, file$6, 12, 24, 363);
-    			attr_dev(div0, "class", "profile svelte-1p5csai");
+    			attr_dev(div0, "class", "profile svelte-knygkq");
     			add_location(div0, file$6, 11, 20, 316);
-    			attr_dev(div1, "class", "left svelte-1p5csai");
+    			attr_dev(div1, "class", "left svelte-knygkq");
     			add_location(div1, file$6, 10, 16, 276);
-    			attr_dev(div2, "class", "excerpt svelte-1p5csai");
+    			attr_dev(div2, "class", "excerpt svelte-knygkq");
     			add_location(div2, file$6, 16, 20, 549);
-    			attr_dev(div3, "class", "right svelte-1p5csai");
+    			attr_dev(div3, "class", "right svelte-knygkq");
     			add_location(div3, file$6, 15, 16, 508);
-    			attr_dev(div4, "class", "contentbot svelte-1p5csai");
+    			attr_dev(div4, "class", "contentbot svelte-knygkq");
     			add_location(div4, file$6, 9, 12, 234);
-    			attr_dev(img1, "class", "header svelte-1p5csai");
+    			attr_dev(img1, "class", "header svelte-knygkq");
     			if (!src_url_equal(img1.src, img1_src_value = /*deduktifheader*/ ctx[4])) attr_dev(img1, "src", img1_src_value);
     			attr_dev(img1, "alt", "");
     			add_location(img1, file$6, 24, 20, 1010);
-    			attr_dev(div5, "class", "author svelte-1p5csai");
-    			add_location(div5, file$6, 26, 24, 1127);
-    			attr_dev(div6, "class", "title svelte-1p5csai");
-    			add_location(div6, file$6, 27, 24, 1192);
-    			attr_dev(div7, "class", "detail svelte-1p5csai");
-    			add_location(div7, file$6, 25, 20, 1081);
-    			attr_dev(div8, "class", "headline svelte-1p5csai");
-    			add_location(div8, file$6, 23, 16, 966);
-    			attr_dev(div9, "class", "contenttop");
-    			add_location(div9, file$6, 21, 12, 906);
-    			attr_dev(div10, "class", "content svelte-1p5csai");
-    			add_location(div10, file$6, 8, 8, 199);
-    			attr_dev(div11, "class", "bottom svelte-1p5csai");
-    			add_location(div11, file$6, 7, 4, 169);
-    			attr_dev(p, "class", "deduktif svelte-1p5csai");
-    			add_location(p, file$6, 33, 4, 1333);
-    			attr_dev(div12, "class", "container svelte-1p5csai");
-    			attr_dev(div12, "id", "deduktif");
-    			add_location(div12, file$6, 6, 0, 126);
+    			attr_dev(div5, "class", "headerbottom svelte-knygkq");
+    			add_location(div5, file$6, 25, 20, 1081);
+    			attr_dev(div6, "class", "author svelte-knygkq");
+    			add_location(div6, file$6, 27, 24, 1181);
+    			attr_dev(div7, "class", "title svelte-knygkq");
+    			add_location(div7, file$6, 28, 24, 1246);
+    			attr_dev(div8, "class", "detail svelte-knygkq");
+    			add_location(div8, file$6, 26, 20, 1135);
+    			attr_dev(div9, "class", "headline svelte-knygkq");
+    			add_location(div9, file$6, 23, 16, 966);
+    			attr_dev(div10, "class", "contenttop");
+    			add_location(div10, file$6, 21, 12, 906);
+    			attr_dev(div11, "class", "content svelte-knygkq");
+    			add_location(div11, file$6, 8, 8, 199);
+    			attr_dev(div12, "class", "bottom svelte-knygkq");
+    			add_location(div12, file$6, 7, 4, 169);
+    			attr_dev(p, "class", "deduktif svelte-knygkq");
+    			add_location(p, file$6, 34, 4, 1387);
+    			attr_dev(div13, "class", "container svelte-knygkq");
+    			attr_dev(div13, "id", "deduktif");
+    			add_location(div13, file$6, 6, 0, 126);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, div12, anchor);
+    			insert_dev(target, div13, anchor);
+    			append_dev(div13, div12);
     			append_dev(div12, div11);
-    			append_dev(div11, div10);
-    			append_dev(div10, div4);
+    			append_dev(div11, div4);
     			append_dev(div4, div1);
     			append_dev(div1, div0);
     			append_dev(div0, img0);
     			append_dev(div4, t0);
     			append_dev(div4, div3);
     			append_dev(div3, div2);
-    			append_dev(div10, t2);
+    			append_dev(div11, t2);
+    			append_dev(div11, div10);
     			append_dev(div10, div9);
+    			append_dev(div9, img1);
+    			append_dev(div9, t3);
+    			append_dev(div9, div5);
+    			append_dev(div9, t4);
     			append_dev(div9, div8);
-    			append_dev(div8, img1);
-    			append_dev(div8, t3);
+    			append_dev(div8, div6);
+    			append_dev(div6, t5);
+    			append_dev(div6, t6);
+    			append_dev(div8, t7);
     			append_dev(div8, div7);
-    			append_dev(div7, div5);
-    			append_dev(div5, t4);
-    			append_dev(div5, t5);
-    			append_dev(div7, t6);
-    			append_dev(div7, div6);
-    			append_dev(div6, t7);
-    			append_dev(div12, t8);
-    			append_dev(div12, p);
+    			append_dev(div7, t8);
+    			append_dev(div13, t9);
+    			append_dev(div13, p);
     		},
     		p: function update(ctx, [dirty]) {
     			if (dirty & /*authorprofileimage*/ 2 && !src_url_equal(img0.src, img0_src_value = /*authorprofileimage*/ ctx[1])) {
@@ -2810,13 +2818,13 @@ var app = (function () {
     				attr_dev(img1, "src", img1_src_value);
     			}
 
-    			if (dirty & /*author*/ 8) set_data_dev(t5, /*author*/ ctx[3]);
-    			if (dirty & /*title*/ 1) set_data_dev(t7, /*title*/ ctx[0]);
+    			if (dirty & /*author*/ 8) set_data_dev(t6, /*author*/ ctx[3]);
+    			if (dirty & /*title*/ 1) set_data_dev(t8, /*title*/ ctx[0]);
     		},
     		i: noop,
     		o: noop,
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(div12);
+    			if (detaching) detach_dev(div13);
     		}
     	};
 
