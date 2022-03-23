@@ -15,7 +15,7 @@
         font-family: 'Roboto';
         width:90%;
         max-width: 650px;
-        margin: 0 auto 0 auto;
+        margin: 4rem auto 4rem auto;
         text-align: left;
     }
     /* h3{

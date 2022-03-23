@@ -38,19 +38,19 @@
 <style>
     .title-section {
         width:90%;
-        font-family: 'Black Han Sans', sans-serif;
+        
         max-width: 600px;
         margin: 3rem auto 5rem auto;
         text-align: center;
         z-index: 1;
         color: var(--titleColor);
     }
-    .header-img {
+    /* .header-img {
         width:100%;
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-    }
+    } */
     .full-header-img {
         width:100%;
         height:100vh;
@@ -74,6 +74,8 @@
         font-weight: 700;
         font-size: 3.1rem;
         margin: 0 auto 3rem auto;
+        font-family: 'Black Han Sans', sans-serif;
+        letter-spacing: 0.1em;
     }
     .subtitle {
         margin: -1rem auto 3rem auto;
@@ -112,10 +114,10 @@
             line-height: 1.5rem;
             
         }
-        .header-img {
+        /* .header-img {
             width:100%;
             height:100vw;
-        }
+        } */
         .title-section {
             margin: 1rem auto 2rem auto;
         }
