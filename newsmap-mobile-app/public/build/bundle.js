@@ -1893,7 +1893,7 @@ var app = (function () {
     }
 
     // (57:12) {:catch error}
-    function create_catch_block$3(ctx) {
+    function create_catch_block$2(ctx) {
     	let p;
 
     	const block = {
@@ -1913,7 +1913,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_catch_block$3.name,
+    		id: create_catch_block$2.name,
     		type: "catch",
     		source: "(57:12) {:catch error}",
     		ctx
@@ -1923,7 +1923,7 @@ var app = (function () {
     }
 
     // (51:12) {:then data}
-    function create_then_block$3(ctx) {
+    function create_then_block$2(ctx) {
     	let each_1_anchor;
     	let each_value = { length: 9 };
     	validate_each_argument(each_value);
@@ -1981,7 +1981,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_then_block$3.name,
+    		id: create_then_block$2.name,
     		type: "then",
     		source: "(51:12) {:then data}",
     		ctx
@@ -2032,7 +2032,7 @@ var app = (function () {
     }
 
     // (49:31)                   <p>...waiting</p>              {:then data}
-    function create_pending_block$3(ctx) {
+    function create_pending_block$2(ctx) {
     	let p;
 
     	const block = {
@@ -2052,7 +2052,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_pending_block$3.name,
+    		id: create_pending_block$2.name,
     		type: "pending",
     		source: "(49:31)                   <p>...waiting</p>              {:then data}",
     		ctx
@@ -2119,9 +2119,9 @@ var app = (function () {
     		current: null,
     		token: null,
     		hasCatch: true,
-    		pending: create_pending_block$3,
-    		then: create_then_block$3,
-    		catch: create_catch_block$3,
+    		pending: create_pending_block$2,
+    		then: create_then_block$2,
+    		catch: create_catch_block$2,
     		value: 2,
     		error: 6
     	};
@@ -2440,45 +2440,78 @@ var app = (function () {
 
     function get_each_context$5(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[2] = list[i];
-    	child_ctx[4] = i;
+    	child_ctx[0] = list[i];
+    	child_ctx[3] = i;
     	return child_ctx;
     }
 
-    // (20:8) {:catch error}
-    function create_catch_block$2(ctx) {
-    	let p;
+    // (36:12) {#each sentiment as sentiment, i}
+    function create_each_block$5(ctx) {
+    	let div3;
+    	let div2;
+    	let div0;
+    	let img;
+    	let img_src_value;
+    	let t0;
+    	let div1;
+    	let t1_value = /*sentiment*/ ctx[0].name + "";
+    	let t1;
+    	let t2;
 
     	const block = {
     		c: function create() {
-    			p = element("p");
-    			p.textContent = "An error occurred!";
-    			add_location(p, file$7, 20, 12, 585);
+    			div3 = element("div");
+    			div2 = element("div");
+    			div0 = element("div");
+    			img = element("img");
+    			t0 = space();
+    			div1 = element("div");
+    			t1 = text(t1_value);
+    			t2 = space();
+    			attr_dev(img, "class", "people svelte-btoga2");
+    			if (!src_url_equal(img.src, img_src_value = /*sentiment*/ ctx[0].url)) attr_dev(img, "src", img_src_value);
+    			attr_dev(img, "alt", /*sentiment*/ ctx[0].name);
+    			add_location(img, file$7, 39, 24, 1351);
+    			attr_dev(div0, "class", "person svelte-btoga2");
+    			add_location(div0, file$7, 38, 20, 1305);
+    			attr_dev(div1, "class", "name svelte-btoga2");
+    			add_location(div1, file$7, 41, 20, 1464);
+    			attr_dev(div2, "class", "sentiment svelte-btoga2");
+    			add_location(div2, file$7, 37, 16, 1260);
+    			attr_dev(div3, "class", "sentiment-container");
+    			add_location(div3, file$7, 36, 12, 1209);
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, p, anchor);
+    			insert_dev(target, div3, anchor);
+    			append_dev(div3, div2);
+    			append_dev(div2, div0);
+    			append_dev(div0, img);
+    			append_dev(div2, t0);
+    			append_dev(div2, div1);
+    			append_dev(div1, t1);
+    			append_dev(div3, t2);
     		},
     		p: noop,
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(p);
+    			if (detaching) detach_dev(div3);
     		}
     	};
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_catch_block$2.name,
-    		type: "catch",
-    		source: "(20:8) {:catch error}",
+    		id: create_each_block$5.name,
+    		type: "each",
+    		source: "(36:12) {#each sentiment as sentiment, i}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (14:8) {:then data}
-    function create_then_block$2(ctx) {
-    	let each_1_anchor;
-    	let each_value = { length: 10 };
+    function create_fragment$7(ctx) {
+    	let div1;
+    	let div0;
+    	let each_value = /*sentiment*/ ctx[0];
     	validate_each_argument(each_value);
     	let each_blocks = [];
 
@@ -2488,22 +2521,32 @@ var app = (function () {
 
     	const block = {
     		c: function create() {
+    			div1 = element("div");
+    			div0 = element("div");
+
     			for (let i = 0; i < each_blocks.length; i += 1) {
     				each_blocks[i].c();
     			}
 
-    			each_1_anchor = empty();
+    			attr_dev(div0, "class", "slider svelte-btoga2");
+    			add_location(div0, file$7, 31, 4, 1041);
+    			attr_dev(div1, "class", "container svelte-btoga2");
+    			add_location(div1, file$7, 30, 0, 1012);
+    		},
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
-    			for (let i = 0; i < each_blocks.length; i += 1) {
-    				each_blocks[i].m(target, anchor);
-    			}
+    			insert_dev(target, div1, anchor);
+    			append_dev(div1, div0);
 
-    			insert_dev(target, each_1_anchor, anchor);
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].m(div0, null);
+    			}
     		},
-    		p: function update(ctx, dirty) {
-    			if (dirty & /*fetchImage*/ 1) {
-    				each_value = { length: 10 };
+    		p: function update(ctx, [dirty]) {
+    			if (dirty & /*sentiment*/ 1) {
+    				each_value = /*sentiment*/ ctx[0];
     				validate_each_argument(each_value);
     				let i;
 
@@ -2515,7 +2558,7 @@ var app = (function () {
     					} else {
     						each_blocks[i] = create_each_block$5(child_ctx);
     						each_blocks[i].c();
-    						each_blocks[i].m(each_1_anchor.parentNode, each_1_anchor);
+    						each_blocks[i].m(div0, null);
     					}
     				}
 
@@ -2526,143 +2569,11 @@ var app = (function () {
     				each_blocks.length = each_value.length;
     			}
     		},
-    		d: function destroy(detaching) {
-    			destroy_each(each_blocks, detaching);
-    			if (detaching) detach_dev(each_1_anchor);
-    		}
-    	};
-
-    	dispatch_dev("SvelteRegisterBlock", {
-    		block,
-    		id: create_then_block$2.name,
-    		type: "then",
-    		source: "(14:8) {:then data}",
-    		ctx
-    	});
-
-    	return block;
-    }
-
-    // (15:12) {#each {length: 10} as _, i}
-    function create_each_block$5(ctx) {
-    	let div;
-    	let img;
-    	let img_src_value;
-    	let t;
-
-    	const block = {
-    		c: function create() {
-    			div = element("div");
-    			img = element("img");
-    			t = space();
-    			attr_dev(img, "class", "people svelte-1nwnlwr");
-    			if (!src_url_equal(img.src, img_src_value = /*data*/ ctx[1][/*i*/ ctx[4]].url)) attr_dev(img, "src", img_src_value);
-    			attr_dev(img, "alt", /*data*/ ctx[1][/*i*/ ctx[4]].title);
-    			add_location(img, file$7, 16, 20, 442);
-    			attr_dev(div, "class", "sentiment svelte-1nwnlwr");
-    			add_location(div, file$7, 15, 16, 397);
-    		},
-    		m: function mount(target, anchor) {
-    			insert_dev(target, div, anchor);
-    			append_dev(div, img);
-    			append_dev(div, t);
-    		},
-    		p: noop,
-    		d: function destroy(detaching) {
-    			if (detaching) detach_dev(div);
-    		}
-    	};
-
-    	dispatch_dev("SvelteRegisterBlock", {
-    		block,
-    		id: create_each_block$5.name,
-    		type: "each",
-    		source: "(15:12) {#each {length: 10} as _, i}",
-    		ctx
-    	});
-
-    	return block;
-    }
-
-    // (12:27)           <p>...waiting</p>          {:then data}
-    function create_pending_block$2(ctx) {
-    	let p;
-
-    	const block = {
-    		c: function create() {
-    			p = element("p");
-    			p.textContent = "...waiting";
-    			add_location(p, file$7, 12, 8, 298);
-    		},
-    		m: function mount(target, anchor) {
-    			insert_dev(target, p, anchor);
-    		},
-    		p: noop,
-    		d: function destroy(detaching) {
-    			if (detaching) detach_dev(p);
-    		}
-    	};
-
-    	dispatch_dev("SvelteRegisterBlock", {
-    		block,
-    		id: create_pending_block$2.name,
-    		type: "pending",
-    		source: "(12:27)           <p>...waiting</p>          {:then data}",
-    		ctx
-    	});
-
-    	return block;
-    }
-
-    function create_fragment$7(ctx) {
-    	let div1;
-    	let div0;
-
-    	let info = {
-    		ctx,
-    		current: null,
-    		token: null,
-    		hasCatch: true,
-    		pending: create_pending_block$2,
-    		then: create_then_block$2,
-    		catch: create_catch_block$2,
-    		value: 1,
-    		error: 5
-    	};
-
-    	handle_promise(/*fetchImage*/ ctx[0], info);
-
-    	const block = {
-    		c: function create() {
-    			div1 = element("div");
-    			div0 = element("div");
-    			info.block.c();
-    			attr_dev(div0, "class", "slider svelte-1nwnlwr");
-    			add_location(div0, file$7, 10, 4, 239);
-    			attr_dev(div1, "class", "container svelte-1nwnlwr");
-    			add_location(div1, file$7, 9, 0, 210);
-    		},
-    		l: function claim(nodes) {
-    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
-    		},
-    		m: function mount(target, anchor) {
-    			insert_dev(target, div1, anchor);
-    			append_dev(div1, div0);
-    			info.block.m(div0, info.anchor = null);
-    			info.mount = () => div0;
-    			info.anchor = null;
-    		},
-    		p: function update(new_ctx, [dirty]) {
-    			ctx = new_ctx;
-    			update_await_block_branch(info, ctx, dirty);
-    		},
     		i: noop,
     		o: noop,
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(div1);
-    			info.block.d();
-    			info.token = null;
-    			info = null;
+    			destroy_each(each_blocks, detaching);
     		}
     	};
 
@@ -2677,8 +2588,6 @@ var app = (function () {
     	return block;
     }
 
-    const sentiment = 1;
-
     function instance$7($$self, $$props, $$invalidate) {
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('Sentiment', slots, []);
@@ -2688,6 +2597,29 @@ var app = (function () {
     		return await response.json();
     	})();
 
+    	const sentiment = [
+    		{
+    			name: "Joko Widodo",
+    			url: "https://cdn.newstensity.com/image/9222a02f1e8748ce8b74d27231da39ab/phpj4jvde.jpeg"
+    		},
+    		{
+    			name: "Muhammad Luthfi",
+    			url: "https://cdn.newstensity.com/image/cda36ff6c0a74d75a2868026b5b78039/phpioom9v.jpg"
+    		},
+    		{
+    			name: "Marc Marquez",
+    			url: "https://cdn.newstensity.com/image/72090f1326ee49c0a703e4d5ea5929f4/image.jpg"
+    		},
+    		{
+    			name: "Luhut Binsar Pandjaitan",
+    			url: "https://cdn.newstensity.com/image/b803d03f3a6a4ee5985a56174a24239c/phpijmeie.jpg"
+    		},
+    		{
+    			name: "Doni Salmanan",
+    			url: "https://cdn.newstensity.com/image/fd43d585386f4424a8cdbc5377cbfa3e/phplctpor.jpg"
+    		}
+    	];
+
     	const writable_props = [];
 
     	Object.keys($$props).forEach(key => {
@@ -2695,7 +2627,7 @@ var app = (function () {
     	});
 
     	$$self.$capture_state = () => ({ fetchImage, sentiment });
-    	return [fetchImage];
+    	return [sentiment];
     }
 
     class Sentiment extends SvelteComponentDev {
