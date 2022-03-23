@@ -12,7 +12,7 @@
 
 <style>
     section {
-        /* font-family: 'Klima'; */
+        font-family: 'Roboto';
         width:90%;
         max-width: 650px;
         margin: 0 auto 0 auto;
@@ -32,6 +32,7 @@
         margin-block-end: 1em;
         margin-inline-start: 0px;
         margin-inline-end: 0px;
+        color:var(--font-color);
     }
     @media only screen and (max-width: 800px) {
         section {

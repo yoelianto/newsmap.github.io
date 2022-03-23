@@ -23,9 +23,10 @@
 
 <style>
 section {
-    color: #888;
+    color: var(--font-color);
     font-size: 1rem;
     line-height: 2rem;
+    width:90%;
     max-width: 650px;
     margin: auto;
 }

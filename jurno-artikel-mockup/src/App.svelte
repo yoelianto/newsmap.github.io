@@ -14,12 +14,12 @@
 	let bottom = 1;
 
 	// styling variables
-	let mainBackground='white'
+	let mainBackground='#af3134'
 	let headerImage='url("https://rupadata.id/wp-content/uploads/2021/02/header-artikel-plta-kayan.jpg")'
 	let headerBackground='#888'
-	let titleColor='black'
-	let subtitleColor='#666'
-	let subheadColor='#888'
+	let titleColor='#f9f9e1'
+	let subtitleColor='#f9f9e1'
+	let subheadColor='#f9f9e1'
 
 	let credit =[{
 		role : 'Penulis',
@@ -65,7 +65,6 @@
 		author='Volutpat Sapien'
 		date=''		
 	/>	
-	
 	<div class="divider"></div>
 	<Scroller
 		{top}
@@ -77,7 +76,172 @@
 		bind:progress
 	>
 			<div slot="background">
-				<p>{scrollytelling[index]}</p>
+				<div id="g-Korean-Waves-box" class="ai2html">
+				{#if index == 0}
+					<!-- Halaman 1 -->
+					<!-- Artboard: smallplus-moonjae -->
+					<div id="g-Korean-Waves-smallplus-moonjae" class="g-artboard" style="max-width: 509px;max-height: 1113px" data-aspect-ratio="0.457" data-min-width="0" data-max-width="509">
+					<div style="padding: 0 0 218.75% 0;"></div>
+							<img id="g-Korean-Waves-smallplus-moonjae-img" class="g-aiImg" alt="" src="./images/Korean-Waves-smallplus-moonjae.png"/>
+						</div>
+				
+					<!-- Artboard: submedium-moonjae -->
+					<div id="g-Korean-Waves-submedium-moonjae" class="g-artboard" style="min-width: 510px;max-width: 689px;max-height: 1081px" data-aspect-ratio="0.638" data-min-width="510" data-max-width="689">
+					<div style="padding: 0 0 156.8627% 0;"></div>
+							<img id="g-Korean-Waves-submedium-moonjae-img" class="g-aiImg" alt="" src="./images/Korean-Waves-submedium-moonjae.png"/>
+						</div>
+				
+					<!-- Artboard: medium-moonjae -->
+					<div id="g-Korean-Waves-medium-moonjae" class="g-artboard" style="min-width: 690px;max-width: 919px;max-height: 1364px" data-aspect-ratio="0.674" data-min-width="690" data-max-width="919">
+					<div style="padding: 0 0 148.4058% 0;"></div>
+							<img id="g-Korean-Waves-medium-moonjae-img" class="g-aiImg" alt="" src="./images/Korean-Waves-medium-moonjae.png"/>
+						</div>
+				
+					<!-- Artboard: large-moonjae -->
+					<div id="g-Korean-Waves-large-moonjae" class="g-artboard" style="min-width: 920px;max-width: 1399px;max-height: 1399px" data-aspect-ratio="1" data-min-width="920" data-max-width="1399">
+					<div style="padding: 0 0 100% 0;"></div>
+							<img id="g-Korean-Waves-large-moonjae-img" class="g-aiImg" alt="" src="./images/Korean-Waves-large-moonjae.png"/>
+						</div>
+				
+					<!-- Artboard: xlarge-moonjae -->
+					<div id="g-Korean-Waves-xlarge-moonjae" class="g-artboard" style="min-width: 1400px;" data-aspect-ratio="1.778" data-min-width="1400">
+					<div style="padding: 0 0 56.25% 0;"></div>
+							<img id="g-Korean-Waves-xlarge-moonjae-img" class="g-aiImg" alt="" src="./images/Korean-Waves-xlarge-moonjae.png"/>
+						</div>
+
+
+				{:else if index == 1}
+					<!-- Halaman 2 -->
+					<!-- Artboard: smallplus-redvelvet -->
+					<div id="g-Korean-Waves-smallplus-redvelvet" class="g-artboard" style="max-width: 509px;max-height: 1113px" data-aspect-ratio="0.457" data-min-width="0" data-max-width="509">
+						<div style="padding: 0 0 218.75% 0;"></div>
+							<img id="g-Korean-Waves-smallplus-redvelvet-img" class="g-aiImg" alt="" src="./images/Korean-Waves-smallplus-redvelvet.png"/>
+						</div>
+					
+						<!-- Artboard: submedium-redvelvet -->
+						<div id="g-Korean-Waves-submedium-redvelvet" class="g-artboard" style="min-width: 510px;max-width: 689px;max-height: 1081px" data-aspect-ratio="0.638" data-min-width="510" data-max-width="689">
+					<div style="padding: 0 0 156.8627% 0;"></div>
+							<img id="g-Korean-Waves-submedium-redvelvet-img" class="g-aiImg" alt="" src="./images/Korean-Waves-submedium-redvelvet.png"/>
+						</div>
+					
+						<!-- Artboard: medium-redvelvet -->
+						<div id="g-Korean-Waves-medium-redvelvet" class="g-artboard" style="min-width: 690px;max-width: 919px;max-height: 1364px" data-aspect-ratio="0.674" data-min-width="690" data-max-width="919">
+					<div style="padding: 0 0 148.4058% 0;"></div>
+							<img id="g-Korean-Waves-medium-redvelvet-img" class="g-aiImg" alt="" src="./images/Korean-Waves-medium-redvelvet.png"/>
+						</div>
+					
+						<!-- Artboard: large-redvelvet -->
+						<div id="g-Korean-Waves-large-redvelvet" class="g-artboard" style="min-width: 920px;max-width: 1399px;max-height: 1399px" data-aspect-ratio="1" data-min-width="920" data-max-width="1399">
+					<div style="padding: 0 0 100% 0;"></div>
+							<img id="g-Korean-Waves-large-redvelvet-img" class="g-aiImg" alt="" src="./images/Korean-Waves-large-redvelvet.png"/>
+						</div>
+					
+						<!-- Artboard: xlarge-redvelvet -->
+						<div id="g-Korean-Waves-xlarge-redvelvet" class="g-artboard" style="min-width: 1400px;" data-aspect-ratio="1.778" data-min-width="1400">
+					<div style="padding: 0 0 56.25% 0;"></div>
+							<img id="g-Korean-Waves-xlarge-redvelvet-img" class="g-aiImg" alt="" src="./images/Korean-Waves-xlarge-redvelvet.png"/>
+						</div>
+
+
+				{:else if index == 2}
+					<!-- Halaman 3 -->
+					<!-- Artboard: smallplus-exo -->
+					<div id="g-Korean-Waves-smallplus-exo" class="g-artboard" style="max-width: 509px;max-height: 1113px" data-aspect-ratio="0.457" data-min-width="0" data-max-width="509">
+					<div style="padding: 0 0 218.75% 0;"></div>
+							<img id="g-Korean-Waves-smallplus-exo-img" class="g-aiImg" alt="" src="./images/Korean-Waves-smallplus-exo.png"/>
+						</div>
+					
+						<!-- Artboard: submedium-exo -->
+						<div id="g-Korean-Waves-submedium-exo" class="g-artboard" style="min-width: 510px;max-width: 689px;max-height: 1081px" data-aspect-ratio="0.638" data-min-width="510" data-max-width="689">
+					<div style="padding: 0 0 156.8627% 0;"></div>
+							<img id="g-Korean-Waves-submedium-exo-img" class="g-aiImg" alt="" src="./images/Korean-Waves-submedium-exo.png"/>
+						</div>
+					
+						<!-- Artboard: medium-exo -->
+						<div id="g-Korean-Waves-medium-exo" class="g-artboard" style="min-width: 690px;max-width: 919px;max-height: 1364px" data-aspect-ratio="0.674" data-min-width="690" data-max-width="919">
+					<div style="padding: 0 0 148.4058% 0;"></div>
+							<img id="g-Korean-Waves-medium-exo-img" class="g-aiImg" alt="" src="./images/Korean-Waves-medium-exo.png"/>
+						</div>
+					
+						<!-- Artboard: large-exo -->
+						<div id="g-Korean-Waves-large-exo" class="g-artboard" style="min-width: 920px;max-width: 1399px;max-height: 1399px" data-aspect-ratio="1" data-min-width="920" data-max-width="1399">
+					<div style="padding: 0 0 100% 0;"></div>
+							<img id="g-Korean-Waves-large-exo-img" class="g-aiImg" alt="" src="./images/Korean-Waves-large-exo.png"/>
+						</div>
+					
+						<!-- Artboard: xlarge-exo -->
+						<div id="g-Korean-Waves-xlarge-exo" class="g-artboard" style="min-width: 1400px;" data-aspect-ratio="1.778" data-min-width="1400">
+					<div style="padding: 0 0 56.25% 0;"></div>
+							<img id="g-Korean-Waves-xlarge-exo-img" class="g-aiImg" alt="" src="./images/Korean-Waves-xlarge-exo.png"/>
+						</div>
+
+
+				{:else if index == 3}
+					<!-- Halaman 5 -->
+					<!-- Artboard: smallplus-bts -->
+					<div id="g-Korean-Waves-smallplus-bts" class="g-artboard" style="max-width: 509px;max-height: 1113px" data-aspect-ratio="0.457" data-min-width="0" data-max-width="509">
+						<div style="padding: 0 0 218.75% 0;"></div>
+								<img id="g-Korean-Waves-smallplus-bts-img" class="g-aiImg" alt="" src="./images/Korean-Waves-smallplus-bts.png"/>
+							</div>
+						
+					<!-- Artboard: submedium-bts -->
+					<div id="g-Korean-Waves-submedium-bts" class="g-artboard" style="min-width: 510px;max-width: 689px;max-height: 1081px" data-aspect-ratio="0.638" data-min-width="510" data-max-width="689">
+					<div style="padding: 0 0 156.8627% 0;"></div>
+							<img id="g-Korean-Waves-submedium-bts-img" class="g-aiImg" alt="" src="./images/Korean-Waves-submedium-bts.png"/>
+						</div>
+				
+					<!-- Artboard: medium-bts -->
+					<div id="g-Korean-Waves-medium-bts" class="g-artboard" style="min-width: 690px;max-width: 919px;max-height: 1364px" data-aspect-ratio="0.674" data-min-width="690" data-max-width="919">
+					<div style="padding: 0 0 148.4058% 0;"></div>
+							<img id="g-Korean-Waves-medium-bts-img" class="g-aiImg" alt="" src="./images/Korean-Waves-medium-bts.png"/>
+						</div>
+				
+					<!-- Artboard: large-bts -->
+					<div id="g-Korean-Waves-large-bts" class="g-artboard" style="min-width: 920px;max-width: 1399px;max-height: 1399px" data-aspect-ratio="1" data-min-width="920" data-max-width="1399">
+					<div style="padding: 0 0 100% 0;"></div>
+							<img id="g-Korean-Waves-large-bts-img" class="g-aiImg" alt="" src="./images/Korean-Waves-large-bts.png"/>
+						</div>
+				
+					<!-- Artboard: xlarge-bts -->
+					<div id="g-Korean-Waves-xlarge-bts" class="g-artboard" style="min-width: 1400px;" data-aspect-ratio="1.778" data-min-width="1400">
+					<div style="padding: 0 0 56.25% 0;"></div>
+							<img id="g-Korean-Waves-xlarge-bts-img" class="g-aiImg" alt="" src="./images/Korean-Waves-xlarge-bts.png"/>
+						</div>
+				
+				{:else if index == 4}
+					<!-- Halaman 5 -->
+					<!-- Artboard: smallplus-bts -->
+					<div id="g-Korean-Waves-smallplus-bts" class="g-artboard" style="max-width: 509px;max-height: 1113px" data-aspect-ratio="0.457" data-min-width="0" data-max-width="509">
+						<div style="padding: 0 0 218.75% 0;"></div>
+								<img id="g-Korean-Waves-smallplus-bts-img" class="g-aiImg" alt="" src="./images/Korean-Waves-smallplus-bts.png"/>
+							</div>
+						
+					<!-- Artboard: submedium-bts -->
+					<div id="g-Korean-Waves-submedium-bts" class="g-artboard" style="min-width: 510px;max-width: 689px;max-height: 1081px" data-aspect-ratio="0.638" data-min-width="510" data-max-width="689">
+					<div style="padding: 0 0 156.8627% 0;"></div>
+							<img id="g-Korean-Waves-submedium-bts-img" class="g-aiImg" alt="" src="./images/Korean-Waves-submedium-bts.png"/>
+						</div>
+				
+					<!-- Artboard: medium-bts -->
+					<div id="g-Korean-Waves-medium-bts" class="g-artboard" style="min-width: 690px;max-width: 919px;max-height: 1364px" data-aspect-ratio="0.674" data-min-width="690" data-max-width="919">
+					<div style="padding: 0 0 148.4058% 0;"></div>
+							<img id="g-Korean-Waves-medium-bts-img" class="g-aiImg" alt="" src="./images/Korean-Waves-medium-bts.png"/>
+						</div>
+				
+					<!-- Artboard: large-bts -->
+					<div id="g-Korean-Waves-large-bts" class="g-artboard" style="min-width: 920px;max-width: 1399px;max-height: 1399px" data-aspect-ratio="1" data-min-width="920" data-max-width="1399">
+					<div style="padding: 0 0 100% 0;"></div>
+							<img id="g-Korean-Waves-large-bts-img" class="g-aiImg" alt="" src="./images/Korean-Waves-large-bts.png"/>
+						</div>
+				
+					<!-- Artboard: xlarge-bts -->
+					<div id="g-Korean-Waves-xlarge-bts" class="g-artboard" style="min-width: 1400px;" data-aspect-ratio="1.778" data-min-width="1400">
+					<div style="padding: 0 0 56.25% 0;"></div>
+							<img id="g-Korean-Waves-xlarge-bts-img" class="g-aiImg" alt="" src="./images/Korean-Waves-xlarge-bts.png"/>
+						</div>
+
+				{/if}
+				</div>
 			</div>
 
 			<div slot="foreground" >
@@ -106,11 +270,13 @@
 	</Scroller>
 	<div class="divider"></div>
 	<Paragraph
+		--font-color ='#f9f9e1'
 		para={[
 		'Begitu menguntungkannya hubungan antara kpop dengan pemerintahan Korsel sampai-sampai pemerintah membuat tim khusus untuk mempromosikan kpop ke dunia. Namun kesuksesan ini tak akan eksis tanpa adanya bekingan yang besar ke teknologi pendukung, seperti internet cepat dan modal ke perusahaan-perusahaan teknologi lokal. Ini terlihat di pemetaan dana pemerintah di tahun 2012: sepertiga dari modal usaha negara dihabiskan di industri entertainmen.'
 		]}
 	/>
 	<Image
+		--font-color ='#f9f9e1'
 		img={[
 			{
 			url:'https://via.placeholder.com/600/92c952',
@@ -122,11 +288,15 @@
 		imageSource='Dokumentasi Pribadi'
 	/>
 	<Paragraph
+		--font-color ='#f9f9e1'
 		para={[
 		'Namun penggunaan kpop sebagai alat diplomasi ini tak selalu positif. Pemerintah Tiongkok memblokir konten kpop dan kdrama karena Korsel membuat perjanjian militer dengan Amerika Serikat. Hasilnya, kpop terpaksa memfokuskan pasarnya ke Asia Pasifik, salah satunya Indonesia. Strategi ini terhitung sukses: Indonesia merupakan negara paling “berisik” (dan mungkin juga salah satu yang paling banyak menggelontorkan uang) soal kpop di dunia maya. '
 		]}
 	/>
-	<Credit { source } { credit }/>
+	<Credit 
+		--font-color ='#f9f9e1'
+		{ source } { credit }
+	/>
 </main>
 
 <style>
@@ -135,29 +305,30 @@
 	}
 
 	[slot="background"] {
-		background-color: rgba(255,62,0,0.05);
+		/* background-color: rgba(255,62,0,0.05); */
 		height: 100vh;
-		border-top: 2px solid #ff3e00;
-		border-bottom: 2px solid #ff3e00;
+		/* border-top: 2px solid #ff3e00;
+		border-bottom: 2px solid #ff3e00; */
 		font-size: 1.4em;
 		overflow: hidden;
-		padding: 1em;
 	}
 
 	[slot="foreground"] section {
 		height: 80vh;
-		color: black;
+		color: white;
 		padding: 1em;
 		margin: 0 0 2em 0;
 	}
 
 	[slot="foreground"] p {
 		padding:1rem;
-		background-color: white;
+		background-color: black;
 		width:90%;
         max-width: 650px;
         margin: 0 auto 0 auto;
         text-align: left;
+		border-radius: 1rem;
+		font-family: 'Roboto-Mono', monospace;
 	}
 	/* main {
 		text-align: center;
@@ -178,4 +349,729 @@
 			max-width: none;
 		}
 	} */
+
+	/* --------------------------------------------------------------------------------------------------------------------------------------- */
+	/* Custom Scrollytelling Style */
+	/* --------------------------------------------------------------------------------------------------------------------------------------- */
+
+	@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
+
+	#g-Korean-Waves-box ,
+	#g-Korean-Waves-box .g-artboard {
+		margin:0 auto;
+	}
+	#g-Korean-Waves-box p {
+		margin:0;
+	}
+	#g-Korean-Waves-box .g-aiAbs {
+		position:absolute;
+	}
+	#g-Korean-Waves-box .g-aiImg {
+		position:absolute;
+		top:0;
+		display:block;
+		width:100% !important;
+	}
+	#g-Korean-Waves-box .g-aiSymbol {
+		position: absolute;
+		box-sizing: border-box;
+	}
+	#g-Korean-Waves-box .g-aiPointText p { white-space: nowrap; }
+	#g-Korean-Waves-smallplus-cover {
+		position:relative;
+		overflow:hidden;
+	}
+	#g-Korean-Waves-smallplus-cover p {
+		font-family:'Black Han Sans',arial,helvetica,sans-serif;
+		line-height:31px;
+		height:auto;
+
+		opacity:1;
+		letter-spacing:0em;
+		font-size:26px;
+		text-align:left;
+		color:rgb(124,208,243);
+		text-transform:none;
+		padding-bottom:0;
+		padding-top:0;
+		mix-blend-mode:normal;
+		font-style:normal;
+		position:static;
+	}
+	#g-Korean-Waves-smallplus-cover .g-pstyle0 {
+		height:31px;
+		text-align:center;
+	}
+	#g-Korean-Waves-smallplus-cover .g-pstyle1 {
+		line-height:146px;
+		height:146px;
+		font-size:122px;
+		text-align:center;
+	}
+	#g-Korean-Waves-submedium-cover {
+		position:relative;
+		overflow:hidden;
+	}
+	#g-Korean-Waves-submedium-cover p {
+		font-family:'Black Han Sans',arial,helvetica,sans-serif;
+		line-height:55px;
+		height:auto;
+
+		opacity:1;
+		letter-spacing:0em;
+		font-size:46px;
+		text-align:left;
+		color:rgb(124,208,243);
+		text-transform:none;
+		padding-bottom:0;
+		padding-top:0;
+		mix-blend-mode:normal;
+		font-style:normal;
+		position:static;
+	}
+	#g-Korean-Waves-submedium-cover .g-pstyle0 {
+		height:55px;
+		text-align:center;
+	}
+	#g-Korean-Waves-submedium-cover .g-pstyle1 {
+		line-height:258px;
+		height:258px;
+		font-size:215px;
+		text-align:center;
+	}
+	#g-Korean-Waves-medium-cover {
+		position:relative;
+		overflow:hidden;
+	}
+	#g-Korean-Waves-medium-cover p {
+		font-family:'Black Han Sans',arial,helvetica,sans-serif;
+		line-height:75px;
+		height:auto;
+
+		opacity:1;
+		letter-spacing:0em;
+		font-size:62px;
+		text-align:left;
+		color:rgb(124,208,243);
+		text-transform:none;
+		padding-bottom:0;
+		padding-top:0;
+		mix-blend-mode:normal;
+		font-style:normal;
+		position:static;
+	}
+	#g-Korean-Waves-medium-cover .g-pstyle0 {
+		height:75px;
+		text-align:center;
+	}
+	#g-Korean-Waves-medium-cover .g-pstyle1 {
+		line-height:352px;
+		height:352px;
+		font-size:294px;
+		text-align:center;
+	}
+	#g-Korean-Waves-large-cover {
+		position:relative;
+		overflow:hidden;
+	}
+	#g-Korean-Waves-large-cover p {
+		font-family:'Black Han Sans',arial,helvetica,sans-serif;
+		line-height:93px;
+		height:auto;
+
+		opacity:1;
+		letter-spacing:0em;
+		font-size:78px;
+		text-align:left;
+		color:rgb(124,208,243);
+		text-transform:none;
+		padding-bottom:0;
+		padding-top:0;
+		mix-blend-mode:normal;
+		font-style:normal;
+		position:static;
+	}
+	#g-Korean-Waves-large-cover .g-pstyle0 {
+		height:93px;
+		text-align:center;
+	}
+	#g-Korean-Waves-large-cover .g-pstyle1 {
+		line-height:438px;
+		height:438px;
+		font-size:365px;
+		text-align:center;
+	}
+	#g-Korean-Waves-xlarge-cover {
+		position:relative;
+		overflow:hidden;
+	}
+	#g-Korean-Waves-xlarge-cover p {
+		font-family:'Black Han Sans',arial,helvetica,sans-serif;
+		line-height:93px;
+		height:auto;
+
+		opacity:1;
+		letter-spacing:0em;
+		font-size:78px;
+		text-align:left;
+		color:rgb(124,208,243);
+		text-transform:none;
+		padding-bottom:0;
+		padding-top:0;
+		mix-blend-mode:normal;
+		font-style:normal;
+		position:static;
+	}
+	#g-Korean-Waves-xlarge-cover .g-pstyle0 {
+		height:93px;
+		text-align:center;
+	}
+	#g-Korean-Waves-xlarge-cover .g-pstyle1 {
+		line-height:438px;
+		height:438px;
+		font-size:365px;
+		text-align:center;
+	}
+	#g-Korean-Waves-smallplus-moonjae {
+		width:100%;
+		position:relative;
+		overflow:hidden;
+	}
+	#g-Korean-Waves-submedium-moonjae {
+		position:relative;
+		overflow:hidden;
+	}
+	#g-Korean-Waves-medium-moonjae {
+		position:relative;
+		overflow:hidden;
+	}
+	#g-Korean-Waves-large-moonjae {
+		position:relative;
+		overflow:hidden;
+	}
+	#g-Korean-Waves-xlarge-moonjae {
+		position:relative;
+		overflow:hidden;
+	}
+	#g-Korean-Waves-smallplus-bts {
+		position:relative;
+		overflow:hidden;
+	}
+	#g-Korean-Waves-submedium-bts {
+		position:relative;
+		overflow:hidden;
+	}
+	#g-Korean-Waves-medium-bts {
+		position:relative;
+		overflow:hidden;
+	}
+	#g-Korean-Waves-large-bts {
+		position:relative;
+		overflow:hidden;
+	}
+	#g-Korean-Waves-xlarge-bts {
+		position:relative;
+		overflow:hidden;
+	}
+	#g-Korean-Waves-smallplus-redvelvet {
+		position:relative;
+		overflow:hidden;
+	}
+	#g-Korean-Waves-submedium-redvelvet {
+		position:relative;
+		overflow:hidden;
+	}
+	#g-Korean-Waves-medium-redvelvet {
+		position:relative;
+		overflow:hidden;
+	}
+	#g-Korean-Waves-large-redvelvet {
+		position:relative;
+		overflow:hidden;
+	}
+	#g-Korean-Waves-xlarge-redvelvet {
+		position:relative;
+		overflow:hidden;
+	}
+	#g-Korean-Waves-smallplus-exo {
+		position:relative;
+		overflow:hidden;
+	}
+	#g-Korean-Waves-submedium-exo {
+		position:relative;
+		overflow:hidden;
+	}
+	#g-Korean-Waves-medium-exo {
+		position:relative;
+		overflow:hidden;
+	}
+	#g-Korean-Waves-large-exo {
+		position:relative;
+		overflow:hidden;
+	}
+	#g-Korean-Waves-xlarge-exo {
+		position:relative;
+		overflow:hidden;
+	}
+	#g-Korean-Waves-smallplus-data {
+		position:relative;
+		overflow:hidden;
+	}
+	#g-Korean-Waves-smallplus-data p {
+		font-family:'Black Han Sans',arial,helvetica,sans-serif;
+		line-height:38px;
+		height:auto;
+
+		opacity:1;
+		letter-spacing:0em;
+		font-size:32px;
+		text-align:left;
+		color:rgb(249,249,225);
+		text-transform:none;
+		padding-bottom:0;
+		padding-top:0;
+		mix-blend-mode:normal;
+		font-style:normal;
+		position:static;
+	}
+	#g-Korean-Waves-smallplus-data .g-pstyle0 {
+		height:38px;
+		text-align:center;
+	}
+	#g-Korean-Waves-smallplus-data .g-pstyle1 {
+		height:38px;
+		text-align:center;
+		color:rgb(124,208,243);
+	}
+	#g-Korean-Waves-smallplus-data .g-pstyle2 {
+		line-height:14px;
+		height:14px;
+		font-size:12px;
+	}
+	#g-Korean-Waves-smallplus-data .g-pstyle3 {
+		line-height:14px;
+		height:14px;
+		font-size:12px;
+		text-align:right;
+		color:rgb(124,208,243);
+	}
+	#g-Korean-Waves-smallplus-data .g-cstyle0 {
+		color:rgb(124,208,243);
+	}
+	#g-Korean-Waves-submedium-data {
+		position:relative;
+		overflow:hidden;
+	}
+	#g-Korean-Waves-submedium-data p {
+		font-family:'Black Han Sans',arial,helvetica,sans-serif;
+		line-height:50px;
+		height:auto;
+
+		opacity:1;
+		letter-spacing:0em;
+		font-size:42px;
+		text-align:left;
+		color:rgb(249,249,225);
+		text-transform:none;
+		padding-bottom:0;
+		padding-top:0;
+		mix-blend-mode:normal;
+		font-style:normal;
+		position:static;
+	}
+	#g-Korean-Waves-submedium-data .g-pstyle0 {
+		height:50px;
+		text-align:center;
+	}
+	#g-Korean-Waves-submedium-data .g-pstyle1 {
+		height:50px;
+		text-align:center;
+		color:rgb(124,208,243);
+	}
+	#g-Korean-Waves-submedium-data .g-pstyle2 {
+		line-height:23px;
+		height:23px;
+		font-size:20px;
+	}
+	#g-Korean-Waves-submedium-data .g-pstyle3 {
+		line-height:23px;
+		height:23px;
+		font-size:20px;
+		text-align:right;
+		color:rgb(124,208,243);
+	}
+	#g-Korean-Waves-submedium-data .g-cstyle0 {
+		color:rgb(124,208,243);
+	}
+	#g-Korean-Waves-medium-data {
+		position:relative;
+		overflow:hidden;
+	}
+	#g-Korean-Waves-medium-data p {
+		font-family:'Black Han Sans',arial,helvetica,sans-serif;
+		line-height:72px;
+		height:auto;
+
+		opacity:1;
+		letter-spacing:0em;
+		font-size:60px;
+		text-align:left;
+		color:rgb(249,249,225);
+		text-transform:none;
+		padding-bottom:0;
+		padding-top:0;
+		mix-blend-mode:normal;
+		font-style:normal;
+		position:static;
+	}
+	#g-Korean-Waves-medium-data .g-pstyle0 {
+		height:72px;
+		text-align:center;
+	}
+	#g-Korean-Waves-medium-data .g-pstyle1 {
+		height:72px;
+		text-align:center;
+		color:rgb(124,208,243);
+	}
+	#g-Korean-Waves-medium-data .g-pstyle2 {
+		line-height:31px;
+		height:31px;
+		font-size:26px;
+	}
+	#g-Korean-Waves-medium-data .g-pstyle3 {
+		line-height:31px;
+		height:31px;
+		font-size:26px;
+		text-align:right;
+		color:rgb(124,208,243);
+	}
+	#g-Korean-Waves-medium-data .g-cstyle0 {
+		color:rgb(124,208,243);
+	}
+	#g-Korean-Waves-large-data {
+		position:relative;
+		overflow:hidden;
+	}
+	#g-Korean-Waves-large-data p {
+		font-family:'Black Han Sans',arial,helvetica,sans-serif;
+		line-height:72px;
+		height:auto;
+
+		opacity:1;
+		letter-spacing:0em;
+		font-size:60px;
+		text-align:left;
+		color:rgb(249,249,225);
+		text-transform:none;
+		padding-bottom:0;
+		padding-top:0;
+		mix-blend-mode:normal;
+		font-style:normal;
+		position:static;
+	}
+	#g-Korean-Waves-large-data .g-pstyle0 {
+		height:72px;
+		text-align:center;
+	}
+	#g-Korean-Waves-large-data .g-pstyle1 {
+		height:72px;
+		text-align:center;
+		color:rgb(124,208,243);
+	}
+	#g-Korean-Waves-large-data .g-pstyle2 {
+		line-height:42px;
+		height:42px;
+		font-size:35px;
+	}
+	#g-Korean-Waves-large-data .g-pstyle3 {
+		line-height:42px;
+		height:42px;
+		font-size:35px;
+		text-align:right;
+		color:rgb(124,208,243);
+	}
+	#g-Korean-Waves-large-data .g-cstyle0 {
+		color:rgb(124,208,243);
+	}
+	#g-Korean-Waves-xlarge-data {
+		position:relative;
+		overflow:hidden;
+	}
+	#g-Korean-Waves-xlarge-data p {
+		font-family:'Black Han Sans',arial,helvetica,sans-serif;
+		line-height:72px;
+		height:auto;
+
+		opacity:1;
+		letter-spacing:0em;
+		font-size:60px;
+		text-align:left;
+		color:rgb(124,208,243);
+		text-transform:none;
+		padding-bottom:0;
+		padding-top:0;
+		mix-blend-mode:normal;
+		font-style:normal;
+		position:static;
+	}
+	#g-Korean-Waves-xlarge-data .g-pstyle0 {
+		height:72px;
+		text-align:center;
+	}
+	#g-Korean-Waves-xlarge-data .g-pstyle1 {
+		height:72px;
+		text-align:center;
+		color:rgb(249,249,225);
+	}
+	#g-Korean-Waves-xlarge-data .g-pstyle2 {
+		line-height:45px;
+		height:45px;
+		font-size:38px;
+		color:rgb(249,249,225);
+	}
+	#g-Korean-Waves-xlarge-data .g-pstyle3 {
+		line-height:45px;
+		height:45px;
+		font-size:38px;
+		text-align:right;
+	}
+	#g-Korean-Waves-xlarge-data .g-cstyle0 {
+		color:rgb(249,249,225);
+	}
+
+	@media only screen and (max-width:509px) {
+		#g-Korean-Waves-xlarge-cover,
+		#g-Korean-Waves-xlarge-moonjae,
+		#g-Korean-Waves-xlarge-bts,
+		#g-Korean-Waves-xlarge-redvelvet,
+		#g-Korean-Waves-xlarge-exo,
+		#g-Korean-Waves-xlarge-data {
+			display:none;
+		}
+
+		#g-Korean-Waves-large-cover,
+		#g-Korean-Waves-large-moonjae,
+		#g-Korean-Waves-large-bts,
+		#g-Korean-Waves-large-redvelvet,
+		#g-Korean-Waves-large-exo,
+		#g-Korean-Waves-large-data {
+			display:none;
+		}
+
+		#g-Korean-Waves-medium-cover,
+		#g-Korean-Waves-medium-moonjae,
+		#g-Korean-Waves-medium-bts,
+		#g-Korean-Waves-medium-redvelvet,
+		#g-Korean-Waves-medium-exo,
+		#g-Korean-Waves-medium-data {
+			display:none;
+		}
+
+		#g-Korean-Waves-submedium-cover,
+		#g-Korean-Waves-submedium-moonjae,
+		#g-Korean-Waves-submedium-bts,
+		#g-Korean-Waves-submedium-redvelvet,
+		#g-Korean-Waves-submedium-exo,
+		#g-Korean-Waves-submedium-data {
+			display:none;
+		}
+
+		#g-Korean-Waves-smallplus-cover,
+		#g-Korean-Waves-smallplus-moonjae,
+		#g-Korean-Waves-smallplus-bts,
+		#g-Korean-Waves-smallplus-redvelvet,
+		#g-Korean-Waves-smallplus-exo,
+		#g-Korean-Waves-smallplus-data {
+			display:block;
+		}
+	}
+
+	@media only screen and (min-width:510px) and (max-width:689px) {
+		#g-Korean-Waves-xlarge-cover,
+		#g-Korean-Waves-xlarge-moonjae,
+		#g-Korean-Waves-xlarge-bts,
+		#g-Korean-Waves-xlarge-redvelvet,
+		#g-Korean-Waves-xlarge-exo,
+		#g-Korean-Waves-xlarge-data {
+			display:none;
+		}
+
+		#g-Korean-Waves-large-cover,
+		#g-Korean-Waves-large-moonjae,
+		#g-Korean-Waves-large-bts,
+		#g-Korean-Waves-large-redvelvet,
+		#g-Korean-Waves-large-exo,
+		#g-Korean-Waves-large-data {
+			display:none;
+		}
+
+		#g-Korean-Waves-medium-cover,
+		#g-Korean-Waves-medium-moonjae,
+		#g-Korean-Waves-medium-bts,
+		#g-Korean-Waves-medium-redvelvet,
+		#g-Korean-Waves-medium-exo,
+		#g-Korean-Waves-medium-data {
+			display:none;
+		}
+
+		#g-Korean-Waves-submedium-cover,
+		#g-Korean-Waves-submedium-moonjae,
+		#g-Korean-Waves-submedium-bts,
+		#g-Korean-Waves-submedium-redvelvet,
+		#g-Korean-Waves-submedium-exo,
+		#g-Korean-Waves-submedium-data {
+			display:block;
+		}
+
+		#g-Korean-Waves-smallplus-cover,
+		#g-Korean-Waves-smallplus-moonjae,
+		#g-Korean-Waves-smallplus-bts,
+		#g-Korean-Waves-smallplus-redvelvet,
+		#g-Korean-Waves-smallplus-exo,
+		#g-Korean-Waves-smallplus-data {
+			display:none;
+		}
+	}
+
+	@media only screen and (min-width:690px) and (max-width:919px) {
+		#g-Korean-Waves-xlarge-cover,
+		#g-Korean-Waves-xlarge-moonjae,
+		#g-Korean-Waves-xlarge-bts,
+		#g-Korean-Waves-xlarge-redvelvet,
+		#g-Korean-Waves-xlarge-exo,
+		#g-Korean-Waves-xlarge-data {
+			display:none;
+		}
+
+		#g-Korean-Waves-large-cover,
+		#g-Korean-Waves-large-moonjae,
+		#g-Korean-Waves-large-bts,
+		#g-Korean-Waves-large-redvelvet,
+		#g-Korean-Waves-large-exo,
+		#g-Korean-Waves-large-data {
+			display:none;
+		}
+
+		#g-Korean-Waves-medium-cover,
+		#g-Korean-Waves-medium-moonjae,
+		#g-Korean-Waves-medium-bts,
+		#g-Korean-Waves-medium-redvelvet,
+		#g-Korean-Waves-medium-exo,
+		#g-Korean-Waves-medium-data {
+			display:block;
+		}
+
+		#g-Korean-Waves-submedium-cover,
+		#g-Korean-Waves-submedium-moonjae,
+		#g-Korean-Waves-submedium-bts,
+		#g-Korean-Waves-submedium-redvelvet,
+		#g-Korean-Waves-submedium-exo,
+		#g-Korean-Waves-submedium-data {
+			display:none;
+		}
+
+		#g-Korean-Waves-smallplus-cover,
+		#g-Korean-Waves-smallplus-moonjae,
+		#g-Korean-Waves-smallplus-bts,
+		#g-Korean-Waves-smallplus-redvelvet,
+		#g-Korean-Waves-smallplus-exo,
+		#g-Korean-Waves-smallplus-data {
+			display:none;
+		}
+	}
+
+	@media only screen and (min-width:920px) and (max-width:1399px) {
+		#g-Korean-Waves-xlarge-cover,
+		#g-Korean-Waves-xlarge-moonjae,
+		#g-Korean-Waves-xlarge-bts,
+		#g-Korean-Waves-xlarge-redvelvet,
+		#g-Korean-Waves-xlarge-exo,
+		#g-Korean-Waves-xlarge-data {
+			display:none;
+		}
+
+		#g-Korean-Waves-large-cover,
+		#g-Korean-Waves-large-moonjae,
+		#g-Korean-Waves-large-bts,
+		#g-Korean-Waves-large-redvelvet,
+		#g-Korean-Waves-large-exo,
+		#g-Korean-Waves-large-data {
+			display:block;
+		}
+
+		#g-Korean-Waves-medium-cover,
+		#g-Korean-Waves-medium-moonjae,
+		#g-Korean-Waves-medium-bts,
+		#g-Korean-Waves-medium-redvelvet,
+		#g-Korean-Waves-medium-exo,
+		#g-Korean-Waves-medium-data {
+			display:none;
+		}
+
+		#g-Korean-Waves-submedium-cover,
+		#g-Korean-Waves-submedium-moonjae,
+		#g-Korean-Waves-submedium-bts,
+		#g-Korean-Waves-submedium-redvelvet,
+		#g-Korean-Waves-submedium-exo,
+		#g-Korean-Waves-submedium-data {
+			display:none;
+		}
+
+		#g-Korean-Waves-smallplus-cover,
+		#g-Korean-Waves-smallplus-moonjae,
+		#g-Korean-Waves-smallplus-bts,
+		#g-Korean-Waves-smallplus-redvelvet,
+		#g-Korean-Waves-smallplus-exo,
+		#g-Korean-Waves-smallplus-data {
+			display:none;
+		}
+	}
+
+	@media only screen and (min-width:1400px) {
+		#g-Korean-Waves-xlarge-cover,
+		#g-Korean-Waves-xlarge-moonjae,
+		#g-Korean-Waves-xlarge-bts,
+		#g-Korean-Waves-xlarge-redvelvet,
+		#g-Korean-Waves-xlarge-exo,
+		#g-Korean-Waves-xlarge-data {
+			display:block;
+		}
+
+		#g-Korean-Waves-large-cover,
+		#g-Korean-Waves-large-moonjae,
+		#g-Korean-Waves-large-bts,
+		#g-Korean-Waves-large-redvelvet,
+		#g-Korean-Waves-large-exo,
+		#g-Korean-Waves-large-data {
+			display:none;
+		}
+
+		#g-Korean-Waves-medium-cover,
+		#g-Korean-Waves-medium-moonjae,
+		#g-Korean-Waves-medium-bts,
+		#g-Korean-Waves-medium-redvelvet,
+		#g-Korean-Waves-medium-exo,
+		#g-Korean-Waves-medium-data {
+			display:none;
+		}
+
+		#g-Korean-Waves-submedium-cover,
+		#g-Korean-Waves-submedium-moonjae,
+		#g-Korean-Waves-submedium-bts,
+		#g-Korean-Waves-submedium-redvelvet,
+		#g-Korean-Waves-submedium-exo,
+		#g-Korean-Waves-submedium-data {
+			display:none;
+		}
+
+		#g-Korean-Waves-smallplus-cover,
+		#g-Korean-Waves-smallplus-moonjae,
+		#g-Korean-Waves-smallplus-bts,
+		#g-Korean-Waves-smallplus-redvelvet,
+		#g-Korean-Waves-smallplus-exo,
+		#g-Korean-Waves-smallplus-data {
+			display:none;
+		}
+	}
+
 </style>

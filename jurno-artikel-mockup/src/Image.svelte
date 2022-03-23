@@ -43,6 +43,7 @@
         margin-bottom: 1rem;
     }
     .source {
+        color:var(--font-color);
         width:88vw;
         max-width: 800px;
     }
