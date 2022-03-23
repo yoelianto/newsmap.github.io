@@ -33,20 +33,96 @@
 		}]
 	let source = 'Sed nec pellentesque massa. Vestibulum eu sem ut dolor placerat ultricies at sit amet massa'
 
-	let scrollytelling = [
-		'Presiden Moon Jae-in kerap membawa grup-grup kpop sebagai pendamping diplomatisnya;',
+	// let scrollytelling = [
+	// 	'Presiden Moon Jae-in kerap membawa grup-grup kpop sebagai pendamping diplomatisnya;',
 
-		'Red Velvet menjadi utusan kebudayaan di konser Korea Utara di tahun 2018,',
+	// 	'Red Velvet menjadi utusan kebudayaan di konser Korea Utara di tahun 2018,',
 
-		'EXO bertemu dengan Donald Trump di tahun 2019,',
+	// 	'EXO bertemu dengan Donald Trump di tahun 2019,',
 
-		'dan BTS yang dilantik sebagai diplomat khusus di tahun 2021.',
-	]
+	// 	'dan BTS yang dilantik sebagai diplomat khusus di tahun 2021.',
+	// ]
 
 	// export let name;
 </script>
 
 <main style="background-color: {mainBackground}">
+	<div id="g-Korean-Waves-box" class="ai2html">
+		<!-- Artboard: smallplus-cover -->
+<div id="g-Korean-Waves-smallplus-cover" class="g-artboard" style="max-width: 509px;max-height: 1113px" data-aspect-ratio="0.457" data-min-width="0" data-max-width="509">
+<div style="padding: 0 0 218.75% 0;"></div>
+		<img id="g-Korean-Waves-smallplus-cover-img" class="g-aiImg" alt="" src="./images/Korean-Waves-smallplus-cover.png"/>
+		<div id="g-ai0-1" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:8.6136%;margin-top:-15.3px;left:49.966%;margin-left:-120px;width:240px;">
+			<p class="g-pstyle0">KOREAN WAVES</p>
+		</div>
+		<div id="g-ai0-2" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:18.5861%;margin-top:-72.1px;left:29.2279%;margin-left:-62px;width:124px;">
+			<p class="g-pstyle1">한</p>
+		</div>
+		<div id="g-ai0-3" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:18.5861%;margin-top:-72.1px;left:70.6763%;margin-left:-62.5px;width:125px;">
+			<p class="g-pstyle1">류</p>
+		</div>
+	</div>
+
+	<!-- Artboard: submedium-cover -->
+	<div id="g-Korean-Waves-submedium-cover" class="g-artboard" style="min-width: 510px;max-width: 689px;max-height: 1081px" data-aspect-ratio="0.638" data-min-width="510" data-max-width="689">
+<div style="padding: 0 0 156.8627% 0;"></div>
+		<img id="g-Korean-Waves-submedium-cover-img" class="g-aiImg" alt="" src="./images/Korean-Waves-submedium-cover.png"/>
+		<div id="g-ai1-1" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:8.7591%;margin-top:-27.1px;left:50.0031%;margin-left:-203.5px;width:407px;">
+			<p class="g-pstyle0">KOREAN WAVES</p>
+		</div>
+		<div id="g-ai1-2" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:24.0663%;margin-top:-127.5px;left:27.0127%;margin-left:-101px;width:202px;">
+			<p class="g-pstyle1">한</p>
+		</div>
+		<div id="g-ai1-3" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:24.0663%;margin-top:-127.5px;left:72.8175%;margin-left:-101.5px;width:203px;">
+			<p class="g-pstyle1">류</p>
+		</div>
+	</div>
+
+	<!-- Artboard: medium-cover -->
+	<div id="g-Korean-Waves-medium-cover" class="g-artboard" style="min-width: 690px;max-width: 919px;max-height: 1364px" data-aspect-ratio="0.674" data-min-width="690" data-max-width="919">
+<div style="padding: 0 0 148.4058% 0;"></div>
+		<img id="g-Korean-Waves-medium-cover-img" class="g-aiImg" alt="" src="./images/Korean-Waves-medium-cover.png"/>
+		<div id="g-ai2-1" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:7.9464%;margin-top:-37.4px;left:49.9641%;margin-left:-274px;width:548px;">
+			<p class="g-pstyle0">KOREAN WAVES</p>
+		</div>
+		<div id="g-ai2-2" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:24.3176%;margin-top:-174px;left:26.7502%;margin-left:-134px;width:268px;">
+			<p class="g-pstyle1">한</p>
+		</div>
+		<div id="g-ai2-3" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:24.3176%;margin-top:-174px;left:73.0985%;margin-left:-135px;width:270px;">
+			<p class="g-pstyle1">류</p>
+		</div>
+	</div>
+
+	<!-- Artboard: large-cover -->
+	<div id="g-Korean-Waves-large-cover" class="g-artboard" style="min-width: 920px;max-width: 1399px;max-height: 1399px" data-aspect-ratio="1" data-min-width="920" data-max-width="1399">
+<div style="padding: 0 0 100% 0;"></div>
+		<img id="g-Korean-Waves-large-cover-img" class="g-aiImg" alt="" src="./images/Korean-Waves-large-cover.png"/>
+		<div id="g-ai3-1" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:8.9005%;margin-top:-45.9px;left:50.0203%;margin-left:-338.5px;width:677px;">
+			<p class="g-pstyle0">KOREAN WAVES</p>
+		</div>
+		<div id="g-ai3-2" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:31.5001%;margin-top:-216.8px;left:27.4754%;margin-left:-163.5px;width:327px;">
+			<p class="g-pstyle1">한</p>
+		</div>
+		<div id="g-ai3-3" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:31.5001%;margin-top:-216.8px;left:70.7239%;margin-left:-165px;width:330px;">
+			<p class="g-pstyle1">류</p>
+		</div>
+	</div>
+
+	<!-- Artboard: xlarge-cover -->
+	<div id="g-Korean-Waves-xlarge-cover" class="g-artboard" style="min-width: 1400px;" data-aspect-ratio="1.778" data-min-width="1400">
+<div style="padding: 0 0 56.25% 0;"></div>
+		<img id="g-Korean-Waves-xlarge-cover-img" class="g-aiImg" alt="" src="./images/Korean-Waves-xlarge-cover.png"/>
+		<div id="g-ai4-1" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:12.3028%;margin-top:-45.9px;left:50.0134%;margin-left:-338.5px;width:677px;">
+			<p class="g-pstyle0">KOREAN WAVES</p>
+		</div>
+		<div id="g-ai4-2" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:38.8319%;margin-top:-216.8px;left:35.7217%;margin-left:-163.5px;width:327px;">
+			<p class="g-pstyle1">한</p>
+		</div>
+		<div id="g-ai4-3" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:38.8319%;margin-top:-216.8px;left:64.1422%;margin-left:-165px;width:330px;">
+			<p class="g-pstyle1">류</p>
+		</div>
+	</div>
+	</div>
 	<Header 
 		--headerImage={headerImage}
 		--headerBackground={headerBackground}
@@ -64,8 +140,10 @@
 
 		author='Volutpat Sapien'
 		date=''		
-	/>	
+	/>
+
 	<div class="divider"></div>
+
 	<Scroller
 		{top}
 		{threshold}
@@ -75,200 +153,202 @@
 		bind:offset
 		bind:progress
 	>
-			<div slot="background">
-				<div id="g-Korean-Waves-box" class="ai2html">
-				{#if index == 0}
-					<!-- Halaman 1 -->
-					<!-- Artboard: smallplus-moonjae -->
-					<div id="g-Korean-Waves-smallplus-moonjae" class="g-artboard" style="max-width: 509px;max-height: 1113px" data-aspect-ratio="0.457" data-min-width="0" data-max-width="509">
+		<div slot="background">
+			<div id="g-Korean-Waves-box" class="ai2html">
+			{#if index == 0}
+				<!-- Halaman 1 -->
+				<!-- Artboard: smallplus-moonjae -->
+				<div id="g-Korean-Waves-smallplus-moonjae" class="g-artboard" style="max-width: 509px;max-height: 1113px" data-aspect-ratio="0.457" data-min-width="0" data-max-width="509">
+				<div style="padding: 0 0 218.75% 0;"></div>
+						<img id="g-Korean-Waves-smallplus-moonjae-img" class="g-aiImg" alt="" src="./images/Korean-Waves-smallplus-moonjae.png"/>
+					</div>
+			
+				<!-- Artboard: submedium-moonjae -->
+				<div id="g-Korean-Waves-submedium-moonjae" class="g-artboard" style="min-width: 510px;max-width: 689px;max-height: 1081px" data-aspect-ratio="0.638" data-min-width="510" data-max-width="689">
+				<div style="padding: 0 0 156.8627% 0;"></div>
+						<img id="g-Korean-Waves-submedium-moonjae-img" class="g-aiImg" alt="" src="./images/Korean-Waves-submedium-moonjae.png"/>
+					</div>
+			
+				<!-- Artboard: medium-moonjae -->
+				<div id="g-Korean-Waves-medium-moonjae" class="g-artboard" style="min-width: 690px;max-width: 919px;max-height: 1364px" data-aspect-ratio="0.674" data-min-width="690" data-max-width="919">
+				<div style="padding: 0 0 148.4058% 0;"></div>
+						<img id="g-Korean-Waves-medium-moonjae-img" class="g-aiImg" alt="" src="./images/Korean-Waves-medium-moonjae.png"/>
+					</div>
+			
+				<!-- Artboard: large-moonjae -->
+				<div id="g-Korean-Waves-large-moonjae" class="g-artboard" style="min-width: 920px;max-width: 1399px;max-height: 1399px" data-aspect-ratio="1" data-min-width="920" data-max-width="1399">
+				<div style="padding: 0 0 100% 0;"></div>
+						<img id="g-Korean-Waves-large-moonjae-img" class="g-aiImg" alt="" src="./images/Korean-Waves-large-moonjae.png"/>
+					</div>
+			
+				<!-- Artboard: xlarge-moonjae -->
+				<div id="g-Korean-Waves-xlarge-moonjae" class="g-artboard" style="min-width: 1400px;" data-aspect-ratio="1.778" data-min-width="1400">
+				<div style="padding: 0 0 56.25% 0;"></div>
+						<img id="g-Korean-Waves-xlarge-moonjae-img" class="g-aiImg" alt="" src="./images/Korean-Waves-xlarge-moonjae.png"/>
+					</div>
+
+
+			{:else if index == 1}
+				<!-- Halaman 2 -->
+				<!-- Artboard: smallplus-redvelvet -->
+				<div id="g-Korean-Waves-smallplus-redvelvet" class="g-artboard" style="max-width: 509px;max-height: 1113px" data-aspect-ratio="0.457" data-min-width="0" data-max-width="509">
 					<div style="padding: 0 0 218.75% 0;"></div>
-							<img id="g-Korean-Waves-smallplus-moonjae-img" class="g-aiImg" alt="" src="./images/Korean-Waves-smallplus-moonjae.png"/>
-						</div>
+						<img id="g-Korean-Waves-smallplus-redvelvet-img" class="g-aiImg" alt="" src="./images/Korean-Waves-smallplus-redvelvet.png"/>
+					</div>
 				
-					<!-- Artboard: submedium-moonjae -->
-					<div id="g-Korean-Waves-submedium-moonjae" class="g-artboard" style="min-width: 510px;max-width: 689px;max-height: 1081px" data-aspect-ratio="0.638" data-min-width="510" data-max-width="689">
-					<div style="padding: 0 0 156.8627% 0;"></div>
-							<img id="g-Korean-Waves-submedium-moonjae-img" class="g-aiImg" alt="" src="./images/Korean-Waves-submedium-moonjae.png"/>
-						</div>
+					<!-- Artboard: submedium-redvelvet -->
+					<div id="g-Korean-Waves-submedium-redvelvet" class="g-artboard" style="min-width: 510px;max-width: 689px;max-height: 1081px" data-aspect-ratio="0.638" data-min-width="510" data-max-width="689">
+				<div style="padding: 0 0 156.8627% 0;"></div>
+						<img id="g-Korean-Waves-submedium-redvelvet-img" class="g-aiImg" alt="" src="./images/Korean-Waves-submedium-redvelvet.png"/>
+					</div>
 				
-					<!-- Artboard: medium-moonjae -->
-					<div id="g-Korean-Waves-medium-moonjae" class="g-artboard" style="min-width: 690px;max-width: 919px;max-height: 1364px" data-aspect-ratio="0.674" data-min-width="690" data-max-width="919">
-					<div style="padding: 0 0 148.4058% 0;"></div>
-							<img id="g-Korean-Waves-medium-moonjae-img" class="g-aiImg" alt="" src="./images/Korean-Waves-medium-moonjae.png"/>
-						</div>
+					<!-- Artboard: medium-redvelvet -->
+					<div id="g-Korean-Waves-medium-redvelvet" class="g-artboard" style="min-width: 690px;max-width: 919px;max-height: 1364px" data-aspect-ratio="0.674" data-min-width="690" data-max-width="919">
+				<div style="padding: 0 0 148.4058% 0;"></div>
+						<img id="g-Korean-Waves-medium-redvelvet-img" class="g-aiImg" alt="" src="./images/Korean-Waves-medium-redvelvet.png"/>
+					</div>
 				
-					<!-- Artboard: large-moonjae -->
-					<div id="g-Korean-Waves-large-moonjae" class="g-artboard" style="min-width: 920px;max-width: 1399px;max-height: 1399px" data-aspect-ratio="1" data-min-width="920" data-max-width="1399">
-					<div style="padding: 0 0 100% 0;"></div>
-							<img id="g-Korean-Waves-large-moonjae-img" class="g-aiImg" alt="" src="./images/Korean-Waves-large-moonjae.png"/>
-						</div>
+					<!-- Artboard: large-redvelvet -->
+					<div id="g-Korean-Waves-large-redvelvet" class="g-artboard" style="min-width: 920px;max-width: 1399px;max-height: 1399px" data-aspect-ratio="1" data-min-width="920" data-max-width="1399">
+				<div style="padding: 0 0 100% 0;"></div>
+						<img id="g-Korean-Waves-large-redvelvet-img" class="g-aiImg" alt="" src="./images/Korean-Waves-large-redvelvet.png"/>
+					</div>
 				
-					<!-- Artboard: xlarge-moonjae -->
-					<div id="g-Korean-Waves-xlarge-moonjae" class="g-artboard" style="min-width: 1400px;" data-aspect-ratio="1.778" data-min-width="1400">
-					<div style="padding: 0 0 56.25% 0;"></div>
-							<img id="g-Korean-Waves-xlarge-moonjae-img" class="g-aiImg" alt="" src="./images/Korean-Waves-xlarge-moonjae.png"/>
-						</div>
+					<!-- Artboard: xlarge-redvelvet -->
+					<div id="g-Korean-Waves-xlarge-redvelvet" class="g-artboard" style="min-width: 1400px;" data-aspect-ratio="1.778" data-min-width="1400">
+				<div style="padding: 0 0 56.25% 0;"></div>
+						<img id="g-Korean-Waves-xlarge-redvelvet-img" class="g-aiImg" alt="" src="./images/Korean-Waves-xlarge-redvelvet.png"/>
+					</div>
 
 
-				{:else if index == 1}
-					<!-- Halaman 2 -->
-					<!-- Artboard: smallplus-redvelvet -->
-					<div id="g-Korean-Waves-smallplus-redvelvet" class="g-artboard" style="max-width: 509px;max-height: 1113px" data-aspect-ratio="0.457" data-min-width="0" data-max-width="509">
-						<div style="padding: 0 0 218.75% 0;"></div>
-							<img id="g-Korean-Waves-smallplus-redvelvet-img" class="g-aiImg" alt="" src="./images/Korean-Waves-smallplus-redvelvet.png"/>
-						</div>
-					
-						<!-- Artboard: submedium-redvelvet -->
-						<div id="g-Korean-Waves-submedium-redvelvet" class="g-artboard" style="min-width: 510px;max-width: 689px;max-height: 1081px" data-aspect-ratio="0.638" data-min-width="510" data-max-width="689">
-					<div style="padding: 0 0 156.8627% 0;"></div>
-							<img id="g-Korean-Waves-submedium-redvelvet-img" class="g-aiImg" alt="" src="./images/Korean-Waves-submedium-redvelvet.png"/>
-						</div>
-					
-						<!-- Artboard: medium-redvelvet -->
-						<div id="g-Korean-Waves-medium-redvelvet" class="g-artboard" style="min-width: 690px;max-width: 919px;max-height: 1364px" data-aspect-ratio="0.674" data-min-width="690" data-max-width="919">
-					<div style="padding: 0 0 148.4058% 0;"></div>
-							<img id="g-Korean-Waves-medium-redvelvet-img" class="g-aiImg" alt="" src="./images/Korean-Waves-medium-redvelvet.png"/>
-						</div>
-					
-						<!-- Artboard: large-redvelvet -->
-						<div id="g-Korean-Waves-large-redvelvet" class="g-artboard" style="min-width: 920px;max-width: 1399px;max-height: 1399px" data-aspect-ratio="1" data-min-width="920" data-max-width="1399">
-					<div style="padding: 0 0 100% 0;"></div>
-							<img id="g-Korean-Waves-large-redvelvet-img" class="g-aiImg" alt="" src="./images/Korean-Waves-large-redvelvet.png"/>
-						</div>
-					
-						<!-- Artboard: xlarge-redvelvet -->
-						<div id="g-Korean-Waves-xlarge-redvelvet" class="g-artboard" style="min-width: 1400px;" data-aspect-ratio="1.778" data-min-width="1400">
-					<div style="padding: 0 0 56.25% 0;"></div>
-							<img id="g-Korean-Waves-xlarge-redvelvet-img" class="g-aiImg" alt="" src="./images/Korean-Waves-xlarge-redvelvet.png"/>
-						</div>
+			{:else if index == 2}
+				<!-- Halaman 3 -->
+				<!-- Artboard: smallplus-exo -->
+				<div id="g-Korean-Waves-smallplus-exo" class="g-artboard" style="max-width: 509px;max-height: 1113px" data-aspect-ratio="0.457" data-min-width="0" data-max-width="509">
+				<div style="padding: 0 0 218.75% 0;"></div>
+						<img id="g-Korean-Waves-smallplus-exo-img" class="g-aiImg" alt="" src="./images/Korean-Waves-smallplus-exo.png"/>
+					</div>
+				
+					<!-- Artboard: submedium-exo -->
+					<div id="g-Korean-Waves-submedium-exo" class="g-artboard" style="min-width: 510px;max-width: 689px;max-height: 1081px" data-aspect-ratio="0.638" data-min-width="510" data-max-width="689">
+				<div style="padding: 0 0 156.8627% 0;"></div>
+						<img id="g-Korean-Waves-submedium-exo-img" class="g-aiImg" alt="" src="./images/Korean-Waves-submedium-exo.png"/>
+					</div>
+				
+					<!-- Artboard: medium-exo -->
+					<div id="g-Korean-Waves-medium-exo" class="g-artboard" style="min-width: 690px;max-width: 919px;max-height: 1364px" data-aspect-ratio="0.674" data-min-width="690" data-max-width="919">
+				<div style="padding: 0 0 148.4058% 0;"></div>
+						<img id="g-Korean-Waves-medium-exo-img" class="g-aiImg" alt="" src="./images/Korean-Waves-medium-exo.png"/>
+					</div>
+				
+					<!-- Artboard: large-exo -->
+					<div id="g-Korean-Waves-large-exo" class="g-artboard" style="min-width: 920px;max-width: 1399px;max-height: 1399px" data-aspect-ratio="1" data-min-width="920" data-max-width="1399">
+				<div style="padding: 0 0 100% 0;"></div>
+						<img id="g-Korean-Waves-large-exo-img" class="g-aiImg" alt="" src="./images/Korean-Waves-large-exo.png"/>
+					</div>
+				
+					<!-- Artboard: xlarge-exo -->
+					<div id="g-Korean-Waves-xlarge-exo" class="g-artboard" style="min-width: 1400px;" data-aspect-ratio="1.778" data-min-width="1400">
+				<div style="padding: 0 0 56.25% 0;"></div>
+						<img id="g-Korean-Waves-xlarge-exo-img" class="g-aiImg" alt="" src="./images/Korean-Waves-xlarge-exo.png"/>
+					</div>
 
 
-				{:else if index == 2}
-					<!-- Halaman 3 -->
-					<!-- Artboard: smallplus-exo -->
-					<div id="g-Korean-Waves-smallplus-exo" class="g-artboard" style="max-width: 509px;max-height: 1113px" data-aspect-ratio="0.457" data-min-width="0" data-max-width="509">
+			{:else if index == 3}
+				<!-- Halaman 5 -->
+				<!-- Artboard: smallplus-bts -->
+				<div id="g-Korean-Waves-smallplus-bts" class="g-artboard" style="max-width: 509px;max-height: 1113px" data-aspect-ratio="0.457" data-min-width="0" data-max-width="509">
 					<div style="padding: 0 0 218.75% 0;"></div>
-							<img id="g-Korean-Waves-smallplus-exo-img" class="g-aiImg" alt="" src="./images/Korean-Waves-smallplus-exo.png"/>
+							<img id="g-Korean-Waves-smallplus-bts-img" class="g-aiImg" alt="" src="./images/Korean-Waves-smallplus-bts.png"/>
 						</div>
 					
-						<!-- Artboard: submedium-exo -->
-						<div id="g-Korean-Waves-submedium-exo" class="g-artboard" style="min-width: 510px;max-width: 689px;max-height: 1081px" data-aspect-ratio="0.638" data-min-width="510" data-max-width="689">
-					<div style="padding: 0 0 156.8627% 0;"></div>
-							<img id="g-Korean-Waves-submedium-exo-img" class="g-aiImg" alt="" src="./images/Korean-Waves-submedium-exo.png"/>
+				<!-- Artboard: submedium-bts -->
+				<div id="g-Korean-Waves-submedium-bts" class="g-artboard" style="min-width: 510px;max-width: 689px;max-height: 1081px" data-aspect-ratio="0.638" data-min-width="510" data-max-width="689">
+				<div style="padding: 0 0 156.8627% 0;"></div>
+						<img id="g-Korean-Waves-submedium-bts-img" class="g-aiImg" alt="" src="./images/Korean-Waves-submedium-bts.png"/>
+					</div>
+			
+				<!-- Artboard: medium-bts -->
+				<div id="g-Korean-Waves-medium-bts" class="g-artboard" style="min-width: 690px;max-width: 919px;max-height: 1364px" data-aspect-ratio="0.674" data-min-width="690" data-max-width="919">
+				<div style="padding: 0 0 148.4058% 0;"></div>
+						<img id="g-Korean-Waves-medium-bts-img" class="g-aiImg" alt="" src="./images/Korean-Waves-medium-bts.png"/>
+					</div>
+			
+				<!-- Artboard: large-bts -->
+				<div id="g-Korean-Waves-large-bts" class="g-artboard" style="min-width: 920px;max-width: 1399px;max-height: 1399px" data-aspect-ratio="1" data-min-width="920" data-max-width="1399">
+				<div style="padding: 0 0 100% 0;"></div>
+						<img id="g-Korean-Waves-large-bts-img" class="g-aiImg" alt="" src="./images/Korean-Waves-large-bts.png"/>
+					</div>
+			
+				<!-- Artboard: xlarge-bts -->
+				<div id="g-Korean-Waves-xlarge-bts" class="g-artboard" style="min-width: 1400px;" data-aspect-ratio="1.778" data-min-width="1400">
+				<div style="padding: 0 0 56.25% 0;"></div>
+						<img id="g-Korean-Waves-xlarge-bts-img" class="g-aiImg" alt="" src="./images/Korean-Waves-xlarge-bts.png"/>
+					</div>
+			
+			{:else if index == 4}
+				<!-- Halaman 5 -->
+				<!-- Artboard: smallplus-bts -->
+				<div id="g-Korean-Waves-smallplus-bts" class="g-artboard" style="max-width: 509px;max-height: 1113px" data-aspect-ratio="0.457" data-min-width="0" data-max-width="509">
+					<div style="padding: 0 0 218.75% 0;"></div>
+							<img id="g-Korean-Waves-smallplus-bts-img" class="g-aiImg" alt="" src="./images/Korean-Waves-smallplus-bts.png"/>
 						</div>
 					
-						<!-- Artboard: medium-exo -->
-						<div id="g-Korean-Waves-medium-exo" class="g-artboard" style="min-width: 690px;max-width: 919px;max-height: 1364px" data-aspect-ratio="0.674" data-min-width="690" data-max-width="919">
-					<div style="padding: 0 0 148.4058% 0;"></div>
-							<img id="g-Korean-Waves-medium-exo-img" class="g-aiImg" alt="" src="./images/Korean-Waves-medium-exo.png"/>
-						</div>
-					
-						<!-- Artboard: large-exo -->
-						<div id="g-Korean-Waves-large-exo" class="g-artboard" style="min-width: 920px;max-width: 1399px;max-height: 1399px" data-aspect-ratio="1" data-min-width="920" data-max-width="1399">
-					<div style="padding: 0 0 100% 0;"></div>
-							<img id="g-Korean-Waves-large-exo-img" class="g-aiImg" alt="" src="./images/Korean-Waves-large-exo.png"/>
-						</div>
-					
-						<!-- Artboard: xlarge-exo -->
-						<div id="g-Korean-Waves-xlarge-exo" class="g-artboard" style="min-width: 1400px;" data-aspect-ratio="1.778" data-min-width="1400">
-					<div style="padding: 0 0 56.25% 0;"></div>
-							<img id="g-Korean-Waves-xlarge-exo-img" class="g-aiImg" alt="" src="./images/Korean-Waves-xlarge-exo.png"/>
-						</div>
+				<!-- Artboard: submedium-bts -->
+				<div id="g-Korean-Waves-submedium-bts" class="g-artboard" style="min-width: 510px;max-width: 689px;max-height: 1081px" data-aspect-ratio="0.638" data-min-width="510" data-max-width="689">
+				<div style="padding: 0 0 156.8627% 0;"></div>
+						<img id="g-Korean-Waves-submedium-bts-img" class="g-aiImg" alt="" src="./images/Korean-Waves-submedium-bts.png"/>
+					</div>
+			
+				<!-- Artboard: medium-bts -->
+				<div id="g-Korean-Waves-medium-bts" class="g-artboard" style="min-width: 690px;max-width: 919px;max-height: 1364px" data-aspect-ratio="0.674" data-min-width="690" data-max-width="919">
+				<div style="padding: 0 0 148.4058% 0;"></div>
+						<img id="g-Korean-Waves-medium-bts-img" class="g-aiImg" alt="" src="./images/Korean-Waves-medium-bts.png"/>
+					</div>
+			
+				<!-- Artboard: large-bts -->
+				<div id="g-Korean-Waves-large-bts" class="g-artboard" style="min-width: 920px;max-width: 1399px;max-height: 1399px" data-aspect-ratio="1" data-min-width="920" data-max-width="1399">
+				<div style="padding: 0 0 100% 0;"></div>
+						<img id="g-Korean-Waves-large-bts-img" class="g-aiImg" alt="" src="./images/Korean-Waves-large-bts.png"/>
+					</div>
+			
+				<!-- Artboard: xlarge-bts -->
+				<div id="g-Korean-Waves-xlarge-bts" class="g-artboard" style="min-width: 1400px;" data-aspect-ratio="1.778" data-min-width="1400">
+				<div style="padding: 0 0 56.25% 0;"></div>
+						<img id="g-Korean-Waves-xlarge-bts-img" class="g-aiImg" alt="" src="./images/Korean-Waves-xlarge-bts.png"/>
+					</div>
 
-
-				{:else if index == 3}
-					<!-- Halaman 5 -->
-					<!-- Artboard: smallplus-bts -->
-					<div id="g-Korean-Waves-smallplus-bts" class="g-artboard" style="max-width: 509px;max-height: 1113px" data-aspect-ratio="0.457" data-min-width="0" data-max-width="509">
-						<div style="padding: 0 0 218.75% 0;"></div>
-								<img id="g-Korean-Waves-smallplus-bts-img" class="g-aiImg" alt="" src="./images/Korean-Waves-smallplus-bts.png"/>
-							</div>
-						
-					<!-- Artboard: submedium-bts -->
-					<div id="g-Korean-Waves-submedium-bts" class="g-artboard" style="min-width: 510px;max-width: 689px;max-height: 1081px" data-aspect-ratio="0.638" data-min-width="510" data-max-width="689">
-					<div style="padding: 0 0 156.8627% 0;"></div>
-							<img id="g-Korean-Waves-submedium-bts-img" class="g-aiImg" alt="" src="./images/Korean-Waves-submedium-bts.png"/>
-						</div>
-				
-					<!-- Artboard: medium-bts -->
-					<div id="g-Korean-Waves-medium-bts" class="g-artboard" style="min-width: 690px;max-width: 919px;max-height: 1364px" data-aspect-ratio="0.674" data-min-width="690" data-max-width="919">
-					<div style="padding: 0 0 148.4058% 0;"></div>
-							<img id="g-Korean-Waves-medium-bts-img" class="g-aiImg" alt="" src="./images/Korean-Waves-medium-bts.png"/>
-						</div>
-				
-					<!-- Artboard: large-bts -->
-					<div id="g-Korean-Waves-large-bts" class="g-artboard" style="min-width: 920px;max-width: 1399px;max-height: 1399px" data-aspect-ratio="1" data-min-width="920" data-max-width="1399">
-					<div style="padding: 0 0 100% 0;"></div>
-							<img id="g-Korean-Waves-large-bts-img" class="g-aiImg" alt="" src="./images/Korean-Waves-large-bts.png"/>
-						</div>
-				
-					<!-- Artboard: xlarge-bts -->
-					<div id="g-Korean-Waves-xlarge-bts" class="g-artboard" style="min-width: 1400px;" data-aspect-ratio="1.778" data-min-width="1400">
-					<div style="padding: 0 0 56.25% 0;"></div>
-							<img id="g-Korean-Waves-xlarge-bts-img" class="g-aiImg" alt="" src="./images/Korean-Waves-xlarge-bts.png"/>
-						</div>
-				
-				{:else if index == 4}
-					<!-- Halaman 5 -->
-					<!-- Artboard: smallplus-bts -->
-					<div id="g-Korean-Waves-smallplus-bts" class="g-artboard" style="max-width: 509px;max-height: 1113px" data-aspect-ratio="0.457" data-min-width="0" data-max-width="509">
-						<div style="padding: 0 0 218.75% 0;"></div>
-								<img id="g-Korean-Waves-smallplus-bts-img" class="g-aiImg" alt="" src="./images/Korean-Waves-smallplus-bts.png"/>
-							</div>
-						
-					<!-- Artboard: submedium-bts -->
-					<div id="g-Korean-Waves-submedium-bts" class="g-artboard" style="min-width: 510px;max-width: 689px;max-height: 1081px" data-aspect-ratio="0.638" data-min-width="510" data-max-width="689">
-					<div style="padding: 0 0 156.8627% 0;"></div>
-							<img id="g-Korean-Waves-submedium-bts-img" class="g-aiImg" alt="" src="./images/Korean-Waves-submedium-bts.png"/>
-						</div>
-				
-					<!-- Artboard: medium-bts -->
-					<div id="g-Korean-Waves-medium-bts" class="g-artboard" style="min-width: 690px;max-width: 919px;max-height: 1364px" data-aspect-ratio="0.674" data-min-width="690" data-max-width="919">
-					<div style="padding: 0 0 148.4058% 0;"></div>
-							<img id="g-Korean-Waves-medium-bts-img" class="g-aiImg" alt="" src="./images/Korean-Waves-medium-bts.png"/>
-						</div>
-				
-					<!-- Artboard: large-bts -->
-					<div id="g-Korean-Waves-large-bts" class="g-artboard" style="min-width: 920px;max-width: 1399px;max-height: 1399px" data-aspect-ratio="1" data-min-width="920" data-max-width="1399">
-					<div style="padding: 0 0 100% 0;"></div>
-							<img id="g-Korean-Waves-large-bts-img" class="g-aiImg" alt="" src="./images/Korean-Waves-large-bts.png"/>
-						</div>
-				
-					<!-- Artboard: xlarge-bts -->
-					<div id="g-Korean-Waves-xlarge-bts" class="g-artboard" style="min-width: 1400px;" data-aspect-ratio="1.778" data-min-width="1400">
-					<div style="padding: 0 0 56.25% 0;"></div>
-							<img id="g-Korean-Waves-xlarge-bts-img" class="g-aiImg" alt="" src="./images/Korean-Waves-xlarge-bts.png"/>
-						</div>
-
-				{/if}
-				</div>
+			{/if}
 			</div>
+		</div>
 
-			<div slot="foreground" >
-				<section></section>
-				<section>
-					<p>
-						Presiden Moon Jae-in kerap membawa grup-grup kpop sebagai pendamping diplomatisnya;
-					</p>
-				</section>
-				<section>
-					<p>
-						Red Velvet menjadi utusan kebudayaan di konser Korea Utara di tahun 2018,
-					</p>
-				</section>
-				<section>
-					<p>
-						EXO bertemu dengan Donald Trump di tahun 2019,
-					</p>
-				</section>
-				<section>
-					<p>
-						dan BTS yang dilantik sebagai diplomat khusus di tahun 2021.
-					</p>
-				</section>
-			</div>
+		<div slot="foreground" >
+			<section></section>
+			<section>
+				<p>
+					Presiden Moon Jae-in kerap membawa grup-grup kpop sebagai pendamping diplomatisnya;
+				</p>
+			</section>
+			<section>
+				<p>
+					Red Velvet menjadi utusan kebudayaan di konser Korea Utara di tahun 2018,
+				</p>
+			</section>
+			<section>
+				<p>
+					EXO bertemu dengan Donald Trump di tahun 2019,
+				</p>
+			</section>
+			<section>
+				<p>
+					dan BTS yang dilantik sebagai diplomat khusus di tahun 2021.
+				</p>
+			</section>
+		</div>
 	</Scroller>
+
 	<div class="divider"></div>
+
 	<Paragraph
 		--font-color ='#f9f9e1'
 		para={[
@@ -301,7 +381,11 @@
 
 <style>
 	.divider {
-		height:4rem;
+		height:0.2rem;
+		width:60%;
+		background-color:#f9f9e1 ;
+		margin:2rem auto;
+		border-radius: 0.1rem;
 	}
 
 	[slot="background"] {

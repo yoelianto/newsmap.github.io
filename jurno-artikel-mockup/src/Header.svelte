@@ -21,7 +21,7 @@
     </section>
 {:else}
     <section>
-        <div class="header-img"></div>
+
         <div class="title-section">
             <div class="title">{ title }</div>
             <!-- <div class="subtitle">{ subtitle }</div> -->
@@ -38,7 +38,7 @@
 <style>
     .title-section {
         width:90%;
-        font-family: 'Noto Sans', sans-serif;
+        font-family: 'Black Han Sans', sans-serif;
         max-width: 600px;
         margin: 3rem auto 5rem auto;
         text-align: center;
@@ -47,9 +47,6 @@
     }
     .header-img {
         width:100%;
-        height:450px;
-        background-color: var(--headerBackground);
-        background-image: var(--headerImage);
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -89,6 +86,7 @@
         margin: 0 auto 1.2rem auto;
         max-width: 700px;
         line-height: 1.8rem;
+        font-family: 'Roboto Mono', monospace;
         color: var(--subheadColor);
     }
     .credit {
@@ -110,7 +108,9 @@
             margin: 0 auto 1rem auto;
         }
         .subhead {
+            margin-top: 1.5rem;
             line-height: 1.5rem;
+            
         }
         .header-img {
             width:100%;
@@ -120,4 +120,6 @@
             margin: 1rem auto 2rem auto;
         }
     }
+
+
 </style>
