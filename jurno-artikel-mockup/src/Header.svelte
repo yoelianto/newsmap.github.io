@@ -24,7 +24,7 @@
         <div class="header-img"></div>
         <div class="title-section">
             <div class="title">{ title }</div>
-            <div class="subtitle">{ subtitle }</div>
+            <!-- <div class="subtitle">{ subtitle }</div> -->
             <div class="subhead">{subhead }</div>
 
             <aside class="credit">

@@ -10,7 +10,7 @@
 	// scroller variables
 	let count, index, offset, progress;
 	let top = 0;
-	let threshold = 0.5;
+	let threshold = 0;
 	let bottom = 1;
 
 	// styling variables
@@ -34,15 +34,13 @@
 	let source = 'Sed nec pellentesque massa. Vestibulum eu sem ut dolor placerat ultricies at sit amet massa'
 
 	let scrollytelling = [
-		'Cras pretium gravida mollis. Sed metus nibh, maximus id lectus ac, malesuada tincidunt lorem. Curabitur mattis efficitur mauris, sed fringilla erat ullamcorper euismod. Sed nec pellentesque massa. Vestibulum eu sem ut dolor placerat ultricies at sit amet massa. Suspendisse a neque lacinia, pulvinar enim sed, efficitur nisl.',
+		'Presiden Moon Jae-in kerap membawa grup-grup kpop sebagai pendamping diplomatisnya;',
 
-		'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque consequuntur repellat facilis deserunt temporibus labore nobis asperiores ea provident nihil nesciunt totam dicta soluta mollitia, quae hic sequi reprehenderit accusamus velit, quidem, voluptas perspiciatis id inventore quas? Iste dolorum aliquam eligendi unde placeat ipsam laudantium architecto itaque veritatis aliquid vero quos earum debitis iusto, suscipit impedit a sit nisi qui.',
+		'Red Velvet menjadi utusan kebudayaan di konser Korea Utara di tahun 2018,',
 
-		'Iste dolorum aliquam eligendi unde placeat ipsam laudantium architecto itaque veritatis aliquid vero quos earum debitis iusto, suscipit impedit a sit nisi qui.',
+		'EXO bertemu dengan Donald Trump di tahun 2019,',
 
-		'Cras pretium gravida mollis. Sed metus nibh, maximus id lectus ac, malesuada tincidunt lorem. Curabitur mattis efficitur mauris, sed fringilla erat ullamcorper euismod. Sed nec pellentesque massa. Vestibulum eu sem ut dolor placerat ultricies at sit amet massa. Suspendisse a neque lacinia, pulvinar enim sed, efficitur nisl.',
-
-		'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque consequuntur repellat facilis deserunt temporibus labore nobis asperiores ea provident nihil nesciunt totam dicta soluta mollitia, quae hic sequi reprehenderit accusamus velit, quidem, voluptas perspiciatis id inventore quas? Iste dolorum aliquam eligendi unde placeat ipsam laudantium architecto itaque veritatis aliquid vero quos earum debitis iusto, suscipit impedit a sit nisi qui.'
+		'dan BTS yang dilantik sebagai diplomat khusus di tahun 2021.',
 	]
 
 	// export let name;
@@ -58,51 +56,16 @@
 
 		fullHeader={false}
 
-		title='Vivamus finibus leo non hendrerit ultrices'
+		title='Diplomasi K-Pop'
 
-		subtitle='Morbi porttitor efficitur egestas'
+		subhead='Suka tidak suka, keberadaan artis dan/atau idola Kpop akan muncul di depan mata Anda. Entah dalam bentuk billboard BTS segede gaban di pinggir jalan, potongan lagu girl/boy group di akun Youtube gratisan, atau idola yang menjadi brand ambassador marketplace. Kedatangan hallyu wave terasa seperti bom yang tiba-tiba meledak.
 
-		subhead='Cras pretium gravida mollis. Sed metus nibh, maximus id lectus ac, malesuada tincidunt lorem. Curabitur mattis efficitur mauris, sed fringilla erat ullamcorper euismod. Sed nec pellentesque massa. Vestibulum eu sem ut dolor placerat ultricies at sit amet massa. Suspendisse a neque lacinia, pulvinar enim sed, efficitur nisl.'
+		Namun yang membuat kpop jauh lebih menarik dari dunia hiburan lainnya adalah dukungan negara yang begitu besar.'
 
 		author='Volutpat Sapien'
 		date=''		
 	/>	
-	<Paragraph
-		subjudul='Vestibulum'
-		para={[
-		'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi porttitor efficitur egestas. Vivamus finibus leo non hendrerit ultrices. Nulla facilisi. Aliquam sodales, ante eget malesuada ullamcorper, orci orci posuere magna, ut malesuada nisl felis et orci.',
-
-		'Quisque justo felis, semper id odio in, venenatis volutpat sapien. Maecenas accumsan erat id fringilla consequat. Quisque leo dolor, volutpat a mattis et, bibendum ac nisi. Mauris facilisis nisi ac sem maximus, ut commodo mi dignissim. Donec mattis ipsum sed lorem ultrices, eget vulputate nisl vehicula. Maecenas consectetur volutpat gravida. Ut sollicitudin purus a suscipit tempor.', 
-
-		'Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nulla vitae tincidunt purus, dapibus tempus arcu. Vestibulum nec leo iaculis magna tristique maximus nec id justo. Aliquam porttitor nec nisl sed laoreet. Proin blandit dolor id ipsum bibendum, eget mattis sem finibus.'
-		]}
-	/>
-	<Quote 
-		imgurl =''
-		imgalt =''
-		quotes ='Cras pretium gravida mollis. Sed metus nibh, maximus id lectus ac, malesuada tincidunt lorem. Curabitur mattis efficitur mauris'
-		person ='Lorem Ipsum'
-		credential ='Dolor Sit Amet'
-	/>
-	<Image
-		img={[
-			{
-			url:'https://via.placeholder.com/600/92c952',
-			title:'accusamus beatae ad facilis cum similique qui sunt'
-			},
-			{
-			url:'https://via.placeholder.com/600/92c952',
-			title:'accusamus beatae ad facilis cum similique qui sunt'
-			},
-			{
-			url:'https://via.placeholder.com/600/92c952',
-			title:'accusamus beatae ad facilis cum similique qui sunt'
-			}
-		]}
-
-		imageTitle='Lorem Ipsum Dolor Sit Amet'
-		imageSource='Dokumentasi Pribadi'
-	/>
+	
 	<div class="divider"></div>
 	<Scroller
 		{top}
@@ -121,40 +84,46 @@
 				<section></section>
 				<section>
 					<p>
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis deserunt ut ratione autem sint corporis harum consequuntur atque cupiditate fuga!
+						Presiden Moon Jae-in kerap membawa grup-grup kpop sebagai pendamping diplomatisnya;
 					</p>
 				</section>
 				<section>
 					<p>
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, rem! Natus deserunt nesciunt explicabo repudiandae, suscipit qui ut blanditiis mollitia itaque id. Placeat in perferendis quibusdam enim voluptas. Sapiente, sequi!
+						Red Velvet menjadi utusan kebudayaan di konser Korea Utara di tahun 2018,
 					</p>
 				</section>
 				<section>
 					<p>
-						Lorem ipsum dolor sit amet consectetur, adipisicing elit. A magnam, officiis eius voluptates asperiores laudantium.
+						EXO bertemu dengan Donald Trump di tahun 2019,
 					</p>
 				</section>
 				<section>
 					<p>
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi ducimus nesciunt esse earum laboriosam laudantium provident voluptatem eaque sed. Dolore.
-					</p>
-				</section>
-				<section>
-					<p>
-						Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus commodi suscipit assumenda illum dolor reprehenderit. Veniam rem eligendi unde vero amet deleniti repellendus est consequatur, maiores hic magnam architecto illo.
+						dan BTS yang dilantik sebagai diplomat khusus di tahun 2021.
 					</p>
 				</section>
 			</div>
 	</Scroller>
 	<div class="divider"></div>
 	<Paragraph
-		subjudul='Vestibulum'
 		para={[
-		'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi porttitor efficitur egestas. Vivamus finibus leo non hendrerit ultrices. Nulla facilisi. Aliquam sodales, ante eget malesuada ullamcorper, orci orci posuere magna, ut malesuada nisl felis et orci.',
+		'Begitu menguntungkannya hubungan antara kpop dengan pemerintahan Korsel sampai-sampai pemerintah membuat tim khusus untuk mempromosikan kpop ke dunia. Namun kesuksesan ini tak akan eksis tanpa adanya bekingan yang besar ke teknologi pendukung, seperti internet cepat dan modal ke perusahaan-perusahaan teknologi lokal. Ini terlihat di pemetaan dana pemerintah di tahun 2012: sepertiga dari modal usaha negara dihabiskan di industri entertainmen.'
+		]}
+	/>
+	<Image
+		img={[
+			{
+			url:'https://via.placeholder.com/600/92c952',
+			title:'accusamus beatae ad facilis cum similique qui sunt'
+			}
+		]}
 
-		'Quisque justo felis, semper id odio in, venenatis volutpat sapien. Maecenas accumsan erat id fringilla consequat. Quisque leo dolor, volutpat a mattis et, bibendum ac nisi. Mauris facilisis nisi ac sem maximus, ut commodo mi dignissim. Donec mattis ipsum sed lorem ultrices, eget vulputate nisl vehicula. Maecenas consectetur volutpat gravida. Ut sollicitudin purus a suscipit tempor.', 
-
-		'Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nulla vitae tincidunt purus, dapibus tempus arcu. Vestibulum nec leo iaculis magna tristique maximus nec id justo. Aliquam porttitor nec nisl sed laoreet. Proin blandit dolor id ipsum bibendum, eget mattis sem finibus.'
+		imageTitle='Lorem Ipsum Dolor Sit Amet'
+		imageSource='Dokumentasi Pribadi'
+	/>
+	<Paragraph
+		para={[
+		'Namun penggunaan kpop sebagai alat diplomasi ini tak selalu positif. Pemerintah Tiongkok memblokir konten kpop dan kdrama karena Korsel membuat perjanjian militer dengan Amerika Serikat. Hasilnya, kpop terpaksa memfokuskan pasarnya ke Asia Pasifik, salah satunya Indonesia. Strategi ini terhitung sukses: Indonesia merupakan negara paling “berisik” (dan mungkin juga salah satu yang paling banyak menggelontorkan uang) soal kpop di dunia maya. '
 		]}
 	/>
 	<Credit { source } { credit }/>
