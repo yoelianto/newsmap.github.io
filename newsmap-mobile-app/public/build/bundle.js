@@ -2296,6 +2296,7 @@ var app = (function () {
     	let div5;
     	let p;
     	let t1;
+    	let a;
     	let div4;
     	let img;
     	let img_src_value;
@@ -2313,6 +2314,7 @@ var app = (function () {
     			p = element("p");
     			p.textContent = "JURNO ORIGINAL";
     			t1 = space();
+    			a = element("a");
     			div4 = element("div");
     			img = element("img");
     			t2 = space();
@@ -2329,17 +2331,19 @@ var app = (function () {
     			attr_dev(img, "class", "thumb svelte-jay511");
     			if (!src_url_equal(img.src, img_src_value = /*jurno*/ ctx[0][0].thumb)) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "");
-    			add_location(img, file$8, 23, 8, 1023);
+    			add_location(img, file$8, 24, 12, 1060);
     			attr_dev(div0, "class", "bottom svelte-jay511");
-    			add_location(div0, file$8, 24, 8, 1081);
+    			add_location(div0, file$8, 25, 12, 1122);
     			attr_dev(div1, "class", "sub-title svelte-jay511");
-    			add_location(div1, file$8, 26, 12, 1155);
+    			add_location(div1, file$8, 27, 16, 1204);
     			attr_dev(div2, "class", "card-title svelte-jay511");
-    			add_location(div2, file$8, 27, 12, 1212);
+    			add_location(div2, file$8, 28, 16, 1265);
     			attr_dev(div3, "class", "inner-card svelte-jay511");
-    			add_location(div3, file$8, 25, 8, 1117);
+    			add_location(div3, file$8, 26, 12, 1162);
     			attr_dev(div4, "class", "card svelte-jay511");
-    			add_location(div4, file$8, 22, 4, 995);
+    			add_location(div4, file$8, 23, 8, 1028);
+    			attr_dev(a, "href", /*jurno*/ ctx[0][0].url);
+    			add_location(a, file$8, 22, 4, 995);
     			attr_dev(div5, "class", "container");
     			attr_dev(div5, "id", "original");
     			add_location(div5, file$8, 20, 0, 911);
@@ -2351,7 +2355,8 @@ var app = (function () {
     			insert_dev(target, div5, anchor);
     			append_dev(div5, p);
     			append_dev(div5, t1);
-    			append_dev(div5, div4);
+    			append_dev(div5, a);
+    			append_dev(a, div4);
     			append_dev(div4, img);
     			append_dev(div4, t2);
     			append_dev(div4, div0);
@@ -2674,6 +2679,7 @@ var app = (function () {
     	let t5;
     	let t6;
     	let t7;
+    	let a;
     	let div7;
     	let t8;
     	let t9;
@@ -2704,6 +2710,7 @@ var app = (function () {
     			t5 = text("oleh ");
     			t6 = text(/*author*/ ctx[3]);
     			t7 = space();
+    			a = element("a");
     			div7 = element("div");
     			t8 = text(/*title*/ ctx[0]);
     			t9 = space();
@@ -2712,42 +2719,44 @@ var app = (function () {
     			attr_dev(img0, "class", "authorprofile svelte-knygkq");
     			if (!src_url_equal(img0.src, img0_src_value = /*authorprofileimage*/ ctx[1])) attr_dev(img0, "src", img0_src_value);
     			attr_dev(img0, "alt", /*authorprofilealt*/ ctx[2]);
-    			add_location(img0, file$6, 12, 24, 363);
+    			add_location(img0, file$6, 12, 24, 376);
     			attr_dev(div0, "class", "profile svelte-knygkq");
-    			add_location(div0, file$6, 11, 20, 316);
+    			add_location(div0, file$6, 11, 20, 329);
     			attr_dev(div1, "class", "left svelte-knygkq");
-    			add_location(div1, file$6, 10, 16, 276);
+    			add_location(div1, file$6, 10, 16, 289);
     			attr_dev(div2, "class", "excerpt svelte-knygkq");
-    			add_location(div2, file$6, 16, 20, 549);
+    			add_location(div2, file$6, 16, 20, 562);
     			attr_dev(div3, "class", "right svelte-knygkq");
-    			add_location(div3, file$6, 15, 16, 508);
+    			add_location(div3, file$6, 15, 16, 521);
     			attr_dev(div4, "class", "contentbot svelte-knygkq");
-    			add_location(div4, file$6, 9, 12, 234);
+    			add_location(div4, file$6, 9, 12, 247);
     			attr_dev(img1, "class", "header svelte-knygkq");
     			if (!src_url_equal(img1.src, img1_src_value = /*deduktifheader*/ ctx[4])) attr_dev(img1, "src", img1_src_value);
     			attr_dev(img1, "alt", "");
-    			add_location(img1, file$6, 24, 20, 1010);
+    			add_location(img1, file$6, 24, 24, 1027);
     			attr_dev(div5, "class", "headerbottom svelte-knygkq");
-    			add_location(div5, file$6, 25, 20, 1081);
+    			add_location(div5, file$6, 26, 20, 1120);
     			attr_dev(div6, "class", "author svelte-knygkq");
-    			add_location(div6, file$6, 27, 24, 1181);
+    			add_location(div6, file$6, 28, 24, 1220);
     			attr_dev(div7, "class", "title svelte-knygkq");
-    			add_location(div7, file$6, 28, 24, 1246);
+    			add_location(div7, file$6, 30, 28, 1337);
+    			attr_dev(a, "href", /*deduktifurl*/ ctx[5]);
+    			add_location(a, file$6, 29, 24, 1285);
     			attr_dev(div8, "class", "detail svelte-knygkq");
-    			add_location(div8, file$6, 26, 20, 1135);
+    			add_location(div8, file$6, 27, 20, 1174);
     			attr_dev(div9, "class", "headline svelte-knygkq");
-    			add_location(div9, file$6, 23, 16, 966);
+    			add_location(div9, file$6, 23, 16, 979);
     			attr_dev(div10, "class", "contenttop");
-    			add_location(div10, file$6, 21, 12, 906);
+    			add_location(div10, file$6, 21, 12, 919);
     			attr_dev(div11, "class", "content svelte-knygkq");
-    			add_location(div11, file$6, 8, 8, 199);
+    			add_location(div11, file$6, 8, 8, 212);
     			attr_dev(div12, "class", "bottom svelte-knygkq");
-    			add_location(div12, file$6, 7, 4, 169);
+    			add_location(div12, file$6, 7, 4, 182);
     			attr_dev(p, "class", "deduktif svelte-knygkq");
-    			add_location(p, file$6, 34, 4, 1387);
+    			add_location(p, file$6, 38, 4, 1534);
     			attr_dev(div13, "class", "container svelte-knygkq");
     			attr_dev(div13, "id", "deduktif");
-    			add_location(div13, file$6, 6, 0, 126);
+    			add_location(div13, file$6, 6, 0, 139);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -2775,7 +2784,8 @@ var app = (function () {
     			append_dev(div6, t5);
     			append_dev(div6, t6);
     			append_dev(div8, t7);
-    			append_dev(div8, div7);
+    			append_dev(div8, a);
+    			append_dev(a, div7);
     			append_dev(div7, t8);
     			append_dev(div13, t9);
     			append_dev(div13, p);
@@ -2795,6 +2805,10 @@ var app = (function () {
 
     			if (dirty & /*author*/ 8) set_data_dev(t6, /*author*/ ctx[3]);
     			if (dirty & /*title*/ 1) set_data_dev(t8, /*title*/ ctx[0]);
+
+    			if (dirty & /*deduktifurl*/ 32) {
+    				attr_dev(a, "href", /*deduktifurl*/ ctx[5]);
+    			}
     		},
     		i: noop,
     		o: noop,
@@ -2818,8 +2832,16 @@ var app = (function () {
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('Deduktif', slots, []);
     	let { title } = $$props;
-    	let { authorprofileimage, authorprofilealt, author, deduktifheader } = $$props;
-    	const writable_props = ['title', 'authorprofileimage', 'authorprofilealt', 'author', 'deduktifheader'];
+    	let { authorprofileimage, authorprofilealt, author, deduktifheader, deduktifurl } = $$props;
+
+    	const writable_props = [
+    		'title',
+    		'authorprofileimage',
+    		'authorprofilealt',
+    		'author',
+    		'deduktifheader',
+    		'deduktifurl'
+    	];
 
     	Object.keys($$props).forEach(key => {
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<Deduktif> was created with unknown prop '${key}'`);
@@ -2831,6 +2853,7 @@ var app = (function () {
     		if ('authorprofilealt' in $$props) $$invalidate(2, authorprofilealt = $$props.authorprofilealt);
     		if ('author' in $$props) $$invalidate(3, author = $$props.author);
     		if ('deduktifheader' in $$props) $$invalidate(4, deduktifheader = $$props.deduktifheader);
+    		if ('deduktifurl' in $$props) $$invalidate(5, deduktifurl = $$props.deduktifurl);
     	};
 
     	$$self.$capture_state = () => ({
@@ -2838,7 +2861,8 @@ var app = (function () {
     		authorprofileimage,
     		authorprofilealt,
     		author,
-    		deduktifheader
+    		deduktifheader,
+    		deduktifurl
     	});
 
     	$$self.$inject_state = $$props => {
@@ -2847,13 +2871,21 @@ var app = (function () {
     		if ('authorprofilealt' in $$props) $$invalidate(2, authorprofilealt = $$props.authorprofilealt);
     		if ('author' in $$props) $$invalidate(3, author = $$props.author);
     		if ('deduktifheader' in $$props) $$invalidate(4, deduktifheader = $$props.deduktifheader);
+    		if ('deduktifurl' in $$props) $$invalidate(5, deduktifurl = $$props.deduktifurl);
     	};
 
     	if ($$props && "$$inject" in $$props) {
     		$$self.$inject_state($$props.$$inject);
     	}
 
-    	return [title, authorprofileimage, authorprofilealt, author, deduktifheader];
+    	return [
+    		title,
+    		authorprofileimage,
+    		authorprofilealt,
+    		author,
+    		deduktifheader,
+    		deduktifurl
+    	];
     }
 
     class Deduktif extends SvelteComponentDev {
@@ -2865,7 +2897,8 @@ var app = (function () {
     			authorprofileimage: 1,
     			authorprofilealt: 2,
     			author: 3,
-    			deduktifheader: 4
+    			deduktifheader: 4,
+    			deduktifurl: 5
     		});
 
     		dispatch_dev("SvelteRegisterComponent", {
@@ -2896,6 +2929,10 @@ var app = (function () {
 
     		if (/*deduktifheader*/ ctx[4] === undefined && !('deduktifheader' in props)) {
     			console.warn("<Deduktif> was created without expected prop 'deduktifheader'");
+    		}
+
+    		if (/*deduktifurl*/ ctx[5] === undefined && !('deduktifurl' in props)) {
+    			console.warn("<Deduktif> was created without expected prop 'deduktifurl'");
     		}
     	}
 
@@ -2938,6 +2975,14 @@ var app = (function () {
     	set deduktifheader(value) {
     		throw new Error("<Deduktif>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
+
+    	get deduktifurl() {
+    		throw new Error("<Deduktif>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set deduktifurl(value) {
+    		throw new Error("<Deduktif>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
     }
 
     /* src\News.svelte generated by Svelte v3.46.4 */
@@ -2952,6 +2997,7 @@ var app = (function () {
 
     // (19:16) {#each news as news}
     function create_each_block$4(ctx) {
+    	let a;
     	let div;
     	let img;
     	let img_src_value;
@@ -2965,9 +3011,11 @@ var app = (function () {
     	let t3_value = /*news*/ ctx[1].title + "";
     	let t3;
     	let t4;
+    	let a_href_value;
 
     	const block = {
     		c: function create() {
+    			a = element("a");
     			div = element("div");
     			img = element("img");
     			t0 = space();
@@ -2980,16 +3028,19 @@ var app = (function () {
     			attr_dev(img, "class", "imgthumb svelte-1gniaa5");
     			if (!src_url_equal(img.src, img_src_value = /*news*/ ctx[1].thumb)) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", img_alt_value = /*news*/ ctx[1].title);
-    			add_location(img, file$5, 20, 24, 543);
+    			add_location(img, file$5, 21, 24, 580);
     			attr_dev(p0, "class", "author svelte-1gniaa5");
-    			add_location(p0, file$5, 21, 24, 627);
+    			add_location(p0, file$5, 22, 24, 664);
     			attr_dev(p1, "class", "article-title svelte-1gniaa5");
-    			add_location(p1, file$5, 22, 24, 685);
+    			add_location(p1, file$5, 23, 24, 722);
     			attr_dev(div, "class", "news svelte-1gniaa5");
-    			add_location(div, file$5, 19, 20, 499);
+    			add_location(div, file$5, 20, 20, 536);
+    			attr_dev(a, "href", a_href_value = /*news*/ ctx[1].url);
+    			add_location(a, file$5, 19, 16, 495);
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, div, anchor);
+    			insert_dev(target, a, anchor);
+    			append_dev(a, div);
     			append_dev(div, img);
     			append_dev(div, t0);
     			append_dev(div, p0);
@@ -2997,7 +3048,7 @@ var app = (function () {
     			append_dev(div, t2);
     			append_dev(div, p1);
     			append_dev(p1, t3);
-    			append_dev(div, t4);
+    			append_dev(a, t4);
     		},
     		p: function update(ctx, dirty) {
     			if (dirty & /*news*/ 2 && !src_url_equal(img.src, img_src_value = /*news*/ ctx[1].thumb)) {
@@ -3010,9 +3061,13 @@ var app = (function () {
 
     			if (dirty & /*news*/ 2 && t1_value !== (t1_value = /*news*/ ctx[1].web + "")) set_data_dev(t1, t1_value);
     			if (dirty & /*news*/ 2 && t3_value !== (t3_value = /*news*/ ctx[1].title + "")) set_data_dev(t3, t3_value);
+
+    			if (dirty & /*news*/ 2 && a_href_value !== (a_href_value = /*news*/ ctx[1].url)) {
+    				attr_dev(a, "href", a_href_value);
+    			}
     		},
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(div);
+    			if (detaching) detach_dev(a);
     		}
     	};
 
@@ -3939,8 +3994,9 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (40:24) {#each rewara as rewara, i}
+    // (43:24) {#each rewara as rewara, i}
     function create_each_block$1(ctx) {
+    	let a;
     	let li;
     	let p;
     	let t0_value = /*rewara*/ ctx[1].title + "";
@@ -3949,24 +4005,28 @@ var app = (function () {
 
     	const block = {
     		c: function create() {
+    			a = element("a");
     			li = element("li");
     			p = element("p");
     			t0 = text(t0_value);
     			t1 = space();
     			attr_dev(p, "class", "article-title svelte-1a2m2wu");
-    			add_location(p, file$2, 41, 32, 1810);
+    			add_location(p, file$2, 45, 32, 1955);
     			attr_dev(li, "class", "news svelte-1a2m2wu");
-    			add_location(li, file$2, 40, 28, 1759);
+    			add_location(li, file$2, 44, 28, 1904);
+    			attr_dev(a, "href", "rewara.url");
+    			add_location(a, file$2, 43, 24, 1853);
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, li, anchor);
+    			insert_dev(target, a, anchor);
+    			append_dev(a, li);
     			append_dev(li, p);
     			append_dev(p, t0);
-    			append_dev(li, t1);
+    			append_dev(a, t1);
     		},
     		p: noop,
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(li);
+    			if (detaching) detach_dev(a);
     		}
     	};
 
@@ -3974,7 +4034,7 @@ var app = (function () {
     		block,
     		id: create_each_block$1.name,
     		type: "each",
-    		source: "(40:24) {#each rewara as rewara, i}",
+    		source: "(43:24) {#each rewara as rewara, i}",
     		ctx
     	});
 
@@ -3988,6 +4048,7 @@ var app = (function () {
     	let t1;
     	let div2;
     	let div1;
+    	let a;
     	let div0;
     	let img;
     	let img_src_value;
@@ -4011,6 +4072,7 @@ var app = (function () {
     			t1 = space();
     			div2 = element("div");
     			div1 = element("div");
+    			a = element("a");
     			div0 = element("div");
     			img = element("img");
     			t2 = space();
@@ -4028,13 +4090,15 @@ var app = (function () {
     			attr_dev(img, "class", "imgthumb svelte-1a2m2wu");
     			if (!src_url_equal(img.src, img_src_value = /*rewara*/ ctx[1][0].thumb)) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", /*rewara*/ ctx[1][0].title);
-    			add_location(img, file$2, 35, 20, 1472);
+    			add_location(img, file$2, 36, 24, 1522);
     			attr_dev(p1, "class", "article-title svelte-1a2m2wu");
-    			add_location(p1, file$2, 36, 20, 1562);
+    			add_location(p1, file$2, 37, 24, 1616);
     			attr_dev(div0, "class", "firstnews");
-    			add_location(div0, file$2, 34, 16, 1427);
+    			add_location(div0, file$2, 35, 20, 1473);
+    			attr_dev(a, "href", /*rewara*/ ctx[1][0].url);
+    			add_location(a, file$2, 34, 16, 1427);
     			attr_dev(ul, "class", "othernews svelte-1a2m2wu");
-    			add_location(ul, file$2, 38, 20, 1654);
+    			add_location(ul, file$2, 41, 20, 1752);
     			attr_dev(div1, "class", "rewara svelte-1a2m2wu");
     			add_location(div1, file$2, 30, 12, 1278);
     			attr_dev(div2, "class", "rewara-container svelte-1a2m2wu");
@@ -4052,7 +4116,8 @@ var app = (function () {
     			append_dev(div3, t1);
     			append_dev(div3, div2);
     			append_dev(div2, div1);
-    			append_dev(div1, div0);
+    			append_dev(div1, a);
+    			append_dev(a, div0);
     			append_dev(div0, img);
     			append_dev(div0, t2);
     			append_dev(div0, p1);
@@ -4205,13 +4270,13 @@ var app = (function () {
     			div = element("div");
     			iframe = element("iframe");
     			t = space();
-    			attr_dev(iframe, "class", "imgthumb svelte-aqarp1");
+    			attr_dev(iframe, "class", "imgthumb svelte-14sjumh");
     			if (!src_url_equal(iframe.src, iframe_src_value = /*short*/ ctx[3].url)) attr_dev(iframe, "src", iframe_src_value);
     			attr_dev(iframe, "title", /*short*/ ctx[3].title);
     			attr_dev(iframe, "frameborder", "0");
     			iframe.allowFullscreen = true;
     			add_location(iframe, file$1, 41, 28, 1425);
-    			attr_dev(div, "class", "news svelte-aqarp1");
+    			attr_dev(div, "class", "news svelte-14sjumh");
     			add_location(div, file$1, 40, 24, 1377);
     		},
     		m: function mount(target, anchor) {
@@ -4264,11 +4329,11 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			attr_dev(h4, "class", "title svelte-aqarp1");
+    			attr_dev(h4, "class", "title svelte-14sjumh");
     			add_location(h4, file$1, 33, 8, 1091);
-    			attr_dev(div0, "class", "slider svelte-aqarp1");
+    			attr_dev(div0, "class", "slider svelte-14sjumh");
     			add_location(div0, file$1, 35, 12, 1175);
-    			attr_dev(div1, "class", "slider-container svelte-aqarp1");
+    			attr_dev(div1, "class", "slider-container svelte-14sjumh");
     			add_location(div1, file$1, 34, 8, 1131);
     			attr_dev(div2, "class", "container");
     			add_location(div2, file$1, 32, 4, 1058);
@@ -4457,7 +4522,7 @@ var app = (function () {
     	let current;
 
     	function header_height_binding(value) {
-    		/*header_height_binding*/ ctx[9](value);
+    		/*header_height_binding*/ ctx[10](value);
     	}
 
     	let header_props = {};
@@ -4480,6 +4545,7 @@ var app = (function () {
     	deduktif = new Deduktif({
     			props: {
     				title: "Menelusuri Indahnya Jalur Pantai Pangandaran",
+    				deduktifurl: /*deduktifurl*/ ctx[7],
     				deduktifheader: /*deduktifheader*/ ctx[6],
     				author: /*author*/ ctx[4],
     				authorprofileimage: /*authorprofileimage*/ ctx[5],
@@ -4496,7 +4562,7 @@ var app = (function () {
     	news0 = new News({
     			props: {
     				title: "TRENDING NOW",
-    				news: /*trendingnews*/ ctx[7]
+    				news: /*trendingnews*/ ctx[8]
     			},
     			$$inline: true
     		});
@@ -4504,7 +4570,7 @@ var app = (function () {
     	news1 = new News({
     			props: {
     				title: "PUBLIC NEWS",
-    				news: /*publicnews*/ ctx[8]
+    				news: /*publicnews*/ ctx[9]
     			},
     			$$inline: true
     		});
@@ -4557,7 +4623,7 @@ var app = (function () {
     			create_component(menu.$$.fragment);
     			attr_dev(link, "rel", "stylesheet");
     			attr_dev(link, "href", "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
-    			add_location(link, file, 151, 1, 8088);
+    			add_location(link, file, 152, 1, 8181);
     			set_style(div_1, "display", "contents");
     			set_style(div_1, "--fontfamily3", /*fontfamily3*/ ctx[3]);
     			set_style(div_2, "display", "contents");
@@ -4590,9 +4656,9 @@ var app = (function () {
     			set_style(div_11, "display", "contents");
     			set_style(div_11, "--fontfamily3", /*fontfamily3*/ ctx[3]);
     			attr_dev(div, "class", "container svelte-18hvwtu");
-    			add_location(div, file, 155, 1, 8226);
+    			add_location(div, file, 156, 1, 8319);
     			attr_dev(main, "class", "svelte-18hvwtu");
-    			add_location(main, file, 154, 0, 8218);
+    			add_location(main, file, 155, 0, 8311);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -4716,6 +4782,7 @@ var app = (function () {
     	let author = "Ahsan Ridhoi";
     	let authorprofileimage = "./image/ahsan.png";
     	let deduktifheader = "./image/Menelusuri-Indahnya-Jalur-Pantai-Pangandaran.png";
+    	let deduktifurl = "https://newsmap.id/article/menelusuri-indahnya-jalur-pantai-pangandaran";
 
     	let trendingnews = [
     		{
@@ -4872,6 +4939,7 @@ var app = (function () {
     		author,
     		authorprofileimage,
     		deduktifheader,
+    		deduktifurl,
     		trendingnews,
     		publicnews
     	});
@@ -4884,8 +4952,9 @@ var app = (function () {
     		if ('author' in $$props) $$invalidate(4, author = $$props.author);
     		if ('authorprofileimage' in $$props) $$invalidate(5, authorprofileimage = $$props.authorprofileimage);
     		if ('deduktifheader' in $$props) $$invalidate(6, deduktifheader = $$props.deduktifheader);
-    		if ('trendingnews' in $$props) $$invalidate(7, trendingnews = $$props.trendingnews);
-    		if ('publicnews' in $$props) $$invalidate(8, publicnews = $$props.publicnews);
+    		if ('deduktifurl' in $$props) $$invalidate(7, deduktifurl = $$props.deduktifurl);
+    		if ('trendingnews' in $$props) $$invalidate(8, trendingnews = $$props.trendingnews);
+    		if ('publicnews' in $$props) $$invalidate(9, publicnews = $$props.publicnews);
     	};
 
     	if ($$props && "$$inject" in $$props) {
@@ -4900,6 +4969,7 @@ var app = (function () {
     		author,
     		authorprofileimage,
     		deduktifheader,
+    		deduktifurl,
     		trendingnews,
     		publicnews,
     		header_height_binding

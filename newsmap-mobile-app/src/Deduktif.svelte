@@ -1,6 +1,6 @@
 <script>
     export let title;
-    export let authorprofileimage, authorprofilealt, author, deduktifheader;
+    export let authorprofileimage, authorprofilealt, author, deduktifheader, deduktifurl;
 </script>
 
 
@@ -22,11 +22,15 @@
             <div class="contenttop">
                 
                 <div class="headline">
-                    <img class="header" src={deduktifheader} alt="" >
+                        <img class="header" src={deduktifheader} alt="" >
+                    
                     <div class="headerbottom"></div>
                     <div class="detail">
                         <div class="author">oleh {author}</div>
-                        <div class="title">{title}</div>   
+                        <a href={deduktifurl}>
+                            <div class="title">{title}</div>  
+                        </a>
+                         
                     </div>
                 </div>
             </div>

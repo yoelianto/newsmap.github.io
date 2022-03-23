@@ -32,15 +32,21 @@
                 <!-- {#await fetchImage}
                 <p>...waiting</p>
                 {:then data} -->
-                <div class="firstnews">
-                    <img class='imgthumb' src={rewara[0].thumb} alt={rewara[0].title} />
-                    <p class="article-title">{rewara[0].title}</p>
-                </div>
+                <a href={rewara[0].url}>
+                    <div class="firstnews">
+                        <img class='imgthumb' src={rewara[0].thumb} alt={rewara[0].title} />
+                        <p class="article-title">{rewara[0].title}</p>
+                    </div>
+                </a>
+                
                     <ul class="othernews">
                         {#each rewara as rewara, i}
+                        <a href="rewara.url">
                             <li class="news">
                                 <p class="article-title">{rewara.title}</p>
                             </li>
+                        </a>
+                            
                         {/each}
                     </ul>
                 <!-- {:catch error}

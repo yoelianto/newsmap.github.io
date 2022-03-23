@@ -78,7 +78,7 @@
             border-radius:0.5rem;
             object-fit: cover;
         }
-        .article-title {
+        /* .article-title {
             font-family: var(--fontfamily2);
             font-size: 1rem;
             font-weight:00;
@@ -91,7 +91,7 @@
             left:0;
             padding:1rem;
             z-index: 50;
-        }
+        } */
         .slider-container::-webkit-scrollbar {
             display: none;
         }

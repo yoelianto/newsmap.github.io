@@ -17,6 +17,7 @@
 	let author = "Ahsan Ridhoi";
 	let authorprofileimage = "./image/ahsan.png";
 	let deduktifheader = "./image/Menelusuri-Indahnya-Jalur-Pantai-Pangandaran.png"
+	let deduktifurl = "https://newsmap.id/article/menelusuri-indahnya-jalur-pantai-pangandaran"
 
 	let trendingnews = [
 		{
@@ -173,6 +174,7 @@
 		/>
 		<Deduktif 
 			title="Menelusuri Indahnya Jalur Pantai Pangandaran"
+			deduktifurl = {deduktifurl}
 			deduktifheader = {deduktifheader}
 			author = {author}
 			authorprofileimage = {authorprofileimage}

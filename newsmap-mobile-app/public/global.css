@@ -23,9 +23,9 @@ a {
 a:hover {
 	text-decoration: none;
 }
-/* a:visited {
-	/* color: rgb(0,80,160); 
-} */
+a:visited {
+	color: white; 
+}
 label {
 	display: block;
 }

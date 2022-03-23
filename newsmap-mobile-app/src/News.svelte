@@ -17,11 +17,13 @@ const fetchImage = (async () => {
             <p>...waiting</p>
             {:then data} -->
                 {#each news as news}
+                <a href={news.url}>
                     <div class="news">
                         <img class='imgthumb' src={news.thumb} alt={news.title} />
                         <p class="author">{news.web}</p>
                         <p class="article-title">{news.title}</p>
                     </div>
+                </a>
                 {/each}
             <!-- {:catch error}
                 <p>An error occurred!</p>

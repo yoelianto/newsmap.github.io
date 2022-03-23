@@ -20,14 +20,17 @@
 
 <div class="container" id="original">
     <p class="title">JURNO ORIGINAL</p>
-    <div class="card">
-        <img class="thumb" src={jurno[0].thumb} alt="" >
-        <div class="bottom"></div>
-        <div class="inner-card">
-            <div class="sub-title">Original Jurno</div>
-            <div class="card-title">Kenapa Bimbel Bisa Booming Banget</div>
+    <a href={jurno[0].url}>
+        <div class="card">
+            <img class="thumb" src={jurno[0].thumb} alt="" >
+            <div class="bottom"></div>
+            <div class="inner-card">
+                <div class="sub-title">Original Jurno</div>
+                <div class="card-title">Kenapa Bimbel Bisa Booming Banget</div>
+            </div>
         </div>
-    </div>
+    </a>
+    
 </div>
 
 <style>
