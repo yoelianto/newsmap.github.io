@@ -2681,19 +2681,25 @@ var app = (function () {
     	let div4;
     	let div1;
     	let div0;
-    	let img;
-    	let img_src_value;
+    	let img0;
+    	let img0_src_value;
     	let t0;
     	let div3;
     	let div2;
     	let t2;
     	let div9;
     	let div8;
+    	let img1;
+    	let img1_src_value;
+    	let t3;
     	let div7;
     	let div5;
     	let t4;
-    	let div6;
+    	let t5;
     	let t6;
+    	let div6;
+    	let t7;
+    	let t8;
     	let p;
 
     	const block = {
@@ -2704,7 +2710,7 @@ var app = (function () {
     			div4 = element("div");
     			div1 = element("div");
     			div0 = element("div");
-    			img = element("img");
+    			img0 = element("img");
     			t0 = space();
     			div3 = element("div");
     			div2 = element("div");
@@ -2712,48 +2718,55 @@ var app = (function () {
     			t2 = space();
     			div9 = element("div");
     			div8 = element("div");
+    			img1 = element("img");
+    			t3 = space();
     			div7 = element("div");
     			div5 = element("div");
-    			div5.textContent = "oleh Ahsan Ridhoi";
-    			t4 = space();
-    			div6 = element("div");
-    			div6.textContent = "Lorem Ipsum Dolor Sit Amet";
+    			t4 = text("oleh ");
+    			t5 = text(/*author*/ ctx[3]);
     			t6 = space();
+    			div6 = element("div");
+    			t7 = text(/*title*/ ctx[0]);
+    			t8 = space();
     			p = element("p");
     			p.textContent = "DEDUKTIF";
-    			attr_dev(img, "class", "authorprofile svelte-1fbtvo5");
-    			if (!src_url_equal(img.src, img_src_value = "https://via.placeholder.com/600/24f355")) attr_dev(img, "src", img_src_value);
-    			attr_dev(img, "alt", "author profile");
-    			add_location(img, file$6, 10, 24, 262);
-    			attr_dev(div0, "class", "profile svelte-1fbtvo5");
-    			add_location(div0, file$6, 9, 20, 215);
-    			attr_dev(div1, "class", "left svelte-1fbtvo5");
-    			add_location(div1, file$6, 8, 16, 175);
-    			attr_dev(div2, "class", "excerpt svelte-1fbtvo5");
-    			add_location(div2, file$6, 14, 20, 466);
-    			attr_dev(div3, "class", "right svelte-1fbtvo5");
-    			add_location(div3, file$6, 13, 16, 425);
-    			attr_dev(div4, "class", "contentbot svelte-1fbtvo5");
-    			add_location(div4, file$6, 7, 12, 133);
-    			attr_dev(div5, "class", "author svelte-1fbtvo5");
-    			add_location(div5, file$6, 22, 24, 955);
-    			attr_dev(div6, "class", "title svelte-1fbtvo5");
-    			add_location(div6, file$6, 23, 24, 1024);
-    			attr_dev(div7, "class", "detail svelte-1fbtvo5");
-    			add_location(div7, file$6, 21, 20, 909);
-    			attr_dev(div8, "class", "headline svelte-1fbtvo5");
-    			add_location(div8, file$6, 20, 16, 865);
+    			attr_dev(img0, "class", "authorprofile svelte-1p5csai");
+    			if (!src_url_equal(img0.src, img0_src_value = /*authorprofileimage*/ ctx[1])) attr_dev(img0, "src", img0_src_value);
+    			attr_dev(img0, "alt", /*authorprofilealt*/ ctx[2]);
+    			add_location(img0, file$6, 12, 24, 363);
+    			attr_dev(div0, "class", "profile svelte-1p5csai");
+    			add_location(div0, file$6, 11, 20, 316);
+    			attr_dev(div1, "class", "left svelte-1p5csai");
+    			add_location(div1, file$6, 10, 16, 276);
+    			attr_dev(div2, "class", "excerpt svelte-1p5csai");
+    			add_location(div2, file$6, 16, 20, 549);
+    			attr_dev(div3, "class", "right svelte-1p5csai");
+    			add_location(div3, file$6, 15, 16, 508);
+    			attr_dev(div4, "class", "contentbot svelte-1p5csai");
+    			add_location(div4, file$6, 9, 12, 234);
+    			attr_dev(img1, "class", "header svelte-1p5csai");
+    			if (!src_url_equal(img1.src, img1_src_value = /*deduktifheader*/ ctx[4])) attr_dev(img1, "src", img1_src_value);
+    			attr_dev(img1, "alt", "");
+    			add_location(img1, file$6, 24, 20, 1010);
+    			attr_dev(div5, "class", "author svelte-1p5csai");
+    			add_location(div5, file$6, 26, 24, 1127);
+    			attr_dev(div6, "class", "title svelte-1p5csai");
+    			add_location(div6, file$6, 27, 24, 1192);
+    			attr_dev(div7, "class", "detail svelte-1p5csai");
+    			add_location(div7, file$6, 25, 20, 1081);
+    			attr_dev(div8, "class", "headline svelte-1p5csai");
+    			add_location(div8, file$6, 23, 16, 966);
     			attr_dev(div9, "class", "contenttop");
-    			add_location(div9, file$6, 19, 12, 823);
-    			attr_dev(div10, "class", "content svelte-1fbtvo5");
-    			add_location(div10, file$6, 6, 8, 98);
-    			attr_dev(div11, "class", "bottom svelte-1fbtvo5");
-    			add_location(div11, file$6, 5, 4, 68);
-    			attr_dev(p, "class", "deduktif svelte-1fbtvo5");
-    			add_location(p, file$6, 29, 4, 1184);
-    			attr_dev(div12, "class", "container svelte-1fbtvo5");
+    			add_location(div9, file$6, 21, 12, 906);
+    			attr_dev(div10, "class", "content svelte-1p5csai");
+    			add_location(div10, file$6, 8, 8, 199);
+    			attr_dev(div11, "class", "bottom svelte-1p5csai");
+    			add_location(div11, file$6, 7, 4, 169);
+    			attr_dev(p, "class", "deduktif svelte-1p5csai");
+    			add_location(p, file$6, 33, 4, 1333);
+    			attr_dev(div12, "class", "container svelte-1p5csai");
     			attr_dev(div12, "id", "deduktif");
-    			add_location(div12, file$6, 4, 0, 25);
+    			add_location(div12, file$6, 6, 0, 126);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -2765,21 +2778,41 @@ var app = (function () {
     			append_dev(div10, div4);
     			append_dev(div4, div1);
     			append_dev(div1, div0);
-    			append_dev(div0, img);
+    			append_dev(div0, img0);
     			append_dev(div4, t0);
     			append_dev(div4, div3);
     			append_dev(div3, div2);
     			append_dev(div10, t2);
     			append_dev(div10, div9);
     			append_dev(div9, div8);
+    			append_dev(div8, img1);
+    			append_dev(div8, t3);
     			append_dev(div8, div7);
     			append_dev(div7, div5);
-    			append_dev(div7, t4);
+    			append_dev(div5, t4);
+    			append_dev(div5, t5);
+    			append_dev(div7, t6);
     			append_dev(div7, div6);
-    			append_dev(div12, t6);
+    			append_dev(div6, t7);
+    			append_dev(div12, t8);
     			append_dev(div12, p);
     		},
-    		p: noop,
+    		p: function update(ctx, [dirty]) {
+    			if (dirty & /*authorprofileimage*/ 2 && !src_url_equal(img0.src, img0_src_value = /*authorprofileimage*/ ctx[1])) {
+    				attr_dev(img0, "src", img0_src_value);
+    			}
+
+    			if (dirty & /*authorprofilealt*/ 4) {
+    				attr_dev(img0, "alt", /*authorprofilealt*/ ctx[2]);
+    			}
+
+    			if (dirty & /*deduktifheader*/ 16 && !src_url_equal(img1.src, img1_src_value = /*deduktifheader*/ ctx[4])) {
+    				attr_dev(img1, "src", img1_src_value);
+    			}
+
+    			if (dirty & /*author*/ 8) set_data_dev(t5, /*author*/ ctx[3]);
+    			if (dirty & /*title*/ 1) set_data_dev(t7, /*title*/ ctx[0]);
+    		},
     		i: noop,
     		o: noop,
     		d: function destroy(detaching) {
@@ -2798,22 +2831,59 @@ var app = (function () {
     	return block;
     }
 
-    function instance$6($$self, $$props) {
+    function instance$6($$self, $$props, $$invalidate) {
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('Deduktif', slots, []);
-    	const writable_props = [];
+    	let { title } = $$props;
+    	let { authorprofileimage, authorprofilealt, author, deduktifheader } = $$props;
+    	const writable_props = ['title', 'authorprofileimage', 'authorprofilealt', 'author', 'deduktifheader'];
 
     	Object.keys($$props).forEach(key => {
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<Deduktif> was created with unknown prop '${key}'`);
     	});
 
-    	return [];
+    	$$self.$$set = $$props => {
+    		if ('title' in $$props) $$invalidate(0, title = $$props.title);
+    		if ('authorprofileimage' in $$props) $$invalidate(1, authorprofileimage = $$props.authorprofileimage);
+    		if ('authorprofilealt' in $$props) $$invalidate(2, authorprofilealt = $$props.authorprofilealt);
+    		if ('author' in $$props) $$invalidate(3, author = $$props.author);
+    		if ('deduktifheader' in $$props) $$invalidate(4, deduktifheader = $$props.deduktifheader);
+    	};
+
+    	$$self.$capture_state = () => ({
+    		title,
+    		authorprofileimage,
+    		authorprofilealt,
+    		author,
+    		deduktifheader
+    	});
+
+    	$$self.$inject_state = $$props => {
+    		if ('title' in $$props) $$invalidate(0, title = $$props.title);
+    		if ('authorprofileimage' in $$props) $$invalidate(1, authorprofileimage = $$props.authorprofileimage);
+    		if ('authorprofilealt' in $$props) $$invalidate(2, authorprofilealt = $$props.authorprofilealt);
+    		if ('author' in $$props) $$invalidate(3, author = $$props.author);
+    		if ('deduktifheader' in $$props) $$invalidate(4, deduktifheader = $$props.deduktifheader);
+    	};
+
+    	if ($$props && "$$inject" in $$props) {
+    		$$self.$inject_state($$props.$$inject);
+    	}
+
+    	return [title, authorprofileimage, authorprofilealt, author, deduktifheader];
     }
 
     class Deduktif extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$6, create_fragment$6, safe_not_equal, {});
+
+    		init(this, options, instance$6, create_fragment$6, safe_not_equal, {
+    			title: 0,
+    			authorprofileimage: 1,
+    			authorprofilealt: 2,
+    			author: 3,
+    			deduktifheader: 4
+    		});
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
@@ -2821,6 +2891,69 @@ var app = (function () {
     			options,
     			id: create_fragment$6.name
     		});
+
+    		const { ctx } = this.$$;
+    		const props = options.props || {};
+
+    		if (/*title*/ ctx[0] === undefined && !('title' in props)) {
+    			console.warn("<Deduktif> was created without expected prop 'title'");
+    		}
+
+    		if (/*authorprofileimage*/ ctx[1] === undefined && !('authorprofileimage' in props)) {
+    			console.warn("<Deduktif> was created without expected prop 'authorprofileimage'");
+    		}
+
+    		if (/*authorprofilealt*/ ctx[2] === undefined && !('authorprofilealt' in props)) {
+    			console.warn("<Deduktif> was created without expected prop 'authorprofilealt'");
+    		}
+
+    		if (/*author*/ ctx[3] === undefined && !('author' in props)) {
+    			console.warn("<Deduktif> was created without expected prop 'author'");
+    		}
+
+    		if (/*deduktifheader*/ ctx[4] === undefined && !('deduktifheader' in props)) {
+    			console.warn("<Deduktif> was created without expected prop 'deduktifheader'");
+    		}
+    	}
+
+    	get title() {
+    		throw new Error("<Deduktif>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set title(value) {
+    		throw new Error("<Deduktif>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get authorprofileimage() {
+    		throw new Error("<Deduktif>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set authorprofileimage(value) {
+    		throw new Error("<Deduktif>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get authorprofilealt() {
+    		throw new Error("<Deduktif>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set authorprofilealt(value) {
+    		throw new Error("<Deduktif>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get author() {
+    		throw new Error("<Deduktif>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set author(value) {
+    		throw new Error("<Deduktif>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get deduktifheader() {
+    		throw new Error("<Deduktif>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set deduktifheader(value) {
+    		throw new Error("<Deduktif>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
     }
 
@@ -4688,7 +4821,7 @@ var app = (function () {
     	let current;
 
     	function header_height_binding(value) {
-    		/*header_height_binding*/ ctx[4](value);
+    		/*header_height_binding*/ ctx[7](value);
     	}
 
     	let header_props = {};
@@ -4707,7 +4840,17 @@ var app = (function () {
 
     	sentiment = new Sentiment({ $$inline: true });
     	original = new NewsmapOriginal({ $$inline: true });
-    	deduktif = new Deduktif({ $$inline: true });
+
+    	deduktif = new Deduktif({
+    			props: {
+    				title: "Menelusuri Indahnya Jalur Pantai Pangandaran",
+    				deduktifheader: /*deduktifheader*/ ctx[6],
+    				author: /*author*/ ctx[4],
+    				authorprofileimage: /*authorprofileimage*/ ctx[5],
+    				authorprofilealt: /*author*/ ctx[4]
+    			},
+    			$$inline: true
+    		});
 
     	rewara = new Rewara({
     			props: { title: "REWARA" },
@@ -4772,7 +4915,7 @@ var app = (function () {
     			create_component(menu.$$.fragment);
     			attr_dev(link, "rel", "stylesheet");
     			attr_dev(link, "href", "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
-    			add_location(link, file, 20, 1, 529);
+    			add_location(link, file, 23, 1, 687);
     			set_style(div_1, "display", "contents");
     			set_style(div_1, "--fontfamily3", /*fontfamily3*/ ctx[3]);
     			set_style(div_2, "display", "contents");
@@ -4805,9 +4948,9 @@ var app = (function () {
     			set_style(div_11, "display", "contents");
     			set_style(div_11, "--fontfamily3", /*fontfamily3*/ ctx[3]);
     			attr_dev(div, "class", "container svelte-18hvwtu");
-    			add_location(div, file, 24, 1, 667);
+    			add_location(div, file, 27, 1, 825);
     			attr_dev(main, "class", "svelte-18hvwtu");
-    			add_location(main, file, 23, 0, 659);
+    			add_location(main, file, 26, 0, 817);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -4928,6 +5071,9 @@ var app = (function () {
     	validate_slots('App', slots, []);
     	let margin;
     	let fontfamily1 = "Roboto Mono", fontfamily2 = "Roboto", fontfamily3 = "Jost";
+    	let author = "Ahsan Ridhoi";
+    	let authorprofileimage = "./image/ahsan.png";
+    	let deduktifheader = "./image/Menelusuri-Indahnya-Jalur-Pantai-Pangandaran.png";
     	const writable_props = [];
 
     	Object.keys($$props).forEach(key => {
@@ -4953,7 +5099,10 @@ var app = (function () {
     		margin,
     		fontfamily1,
     		fontfamily2,
-    		fontfamily3
+    		fontfamily3,
+    		author,
+    		authorprofileimage,
+    		deduktifheader
     	});
 
     	$$self.$inject_state = $$props => {
@@ -4961,13 +5110,25 @@ var app = (function () {
     		if ('fontfamily1' in $$props) $$invalidate(1, fontfamily1 = $$props.fontfamily1);
     		if ('fontfamily2' in $$props) $$invalidate(2, fontfamily2 = $$props.fontfamily2);
     		if ('fontfamily3' in $$props) $$invalidate(3, fontfamily3 = $$props.fontfamily3);
+    		if ('author' in $$props) $$invalidate(4, author = $$props.author);
+    		if ('authorprofileimage' in $$props) $$invalidate(5, authorprofileimage = $$props.authorprofileimage);
+    		if ('deduktifheader' in $$props) $$invalidate(6, deduktifheader = $$props.deduktifheader);
     	};
 
     	if ($$props && "$$inject" in $$props) {
     		$$self.$inject_state($$props.$$inject);
     	}
 
-    	return [margin, fontfamily1, fontfamily2, fontfamily3, header_height_binding];
+    	return [
+    		margin,
+    		fontfamily1,
+    		fontfamily2,
+    		fontfamily3,
+    		author,
+    		authorprofileimage,
+    		deduktifheader,
+    		header_height_binding
+    	];
     }
 
     class App extends SvelteComponentDev {

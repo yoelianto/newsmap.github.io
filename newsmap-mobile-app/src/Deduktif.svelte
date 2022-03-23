@@ -1,4 +1,6 @@
 <script>
+    export let title;
+    export let authorprofileimage, authorprofilealt, author, deduktifheader;
 </script>
 
 
@@ -8,7 +10,7 @@
             <div class="contentbot">
                 <div class="left">
                     <div class="profile">
-                        <img class="authorprofile" src="https://via.placeholder.com/600/24f355" alt="author profile">
+                        <img class="authorprofile" src={authorprofileimage} alt={authorprofilealt}>
                     </div>
                 </div>
                 <div class="right">
@@ -18,10 +20,12 @@
                 </div>
             </div>
             <div class="contenttop">
+                
                 <div class="headline">
+                    <img class="header" src={deduktifheader} alt="" >
                     <div class="detail">
-                        <div class="author">oleh Ahsan Ridhoi</div>
-                        <div class="title">Lorem Ipsum Dolor Sit Amet</div>   
+                        <div class="author">oleh {author}</div>
+                        <div class="title">{title}</div>   
                     </div>
                 </div>
             </div>
@@ -75,11 +79,10 @@
         width:30%;
         display: flex;
         justify-content: center;
+        z-index: 99;
     }
     .authorprofile {
-        width:15vw;
-        height:15vw;
-        border-radius: 50%;
+        height: 100%;
     }
     .headline {
         width:88vw;
@@ -89,21 +92,30 @@
         display: flex;
         justify-content: flex-end;
         align-items: flex-end;
+        position: relative;
+        overflow: hidden;
+    }
+    .header{
+        position: absolute;
+        height: 100%;
     }
     .detail {
         width:70%;
         margin-bottom:0.8rem;
         color: white;
         font-family: var(--fontfamily2);
+        z-index: 10;
     }
     .title {
         font-size: 1.25rem;
         line-height: 1.2rem;
         font-weight: 700;
+        padding-right:1rem;
     }
     .author {
         font-size: 0.8rem;
         margin-bottom: 0.5rem;
+        z-index: 20;
     }
     .excerpt {
         font-size: 0.8rem;
@@ -111,5 +123,9 @@
     .profile {
         position: relative;
         top:-10vw;
+        width:15vw;
+        height:15vw;
+        border-radius: 50%;
+        overflow: hidden;
     }
 </style>

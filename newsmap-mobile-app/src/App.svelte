@@ -14,6 +14,9 @@
 	let fontfamily1 = "Roboto Mono",
 		fontfamily2 = "Roboto",
 		fontfamily3 = "Jost";
+	let author = "Ahsan Ridhoi";
+	let authorprofileimage = "./image/ahsan.png";
+	let deduktifheader = "./image/Menelusuri-Indahnya-Jalur-Pantai-Pangandaran.png"
 
 </script>
 
@@ -41,6 +44,11 @@
 			--fontfamily2={fontfamily2}
 		/>
 		<Deduktif 
+			title="Menelusuri Indahnya Jalur Pantai Pangandaran"
+			deduktifheader = {deduktifheader}
+			author = {author}
+			authorprofileimage = {authorprofileimage}
+			authorprofilealt = {author}
 			--fontfamily1 ={fontfamily1}
 			--fontfamily2={fontfamily2}
 		/>
