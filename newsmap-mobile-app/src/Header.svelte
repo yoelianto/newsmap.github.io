@@ -124,7 +124,7 @@
 	}
 
     h4 {
-        font-family: 'Jost';
+        font-family: var(--fontfamily3);
         font-size:1rem;
         font-weight:700; 
         margin: 0.2rem 1rem;

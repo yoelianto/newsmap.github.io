@@ -15,7 +15,7 @@
 
 <style>
     .title {
-        font-family: 'Roboto Mono';
+        font-family: var(--fontfamily1);
         font-weight:700;
         font-size:1.5rem;
         margin-left: 6%;
@@ -42,7 +42,7 @@
         position:relative;
     }
     .inner-card {
-        font-family: 'Roboto';
+        font-family: var(--fontfamily2);
         width:75%;
         height:80%;
         display: flex;

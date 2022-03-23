@@ -1,5 +1,5 @@
 <script>
-    export let title = ''
+    export let title = '';
     
     const fetchImage = (async () => {
             const response = await fetch('https://jsonplaceholder.typicode.com/photos')
@@ -30,7 +30,7 @@
     
     <style>
         .title {
-            font-family: 'Roboto Mono';
+            font-family: var(--fontfamily1);
             font-weight:700;
             font-size:1.5rem;
             margin-left: 6%;
@@ -55,7 +55,7 @@
             object-fit: cover;
         }
         .article-title {
-            font-family: 'Roboto';
+            font-family: var(--fontfamily2);
             font-size: 1rem;
             font-weight:00;
             color:white;

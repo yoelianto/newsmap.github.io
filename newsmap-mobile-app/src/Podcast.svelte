@@ -61,14 +61,14 @@ return await response.json()
         justify-content: space-between;
     }
     .title {
-        font-family: 'Roboto Mono';
+        font-family: var(--fontfamily1);
         font-weight:700;
         font-size:1.5rem;
         color: #242053;
     }
     .viewall {
         color: #004EFF;
-        font-family: 'Roboto';
+        font-family: var(--fontfamily2);
         font-size:0.8rem;
     }
     

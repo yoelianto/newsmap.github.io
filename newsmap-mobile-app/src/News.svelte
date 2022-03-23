@@ -31,7 +31,7 @@ const fetchImage = (async () => {
 
 <style>
     .title {
-        font-family: 'Roboto Mono';
+        font-family: var(--fontfamily1);
         font-weight:700;
         font-size:1.5rem;
         margin-left: 6%;
@@ -56,7 +56,7 @@ const fetchImage = (async () => {
         object-fit: cover;
     }
     .author {
-        font-family: 'Roboto';
+        font-family: var(--fontfamily2);
         font-size: 0.8rem;
         font-weight:500;
         color:#A29E90;
@@ -64,7 +64,7 @@ const fetchImage = (async () => {
         margin: 0.2rem 0;
     }
     .article-title {
-        font-family: 'Roboto';
+        font-family: var(--fontfamily2);
         font-size: 1rem;
         font-weight:700;
         color:#363636;

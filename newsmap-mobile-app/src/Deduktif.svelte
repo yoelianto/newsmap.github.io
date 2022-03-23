@@ -33,7 +33,7 @@
 
 <style>
     .deduktif {
-        font-family: 'Roboto Mono';
+        font-family: var(--fontfamily1);
         font-weight:700;
         font-size:1.5rem;
         margin-left: 6%;
@@ -94,7 +94,7 @@
         width:70%;
         margin-bottom:0.8rem;
         color: white;
-        font-family: 'Roboto';
+        font-family: var(--fontfamily2);
     }
     .title {
         font-size: 1.25rem;

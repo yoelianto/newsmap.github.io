@@ -11,6 +11,9 @@
 	import Video from './Video.svelte'
 
 	let margin;
+	let fontfamily1 = "Roboto Mono",
+		fontfamily2 = "Roboto",
+		fontfamily3 = "Jost";
 
 </script>
 
@@ -20,17 +23,54 @@
 
 <main>
 	<div class="container">
-		<Header bind:height={margin} />
-		<Newsmap margin={margin}/>
-		<Sentiment />
-		<Original />
-		<Deduktif />
-		<Rewara title='REWARA'/>
-		<News title='TRENDING NOW'/>
-		<News title='PUBLIC NEWS'/>
-		<Video title='YOUTUBE SHORTS'/>
-		<Podcast />
-		<Menu />
+		<Header
+			bind:height={margin}
+			--fontfamily3={fontfamily3}
+		/>
+		<Newsmap
+			margin={margin}
+			--fontfamily1 ={fontfamily1}
+			--fontfamily2={fontfamily2}
+		/>
+		<Sentiment
+			--fontfamily1 ={fontfamily1}
+			--fontfamily2={fontfamily2}
+		/>
+		<Original
+			--fontfamily1 ={fontfamily1}
+			--fontfamily2={fontfamily2}
+		/>
+		<Deduktif 
+			--fontfamily1 ={fontfamily1}
+			--fontfamily2={fontfamily2}
+		/>
+		<Rewara
+			title='REWARA'  
+			--fontfamily1 ={fontfamily1}
+			--fontfamily2={fontfamily2}
+		/>
+		<News 
+			title='TRENDING NOW'  
+			--fontfamily1 ={fontfamily1}
+			--fontfamily2={fontfamily2}
+		/>
+		<News 
+			title='PUBLIC NEWS'  
+			--fontfamily1 ={fontfamily1}
+			--fontfamily2={fontfamily2}
+		/>
+		<Video
+			title='YOUTUBE SHORTS'
+			--fontfamily1 ={fontfamily1}
+			--fontfamily2={fontfamily2}
+		/>
+		<Podcast  
+			--fontfamily1 ={fontfamily1}
+			--fontfamily2={fontfamily2}
+		/>
+		<Menu
+			--fontfamily3={fontfamily3}
+		/>
 	</div>
 </main>
 

@@ -58,7 +58,7 @@
         margin-top: 1rem;
     }
     .menutext{
-        font-family: 'Jost';
+        font-family: var(--fontfamily3);
         font-weight: 700;
         font-size: 0.8rem;
         margin-top: 0.5rem;
