@@ -2296,11 +2296,14 @@ var app = (function () {
     	let p;
     	let t1;
     	let div4;
-    	let div0;
+    	let img;
+    	let img_src_value;
     	let t2;
+    	let div0;
+    	let t3;
     	let div3;
     	let div1;
-    	let t4;
+    	let t5;
     	let div2;
 
     	const block = {
@@ -2310,29 +2313,35 @@ var app = (function () {
     			p.textContent = "JURNO ORIGINAL";
     			t1 = space();
     			div4 = element("div");
-    			div0 = element("div");
+    			img = element("img");
     			t2 = space();
+    			div0 = element("div");
+    			t3 = space();
     			div3 = element("div");
     			div1 = element("div");
     			div1.textContent = "Original Jurno";
-    			t4 = space();
+    			t5 = space();
     			div2 = element("div");
     			div2.textContent = "Kenapa Bimbel Bisa Booming Banget";
-    			attr_dev(p, "class", "title svelte-mi2n4k");
-    			add_location(p, file$8, 5, 4, 68);
-    			attr_dev(div0, "class", "bottom svelte-mi2n4k");
-    			add_location(div0, file$8, 7, 8, 137);
-    			attr_dev(div1, "class", "sub-title svelte-mi2n4k");
-    			add_location(div1, file$8, 9, 12, 211);
-    			attr_dev(div2, "class", "card-title svelte-mi2n4k");
-    			add_location(div2, file$8, 10, 12, 268);
-    			attr_dev(div3, "class", "inner-card svelte-mi2n4k");
-    			add_location(div3, file$8, 8, 8, 173);
-    			attr_dev(div4, "class", "card svelte-mi2n4k");
-    			add_location(div4, file$8, 6, 4, 109);
+    			attr_dev(p, "class", "title svelte-jay511");
+    			add_location(p, file$8, 21, 4, 954);
+    			attr_dev(img, "class", "thumb svelte-jay511");
+    			if (!src_url_equal(img.src, img_src_value = /*jurno*/ ctx[0][0].thumb)) attr_dev(img, "src", img_src_value);
+    			attr_dev(img, "alt", "");
+    			add_location(img, file$8, 23, 8, 1023);
+    			attr_dev(div0, "class", "bottom svelte-jay511");
+    			add_location(div0, file$8, 24, 8, 1081);
+    			attr_dev(div1, "class", "sub-title svelte-jay511");
+    			add_location(div1, file$8, 26, 12, 1155);
+    			attr_dev(div2, "class", "card-title svelte-jay511");
+    			add_location(div2, file$8, 27, 12, 1212);
+    			attr_dev(div3, "class", "inner-card svelte-jay511");
+    			add_location(div3, file$8, 25, 8, 1117);
+    			attr_dev(div4, "class", "card svelte-jay511");
+    			add_location(div4, file$8, 22, 4, 995);
     			attr_dev(div5, "class", "container");
     			attr_dev(div5, "id", "original");
-    			add_location(div5, file$8, 4, 0, 25);
+    			add_location(div5, file$8, 20, 0, 911);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -2342,11 +2351,13 @@ var app = (function () {
     			append_dev(div5, p);
     			append_dev(div5, t1);
     			append_dev(div5, div4);
-    			append_dev(div4, div0);
+    			append_dev(div4, img);
     			append_dev(div4, t2);
+    			append_dev(div4, div0);
+    			append_dev(div4, t3);
     			append_dev(div4, div3);
     			append_dev(div3, div1);
-    			append_dev(div3, t4);
+    			append_dev(div3, t5);
     			append_dev(div3, div2);
     		},
     		p: noop,
@@ -2368,16 +2379,45 @@ var app = (function () {
     	return block;
     }
 
-    function instance$8($$self, $$props) {
+    function instance$8($$self, $$props, $$invalidate) {
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('NewsmapOriginal', slots, []);
+
+    	let jurno = [
+    		{
+    			title: "Kenapa Bimbel Bisa Booming Banget?",
+    			url: "https://newsmap.id/article/kenapa-bimbel-bisa-booming-banget",
+    			thumb: "https://admin-dev.newsmap.id/uploads/news/1637749717_Bimbel-compress.jpg"
+    		},
+    		{
+    			title: "Asam Garam Driver Ojol: Stres, Cemas, dan Kesepian",
+    			url: "https://newsmap.id/article/asam-garam-driver-ojol-stres-cemas-dan-kesepian",
+    			thumb: "https://admin-dev.newsmap.id/uploads/news/1637737865_Asam-Garam-Driver-Ojol--Orderan-Anyep,-Cemas,-dan-Kesepian.jpg"
+    		},
+    		{
+    			title: "Into the Ambisverse: Mengulik Komunitas Ambis Anak Sekolah Indonesia",
+    			url: "https://newsmap.id/article/into-the-ambisverse-mengulik-komunitas-ambis-anak-sekolah-indonesia",
+    			thumb: "https://admin-dev.newsmap.id/uploads/news/1637751242_Ambisverse-compress.jpg"
+    		}
+    	];
+
     	const writable_props = [];
 
     	Object.keys($$props).forEach(key => {
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<NewsmapOriginal> was created with unknown prop '${key}'`);
     	});
 
-    	return [];
+    	$$self.$capture_state = () => ({ jurno });
+
+    	$$self.$inject_state = $$props => {
+    		if ('jurno' in $$props) $$invalidate(0, jurno = $$props.jurno);
+    	};
+
+    	if ($$props && "$$inject" in $$props) {
+    		$$self.$inject_state($$props.$$inject);
+    	}
+
+    	return [jurno];
     }
 
     class NewsmapOriginal extends SvelteComponentDev {

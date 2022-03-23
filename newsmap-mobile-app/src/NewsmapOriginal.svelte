@@ -1,10 +1,27 @@
 <script>
-
+    let jurno = [
+        {
+            title: "Kenapa Bimbel Bisa Booming Banget?",
+			url:"https://newsmap.id/article/kenapa-bimbel-bisa-booming-banget",
+			thumb:"https://admin-dev.newsmap.id/uploads/news/1637749717_Bimbel-compress.jpg"
+        },
+        {
+            title: "Asam Garam Driver Ojol: Stres, Cemas, dan Kesepian",
+			url:"https://newsmap.id/article/asam-garam-driver-ojol-stres-cemas-dan-kesepian",
+			thumb:"https://admin-dev.newsmap.id/uploads/news/1637737865_Asam-Garam-Driver-Ojol--Orderan-Anyep,-Cemas,-dan-Kesepian.jpg"
+        },
+        {
+            title: "Into the Ambisverse: Mengulik Komunitas Ambis Anak Sekolah Indonesia",
+			url:"https://newsmap.id/article/into-the-ambisverse-mengulik-komunitas-ambis-anak-sekolah-indonesia",
+			thumb:"https://admin-dev.newsmap.id/uploads/news/1637751242_Ambisverse-compress.jpg"
+        }
+        ]
 </script>
 
 <div class="container" id="original">
     <p class="title">JURNO ORIGINAL</p>
     <div class="card">
+        <img class="thumb" src={jurno[0].thumb} alt="" >
         <div class="bottom"></div>
         <div class="inner-card">
             <div class="sub-title">Original Jurno</div>
@@ -29,6 +46,11 @@
         bottom: 0;
         height:50%;
         border-radius:0 0 0.5rem 0.5rem;
+        z-index: 10;
+    }
+    .thumb {
+        z-index: 0;
+        height: 100%;
     }
     .card {
         width:66vw;
@@ -40,8 +62,10 @@
         justify-content: center;
         align-items: center;
         position:relative;
+        overflow: hidden;
     }
     .inner-card {
+        position: absolute;
         font-family: var(--fontfamily2);
         width:75%;
         height:80%;
@@ -55,10 +79,12 @@
         font-size:0.8rem;
         font-weight: 500;
         margin-bottom: 0.5rem;
+        z-index: 15;
     }
     .card-title {
         font-size:1.25rem;
         font-weight: 700;
         line-height: 1.25rem;
+        z-index: 15;
     }
 </style>
