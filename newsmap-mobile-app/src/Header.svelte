@@ -70,6 +70,9 @@
 </nav>
 
 <style>
+    nav {
+        z-index: 999;
+    }
     .header-logo{
         width: 100%;
         display: flex;

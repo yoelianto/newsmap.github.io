@@ -1081,7 +1081,7 @@ var app = (function () {
     			h4 = element("h4");
     			t0 = text(t0_value);
     			t1 = space();
-    			attr_dev(h4, "class", "menu svelte-9gjvht");
+    			attr_dev(h4, "class", "menu svelte-1qdogzv");
     			attr_dev(h4, "id", h4_id_value = /*list*/ ctx[14].id);
     			toggle_class(h4, "selected", /*list*/ ctx[14].active === true);
     			add_location(h4, file$a, 54, 20, 1608);
@@ -1172,26 +1172,27 @@ var app = (function () {
     			div4 = element("div");
     			if (!src_url_equal(img.src, img_src_value = "./image/logo-jurno-web.svg")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "Logo Jurno Website");
-    			attr_dev(img, "class", "svelte-9gjvht");
+    			attr_dev(img, "class", "svelte-1qdogzv");
     			add_location(img, file$a, 49, 12, 1390);
-    			attr_dev(div0, "class", "header-logo svelte-9gjvht");
+    			attr_dev(div0, "class", "header-logo svelte-1qdogzv");
     			add_location(div0, file$a, 48, 8, 1351);
-    			attr_dev(div1, "class", "headertext svelte-9gjvht");
+    			attr_dev(div1, "class", "headertext svelte-1qdogzv");
     			add_location(div1, file$a, 52, 12, 1518);
-    			attr_dev(div2, "class", "bar svelte-9gjvht");
+    			attr_dev(div2, "class", "bar svelte-1qdogzv");
     			set_style(div2, "left", /*$barPosition1*/ ctx[2] * 25 + 8.5 + "vw");
     			add_location(div2, file$a, 63, 12, 1932);
-    			attr_dev(div3, "class", "bar svelte-9gjvht");
+    			attr_dev(div3, "class", "bar svelte-1qdogzv");
     			set_style(div3, "left", /*$barPosition2*/ ctx[3] * 25 + 8.5 + "vw");
     			add_location(div3, file$a, 64, 12, 2007);
-    			attr_dev(div4, "class", "bar svelte-9gjvht");
+    			attr_dev(div4, "class", "bar svelte-1qdogzv");
     			set_style(div4, "left", /*$barPosition3*/ ctx[4] * 25 + 8.5 + "vw");
     			add_location(div4, file$a, 65, 12, 2082);
-    			attr_dev(div5, "class", "header-menu svelte-9gjvht");
+    			attr_dev(div5, "class", "header-menu svelte-1qdogzv");
     			add_location(div5, file$a, 51, 8, 1479);
-    			attr_dev(div6, "class", "container svelte-9gjvht");
+    			attr_dev(div6, "class", "container svelte-1qdogzv");
     			add_render_callback(() => /*div6_elementresize_handler*/ ctx[10].call(div6));
     			add_location(div6, file$a, 47, 4, 1291);
+    			attr_dev(nav, "class", "svelte-1qdogzv");
     			add_location(nav, file$a, 46, 0, 1280);
     		},
     		l: function claim(nodes) {
