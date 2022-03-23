@@ -50,7 +50,7 @@
         justify-content: space-evenly;
     }
     .menu {
-        color:#eefffc;
+        color:#ef5959;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -66,7 +66,7 @@
     .circle {
         width:12vw;
         height:12vw;
-        background-color: #eefffc;
+        background-color: #ef5959;
         border-radius: 50%;
         display: flex;
         align-items: center;

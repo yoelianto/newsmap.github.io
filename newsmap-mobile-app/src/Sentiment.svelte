@@ -3,6 +3,8 @@
 		const response = await fetch('https://jsonplaceholder.typicode.com/photos')
     return await response.json()
 	})()
+
+    const sentiment = 1;
 </script>
 
 <div class="container">

@@ -1,6 +1,8 @@
 <script>
 export let title = ''
 
+export let news;
+
 const fetchImage = (async () => {
 		const response = await fetch('https://jsonplaceholder.typicode.com/photos')
     return await response.json()
@@ -11,19 +13,19 @@ const fetchImage = (async () => {
     <p class="title">{title}</p>
     <div class="slider-container">
         <div class="slider">
-            {#await fetchImage}
+            <!-- {#await news}
             <p>...waiting</p>
-            {:then data}
-                {#each {length: 10} as _, i}
+            {:then data} -->
+                {#each news as news}
                     <div class="news">
-                        <img class='imgthumb' src={data[i].url} alt={data[i].title} />
-                        <p class="author">Author</p>
-                        <p class="article-title">{data[i].title}</p>
+                        <img class='imgthumb' src={news.thumb} alt={news.title} />
+                        <p class="author">{news.web}</p>
+                        <p class="article-title">{news.title}</p>
                     </div>
                 {/each}
-            {:catch error}
+            <!-- {:catch error}
                 <p>An error occurred!</p>
-            {/await}
+            {/await} -->
         </div>
     </div>
 </div>

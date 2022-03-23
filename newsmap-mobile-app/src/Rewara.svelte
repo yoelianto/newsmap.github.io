@@ -5,29 +5,47 @@
             const response = await fetch('https://jsonplaceholder.typicode.com/photos')
         return await response.json()
         })()
+    
+    let rewara = [
+        {
+            title: "Mengenal Kei Car, Mobil Mungil Khas Jepang",
+			url:"https://newsmap.id/youtube/mengenal-kei-car-mobil-mungil-khas-jepang",
+			thumb:"https://newsmap.id/_next/image?url=https%3A%2F%2Fimg.youtube.com%2Fvi%2FHqJRApyuaqY%2Fhqdefault.jpg&w=1920&q=75"
+        },
+        {
+            title: "Mengenal Kei Car, Mobil Mungil Khas Jepang",
+			url:"https://newsmap.id/youtube/mengenal-kei-car-mobil-mungil-khas-jepang",
+			thumb:"https://newsmap.id/_next/image?url=https%3A%2F%2Fimg.youtube.com%2Fvi%2FHqJRApyuaqY%2Fhqdefault.jpg&w=1920&q=75"
+        },
+        {
+            title: "Mengenal Kei Car, Mobil Mungil Khas Jepang",
+			url:"https://newsmap.id/youtube/mengenal-kei-car-mobil-mungil-khas-jepang",
+			thumb:"https://newsmap.id/_next/image?url=https%3A%2F%2Fimg.youtube.com%2Fvi%2FHqJRApyuaqY%2Fhqdefault.jpg&w=1920&q=75"
+        }
+        ]
     </script>
     
     <div class="container">
         <p class="title">{title}</p>
         <div class="rewara-container">
             <div class="rewara">
-                {#await fetchImage}
+                <!-- {#await fetchImage}
                 <p>...waiting</p>
-                {:then data}
+                {:then data} -->
                 <div class="firstnews">
-                    <img class='imgthumb' src={data[0].url} alt={data[0].title} />
-                    <p class="article-title">{data[0].title}</p>
+                    <img class='imgthumb' src={rewara[0].thumb} alt={rewara[0].title} />
+                    <p class="article-title">{rewara[0].title}</p>
                 </div>
                     <ul class="othernews">
-                        {#each {length: 4} as _, i}
+                        {#each rewara as rewara, i}
                             <li class="news">
-                                <p class="article-title">{data[i].title}</p>
+                                <p class="article-title">{rewara.title}</p>
                             </li>
                         {/each}
                     </ul>
-                {:catch error}
+                <!-- {:catch error}
                     <p>An error occurred!</p>
-                {/await}
+                {/await} -->
             </div>
         </div>
     </div>

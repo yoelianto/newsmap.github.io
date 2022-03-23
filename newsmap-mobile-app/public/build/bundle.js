@@ -1893,7 +1893,7 @@ var app = (function () {
     }
 
     // (57:12) {:catch error}
-    function create_catch_block$5(ctx) {
+    function create_catch_block$3(ctx) {
     	let p;
 
     	const block = {
@@ -1913,7 +1913,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_catch_block$5.name,
+    		id: create_catch_block$3.name,
     		type: "catch",
     		source: "(57:12) {:catch error}",
     		ctx
@@ -1923,7 +1923,7 @@ var app = (function () {
     }
 
     // (51:12) {:then data}
-    function create_then_block$5(ctx) {
+    function create_then_block$3(ctx) {
     	let each_1_anchor;
     	let each_value = { length: 9 };
     	validate_each_argument(each_value);
@@ -1981,7 +1981,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_then_block$5.name,
+    		id: create_then_block$3.name,
     		type: "then",
     		source: "(51:12) {:then data}",
     		ctx
@@ -2032,7 +2032,7 @@ var app = (function () {
     }
 
     // (49:31)                   <p>...waiting</p>              {:then data}
-    function create_pending_block$5(ctx) {
+    function create_pending_block$3(ctx) {
     	let p;
 
     	const block = {
@@ -2052,7 +2052,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_pending_block$5.name,
+    		id: create_pending_block$3.name,
     		type: "pending",
     		source: "(49:31)                   <p>...waiting</p>              {:then data}",
     		ctx
@@ -2119,9 +2119,9 @@ var app = (function () {
     		current: null,
     		token: null,
     		hasCatch: true,
-    		pending: create_pending_block$5,
-    		then: create_then_block$5,
-    		catch: create_catch_block$5,
+    		pending: create_pending_block$3,
+    		then: create_then_block$3,
+    		catch: create_catch_block$3,
     		value: 2,
     		error: 6
     	};
@@ -2405,15 +2405,15 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (18:8) {:catch error}
-    function create_catch_block$4(ctx) {
+    // (20:8) {:catch error}
+    function create_catch_block$2(ctx) {
     	let p;
 
     	const block = {
     		c: function create() {
     			p = element("p");
     			p.textContent = "An error occurred!";
-    			add_location(p, file$7, 18, 12, 557);
+    			add_location(p, file$7, 20, 12, 585);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -2426,17 +2426,17 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_catch_block$4.name,
+    		id: create_catch_block$2.name,
     		type: "catch",
-    		source: "(18:8) {:catch error}",
+    		source: "(20:8) {:catch error}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (12:8) {:then data}
-    function create_then_block$4(ctx) {
+    // (14:8) {:then data}
+    function create_then_block$2(ctx) {
     	let each_1_anchor;
     	let each_value = { length: 10 };
     	validate_each_argument(each_value);
@@ -2494,16 +2494,16 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_then_block$4.name,
+    		id: create_then_block$2.name,
     		type: "then",
-    		source: "(12:8) {:then data}",
+    		source: "(14:8) {:then data}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (13:12) {#each {length: 10} as _, i}
+    // (15:12) {#each {length: 10} as _, i}
     function create_each_block$5(ctx) {
     	let div;
     	let img;
@@ -2518,9 +2518,9 @@ var app = (function () {
     			attr_dev(img, "class", "people svelte-1nwnlwr");
     			if (!src_url_equal(img.src, img_src_value = /*data*/ ctx[1][/*i*/ ctx[4]].url)) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", /*data*/ ctx[1][/*i*/ ctx[4]].title);
-    			add_location(img, file$7, 14, 20, 414);
+    			add_location(img, file$7, 16, 20, 442);
     			attr_dev(div, "class", "sentiment svelte-1nwnlwr");
-    			add_location(div, file$7, 13, 16, 369);
+    			add_location(div, file$7, 15, 16, 397);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -2537,22 +2537,22 @@ var app = (function () {
     		block,
     		id: create_each_block$5.name,
     		type: "each",
-    		source: "(13:12) {#each {length: 10} as _, i}",
+    		source: "(15:12) {#each {length: 10} as _, i}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (10:27)           <p>...waiting</p>          {:then data}
-    function create_pending_block$4(ctx) {
+    // (12:27)           <p>...waiting</p>          {:then data}
+    function create_pending_block$2(ctx) {
     	let p;
 
     	const block = {
     		c: function create() {
     			p = element("p");
     			p.textContent = "...waiting";
-    			add_location(p, file$7, 10, 8, 270);
+    			add_location(p, file$7, 12, 8, 298);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -2565,9 +2565,9 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_pending_block$4.name,
+    		id: create_pending_block$2.name,
     		type: "pending",
-    		source: "(10:27)           <p>...waiting</p>          {:then data}",
+    		source: "(12:27)           <p>...waiting</p>          {:then data}",
     		ctx
     	});
 
@@ -2583,9 +2583,9 @@ var app = (function () {
     		current: null,
     		token: null,
     		hasCatch: true,
-    		pending: create_pending_block$4,
-    		then: create_then_block$4,
-    		catch: create_catch_block$4,
+    		pending: create_pending_block$2,
+    		then: create_then_block$2,
+    		catch: create_catch_block$2,
     		value: 1,
     		error: 5
     	};
@@ -2598,9 +2598,9 @@ var app = (function () {
     			div0 = element("div");
     			info.block.c();
     			attr_dev(div0, "class", "slider svelte-1nwnlwr");
-    			add_location(div0, file$7, 8, 4, 211);
+    			add_location(div0, file$7, 10, 4, 239);
     			attr_dev(div1, "class", "container svelte-1nwnlwr");
-    			add_location(div1, file$7, 7, 0, 182);
+    			add_location(div1, file$7, 9, 0, 210);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -2637,6 +2637,8 @@ var app = (function () {
     	return block;
     }
 
+    const sentiment = 1;
+
     function instance$7($$self, $$props, $$invalidate) {
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('Sentiment', slots, []);
@@ -2652,7 +2654,7 @@ var app = (function () {
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<Sentiment> was created with unknown prop '${key}'`);
     	});
 
-    	$$self.$capture_state = () => ({ fetchImage });
+    	$$self.$capture_state = () => ({ fetchImage, sentiment });
     	return [fetchImage];
     }
 
@@ -2971,119 +2973,23 @@ var app = (function () {
 
     function get_each_context$4(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[3] = list[i];
-    	child_ctx[5] = i;
+    	child_ctx[1] = list[i];
     	return child_ctx;
     }
 
-    // (24:12) {:catch error}
-    function create_catch_block$3(ctx) {
-    	let p;
-
-    	const block = {
-    		c: function create() {
-    			p = element("p");
-    			p.textContent = "An error occurred!";
-    			add_location(p, file$5, 24, 16, 813);
-    		},
-    		m: function mount(target, anchor) {
-    			insert_dev(target, p, anchor);
-    		},
-    		p: noop,
-    		d: function destroy(detaching) {
-    			if (detaching) detach_dev(p);
-    		}
-    	};
-
-    	dispatch_dev("SvelteRegisterBlock", {
-    		block,
-    		id: create_catch_block$3.name,
-    		type: "catch",
-    		source: "(24:12) {:catch error}",
-    		ctx
-    	});
-
-    	return block;
-    }
-
-    // (16:12) {:then data}
-    function create_then_block$3(ctx) {
-    	let each_1_anchor;
-    	let each_value = { length: 10 };
-    	validate_each_argument(each_value);
-    	let each_blocks = [];
-
-    	for (let i = 0; i < each_value.length; i += 1) {
-    		each_blocks[i] = create_each_block$4(get_each_context$4(ctx, each_value, i));
-    	}
-
-    	const block = {
-    		c: function create() {
-    			for (let i = 0; i < each_blocks.length; i += 1) {
-    				each_blocks[i].c();
-    			}
-
-    			each_1_anchor = empty();
-    		},
-    		m: function mount(target, anchor) {
-    			for (let i = 0; i < each_blocks.length; i += 1) {
-    				each_blocks[i].m(target, anchor);
-    			}
-
-    			insert_dev(target, each_1_anchor, anchor);
-    		},
-    		p: function update(ctx, dirty) {
-    			if (dirty & /*fetchImage*/ 2) {
-    				each_value = { length: 10 };
-    				validate_each_argument(each_value);
-    				let i;
-
-    				for (i = 0; i < each_value.length; i += 1) {
-    					const child_ctx = get_each_context$4(ctx, each_value, i);
-
-    					if (each_blocks[i]) {
-    						each_blocks[i].p(child_ctx, dirty);
-    					} else {
-    						each_blocks[i] = create_each_block$4(child_ctx);
-    						each_blocks[i].c();
-    						each_blocks[i].m(each_1_anchor.parentNode, each_1_anchor);
-    					}
-    				}
-
-    				for (; i < each_blocks.length; i += 1) {
-    					each_blocks[i].d(1);
-    				}
-
-    				each_blocks.length = each_value.length;
-    			}
-    		},
-    		d: function destroy(detaching) {
-    			destroy_each(each_blocks, detaching);
-    			if (detaching) detach_dev(each_1_anchor);
-    		}
-    	};
-
-    	dispatch_dev("SvelteRegisterBlock", {
-    		block,
-    		id: create_then_block$3.name,
-    		type: "then",
-    		source: "(16:12) {:then data}",
-    		ctx
-    	});
-
-    	return block;
-    }
-
-    // (17:16) {#each {length: 10} as _, i}
+    // (19:16) {#each news as news}
     function create_each_block$4(ctx) {
     	let div;
     	let img;
     	let img_src_value;
+    	let img_alt_value;
     	let t0;
     	let p0;
+    	let t1_value = /*news*/ ctx[1].web + "";
+    	let t1;
     	let t2;
     	let p1;
-    	let t3_value = /*data*/ ctx[2][/*i*/ ctx[5]].title + "";
+    	let t3_value = /*news*/ ctx[1].title + "";
     	let t3;
     	let t4;
 
@@ -3093,33 +2999,45 @@ var app = (function () {
     			img = element("img");
     			t0 = space();
     			p0 = element("p");
-    			p0.textContent = "Author";
+    			t1 = text(t1_value);
     			t2 = space();
     			p1 = element("p");
     			t3 = text(t3_value);
     			t4 = space();
     			attr_dev(img, "class", "imgthumb svelte-1gniaa5");
-    			if (!src_url_equal(img.src, img_src_value = /*data*/ ctx[2][/*i*/ ctx[5]].url)) attr_dev(img, "src", img_src_value);
-    			attr_dev(img, "alt", /*data*/ ctx[2][/*i*/ ctx[5]].title);
-    			add_location(img, file$5, 18, 24, 528);
+    			if (!src_url_equal(img.src, img_src_value = /*news*/ ctx[1].thumb)) attr_dev(img, "src", img_src_value);
+    			attr_dev(img, "alt", img_alt_value = /*news*/ ctx[1].title);
+    			add_location(img, file$5, 20, 24, 543);
     			attr_dev(p0, "class", "author svelte-1gniaa5");
-    			add_location(p0, file$5, 19, 24, 616);
+    			add_location(p0, file$5, 21, 24, 627);
     			attr_dev(p1, "class", "article-title svelte-1gniaa5");
-    			add_location(p1, file$5, 20, 24, 670);
+    			add_location(p1, file$5, 22, 24, 685);
     			attr_dev(div, "class", "news svelte-1gniaa5");
-    			add_location(div, file$5, 17, 20, 484);
+    			add_location(div, file$5, 19, 20, 499);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
     			append_dev(div, img);
     			append_dev(div, t0);
     			append_dev(div, p0);
+    			append_dev(p0, t1);
     			append_dev(div, t2);
     			append_dev(div, p1);
     			append_dev(p1, t3);
     			append_dev(div, t4);
     		},
-    		p: noop,
+    		p: function update(ctx, dirty) {
+    			if (dirty & /*news*/ 2 && !src_url_equal(img.src, img_src_value = /*news*/ ctx[1].thumb)) {
+    				attr_dev(img, "src", img_src_value);
+    			}
+
+    			if (dirty & /*news*/ 2 && img_alt_value !== (img_alt_value = /*news*/ ctx[1].title)) {
+    				attr_dev(img, "alt", img_alt_value);
+    			}
+
+    			if (dirty & /*news*/ 2 && t1_value !== (t1_value = /*news*/ ctx[1].web + "")) set_data_dev(t1, t1_value);
+    			if (dirty & /*news*/ 2 && t3_value !== (t3_value = /*news*/ ctx[1].title + "")) set_data_dev(t3, t3_value);
+    		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(div);
     		}
@@ -3129,37 +3047,7 @@ var app = (function () {
     		block,
     		id: create_each_block$4.name,
     		type: "each",
-    		source: "(17:16) {#each {length: 10} as _, i}",
-    		ctx
-    	});
-
-    	return block;
-    }
-
-    // (14:31)               <p>...waiting</p>              {:then data}
-    function create_pending_block$3(ctx) {
-    	let p;
-
-    	const block = {
-    		c: function create() {
-    			p = element("p");
-    			p.textContent = "...waiting";
-    			add_location(p, file$5, 14, 12, 373);
-    		},
-    		m: function mount(target, anchor) {
-    			insert_dev(target, p, anchor);
-    		},
-    		p: noop,
-    		d: function destroy(detaching) {
-    			if (detaching) detach_dev(p);
-    		}
-    	};
-
-    	dispatch_dev("SvelteRegisterBlock", {
-    		block,
-    		id: create_pending_block$3.name,
-    		type: "pending",
-    		source: "(14:31)               <p>...waiting</p>              {:then data}",
+    		source: "(19:16) {#each news as news}",
     		ctx
     	});
 
@@ -3173,20 +3061,13 @@ var app = (function () {
     	let t1;
     	let div1;
     	let div0;
+    	let each_value = /*news*/ ctx[1];
+    	validate_each_argument(each_value);
+    	let each_blocks = [];
 
-    	let info = {
-    		ctx,
-    		current: null,
-    		token: null,
-    		hasCatch: true,
-    		pending: create_pending_block$3,
-    		then: create_then_block$3,
-    		catch: create_catch_block$3,
-    		value: 2,
-    		error: 6
-    	};
-
-    	handle_promise(/*fetchImage*/ ctx[1], info);
+    	for (let i = 0; i < each_value.length; i += 1) {
+    		each_blocks[i] = create_each_block$4(get_each_context$4(ctx, each_value, i));
+    	}
 
     	const block = {
     		c: function create() {
@@ -3196,15 +3077,19 @@ var app = (function () {
     			t1 = space();
     			div1 = element("div");
     			div0 = element("div");
-    			info.block.c();
+
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].c();
+    			}
+
     			attr_dev(p, "class", "title svelte-1gniaa5");
-    			add_location(p, file$5, 10, 4, 232);
+    			add_location(p, file$5, 12, 4, 252);
     			attr_dev(div0, "class", "slider svelte-1gniaa5");
-    			add_location(div0, file$5, 12, 8, 306);
+    			add_location(div0, file$5, 14, 8, 326);
     			attr_dev(div1, "class", "slider-container svelte-1gniaa5");
-    			add_location(div1, file$5, 11, 4, 266);
+    			add_location(div1, file$5, 13, 4, 286);
     			attr_dev(div2, "class", "container");
-    			add_location(div2, file$5, 9, 0, 203);
+    			add_location(div2, file$5, 11, 0, 223);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -3216,22 +3101,43 @@ var app = (function () {
     			append_dev(div2, t1);
     			append_dev(div2, div1);
     			append_dev(div1, div0);
-    			info.block.m(div0, info.anchor = null);
-    			info.mount = () => div0;
-    			info.anchor = null;
+
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].m(div0, null);
+    			}
     		},
-    		p: function update(new_ctx, [dirty]) {
-    			ctx = new_ctx;
+    		p: function update(ctx, [dirty]) {
     			if (dirty & /*title*/ 1) set_data_dev(t0, /*title*/ ctx[0]);
-    			update_await_block_branch(info, ctx, dirty);
+
+    			if (dirty & /*news*/ 2) {
+    				each_value = /*news*/ ctx[1];
+    				validate_each_argument(each_value);
+    				let i;
+
+    				for (i = 0; i < each_value.length; i += 1) {
+    					const child_ctx = get_each_context$4(ctx, each_value, i);
+
+    					if (each_blocks[i]) {
+    						each_blocks[i].p(child_ctx, dirty);
+    					} else {
+    						each_blocks[i] = create_each_block$4(child_ctx);
+    						each_blocks[i].c();
+    						each_blocks[i].m(div0, null);
+    					}
+    				}
+
+    				for (; i < each_blocks.length; i += 1) {
+    					each_blocks[i].d(1);
+    				}
+
+    				each_blocks.length = each_value.length;
+    			}
     		},
     		i: noop,
     		o: noop,
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(div2);
-    			info.block.d();
-    			info.token = null;
-    			info = null;
+    			destroy_each(each_blocks, detaching);
     		}
     	};
 
@@ -3250,13 +3156,14 @@ var app = (function () {
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('News', slots, []);
     	let { title = '' } = $$props;
+    	let { news } = $$props;
 
     	const fetchImage = (async () => {
     		const response = await fetch('https://jsonplaceholder.typicode.com/photos');
     		return await response.json();
     	})();
 
-    	const writable_props = ['title'];
+    	const writable_props = ['title', 'news'];
 
     	Object.keys($$props).forEach(key => {
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<News> was created with unknown prop '${key}'`);
@@ -3264,25 +3171,27 @@ var app = (function () {
 
     	$$self.$$set = $$props => {
     		if ('title' in $$props) $$invalidate(0, title = $$props.title);
+    		if ('news' in $$props) $$invalidate(1, news = $$props.news);
     	};
 
-    	$$self.$capture_state = () => ({ title, fetchImage });
+    	$$self.$capture_state = () => ({ title, news, fetchImage });
 
     	$$self.$inject_state = $$props => {
     		if ('title' in $$props) $$invalidate(0, title = $$props.title);
+    		if ('news' in $$props) $$invalidate(1, news = $$props.news);
     	};
 
     	if ($$props && "$$inject" in $$props) {
     		$$self.$inject_state($$props.$$inject);
     	}
 
-    	return [title, fetchImage];
+    	return [title, news];
     }
 
     class News extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$5, create_fragment$5, safe_not_equal, { title: 0 });
+    		init(this, options, instance$5, create_fragment$5, safe_not_equal, { title: 0, news: 1 });
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
@@ -3290,6 +3199,13 @@ var app = (function () {
     			options,
     			id: create_fragment$5.name
     		});
+
+    		const { ctx } = this.$$;
+    		const props = options.props || {};
+
+    		if (/*news*/ ctx[1] === undefined && !('news' in props)) {
+    			console.warn("<News> was created without expected prop 'news'");
+    		}
     	}
 
     	get title() {
@@ -3297,6 +3213,14 @@ var app = (function () {
     	}
 
     	set title(value) {
+    		throw new Error("<News>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get news() {
+    		throw new Error("<News>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set news(value) {
     		throw new Error("<News>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
     }
@@ -3489,7 +3413,7 @@ var app = (function () {
     }
 
     // (47:12) {:catch error}
-    function create_catch_block$2(ctx) {
+    function create_catch_block$1(ctx) {
     	let p;
 
     	const block = {
@@ -3509,7 +3433,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_catch_block$2.name,
+    		id: create_catch_block$1.name,
     		type: "catch",
     		source: "(47:12) {:catch error}",
     		ctx
@@ -3519,7 +3443,7 @@ var app = (function () {
     }
 
     // (36:12) {:then data}
-    function create_then_block$2(ctx) {
+    function create_then_block$1(ctx) {
     	let each_1_anchor;
     	let each_value = { length: 10 };
     	validate_each_argument(each_value);
@@ -3577,7 +3501,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_then_block$2.name,
+    		id: create_then_block$1.name,
     		type: "then",
     		source: "(36:12) {:then data}",
     		ctx
@@ -3664,7 +3588,7 @@ var app = (function () {
     }
 
     // (34:31)               <p>...waiting</p>              {:then data}
-    function create_pending_block$2(ctx) {
+    function create_pending_block$1(ctx) {
     	let p;
 
     	const block = {
@@ -3684,7 +3608,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_pending_block$2.name,
+    		id: create_pending_block$1.name,
     		type: "pending",
     		source: "(34:31)               <p>...waiting</p>              {:then data}",
     		ctx
@@ -3726,9 +3650,9 @@ var app = (function () {
     		current: null,
     		token: null,
     		hasCatch: true,
-    		pending: create_pending_block$2,
-    		then: create_then_block$2,
-    		catch: create_catch_block$2,
+    		pending: create_pending_block$1,
+    		then: create_then_block$1,
+    		catch: create_catch_block$1,
     		value: 2,
     		error: 6
     	};
@@ -3898,14 +3822,14 @@ var app = (function () {
     			t2 = space();
     			if (!src_url_equal(img.src, img_src_value = /*list*/ ctx[2].source)) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", img_alt_value = /*list*/ ctx[2].menu);
-    			attr_dev(img, "class", "svelte-8e0tak");
+    			attr_dev(img, "class", "svelte-1wtbd08");
     			add_location(img, file$3, 22, 16, 779);
-    			attr_dev(div0, "class", "circle svelte-8e0tak");
+    			attr_dev(div0, "class", "circle svelte-1wtbd08");
     			add_location(div0, file$3, 21, 12, 741);
-    			attr_dev(h4, "class", "menutext svelte-8e0tak");
+    			attr_dev(h4, "class", "menutext svelte-1wtbd08");
     			attr_dev(h4, "id", h4_id_value = /*list*/ ctx[2].id);
     			add_location(h4, file$3, 25, 12, 854);
-    			attr_dev(div1, "class", "menu svelte-8e0tak");
+    			attr_dev(div1, "class", "menu svelte-1wtbd08");
     			toggle_class(div1, "selected", /*list*/ ctx[2].active === true);
     			add_location(div1, file$3, 20, 8, 668);
     		},
@@ -3973,9 +3897,9 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			attr_dev(div, "class", "menubar svelte-8e0tak");
+    			attr_dev(div, "class", "menubar svelte-1wtbd08");
     			add_location(div, file$3, 18, 4, 601);
-    			attr_dev(nav, "class", "container svelte-8e0tak");
+    			attr_dev(nav, "class", "container svelte-1wtbd08");
     			add_location(nav, file$3, 17, 0, 572);
     		},
     		l: function claim(nodes) {
@@ -4115,53 +4039,68 @@ var app = (function () {
 
     function get_each_context$1(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[3] = list[i];
-    	child_ctx[5] = i;
+    	child_ctx[1] = list[i];
+    	child_ctx[4] = i;
     	return child_ctx;
     }
 
-    // (28:16) {:catch error}
-    function create_catch_block$1(ctx) {
+    // (40:24) {#each rewara as rewara, i}
+    function create_each_block$1(ctx) {
+    	let li;
     	let p;
+    	let t0_value = /*rewara*/ ctx[1].title + "";
+    	let t0;
+    	let t1;
 
     	const block = {
     		c: function create() {
+    			li = element("li");
     			p = element("p");
-    			p.textContent = "An error occurred!";
-    			add_location(p, file$2, 28, 20, 1071);
+    			t0 = text(t0_value);
+    			t1 = space();
+    			attr_dev(p, "class", "article-title svelte-1a2m2wu");
+    			add_location(p, file$2, 41, 32, 1810);
+    			attr_dev(li, "class", "news svelte-1a2m2wu");
+    			add_location(li, file$2, 40, 28, 1759);
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, p, anchor);
+    			insert_dev(target, li, anchor);
+    			append_dev(li, p);
+    			append_dev(p, t0);
+    			append_dev(li, t1);
     		},
     		p: noop,
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(p);
+    			if (detaching) detach_dev(li);
     		}
     	};
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_catch_block$1.name,
-    		type: "catch",
-    		source: "(28:16) {:catch error}",
+    		id: create_each_block$1.name,
+    		type: "each",
+    		source: "(40:24) {#each rewara as rewara, i}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (16:16) {:then data}
-    function create_then_block$1(ctx) {
-    	let div;
+    function create_fragment$2(ctx) {
+    	let div3;
+    	let p0;
+    	let t0;
+    	let t1;
+    	let div2;
+    	let div1;
+    	let div0;
     	let img;
     	let img_src_value;
-    	let t0;
-    	let p;
-    	let t1_value = /*data*/ ctx[2][0].title + "";
-    	let t1;
     	let t2;
+    	let p1;
+    	let t4;
     	let ul;
-    	let each_value = { length: 4 };
+    	let each_value = /*rewara*/ ctx[1];
     	validate_each_argument(each_value);
     	let each_blocks = [];
 
@@ -4171,45 +4110,69 @@ var app = (function () {
 
     	const block = {
     		c: function create() {
-    			div = element("div");
+    			div3 = element("div");
+    			p0 = element("p");
+    			t0 = text(/*title*/ ctx[0]);
+    			t1 = space();
+    			div2 = element("div");
+    			div1 = element("div");
+    			div0 = element("div");
     			img = element("img");
-    			t0 = space();
-    			p = element("p");
-    			t1 = text(t1_value);
     			t2 = space();
+    			p1 = element("p");
+    			p1.textContent = `${/*rewara*/ ctx[1][0].title}`;
+    			t4 = space();
     			ul = element("ul");
 
     			for (let i = 0; i < each_blocks.length; i += 1) {
     				each_blocks[i].c();
     			}
 
+    			attr_dev(p0, "class", "title svelte-1a2m2wu");
+    			add_location(p0, file$2, 28, 8, 1196);
     			attr_dev(img, "class", "imgthumb svelte-1a2m2wu");
-    			if (!src_url_equal(img.src, img_src_value = /*data*/ ctx[2][0].url)) attr_dev(img, "src", img_src_value);
-    			attr_dev(img, "alt", /*data*/ ctx[2][0].title);
-    			add_location(img, file$2, 17, 20, 548);
-    			attr_dev(p, "class", "article-title svelte-1a2m2wu");
-    			add_location(p, file$2, 18, 20, 632);
-    			attr_dev(div, "class", "firstnews");
-    			add_location(div, file$2, 16, 16, 503);
+    			if (!src_url_equal(img.src, img_src_value = /*rewara*/ ctx[1][0].thumb)) attr_dev(img, "src", img_src_value);
+    			attr_dev(img, "alt", /*rewara*/ ctx[1][0].title);
+    			add_location(img, file$2, 35, 20, 1472);
+    			attr_dev(p1, "class", "article-title svelte-1a2m2wu");
+    			add_location(p1, file$2, 36, 20, 1562);
+    			attr_dev(div0, "class", "firstnews");
+    			add_location(div0, file$2, 34, 16, 1427);
     			attr_dev(ul, "class", "othernews svelte-1a2m2wu");
-    			add_location(ul, file$2, 20, 20, 722);
+    			add_location(ul, file$2, 38, 20, 1654);
+    			attr_dev(div1, "class", "rewara svelte-1a2m2wu");
+    			add_location(div1, file$2, 30, 12, 1278);
+    			attr_dev(div2, "class", "rewara-container svelte-1a2m2wu");
+    			add_location(div2, file$2, 29, 8, 1234);
+    			attr_dev(div3, "class", "container");
+    			add_location(div3, file$2, 27, 4, 1163);
+    		},
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, div, anchor);
-    			append_dev(div, img);
-    			append_dev(div, t0);
-    			append_dev(div, p);
-    			append_dev(p, t1);
-    			insert_dev(target, t2, anchor);
-    			insert_dev(target, ul, anchor);
+    			insert_dev(target, div3, anchor);
+    			append_dev(div3, p0);
+    			append_dev(p0, t0);
+    			append_dev(div3, t1);
+    			append_dev(div3, div2);
+    			append_dev(div2, div1);
+    			append_dev(div1, div0);
+    			append_dev(div0, img);
+    			append_dev(div0, t2);
+    			append_dev(div0, p1);
+    			append_dev(div1, t4);
+    			append_dev(div1, ul);
 
     			for (let i = 0; i < each_blocks.length; i += 1) {
     				each_blocks[i].m(ul, null);
     			}
     		},
-    		p: function update(ctx, dirty) {
-    			if (dirty & /*fetchImage*/ 2) {
-    				each_value = { length: 4 };
+    		p: function update(ctx, [dirty]) {
+    			if (dirty & /*title*/ 1) set_data_dev(t0, /*title*/ ctx[0]);
+
+    			if (dirty & /*rewara*/ 2) {
+    				each_value = /*rewara*/ ctx[1];
     				validate_each_argument(each_value);
     				let i;
 
@@ -4232,163 +4195,11 @@ var app = (function () {
     				each_blocks.length = each_value.length;
     			}
     		},
-    		d: function destroy(detaching) {
-    			if (detaching) detach_dev(div);
-    			if (detaching) detach_dev(t2);
-    			if (detaching) detach_dev(ul);
-    			destroy_each(each_blocks, detaching);
-    		}
-    	};
-
-    	dispatch_dev("SvelteRegisterBlock", {
-    		block,
-    		id: create_then_block$1.name,
-    		type: "then",
-    		source: "(16:16) {:then data}",
-    		ctx
-    	});
-
-    	return block;
-    }
-
-    // (22:24) {#each {length: 4} as _, i}
-    function create_each_block$1(ctx) {
-    	let li;
-    	let p;
-    	let t0_value = /*data*/ ctx[2][/*i*/ ctx[5]].title + "";
-    	let t0;
-    	let t1;
-
-    	const block = {
-    		c: function create() {
-    			li = element("li");
-    			p = element("p");
-    			t0 = text(t0_value);
-    			t1 = space();
-    			attr_dev(p, "class", "article-title svelte-1a2m2wu");
-    			add_location(p, file$2, 23, 32, 878);
-    			attr_dev(li, "class", "news svelte-1a2m2wu");
-    			add_location(li, file$2, 22, 28, 827);
-    		},
-    		m: function mount(target, anchor) {
-    			insert_dev(target, li, anchor);
-    			append_dev(li, p);
-    			append_dev(p, t0);
-    			append_dev(li, t1);
-    		},
-    		p: noop,
-    		d: function destroy(detaching) {
-    			if (detaching) detach_dev(li);
-    		}
-    	};
-
-    	dispatch_dev("SvelteRegisterBlock", {
-    		block,
-    		id: create_each_block$1.name,
-    		type: "each",
-    		source: "(22:24) {#each {length: 4} as _, i}",
-    		ctx
-    	});
-
-    	return block;
-    }
-
-    // (14:35)                   <p>...waiting</p>                  {:then data}
-    function create_pending_block$1(ctx) {
-    	let p;
-
-    	const block = {
-    		c: function create() {
-    			p = element("p");
-    			p.textContent = "...waiting";
-    			add_location(p, file$2, 14, 16, 438);
-    		},
-    		m: function mount(target, anchor) {
-    			insert_dev(target, p, anchor);
-    		},
-    		p: noop,
-    		d: function destroy(detaching) {
-    			if (detaching) detach_dev(p);
-    		}
-    	};
-
-    	dispatch_dev("SvelteRegisterBlock", {
-    		block,
-    		id: create_pending_block$1.name,
-    		type: "pending",
-    		source: "(14:35)                   <p>...waiting</p>                  {:then data}",
-    		ctx
-    	});
-
-    	return block;
-    }
-
-    function create_fragment$2(ctx) {
-    	let div2;
-    	let p;
-    	let t0;
-    	let t1;
-    	let div1;
-    	let div0;
-
-    	let info = {
-    		ctx,
-    		current: null,
-    		token: null,
-    		hasCatch: true,
-    		pending: create_pending_block$1,
-    		then: create_then_block$1,
-    		catch: create_catch_block$1,
-    		value: 2,
-    		error: 6
-    	};
-
-    	handle_promise(/*fetchImage*/ ctx[1], info);
-
-    	const block = {
-    		c: function create() {
-    			div2 = element("div");
-    			p = element("p");
-    			t0 = text(/*title*/ ctx[0]);
-    			t1 = space();
-    			div1 = element("div");
-    			div0 = element("div");
-    			info.block.c();
-    			attr_dev(p, "class", "title svelte-1a2m2wu");
-    			add_location(p, file$2, 10, 8, 281);
-    			attr_dev(div0, "class", "rewara svelte-1a2m2wu");
-    			add_location(div0, file$2, 12, 12, 363);
-    			attr_dev(div1, "class", "rewara-container svelte-1a2m2wu");
-    			add_location(div1, file$2, 11, 8, 319);
-    			attr_dev(div2, "class", "container");
-    			add_location(div2, file$2, 9, 4, 248);
-    		},
-    		l: function claim(nodes) {
-    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
-    		},
-    		m: function mount(target, anchor) {
-    			insert_dev(target, div2, anchor);
-    			append_dev(div2, p);
-    			append_dev(p, t0);
-    			append_dev(div2, t1);
-    			append_dev(div2, div1);
-    			append_dev(div1, div0);
-    			info.block.m(div0, info.anchor = null);
-    			info.mount = () => div0;
-    			info.anchor = null;
-    		},
-    		p: function update(new_ctx, [dirty]) {
-    			ctx = new_ctx;
-    			if (dirty & /*title*/ 1) set_data_dev(t0, /*title*/ ctx[0]);
-    			update_await_block_branch(info, ctx, dirty);
-    		},
     		i: noop,
     		o: noop,
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(div2);
-    			info.block.d();
-    			info.token = null;
-    			info = null;
+    			if (detaching) detach_dev(div3);
+    			destroy_each(each_blocks, detaching);
     		}
     	};
 
@@ -4413,6 +4224,24 @@ var app = (function () {
     		return await response.json();
     	})();
 
+    	let rewara = [
+    		{
+    			title: "Mengenal Kei Car, Mobil Mungil Khas Jepang",
+    			url: "https://newsmap.id/youtube/mengenal-kei-car-mobil-mungil-khas-jepang",
+    			thumb: "https://newsmap.id/_next/image?url=https%3A%2F%2Fimg.youtube.com%2Fvi%2FHqJRApyuaqY%2Fhqdefault.jpg&w=1920&q=75"
+    		},
+    		{
+    			title: "Mengenal Kei Car, Mobil Mungil Khas Jepang",
+    			url: "https://newsmap.id/youtube/mengenal-kei-car-mobil-mungil-khas-jepang",
+    			thumb: "https://newsmap.id/_next/image?url=https%3A%2F%2Fimg.youtube.com%2Fvi%2FHqJRApyuaqY%2Fhqdefault.jpg&w=1920&q=75"
+    		},
+    		{
+    			title: "Mengenal Kei Car, Mobil Mungil Khas Jepang",
+    			url: "https://newsmap.id/youtube/mengenal-kei-car-mobil-mungil-khas-jepang",
+    			thumb: "https://newsmap.id/_next/image?url=https%3A%2F%2Fimg.youtube.com%2Fvi%2FHqJRApyuaqY%2Fhqdefault.jpg&w=1920&q=75"
+    		}
+    	];
+
     	const writable_props = ['title'];
 
     	Object.keys($$props).forEach(key => {
@@ -4423,17 +4252,18 @@ var app = (function () {
     		if ('title' in $$props) $$invalidate(0, title = $$props.title);
     	};
 
-    	$$self.$capture_state = () => ({ title, fetchImage });
+    	$$self.$capture_state = () => ({ title, fetchImage, rewara });
 
     	$$self.$inject_state = $$props => {
     		if ('title' in $$props) $$invalidate(0, title = $$props.title);
+    		if ('rewara' in $$props) $$invalidate(1, rewara = $$props.rewara);
     	};
 
     	if ($$props && "$$inject" in $$props) {
     		$$self.$inject_state($$props.$$inject);
     	}
 
-    	return [title, fetchImage];
+    	return [title, rewara];
     }
 
     class Rewara extends SvelteComponentDev {
@@ -4829,7 +4659,7 @@ var app = (function () {
     	let current;
 
     	function header_height_binding(value) {
-    		/*header_height_binding*/ ctx[7](value);
+    		/*header_height_binding*/ ctx[9](value);
     	}
 
     	let header_props = {};
@@ -4866,12 +4696,18 @@ var app = (function () {
     		});
 
     	news0 = new News({
-    			props: { title: "TRENDING NOW" },
+    			props: {
+    				title: "TRENDING NOW",
+    				news: /*trendingnews*/ ctx[7]
+    			},
     			$$inline: true
     		});
 
     	news1 = new News({
-    			props: { title: "PUBLIC NEWS" },
+    			props: {
+    				title: "PUBLIC NEWS",
+    				news: /*publicnews*/ ctx[8]
+    			},
     			$$inline: true
     		});
 
@@ -4923,7 +4759,7 @@ var app = (function () {
     			create_component(menu.$$.fragment);
     			attr_dev(link, "rel", "stylesheet");
     			attr_dev(link, "href", "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
-    			add_location(link, file, 23, 1, 687);
+    			add_location(link, file, 151, 1, 8088);
     			set_style(div_1, "display", "contents");
     			set_style(div_1, "--fontfamily3", /*fontfamily3*/ ctx[3]);
     			set_style(div_2, "display", "contents");
@@ -4956,9 +4792,9 @@ var app = (function () {
     			set_style(div_11, "display", "contents");
     			set_style(div_11, "--fontfamily3", /*fontfamily3*/ ctx[3]);
     			attr_dev(div, "class", "container svelte-18hvwtu");
-    			add_location(div, file, 27, 1, 825);
+    			add_location(div, file, 155, 1, 8226);
     			attr_dev(main, "class", "svelte-18hvwtu");
-    			add_location(main, file, 26, 0, 817);
+    			add_location(main, file, 154, 0, 8218);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -5082,6 +4918,133 @@ var app = (function () {
     	let author = "Ahsan Ridhoi";
     	let authorprofileimage = "./image/ahsan.png";
     	let deduktifheader = "./image/Menelusuri-Indahnya-Jalur-Pantai-Pangandaran.png";
+
+    	let trendingnews = [
+    		{
+    			title: "Warga Batu Merah Blokir Jalan",
+    			web: "malukuterkini.com",
+    			url: "https://newsmap.id/news/warga-batu-merah-blokir-jalan",
+    			thumb: "https://www.malukuterkini.com/wp-content/uploads/2022/03/BATU-MERAH-230322-1-OK.jpg"
+    		},
+    		{
+    			title: "NATO likely to approve more troops for its eastern flank -- secretary general",
+    			web: "theedgemarkets.com",
+    			url: "https://newsmap.id/news/nato-likely-to-approve-more-troops-for-its-eastern-flank----secretary-general",
+    			thumb: "https://assets.theedgemarkets.com/jens_stoltenberg_20220323235228_reuters.jpg?.zxPjwhTJThV3US4d74bRpjhsRiu2fqH"
+    		},
+    		{
+    			title: "Gubernur Olly Larang Pejabat Pemprov Sulut ke Luar Daerah Selama Pemeriksaan BPK",
+    			web: "indimanado.com",
+    			url: "https://newsmap.id/news/gubernur-olly-larang-pejabat-pemprov-sulut-ke-luar-daerah-selama-pemeriksaan-bpk",
+    			thumb: "https://media.binosaurus.com/ocr/image/0b36c2b54b7a4726b10a9ed040bd7844/https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEibHJ1If-EMxrhK-T3en2rNr5RBypg3r0hlt2A70fQkhLOv2k6lwKu88yLsOqrpj3E85emQxHLI_3WK_wEjvsYsWk3Lx6yxuB5NoVpGe59C9VHp26JFP-o4vrT5SwylFt7mIv8WLgveVDkY74ovXvQ_F0g6440uX3U6g5MV7LJ8SJqUT9kugV7bO0NI/w1200-h630-p-k-no-nu/20220323_234526.jpg"
+    		},
+    		{
+    			title: "AHY Beri Kuliah Umum: Menyongsong Indonesia Emas 2045 Perlu Persiapan SDM",
+    			web: "majalahintrust.com",
+    			url: "https://newsmap.id/news/ahy-beri-kuliah-umum--menyongsong-indonesia-emas-2045-perlu-persiapan-sdm",
+    			thumb: "https://majalahintrust.com/wp-content/uploads/2022/03/IMG_20220323_164026-1024x716.jpg"
+    		},
+    		{
+    			title: "Sekda Kotabaru Buka Pembinaan TLHP BPK-RI",
+    			web: "apahabar.com",
+    			url: "https://newsmap.id/news/sekda-kotabaru-buka-pembinaan-tlhp-bpk-ri",
+    			thumb: "https://apahabar.com/wp-content/uploads/2022/03/5C66A133-2644-4F67-8D5D-842C2D333AD2-e1648050198433.jpeg"
+    		},
+    		{
+    			title: "Cresco Labs to buy Columbia Care in US$2 billion cannabis deal",
+    			web: "theedgemarkets.com",
+    			url: "https://newsmap.id/news/cresco-labs-to-buy-columbia-care-in-us-2-billion-cannabis-deal",
+    			thumb: "https://assets.theedgemarkets.com/cresco_labs_inc_20220323234305_bloomberg.jpg?J9PlSV3ippKoKI.emJuBy2nSCnNhep5v"
+    		},
+    		{
+    			title: "Bentuk Kepedulian, Tim Sambang Polwan Polres Kapuas Bagikan Sembako Kepada Warga",
+    			web: "kobarnews.com",
+    			url: "https://newsmap.id/news/bentuk-kepedulian--tim-sambang-polwan-polres-kapuas-bagikan-sembako-kepada-warga",
+    			thumb: "http://kobarnews.com/wp-content/uploads/2022/03/WhatsApp-Image-2022-03-23-at-16.41.10.jpeg"
+    		},
+    		{
+    			title: "Bentuk Pencegahan, Polsek Kapuas Timur Sosialisasikan Prokes 5M",
+    			web: "kobarnews.com",
+    			url: "https://newsmap.id/news/bentuk-pencegahan--polsek-kapuas-timur-sosialisasikan-prokes-5m",
+    			thumb: "http://kobarnews.com/wp-content/uploads/2022/03/WhatsApp-Image-2022-03-23-at-16.40.43.jpeg"
+    		},
+    		{
+    			title: "Noor Azri Noor Azerai now joins lingerie maker Caely as director",
+    			web: "theedgemarkets.com",
+    			url: "https://newsmap.id/news/noor-azri-noor-azerai-now-joins-lingerie-maker-caely-as-director",
+    			thumb: "https://assets.theedgemarkets.com/Caely-Holdings_www.caelyholdings.com__4.jpg?0pGPiPjvgy8da0PuXRLACauU24fTPm.y"
+    		},
+    		{
+    			title: "Sosialisasikan Imbauan Kebakaran Hutan dan Lahan Kepada Warga, Ini Yang di Sampaikan Kapolsek Kapuas Murung",
+    			web: "kobarnews.com",
+    			url: "https://newsmap.id/news/sosialisasikan-imbauan--kebakaran-hutan-dan-lahan-kepada-warga--ini-yang-di-sampaikan-kapolsek-kapuas-murung",
+    			thumb: "https://media.binosaurus.com/ocr/image/98932bab8ad44868b8d91a7dfd1621ea/http://kobarnews.com/wp-content/uploads/2022/03/WhatsApp-Image-2022-03-23-at-16.40.31.jpeg"
+    		}
+    	];
+
+    	let publicnews = [
+    		{
+    			title: "Jennifer Jill Ngebet Punya Keturunan di Usia 48 Tahun, Blak-blakan Gak Sudi Anaknya Mirip Ajun: Semoga Kayak Gue!",
+    			web: "rctiplus.com",
+    			url: "https://newsmap.id/news/jennifer-jill-ngebet-punya-keturunan-di-usia-48-tahun--blak-blakan-gak-sudi-anaknya-mirip-ajun--semoga-kayak-gue-",
+    			thumb: "https://img.herstory.co.id/articles/archive_20220323/ajun-perwira-20220323-154219-thumb.jpg"
+    		},
+    		{
+    			title: "Bantu Atasi Keluhan Tulang Belakang, Dooglee Indonesia Luncurkan Lumbar Pillow.",
+    			web: "mediaindonesia.com",
+    			url: "https://newsmap.id/news/bantu-atasi-keluhan-tulang-belakang--dooglee-indonesia-luncurkan-lumbar-pillow-",
+    			thumb: "https://disk.mediaindonesia.com/thumbs/590x400/news/2022/03/f37947479ae5b69fb20c44161af48bf7.jpg"
+    		},
+    		{
+    			title: "SMF Perluas Pembiayaan Kredit bagi Pengusaha di Lombok NTT",
+    			web: "rctiplus.com",
+    			url: "https://newsmap.id/news/smf-perluas-pembiayaan-kredit-bagi-pengusaha-di-lombok-ntt",
+    			thumb: "https://static.rctiplus.id/media/600/files/fta_rcti/news/2161482.jpg"
+    		},
+    		{
+    			title: "Ribuan Da’i Ikut Bangun Desa Terpencil, Kemenag Mendukung",
+    			web: "viva.co.id",
+    			url: "https://newsmap.id/news/ribuan-da-i-ikut-bangun-desa-terpencil--kemenag-mendukung",
+    			thumb: "https://thumb.viva.co.id/media/frontend/thumbs3/2022/03/23/623b434f7b51b-da-i-bangun-desa-terpencil_665_374.jpg"
+    		},
+    		{
+    			title: "Wiku: Jatim Sumbang Kelurahan Terbanyak Kepatuhan Pakai Masker Rendah",
+    			web: "rctiplus.com",
+    			url: "https://newsmap.id/news/wiku--jatim-sumbang-kelurahan-terbanyak-kepatuhan-pakai-masker-rendah",
+    			thumb: "https://img.herstory.co.id/articles/archive_20220323/ajun-perwira-20220323-154219-thumb.jpg"
+    		},
+    		{
+    			title: "Jennifer Jill Ngebet Punya Keturunan di Usia 48 Tahun, Blak-blakan Gak Sudi Anaknya Mirip Ajun: Semoga Kayak Gue!",
+    			web: "rctiplus.com",
+    			url: "https://newsmap.id/news/jennifer-jill-ngebet-punya-keturunan-di-usia-48-tahun--blak-blakan-gak-sudi-anaknya-mirip-ajun--semoga-kayak-gue-",
+    			thumb: "https://static.rctiplus.id/media/600/files/fta_rcti/news/2161483.jpg"
+    		},
+    		{
+    			title: "Jennifer Jill Ngebet Punya Keturunan di Usia 48 Tahun, Blak-blakan Gak Sudi Anaknya Mirip Ajun: Semoga Kayak Gue!",
+    			web: "rctiplus.com",
+    			url: "https://newsmap.id/news/jennifer-jill-ngebet-punya-keturunan-di-usia-48-tahun--blak-blakan-gak-sudi-anaknya-mirip-ajun--semoga-kayak-gue-",
+    			thumb: "https://img.herstory.co.id/articles/archive_20220323/ajun-perwira-20220323-154219-thumb.jpg"
+    		},
+    		{
+    			title: "MUI Bantah Ajukan Permohonan ke KPI Soal 'Boikot' Ayu Ting Ting: Yang Diminta Hentikan Adalah Program Tertentu",
+    			web: "makassar.terkini.id",
+    			url: "https://newsmap.id/news/mui-bantah-ajukan-permohonan-ke-kpi-soal--boikot--ayu-ting-ting--yang-diminta-hentikan-adalah-program-tertentu",
+    			thumb: "https://media.binosaurus.com/ocr/image/c53c1ed2d99648edbffc4d66b0f0d0c3/https://makassar.terkini.id/wp-content/uploads/2022/03/terkiniid_screenshot_20220323-220004_instagram.jpg"
+    		},
+    		{
+    			title: "Soal Pawang Hujan di Mandalika, BMKG: Kami Gunakan Teknologi, Beda dengan Kearifan Lokal",
+    			web: "hetanews.com",
+    			url: "https://newsmap.id/news/soal-pawang-hujan-di-mandalika--bmkg--kami-gunakan-teknologi--beda-dengan-kearifan-lokal",
+    			thumb: "https://www.hetanews.com/images/20220323/20220323111027-77385-rara-isti-wulandari-pawang-hujan-motogp-mandalika.jpg"
+    		},
+    		{
+    			title: "Ketua Jokowi Mania Dipecat dari Komisaris Anak BUMN, Gara-gara Jadi Saksi Munarman?",
+    			web: "kronologi.id",
+    			url: "https://newsmap.id/news/ketua-jokowi-mania-dipecat-dari-komisaris-anak-bumn--gara-gara-jadi-saksi-munarman-",
+    			thumb: "https://img.herstory.co.id/articles/archive_20220323/ajun-perwira-20220323-154219-thumb.jpg"
+    		}
+    	];
+
     	const writable_props = [];
 
     	Object.keys($$props).forEach(key => {
@@ -5110,7 +5073,9 @@ var app = (function () {
     		fontfamily3,
     		author,
     		authorprofileimage,
-    		deduktifheader
+    		deduktifheader,
+    		trendingnews,
+    		publicnews
     	});
 
     	$$self.$inject_state = $$props => {
@@ -5121,6 +5086,8 @@ var app = (function () {
     		if ('author' in $$props) $$invalidate(4, author = $$props.author);
     		if ('authorprofileimage' in $$props) $$invalidate(5, authorprofileimage = $$props.authorprofileimage);
     		if ('deduktifheader' in $$props) $$invalidate(6, deduktifheader = $$props.deduktifheader);
+    		if ('trendingnews' in $$props) $$invalidate(7, trendingnews = $$props.trendingnews);
+    		if ('publicnews' in $$props) $$invalidate(8, publicnews = $$props.publicnews);
     	};
 
     	if ($$props && "$$inject" in $$props) {
@@ -5135,6 +5102,8 @@ var app = (function () {
     		author,
     		authorprofileimage,
     		deduktifheader,
+    		trendingnews,
+    		publicnews,
     		header_height_binding
     	];
     }
