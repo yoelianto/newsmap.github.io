@@ -78,11 +78,11 @@
         display: flex;
     }
     img {
-        margin:1rem auto;
-        height:5rem;
+        margin:0.5rem auto;
+        height:3.5rem;
     }
     .container {
-        height:40vw;
+        height:30vw;
         z-index: 99;
         position: fixed;
         background-color: #eefffc;
@@ -114,7 +114,7 @@
         display: block;
         position: absolute;
         z-index: 200;
-        top: 9rem;
+        top: 6.5rem;
         left: 8.5vw;
         width: 10vw;
         pointer-events: none;

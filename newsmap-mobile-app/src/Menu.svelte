@@ -39,7 +39,7 @@
         bottom:0;
         z-index: 100;
         width:100vw;
-        height:100px;
+        height:80px;
         background-color: white;
         border-radius: 2rem 2rem 0 0;
         box-shadow: 0rem 1rem 1rem 1rem rgba(0,0,0,0.1);
@@ -62,11 +62,11 @@
         font-family: var(--fontfamily3);
         font-weight: 700;
         font-size: 0.8rem;
-        margin-top: 0.5rem;
+        margin-top: 0.2rem;
     }
     .circle {
-        width:12vw;
-        height:12vw;
+        width:9vw;
+        height:9vw;
         background-color: #ef5959;
         border-radius: 50%;
         display: flex;
@@ -74,8 +74,8 @@
         justify-content: center;
     }
     img {
-        width:8vw;
-        height:8vw;
+        width:6vw;
+        height:6vw;
         fill: #A4D9D2;
     }
     .selected {
