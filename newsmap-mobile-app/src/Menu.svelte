@@ -40,8 +40,9 @@
         z-index: 100;
         width:100vw;
         height:100px;
-        background-color: #A4D9D2;
+        background-color: white;
         border-radius: 2rem 2rem 0 0;
+        box-shadow: 0rem 1rem 1rem 1rem rgba(0,0,0,0.1);
     }
     .menubar {
         display: flex;

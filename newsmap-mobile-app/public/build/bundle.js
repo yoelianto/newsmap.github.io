@@ -3772,14 +3772,14 @@ var app = (function () {
     			t2 = space();
     			if (!src_url_equal(img.src, img_src_value = /*list*/ ctx[2].source)) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", img_alt_value = /*list*/ ctx[2].menu);
-    			attr_dev(img, "class", "svelte-1wtbd08");
+    			attr_dev(img, "class", "svelte-15uxufk");
     			add_location(img, file$3, 22, 16, 779);
-    			attr_dev(div0, "class", "circle svelte-1wtbd08");
+    			attr_dev(div0, "class", "circle svelte-15uxufk");
     			add_location(div0, file$3, 21, 12, 741);
-    			attr_dev(h4, "class", "menutext svelte-1wtbd08");
+    			attr_dev(h4, "class", "menutext svelte-15uxufk");
     			attr_dev(h4, "id", h4_id_value = /*list*/ ctx[2].id);
     			add_location(h4, file$3, 25, 12, 854);
-    			attr_dev(div1, "class", "menu svelte-1wtbd08");
+    			attr_dev(div1, "class", "menu svelte-15uxufk");
     			toggle_class(div1, "selected", /*list*/ ctx[2].active === true);
     			add_location(div1, file$3, 20, 8, 668);
     		},
@@ -3847,9 +3847,9 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			attr_dev(div, "class", "menubar svelte-1wtbd08");
+    			attr_dev(div, "class", "menubar svelte-15uxufk");
     			add_location(div, file$3, 18, 4, 601);
-    			attr_dev(nav, "class", "container svelte-1wtbd08");
+    			attr_dev(nav, "class", "container svelte-15uxufk");
     			add_location(nav, file$3, 17, 0, 572);
     		},
     		l: function claim(nodes) {
