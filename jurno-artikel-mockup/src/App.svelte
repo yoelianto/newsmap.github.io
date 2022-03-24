@@ -531,8 +531,6 @@
 	/* Custom Scrollytelling Style */
 	/* --------------------------------------------------------------------------------------------------------------------------------------- */
 
-	@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
-
 	#g-Korean-Waves-box ,
 	#g-Korean-Waves-box .g-artboard {
 		margin:0 auto;
