@@ -9,6 +9,8 @@
 	import Menu from './Menu.svelte'
 	import Rewara from './Rewara.svelte'
 	import Video from './Video.svelte'
+	import moment from 'moment';
+	import { getToken } from './api';
 
 	let margin;
 	let fontfamily1 = "Roboto Mono",
@@ -147,7 +149,18 @@
 		
 	]
 
+	let params = {
+		from: moment().subtract(7, 'd').format('YYYY-MM-DD'),
+		to: moment().format('YYYY-MM-DD'),
+		sort_by: 'published_date', 
+		sort_dir: 'desc',
+		per_page: 5,
+	}
 </script>
+
+<!-- svelte-ignore empty-block -->
+{#await getToken()}
+{/await}
 
 <svelte:head>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -167,6 +180,7 @@
 		<Sentiment
 			--fontfamily1 ={fontfamily1}
 			--fontfamily2={fontfamily2}
+			params={params}
 		/>
 		<Original
 			--fontfamily1 ={fontfamily1}
@@ -192,12 +206,14 @@
 			--fontfamily1 ={fontfamily1}
 			--fontfamily2={fontfamily2}
 			news = {trendingnews}
+			params={params}
 		/>
 		<News 
 			title='PUBLIC NEWS'  
 			--fontfamily1 ={fontfamily1}
 			--fontfamily2={fontfamily2}
 			news = {publicnews}
+			params={params}
 		/>
 		<Video
 			title='YOUTUBE SHORTS'

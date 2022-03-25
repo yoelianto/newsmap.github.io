@@ -1,4 +1,13 @@
 <script>
+    import { get } from "./api";
+    import * as ihttp from './constants/initialHttp';
+    import {fixSpotifyLink} from './helper';
+
+    const fetchData = (async () => {
+        const result = await get(ihttp.URI_SPOTIFY_LIST, {size: 10});
+        return await result.data;
+    })()
+
 const fetchImage = (async () => {
 		const response = await fetch('https://jsonplaceholder.typicode.com/photos')
     return await response.json()
@@ -32,28 +41,30 @@ let podcast = [
     </div>
     <div class="inner">
         <div class="album">
-            <!-- {#await fetchImage}
+            {#await fetchData}
             <p>...waiting</p>
-            {:then data} -->
-                {#each podcast as pod, i}
+            {:then data}
+                {#each {length: 3} as _, i}
+                    {#if data[i].link !== undefined}
                     <div class="podcast">
-                        <iframe style="border-radius:12px" src={pod.url} title={pod.title} width="250" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+                        <iframe style="border-radius:12px" src={fixSpotifyLink(data[i].link)} title={data[i].title} width="250" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
                     </div>
+                    {/if}
                 {/each}
-            <!-- {:catch error}
+            {:catch error}
                 <p>An error occurred!</p>
-            {/await} -->
+            {/await}
         </div>
         <p class="playlist-title">Playlist</p>
         <div class="playlist">
-            {#await fetchImage}
+            {#await fetchData}
             <p>...waiting</p>
             {:then data}
-                {#each {length: 10} as _, i}
+                {#each data as d, i}
                     <div class="podlist">
                         <div class="play"><i class="fa fa-play"></i></div>
                         <div class="poddetail">
-                            <div class="podtitle">{data[i].title}</div>
+                            <div class="podtitle">{d.title}</div>
                             <div class="podauthor"></div>
                         </div>
                         <div class="duration">15.00</div>

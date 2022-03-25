@@ -1,22 +1,34 @@
 <script>
     export let title;
     export let authorprofileimage, authorprofilealt, author, deduktifheader, deduktifurl;
+
+    import { get } from "./api";
+    import * as ihttp from './constants/initialHttp';
+    import {truncText, stringToDom} from './helper';
+
+    const fetchData = (async () => {
+        const result = await get(ihttp.URI_ARTICLE_LIST, {size: 1});
+        return await result.data;
+    })()
 </script>
 
-
 <div class="container" id="deduktif">
+    {#await fetchData}
+        <p>...waiting</p>
+    {:then data}
+        {#each data as d, i}
     <div class="bottom">
         <div class="content">
             <div class="contentbot">
                 <div class="left">
                     <div class="profile">
-                        <img class="authorprofile" src={authorprofileimage} alt={authorprofilealt}>
+                        <img class="authorprofile" src={`${process['env']['URL_IMAGE']}/news/${d.thumbnail}`} onerror={`this.onerror=null;this.src='${process['env']['NO_IMAGE']}';`} alt="author profile">
                     </div>
                 </div>
                 <div class="right">
                     <div class="excerpt">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo doloribus maxime exercitationem, distinctio est aperiam eveniet ullam assumenda quae corporis voluptatum quasi consequuntur impedit! Quaerat?
-                    </div>                
+                        {@html truncText(stringToDom(d.is_custom_html ? d.html_body : d.article))}
+                    </div>
                 </div>
             </div>
             <div class="contenttop">
@@ -28,7 +40,7 @@
                     <div class="detail">
                         <div class="author">oleh {author}</div>
                         <a href={deduktifurl}>
-                            <div class="title">{title}</div>  
+                            <div class="title">{d.title}</div>  
                         </a>
                          
                     </div>
@@ -36,6 +48,10 @@
             </div>
         </div>
     </div>
+        {/each}
+    {:catch error}
+        <p>An error occurred!</p>
+    {/await}
     <p class="deduktif">DEDUKTIF</p>
 </div>
 
