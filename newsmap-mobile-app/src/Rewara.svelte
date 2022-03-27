@@ -1,4 +1,12 @@
 <script>
+    import { get } from "./api";
+    import * as ihttp from './constants/initialHttp';
+
+    const fetchData = (async () => {
+        const result = await get(ihttp.URI_REWARA_LIST, {size: 5});
+        return await result.data;
+    })()
+
     export let title = ''
     
     const fetchImage = (async () => {
@@ -29,29 +37,30 @@
         <p class="title">{title}</p>
         <div class="rewara-container">
             <div class="rewara">
-                <!-- {#await fetchImage}
+                {#await fetchData}
                 <p>...waiting</p>
-                {:then data} -->
+                {:then rewara}
                 <a href={rewara[0].url}>
                     <div class="firstnews">
-                        <img class='imgthumb' src={rewara[0].thumb} alt={rewara[0].title} />
+                        <img class='imgthumb' src={rewara[0].thumbnail? `${process['env']['URL_IMAGE']}news/${rewara[0].thumbnail}` : ''} onerror={`this.onerror=null;this.src='${process['env']['NO_IMAGE']}';`} alt={rewara[0].title} />
                         <p class="article-title">{rewara[0].title}</p>
                     </div>
                 </a>
                 
                     <ul class="othernews">
-                        {#each rewara as rewara, i}
+                        {#each {length: 4} as _, i}
+                        {#if rewara[i+1] !== undefined}
                         <a href="rewara.url">
                             <li class="news">
-                                <p class="article-title">{rewara.title}</p>
+                                <p class="article-title">{rewara[i+1].title}</p>
                             </li>
                         </a>
-                            
+                        {/if}    
                         {/each}
                     </ul>
-                <!-- {:catch error}
+                {:catch error}
                     <p>An error occurred!</p>
-                {/await} -->
+                {/await}
             </div>
         </div>
     </div>
