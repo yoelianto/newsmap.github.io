@@ -419,6 +419,12 @@ var app = (function () {
         info.block.p(child_ctx, dirty);
     }
 
+    const globals = (typeof window !== 'undefined'
+        ? window
+        : typeof globalThis !== 'undefined'
+            ? globalThis
+            : global);
+
     function bind$1(component, name, callback) {
         const index = component.$$.props[name];
         if (index !== undefined) {
@@ -1081,7 +1087,7 @@ var app = (function () {
     			h4 = element("h4");
     			t0 = text(t0_value);
     			t1 = space();
-    			attr_dev(h4, "class", "menu svelte-1dtjaoj");
+    			attr_dev(h4, "class", "menu svelte-w2vsrm");
     			attr_dev(h4, "id", h4_id_value = /*list*/ ctx[14].id);
     			toggle_class(h4, "selected", /*list*/ ctx[14].active === true);
     			add_location(h4, file$a, 54, 20, 1608);
@@ -1172,27 +1178,27 @@ var app = (function () {
     			div4 = element("div");
     			if (!src_url_equal(img.src, img_src_value = "./image/logo-jurno-web.svg")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "Logo Jurno Website");
-    			attr_dev(img, "class", "svelte-1dtjaoj");
+    			attr_dev(img, "class", "svelte-w2vsrm");
     			add_location(img, file$a, 49, 12, 1390);
-    			attr_dev(div0, "class", "header-logo svelte-1dtjaoj");
+    			attr_dev(div0, "class", "header-logo svelte-w2vsrm");
     			add_location(div0, file$a, 48, 8, 1351);
-    			attr_dev(div1, "class", "headertext svelte-1dtjaoj");
+    			attr_dev(div1, "class", "headertext svelte-w2vsrm");
     			add_location(div1, file$a, 52, 12, 1518);
-    			attr_dev(div2, "class", "bar svelte-1dtjaoj");
+    			attr_dev(div2, "class", "bar svelte-w2vsrm");
     			set_style(div2, "left", /*$barPosition1*/ ctx[2] * 25 + 8.5 + "vw");
     			add_location(div2, file$a, 63, 12, 1932);
-    			attr_dev(div3, "class", "bar svelte-1dtjaoj");
+    			attr_dev(div3, "class", "bar svelte-w2vsrm");
     			set_style(div3, "left", /*$barPosition2*/ ctx[3] * 25 + 8.5 + "vw");
     			add_location(div3, file$a, 64, 12, 2007);
-    			attr_dev(div4, "class", "bar svelte-1dtjaoj");
+    			attr_dev(div4, "class", "bar svelte-w2vsrm");
     			set_style(div4, "left", /*$barPosition3*/ ctx[4] * 25 + 8.5 + "vw");
     			add_location(div4, file$a, 65, 12, 2082);
-    			attr_dev(div5, "class", "header-menu svelte-1dtjaoj");
+    			attr_dev(div5, "class", "header-menu svelte-w2vsrm");
     			add_location(div5, file$a, 51, 8, 1479);
-    			attr_dev(div6, "class", "container svelte-1dtjaoj");
+    			attr_dev(div6, "class", "container svelte-w2vsrm");
     			add_render_callback(() => /*div6_elementresize_handler*/ ctx[10].call(div6));
     			add_location(div6, file$a, 47, 4, 1291);
-    			attr_dev(nav, "class", "svelte-1dtjaoj");
+    			attr_dev(nav, "class", "svelte-w2vsrm");
     			add_location(nav, file$a, 46, 0, 1280);
     		},
     		l: function claim(nodes) {
@@ -3364,7 +3370,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (21:12) {:catch error}
+    // (25:12) {:catch error}
     function create_catch_block_3(ctx) {
     	let p;
 
@@ -3372,7 +3378,8 @@ var app = (function () {
     		c: function create() {
     			p = element("p");
     			p.textContent = "An error occurred!";
-    			add_location(p, file$9, 21, 16, 657);
+    			attr_dev(p, "class", "svelte-15mp2qa");
+    			add_location(p, file$9, 25, 16, 769);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -3387,28 +3394,38 @@ var app = (function () {
     		block,
     		id: create_catch_block_3.name,
     		type: "catch",
-    		source: "(21:12) {:catch error}",
+    		source: "(25:12) {:catch error}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (18:12) {:then data}
+    // (20:12) {:then data}
     function create_then_block_3(ctx) {
+    	let div;
+    	let p;
     	let t_value = /*data*/ ctx[2][0].title + "";
     	let t;
 
     	const block = {
     		c: function create() {
+    			div = element("div");
+    			p = element("p");
     			t = text(t_value);
+    			attr_dev(p, "class", "svelte-15mp2qa");
+    			add_location(p, file$9, 22, 20, 677);
+    			attr_dev(div, "class", "grid1 svelte-15mp2qa");
+    			add_location(div, file$9, 20, 16, 544);
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, t, anchor);
+    			insert_dev(target, div, anchor);
+    			append_dev(div, p);
+    			append_dev(p, t);
     		},
     		p: noop,
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(t);
+    			if (detaching) detach_dev(div);
     		}
     	};
 
@@ -3416,14 +3433,14 @@ var app = (function () {
     		block,
     		id: create_then_block_3.name,
     		type: "then",
-    		source: "(18:12) {:then data}",
+    		source: "(20:12) {:then data}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (16:30)                   <p>...waiting</p>              {:then data}
+    // (18:30)                   <p>...waiting</p>              {:then data}
     function create_pending_block_3(ctx) {
     	let p;
 
@@ -3431,7 +3448,8 @@ var app = (function () {
     		c: function create() {
     			p = element("p");
     			p.textContent = "...waiting";
-    			add_location(p, file$9, 16, 16, 447);
+    			attr_dev(p, "class", "svelte-15mp2qa");
+    			add_location(p, file$9, 18, 16, 483);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -3446,14 +3464,14 @@ var app = (function () {
     		block,
     		id: create_pending_block_3.name,
     		type: "pending",
-    		source: "(16:30)                   <p>...waiting</p>              {:then data}",
+    		source: "(18:30)                   <p>...waiting</p>              {:then data}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (39:12) {:catch error}
+    // (43:12) {:catch error}
     function create_catch_block_2(ctx) {
     	let p;
 
@@ -3461,7 +3479,8 @@ var app = (function () {
     		c: function create() {
     			p = element("p");
     			p.textContent = "An error occurred!";
-    			add_location(p, file$9, 39, 16, 1342);
+    			attr_dev(p, "class", "svelte-15mp2qa");
+    			add_location(p, file$9, 43, 16, 1461);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -3476,14 +3495,14 @@ var app = (function () {
     		block,
     		id: create_catch_block_2.name,
     		type: "catch",
-    		source: "(39:12) {:catch error}",
+    		source: "(43:12) {:catch error}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (28:12) {:then data}
+    // (32:12) {:then data}
     function create_then_block_2(ctx) {
     	let each_1_anchor;
     	let each_value_2 = { length: 4 };
@@ -3544,22 +3563,22 @@ var app = (function () {
     		block,
     		id: create_then_block_2.name,
     		type: "then",
-    		source: "(28:12) {:then data}",
+    		source: "(32:12) {:then data}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (35:20) {:else}
+    // (39:20) {:else}
     function create_else_block_2(ctx) {
     	let div;
 
     	const block = {
     		c: function create() {
     			div = element("div");
-    			attr_dev(div, "class", "grid4 svelte-1fgwnog");
-    			add_location(div, file$9, 35, 24, 1223);
+    			attr_dev(div, "class", "grid4 svelte-15mp2qa");
+    			add_location(div, file$9, 39, 24, 1342);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -3574,16 +3593,17 @@ var app = (function () {
     		block,
     		id: create_else_block_2.name,
     		type: "else",
-    		source: "(35:20) {:else}",
+    		source: "(39:20) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (30:20) {#if data[i + 1] !== undefined}
+    // (34:20) {#if data[i + 1] !== undefined}
     function create_if_block_2(ctx) {
     	let div;
+    	let p;
     	let t0_value = /*data*/ ctx[2][/*i*/ ctx[5] + 1].title + "";
     	let t0;
     	let t1;
@@ -3591,14 +3611,18 @@ var app = (function () {
     	const block = {
     		c: function create() {
     			div = element("div");
+    			p = element("p");
     			t0 = text(t0_value);
     			t1 = space();
-    			attr_dev(div, "class", "grid4 svelte-1fgwnog");
-    			add_location(div, file$9, 30, 24, 966);
+    			attr_dev(p, "class", "svelte-15mp2qa");
+    			add_location(p, file$9, 36, 28, 1231);
+    			attr_dev(div, "class", "grid4 svelte-15mp2qa");
+    			add_location(div, file$9, 34, 24, 1078);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
-    			append_dev(div, t0);
+    			append_dev(div, p);
+    			append_dev(p, t0);
     			append_dev(div, t1);
     		},
     		p: noop,
@@ -3611,14 +3635,14 @@ var app = (function () {
     		block,
     		id: create_if_block_2.name,
     		type: "if",
-    		source: "(30:20) {#if data[i + 1] !== undefined}",
+    		source: "(34:20) {#if data[i + 1] !== undefined}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (29:16) {#each {length: 4} as _, i}
+    // (33:16) {#each {length: 4} as _, i}
     function create_each_block_2(ctx) {
     	let if_block_anchor;
 
@@ -3652,14 +3676,14 @@ var app = (function () {
     		block,
     		id: create_each_block_2.name,
     		type: "each",
-    		source: "(29:16) {#each {length: 4} as _, i}",
+    		source: "(33:16) {#each {length: 4} as _, i}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (26:30)                   <p>...waiting</p>              {:then data}
+    // (30:30)                   <p>...waiting</p>              {:then data}
     function create_pending_block_2(ctx) {
     	let p;
 
@@ -3667,7 +3691,8 @@ var app = (function () {
     		c: function create() {
     			p = element("p");
     			p.textContent = "...waiting";
-    			add_location(p, file$9, 26, 16, 799);
+    			attr_dev(p, "class", "svelte-15mp2qa");
+    			add_location(p, file$9, 30, 16, 911);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -3682,14 +3707,14 @@ var app = (function () {
     		block,
     		id: create_pending_block_2.name,
     		type: "pending",
-    		source: "(26:30)                   <p>...waiting</p>              {:then data}",
+    		source: "(30:30)                   <p>...waiting</p>              {:then data}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (57:12) {:catch error}
+    // (61:12) {:catch error}
     function create_catch_block_1$1(ctx) {
     	let p;
 
@@ -3697,7 +3722,8 @@ var app = (function () {
     		c: function create() {
     			p = element("p");
     			p.textContent = "An error occurred!";
-    			add_location(p, file$9, 57, 16, 2027);
+    			attr_dev(p, "class", "svelte-15mp2qa");
+    			add_location(p, file$9, 61, 16, 2153);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -3712,14 +3738,14 @@ var app = (function () {
     		block,
     		id: create_catch_block_1$1.name,
     		type: "catch",
-    		source: "(57:12) {:catch error}",
+    		source: "(61:12) {:catch error}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (46:12) {:then data}
+    // (50:12) {:then data}
     function create_then_block_1$1(ctx) {
     	let each_1_anchor;
     	let each_value_1 = { length: 4 };
@@ -3780,22 +3806,22 @@ var app = (function () {
     		block,
     		id: create_then_block_1$1.name,
     		type: "then",
-    		source: "(46:12) {:then data}",
+    		source: "(50:12) {:then data}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (53:20) {:else}
+    // (57:20) {:else}
     function create_else_block_1(ctx) {
     	let div;
 
     	const block = {
     		c: function create() {
     			div = element("div");
-    			attr_dev(div, "class", "grid4 svelte-1fgwnog");
-    			add_location(div, file$9, 53, 24, 1908);
+    			attr_dev(div, "class", "grid4 svelte-15mp2qa");
+    			add_location(div, file$9, 57, 24, 2034);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -3810,16 +3836,17 @@ var app = (function () {
     		block,
     		id: create_else_block_1.name,
     		type: "else",
-    		source: "(53:20) {:else}",
+    		source: "(57:20) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (48:20) {#if data[i + 5] !== undefined}
+    // (52:20) {#if data[i + 5] !== undefined}
     function create_if_block_1(ctx) {
     	let div;
+    	let p;
     	let t0_value = /*data*/ ctx[2][/*i*/ ctx[5] + 5].title + "";
     	let t0;
     	let t1;
@@ -3827,14 +3854,18 @@ var app = (function () {
     	const block = {
     		c: function create() {
     			div = element("div");
+    			p = element("p");
     			t0 = text(t0_value);
     			t1 = space();
-    			attr_dev(div, "class", "grid4 svelte-1fgwnog");
-    			add_location(div, file$9, 48, 24, 1651);
+    			attr_dev(p, "class", "svelte-15mp2qa");
+    			add_location(p, file$9, 54, 28, 1923);
+    			attr_dev(div, "class", "grid4 svelte-15mp2qa");
+    			add_location(div, file$9, 52, 24, 1770);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
-    			append_dev(div, t0);
+    			append_dev(div, p);
+    			append_dev(p, t0);
     			append_dev(div, t1);
     		},
     		p: noop,
@@ -3847,14 +3878,14 @@ var app = (function () {
     		block,
     		id: create_if_block_1.name,
     		type: "if",
-    		source: "(48:20) {#if data[i + 5] !== undefined}",
+    		source: "(52:20) {#if data[i + 5] !== undefined}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (47:16) {#each {length: 4} as _, i}
+    // (51:16) {#each {length: 4} as _, i}
     function create_each_block_1$1(ctx) {
     	let if_block_anchor;
 
@@ -3888,14 +3919,14 @@ var app = (function () {
     		block,
     		id: create_each_block_1$1.name,
     		type: "each",
-    		source: "(47:16) {#each {length: 4} as _, i}",
+    		source: "(51:16) {#each {length: 4} as _, i}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (44:30)                   <p>...waiting</p>              {:then data}
+    // (48:30)                   <p>...waiting</p>              {:then data}
     function create_pending_block_1$1(ctx) {
     	let p;
 
@@ -3903,7 +3934,8 @@ var app = (function () {
     		c: function create() {
     			p = element("p");
     			p.textContent = "...waiting";
-    			add_location(p, file$9, 44, 16, 1484);
+    			attr_dev(p, "class", "svelte-15mp2qa");
+    			add_location(p, file$9, 48, 16, 1603);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -3918,14 +3950,14 @@ var app = (function () {
     		block,
     		id: create_pending_block_1$1.name,
     		type: "pending",
-    		source: "(44:30)                   <p>...waiting</p>              {:then data}",
+    		source: "(48:30)                   <p>...waiting</p>              {:then data}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (75:12) {:catch error}
+    // (79:12) {:catch error}
     function create_catch_block$7(ctx) {
     	let p;
 
@@ -3933,7 +3965,8 @@ var app = (function () {
     		c: function create() {
     			p = element("p");
     			p.textContent = "An error occurred!";
-    			add_location(p, file$9, 75, 16, 2712);
+    			attr_dev(p, "class", "svelte-15mp2qa");
+    			add_location(p, file$9, 79, 16, 2845);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -3948,14 +3981,14 @@ var app = (function () {
     		block,
     		id: create_catch_block$7.name,
     		type: "catch",
-    		source: "(75:12) {:catch error}",
+    		source: "(79:12) {:catch error}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (64:12) {:then data}
+    // (68:12) {:then data}
     function create_then_block$7(ctx) {
     	let each_1_anchor;
     	let each_value = { length: 9 };
@@ -4016,22 +4049,22 @@ var app = (function () {
     		block,
     		id: create_then_block$7.name,
     		type: "then",
-    		source: "(64:12) {:then data}",
+    		source: "(68:12) {:then data}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (71:20) {:else}
+    // (75:20) {:else}
     function create_else_block(ctx) {
     	let div;
 
     	const block = {
     		c: function create() {
     			div = element("div");
-    			attr_dev(div, "class", "grid9 svelte-1fgwnog");
-    			add_location(div, file$9, 71, 24, 2593);
+    			attr_dev(div, "class", "grid9 svelte-15mp2qa");
+    			add_location(div, file$9, 75, 24, 2726);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -4046,16 +4079,17 @@ var app = (function () {
     		block,
     		id: create_else_block.name,
     		type: "else",
-    		source: "(71:20) {:else}",
+    		source: "(75:20) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (66:20) {#if data[i + 9] !== undefined}
+    // (70:20) {#if data[i + 9] !== undefined}
     function create_if_block$2(ctx) {
     	let div;
+    	let p;
     	let t0_value = /*data*/ ctx[2][/*i*/ ctx[5] + 9].title + "";
     	let t0;
     	let t1;
@@ -4063,14 +4097,18 @@ var app = (function () {
     	const block = {
     		c: function create() {
     			div = element("div");
+    			p = element("p");
     			t0 = text(t0_value);
     			t1 = space();
-    			attr_dev(div, "class", "grid9 svelte-1fgwnog");
-    			add_location(div, file$9, 66, 24, 2336);
+    			attr_dev(p, "class", "svelte-15mp2qa");
+    			add_location(p, file$9, 72, 28, 2615);
+    			attr_dev(div, "class", "grid9 svelte-15mp2qa");
+    			add_location(div, file$9, 70, 24, 2462);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
-    			append_dev(div, t0);
+    			append_dev(div, p);
+    			append_dev(p, t0);
     			append_dev(div, t1);
     		},
     		p: noop,
@@ -4083,14 +4121,14 @@ var app = (function () {
     		block,
     		id: create_if_block$2.name,
     		type: "if",
-    		source: "(66:20) {#if data[i + 9] !== undefined}",
+    		source: "(70:20) {#if data[i + 9] !== undefined}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (65:16) {#each {length: 9} as _, i}
+    // (69:16) {#each {length: 9} as _, i}
     function create_each_block$8(ctx) {
     	let if_block_anchor;
 
@@ -4124,14 +4162,14 @@ var app = (function () {
     		block,
     		id: create_each_block$8.name,
     		type: "each",
-    		source: "(65:16) {#each {length: 9} as _, i}",
+    		source: "(69:16) {#each {length: 9} as _, i}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (62:30)                   <p>...waiting</p>              {:then data}
+    // (66:30)                   <p>...waiting</p>              {:then data}
     function create_pending_block$7(ctx) {
     	let p;
 
@@ -4139,7 +4177,8 @@ var app = (function () {
     		c: function create() {
     			p = element("p");
     			p.textContent = "...waiting";
-    			add_location(p, file$9, 62, 16, 2169);
+    			attr_dev(p, "class", "svelte-15mp2qa");
+    			add_location(p, file$9, 66, 16, 2295);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -4154,7 +4193,7 @@ var app = (function () {
     		block,
     		id: create_pending_block$7.name,
     		type: "pending",
-    		source: "(62:30)                   <p>...waiting</p>              {:then data}",
+    		source: "(66:30)                   <p>...waiting</p>              {:then data}",
     		ctx
     	});
 
@@ -4243,20 +4282,20 @@ var app = (function () {
     			t2 = space();
     			div3 = element("div");
     			info_3.block.c();
-    			attr_dev(div0, "class", "grid1 svelte-1fgwnog");
-    			add_location(div0, file$9, 14, 8, 378);
-    			attr_dev(div1, "class", "grid1 svelte-1fgwnog");
-    			add_location(div1, file$9, 24, 8, 730);
-    			attr_dev(div2, "class", "grid1 svelte-1fgwnog");
-    			add_location(div2, file$9, 42, 8, 1415);
-    			attr_dev(div3, "class", "grid1 svelte-1fgwnog");
-    			add_location(div3, file$9, 60, 8, 2100);
-    			attr_dev(div4, "class", "grid svelte-1fgwnog");
-    			add_location(div4, file$9, 13, 4, 350);
+    			attr_dev(div0, "class", "grid0 svelte-15mp2qa");
+    			add_location(div0, file$9, 16, 8, 414);
+    			attr_dev(div1, "class", "grid0 svelte-15mp2qa");
+    			add_location(div1, file$9, 28, 8, 842);
+    			attr_dev(div2, "class", "grid0 svelte-15mp2qa");
+    			add_location(div2, file$9, 46, 8, 1534);
+    			attr_dev(div3, "class", "grid0 svelte-15mp2qa");
+    			add_location(div3, file$9, 64, 8, 2226);
+    			attr_dev(div4, "class", "grid svelte-15mp2qa");
+    			add_location(div4, file$9, 15, 4, 386);
     			set_style(article, "margin-top", /*margin*/ ctx[0] + "px");
     			attr_dev(article, "id", "jurno");
-    			attr_dev(article, "class", "svelte-1fgwnog");
-    			add_location(article, file$9, 12, 0, 294);
+    			attr_dev(article, "class", "svelte-15mp2qa");
+    			add_location(article, file$9, 14, 0, 330);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -4756,6 +4795,8 @@ var app = (function () {
     }
 
     /* src\Sentiment.svelte generated by Svelte v3.46.4 */
+
+    const { console: console_1$2 } = globals;
     const file$7 = "src\\Sentiment.svelte";
 
     function get_each_context$6(ctx, list, i) {
@@ -4764,7 +4805,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (31:8) {:catch error}
+    // (32:8) {:catch error}
     function create_catch_block$5(ctx) {
     	let p;
 
@@ -4772,7 +4813,7 @@ var app = (function () {
     		c: function create() {
     			p = element("p");
     			p.textContent = "An error occurred!";
-    			add_location(p, file$7, 31, 12, 930);
+    			add_location(p, file$7, 32, 12, 963);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -4787,14 +4828,14 @@ var app = (function () {
     		block,
     		id: create_catch_block$5.name,
     		type: "catch",
-    		source: "(31:8) {:catch error}",
+    		source: "(32:8) {:catch error}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (19:8) {:then data}
+    // (20:8) {:then data}
     function create_then_block$5(ctx) {
     	let each_1_anchor;
     	let each_value = /*data*/ ctx[2];
@@ -4855,14 +4896,14 @@ var app = (function () {
     		block,
     		id: create_then_block$5.name,
     		type: "then",
-    		source: "(19:8) {:then data}",
+    		source: "(20:8) {:then data}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (20:12) {#each data as d}
+    // (21:12) {#each data as d}
     function create_each_block$6(ctx) {
     	let div3;
     	let div2;
@@ -4888,15 +4929,15 @@ var app = (function () {
     			attr_dev(img, "class", "people svelte-btoga2");
     			if (!src_url_equal(img.src, img_src_value = /*d*/ ctx[3].thumbnail)) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", /*d*/ ctx[3].name);
-    			add_location(img, file$7, 23, 24, 674);
+    			add_location(img, file$7, 24, 24, 707);
     			attr_dev(div0, "class", "person svelte-btoga2");
-    			add_location(div0, file$7, 22, 20, 628);
+    			add_location(div0, file$7, 23, 20, 661);
     			attr_dev(div1, "class", "name svelte-btoga2");
-    			add_location(div1, file$7, 25, 20, 777);
+    			add_location(div1, file$7, 26, 20, 810);
     			attr_dev(div2, "class", "sentiment svelte-btoga2");
-    			add_location(div2, file$7, 21, 16, 583);
+    			add_location(div2, file$7, 22, 16, 616);
     			attr_dev(div3, "class", "sentiment-container");
-    			add_location(div3, file$7, 20, 12, 532);
+    			add_location(div3, file$7, 21, 12, 565);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div3, anchor);
@@ -4918,14 +4959,14 @@ var app = (function () {
     		block,
     		id: create_each_block$6.name,
     		type: "each",
-    		source: "(20:12) {#each data as d}",
+    		source: "(21:12) {#each data as d}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (17:26)           <p>...waiting</p>          {:then data}
+    // (18:26)           <p>...waiting</p>          {:then data}
     function create_pending_block$5(ctx) {
     	let p;
 
@@ -4933,7 +4974,7 @@ var app = (function () {
     		c: function create() {
     			p = element("p");
     			p.textContent = "...waiting";
-    			add_location(p, file$7, 17, 8, 448);
+    			add_location(p, file$7, 18, 8, 481);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -4948,7 +4989,7 @@ var app = (function () {
     		block,
     		id: create_pending_block$5.name,
     		type: "pending",
-    		source: "(17:26)           <p>...waiting</p>          {:then data}",
+    		source: "(18:26)           <p>...waiting</p>          {:then data}",
     		ctx
     	});
 
@@ -4979,9 +5020,9 @@ var app = (function () {
     			div0 = element("div");
     			info.block.c();
     			attr_dev(div0, "class", "slider svelte-btoga2");
-    			add_location(div0, file$7, 15, 4, 390);
+    			add_location(div0, file$7, 16, 4, 423);
     			attr_dev(div1, "class", "container svelte-btoga2");
-    			add_location(div1, file$7, 14, 0, 361);
+    			add_location(div1, file$7, 15, 0, 394);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -5032,7 +5073,7 @@ var app = (function () {
     	const writable_props = ['params'];
 
     	Object.keys($$props).forEach(key => {
-    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<Sentiment> was created with unknown prop '${key}'`);
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console_1$2.warn(`<Sentiment> was created with unknown prop '${key}'`);
     	});
 
     	$$self.$$set = $$props => {
@@ -5049,6 +5090,7 @@ var app = (function () {
     		$$self.$inject_state($$props.$$inject);
     	}
 
+    	console.table(fetchData);
     	return [fetchData, params];
     }
 
@@ -5075,6 +5117,8 @@ var app = (function () {
     }
 
     /* src\Deduktif.svelte generated by Svelte v3.46.4 */
+
+    const { console: console_1$1 } = globals;
     const file$6 = "src\\Deduktif.svelte";
 
     function get_each_context$5(ctx, list, i) {
@@ -5084,7 +5128,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (54:4) {:catch error}
+    // (56:4) {:catch error}
     function create_catch_block$4(ctx) {
     	let p;
 
@@ -5092,7 +5136,7 @@ var app = (function () {
     		c: function create() {
     			p = element("p");
     			p.textContent = "An error occurred!";
-    			add_location(p, file$6, 54, 8, 2379);
+    			add_location(p, file$6, 56, 8, 2411);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -5107,14 +5151,14 @@ var app = (function () {
     		block,
     		id: create_catch_block$4.name,
     		type: "catch",
-    		source: "(54:4) {:catch error}",
+    		source: "(56:4) {:catch error}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (20:4) {:then data}
+    // (22:4) {:then data}
     function create_then_block$4(ctx) {
     	let each_1_anchor;
     	let each_value = /*data*/ ctx[4];
@@ -5175,14 +5219,14 @@ var app = (function () {
     		block,
     		id: create_then_block$4.name,
     		type: "then",
-    		source: "(20:4) {:then data}",
+    		source: "(22:4) {:then data}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (21:8) {#each data as d, i}
+    // (23:8) {#each data as d, i}
     function create_each_block$5(ctx) {
     	let div12;
     	let div11;
@@ -5245,7 +5289,7 @@ var app = (function () {
     			div7 = element("div");
     			t7 = text(t7_value);
     			t8 = space();
-    			attr_dev(img0, "class", "authorprofile svelte-knygkq");
+    			attr_dev(img0, "class", "authorprofile svelte-a7ilat");
 
     			if (!src_url_equal(img0.src, img0_src_value = `${({
 				"env": {
@@ -5270,39 +5314,39 @@ var app = (function () {
 			})['env']['NO_IMAGE']}';`);
 
     			attr_dev(img0, "alt", "author profile");
-    			add_location(img0, file$6, 26, 24, 796);
-    			attr_dev(div0, "class", "profile svelte-knygkq");
-    			add_location(div0, file$6, 25, 20, 749);
-    			attr_dev(div1, "class", "left svelte-knygkq");
-    			add_location(div1, file$6, 24, 16, 709);
-    			attr_dev(div2, "class", "excerpt svelte-knygkq");
-    			add_location(div2, file$6, 30, 20, 1514);
-    			attr_dev(div3, "class", "right svelte-knygkq");
-    			add_location(div3, file$6, 29, 16, 1473);
-    			attr_dev(div4, "class", "contentbot svelte-knygkq");
-    			add_location(div4, file$6, 23, 12, 667);
-    			attr_dev(img1, "class", "header svelte-knygkq");
+    			add_location(img0, file$6, 28, 24, 828);
+    			attr_dev(div0, "class", "profile svelte-a7ilat");
+    			add_location(div0, file$6, 27, 20, 781);
+    			attr_dev(div1, "class", "left svelte-a7ilat");
+    			add_location(div1, file$6, 26, 16, 741);
+    			attr_dev(div2, "class", "excerpt svelte-a7ilat");
+    			add_location(div2, file$6, 32, 20, 1546);
+    			attr_dev(div3, "class", "right svelte-a7ilat");
+    			add_location(div3, file$6, 31, 16, 1505);
+    			attr_dev(div4, "class", "contentbot svelte-a7ilat");
+    			add_location(div4, file$6, 25, 12, 699);
+    			attr_dev(img1, "class", "header svelte-a7ilat");
     			if (!src_url_equal(img1.src, img1_src_value = /*deduktifheader*/ ctx[1])) attr_dev(img1, "src", img1_src_value);
     			attr_dev(img1, "alt", "");
-    			add_location(img1, file$6, 38, 24, 1829);
-    			attr_dev(div5, "class", "headerbottom svelte-knygkq");
-    			add_location(div5, file$6, 40, 20, 1922);
-    			attr_dev(div6, "class", "author svelte-knygkq");
-    			add_location(div6, file$6, 42, 24, 2022);
-    			attr_dev(div7, "class", "title svelte-knygkq");
-    			add_location(div7, file$6, 44, 28, 2139);
+    			add_location(img1, file$6, 40, 24, 1861);
+    			attr_dev(div5, "class", "headerbottom svelte-a7ilat");
+    			add_location(div5, file$6, 42, 20, 1954);
+    			attr_dev(div6, "class", "author svelte-a7ilat");
+    			add_location(div6, file$6, 44, 24, 2054);
+    			attr_dev(div7, "class", "title svelte-a7ilat");
+    			add_location(div7, file$6, 46, 28, 2171);
     			attr_dev(a, "href", /*deduktifurl*/ ctx[2]);
-    			add_location(a, file$6, 43, 24, 2087);
-    			attr_dev(div8, "class", "detail svelte-knygkq");
-    			add_location(div8, file$6, 41, 20, 1976);
-    			attr_dev(div9, "class", "headline svelte-knygkq");
-    			add_location(div9, file$6, 37, 16, 1781);
+    			add_location(a, file$6, 45, 24, 2119);
+    			attr_dev(div8, "class", "detail svelte-a7ilat");
+    			add_location(div8, file$6, 43, 20, 2008);
+    			attr_dev(div9, "class", "headline svelte-a7ilat");
+    			add_location(div9, file$6, 39, 16, 1813);
     			attr_dev(div10, "class", "contenttop");
-    			add_location(div10, file$6, 35, 12, 1721);
-    			attr_dev(div11, "class", "content svelte-knygkq");
-    			add_location(div11, file$6, 22, 8, 632);
-    			attr_dev(div12, "class", "bottom svelte-knygkq");
-    			add_location(div12, file$6, 21, 4, 602);
+    			add_location(div10, file$6, 37, 12, 1753);
+    			attr_dev(div11, "class", "content svelte-a7ilat");
+    			add_location(div11, file$6, 24, 8, 664);
+    			attr_dev(div12, "class", "bottom svelte-a7ilat");
+    			add_location(div12, file$6, 23, 4, 634);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div12, anchor);
@@ -5352,14 +5396,14 @@ var app = (function () {
     		block,
     		id: create_each_block$5.name,
     		type: "each",
-    		source: "(21:8) {#each data as d, i}",
+    		source: "(23:8) {#each data as d, i}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (18:22)           <p>...waiting</p>      {:then data}
+    // (20:22)           <p>...waiting</p>      {:then data}
     function create_pending_block$4(ctx) {
     	let p;
 
@@ -5367,7 +5411,7 @@ var app = (function () {
     		c: function create() {
     			p = element("p");
     			p.textContent = "...waiting";
-    			add_location(p, file$6, 18, 8, 531);
+    			add_location(p, file$6, 20, 8, 563);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -5382,7 +5426,7 @@ var app = (function () {
     		block,
     		id: create_pending_block$4.name,
     		type: "pending",
-    		source: "(18:22)           <p>...waiting</p>      {:then data}",
+    		source: "(20:22)           <p>...waiting</p>      {:then data}",
     		ctx
     	});
 
@@ -5415,11 +5459,11 @@ var app = (function () {
     			t0 = space();
     			p = element("p");
     			p.textContent = "DEDUKTIF";
-    			attr_dev(p, "class", "deduktif svelte-knygkq");
-    			add_location(p, file$6, 56, 4, 2424);
-    			attr_dev(div, "class", "container svelte-knygkq");
+    			attr_dev(p, "class", "deduktif svelte-a7ilat");
+    			add_location(p, file$6, 58, 4, 2456);
+    			attr_dev(div, "class", "container svelte-a7ilat");
     			attr_dev(div, "id", "deduktif");
-    			add_location(div, file$6, 16, 0, 460);
+    			add_location(div, file$6, 18, 0, 492);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -5470,7 +5514,7 @@ var app = (function () {
     	const writable_props = ['author', 'deduktifheader', 'deduktifurl'];
 
     	Object.keys($$props).forEach(key => {
-    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<Deduktif> was created with unknown prop '${key}'`);
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console_1$1.warn(`<Deduktif> was created with unknown prop '${key}'`);
     	});
 
     	$$self.$$set = $$props => {
@@ -5500,6 +5544,7 @@ var app = (function () {
     		$$self.$inject_state($$props.$$inject);
     	}
 
+    	console.log(fetchData);
     	return [author, deduktifheader, deduktifurl, fetchData];
     }
 
@@ -5524,15 +5569,15 @@ var app = (function () {
     		const props = options.props || {};
 
     		if (/*author*/ ctx[0] === undefined && !('author' in props)) {
-    			console.warn("<Deduktif> was created without expected prop 'author'");
+    			console_1$1.warn("<Deduktif> was created without expected prop 'author'");
     		}
 
     		if (/*deduktifheader*/ ctx[1] === undefined && !('deduktifheader' in props)) {
-    			console.warn("<Deduktif> was created without expected prop 'deduktifheader'");
+    			console_1$1.warn("<Deduktif> was created without expected prop 'deduktifheader'");
     		}
 
     		if (/*deduktifurl*/ ctx[2] === undefined && !('deduktifurl' in props)) {
-    			console.warn("<Deduktif> was created without expected prop 'deduktifurl'");
+    			console_1$1.warn("<Deduktif> was created without expected prop 'deduktifurl'");
     		}
     	}
 
@@ -5952,23 +5997,25 @@ var app = (function () {
     }
 
     /* src\Podcast.svelte generated by Svelte v3.46.4 */
+
+    const { console: console_1 } = globals;
     const file$4 = "src\\Podcast.svelte";
 
     function get_each_context$3(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[5] = list[i];
-    	child_ctx[7] = i;
+    	child_ctx[2] = list[i];
+    	child_ctx[4] = i;
     	return child_ctx;
     }
 
     function get_each_context_1(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[9] = list[i];
-    	child_ctx[7] = i;
+    	child_ctx[6] = list[i];
+    	child_ctx[4] = i;
     	return child_ctx;
     }
 
-    // (54:12) {:catch error}
+    // (56:12) {:catch error}
     function create_catch_block_1(ctx) {
     	let p;
 
@@ -5976,7 +6023,7 @@ var app = (function () {
     		c: function create() {
     			p = element("p");
     			p.textContent = "An error occurred!";
-    			add_location(p, file$4, 54, 16, 2043);
+    			add_location(p, file$4, 56, 16, 2143);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -5991,14 +6038,14 @@ var app = (function () {
     		block,
     		id: create_catch_block_1.name,
     		type: "catch",
-    		source: "(54:12) {:catch error}",
+    		source: "(56:12) {:catch error}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (46:12) {:then data}
+    // (48:12) {:then data}
     function create_then_block_1(ctx) {
     	let each_1_anchor;
     	let each_value_1 = { length: 3 };
@@ -6059,14 +6106,14 @@ var app = (function () {
     		block,
     		id: create_then_block_1.name,
     		type: "then",
-    		source: "(46:12) {:then data}",
+    		source: "(48:12) {:then data}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (48:20) {#if data[i].link !== undefined}
+    // (50:20) {#if data[i].link !== undefined}
     function create_if_block$1(ctx) {
     	let div;
     	let iframe;
@@ -6079,16 +6126,16 @@ var app = (function () {
     			iframe = element("iframe");
     			t = space();
     			set_style(iframe, "border-radius", "12px");
-    			if (!src_url_equal(iframe.src, iframe_src_value = fixSpotifyLink(/*data*/ ctx[4][/*i*/ ctx[7]].link))) attr_dev(iframe, "src", iframe_src_value);
-    			attr_dev(iframe, "title", /*data*/ ctx[4][/*i*/ ctx[7]].title);
+    			if (!src_url_equal(iframe.src, iframe_src_value = fixSpotifyLink(/*data*/ ctx[1][/*i*/ ctx[4]].link))) attr_dev(iframe, "src", iframe_src_value);
+    			attr_dev(iframe, "title", /*data*/ ctx[1][/*i*/ ctx[4]].title);
     			attr_dev(iframe, "width", "250");
     			attr_dev(iframe, "height", "152");
     			attr_dev(iframe, "frameborder", "0");
     			iframe.allowFullscreen = "";
     			attr_dev(iframe, "allow", "autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture");
-    			add_location(iframe, file$4, 49, 24, 1673);
+    			add_location(iframe, file$4, 51, 24, 1773);
     			attr_dev(div, "class", "podcast svelte-17jzcoh");
-    			add_location(div, file$4, 48, 20, 1626);
+    			add_location(div, file$4, 50, 20, 1726);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -6105,17 +6152,17 @@ var app = (function () {
     		block,
     		id: create_if_block$1.name,
     		type: "if",
-    		source: "(48:20) {#if data[i].link !== undefined}",
+    		source: "(50:20) {#if data[i].link !== undefined}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (47:16) {#each {length: 3} as _, i}
+    // (49:16) {#each {length: 3} as _, i}
     function create_each_block_1(ctx) {
     	let if_block_anchor;
-    	let if_block = /*data*/ ctx[4][/*i*/ ctx[7]].link !== undefined && create_if_block$1(ctx);
+    	let if_block = /*data*/ ctx[1][/*i*/ ctx[4]].link !== undefined && create_if_block$1(ctx);
 
     	const block = {
     		c: function create() {
@@ -6127,7 +6174,7 @@ var app = (function () {
     			insert_dev(target, if_block_anchor, anchor);
     		},
     		p: function update(ctx, dirty) {
-    			if (/*data*/ ctx[4][/*i*/ ctx[7]].link !== undefined) if_block.p(ctx, dirty);
+    			if (/*data*/ ctx[1][/*i*/ ctx[4]].link !== undefined) if_block.p(ctx, dirty);
     		},
     		d: function destroy(detaching) {
     			if (if_block) if_block.d(detaching);
@@ -6139,14 +6186,14 @@ var app = (function () {
     		block,
     		id: create_each_block_1.name,
     		type: "each",
-    		source: "(47:16) {#each {length: 3} as _, i}",
+    		source: "(49:16) {#each {length: 3} as _, i}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (44:30)               <p>...waiting</p>              {:then data}
+    // (46:30)               <p>...waiting</p>              {:then data}
     function create_pending_block_1(ctx) {
     	let p;
 
@@ -6154,7 +6201,7 @@ var app = (function () {
     		c: function create() {
     			p = element("p");
     			p.textContent = "...waiting";
-    			add_location(p, file$4, 44, 12, 1462);
+    			add_location(p, file$4, 46, 12, 1562);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -6169,14 +6216,14 @@ var app = (function () {
     		block,
     		id: create_pending_block_1.name,
     		type: "pending",
-    		source: "(44:30)               <p>...waiting</p>              {:then data}",
+    		source: "(46:30)               <p>...waiting</p>              {:then data}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (73:12) {:catch error}
+    // (75:12) {:catch error}
     function create_catch_block$2(ctx) {
     	let p;
 
@@ -6184,7 +6231,7 @@ var app = (function () {
     		c: function create() {
     			p = element("p");
     			p.textContent = "An error occurred!";
-    			add_location(p, file$4, 73, 16, 2797);
+    			add_location(p, file$4, 75, 16, 2897);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -6199,17 +6246,17 @@ var app = (function () {
     		block,
     		id: create_catch_block$2.name,
     		type: "catch",
-    		source: "(73:12) {:catch error}",
+    		source: "(75:12) {:catch error}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (62:12) {:then data}
+    // (64:12) {:then data}
     function create_then_block$2(ctx) {
     	let each_1_anchor;
-    	let each_value = /*data*/ ctx[4];
+    	let each_value = /*data*/ ctx[1];
     	validate_each_argument(each_value);
     	let each_blocks = [];
 
@@ -6234,7 +6281,7 @@ var app = (function () {
     		},
     		p: function update(ctx, dirty) {
     			if (dirty & /*fetchData*/ 1) {
-    				each_value = /*data*/ ctx[4];
+    				each_value = /*data*/ ctx[1];
     				validate_each_argument(each_value);
     				let i;
 
@@ -6267,14 +6314,14 @@ var app = (function () {
     		block,
     		id: create_then_block$2.name,
     		type: "then",
-    		source: "(62:12) {:then data}",
+    		source: "(64:12) {:then data}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (63:16) {#each data as d, i}
+    // (65:16) {#each data as d, i}
     function create_each_block$3(ctx) {
     	let div5;
     	let div0;
@@ -6282,7 +6329,7 @@ var app = (function () {
     	let t0;
     	let div3;
     	let div1;
-    	let t1_value = /*d*/ ctx[5].title + "";
+    	let t1_value = /*d*/ ctx[2].title + "";
     	let t1;
     	let t2;
     	let div2;
@@ -6306,19 +6353,19 @@ var app = (function () {
     			div4.textContent = "15.00";
     			t5 = space();
     			attr_dev(i_1, "class", "fa fa-play");
-    			add_location(i_1, file$4, 64, 42, 2400);
+    			add_location(i_1, file$4, 66, 42, 2500);
     			attr_dev(div0, "class", "play svelte-17jzcoh");
-    			add_location(div0, file$4, 64, 24, 2382);
+    			add_location(div0, file$4, 66, 24, 2482);
     			attr_dev(div1, "class", "podtitle");
-    			add_location(div1, file$4, 66, 28, 2511);
+    			add_location(div1, file$4, 68, 28, 2611);
     			attr_dev(div2, "class", "podauthor");
-    			add_location(div2, file$4, 67, 28, 2578);
+    			add_location(div2, file$4, 69, 28, 2678);
     			attr_dev(div3, "class", "poddetail svelte-17jzcoh");
-    			add_location(div3, file$4, 65, 24, 2458);
+    			add_location(div3, file$4, 67, 24, 2558);
     			attr_dev(div4, "class", "duration svelte-17jzcoh");
-    			add_location(div4, file$4, 69, 24, 2665);
+    			add_location(div4, file$4, 71, 24, 2765);
     			attr_dev(div5, "class", "podlist svelte-17jzcoh");
-    			add_location(div5, file$4, 63, 20, 2335);
+    			add_location(div5, file$4, 65, 20, 2435);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div5, anchor);
@@ -6344,14 +6391,14 @@ var app = (function () {
     		block,
     		id: create_each_block$3.name,
     		type: "each",
-    		source: "(63:16) {#each data as d, i}",
+    		source: "(65:16) {#each data as d, i}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (60:30)               <p>...waiting</p>              {:then data}
+    // (62:30)               <p>...waiting</p>              {:then data}
     function create_pending_block$2(ctx) {
     	let p;
 
@@ -6359,7 +6406,7 @@ var app = (function () {
     		c: function create() {
     			p = element("p");
     			p.textContent = "...waiting";
-    			add_location(p, file$4, 60, 12, 2232);
+    			add_location(p, file$4, 62, 12, 2332);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -6374,7 +6421,7 @@ var app = (function () {
     		block,
     		id: create_pending_block$2.name,
     		type: "pending",
-    		source: "(60:30)               <p>...waiting</p>              {:then data}",
+    		source: "(62:30)               <p>...waiting</p>              {:then data}",
     		ctx
     	});
 
@@ -6403,8 +6450,8 @@ var app = (function () {
     		pending: create_pending_block_1,
     		then: create_then_block_1,
     		catch: create_catch_block_1,
-    		value: 4,
-    		error: 8
+    		value: 1,
+    		error: 5
     	};
 
     	handle_promise(/*fetchData*/ ctx[0], info);
@@ -6417,8 +6464,8 @@ var app = (function () {
     		pending: create_pending_block$2,
     		then: create_then_block$2,
     		catch: create_catch_block$2,
-    		value: 4,
-    		error: 8
+    		value: 1,
+    		error: 5
     	};
 
     	handle_promise(/*fetchData*/ ctx[0], info_1);
@@ -6443,22 +6490,22 @@ var app = (function () {
     			div2 = element("div");
     			info_1.block.c();
     			attr_dev(p0, "class", "title svelte-17jzcoh");
-    			add_location(p0, file$4, 38, 8, 1281);
+    			add_location(p0, file$4, 40, 8, 1381);
     			attr_dev(p1, "class", "viewall svelte-17jzcoh");
-    			add_location(p1, file$4, 39, 8, 1319);
+    			add_location(p1, file$4, 41, 8, 1419);
     			attr_dev(div0, "class", "title-container svelte-17jzcoh");
-    			add_location(div0, file$4, 37, 4, 1242);
+    			add_location(div0, file$4, 39, 4, 1342);
     			attr_dev(div1, "class", "album svelte-17jzcoh");
-    			add_location(div1, file$4, 42, 8, 1397);
+    			add_location(div1, file$4, 44, 8, 1497);
     			attr_dev(p2, "class", "playlist-title svelte-17jzcoh");
-    			add_location(p2, file$4, 57, 8, 2116);
+    			add_location(p2, file$4, 59, 8, 2216);
     			attr_dev(div2, "class", "playlist svelte-17jzcoh");
-    			add_location(div2, file$4, 58, 8, 2164);
+    			add_location(div2, file$4, 60, 8, 2264);
     			attr_dev(div3, "class", "inner svelte-17jzcoh");
-    			add_location(div3, file$4, 41, 4, 1368);
+    			add_location(div3, file$4, 43, 4, 1468);
     			attr_dev(div4, "class", "container");
     			attr_dev(div4, "id", "podcast");
-    			add_location(div4, file$4, 36, 0, 1200);
+    			add_location(div4, file$4, 38, 0, 1300);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -6521,55 +6568,14 @@ var app = (function () {
     		return await result.data;
     	})();
 
-    	const fetchImage = (async () => {
-    		const response = await fetch('https://jsonplaceholder.typicode.com/photos');
-    		return await response.json();
-    	})();
-
-    	const fetchPlaylist = (async () => {
-    		const response = await fetch('https://jsonplaceholder.typicode.com/todos');
-    		return await response.json();
-    	})();
-
-    	let podcast = [
-    		{
-    			title: "Krisis Berkepanjangan Juventus dan Rasisme dalam Sepakbola Indonesia",
-    			url: "https://open.spotify.com/embed/episode/1FfFIT7mH6Q71FCiEWD8un?utm_source=generator"
-    		},
-    		{
-    			title: "48 Jam Bersama European Super League",
-    			url: "https://open.spotify.com/embed/episode/7wnWNQzmeJ4jfrwTlgyVY5?utm_source=generator"
-    		},
-    		{
-    			title: "Bukan Lautan, Tapi Liga Champions Kolam Real Madrid",
-    			url: "https://open.spotify.com/embed/episode/2EvI4lCuOCMTBrvdXK2zui?utm_source=generator"
-    		}
-    	];
-
     	const writable_props = [];
 
     	Object.keys($$props).forEach(key => {
-    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<Podcast> was created with unknown prop '${key}'`);
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console_1.warn(`<Podcast> was created with unknown prop '${key}'`);
     	});
 
-    	$$self.$capture_state = () => ({
-    		get,
-    		ihttp,
-    		fixSpotifyLink,
-    		fetchData,
-    		fetchImage,
-    		fetchPlaylist,
-    		podcast
-    	});
-
-    	$$self.$inject_state = $$props => {
-    		if ('podcast' in $$props) podcast = $$props.podcast;
-    	};
-
-    	if ($$props && "$$inject" in $$props) {
-    		$$self.$inject_state($$props.$$inject);
-    	}
-
+    	$$self.$capture_state = () => ({ get, ihttp, fixSpotifyLink, fetchData });
+    	console.table(fetchData);
     	return [fetchData];
     }
 
@@ -13188,7 +13194,7 @@ var app = (function () {
     	return block;
     }
 
-    // (162:19)  {/await}
+    // (168:19)  {/await}
     function create_pending_block(ctx) {
     	const block = { c: noop, m: noop, d: noop };
 
@@ -13196,7 +13202,7 @@ var app = (function () {
     		block,
     		id: create_pending_block.name,
     		type: "pending",
-    		source: "(162:19)  {/await}",
+    		source: "(168:19)  {/await}",
     		ctx
     	});
 
@@ -13257,7 +13263,7 @@ var app = (function () {
     	handle_promise(getToken(), info);
 
     	function header_height_binding(value) {
-    		/*header_height_binding*/ ctx[11](value);
+    		/*header_height_binding*/ ctx[15](value);
     	}
 
     	let header_props = {};
@@ -13275,7 +13281,7 @@ var app = (function () {
     		});
 
     	sentiment = new Sentiment({
-    			props: { params: /*params*/ ctx[10] },
+    			props: { params: /*params*/ ctx[14] },
     			$$inline: true
     		});
 
@@ -13284,11 +13290,11 @@ var app = (function () {
     	deduktif = new Deduktif({
     			props: {
     				title: "Menelusuri Indahnya Jalur Pantai Pangandaran",
-    				deduktifurl: /*deduktifurl*/ ctx[7],
-    				deduktifheader: /*deduktifheader*/ ctx[6],
-    				author: /*author*/ ctx[4],
-    				authorprofileimage: /*authorprofileimage*/ ctx[5],
-    				authorprofilealt: /*author*/ ctx[4]
+    				deduktifurl: /*deduktifurl*/ ctx[11],
+    				deduktifheader: /*deduktifheader*/ ctx[10],
+    				author: /*author*/ ctx[8],
+    				authorprofileimage: /*authorprofileimage*/ ctx[9],
+    				authorprofilealt: /*author*/ ctx[8]
     			},
     			$$inline: true
     		});
@@ -13301,8 +13307,8 @@ var app = (function () {
     	news0 = new News({
     			props: {
     				title: "TRENDING NOW",
-    				news: /*trendingnews*/ ctx[8],
-    				params: /*params*/ ctx[10]
+    				news: /*trendingnews*/ ctx[12],
+    				params: /*params*/ ctx[14]
     			},
     			$$inline: true
     		});
@@ -13310,8 +13316,8 @@ var app = (function () {
     	news1 = new News({
     			props: {
     				title: "PUBLIC NEWS",
-    				news: /*publicnews*/ ctx[9],
-    				params: /*params*/ ctx[10]
+    				news: /*publicnews*/ ctx[13],
+    				params: /*params*/ ctx[14]
     			},
     			$$inline: true
     		});
@@ -13366,12 +13372,18 @@ var app = (function () {
     			create_component(menu.$$.fragment);
     			attr_dev(link, "rel", "stylesheet");
     			attr_dev(link, "href", "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
-    			add_location(link, file, 165, 1, 8488);
+    			add_location(link, file, 171, 1, 8618);
     			set_style(div_1, "display", "contents");
     			set_style(div_1, "--fontfamily3", /*fontfamily3*/ ctx[3]);
+    			set_style(div_1, "--color-brand-white", /*colorBrandWhite*/ ctx[4]);
+    			set_style(div_1, "--color-brand-red", /*colorBrandRed*/ ctx[5]);
+    			set_style(div_1, "--color-brand-blue", /*colorBrandBlue*/ ctx[7]);
     			set_style(div_2, "display", "contents");
     			set_style(div_2, "--fontfamily1", /*fontfamily1*/ ctx[1]);
     			set_style(div_2, "--fontfamily2", /*fontfamily2*/ ctx[2]);
+    			set_style(div_2, "--color-brand-red", /*colorBrandRed*/ ctx[5]);
+    			set_style(div_2, "--color-brand-blue", /*colorBrandBlue*/ ctx[7]);
+    			set_style(div_2, "--color-brand-darkblue", /*colorBrandDarkBlue*/ ctx[6]);
     			set_style(div_3, "display", "contents");
     			set_style(div_3, "--fontfamily1", /*fontfamily1*/ ctx[1]);
     			set_style(div_3, "--fontfamily2", /*fontfamily2*/ ctx[2]);
@@ -13381,6 +13393,7 @@ var app = (function () {
     			set_style(div_5, "display", "contents");
     			set_style(div_5, "--fontfamily1", /*fontfamily1*/ ctx[1]);
     			set_style(div_5, "--fontfamily2", /*fontfamily2*/ ctx[2]);
+    			set_style(div_5, "--color-brand-darkblue", /*colorBrandDarkBlue*/ ctx[6]);
     			set_style(div_6, "display", "contents");
     			set_style(div_6, "--fontfamily1", /*fontfamily1*/ ctx[1]);
     			set_style(div_6, "--fontfamily2", /*fontfamily2*/ ctx[2]);
@@ -13399,9 +13412,9 @@ var app = (function () {
     			set_style(div_11, "display", "contents");
     			set_style(div_11, "--fontfamily3", /*fontfamily3*/ ctx[3]);
     			attr_dev(div, "class", "container svelte-18hvwtu");
-    			add_location(div, file, 169, 1, 8626);
+    			add_location(div, file, 175, 1, 8756);
     			attr_dev(main, "class", "svelte-18hvwtu");
-    			add_location(main, file, 168, 0, 8618);
+    			add_location(main, file, 174, 0, 8748);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -13531,6 +13544,12 @@ var app = (function () {
     	validate_slots('App', slots, []);
     	let margin;
     	let fontfamily1 = "Roboto Mono", fontfamily2 = "Roboto", fontfamily3 = "Jost";
+
+    	let colorBrandWhite = "#eefffc",
+    		colorBrandRed = "#ef5959",
+    		colorBrandDarkBlue = "#242053",
+    		colorBrandBlue = "#A4D9D2";
+
     	let author = "Ahsan Ridhoi";
     	let authorprofileimage = "./image/ahsan.png";
     	let deduktifheader = "./image/Menelusuri-Indahnya-Jalur-Pantai-Pangandaran.png";
@@ -13698,6 +13717,10 @@ var app = (function () {
     		fontfamily1,
     		fontfamily2,
     		fontfamily3,
+    		colorBrandWhite,
+    		colorBrandRed,
+    		colorBrandDarkBlue,
+    		colorBrandBlue,
     		author,
     		authorprofileimage,
     		deduktifheader,
@@ -13712,13 +13735,17 @@ var app = (function () {
     		if ('fontfamily1' in $$props) $$invalidate(1, fontfamily1 = $$props.fontfamily1);
     		if ('fontfamily2' in $$props) $$invalidate(2, fontfamily2 = $$props.fontfamily2);
     		if ('fontfamily3' in $$props) $$invalidate(3, fontfamily3 = $$props.fontfamily3);
-    		if ('author' in $$props) $$invalidate(4, author = $$props.author);
-    		if ('authorprofileimage' in $$props) $$invalidate(5, authorprofileimage = $$props.authorprofileimage);
-    		if ('deduktifheader' in $$props) $$invalidate(6, deduktifheader = $$props.deduktifheader);
-    		if ('deduktifurl' in $$props) $$invalidate(7, deduktifurl = $$props.deduktifurl);
-    		if ('trendingnews' in $$props) $$invalidate(8, trendingnews = $$props.trendingnews);
-    		if ('publicnews' in $$props) $$invalidate(9, publicnews = $$props.publicnews);
-    		if ('params' in $$props) $$invalidate(10, params = $$props.params);
+    		if ('colorBrandWhite' in $$props) $$invalidate(4, colorBrandWhite = $$props.colorBrandWhite);
+    		if ('colorBrandRed' in $$props) $$invalidate(5, colorBrandRed = $$props.colorBrandRed);
+    		if ('colorBrandDarkBlue' in $$props) $$invalidate(6, colorBrandDarkBlue = $$props.colorBrandDarkBlue);
+    		if ('colorBrandBlue' in $$props) $$invalidate(7, colorBrandBlue = $$props.colorBrandBlue);
+    		if ('author' in $$props) $$invalidate(8, author = $$props.author);
+    		if ('authorprofileimage' in $$props) $$invalidate(9, authorprofileimage = $$props.authorprofileimage);
+    		if ('deduktifheader' in $$props) $$invalidate(10, deduktifheader = $$props.deduktifheader);
+    		if ('deduktifurl' in $$props) $$invalidate(11, deduktifurl = $$props.deduktifurl);
+    		if ('trendingnews' in $$props) $$invalidate(12, trendingnews = $$props.trendingnews);
+    		if ('publicnews' in $$props) $$invalidate(13, publicnews = $$props.publicnews);
+    		if ('params' in $$props) $$invalidate(14, params = $$props.params);
     	};
 
     	if ($$props && "$$inject" in $$props) {
@@ -13730,6 +13757,10 @@ var app = (function () {
     		fontfamily1,
     		fontfamily2,
     		fontfamily3,
+    		colorBrandWhite,
+    		colorBrandRed,
+    		colorBrandDarkBlue,
+    		colorBrandBlue,
     		author,
     		authorprofileimage,
     		deduktifheader,

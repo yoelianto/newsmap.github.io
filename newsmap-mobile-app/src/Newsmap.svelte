@@ -7,22 +7,26 @@
         return await result.data;
     })()
 
+    // $: console.log(fetchData)
+
     export let margin;
 </script>
 
 <article style="margin-top:{margin}px" id="jurno">
     <div class="grid">
-        <div class="grid1">
+        <div class="grid0">
             {#await fetchData}
                 <p>...waiting</p>
             {:then data}
-                <!-- <img class='imggrid' src={data[0].url} alt={data[0].title} /> -->
-                {data[0].title}
+                <div class="grid1">
+                    <!-- <img class='imggrid' src={data[0].url} alt={data[0].title} /> -->
+                    <p>{data[0].title}</p>
+                </div>
             {:catch error}
                 <p>An error occurred!</p>
             {/await}
         </div>
-        <div class="grid1">
+        <div class="grid0">
             {#await fetchData}
                 <p>...waiting</p>
             {:then data}
@@ -30,7 +34,7 @@
                     {#if data[i + 1] !== undefined}
                         <div class="grid4">
                             <!-- <img class='imggrid' src={data[i+1].url} alt={data[i+1].title} /> -->
-                            {data[i+1].title}
+                            <p>{data[i+1].title}</p>
                         </div>
                     {:else}
                         <div class="grid4" />
@@ -40,7 +44,7 @@
                 <p>An error occurred!</p>
             {/await}
         </div>
-        <div class="grid1">
+        <div class="grid0">
             {#await fetchData}
                 <p>...waiting</p>
             {:then data}
@@ -48,7 +52,7 @@
                     {#if data[i + 5] !== undefined}
                         <div class="grid4">
                             <!-- <img class='imggrid' src={data[i+5].url} alt={data[i+5].title} /> -->
-                            {data[i+5].title}
+                            <p>{data[i+5].title}</p>
                         </div>
                     {:else}
                         <div class="grid4" />
@@ -58,7 +62,7 @@
                 <p>An error occurred!</p>
             {/await}
         </div>
-        <div class="grid1">
+        <div class="grid0">
             {#await fetchData}
                 <p>...waiting</p>
             {:then data}
@@ -66,7 +70,7 @@
                     {#if data[i + 9] !== undefined}
                         <div class="grid9">
                             <!-- <img class='imggrid' src={data[i+9].url} alt={data[i+9].title} /> -->
-                            {data[i+9].title}
+                            <p>{data[i+9].title}</p>
                         </div>
                     {:else}
                         <div class="grid9" />
@@ -90,25 +94,72 @@
         background-color: indianred;
         display: flex;
         flex-wrap: wrap;
+        font-family: var(--fontfamily2);
+        color:white;
+        font-weight: 500;
     }
-    .grid1 {
+    p {
+        margin: 0.5rem;
+    }
+    .grid0 {
         width: 50%;
         height: 50%;
-        background-color: steelblue;
+        background-color: white;
         display: flex;
         flex-wrap: wrap;
+        font-size:1.2rem;
+    }
+    .grid1 {
+        background-color: var(--color-brand-darkblue);
     }
     .grid4 {
         width: 50%;
         height: 50%;
-        background-color: green;
+        background-color: var(--color-brand-red);
+        font-size:0.8rem;
     }
     .grid9 {
         width: 33.33%;
         height: 33.33%;
-        background-color: slateblue;
+        background-color: var(--color-brand-darkblue) ;
+        font-size:0.6rem;
+        line-height: 0.8rem;
     }
-    .imggrid {
-        width:100%;
+    .grid4:nth-child(2) {
+        background-color:rgba(239, 89, 89, 0.9)
+    }
+    .grid4:nth-child(3) {
+        background-color:rgba(239, 89, 89, 0.75)
+    }
+    .grid4:nth-child(4) {
+        background-color:rgba(239, 89, 89, 0.5)
+    }
+
+    .grid9:nth-child(1) {
+        background-color:rgba(36, 32, 83,0.9)
+    }
+    .grid9:nth-child(2) {
+        background-color:rgba(36, 32, 83,0.85)
+    }
+    .grid9:nth-child(3) {
+        background-color:rgba(36, 32, 83,0.8)
+    }
+    .grid9:nth-child(4) {
+        background-color:rgba(36, 32, 83,0.75)
+    }
+    .grid9:nth-child(5) {
+        background-color:rgba(36, 32, 83,0.7)
+    }
+    .grid9:nth-child(6) {
+        background-color:rgba(36, 32, 83,0.65)
+    }
+    .grid9:nth-child(7) {
+        background-color:rgba(36, 32, 83,0.6)
+    }
+    .grid9:nth-child(8) {
+        background-color:rgba(36, 32, 83,0.55)
+    }
+    .grid9:nth-child(9) {
+        background-color:rgba(36, 32, 83,0.5)
     }
 </style>

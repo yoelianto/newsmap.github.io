@@ -16,6 +16,12 @@
 	let fontfamily1 = "Roboto Mono",
 		fontfamily2 = "Roboto",
 		fontfamily3 = "Jost";
+		
+	let colorBrandWhite = "#eefffc",
+		colorBrandRed = "#ef5959",
+		colorBrandDarkBlue = "#242053",
+		colorBrandBlue ="#A4D9D2";
+
 	let author = "Ahsan Ridhoi";
 	let authorprofileimage = "./image/ahsan.png";
 	let deduktifheader = "./image/Menelusuri-Indahnya-Jalur-Pantai-Pangandaran.png"
@@ -171,11 +177,17 @@
 		<Header
 			bind:height={margin}
 			--fontfamily3={fontfamily3}
+			--color-brand-white={colorBrandWhite}
+			--color-brand-red={colorBrandRed}
+			--color-brand-blue={colorBrandBlue}
 		/>
 		<Newsmap
 			margin={margin}
 			--fontfamily1 ={fontfamily1}
 			--fontfamily2={fontfamily2}
+			--color-brand-red={colorBrandRed}
+			--color-brand-blue={colorBrandBlue}
+			--color-brand-darkblue={colorBrandDarkBlue}
 		/>
 		<Sentiment
 			--fontfamily1 ={fontfamily1}
@@ -195,6 +207,7 @@
 			authorprofilealt = {author}
 			--fontfamily1 ={fontfamily1}
 			--fontfamily2={fontfamily2}
+			--color-brand-darkblue={colorBrandDarkBlue}
 		/>
 		<Rewara
 			title='REWARA'  

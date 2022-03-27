@@ -85,7 +85,7 @@
         height:30vw;
         z-index: 99;
         position: fixed;
-        background-color: #eefffc;
+        background-color: var(--color-brand-white);
         width:100vw;
     }
     .headertext {
@@ -99,7 +99,7 @@
     .menu {
         width:25vw;
         text-align: center;
-        color:#ef5959;
+        color:var(--color-brand-red);
     }
     .header-menu {
         display: flex;
@@ -109,7 +109,7 @@
     .bar {
         width:12.5vw;
         height:0.25rem;
-        background-color: #A4D9D2;
+        background-color: var(--color-brand-blue);
         border-radius: 0.25rem;
         display: block;
         position: absolute;

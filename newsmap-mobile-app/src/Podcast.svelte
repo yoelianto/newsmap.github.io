@@ -8,30 +8,32 @@
         return await result.data;
     })()
 
-const fetchImage = (async () => {
-		const response = await fetch('https://jsonplaceholder.typicode.com/photos')
-    return await response.json()
-	})()
+    $:console.table(fetchData)
 
-const fetchPlaylist = (async () => {
-    const response = await fetch('https://jsonplaceholder.typicode.com/todos')
-return await response.json()
-})()
+// const fetchImage = (async () => {
+// 		const response = await fetch('https://jsonplaceholder.typicode.com/photos')
+//     return await response.json()
+// 	})()
 
-let podcast = [
-    {
-        title:"Krisis Berkepanjangan Juventus dan Rasisme dalam Sepakbola Indonesia",
-        url:"https://open.spotify.com/embed/episode/1FfFIT7mH6Q71FCiEWD8un?utm_source=generator"
-    },
-    {
-        title:"48 Jam Bersama European Super League",
-        url:"https://open.spotify.com/embed/episode/7wnWNQzmeJ4jfrwTlgyVY5?utm_source=generator"
-    },
-    {
-        title:"Bukan Lautan, Tapi Liga Champions Kolam Real Madrid",
-        url:"https://open.spotify.com/embed/episode/2EvI4lCuOCMTBrvdXK2zui?utm_source=generator"
-    },
-]
+// const fetchPlaylist = (async () => {
+//     const response = await fetch('https://jsonplaceholder.typicode.com/todos')
+// return await response.json()
+// })()
+
+// let podcast = [
+//     {
+//         title:"Krisis Berkepanjangan Juventus dan Rasisme dalam Sepakbola Indonesia",
+//         url:"https://open.spotify.com/embed/episode/1FfFIT7mH6Q71FCiEWD8un?utm_source=generator"
+//     },
+//     {
+//         title:"48 Jam Bersama European Super League",
+//         url:"https://open.spotify.com/embed/episode/7wnWNQzmeJ4jfrwTlgyVY5?utm_source=generator"
+//     },
+//     {
+//         title:"Bukan Lautan, Tapi Liga Champions Kolam Real Madrid",
+//         url:"https://open.spotify.com/embed/episode/2EvI4lCuOCMTBrvdXK2zui?utm_source=generator"
+//     },
+// ]
 </script>
 
 <div class="container" id="podcast">

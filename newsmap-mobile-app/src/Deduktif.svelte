@@ -12,6 +12,8 @@
         const result = await get(ihttp.URI_ARTICLE_LIST, {size: 1});
         return await result.data;
     })()
+
+    $:console.log(fetchData)
 </script>
 
 <div class="container" id="deduktif">
@@ -66,7 +68,7 @@
         margin-left: 6%;
         margin-top: 1rem;
         margin-bottom:40vw;
-        color: #242053;
+        color: var(--color-brand-darkblue);
     }
     .container {
         display: flex;

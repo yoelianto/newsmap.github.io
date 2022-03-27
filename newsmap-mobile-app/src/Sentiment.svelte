@@ -10,6 +10,7 @@
         return await result.data;
     })()
 
+    $: console.table(fetchData)
 </script>
 
 <div class="container">
