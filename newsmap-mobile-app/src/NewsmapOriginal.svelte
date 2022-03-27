@@ -16,21 +16,35 @@
 			thumb:"https://admin-dev.newsmap.id/uploads/news/1637751242_Ambisverse-compress.jpg"
         }
         ]
+    import { get } from "./api";
+    import * as ihttp from './constants/initialHttp';
+
+    const fetchData = (async () => {
+        const result = await get(ihttp.URI_ARTICLE_LIST, {size: 1});
+        return await result.data;
+    })()
 </script>
 
 <div class="container" id="original">
     <p class="title">JURNO ORIGINAL</p>
-    <a href={jurno[0].url}>
-        <div class="card">
-            <img class="thumb" src={jurno[0].thumb} alt="" >
-            <div class="bottom"></div>
-            <div class="inner-card">
-                <div class="sub-title">Original Jurno</div>
-                <div class="card-title">Kenapa Bimbel Bisa Booming Banget</div>
+    {#await fetchData}
+        <p>...waiting</p>
+    {:then data}
+        {#each data as d, i}
+        <a href={`${process['env']['DOMAIN']}/article/${d.slug}`}>
+            <div class="card">
+                <img class="thumb" src={`${process['env']['URL_IMAGE']}news/${d.thumbnail}`} alt="" >
+                <div class="bottom"></div>
+                <div class="inner-card">
+                    <div class="sub-title">Original Jurno</div>
+                    <div class="card-title">{d.title}</div>
+                </div>
             </div>
-        </div>
-    </a>
-    
+        </a>
+        {/each}
+    {:catch error}
+        <p>An error occurred!</p>
+    {/await}
 </div>
 
 <style>

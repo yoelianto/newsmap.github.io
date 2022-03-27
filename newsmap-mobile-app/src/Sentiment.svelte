@@ -1,52 +1,36 @@
 <script>
-    const fetchImage = (async () => {
-		const response = await fetch('https://jsonplaceholder.typicode.com/photos')
-    return await response.json()
-	})()
+    import { get } from "./api";
+    import * as ihttp from './constants/initialHttp';
 
-    const sentiment = [
-        {
-            name:"Joko Widodo",
-            url:"https://cdn.newstensity.com/image/9222a02f1e8748ce8b74d27231da39ab/phpj4jvde.jpeg"
-        },
-        {
-            name:"Muhammad Luthfi",
-            url:"https://cdn.newstensity.com/image/cda36ff6c0a74d75a2868026b5b78039/phpioom9v.jpg"
-        },
-        {
-            name:"Marc Marquez",
-            url:"https://cdn.newstensity.com/image/72090f1326ee49c0a703e4d5ea5929f4/image.jpg"
-        },
-        {
-            name:"Luhut Binsar Pandjaitan",
-            url:"https://cdn.newstensity.com/image/b803d03f3a6a4ee5985a56174a24239c/phpijmeie.jpg"
-        },
-        {
-            name:"Doni Salmanan",
-            url:"https://cdn.newstensity.com/image/fd43d585386f4424a8cdbc5377cbfa3e/phplctpor.jpg"
-        }
-    ];
+    export let params = {}
+
+    const fetchData = (async () => {
+        const mergeParams = {...params, kind: 'person'}
+        const result = await get(ihttp.URI_NEWS_TOP_ENTITY, mergeParams);
+        return await result.data;
+    })()
+
 </script>
 
 <div class="container">
     <div class="slider">
-        <!-- {#await fetchImage}
+        {#await fetchData}
         <p>...waiting</p>
-        {:then data} -->
-            {#each sentiment as sentiment, i}
+        {:then data}
+            {#each data as d}
             <div class="sentiment-container">
                 <div class="sentiment">
                     <div class="person">
-                        <img class='people' src={sentiment.url} alt={sentiment.name} />
+                        <img class='people' src={d.thumbnail} alt={d.name} />
                     </div>
-                    <div class="name">{sentiment.name}</div>
+                    <div class="name">{d.name}</div>
                 </div>
             </div>
                 
             {/each}
-        <!-- {:catch error}
+        {:catch error}
             <p>An error occurred!</p>
-        {/await} -->
+        {/await}
     </div>
 </div>
 

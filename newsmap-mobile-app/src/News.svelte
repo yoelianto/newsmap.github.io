@@ -1,6 +1,14 @@
 <script>
-export let title = ''
+import { get } from "./api";
+import * as ihttp from './constants/initialHttp';
 
+export let title = ''
+export let params = {}
+
+const fetchData = (async () => {
+    const result = await get(ihttp.URI_NEWS_LIST, {...params, media_type: 'print,online'});
+    return await result.data;
+})()
 export let news;
 
 const fetchImage = (async () => {
@@ -13,21 +21,21 @@ const fetchImage = (async () => {
     <p class="title">{title}</p>
     <div class="slider-container">
         <div class="slider">
-            <!-- {#await news}
+            {#await fetchData}
             <p>...waiting</p>
-            {:then data} -->
-                {#each news as news}
+            {:then data}
+                {#each data as d}
                 <a href={news.url}>
                     <div class="news">
-                        <img class='imgthumb' src={news.thumb} alt={news.title} />
-                        <p class="author">{news.web}</p>
-                        <p class="article-title">{news.title}</p>
+                        <img class='imgthumb' src={d.origin_images} alt={d.title} />
+                        <p class="author">{d.media}</p>
+                        <p class="article-title">{d.title}</p>
                     </div>
                 </a>
                 {/each}
-            <!-- {:catch error}
+            {:catch error}
                 <p>An error occurred!</p>
-            {/await} -->
+            {/await}
         </div>
     </div>
 </div>
