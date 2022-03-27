@@ -1,6 +1,8 @@
 <script>
-    export let title;
-    export let authorprofileimage, authorprofilealt, author, deduktifheader, deduktifurl;
+    //export let title;
+    export let author, deduktifheader, deduktifurl;
+
+    //export let  authorprofileimage, authorprofilealt;
 
     import { get } from "./api";
     import * as ihttp from './constants/initialHttp';
