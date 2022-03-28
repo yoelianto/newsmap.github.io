@@ -7,7 +7,7 @@
         return await result.data;
     })()
 
-    export let title = ''
+    export let title
     
     // const fetchImage = (async () => {
     //         const response = await fetch('https://jsonplaceholder.typicode.com/photos')

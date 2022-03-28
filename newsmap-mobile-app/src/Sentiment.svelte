@@ -10,7 +10,8 @@
         return await result.data;
     })()
 
-    $: console.table(fetchData)
+    $: console.log(fetchData)
+    
 </script>
 
 <div class="container">
@@ -43,6 +44,7 @@
     }
     .slider {
         overflow-x: scroll;
+        overflow-y:hidden;
         white-space: nowrap;
         display: flex;
     }

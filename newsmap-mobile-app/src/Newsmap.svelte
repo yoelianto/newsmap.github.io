@@ -101,6 +101,12 @@
     p {
         margin: 0.5rem;
     }
+    .grid4 > p {
+        margin: 0.3rem;
+    }
+    .grid9 > p {
+        margin: 0.2rem;
+    }
     .grid0 {
         width: 50%;
         height: 50%;
@@ -110,7 +116,7 @@
         font-size:1.2rem;
     }
     .grid1 {
-        background-color: var(--color-brand-darkblue);
+        background-color: #393664;
     }
     .grid4 {
         width: 50%;

@@ -1,6 +1,7 @@
 <script>
     //export let title;
-    export let author, deduktifheader, deduktifurl;
+    export let author;
+    let deduktifurl = "https://newsmap.id/article/";
 
     //export let  authorprofileimage, authorprofilealt;
 
@@ -13,7 +14,7 @@
         return await result.data;
     })()
 
-    $:console.log(fetchData)
+    // $:console.log(fetchData)
 </script>
 
 <div class="container" id="deduktif">
@@ -38,12 +39,12 @@
             <div class="contenttop">
                 
                 <div class="headline">
-                        <img class="header" src={deduktifheader} alt="" >
+                        <img class="header" src={`${process['env']['URL_IMAGE']}/news/${d.thumbnail}`} alt={d.title} >
                     
                     <div class="headerbottom"></div>
                     <div class="detail">
                         <div class="author">oleh {author}</div>
-                        <a href={deduktifurl}>
+                        <a href = {deduktifurl+d.slug}>
                             <div class="title">{d.title}</div>  
                         </a>
                          

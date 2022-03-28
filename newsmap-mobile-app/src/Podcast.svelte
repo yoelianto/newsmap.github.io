@@ -8,7 +8,7 @@
         return await result.data;
     })()
 
-    $:console.table(fetchData)
+    // $:console.table(fetchData)
 
 // const fetchImage = (async () => {
 // 		const response = await fetch('https://jsonplaceholder.typicode.com/photos')

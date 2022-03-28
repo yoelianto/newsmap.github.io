@@ -9,12 +9,12 @@ const fetchData = (async () => {
     const result = await get(ihttp.URI_NEWS_LIST, {...params, media_type: 'print,online'});
     return await result.data;
 })()
-export let news;
 
-const fetchImage = (async () => {
-		const response = await fetch('https://jsonplaceholder.typicode.com/photos')
-    return await response.json()
-	})()
+// const fetchImage = (async () => {
+// 		const response = await fetch('https://jsonplaceholder.typicode.com/photos')
+//     return await response.json()
+// 	})()
+
 </script>
 
 <div class="container">
@@ -25,7 +25,7 @@ const fetchImage = (async () => {
             <p>...waiting</p>
             {:then data}
                 {#each data as d}
-                <a href={news.url}>
+                <a href={d.source_url}>
                     <div class="news">
                         <img class='imgthumb' src={d.origin_images} alt={d.title} />
                         <p class="author">{d.media}</p>
@@ -51,6 +51,7 @@ const fetchImage = (async () => {
     }
     .slider-container {
         overflow-x: scroll;
+        overflow-y:hidden;
         white-space: nowrap;  
     }
     .slider {
