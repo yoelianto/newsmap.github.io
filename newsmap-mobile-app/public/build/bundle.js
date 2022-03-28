@@ -4805,7 +4805,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (48:8) {:catch error}
+    // (51:8) {:catch error}
     function create_catch_block$5(ctx) {
     	let p;
 
@@ -4813,7 +4813,7 @@ var app = (function () {
     		c: function create() {
     			p = element("p");
     			p.textContent = "An error occurred!";
-    			add_location(p, file$7, 48, 12, 1605);
+    			add_location(p, file$7, 51, 12, 1674);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -4828,7 +4828,7 @@ var app = (function () {
     		block,
     		id: create_catch_block$5.name,
     		type: "catch",
-    		source: "(48:8) {:catch error}",
+    		source: "(51:8) {:catch error}",
     		ctx
     	});
 
@@ -4907,11 +4907,11 @@ var app = (function () {
     function create_each_block$6(ctx) {
     	let div5;
     	let div4;
-    	let div1;
     	let div0;
-    	let t0;
     	let img;
     	let img_src_value;
+    	let t0;
+    	let div1;
     	let t1;
     	let div2;
     	let t2_value = /*d*/ ctx[3].percent + "";
@@ -4927,10 +4927,10 @@ var app = (function () {
     		c: function create() {
     			div5 = element("div");
     			div4 = element("div");
-    			div1 = element("div");
     			div0 = element("div");
-    			t0 = space();
     			img = element("img");
+    			t0 = space();
+    			div1 = element("div");
     			t1 = space();
     			div2 = element("div");
     			t2 = text(t2_value);
@@ -4939,22 +4939,23 @@ var app = (function () {
     			div3 = element("div");
     			t5 = text(t5_value);
     			t6 = space();
-    			attr_dev(div0, "class", "pie svelte-9c7vge");
-    			set_style(div0, "--p", /*d*/ ctx[3].percentAbs);
-    			set_style(div0, "--c", /*d*/ ctx[3].color);
-    			set_style(div0, "--b", "10px");
-    			add_location(div0, file$7, 38, 24, 1189);
-    			attr_dev(img, "class", "people svelte-9c7vge");
+    			attr_dev(img, "class", "people svelte-bj14or");
     			if (!src_url_equal(img.src, img_src_value = /*d*/ ctx[3].thumbnail)) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", /*d*/ ctx[3].name);
-    			add_location(img, file$7, 39, 24, 1288);
-    			attr_dev(div1, "class", "person svelte-9c7vge");
-    			add_location(div1, file$7, 37, 20, 1143);
-    			attr_dev(div2, "class", "percent svelte-9c7vge");
-    			add_location(div2, file$7, 41, 20, 1391);
-    			attr_dev(div3, "class", "name svelte-9c7vge");
-    			add_location(div3, file$7, 42, 20, 1452);
-    			attr_dev(div4, "class", "sentiment svelte-9c7vge");
+    			add_location(img, file$7, 40, 28, 1229);
+    			attr_dev(div0, "class", "person svelte-bj14or");
+    			add_location(div0, file$7, 38, 24, 1149);
+    			attr_dev(div1, "class", "pie svelte-bj14or");
+    			set_style(div1, "--p", /*d*/ ctx[3].percentAbs);
+    			set_style(div1, "--c", /*d*/ ctx[3].color);
+    			set_style(div1, "--b", "6px");
+    			add_location(div1, file$7, 42, 24, 1340);
+    			attr_dev(div2, "class", "percent svelte-bj14or");
+    			set_style(div2, "color", /*d*/ ctx[3].color);
+    			add_location(div2, file$7, 44, 20, 1436);
+    			attr_dev(div3, "class", "name svelte-bj14or");
+    			add_location(div3, file$7, 45, 20, 1521);
+    			attr_dev(div4, "class", "sentiment svelte-bj14or");
     			add_location(div4, file$7, 36, 16, 1098);
     			attr_dev(div5, "class", "sentiment-container");
     			add_location(div5, file$7, 35, 12, 1047);
@@ -4962,10 +4963,10 @@ var app = (function () {
     		m: function mount(target, anchor) {
     			insert_dev(target, div5, anchor);
     			append_dev(div5, div4);
+    			append_dev(div4, div0);
+    			append_dev(div0, img);
+    			append_dev(div4, t0);
     			append_dev(div4, div1);
-    			append_dev(div1, div0);
-    			append_dev(div1, t0);
-    			append_dev(div1, img);
     			append_dev(div4, t1);
     			append_dev(div4, div2);
     			append_dev(div2, t2);
@@ -5045,9 +5046,9 @@ var app = (function () {
     			div1 = element("div");
     			div0 = element("div");
     			info.block.c();
-    			attr_dev(div0, "class", "slider svelte-9c7vge");
+    			attr_dev(div0, "class", "slider svelte-bj14or");
     			add_location(div0, file$7, 30, 4, 905);
-    			attr_dev(div1, "class", "container svelte-9c7vge");
+    			attr_dev(div1, "class", "container svelte-bj14or");
     			add_location(div1, file$7, 29, 0, 876);
     		},
     		l: function claim(nodes) {

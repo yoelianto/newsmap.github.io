@@ -35,11 +35,14 @@
             {#each data as d}
             <div class="sentiment-container">
                 <div class="sentiment">
-                    <div class="person">
-                        <div class="pie" style="--p:{d.percentAbs};--c:{d.color};--b:10px"></div>
-                        <img class='people' src={d.thumbnail} alt={d.name} />
-                    </div>
-                    <div class="percent">{d.percent}%</div>
+
+                        <div class="person">
+                            
+                            <img class='people' src={d.thumbnail} alt={d.name} />
+                        </div>
+                        <div class="pie" style="--p:{d.percentAbs};--c:{d.color};--b:6px"></div>
+
+                    <div class="percent" style="color:{d.color}">{d.percent}%</div>
                     <div class="name">{d.name}</div>
                 </div>
             </div>
@@ -68,12 +71,12 @@
         flex-direction: column;
         width:25vw;
         margin:0.5rem;
+        position: relative;
     }
     .person{
-        clip-path: circle(50%);
+        clip-path: circle(40%);
         width: 25vw;
         height: 25vw;
-        position: relative;
     }
     .people {
         width:100%;
