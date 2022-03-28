@@ -10,6 +10,7 @@ const fetchData = (async () => {
     return await result.data;
 })()
 
+
 // const fetchImage = (async () => {
 // 		const response = await fetch('https://jsonplaceholder.typicode.com/photos')
 //     return await response.json()

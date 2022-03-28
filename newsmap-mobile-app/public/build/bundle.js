@@ -5583,7 +5583,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (36:12) {:catch error}
+    // (37:12) {:catch error}
     function create_catch_block$3(ctx) {
     	let p;
 
@@ -5591,7 +5591,7 @@ var app = (function () {
     		c: function create() {
     			p = element("p");
     			p.textContent = "An error occurred!";
-    			add_location(p, file$5, 36, 16, 1146);
+    			add_location(p, file$5, 37, 16, 1148);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -5606,14 +5606,14 @@ var app = (function () {
     		block,
     		id: create_catch_block$3.name,
     		type: "catch",
-    		source: "(36:12) {:catch error}",
+    		source: "(37:12) {:catch error}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (26:12) {:then data}
+    // (27:12) {:then data}
     function create_then_block$3(ctx) {
     	let each_1_anchor;
     	let each_value = /*data*/ ctx[3];
@@ -5674,14 +5674,14 @@ var app = (function () {
     		block,
     		id: create_then_block$3.name,
     		type: "then",
-    		source: "(26:12) {:then data}",
+    		source: "(27:12) {:then data}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (27:16) {#each data as d}
+    // (28:16) {#each data as d}
     function create_each_block$4(ctx) {
     	let a;
     	let div;
@@ -5712,15 +5712,15 @@ var app = (function () {
     			attr_dev(img, "class", "imgthumb svelte-w4d3xq");
     			if (!src_url_equal(img.src, img_src_value = /*d*/ ctx[4].origin_images)) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", /*d*/ ctx[4].title);
-    			add_location(img, file$5, 29, 24, 844);
+    			add_location(img, file$5, 30, 24, 846);
     			attr_dev(p0, "class", "author svelte-w4d3xq");
-    			add_location(p0, file$5, 30, 24, 930);
+    			add_location(p0, file$5, 31, 24, 932);
     			attr_dev(p1, "class", "article-title svelte-w4d3xq");
-    			add_location(p1, file$5, 31, 24, 987);
+    			add_location(p1, file$5, 32, 24, 989);
     			attr_dev(div, "class", "news svelte-w4d3xq");
-    			add_location(div, file$5, 28, 20, 800);
+    			add_location(div, file$5, 29, 20, 802);
     			attr_dev(a, "href", /*d*/ ctx[4].source_url);
-    			add_location(a, file$5, 27, 16, 755);
+    			add_location(a, file$5, 28, 16, 757);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, a, anchor);
@@ -5744,14 +5744,14 @@ var app = (function () {
     		block,
     		id: create_each_block$4.name,
     		type: "each",
-    		source: "(27:16) {#each data as d}",
+    		source: "(28:16) {#each data as d}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (24:30)               <p>...waiting</p>              {:then data}
+    // (25:30)               <p>...waiting</p>              {:then data}
     function create_pending_block$3(ctx) {
     	let p;
 
@@ -5759,7 +5759,7 @@ var app = (function () {
     		c: function create() {
     			p = element("p");
     			p.textContent = "...waiting";
-    			add_location(p, file$5, 24, 12, 659);
+    			add_location(p, file$5, 25, 12, 661);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -5774,7 +5774,7 @@ var app = (function () {
     		block,
     		id: create_pending_block$3.name,
     		type: "pending",
-    		source: "(24:30)               <p>...waiting</p>              {:then data}",
+    		source: "(25:30)               <p>...waiting</p>              {:then data}",
     		ctx
     	});
 
@@ -5813,13 +5813,13 @@ var app = (function () {
     			div0 = element("div");
     			info.block.c();
     			attr_dev(p, "class", "title svelte-w4d3xq");
-    			add_location(p, file$5, 20, 4, 519);
+    			add_location(p, file$5, 21, 4, 521);
     			attr_dev(div0, "class", "slider svelte-w4d3xq");
-    			add_location(div0, file$5, 22, 8, 593);
+    			add_location(div0, file$5, 23, 8, 595);
     			attr_dev(div1, "class", "slider-container svelte-w4d3xq");
-    			add_location(div1, file$5, 21, 4, 553);
+    			add_location(div1, file$5, 22, 4, 555);
     			attr_dev(div2, "class", "container");
-    			add_location(div2, file$5, 19, 0, 490);
+    			add_location(div2, file$5, 20, 0, 492);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -13129,7 +13129,7 @@ var app = (function () {
     	return block;
     }
 
-    // (168:19)  {/await}
+    // (57:19)  {/await}
     function create_pending_block(ctx) {
     	const block = { c: noop, m: noop, d: noop };
 
@@ -13137,7 +13137,7 @@ var app = (function () {
     		block,
     		id: create_pending_block.name,
     		type: "pending",
-    		source: "(168:19)  {/await}",
+    		source: "(57:19)  {/await}",
     		ctx
     	});
 
@@ -13198,7 +13198,7 @@ var app = (function () {
     	handle_promise(getToken(), info);
 
     	function header_height_binding(value) {
-    		/*header_height_binding*/ ctx[15](value);
+    		/*header_height_binding*/ ctx[13](value);
     	}
 
     	let header_props = {};
@@ -13216,7 +13216,7 @@ var app = (function () {
     		});
 
     	sentiment = new Sentiment({
-    			props: { params: /*params*/ ctx[14] },
+    			props: { params: /*params*/ ctx[10] },
     			$$inline: true
     		});
 
@@ -13225,8 +13225,6 @@ var app = (function () {
     	deduktif = new Deduktif({
     			props: {
     				title: "Menelusuri Indahnya Jalur Pantai Pangandaran",
-    				deduktifurl: /*deduktifurl*/ ctx[11],
-    				deduktifheader: /*deduktifheader*/ ctx[10],
     				author: /*author*/ ctx[8],
     				authorprofileimage: /*authorprofileimage*/ ctx[9],
     				authorprofilealt: /*author*/ ctx[8]
@@ -13241,24 +13239,22 @@ var app = (function () {
 
     	news0 = new News({
     			props: {
-    				title: "TRENDING NOW",
-    				news: /*trendingnews*/ ctx[12],
-    				params: /*params*/ ctx[14]
+    				title: "NASIONAL",
+    				params: /*paramsNasional*/ ctx[11]
     			},
     			$$inline: true
     		});
 
     	news1 = new News({
     			props: {
-    				title: "PUBLIC NEWS",
-    				news: /*publicnews*/ ctx[13],
-    				params: /*params*/ ctx[14]
+    				title: "DAERAH",
+    				params: /*paramsDaerah*/ ctx[12]
     			},
     			$$inline: true
     		});
 
     	video = new Video({
-    			props: { title: "YOUTUBE SHORTS" },
+    			props: { title: "SHORT VIDEOS" },
     			$$inline: true
     		});
 
@@ -13307,7 +13303,7 @@ var app = (function () {
     			create_component(menu.$$.fragment);
     			attr_dev(link, "rel", "stylesheet");
     			attr_dev(link, "href", "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
-    			add_location(link, file, 171, 1, 8618);
+    			add_location(link, file, 60, 1, 1463);
     			set_style(div_1, "display", "contents");
     			set_style(div_1, "--fontfamily3", /*fontfamily3*/ ctx[3]);
     			set_style(div_1, "--color-brand-white", /*colorBrandWhite*/ ctx[4]);
@@ -13347,9 +13343,9 @@ var app = (function () {
     			set_style(div_11, "display", "contents");
     			set_style(div_11, "--fontfamily3", /*fontfamily3*/ ctx[3]);
     			attr_dev(div, "class", "container svelte-18hvwtu");
-    			add_location(div, file, 175, 1, 8756);
+    			add_location(div, file, 64, 1, 1601);
     			attr_dev(main, "class", "svelte-18hvwtu");
-    			add_location(main, file, 174, 0, 8748);
+    			add_location(main, file, 63, 0, 1593);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -13487,134 +13483,6 @@ var app = (function () {
 
     	let author = "Ahsan Ridhoi";
     	let authorprofileimage = "./image/ahsan.png";
-    	let deduktifheader = "./image/Menelusuri-Indahnya-Jalur-Pantai-Pangandaran.png";
-    	let deduktifurl = "https://newsmap.id/article/menelusuri-indahnya-jalur-pantai-pangandaran";
-
-    	let trendingnews = [
-    		{
-    			title: "Warga Batu Merah Blokir Jalan",
-    			web: "malukuterkini.com",
-    			url: "https://newsmap.id/news/warga-batu-merah-blokir-jalan",
-    			thumb: "https://www.malukuterkini.com/wp-content/uploads/2022/03/BATU-MERAH-230322-1-OK.jpg"
-    		},
-    		{
-    			title: "NATO likely to approve more troops for its eastern flank -- secretary general",
-    			web: "theedgemarkets.com",
-    			url: "https://newsmap.id/news/nato-likely-to-approve-more-troops-for-its-eastern-flank----secretary-general",
-    			thumb: "https://assets.theedgemarkets.com/jens_stoltenberg_20220323235228_reuters.jpg?.zxPjwhTJThV3US4d74bRpjhsRiu2fqH"
-    		},
-    		{
-    			title: "Gubernur Olly Larang Pejabat Pemprov Sulut ke Luar Daerah Selama Pemeriksaan BPK",
-    			web: "indimanado.com",
-    			url: "https://newsmap.id/news/gubernur-olly-larang-pejabat-pemprov-sulut-ke-luar-daerah-selama-pemeriksaan-bpk",
-    			thumb: "https://media.binosaurus.com/ocr/image/0b36c2b54b7a4726b10a9ed040bd7844/https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEibHJ1If-EMxrhK-T3en2rNr5RBypg3r0hlt2A70fQkhLOv2k6lwKu88yLsOqrpj3E85emQxHLI_3WK_wEjvsYsWk3Lx6yxuB5NoVpGe59C9VHp26JFP-o4vrT5SwylFt7mIv8WLgveVDkY74ovXvQ_F0g6440uX3U6g5MV7LJ8SJqUT9kugV7bO0NI/w1200-h630-p-k-no-nu/20220323_234526.jpg"
-    		},
-    		{
-    			title: "AHY Beri Kuliah Umum: Menyongsong Indonesia Emas 2045 Perlu Persiapan SDM",
-    			web: "majalahintrust.com",
-    			url: "https://newsmap.id/news/ahy-beri-kuliah-umum--menyongsong-indonesia-emas-2045-perlu-persiapan-sdm",
-    			thumb: "https://majalahintrust.com/wp-content/uploads/2022/03/IMG_20220323_164026-1024x716.jpg"
-    		},
-    		{
-    			title: "Sekda Kotabaru Buka Pembinaan TLHP BPK-RI",
-    			web: "apahabar.com",
-    			url: "https://newsmap.id/news/sekda-kotabaru-buka-pembinaan-tlhp-bpk-ri",
-    			thumb: "https://apahabar.com/wp-content/uploads/2022/03/5C66A133-2644-4F67-8D5D-842C2D333AD2-e1648050198433.jpeg"
-    		},
-    		{
-    			title: "Cresco Labs to buy Columbia Care in US$2 billion cannabis deal",
-    			web: "theedgemarkets.com",
-    			url: "https://newsmap.id/news/cresco-labs-to-buy-columbia-care-in-us-2-billion-cannabis-deal",
-    			thumb: "https://assets.theedgemarkets.com/cresco_labs_inc_20220323234305_bloomberg.jpg?J9PlSV3ippKoKI.emJuBy2nSCnNhep5v"
-    		},
-    		{
-    			title: "Bentuk Kepedulian, Tim Sambang Polwan Polres Kapuas Bagikan Sembako Kepada Warga",
-    			web: "kobarnews.com",
-    			url: "https://newsmap.id/news/bentuk-kepedulian--tim-sambang-polwan-polres-kapuas-bagikan-sembako-kepada-warga",
-    			thumb: "http://kobarnews.com/wp-content/uploads/2022/03/WhatsApp-Image-2022-03-23-at-16.41.10.jpeg"
-    		},
-    		{
-    			title: "Bentuk Pencegahan, Polsek Kapuas Timur Sosialisasikan Prokes 5M",
-    			web: "kobarnews.com",
-    			url: "https://newsmap.id/news/bentuk-pencegahan--polsek-kapuas-timur-sosialisasikan-prokes-5m",
-    			thumb: "http://kobarnews.com/wp-content/uploads/2022/03/WhatsApp-Image-2022-03-23-at-16.40.43.jpeg"
-    		},
-    		{
-    			title: "Noor Azri Noor Azerai now joins lingerie maker Caely as director",
-    			web: "theedgemarkets.com",
-    			url: "https://newsmap.id/news/noor-azri-noor-azerai-now-joins-lingerie-maker-caely-as-director",
-    			thumb: "https://assets.theedgemarkets.com/Caely-Holdings_www.caelyholdings.com__4.jpg?0pGPiPjvgy8da0PuXRLACauU24fTPm.y"
-    		},
-    		{
-    			title: "Sosialisasikan Imbauan Kebakaran Hutan dan Lahan Kepada Warga, Ini Yang di Sampaikan Kapolsek Kapuas Murung",
-    			web: "kobarnews.com",
-    			url: "https://newsmap.id/news/sosialisasikan-imbauan--kebakaran-hutan-dan-lahan-kepada-warga--ini-yang-di-sampaikan-kapolsek-kapuas-murung",
-    			thumb: "https://media.binosaurus.com/ocr/image/98932bab8ad44868b8d91a7dfd1621ea/http://kobarnews.com/wp-content/uploads/2022/03/WhatsApp-Image-2022-03-23-at-16.40.31.jpeg"
-    		}
-    	];
-
-    	let publicnews = [
-    		{
-    			title: "Jennifer Jill Ngebet Punya Keturunan di Usia 48 Tahun, Blak-blakan Gak Sudi Anaknya Mirip Ajun: Semoga Kayak Gue!",
-    			web: "rctiplus.com",
-    			url: "https://newsmap.id/news/jennifer-jill-ngebet-punya-keturunan-di-usia-48-tahun--blak-blakan-gak-sudi-anaknya-mirip-ajun--semoga-kayak-gue-",
-    			thumb: "https://img.herstory.co.id/articles/archive_20220323/ajun-perwira-20220323-154219-thumb.jpg"
-    		},
-    		{
-    			title: "Bantu Atasi Keluhan Tulang Belakang, Dooglee Indonesia Luncurkan Lumbar Pillow.",
-    			web: "mediaindonesia.com",
-    			url: "https://newsmap.id/news/bantu-atasi-keluhan-tulang-belakang--dooglee-indonesia-luncurkan-lumbar-pillow-",
-    			thumb: "https://disk.mediaindonesia.com/thumbs/590x400/news/2022/03/f37947479ae5b69fb20c44161af48bf7.jpg"
-    		},
-    		{
-    			title: "SMF Perluas Pembiayaan Kredit bagi Pengusaha di Lombok NTT",
-    			web: "rctiplus.com",
-    			url: "https://newsmap.id/news/smf-perluas-pembiayaan-kredit-bagi-pengusaha-di-lombok-ntt",
-    			thumb: "https://static.rctiplus.id/media/600/files/fta_rcti/news/2161482.jpg"
-    		},
-    		{
-    			title: "Ribuan Da’i Ikut Bangun Desa Terpencil, Kemenag Mendukung",
-    			web: "viva.co.id",
-    			url: "https://newsmap.id/news/ribuan-da-i-ikut-bangun-desa-terpencil--kemenag-mendukung",
-    			thumb: "https://thumb.viva.co.id/media/frontend/thumbs3/2022/03/23/623b434f7b51b-da-i-bangun-desa-terpencil_665_374.jpg"
-    		},
-    		{
-    			title: "Wiku: Jatim Sumbang Kelurahan Terbanyak Kepatuhan Pakai Masker Rendah",
-    			web: "rctiplus.com",
-    			url: "https://newsmap.id/news/wiku--jatim-sumbang-kelurahan-terbanyak-kepatuhan-pakai-masker-rendah",
-    			thumb: "https://img.herstory.co.id/articles/archive_20220323/ajun-perwira-20220323-154219-thumb.jpg"
-    		},
-    		{
-    			title: "Jennifer Jill Ngebet Punya Keturunan di Usia 48 Tahun, Blak-blakan Gak Sudi Anaknya Mirip Ajun: Semoga Kayak Gue!",
-    			web: "rctiplus.com",
-    			url: "https://newsmap.id/news/jennifer-jill-ngebet-punya-keturunan-di-usia-48-tahun--blak-blakan-gak-sudi-anaknya-mirip-ajun--semoga-kayak-gue-",
-    			thumb: "https://static.rctiplus.id/media/600/files/fta_rcti/news/2161483.jpg"
-    		},
-    		{
-    			title: "Jennifer Jill Ngebet Punya Keturunan di Usia 48 Tahun, Blak-blakan Gak Sudi Anaknya Mirip Ajun: Semoga Kayak Gue!",
-    			web: "rctiplus.com",
-    			url: "https://newsmap.id/news/jennifer-jill-ngebet-punya-keturunan-di-usia-48-tahun--blak-blakan-gak-sudi-anaknya-mirip-ajun--semoga-kayak-gue-",
-    			thumb: "https://img.herstory.co.id/articles/archive_20220323/ajun-perwira-20220323-154219-thumb.jpg"
-    		},
-    		{
-    			title: "MUI Bantah Ajukan Permohonan ke KPI Soal 'Boikot' Ayu Ting Ting: Yang Diminta Hentikan Adalah Program Tertentu",
-    			web: "makassar.terkini.id",
-    			url: "https://newsmap.id/news/mui-bantah-ajukan-permohonan-ke-kpi-soal--boikot--ayu-ting-ting--yang-diminta-hentikan-adalah-program-tertentu",
-    			thumb: "https://media.binosaurus.com/ocr/image/c53c1ed2d99648edbffc4d66b0f0d0c3/https://makassar.terkini.id/wp-content/uploads/2022/03/terkiniid_screenshot_20220323-220004_instagram.jpg"
-    		},
-    		{
-    			title: "Soal Pawang Hujan di Mandalika, BMKG: Kami Gunakan Teknologi, Beda dengan Kearifan Lokal",
-    			web: "hetanews.com",
-    			url: "https://newsmap.id/news/soal-pawang-hujan-di-mandalika--bmkg--kami-gunakan-teknologi--beda-dengan-kearifan-lokal",
-    			thumb: "https://www.hetanews.com/images/20220323/20220323111027-77385-rara-isti-wulandari-pawang-hujan-motogp-mandalika.jpg"
-    		},
-    		{
-    			title: "Ketua Jokowi Mania Dipecat dari Komisaris Anak BUMN, Gara-gara Jadi Saksi Munarman?",
-    			web: "kronologi.id",
-    			url: "https://newsmap.id/news/ketua-jokowi-mania-dipecat-dari-komisaris-anak-bumn--gara-gara-jadi-saksi-munarman-",
-    			thumb: "https://img.herstory.co.id/articles/archive_20220323/ajun-perwira-20220323-154219-thumb.jpg"
-    		}
-    	];
 
     	let params = {
     		from: moment().subtract(7, 'd').format('YYYY-MM-DD'),
@@ -13622,6 +13490,24 @@ var app = (function () {
     		sort_by: 'published_date',
     		sort_dir: 'desc',
     		per_page: 5
+    	};
+
+    	let paramsNasional = {
+    		from: moment().subtract(7, 'd').format('YYYY-MM-DD'),
+    		to: moment().format('YYYY-MM-DD'),
+    		sort_by: 'published_date',
+    		sort_dir: 'desc',
+    		per_page: 5,
+    		media_scope: 'Nasional'
+    	};
+
+    	let paramsDaerah = {
+    		from: moment().subtract(7, 'd').format('YYYY-MM-DD'),
+    		to: moment().format('YYYY-MM-DD'),
+    		sort_by: 'published_date',
+    		sort_dir: 'desc',
+    		per_page: 5,
+    		media_scope: 'Daerah'
     	};
 
     	const writable_props = [];
@@ -13658,11 +13544,9 @@ var app = (function () {
     		colorBrandBlue,
     		author,
     		authorprofileimage,
-    		deduktifheader,
-    		deduktifurl,
-    		trendingnews,
-    		publicnews,
-    		params
+    		params,
+    		paramsNasional,
+    		paramsDaerah
     	});
 
     	$$self.$inject_state = $$props => {
@@ -13676,11 +13560,9 @@ var app = (function () {
     		if ('colorBrandBlue' in $$props) $$invalidate(7, colorBrandBlue = $$props.colorBrandBlue);
     		if ('author' in $$props) $$invalidate(8, author = $$props.author);
     		if ('authorprofileimage' in $$props) $$invalidate(9, authorprofileimage = $$props.authorprofileimage);
-    		if ('deduktifheader' in $$props) $$invalidate(10, deduktifheader = $$props.deduktifheader);
-    		if ('deduktifurl' in $$props) $$invalidate(11, deduktifurl = $$props.deduktifurl);
-    		if ('trendingnews' in $$props) $$invalidate(12, trendingnews = $$props.trendingnews);
-    		if ('publicnews' in $$props) $$invalidate(13, publicnews = $$props.publicnews);
-    		if ('params' in $$props) $$invalidate(14, params = $$props.params);
+    		if ('params' in $$props) $$invalidate(10, params = $$props.params);
+    		if ('paramsNasional' in $$props) $$invalidate(11, paramsNasional = $$props.paramsNasional);
+    		if ('paramsDaerah' in $$props) $$invalidate(12, paramsDaerah = $$props.paramsDaerah);
     	};
 
     	if ($$props && "$$inject" in $$props) {
@@ -13698,11 +13580,9 @@ var app = (function () {
     		colorBrandBlue,
     		author,
     		authorprofileimage,
-    		deduktifheader,
-    		deduktifurl,
-    		trendingnews,
-    		publicnews,
     		params,
+    		paramsNasional,
+    		paramsDaerah,
     		header_height_binding
     	];
     }
