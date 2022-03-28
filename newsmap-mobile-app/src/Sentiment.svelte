@@ -19,8 +19,6 @@
                 data.color = "hsl(0, 82%, 64%)"
             }
         });
-
-        console.log(result.data)
         return await result.data;
     })()
 
