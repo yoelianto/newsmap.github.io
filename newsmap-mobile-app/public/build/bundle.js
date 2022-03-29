@@ -3364,7 +3364,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (25:12) {:catch error}
+    // (26:12) {:catch error}
     function create_catch_block_3(ctx) {
     	let p;
 
@@ -3373,7 +3373,7 @@ var app = (function () {
     			p = element("p");
     			p.textContent = "An error occurred!";
     			attr_dev(p, "class", "svelte-1ss00pu");
-    			add_location(p, file$9, 25, 16, 769);
+    			add_location(p, file$9, 26, 16, 823);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -3388,14 +3388,14 @@ var app = (function () {
     		block,
     		id: create_catch_block_3.name,
     		type: "catch",
-    		source: "(25:12) {:catch error}",
+    		source: "(26:12) {:catch error}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (20:12) {:then data}
+    // (21:12) {:then data}
     function create_then_block_3(ctx) {
     	let div;
     	let p;
@@ -3408,9 +3408,9 @@ var app = (function () {
     			p = element("p");
     			t = text(t_value);
     			attr_dev(p, "class", "svelte-1ss00pu");
-    			add_location(p, file$9, 22, 20, 677);
+    			add_location(p, file$9, 23, 20, 731);
     			attr_dev(div, "class", "grid1 svelte-1ss00pu");
-    			add_location(div, file$9, 20, 16, 544);
+    			add_location(div, file$9, 21, 16, 598);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -3427,14 +3427,14 @@ var app = (function () {
     		block,
     		id: create_then_block_3.name,
     		type: "then",
-    		source: "(20:12) {:then data}",
+    		source: "(21:12) {:then data}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (18:30)                   <p>...waiting</p>              {:then data}
+    // (19:30)                   <p>...waiting</p>              {:then data}
     function create_pending_block_3(ctx) {
     	let p;
 
@@ -3443,7 +3443,7 @@ var app = (function () {
     			p = element("p");
     			p.textContent = "...waiting";
     			attr_dev(p, "class", "svelte-1ss00pu");
-    			add_location(p, file$9, 18, 16, 483);
+    			add_location(p, file$9, 19, 16, 537);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -3458,14 +3458,14 @@ var app = (function () {
     		block,
     		id: create_pending_block_3.name,
     		type: "pending",
-    		source: "(18:30)                   <p>...waiting</p>              {:then data}",
+    		source: "(19:30)                   <p>...waiting</p>              {:then data}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (43:12) {:catch error}
+    // (46:12) {:catch error}
     function create_catch_block_2(ctx) {
     	let p;
 
@@ -3474,7 +3474,7 @@ var app = (function () {
     			p = element("p");
     			p.textContent = "An error occurred!";
     			attr_dev(p, "class", "svelte-1ss00pu");
-    			add_location(p, file$9, 43, 16, 1461);
+    			add_location(p, file$9, 46, 16, 1600);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -3489,14 +3489,14 @@ var app = (function () {
     		block,
     		id: create_catch_block_2.name,
     		type: "catch",
-    		source: "(43:12) {:catch error}",
+    		source: "(46:12) {:catch error}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (32:12) {:then data}
+    // (33:12) {:then data}
     function create_then_block_2(ctx) {
     	let each_1_anchor;
     	let each_value_2 = { length: 4 };
@@ -3523,7 +3523,7 @@ var app = (function () {
     			insert_dev(target, each_1_anchor, anchor);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty & /*fetchData, undefined*/ 2) {
+    			if (dirty & /*truncText, fetchData, undefined*/ 2) {
     				each_value_2 = { length: 4 };
     				validate_each_argument(each_value_2);
     				let i;
@@ -3557,14 +3557,14 @@ var app = (function () {
     		block,
     		id: create_then_block_2.name,
     		type: "then",
-    		source: "(32:12) {:then data}",
+    		source: "(33:12) {:then data}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (39:20) {:else}
+    // (42:20) {:else}
     function create_else_block_2(ctx) {
     	let div;
 
@@ -3572,7 +3572,7 @@ var app = (function () {
     		c: function create() {
     			div = element("div");
     			attr_dev(div, "class", "grid4 svelte-1ss00pu");
-    			add_location(div, file$9, 39, 24, 1342);
+    			add_location(div, file$9, 42, 24, 1481);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -3587,37 +3587,35 @@ var app = (function () {
     		block,
     		id: create_else_block_2.name,
     		type: "else",
-    		source: "(39:20) {:else}",
+    		source: "(42:20) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (34:20) {#if data[i + 1] !== undefined}
+    // (35:20) {#if data[i + 1] !== undefined}
     function create_if_block_2(ctx) {
     	let div;
     	let p;
-    	let t0_value = /*data*/ ctx[2][/*i*/ ctx[5] + 1].title + "";
-    	let t0;
-    	let t1;
+    	let raw_value = truncText(/*data*/ ctx[2][/*i*/ ctx[5] + 1].title, 40) + "";
+    	let t;
 
     	const block = {
     		c: function create() {
     			div = element("div");
     			p = element("p");
-    			t0 = text(t0_value);
-    			t1 = space();
+    			t = space();
     			attr_dev(p, "class", "svelte-1ss00pu");
-    			add_location(p, file$9, 36, 28, 1231);
+    			add_location(p, file$9, 37, 28, 1285);
     			attr_dev(div, "class", "grid4 svelte-1ss00pu");
-    			add_location(div, file$9, 34, 24, 1078);
+    			add_location(div, file$9, 35, 24, 1132);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
     			append_dev(div, p);
-    			append_dev(p, t0);
-    			append_dev(div, t1);
+    			p.innerHTML = raw_value;
+    			append_dev(div, t);
     		},
     		p: noop,
     		d: function destroy(detaching) {
@@ -3629,14 +3627,14 @@ var app = (function () {
     		block,
     		id: create_if_block_2.name,
     		type: "if",
-    		source: "(34:20) {#if data[i + 1] !== undefined}",
+    		source: "(35:20) {#if data[i + 1] !== undefined}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (33:16) {#each {length: 4} as _, i}
+    // (34:16) {#each {length: 4} as _, i}
     function create_each_block_2(ctx) {
     	let if_block_anchor;
 
@@ -3670,14 +3668,14 @@ var app = (function () {
     		block,
     		id: create_each_block_2.name,
     		type: "each",
-    		source: "(33:16) {#each {length: 4} as _, i}",
+    		source: "(34:16) {#each {length: 4} as _, i}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (30:30)                   <p>...waiting</p>              {:then data}
+    // (31:30)                   <p>...waiting</p>              {:then data}
     function create_pending_block_2(ctx) {
     	let p;
 
@@ -3686,7 +3684,7 @@ var app = (function () {
     			p = element("p");
     			p.textContent = "...waiting";
     			attr_dev(p, "class", "svelte-1ss00pu");
-    			add_location(p, file$9, 30, 16, 911);
+    			add_location(p, file$9, 31, 16, 965);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -3701,14 +3699,14 @@ var app = (function () {
     		block,
     		id: create_pending_block_2.name,
     		type: "pending",
-    		source: "(30:30)                   <p>...waiting</p>              {:then data}",
+    		source: "(31:30)                   <p>...waiting</p>              {:then data}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (61:12) {:catch error}
+    // (66:12) {:catch error}
     function create_catch_block_1$1(ctx) {
     	let p;
 
@@ -3717,7 +3715,7 @@ var app = (function () {
     			p = element("p");
     			p.textContent = "An error occurred!";
     			attr_dev(p, "class", "svelte-1ss00pu");
-    			add_location(p, file$9, 61, 16, 2153);
+    			add_location(p, file$9, 66, 16, 2377);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -3732,14 +3730,14 @@ var app = (function () {
     		block,
     		id: create_catch_block_1$1.name,
     		type: "catch",
-    		source: "(61:12) {:catch error}",
+    		source: "(66:12) {:catch error}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (50:12) {:then data}
+    // (53:12) {:then data}
     function create_then_block_1$1(ctx) {
     	let each_1_anchor;
     	let each_value_1 = { length: 4 };
@@ -3766,7 +3764,7 @@ var app = (function () {
     			insert_dev(target, each_1_anchor, anchor);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty & /*fetchData, undefined*/ 2) {
+    			if (dirty & /*truncText, fetchData, undefined*/ 2) {
     				each_value_1 = { length: 4 };
     				validate_each_argument(each_value_1);
     				let i;
@@ -3800,14 +3798,14 @@ var app = (function () {
     		block,
     		id: create_then_block_1$1.name,
     		type: "then",
-    		source: "(50:12) {:then data}",
+    		source: "(53:12) {:then data}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (57:20) {:else}
+    // (62:20) {:else}
     function create_else_block_1(ctx) {
     	let div;
 
@@ -3815,7 +3813,7 @@ var app = (function () {
     		c: function create() {
     			div = element("div");
     			attr_dev(div, "class", "grid4 svelte-1ss00pu");
-    			add_location(div, file$9, 57, 24, 2034);
+    			add_location(div, file$9, 62, 24, 2258);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -3830,37 +3828,35 @@ var app = (function () {
     		block,
     		id: create_else_block_1.name,
     		type: "else",
-    		source: "(57:20) {:else}",
+    		source: "(62:20) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (52:20) {#if data[i + 5] !== undefined}
+    // (55:20) {#if data[i + 5] !== undefined}
     function create_if_block_1(ctx) {
     	let div;
     	let p;
-    	let t0_value = /*data*/ ctx[2][/*i*/ ctx[5] + 5].title + "";
-    	let t0;
-    	let t1;
+    	let raw_value = truncText(/*data*/ ctx[2][/*i*/ ctx[5] + 5].title, 40) + "";
+    	let t;
 
     	const block = {
     		c: function create() {
     			div = element("div");
     			p = element("p");
-    			t0 = text(t0_value);
-    			t1 = space();
+    			t = space();
     			attr_dev(p, "class", "svelte-1ss00pu");
-    			add_location(p, file$9, 54, 28, 1923);
+    			add_location(p, file$9, 57, 28, 2062);
     			attr_dev(div, "class", "grid4 svelte-1ss00pu");
-    			add_location(div, file$9, 52, 24, 1770);
+    			add_location(div, file$9, 55, 24, 1909);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
     			append_dev(div, p);
-    			append_dev(p, t0);
-    			append_dev(div, t1);
+    			p.innerHTML = raw_value;
+    			append_dev(div, t);
     		},
     		p: noop,
     		d: function destroy(detaching) {
@@ -3872,14 +3868,14 @@ var app = (function () {
     		block,
     		id: create_if_block_1.name,
     		type: "if",
-    		source: "(52:20) {#if data[i + 5] !== undefined}",
+    		source: "(55:20) {#if data[i + 5] !== undefined}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (51:16) {#each {length: 4} as _, i}
+    // (54:16) {#each {length: 4} as _, i}
     function create_each_block_1$1(ctx) {
     	let if_block_anchor;
 
@@ -3913,14 +3909,14 @@ var app = (function () {
     		block,
     		id: create_each_block_1$1.name,
     		type: "each",
-    		source: "(51:16) {#each {length: 4} as _, i}",
+    		source: "(54:16) {#each {length: 4} as _, i}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (48:30)                   <p>...waiting</p>              {:then data}
+    // (51:30)                   <p>...waiting</p>              {:then data}
     function create_pending_block_1$1(ctx) {
     	let p;
 
@@ -3929,7 +3925,7 @@ var app = (function () {
     			p = element("p");
     			p.textContent = "...waiting";
     			attr_dev(p, "class", "svelte-1ss00pu");
-    			add_location(p, file$9, 48, 16, 1603);
+    			add_location(p, file$9, 51, 16, 1742);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -3944,14 +3940,14 @@ var app = (function () {
     		block,
     		id: create_pending_block_1$1.name,
     		type: "pending",
-    		source: "(48:30)                   <p>...waiting</p>              {:then data}",
+    		source: "(51:30)                   <p>...waiting</p>              {:then data}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (79:12) {:catch error}
+    // (86:12) {:catch error}
     function create_catch_block$7(ctx) {
     	let p;
 
@@ -3960,7 +3956,7 @@ var app = (function () {
     			p = element("p");
     			p.textContent = "An error occurred!";
     			attr_dev(p, "class", "svelte-1ss00pu");
-    			add_location(p, file$9, 79, 16, 2845);
+    			add_location(p, file$9, 86, 16, 3154);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -3975,14 +3971,14 @@ var app = (function () {
     		block,
     		id: create_catch_block$7.name,
     		type: "catch",
-    		source: "(79:12) {:catch error}",
+    		source: "(86:12) {:catch error}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (68:12) {:then data}
+    // (73:12) {:then data}
     function create_then_block$7(ctx) {
     	let each_1_anchor;
     	let each_value = { length: 9 };
@@ -4009,7 +4005,7 @@ var app = (function () {
     			insert_dev(target, each_1_anchor, anchor);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty & /*fetchData, undefined*/ 2) {
+    			if (dirty & /*truncText, fetchData, undefined*/ 2) {
     				each_value = { length: 9 };
     				validate_each_argument(each_value);
     				let i;
@@ -4043,14 +4039,14 @@ var app = (function () {
     		block,
     		id: create_then_block$7.name,
     		type: "then",
-    		source: "(68:12) {:then data}",
+    		source: "(73:12) {:then data}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (75:20) {:else}
+    // (82:20) {:else}
     function create_else_block(ctx) {
     	let div;
 
@@ -4058,7 +4054,7 @@ var app = (function () {
     		c: function create() {
     			div = element("div");
     			attr_dev(div, "class", "grid9 svelte-1ss00pu");
-    			add_location(div, file$9, 75, 24, 2726);
+    			add_location(div, file$9, 82, 24, 3035);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -4073,37 +4069,35 @@ var app = (function () {
     		block,
     		id: create_else_block.name,
     		type: "else",
-    		source: "(75:20) {:else}",
+    		source: "(82:20) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (70:20) {#if data[i + 9] !== undefined}
+    // (75:20) {#if data[i + 9] !== undefined}
     function create_if_block$2(ctx) {
     	let div;
     	let p;
-    	let t0_value = /*data*/ ctx[2][/*i*/ ctx[5] + 9].title + "";
-    	let t0;
-    	let t1;
+    	let raw_value = truncText(/*data*/ ctx[2][/*i*/ ctx[5] + 9].title, 30) + "";
+    	let t;
 
     	const block = {
     		c: function create() {
     			div = element("div");
     			p = element("p");
-    			t0 = text(t0_value);
-    			t1 = space();
+    			t = space();
     			attr_dev(p, "class", "svelte-1ss00pu");
-    			add_location(p, file$9, 72, 28, 2615);
+    			add_location(p, file$9, 77, 28, 2839);
     			attr_dev(div, "class", "grid9 svelte-1ss00pu");
-    			add_location(div, file$9, 70, 24, 2462);
+    			add_location(div, file$9, 75, 24, 2686);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
     			append_dev(div, p);
-    			append_dev(p, t0);
-    			append_dev(div, t1);
+    			p.innerHTML = raw_value;
+    			append_dev(div, t);
     		},
     		p: noop,
     		d: function destroy(detaching) {
@@ -4115,14 +4109,14 @@ var app = (function () {
     		block,
     		id: create_if_block$2.name,
     		type: "if",
-    		source: "(70:20) {#if data[i + 9] !== undefined}",
+    		source: "(75:20) {#if data[i + 9] !== undefined}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (69:16) {#each {length: 9} as _, i}
+    // (74:16) {#each {length: 9} as _, i}
     function create_each_block$8(ctx) {
     	let if_block_anchor;
 
@@ -4156,14 +4150,14 @@ var app = (function () {
     		block,
     		id: create_each_block$8.name,
     		type: "each",
-    		source: "(69:16) {#each {length: 9} as _, i}",
+    		source: "(74:16) {#each {length: 9} as _, i}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (66:30)                   <p>...waiting</p>              {:then data}
+    // (71:30)                   <p>...waiting</p>              {:then data}
     function create_pending_block$7(ctx) {
     	let p;
 
@@ -4172,7 +4166,7 @@ var app = (function () {
     			p = element("p");
     			p.textContent = "...waiting";
     			attr_dev(p, "class", "svelte-1ss00pu");
-    			add_location(p, file$9, 66, 16, 2295);
+    			add_location(p, file$9, 71, 16, 2519);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -4187,7 +4181,7 @@ var app = (function () {
     		block,
     		id: create_pending_block$7.name,
     		type: "pending",
-    		source: "(66:30)                   <p>...waiting</p>              {:then data}",
+    		source: "(71:30)                   <p>...waiting</p>              {:then data}",
     		ctx
     	});
 
@@ -4277,19 +4271,19 @@ var app = (function () {
     			div3 = element("div");
     			info_3.block.c();
     			attr_dev(div0, "class", "grid0 svelte-1ss00pu");
-    			add_location(div0, file$9, 16, 8, 414);
+    			add_location(div0, file$9, 17, 8, 468);
     			attr_dev(div1, "class", "grid0 svelte-1ss00pu");
-    			add_location(div1, file$9, 28, 8, 842);
+    			add_location(div1, file$9, 29, 8, 896);
     			attr_dev(div2, "class", "grid0 svelte-1ss00pu");
-    			add_location(div2, file$9, 46, 8, 1534);
+    			add_location(div2, file$9, 49, 8, 1673);
     			attr_dev(div3, "class", "grid0 svelte-1ss00pu");
-    			add_location(div3, file$9, 64, 8, 2226);
+    			add_location(div3, file$9, 69, 8, 2450);
     			attr_dev(div4, "class", "grid svelte-1ss00pu");
-    			add_location(div4, file$9, 15, 4, 386);
+    			add_location(div4, file$9, 16, 4, 440);
     			set_style(article, "margin-top", /*margin*/ ctx[0] + "px");
     			attr_dev(article, "id", "jurno");
     			attr_dev(article, "class", "svelte-1ss00pu");
-    			add_location(article, file$9, 14, 0, 330);
+    			add_location(article, file$9, 15, 0, 384);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -4378,7 +4372,14 @@ var app = (function () {
     		if ('margin' in $$props) $$invalidate(0, margin = $$props.margin);
     	};
 
-    	$$self.$capture_state = () => ({ get, ihttp, fetchData, margin });
+    	$$self.$capture_state = () => ({
+    		get,
+    		ihttp,
+    		truncText,
+    		stringToDom,
+    		fetchData,
+    		margin
+    	});
 
     	$$self.$inject_state = $$props => {
     		if ('margin' in $$props) $$invalidate(0, margin = $$props.margin);

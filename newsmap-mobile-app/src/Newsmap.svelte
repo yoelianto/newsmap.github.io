@@ -1,6 +1,7 @@
 <script>
     import { get } from "./api";
     import * as ihttp from "./constants/initialHttp";
+    import {truncText, stringToDom} from './helper';
 
     const fetchData = (async () => {
         const result = await get(ihttp.URI_LAST_TOPIC, { size: 18 });
@@ -34,7 +35,9 @@
                     {#if data[i + 1] !== undefined}
                         <div class="grid4">
                             <!-- <img class='imggrid' src={data[i+1].url} alt={data[i+1].title} /> -->
-                            <p>{data[i+1].title}</p>
+                            <p>
+                                {@html truncText(data[i+1].title, 40)}
+                            </p>
                         </div>
                     {:else}
                         <div class="grid4" />
@@ -52,7 +55,9 @@
                     {#if data[i + 5] !== undefined}
                         <div class="grid4">
                             <!-- <img class='imggrid' src={data[i+5].url} alt={data[i+5].title} /> -->
-                            <p>{data[i+5].title}</p>
+                            <p>
+                                {@html truncText(data[i+5].title, 40)}
+                            </p>
                         </div>
                     {:else}
                         <div class="grid4" />
@@ -70,7 +75,9 @@
                     {#if data[i + 9] !== undefined}
                         <div class="grid9">
                             <!-- <img class='imggrid' src={data[i+9].url} alt={data[i+9].title} /> -->
-                            <p>{data[i+9].title}</p>
+                            <p>
+                                {@html truncText(data[i+9].title, 30)}
+                            </p>
                         </div>
                     {:else}
                         <div class="grid9" />
