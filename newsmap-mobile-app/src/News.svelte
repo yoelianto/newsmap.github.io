@@ -1,6 +1,7 @@
 <script>
 import { get } from "./api";
 import * as ihttp from './constants/initialHttp';
+import {truncText, stringToDom} from './helper';
 
 export let title = ''
 export let params = {}
@@ -9,7 +10,6 @@ const fetchData = (async () => {
     const result = await get(ihttp.URI_NEWS_LIST, {...params, media_type: 'print,online'});
     return await result.data;
 })()
-
 
 // const fetchImage = (async () => {
 // 		const response = await fetch('https://jsonplaceholder.typicode.com/photos')
@@ -30,7 +30,9 @@ const fetchData = (async () => {
                     <div class="news">
                         <img class='imgthumb' src={d.origin_images} alt={d.title} />
                         <p class="author">{d.media}</p>
-                        <p class="article-title">{d.title}</p>
+                        <p class="article-title">
+                            {@html truncText(d.title, 40)}
+                        </p>
                     </div>
                 </a>
                 {/each}

@@ -5615,7 +5615,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (37:12) {:catch error}
+    // (39:12) {:catch error}
     function create_catch_block$3(ctx) {
     	let p;
 
@@ -5623,7 +5623,7 @@ var app = (function () {
     		c: function create() {
     			p = element("p");
     			p.textContent = "An error occurred!";
-    			add_location(p, file$5, 37, 16, 1148);
+    			add_location(p, file$5, 39, 16, 1273);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -5638,7 +5638,7 @@ var app = (function () {
     		block,
     		id: create_catch_block$3.name,
     		type: "catch",
-    		source: "(37:12) {:catch error}",
+    		source: "(39:12) {:catch error}",
     		ctx
     	});
 
@@ -5672,7 +5672,7 @@ var app = (function () {
     			insert_dev(target, each_1_anchor, anchor);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty & /*fetchData*/ 2) {
+    			if (dirty & /*fetchData, truncText*/ 2) {
     				each_value = /*data*/ ctx[3];
     				validate_each_argument(each_value);
     				let i;
@@ -5725,9 +5725,8 @@ var app = (function () {
     	let t1;
     	let t2;
     	let p1;
-    	let t3_value = /*d*/ ctx[4].title + "";
+    	let raw_value = truncText(/*d*/ ctx[4].title, 40) + "";
     	let t3;
-    	let t4;
 
     	const block = {
     		c: function create() {
@@ -5739,20 +5738,19 @@ var app = (function () {
     			t1 = text(t1_value);
     			t2 = space();
     			p1 = element("p");
-    			t3 = text(t3_value);
-    			t4 = space();
+    			t3 = space();
     			attr_dev(img, "class", "imgthumb svelte-w4d3xq");
     			if (!src_url_equal(img.src, img_src_value = /*d*/ ctx[4].origin_images)) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", /*d*/ ctx[4].title);
-    			add_location(img, file$5, 30, 24, 846);
+    			add_location(img, file$5, 30, 24, 894);
     			attr_dev(p0, "class", "author svelte-w4d3xq");
-    			add_location(p0, file$5, 31, 24, 932);
+    			add_location(p0, file$5, 31, 24, 980);
     			attr_dev(p1, "class", "article-title svelte-w4d3xq");
-    			add_location(p1, file$5, 32, 24, 989);
+    			add_location(p1, file$5, 32, 24, 1037);
     			attr_dev(div, "class", "news svelte-w4d3xq");
-    			add_location(div, file$5, 29, 20, 802);
+    			add_location(div, file$5, 29, 20, 850);
     			attr_dev(a, "href", /*d*/ ctx[4].source_url);
-    			add_location(a, file$5, 28, 16, 757);
+    			add_location(a, file$5, 28, 16, 805);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, a, anchor);
@@ -5763,8 +5761,8 @@ var app = (function () {
     			append_dev(p0, t1);
     			append_dev(div, t2);
     			append_dev(div, p1);
-    			append_dev(p1, t3);
-    			append_dev(a, t4);
+    			p1.innerHTML = raw_value;
+    			append_dev(a, t3);
     		},
     		p: noop,
     		d: function destroy(detaching) {
@@ -5791,7 +5789,7 @@ var app = (function () {
     		c: function create() {
     			p = element("p");
     			p.textContent = "...waiting";
-    			add_location(p, file$5, 25, 12, 661);
+    			add_location(p, file$5, 25, 12, 709);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -5845,13 +5843,13 @@ var app = (function () {
     			div0 = element("div");
     			info.block.c();
     			attr_dev(p, "class", "title svelte-w4d3xq");
-    			add_location(p, file$5, 21, 4, 521);
+    			add_location(p, file$5, 21, 4, 569);
     			attr_dev(div0, "class", "slider svelte-w4d3xq");
-    			add_location(div0, file$5, 23, 8, 595);
+    			add_location(div0, file$5, 23, 8, 643);
     			attr_dev(div1, "class", "slider-container svelte-w4d3xq");
-    			add_location(div1, file$5, 22, 4, 555);
+    			add_location(div1, file$5, 22, 4, 603);
     			attr_dev(div2, "class", "container");
-    			add_location(div2, file$5, 20, 0, 492);
+    			add_location(div2, file$5, 20, 0, 540);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -5915,7 +5913,15 @@ var app = (function () {
     		if ('params' in $$props) $$invalidate(2, params = $$props.params);
     	};
 
-    	$$self.$capture_state = () => ({ get, ihttp, title, params, fetchData });
+    	$$self.$capture_state = () => ({
+    		get,
+    		ihttp,
+    		truncText,
+    		stringToDom,
+    		title,
+    		params,
+    		fetchData
+    	});
 
     	$$self.$inject_state = $$props => {
     		if ('title' in $$props) $$invalidate(0, title = $$props.title);
