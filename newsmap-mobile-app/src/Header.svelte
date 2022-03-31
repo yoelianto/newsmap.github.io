@@ -100,6 +100,7 @@
         width:25vw;
         text-align: center;
         color:var(--color-brand-red);
+        cursor: pointer;
     }
     .header-menu {
         display: flex;
@@ -131,5 +132,10 @@
         font-size:1rem;
         font-weight:700; 
         margin: 0.2rem 1rem;
+    }
+    @media only screen and (min-width:1200px) {
+        .container {
+            height: 8vw;
+        }
     }
 </style>

@@ -147,7 +147,6 @@
     .grid4:nth-child(4) {
         background-color:rgba(239, 89, 89, 0.5)
     }
-
     .grid9:nth-child(1) {
         background-color:rgba(36, 32, 83,0.9)
     }
@@ -174,5 +173,41 @@
     }
     .grid9:nth-child(9) {
         background-color:rgba(36, 32, 83,0.5)
+    }
+
+    @media only screen and (min-width:1200px) {
+        article {
+            margin-top: 8vw;
+        }
+        .grid {
+            margin: 0 auto;
+            width: 96.5vw;
+            height: calc(96.5vw/4);
+            background-color: indianred;
+            display: flex;
+            flex-wrap: wrap;
+            font-family: var(--fontfamily2);
+            color:white;
+            font-weight: 500;
+            cursor: pointer;
+        }
+        .grid0 {
+            width: 25%;
+            height: 100%;
+            background-color: white;
+            display: flex;
+            flex-wrap: wrap;
+            font-size:2rem;
+        }
+        .grid1{
+            font-size:2.4rem;
+        }
+        .grid4{
+            font-size:1.6rem;
+        }
+        .grid9{
+            font-size:1.2rem;
+            line-height: 1.2rem;
+        }
     }
 </style>

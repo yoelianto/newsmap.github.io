@@ -64,3 +64,12 @@ body {
 	padding: 0;
 	background-color: #eefffc;
 }
+
+body::-webkit-scrollbar {
+	width: 0.5em;
+}
+
+body::-webkit-scrollbar-thumb {
+	background-color: #A4D9D2;
+	border-radius: 0.25em;
+}

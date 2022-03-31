@@ -87,4 +87,9 @@
     .selected img {
         color: #eefffc;
     }
+    @media only screen and (min-width:1200px) {
+        nav {
+            display: none;
+        }
+    }
 </style>

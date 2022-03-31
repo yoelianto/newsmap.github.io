@@ -38,7 +38,7 @@
                             
                             <img class='people' src={d.thumbnail} alt={d.name} />
                         </div>
-                        <div class="pie" style="--p:{d.percentAbs};--c:{d.color};--b:6px"></div>
+                        <div class="pie" style="--p:{d.percentAbs};--c:{d.color};"></div>
 
                     <div class="percent" style="color:{d.color}">{d.percent}%</div>
                     <div class="name">{d.name}</div>
@@ -114,7 +114,7 @@
     /* pie chart */
     .pie {
         --p:20;
-        --b:22px;
+        --b:6px;
         --c:darkred;
         --w:25vw;
         
@@ -147,5 +147,34 @@
         inset:calc(50% - var(--b)/2);
         background:var(--c);
         transform:rotate(calc(var(--p)*3.6deg)) translateY(calc(50% - var(--w)/2));
+    }
+    @media only screen and (min-width:1200px) {
+        .sentiment {
+            width:10vw;
+            cursor: pointer;
+        }
+        .person {
+            width: 10vw;
+            height:10vw;
+        }
+        .slider {
+            margin: 0 auto;
+        }
+        .pie {
+            --w:10vw;
+            --b:10px;
+        }
+        .percent{
+            width:10vw;
+            font-size: 1.5rem;
+        }
+
+        .name {
+            width:10vw;
+            font-size: 1rem;
+        }
+        .container {
+            display: flex;
+        }
     }
 </style>
