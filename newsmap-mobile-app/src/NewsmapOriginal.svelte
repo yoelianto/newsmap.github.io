@@ -22,7 +22,21 @@
     const fetchData = (async () => {
         const result = await get(ihttp.URI_ARTICLE_LIST, {size: 3});
         return await result.data;
-    })()
+    })
+
+    var allCards = document.querySelectorAll('.tinder--card');
+
+    function initCards(card, index) {
+        var newCards = document.querySelectorAll('.card')
+
+        newCards.forEach((card, index) => {
+            card.style.zIndex = allCards.length - index;
+            card.style.transform = `translate(${30 * index}px,${30 * index}px)`;
+        })
+    }
+
+    initCards()
+    
 </script>
 
 <div class="container" id="original">

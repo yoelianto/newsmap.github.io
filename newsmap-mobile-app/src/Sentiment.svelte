@@ -4,7 +4,6 @@
 
     export let params = {}
 
-
     const fetchData = (async () => {
         const mergeParams = {...params, kind: 'person'}
         mergeParams.per_page = 10
