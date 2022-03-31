@@ -20,7 +20,7 @@
     import * as ihttp from './constants/initialHttp';
 
     const fetchData = (async () => {
-        const result = await get(ihttp.URI_ARTICLE_LIST, {size: 1});
+        const result = await get(ihttp.URI_ARTICLE_LIST, {size: 3});
         return await result.data;
     })()
 </script>
@@ -30,6 +30,7 @@
     {#await fetchData}
         <p>...waiting</p>
     {:then data}
+    <div class="inner-container">
         {#each data as d, i}
         <a href={`${process['env']['DOMAIN']}/article/${d.slug}`}>
             <div class="card">
@@ -42,6 +43,7 @@
             </div>
         </a>
         {/each}
+    </div>
     {:catch error}
         <p>An error occurred!</p>
     {/await}
@@ -63,23 +65,27 @@
         bottom: 0;
         height:50%;
         border-radius:0 0 0.5rem 0.5rem;
-        z-index: 10;
     }
-    .thumb {
-        z-index: 0;
-        height: 100%;
+    .inner-container {
+        display: block;
+        position: relative;
+        height:110vw;
     }
     .card {
         width:66vw;
         height:101vw;
         background-color: steelblue;
         border-radius:0.5rem;
-        margin:1rem auto;
         display: flex;
         justify-content: center;
         align-items: center;
-        position:relative;
+        position:absolute;
         overflow: hidden;
+        left: 17vw;
+    }
+    .thumb {
+        z-index: 0;
+        height: 100%;
     }
     .inner-card {
         position: absolute;
@@ -90,18 +96,49 @@
         flex-direction: column;
         justify-content: flex-end;
         color:white;
-        z-index: 12;
     }
     .sub-title {
         font-size:0.8rem;
         font-weight: 500;
         margin-bottom: 0.5rem;
-        z-index: 15;
     }
     .card-title {
         font-size:1.25rem;
         font-weight: 700;
         line-height: 1.25rem;
-        z-index: 15;
+    }
+    @media only screen and (min-width:1200px) {
+        .card {
+            width:30vw;
+            height:30vw;
+            margin-left: 1rem;
+            margin-right: 1rem;
+            filter: grayscale(1);
+            transition: filter 1000ms ease-in-out;
+            -webkit-transition: -webkit-filter 200ms ease-in-out;
+        }
+        .card:hover {
+            filter: grayscale(0);
+        }
+        .inner-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+        .card-title {
+            font-size:2rem;
+            font-weight: 700;
+            line-height: 2rem;
+            z-index: 15;
+        }
+        .title {
+            font-family: var(--fontfamily1);
+            font-weight:700;
+            font-size:2.5rem;
+            margin-left: 6%;
+            margin-top: 1rem;
+            margin-bottom:1rem;
+        }
     }
 </style>

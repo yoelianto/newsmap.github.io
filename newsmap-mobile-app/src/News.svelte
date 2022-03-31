@@ -95,4 +95,14 @@ const fetchData = (async () => {
         -ms-overflow-style: none;  /* IE and Edge */
         scrollbar-width: none;  /* Firefox */
     }
+    @media only screen and (min-width:1200px) {
+        .title {
+            font-family: var(--fontfamily1);
+            font-weight:700;
+            font-size:2.5rem;
+            margin-left: 6%;
+            margin-top: 1rem;
+            margin-bottom:1rem;
+        }
+    }
 </style>

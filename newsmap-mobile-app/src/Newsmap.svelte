@@ -177,7 +177,8 @@
 
     @media only screen and (min-width:1200px) {
         article {
-            margin-top: 8vw;
+            margin-top: 1rem;
+            margin-bottom:2rem;
         }
         .grid {
             margin: 0 auto;

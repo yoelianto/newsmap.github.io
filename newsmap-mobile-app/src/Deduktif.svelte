@@ -162,4 +162,14 @@
         border-radius: 50%;
         overflow: hidden;
     }
+    @media only screen and (min-width:1200px) {
+        .deduktif {
+            font-family: var(--fontfamily1);
+            font-weight:700;
+            font-size:2.5rem;
+            margin-left: 6%;
+            margin-top: 1rem;
+            margin-bottom:25vw;
+        }
+    }
 </style>

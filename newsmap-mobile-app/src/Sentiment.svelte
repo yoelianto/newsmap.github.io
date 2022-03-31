@@ -7,7 +7,11 @@
 
     const fetchData = (async () => {
         const mergeParams = {...params, kind: 'person'}
+        mergeParams.per_page = 10
+
         const result = await get(ihttp.URI_NEWS_TOP_ENTITY, mergeParams);
+
+        //percentage calculation
         result.data.forEach((data) => {
             data.percent = Math.ceil((data.positive-data.negative)/(data.positive+data.negative)*100)
             data.percentAbs = Math.abs(data.percent)
@@ -19,6 +23,7 @@
                 data.color = "hsl(0, 82%, 64%)"
             }
         });
+
         return await result.data;
     })()
 

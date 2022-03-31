@@ -76,6 +76,7 @@
     .header-logo{
         width: 100%;
         display: flex;
+        background-color: var(--color-brand-white);
     }
     img {
         margin:0.5rem auto;
@@ -105,6 +106,7 @@
     .header-menu {
         display: flex;
         flex-direction: column;
+        background-color: var(--color-brand-white);
     }
 
     .bar {
