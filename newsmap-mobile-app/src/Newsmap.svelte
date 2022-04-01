@@ -1,7 +1,7 @@
 <script>
     import { get } from "./api";
     import * as ihttp from "./constants/initialHttp";
-    import {truncText, stringToDom} from './helper';
+    import {truncText} from './helper';
 
     const fetchData = (async () => {
         const result = await get(ihttp.URI_LAST_TOPIC, { size: 18 });
@@ -14,6 +14,9 @@
     export let margin;
 </script>
 
+{#await fetchData}
+<p>...waiting</p>
+{:then data}
 <article style="margin-top:{margin}px" id="jurno">
     <div class="grid">
         <div class="grid0">
@@ -90,6 +93,9 @@
         </div>
     </div>
 </article>
+{:catch error}
+<p>An error occurred!</p>
+{/await}
 
 <style>
     article {
