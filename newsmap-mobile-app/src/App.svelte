@@ -17,7 +17,7 @@
 		fontfamily2 = "Roboto",
 		fontfamily3 = "Jost";
 		
-	let colorBrandWhite = "#eefffc",
+	let colorBrandWhite = "#fafafa",
 		colorBrandRed = "#ef5959",
 		colorBrandDarkBlue = "#242053",
 		colorBrandBlue ="#A4D9D2";

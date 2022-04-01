@@ -36,7 +36,7 @@
 <style>
     .container {
         position:fixed;
-        bottom:-80px;
+        bottom:0;
         z-index: 100;
         width:100vw;
         height:80px;

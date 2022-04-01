@@ -1,42 +1,30 @@
 <script>
-    let jurno = [
-        {
-            title: "Kenapa Bimbel Bisa Booming Banget?",
-			url:"https://newsmap.id/article/kenapa-bimbel-bisa-booming-banget",
-			thumb:"https://admin-dev.newsmap.id/uploads/news/1637749717_Bimbel-compress.jpg"
-        },
-        {
-            title: "Asam Garam Driver Ojol: Stres, Cemas, dan Kesepian",
-			url:"https://newsmap.id/article/asam-garam-driver-ojol-stres-cemas-dan-kesepian",
-			thumb:"https://admin-dev.newsmap.id/uploads/news/1637737865_Asam-Garam-Driver-Ojol--Orderan-Anyep,-Cemas,-dan-Kesepian.jpg"
-        },
-        {
-            title: "Into the Ambisverse: Mengulik Komunitas Ambis Anak Sekolah Indonesia",
-			url:"https://newsmap.id/article/into-the-ambisverse-mengulik-komunitas-ambis-anak-sekolah-indonesia",
-			thumb:"https://admin-dev.newsmap.id/uploads/news/1637751242_Ambisverse-compress.jpg"
-        }
-        ]
+    // let jurno = [
+    //     {
+    //         title: "Kenapa Bimbel Bisa Booming Banget?",
+	// 		url:"https://newsmap.id/article/kenapa-bimbel-bisa-booming-banget",
+	// 		thumb:"https://admin-dev.newsmap.id/uploads/news/1637749717_Bimbel-compress.jpg"
+    //     },
+    //     {
+    //         title: "Asam Garam Driver Ojol: Stres, Cemas, dan Kesepian",
+	// 		url:"https://newsmap.id/article/asam-garam-driver-ojol-stres-cemas-dan-kesepian",
+	// 		thumb:"https://admin-dev.newsmap.id/uploads/news/1637737865_Asam-Garam-Driver-Ojol--Orderan-Anyep,-Cemas,-dan-Kesepian.jpg"
+    //     },
+    //     {
+    //         title: "Into the Ambisverse: Mengulik Komunitas Ambis Anak Sekolah Indonesia",
+	// 		url:"https://newsmap.id/article/into-the-ambisverse-mengulik-komunitas-ambis-anak-sekolah-indonesia",
+	// 		thumb:"https://admin-dev.newsmap.id/uploads/news/1637751242_Ambisverse-compress.jpg"
+    //     }
+    //     ]
     import { get } from "./api";
     import * as ihttp from './constants/initialHttp';
+    // import { Hammer, swipe } from 'svelte-hammer';
 
     const fetchData = (async () => {
         const result = await get(ihttp.URI_ARTICLE_LIST, {size: 3});
         return await result.data;
-    })
+    })()
 
-    var allCards = document.querySelectorAll('.tinder--card');
-
-    function initCards(card, index) {
-        var newCards = document.querySelectorAll('.card')
-
-        newCards.forEach((card, index) => {
-            card.style.zIndex = allCards.length - index;
-            card.style.transform = `translate(${30 * index}px,${30 * index}px)`;
-        })
-    }
-
-    initCards()
-    
 </script>
 
 <div class="container" id="original">
@@ -46,7 +34,9 @@
     {:then data}
     <div class="inner-container">
         {#each data as d, i}
-        <a href={`${process['env']['DOMAIN']}/article/${d.slug}`}>
+        <a class="card-link" href={`${process['env']['DOMAIN']}/article/${d.slug}`}
+
+            >
             <div class="card">
                 <img class="thumb" src={`${process['env']['URL_IMAGE']}news/${d.thumbnail}`} alt="" >
                 <div class="bottom"></div>

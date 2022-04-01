@@ -16,7 +16,7 @@
             data.percentAbs = Math.abs(data.percent)
             if (data.percent > 0) {
                 data.sentiment = "positive"
-                data.color = "hsl(163, 87%, 29%)"
+                data.color = "hsl(244, 30%, 30%)"
             } else {
                 data.sentiment = "negative"
                 data.color = "hsl(0, 82%, 64%)"

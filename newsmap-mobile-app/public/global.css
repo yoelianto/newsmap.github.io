@@ -62,7 +62,7 @@ button:focus {
 body {
 	margin: 0;
 	padding: 0;
-	background-color: #eefffc;
+	background-color: #fafafa;
 }
 
 body::-webkit-scrollbar {
