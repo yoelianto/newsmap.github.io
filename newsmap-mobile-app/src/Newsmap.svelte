@@ -5,7 +5,7 @@
 
     const fetchData = (async () => {
         const result = await get(ihttp.URI_LAST_TOPIC, { size: 18 });
-        console.log(result.data)
+        // console.log(result.data)
         return await result.data;
     })()
 
