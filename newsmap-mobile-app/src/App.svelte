@@ -55,14 +55,14 @@
 
 </script>
 
-<!-- svelte-ignore empty-block -->
-{#await getToken()}
-{/await}
-
 <svelte:head>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </svelte:head>
 
+<!-- svelte-ignore empty-block -->
+{#await getToken()}
+<p>...waiting</p>
+{:then data}
 <main>
 	<div class="container">
 		
@@ -135,6 +135,9 @@
 		/>
 	</div>
 </main>
+{:catch error}
+<p>An error occurred!</p>
+{/await}
 
 <style>
 	main {
