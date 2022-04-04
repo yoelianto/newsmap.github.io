@@ -21,6 +21,7 @@
     
     const fetchData = (async () => {
         const result = await get(ihttp.URI_LAST_TOPIC, { size: 18 });
+        // console.log(result.data)
         return result.data;
     })()
 
@@ -176,6 +177,82 @@
                 return '1rem'
             } else {
                 return '0.5rem'
+            }
+        })
+        .style('font-weight', (d) => {
+            if (d.site.originalObject.data.originalData.weight == 4) {
+                return '700'
+            } else if (d.site.originalObject.data.originalData.weight == 3) {
+                return '500'
+            } else {
+                return '300'
+            }
+        })
+
+        text
+        .selectAll('.secondarylabel')
+        .data(polygons)
+        .enter()
+        .append('text')
+        .classed('secondarylabel', true)
+        .text((d) => {
+            if (d.site.originalObject.data.originalData.weight >= 2) {
+                return d.site.originalObject.data.originalData.keywords[1]
+            }
+        })
+        .style('fill', 'white')
+        .attr('text-anchor', 'middle')
+        .attr('x', (d) => {
+            return d.site.x
+        })
+        .attr('y', (d) => {
+            return d.site.y + (d.site.originalObject.data.originalData.weight * 5)
+        })
+        .style('font-size', (d) => {
+            if (d.site.originalObject.data.originalData.weight == 4) {
+                return '1rem'
+            } else if (d.site.originalObject.data.originalData.weight == 3) {
+                return '0.6rem'
+            } else {
+                return '0.4rem'
+            }
+        })
+        .style('font-weight', (d) => {
+            if (d.site.originalObject.data.originalData.weight == 4) {
+                return '700'
+            } else if (d.site.originalObject.data.originalData.weight == 3) {
+                return '500'
+            } else {
+                return '300'
+            }
+        })
+
+        text
+        .selectAll('.tersierlabel')
+        .data(polygons)
+        .enter()
+        .append('text')
+        .classed('tersierlabel', true)
+        .text((d) => {
+            if (d.site.originalObject.data.originalData.weight >= 2) {
+                return d.site.originalObject.data.originalData.keywords[2]
+            }
+        })
+        .style('fill', 'white')
+        .attr('text-anchor', 'middle')
+        .attr('x', (d) => {
+            return d.site.x
+        })
+        .attr('y', (d) => {
+            return d.site.y + (d.site.originalObject.data.originalData.weight * 5 * 1.7)
+        })
+        .style('font-size', (d) => {
+            if (d.site.originalObject.data.originalData.weight == 4) {
+                return '1rem'
+            } else if (d.site.originalObject.data.originalData.weight == 3) {
+                return '0.6rem'
+            } else {
+                return '0.4rem'
             }
         })
         .style('font-weight', (d) => {
