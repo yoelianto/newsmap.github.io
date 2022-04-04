@@ -1,4 +1,6 @@
 <script>
+
+	import VoronoiNewsmap from './VoronoiNewsmap.svelte'
 	import Header from './Header.svelte'
 	import Newsmap from './Newsmap.svelte'
 	import Original from './NewsmapOriginal.svelte'
@@ -63,6 +65,7 @@
 {:then data}
 <main>
 	<div class="container">
+		
 		<Header
 			bind:height={margin}
 			--fontfamily3={fontfamily3}
@@ -70,6 +73,11 @@
 			--color-brand-red={colorBrandRed}
 			--color-brand-blue={colorBrandBlue}
 		/>
+
+		<VoronoiNewsmap 
+			bind:margin={margin}	
+		/>
+
 		<Newsmap
 			margin={margin}
 			--fontfamily1 ={fontfamily1}
