@@ -18,7 +18,6 @@
     //     ]
     import { get } from "./api";
     import * as ihttp from './constants/initialHttp';
-    // import { Hammer, swipe } from 'svelte-hammer';
 
     const fetchData = (async () => {
         const result = await get(ihttp.URI_ARTICLE_LIST, {size: 3});
@@ -34,18 +33,19 @@
     {:then data}
     <div class="inner-container">
         {#each data as d, i}
-        <a class="card-link" href={`${process['env']['DOMAIN']}/article/${d.slug}`}
-
-            >
-            <div class="card">
-                <img class="thumb" src={`${process['env']['URL_IMAGE']}news/${d.thumbnail}`} alt="" >
-                <div class="bottom"></div>
-                <div class="inner-card">
-                    <div class="sub-title">Original Jurno</div>
-                    <div class="card-title">{d.title}</div>
+        <div class='swipe'>
+            <a class="card-link" href={`${process['env']['DOMAIN']}/article/${d.slug}`}>
+                <div class="card" >
+                    <img class="thumb" src={`${process['env']['URL_IMAGE']}news/${d.thumbnail}`} alt="" >
+                    <div class="bottom"></div>
+                    <div class="inner-card">
+                        <div class="sub-title">Original Jurno</div>
+                        <div class="card-title">{d.title}</div>
+                    </div>
                 </div>
-            </div>
-        </a>
+            </a>
+        </div>
+       
         {/each}
     </div>
     {:catch error}

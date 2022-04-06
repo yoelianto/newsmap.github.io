@@ -13,36 +13,48 @@
         menus[id].active = true;
     }
     
+    export let showMenu
 </script>
 
-<nav class="container">
-    <div class="menubar">
-        {#each menus as list, key}
-        <div class="menu" class:selected ="{list.active === true}">
-            <div class="circle">
-                <img src={list.source} alt={list.menu}>
+<nav>
+    <div class="container"  class:moveDown={showMenu}>
+        <div class="menubar">
+            {#each menus as list, key}
+            <div class="menu" class:selected ="{list.active === true}">
+                <div class="circle">
+                    <img src={list.source} alt={list.menu}>
+                </div>
+    
+                <h4 class="menutext" id={list.id}>
+                    {list.menu}
+                </h4>
             </div>
-
-            <h4 class="menutext" id={list.id}>
-                {list.menu}
-            </h4>
+                
+            {/each}
         </div>
-            
-        {/each}
     </div>
 </nav>
 
 
 <style>
-    .container {
-        position:fixed;
+    nav {
+        position: fixed;
         bottom:0;
         z-index: 100;
+    }
+    .container {
+        position:absolute;
+        bottom:0;
         width:100vw;
         height:80px;
         background-color: white;
         border-radius: 2rem 2rem 0 0;
         box-shadow: 0rem 1rem 1rem 1rem rgba(0,0,0,0.1);
+        transition: bottom 400ms ease-in-out;
+    }
+    .moveDown {
+        bottom:-80px;
+        transition: bottom 400ms ease-in-out;
     }
     .menubar {
         display: flex;

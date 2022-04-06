@@ -1,10 +1,10 @@
 <script>
 
 	import VoronoiNewsmap from './VoronoiNewsmap.svelte'
-	import LabelNewsmap from './LabelNewsmap.svelte'
+	// import LabelNewsmap from './LabelNewsmap.svelte'
 	import Header from './Header.svelte'
-	import Newsmap from './Newsmap.svelte'
-	import Original from './NewsmapOriginal.svelte'
+	// import Newsmap from './Newsmap.svelte'
+	import Original from './JurnoOriginal.svelte'
 	import Sentiment from './Sentiment.svelte'
 	import Deduktif from './Deduktif.svelte'
 	import News from './News.svelte'
@@ -14,6 +14,11 @@
 	import Video from './Video.svelte'
 	import moment from 'moment';
 	import { getToken } from './api';
+	import { onMount } from 'svelte'
+
+	let y
+	let showHeader = true
+	let showMenu = false
 
 	let margin;
 	let fontfamily1 = "Roboto Mono",
@@ -54,11 +59,14 @@
 		media_scope: 'Daerah'
 	}
 
+
 </script>
 
 <svelte:head>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </svelte:head>
+
+<svelte:window bind:scrollY={y} />
 
 <!-- svelte-ignore empty-block -->
 {#await getToken()}
@@ -72,24 +80,25 @@
 			--color-brand-white={colorBrandWhite}
 			--color-brand-red={colorBrandRed}
 			--color-brand-blue={colorBrandBlue}
+			showHeader = { y < 50}
 		/>
 
-		<LabelNewsmap
+		<!-- <LabelNewsmap
 			bind:margin={margin}
-		/>
+			--fontfamily2={fontfamily2}
+		/> -->
 
 		<VoronoiNewsmap 
 			bind:margin={margin}	
 		/>
-
-		<Newsmap
+		<!-- <Newsmap
 			margin={margin}
 			--fontfamily1 ={fontfamily1}
 			--fontfamily2={fontfamily2}
 			--color-brand-red={colorBrandRed}
 			--color-brand-blue={colorBrandBlue}
 			--color-brand-darkblue={colorBrandDarkBlue}
-		/>
+		/> -->
 		<Sentiment
 			--fontfamily1 ={fontfamily1}
 			--fontfamily2={fontfamily2}
@@ -136,6 +145,7 @@
 		/>
 		<Menu
 			--fontfamily3={fontfamily3}
+			showMenu = { y < 50}
 		/>
 	</div>
 </main>

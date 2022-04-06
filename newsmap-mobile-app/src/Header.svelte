@@ -41,6 +41,8 @@
         barPosition2.set(id)
         barPosition3.set(id)
     }
+
+    export let showHeader
    
 </script>
 
@@ -49,7 +51,7 @@
         <div class="header-logo">
             <img src="./image/logo-jurno-web.svg" alt="Logo Jurno Website">
         </div>
-        <div class="header-menu">
+        <div class="header-menu" class:moveUp={!showHeader}>
             <div class="headertext">
                 {#each menus as list, key}
                     <h4 class="menu"
@@ -61,9 +63,11 @@
                     </h4>
                 {/each}
             </div>
-            <div class="bar" style="left:{$barPosition1*25+8.5}vw"></div>
-            <div class="bar" style="left:{$barPosition2*25+8.5}vw"></div>
-            <div class="bar" style="left:{$barPosition3*25+8.5}vw"></div>
+            <!-- <div class="headerbar">
+                <div class="bar" style="left:{$barPosition1*25+8.5}vw"></div>
+                <div class="bar" style="left:{$barPosition2*25+8.5}vw"></div>
+                <div class="bar" style="left:{$barPosition3*25+8.5}vw"></div>
+            </div> -->
         </div>
     </div>
     
@@ -77,6 +81,8 @@
         width: 100%;
         display: flex;
         background-color: var(--color-brand-white);
+        position: absolute;
+        z-index: 2;
     }
     img {
         margin:0.5rem auto;
@@ -86,7 +92,6 @@
         height:30vw;
         z-index: 99;
         position: fixed;
-        background-color: var(--color-brand-white);
         width:100vw;
     }
     .headertext {
@@ -107,8 +112,20 @@
         display: flex;
         flex-direction: column;
         background-color: var(--color-brand-white);
+        width:100vw;
+        position: absolute;
+        transition: top 400ms ease-in-out;
+        top: 4.5rem;
     }
-
+    .moveUp {
+        top:0;
+        transition: top 400ms ease-in-out;
+    }
+    /* .headerbar {
+        position: relative;
+        width: 100vw;
+        height:0.25rem;
+    }
     .bar {
         width:12.5vw;
         height:0.25rem;
@@ -117,7 +134,7 @@
         display: block;
         position: absolute;
         z-index: 200;
-        top: 6.5rem;
+        top: 0;
         left: 8.5vw;
         width: 10vw;
         pointer-events: none;
@@ -127,7 +144,7 @@
 	}
 	.bar:nth-child(2) {
 		transition: calc(500 * 1.2);
-	}
+	} */
 
     h4 {
         font-family: var(--fontfamily3);

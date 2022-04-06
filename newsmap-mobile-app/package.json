@@ -22,12 +22,15 @@
   "dependencies": {
     "@snlab/florence": "^0.4.0",
     "axios": "^0.26.1",
+    "carbon-components-svelte": "^0.62.3",
     "d3": "^7.4.0",
     "d3-voronoi-map": "^2.1.0",
     "d3-voronoi-treemap": "^1.1.1",
     "d3-weighted-voronoi": "^1.1.2",
+    "interactjs": "^1.10.11",
     "moment": "^2.29.1",
     "sirv-cli": "^2.0.0",
+    "svelte-device-detector": "^0.2.2",
     "svelte-hammer": "^0.1.7"
   }
 }

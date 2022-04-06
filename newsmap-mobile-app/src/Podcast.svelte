@@ -59,7 +59,8 @@
         </div>
         <p class="playlist-title">Playlist</p>
         <div class="playlist">
-            {#await fetchData}
+            <iframe title='Podcast' style="border-radius:12px" src="https://open.spotify.com/embed/show/2hKytN0KyEWLO7pAd3upKv?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+            <!-- {#await fetchData}
             <p>...waiting</p>
             {:then data}
                 {#each data as d, i}
@@ -74,7 +75,7 @@
                 {/each}
             {:catch error}
                 <p>An error occurred!</p>
-            {/await}
+            {/await} -->
         </div>
     </div>
 
@@ -82,6 +83,9 @@
 
 
 <style>
+    .container {
+        margin-bottom: 100px;
+    }
     .title-container {
         margin-left: 6%;
         width:88%;
@@ -131,7 +135,7 @@
         display: flex;
         flex-direction: column;
     }
-    .podlist {
+    /* .podlist {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -150,5 +154,5 @@
     .duration {
         width:10vw;
         color:#7B7A7C;
-    }
+    } */
 </style>
