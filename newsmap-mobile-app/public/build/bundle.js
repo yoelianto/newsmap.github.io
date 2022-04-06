@@ -29506,11 +29506,11 @@ var app = (function () {
     			add_location(div1, file$4, 45, 8, 1521);
     			attr_dev(div2, "class", "album-container svelte-1fhnjvo");
     			add_location(div2, file$4, 44, 4, 1482);
-    			attr_dev(iframe, "title", "Podcast");
+    			attr_dev(iframe, "title", "Podcast Turun Minum");
     			set_style(iframe, "border-radius", "12px");
-    			if (!src_url_equal(iframe.src, iframe_src_value = "https://open.spotify.com/embed/show/2hKytN0KyEWLO7pAd3upKv?utm_source=generator&theme=0")) attr_dev(iframe, "src", iframe_src_value);
+    			if (!src_url_equal(iframe.src, iframe_src_value = "https://open.spotify.com/embed/playlist/71njl32GXQTjiwmKKuXUyR?utm_source=generator")) attr_dev(iframe, "src", iframe_src_value);
     			attr_dev(iframe, "width", "100%");
-    			attr_dev(iframe, "height", "152");
+    			attr_dev(iframe, "height", "380");
     			attr_dev(iframe, "frameborder", "0");
     			iframe.allowFullscreen = "";
     			attr_dev(iframe, "allow", "autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture");
