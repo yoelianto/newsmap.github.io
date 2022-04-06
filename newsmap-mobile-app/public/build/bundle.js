@@ -29368,7 +29368,7 @@ var app = (function () {
     			iframe.allowFullscreen = "";
     			attr_dev(iframe, "allow", "autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture");
     			add_location(iframe, file$4, 52, 24, 1797);
-    			attr_dev(div, "class", "podcast svelte-6oc1v8");
+    			attr_dev(div, "class", "podcast svelte-1fhnjvo");
     			add_location(div, file$4, 51, 20, 1750);
     		},
     		m: function mount(target, anchor) {
@@ -29498,13 +29498,13 @@ var app = (function () {
     			div4 = element("div");
     			div3 = element("div");
     			iframe = element("iframe");
-    			attr_dev(p, "class", "title svelte-6oc1v8");
+    			attr_dev(p, "class", "title svelte-1fhnjvo");
     			add_location(p, file$4, 40, 8, 1384);
-    			attr_dev(div0, "class", "title-container svelte-6oc1v8");
+    			attr_dev(div0, "class", "title-container svelte-1fhnjvo");
     			add_location(div0, file$4, 39, 4, 1345);
-    			attr_dev(div1, "class", "album svelte-6oc1v8");
+    			attr_dev(div1, "class", "album svelte-1fhnjvo");
     			add_location(div1, file$4, 45, 8, 1521);
-    			attr_dev(div2, "class", "album-container svelte-6oc1v8");
+    			attr_dev(div2, "class", "album-container svelte-1fhnjvo");
     			add_location(div2, file$4, 44, 4, 1482);
     			attr_dev(iframe, "title", "Podcast");
     			set_style(iframe, "border-radius", "12px");
@@ -29515,11 +29515,11 @@ var app = (function () {
     			iframe.allowFullscreen = "";
     			attr_dev(iframe, "allow", "autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture");
     			add_location(iframe, file$4, 65, 12, 2376);
-    			attr_dev(div3, "class", "playlist svelte-6oc1v8");
+    			attr_dev(div3, "class", "playlist svelte-1fhnjvo");
     			add_location(div3, file$4, 64, 8, 2340);
-    			attr_dev(div4, "class", "inner svelte-6oc1v8");
+    			attr_dev(div4, "class", "inner svelte-1fhnjvo");
     			add_location(div4, file$4, 62, 4, 2254);
-    			attr_dev(div5, "class", "container svelte-6oc1v8");
+    			attr_dev(div5, "class", "container svelte-1fhnjvo");
     			attr_dev(div5, "id", "podcast");
     			add_location(div5, file$4, 38, 0, 1303);
     		},

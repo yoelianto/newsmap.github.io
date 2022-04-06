@@ -133,11 +133,11 @@
         width:100%;
         border-radius: 0.5rem;
     } */
-    .playlist-title {
+    /* .playlist-title {
         margin: 0;
         font-family: 'Roboto';
         font-weight: bolder;
-    }
+    } */
     .playlist {
         display: flex;
         flex-direction: column;
