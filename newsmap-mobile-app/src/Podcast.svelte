@@ -39,9 +39,10 @@
 <div class="container" id="podcast">
     <div class="title-container">
         <p class="title">PODCAST</p>
-        <p class="viewall">View all</p>
+        <!-- <p class="viewall">View all</p> -->
     </div>
-    <div class="inner">
+
+    <div class="album-container">
         <div class="album">
             {#await fetchData}
             <p>...waiting</p>
@@ -57,7 +58,10 @@
                 <p>An error occurred!</p>
             {/await}
         </div>
-        <p class="playlist-title">Playlist</p>
+    </div>    
+
+    <div class="inner">
+        <!-- <p class="playlist-title">Playlist</p> -->
         <div class="playlist">
             <iframe title='Podcast' style="border-radius:12px" src="https://open.spotify.com/embed/show/2hKytN0KyEWLO7pAd3upKv?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
             <!-- {#await fetchData}
@@ -84,7 +88,14 @@
 
 <style>
     .container {
-        margin-bottom: 100px;
+        margin-top:1.5rem;
+        padding-bottom: 100px;
+        background-color: #282828;
+        border-radius: 2rem 2rem 0 0;
+    }
+    .album-container {
+        overflow-x: scroll;
+        white-space: nowrap;  
     }
     .title-container {
         margin-left: 6%;
@@ -96,13 +107,13 @@
         font-family: var(--fontfamily1);
         font-weight:700;
         font-size:1.5rem;
-        color: #242053;
+        color: white;
     }
-    .viewall {
+    /* .viewall {
         color: #004EFF;
         font-family: var(--fontfamily2);
         font-size:0.8rem;
-    }
+    } */
     
     .inner {
         margin:0 auto;
@@ -112,11 +123,7 @@
     }
     .album {
         display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        margin-bottom:2rem;
-        overflow-x: scroll;
-        overflow-y: hidden;
+        margin-left: 6%;
     }
     .podcast {
         width:250px;
@@ -134,6 +141,7 @@
     .playlist {
         display: flex;
         flex-direction: column;
+        margin-top: 1.5rem;
     }
     /* .podlist {
         display: flex;

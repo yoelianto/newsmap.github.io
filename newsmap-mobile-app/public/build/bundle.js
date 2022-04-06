@@ -29249,7 +29249,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (56:12) {:catch error}
+    // (57:12) {:catch error}
     function create_catch_block$2(ctx) {
     	let p;
 
@@ -29257,7 +29257,7 @@ var app = (function () {
     		c: function create() {
     			p = element("p");
     			p.textContent = "An error occurred!";
-    			add_location(p, file$4, 56, 16, 2146);
+    			add_location(p, file$4, 57, 16, 2167);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -29272,14 +29272,14 @@ var app = (function () {
     		block,
     		id: create_catch_block$2.name,
     		type: "catch",
-    		source: "(56:12) {:catch error}",
+    		source: "(57:12) {:catch error}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (48:12) {:then data}
+    // (49:12) {:then data}
     function create_then_block$2(ctx) {
     	let each_1_anchor;
     	let each_value = { length: 3 };
@@ -29340,14 +29340,14 @@ var app = (function () {
     		block,
     		id: create_then_block$2.name,
     		type: "then",
-    		source: "(48:12) {:then data}",
+    		source: "(49:12) {:then data}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (50:20) {#if data[i].link !== undefined}
+    // (51:20) {#if data[i].link !== undefined}
     function create_if_block$1(ctx) {
     	let div;
     	let iframe;
@@ -29367,9 +29367,9 @@ var app = (function () {
     			attr_dev(iframe, "frameborder", "0");
     			iframe.allowFullscreen = "";
     			attr_dev(iframe, "allow", "autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture");
-    			add_location(iframe, file$4, 51, 24, 1776);
-    			attr_dev(div, "class", "podcast svelte-5m4bqu");
-    			add_location(div, file$4, 50, 20, 1729);
+    			add_location(iframe, file$4, 52, 24, 1797);
+    			attr_dev(div, "class", "podcast svelte-6oc1v8");
+    			add_location(div, file$4, 51, 20, 1750);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -29386,14 +29386,14 @@ var app = (function () {
     		block,
     		id: create_if_block$1.name,
     		type: "if",
-    		source: "(50:20) {#if data[i].link !== undefined}",
+    		source: "(51:20) {#if data[i].link !== undefined}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (49:16) {#each {length: 3} as _, i}
+    // (50:16) {#each {length: 3} as _, i}
     function create_each_block$3(ctx) {
     	let if_block_anchor;
     	let if_block = /*data*/ ctx[1][/*i*/ ctx[4]].link !== undefined && create_if_block$1(ctx);
@@ -29420,14 +29420,14 @@ var app = (function () {
     		block,
     		id: create_each_block$3.name,
     		type: "each",
-    		source: "(49:16) {#each {length: 3} as _, i}",
+    		source: "(50:16) {#each {length: 3} as _, i}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (46:30)               <p>...waiting</p>              {:then data}
+    // (47:30)               <p>...waiting</p>              {:then data}
     function create_pending_block$2(ctx) {
     	let p;
 
@@ -29435,7 +29435,7 @@ var app = (function () {
     		c: function create() {
     			p = element("p");
     			p.textContent = "...waiting";
-    			add_location(p, file$4, 46, 12, 1565);
+    			add_location(p, file$4, 47, 12, 1586);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -29450,7 +29450,7 @@ var app = (function () {
     		block,
     		id: create_pending_block$2.name,
     		type: "pending",
-    		source: "(46:30)               <p>...waiting</p>              {:then data}",
+    		source: "(47:30)               <p>...waiting</p>              {:then data}",
     		ctx
     	});
 
@@ -29458,18 +29458,15 @@ var app = (function () {
     }
 
     function create_fragment$4(ctx) {
-    	let div4;
+    	let div5;
     	let div0;
-    	let p0;
+    	let p;
     	let t1;
-    	let p1;
-    	let t3;
-    	let div3;
-    	let div1;
-    	let t4;
-    	let p2;
-    	let t6;
     	let div2;
+    	let div1;
+    	let t2;
+    	let div4;
+    	let div3;
     	let iframe;
     	let iframe_src_value;
 
@@ -29489,33 +29486,26 @@ var app = (function () {
 
     	const block = {
     		c: function create() {
-    			div4 = element("div");
+    			div5 = element("div");
     			div0 = element("div");
-    			p0 = element("p");
-    			p0.textContent = "PODCAST";
+    			p = element("p");
+    			p.textContent = "PODCAST";
     			t1 = space();
-    			p1 = element("p");
-    			p1.textContent = "View all";
-    			t3 = space();
-    			div3 = element("div");
+    			div2 = element("div");
     			div1 = element("div");
     			info.block.c();
-    			t4 = space();
-    			p2 = element("p");
-    			p2.textContent = "Playlist";
-    			t6 = space();
-    			div2 = element("div");
+    			t2 = space();
+    			div4 = element("div");
+    			div3 = element("div");
     			iframe = element("iframe");
-    			attr_dev(p0, "class", "title svelte-5m4bqu");
-    			add_location(p0, file$4, 40, 8, 1384);
-    			attr_dev(p1, "class", "viewall svelte-5m4bqu");
-    			add_location(p1, file$4, 41, 8, 1422);
-    			attr_dev(div0, "class", "title-container svelte-5m4bqu");
+    			attr_dev(p, "class", "title svelte-6oc1v8");
+    			add_location(p, file$4, 40, 8, 1384);
+    			attr_dev(div0, "class", "title-container svelte-6oc1v8");
     			add_location(div0, file$4, 39, 4, 1345);
-    			attr_dev(div1, "class", "album svelte-5m4bqu");
-    			add_location(div1, file$4, 44, 8, 1500);
-    			attr_dev(p2, "class", "playlist-title svelte-5m4bqu");
-    			add_location(p2, file$4, 59, 8, 2219);
+    			attr_dev(div1, "class", "album svelte-6oc1v8");
+    			add_location(div1, file$4, 45, 8, 1521);
+    			attr_dev(div2, "class", "album-container svelte-6oc1v8");
+    			add_location(div2, file$4, 44, 4, 1482);
     			attr_dev(iframe, "title", "Podcast");
     			set_style(iframe, "border-radius", "12px");
     			if (!src_url_equal(iframe.src, iframe_src_value = "https://open.spotify.com/embed/show/2hKytN0KyEWLO7pAd3upKv?utm_source=generator&theme=0")) attr_dev(iframe, "src", iframe_src_value);
@@ -29524,35 +29514,32 @@ var app = (function () {
     			attr_dev(iframe, "frameborder", "0");
     			iframe.allowFullscreen = "";
     			attr_dev(iframe, "allow", "autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture");
-    			add_location(iframe, file$4, 61, 12, 2303);
-    			attr_dev(div2, "class", "playlist svelte-5m4bqu");
-    			add_location(div2, file$4, 60, 8, 2267);
-    			attr_dev(div3, "class", "inner svelte-5m4bqu");
-    			add_location(div3, file$4, 43, 4, 1471);
-    			attr_dev(div4, "class", "container svelte-5m4bqu");
-    			attr_dev(div4, "id", "podcast");
-    			add_location(div4, file$4, 38, 0, 1303);
+    			add_location(iframe, file$4, 65, 12, 2376);
+    			attr_dev(div3, "class", "playlist svelte-6oc1v8");
+    			add_location(div3, file$4, 64, 8, 2340);
+    			attr_dev(div4, "class", "inner svelte-6oc1v8");
+    			add_location(div4, file$4, 62, 4, 2254);
+    			attr_dev(div5, "class", "container svelte-6oc1v8");
+    			attr_dev(div5, "id", "podcast");
+    			add_location(div5, file$4, 38, 0, 1303);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, div4, anchor);
-    			append_dev(div4, div0);
-    			append_dev(div0, p0);
-    			append_dev(div0, t1);
-    			append_dev(div0, p1);
-    			append_dev(div4, t3);
-    			append_dev(div4, div3);
-    			append_dev(div3, div1);
+    			insert_dev(target, div5, anchor);
+    			append_dev(div5, div0);
+    			append_dev(div0, p);
+    			append_dev(div5, t1);
+    			append_dev(div5, div2);
+    			append_dev(div2, div1);
     			info.block.m(div1, info.anchor = null);
     			info.mount = () => div1;
     			info.anchor = null;
-    			append_dev(div3, t4);
-    			append_dev(div3, p2);
-    			append_dev(div3, t6);
-    			append_dev(div3, div2);
-    			append_dev(div2, iframe);
+    			append_dev(div5, t2);
+    			append_dev(div5, div4);
+    			append_dev(div4, div3);
+    			append_dev(div3, iframe);
     		},
     		p: function update(new_ctx, [dirty]) {
     			ctx = new_ctx;
@@ -29561,7 +29548,7 @@ var app = (function () {
     		i: noop$5,
     		o: noop$5,
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(div4);
+    			if (detaching) detach_dev(div5);
     			info.block.d();
     			info.token = null;
     			info = null;
