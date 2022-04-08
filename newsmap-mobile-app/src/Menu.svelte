@@ -1,8 +1,8 @@
 <script>
     let menus = [
-        {menu:'Home',id:0, active:true, link:"#newsmap", source:"./image/home.svg"},
-        {menu:'Search',id:1, active:false, link:"#search", source:"./image/search.svg"},
-        {menu:'Jurno',id:2, active:false, link:"#original", source:"./image/artikel.svg"},
+        {menu:'Jurno',id:0, active:true, link:"#jurno", source:"./image/home.svg"},
+        {menu:'Original',id:1, active:false, link:"#original", source:"./image/search.svg"},
+        {menu:'Deduktif',id:2, active:false, link:"#deduktif", source:"./image/artikel.svg"},
         {menu:'Podcast',id:3, active:false, link:"#podcast", source:"./image/podcast.svg"}
     ]
 

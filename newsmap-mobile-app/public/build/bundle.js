@@ -29636,15 +29636,15 @@ var app = (function () {
     			if (!src_url_equal(img.src, img_src_value = /*list*/ ctx[3].source)) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", img_alt_value = /*list*/ ctx[3].menu);
     			attr_dev(img, "class", "svelte-vg2q14");
-    			add_location(img, file$3, 24, 20, 862);
+    			add_location(img, file$3, 24, 20, 868);
     			attr_dev(div0, "class", "circle svelte-vg2q14");
-    			add_location(div0, file$3, 23, 16, 820);
+    			add_location(div0, file$3, 23, 16, 826);
     			attr_dev(h4, "class", "menutext svelte-vg2q14");
     			attr_dev(h4, "id", h4_id_value = /*list*/ ctx[3].id);
-    			add_location(h4, file$3, 27, 16, 949);
+    			add_location(h4, file$3, 27, 16, 955);
     			attr_dev(div1, "class", "menu svelte-vg2q14");
     			toggle_class(div1, "selected", /*list*/ ctx[3].active === true);
-    			add_location(div1, file$3, 22, 12, 743);
+    			add_location(div1, file$3, 22, 12, 749);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div1, anchor);
@@ -29713,12 +29713,12 @@ var app = (function () {
     			}
 
     			attr_dev(div0, "class", "menubar svelte-vg2q14");
-    			add_location(div0, file$3, 20, 8, 668);
+    			add_location(div0, file$3, 20, 8, 674);
     			attr_dev(div1, "class", "container svelte-vg2q14");
     			toggle_class(div1, "moveDown", /*showMenu*/ ctx[0]);
-    			add_location(div1, file$3, 19, 4, 608);
+    			add_location(div1, file$3, 19, 4, 614);
     			attr_dev(nav, "class", "svelte-vg2q14");
-    			add_location(nav, file$3, 18, 0, 597);
+    			add_location(nav, file$3, 18, 0, 603);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -29786,24 +29786,24 @@ var app = (function () {
 
     	let menus = [
     		{
-    			menu: 'Home',
+    			menu: 'Jurno',
     			id: 0,
     			active: true,
-    			link: "#newsmap",
+    			link: "#jurno",
     			source: "./image/home.svg"
     		},
     		{
-    			menu: 'Search',
+    			menu: 'Original',
     			id: 1,
     			active: false,
-    			link: "#search",
+    			link: "#original",
     			source: "./image/search.svg"
     		},
     		{
-    			menu: 'Jurno',
+    			menu: 'Deduktif',
     			id: 2,
     			active: false,
-    			link: "#original",
+    			link: "#deduktif",
     			source: "./image/artikel.svg"
     		},
     		{
