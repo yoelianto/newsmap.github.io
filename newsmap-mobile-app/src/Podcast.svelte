@@ -95,7 +95,7 @@
     }
     .album-container {
         overflow-x: scroll;
-        white-space: nowrap;  
+        white-space: nowrap; 
     }
     .title-container {
         margin-left: 6%;
@@ -108,6 +108,14 @@
         font-weight:700;
         font-size:1.5rem;
         color: white;
+    }
+
+    .album-container::-webkit-scrollbar {
+        display: none;
+    }
+    .album-container {
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
     }
     /* .viewall {
         color: #004EFF;

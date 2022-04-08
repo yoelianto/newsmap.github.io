@@ -156,6 +156,7 @@
 <style>
 	main {
 		margin: 0 auto;
+		width:100vw;
 		/* max-width: 600px; */
 		
 	}
@@ -170,6 +171,7 @@
 	.container {
 		display: flex;
 		flex-direction: column;
+		width:100vw;
 	}
 
 	@media (min-width: 640px) {

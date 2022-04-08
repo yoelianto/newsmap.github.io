@@ -1,39 +1,102 @@
+<script context="module">
+    import interact from 'interactjs'
+</script>
+
 <script>
-    // let jurno = [
-    //     {
-    //         title: "Kenapa Bimbel Bisa Booming Banget?",
-	// 		url:"https://newsmap.id/article/kenapa-bimbel-bisa-booming-banget",
-	// 		thumb:"https://admin-dev.newsmap.id/uploads/news/1637749717_Bimbel-compress.jpg"
-    //     },
-    //     {
-    //         title: "Asam Garam Driver Ojol: Stres, Cemas, dan Kesepian",
-	// 		url:"https://newsmap.id/article/asam-garam-driver-ojol-stres-cemas-dan-kesepian",
-	// 		thumb:"https://admin-dev.newsmap.id/uploads/news/1637737865_Asam-Garam-Driver-Ojol--Orderan-Anyep,-Cemas,-dan-Kesepian.jpg"
-    //     },
-    //     {
-    //         title: "Into the Ambisverse: Mengulik Komunitas Ambis Anak Sekolah Indonesia",
-	// 		url:"https://newsmap.id/article/into-the-ambisverse-mengulik-komunitas-ambis-anak-sekolah-indonesia",
-	// 		thumb:"https://admin-dev.newsmap.id/uploads/news/1637751242_Ambisverse-compress.jpg"
-    //     }
-    //     ]
     import { get } from "./api";
     import * as ihttp from './constants/initialHttp';
+    // import { onMount } from 'svelte'
 
     const fetchData = (async () => {
         const result = await get(ihttp.URI_ARTICLE_LIST, {size: 3});
         return await result.data;
     })()
 
+
+    const position = { x: 0, y: 0 }
+    let containerWidth
+
+    interact('.swipe[data-status="current"]').draggable({
+        listeners: {
+            start(event) {
+                event.target.setAttribute('data-dragging', true)
+            },
+            move(event) {
+                position.x += event.dx
+
+                event.target.style.transform = 
+                `translate(${position.x}px) rotate(${position.x * 0.05}deg)`
+                event.target.style.transition =
+                `transform 0s`
+            },
+            end(event) {
+                let moved = Math.abs(position.x)
+
+                event.target.setAttribute('data-dragging', false)
+
+                if (moved > 150) {
+                    event.target.setAttribute('data-status', 'transition')
+                    if (position.x > 0) { // move right
+                        position.x = containerWidth * 1.5
+                    } else { // move left
+                        position.x = -containerWidth * 1.5
+                    }
+
+                    event.target.style.transform = 
+                    `translate(${position.x}px) rotate(${position.x * 0.05}deg)`
+                    event.target.style.transition =
+                    `transform 100ms ease-in-out`
+                    
+                    if (event.target.id > 0) {
+                        event.target.previousElementSibling.setAttribute('data-status', 'current');
+                    } else if (event.target.id == 0) {
+                        let swipe = document.querySelectorAll('.swipe')
+                        console.log(swipe)
+                        swipe.forEach((item) => {
+                            item.style.transition =`transform 0ms ease-in-out`
+                            item.style.transform = `translate(0px) rotate(0deg)`
+                            item.setAttribute('data-status', 'waiting')                    
+                        })
+                        swipe[2].setAttribute('data-status', 'current')
+                    }
+                    
+                    position.x = 0
+                } else {
+                    position.x = 0
+
+                    event.target.style.transform = 
+                    `translate(${position.x}px) rotate(${position.x * 0.05}deg)`
+                    event.target.style.transition =
+                    `transform 100ms ease-in-out`
+
+                    console.log('not-moved', moved)
+                }
+                
+            }
+        }
+    })
 </script>
 
-<div class="container" id="original">
+<svelte:head>
+    <script src="https://kit.fontawesome.com/f57950db7e.js" crossorigin="anonymous"></script>
+</svelte:head>
+
+<div class="container" id="original" bind:clientWidth={containerWidth}>
     <p class="title">JURNO ORIGINAL</p>
     {#await fetchData}
         <p>...waiting</p>
     {:then data}
+
     <div class="inner-container">
+        <div class="icon">
+            <i class="fas fa-long-arrow-alt-left"></i>
+            <i class="far fa-hand-pointer"></i>
+            <i class="fas fa-long-arrow-alt-right"></i>
+        </div>
+        
         {#each data as d, i}
-        <div class='swipe'>
+
+        <div class='swipe' data-dragging='false' data-status="{i === 2 ? 'current' : 'waiting' }" id={i}>
             <a class="card-link" href={`${process['env']['DOMAIN']}/article/${d.slug}`}>
                 <div class="card" >
                     <img class="thumb" src={`${process['env']['URL_IMAGE']}news/${d.thumbnail}`} alt="" >
@@ -45,15 +108,30 @@
                 </div>
             </a>
         </div>
-       
+
         {/each}
     </div>
+
     {:catch error}
         <p>An error occurred!</p>
     {/await}
 </div>
 
 <style>
+    .icon {
+        color: white;
+        top:1rem;
+        font-size: 1.5rem;
+        position: absolute;
+        width: 100%;
+        justify-content: center;
+        display: flex;
+        z-index:10;
+    }
+    i {
+        margin-left: 0.25rem;
+        margin-right:0.25rem;
+    }
     .title {
         font-family: var(--fontfamily1);
         font-weight:700;
@@ -74,6 +152,8 @@
         display: block;
         position: relative;
         height:110vw;
+        overflow-x: hidden;
+        overflow-y: hidden;
     }
     .card {
         width:66vw;
@@ -86,6 +166,8 @@
         position:absolute;
         overflow: hidden;
         left: 17vw;
+        touch-action: none;
+        user-select: none;
     }
     .thumb {
         z-index: 0;
