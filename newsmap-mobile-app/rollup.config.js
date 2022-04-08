@@ -43,7 +43,7 @@ export default {
 			process: JSON.stringify({
 				env: {
 					DOMAIN: 'https://newsmap.id/',
-					URL_API: 'https://api.newstensity.com/api/newsmap/v1/',
+					URL_API: 'https://api-dev.jurno.id/api/newsmap/v1/',
 					URL_IMAGE: `URL_ASSET/uploads/`,
 					URL_CUSTOM_HTML: `URL_ASSET/files/`,
 					NO_IMAGE: './image/logo-jurno-web.svg',
