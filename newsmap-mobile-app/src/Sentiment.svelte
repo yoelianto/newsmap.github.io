@@ -192,7 +192,7 @@
 	@media only screen /*xtralarge*/
 	and (min-width: 1200px) {
         .sentiment-container {
-            width:20vw;
+            width:18vw;
         }
         .slider {
             flex-direction: column;
@@ -228,7 +228,6 @@
         }
         .container {
             display: flex;
-            margin-top:8vw;
         }
 	}
 </style>

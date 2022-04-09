@@ -93,6 +93,9 @@
         z-index: 99;
         position: fixed;
         width:100vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
     .headertext {
         display:flex;
@@ -152,9 +155,42 @@
         font-weight:700; 
         margin: 0.2rem 1rem;
     }
-    @media only screen and (min-width:1200px) {
+
+    @media only screen /*xtrasmall*/
+	and (max-width: 575px) {
+
+
+	}
+	@media only screen /*small*/
+	and (min-width: 576px)
+	and (max-width: 767px) {
+ 
+	}
+	@media only screen /*medium*/
+	and (min-width: 768px)
+	and (max-width: 991px) {
+
+	}
+	@media only screen /*large*/
+	and (min-width: 992px)
+	and (max-width: 1199px) {
+
+	}
+	@media only screen /*xtralarge*/
+	and (min-width: 1200px) {
         .container {
-            height: 8vw;
+            height: 10vw;
         }
-    }
+        .header-menu {
+            width: 60vw;
+            margin:0 auto;
+        }
+        h4 {
+            font-size:1.5rem;
+        }
+        h4:hover {
+            color:#242053;
+            transition:color 400ms ease-in-out;
+        }
+	}
 </style>

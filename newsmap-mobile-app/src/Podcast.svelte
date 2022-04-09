@@ -90,7 +90,7 @@
     .container {
         margin-top:1.5rem;
         padding-bottom: 100px;
-        background-color: #282828;
+        background-color: #121212;
         border-radius: 2rem 2rem 0 0;
     }
     .album-container {
@@ -266,7 +266,8 @@
         .container {
             max-width:1100px;
             width:80%;
-            margin:1rem auto 0 auto;
+            margin:2rem auto 0 auto;
+            padding-bottom: 120px;
         }
         .playlist-embed {
             width:80%;

@@ -177,6 +177,7 @@
                 return "M" + d.join(",") + "z";
                 })
             .style("stroke-linejoin", "round")
+            .style("cursor", "pointer")
             .style("fill", (d) => {
                     return d.site.originalObject.data.originalData.color;
                 })
@@ -206,6 +207,7 @@
             .enter()
             .append('text')
             .classed('label', true)
+            .style("cursor", "pointer")
             .text((d) => {
                 if (d.site.originalObject.data.originalData.weight >= 2) {
                     return d.site.originalObject.data.originalData.keywords[0]
@@ -244,6 +246,7 @@
             .enter()
             .append('text')
             .classed('secondarylabel', true)
+            .style("cursor", "pointer")
             .text((d) => {
                 if (d.site.originalObject.data.originalData.weight >= 3) {
                     return d.site.originalObject.data.originalData.keywords[1]
@@ -282,6 +285,7 @@
             .enter()
             .append('text')
             .classed('tersierlabel', true)
+            .style("cursor", "pointer")
             .text((d) => {
                 if (d.site.originalObject.data.originalData.weight >= 3) {
                     return d.site.originalObject.data.originalData.keywords[2]

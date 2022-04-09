@@ -90,14 +90,12 @@
 		/> -->
 		<article class='headlines'>
 			<VoronoiNewsmap 
-			bind:margin={margin}	
 			/>
 
 			<Sentiment
 				--fontfamily1={fontfamily1}
 				--fontfamily2={fontfamily2}
 				params={params}
-				--margintop={margin}
 			/>
 		</article>
 		
@@ -194,7 +192,9 @@
 	}
 	@media only screen /*xtralarge*/
 	and (min-width: 1200px) {
-
+		.headlines {
+			margin-top:10vw;
+		}
 	}
 
 </style>

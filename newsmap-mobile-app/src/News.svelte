@@ -116,6 +116,9 @@ const fetchData = (async () => {
             width:20vw;
             height:15vw;
         }
+        .slider {
+            margin-left:0;
+        }
 	}
 	@media only screen /*medium*/
 	and (min-width: 768px)
@@ -131,6 +134,9 @@ const fetchData = (async () => {
         .imgthumb {
             width:18vw;
             height:13.5vw;
+        }
+        .slider {
+            margin-left:0;
         }
 	}
 	@media only screen /*large*/
@@ -148,11 +154,14 @@ const fetchData = (async () => {
             width:18vw;
             height:13.5vw;
         }
+        .slider {
+            margin-left:0;
+        }
 	}
 	@media only screen /*xtralarge*/
 	and (min-width: 1200px) {
         .title {
-            font-size:2rem
+            font-size:2rem;
         }
         .container {
             max-width:1100px;
@@ -162,6 +171,9 @@ const fetchData = (async () => {
         .imgthumb {
             width:18vw;
             height:13.5vw;
+        }
+        .slider {
+            margin-left:0;
         }
 	}
 </style>

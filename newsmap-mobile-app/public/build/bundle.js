@@ -26485,24 +26485,24 @@ var app = (function () {
     			svg1 = svg_element("svg");
     			attr_dev(path0, "class", "cls-1");
     			attr_dev(path0, "d", "M94.6,14.335v3.81l-.09,4.17-.19,4.65-.31,5.31-.3,4.3-.45,5.47-.54,5.6,.22,1.07,.59,4.55,.08,4.58-.4,4.54-.83,4.46-1.31,4.34-1.76,4.16-2.16,3.95-2.53,3.7-2.93,3.38-3.25,3.05-3.53,2.71-3.76,2.35-3.98,1.93-4.14,1.53-4.27,1.11-4.36,.69-4.38,.26-4.38-.26-4.36-.69-4.26-1.11-4.15-1.53-3.98-1.93-3.76-2.35-3.52-2.71-3.26-3.05-2.92-3.38-2.54-3.7-2.16-3.95-1.75-4.16-1.31-4.34-.84-4.46-.4-4.54,.08-4.58,.6-4.55,.21-1.07-.53-5.6-.45-5.47-.31-4.3-.31-5.31-.19-4.65-.08-4.17v-3.81l.15-3.65,.22-2.8,.32-2.46,.5-1.95,.14-.41,.14-.4,.15-.4,.18-.38,.2-.39,.25-.33,.3-.35,.34-.28,.37-.23,.41-.17,.43-.11,.43-.02h.43l.42,.05,.41,.08,.39,.12,.38,.14,.36,.17s1.29,.71,1.58,.86c.03,.02,.05,.03,.05,.03l2.48,1.9,1.56,1.47,1.68,1.81,1.54,1.8,1.73,2.13,1.47,1.91,1.43,1.91,1.02,1.43,1.34,1.95,1.1,1.67,2.98-1.38,4.28-1.57,4.39-1.2,4.49-.76,4.53-.29,4.53,.29,4.5,.76,4.39,1.2,4.27,1.57,2.98,1.38,1.11-1.67,1.34-1.95,1.02-1.43,1.42-1.91,1.48-1.91,1.72-2.13,1.55-1.8,1.68-1.81,1.56-1.47,2.47-1.9,.06-.03c.28-.15,1.58-.86,1.58-.86l.36-.17,.38-.14,.39-.12,.4-.08,.42-.05h.43l.44,.02,.43,.11,.4,.17,.38,.23,.34,.28,.29,.35,.26,.33,.2,.39,.18,.38,.15,.4,.14,.4,.13,.41,.5,1.95,.33,2.46,.22,2.8,.15,3.65h0Z");
-    			add_location(path0, file$a, 328, 4, 10880);
+    			add_location(path0, file$a, 332, 4, 11044);
     			attr_dev(path1, "class", "cls-1");
     			attr_dev(path1, "d", "M91.153,57.13c0,22.372-18.411,40.502-41.123,40.502S8.917,79.503,8.917,57.13c0-7.001,1.806-13.594,4.981-19.343,2.865-5.176,6.836-9.662,11.614-13.167,6.846-5.011,15.333-7.982,24.518-7.982s17.624,2.952,24.47,7.943c4.768,3.486,8.739,7.953,11.614,13.099,3.214,5.778,5.04,12.4,5.04,19.45Z");
-    			add_location(path1, file$a, 330, 4, 12110);
+    			add_location(path1, file$a, 334, 4, 12274);
     			attr_dev(path2, "class", "cls-1");
     			attr_dev(path2, "d", "M88.04,21.18v1.95l-.04,2.14-.1,2.39-.16,2.73-.16,2.21-.2,2.48c-2.88-4.7-6.64-8.81-11.06-12.12l.01-.02,.69-1,.53-.74,.72-.98,.76-.98,.89-1.09,.79-.93,.87-.93,.8-.75,1.27-.98,.03-.01c.14-.08,.81-.44,.81-.44l.18-.09,.4-.14,.2-.04,.22-.02h.22l.23,.01,.22,.05,.2,.09,.2,.12,.17,.14,.15,.18,.13,.17,.11,.2,.09,.2,.08,.2,.07,.21,.07,.21,.25,1,.17,1.26,.11,1.44,.08,1.88Z");
-    			add_location(path2, file$a, 332, 4, 12451);
+    			add_location(path2, file$a, 336, 4, 12615);
     			attr_dev(path3, "class", "cls-1");
     			attr_dev(path3, "d", "M23.7,22.99c-4.43,3.32-8.2,7.46-11.07,12.19l-.21-2.58-.16-2.21-.16-2.73-.1-2.39-.04-2.14v-1.95l.08-1.88,.11-1.44,.17-1.26,.25-1,.07-.21,.07-.21,.08-.2,.09-.2,.11-.2,.13-.17,.15-.18,.17-.14,.2-.12,.2-.09,.22-.05,.23-.01h.22l.22,.02,.2,.04,.4,.14,.18,.09s.67,.36,.81,.44l.03,.01,1.27,.98,.8,.75,.87,.93,.79,.93,.89,1.09,.76,.98,.72,.98,.53,.74,.69,1,.03,.05Z");
-    			add_location(path3, file$a, 334, 4, 12871);
+    			add_location(path3, file$a, 338, 4, 13035);
     			attr_dev(svg0, "xmlns", "http://www.w3.org/2000/svg");
     			attr_dev(svg0, "xmlns:xlink", "http://www.w3.org/1999/xlink");
     			attr_dev(svg0, "class", "example svelte-rp56y3");
     			attr_dev(svg0, "fill", "none");
-    			add_location(svg0, file$a, 327, 0, 10763);
+    			add_location(svg0, file$a, 331, 0, 10927);
     			set_style(svg1, "margin-top", /*margin*/ ctx[0] + "px");
     			attr_dev(svg1, "class", "build svelte-rp56y3");
-    			add_location(svg1, file$a, 337, 0, 13288);
+    			add_location(svg1, file$a, 341, 0, 13452);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -26709,7 +26709,7 @@ var app = (function () {
 
     			cells.selectAll('.voronoi').data(polygons).enter().append('path').classed('voronoi', true).attr("d", d => {
     				return "M" + d.join(",") + "z";
-    			}).style("stroke-linejoin", "round").style("fill", d => {
+    			}).style("stroke-linejoin", "round").style("cursor", "pointer").style("fill", d => {
     				return d.site.originalObject.data.originalData.color;
     			}).style('z-index', 10);
 
@@ -26717,7 +26717,7 @@ var app = (function () {
     			catear1.append('path').classed('cathead', true).attr('d', "M" + scaledear1.join(",") + "z").style("fill", "#ee5151");
     			catear2.append('path').classed('cathead', true).attr('d', "M" + scaledear2.join(",") + "z").style("fill", "#ee5151");
 
-    			text.selectAll('.label').data(polygons).enter().append('text').classed('label', true).text(d => {
+    			text.selectAll('.label').data(polygons).enter().append('text').classed('label', true).style("cursor", "pointer").text(d => {
     				if (d.site.originalObject.data.originalData.weight >= 2) {
     					return d.site.originalObject.data.originalData.keywords[0];
     				}
@@ -26743,7 +26743,7 @@ var app = (function () {
     				}
     			});
 
-    			text.selectAll('.secondarylabel').data(polygons).enter().append('text').classed('secondarylabel', true).text(d => {
+    			text.selectAll('.secondarylabel').data(polygons).enter().append('text').classed('secondarylabel', true).style("cursor", "pointer").text(d => {
     				if (d.site.originalObject.data.originalData.weight >= 3) {
     					return d.site.originalObject.data.originalData.keywords[1];
     				}
@@ -26769,7 +26769,7 @@ var app = (function () {
     				}
     			});
 
-    			text.selectAll('.tersierlabel').data(polygons).enter().append('text').classed('tersierlabel', true).text(d => {
+    			text.selectAll('.tersierlabel').data(polygons).enter().append('text').classed('tersierlabel', true).style("cursor", "pointer").text(d => {
     				if (d.site.originalObject.data.originalData.weight >= 3) {
     					return d.site.originalObject.data.originalData.keywords[2];
     				}
@@ -27405,7 +27405,7 @@ var app = (function () {
     			h4 = element("h4");
     			t0 = text$1(t0_value);
     			t1 = space();
-    			attr_dev(h4, "class", "menu svelte-8vaw0f");
+    			attr_dev(h4, "class", "menu svelte-a5ysga");
     			attr_dev(h4, "id", h4_id_value = /*list*/ ctx[12].id);
     			toggle_class(h4, "selected", /*list*/ ctx[12].active === true);
     			add_location(h4, file$9, 56, 20, 1664);
@@ -27484,19 +27484,19 @@ var app = (function () {
 
     			if (!src_url_equal(img.src, img_src_value = "./image/logo-jurno-web.svg")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "Logo Jurno Website");
-    			attr_dev(img, "class", "svelte-8vaw0f");
+    			attr_dev(img, "class", "svelte-a5ysga");
     			add_location(img, file$9, 51, 12, 1419);
-    			attr_dev(div0, "class", "header-logo svelte-8vaw0f");
+    			attr_dev(div0, "class", "header-logo svelte-a5ysga");
     			add_location(div0, file$9, 50, 8, 1380);
-    			attr_dev(div1, "class", "headertext svelte-8vaw0f");
+    			attr_dev(div1, "class", "headertext svelte-a5ysga");
     			add_location(div1, file$9, 54, 12, 1574);
-    			attr_dev(div2, "class", "header-menu svelte-8vaw0f");
+    			attr_dev(div2, "class", "header-menu svelte-a5ysga");
     			toggle_class(div2, "moveUp", !/*showHeader*/ ctx[1]);
     			add_location(div2, file$9, 53, 8, 1508);
-    			attr_dev(div3, "class", "container svelte-8vaw0f");
+    			attr_dev(div3, "class", "container svelte-a5ysga");
     			add_render_callback(() => /*div3_elementresize_handler*/ ctx[5].call(div3));
     			add_location(div3, file$9, 49, 4, 1320);
-    			attr_dev(nav, "class", "svelte-8vaw0f");
+    			attr_dev(nav, "class", "svelte-a5ysga");
     			add_location(nav, file$9, 48, 0, 1309);
     		},
     		l: function claim(nodes) {
@@ -28363,28 +28363,28 @@ var app = (function () {
     			div4 = element("div");
     			t5 = text$1(t5_value);
     			t6 = space();
-    			attr_dev(img, "class", "people svelte-1qa3gh9");
+    			attr_dev(img, "class", "people svelte-bb0m2w");
     			if (!src_url_equal(img.src, img_src_value = /*d*/ ctx[3].thumbnail)) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", /*d*/ ctx[3].name);
     			add_location(img, file$7, 42, 28, 1287);
-    			attr_dev(div0, "class", "person svelte-1qa3gh9");
+    			attr_dev(div0, "class", "person svelte-bb0m2w");
     			add_location(div0, file$7, 41, 24, 1237);
-    			attr_dev(div1, "class", "pie svelte-1qa3gh9");
+    			attr_dev(div1, "class", "pie svelte-bb0m2w");
     			set_style(div1, "--p", /*d*/ ctx[3].percentAbs);
     			set_style(div1, "--c", /*d*/ ctx[3].color);
     			add_location(div1, file$7, 44, 24, 1398);
-    			attr_dev(div2, "class", "personcontainer svelte-1qa3gh9");
+    			attr_dev(div2, "class", "personcontainer svelte-bb0m2w");
     			add_location(div2, file$7, 40, 20, 1182);
-    			attr_dev(div3, "class", "percent svelte-1qa3gh9");
+    			attr_dev(div3, "class", "percent svelte-bb0m2w");
     			set_style(div3, "color", /*d*/ ctx[3].color);
     			add_location(div3, file$7, 48, 24, 1588);
-    			attr_dev(div4, "class", "name svelte-1qa3gh9");
+    			attr_dev(div4, "class", "name svelte-bb0m2w");
     			add_location(div4, file$7, 49, 24, 1677);
-    			attr_dev(div5, "class", "namecontainer svelte-1qa3gh9");
+    			attr_dev(div5, "class", "namecontainer svelte-bb0m2w");
     			add_location(div5, file$7, 47, 20, 1535);
-    			attr_dev(div6, "class", "sentiment svelte-1qa3gh9");
+    			attr_dev(div6, "class", "sentiment svelte-bb0m2w");
     			add_location(div6, file$7, 38, 16, 1135);
-    			attr_dev(div7, "class", "sentiment-container svelte-1qa3gh9");
+    			attr_dev(div7, "class", "sentiment-container svelte-bb0m2w");
     			add_location(div7, file$7, 37, 12, 1084);
     		},
     		m: function mount(target, anchor) {
@@ -28475,9 +28475,9 @@ var app = (function () {
     			div1 = element("div");
     			div0 = element("div");
     			info.block.c();
-    			attr_dev(div0, "class", "slider svelte-1qa3gh9");
+    			attr_dev(div0, "class", "slider svelte-bb0m2w");
     			add_location(div0, file$7, 32, 4, 942);
-    			attr_dev(div1, "class", "container svelte-1qa3gh9");
+    			attr_dev(div1, "class", "container svelte-bb0m2w");
     			add_location(div1, file$7, 31, 0, 913);
     		},
     		l: function claim(nodes) {
@@ -29178,15 +29178,15 @@ var app = (function () {
     			t2 = space();
     			p1 = element("p");
     			t3 = space();
-    			attr_dev(img, "class", "imgthumb svelte-1q0nea1");
+    			attr_dev(img, "class", "imgthumb svelte-10o4oke");
     			if (!src_url_equal(img.src, img_src_value = /*d*/ ctx[4].origin_images)) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", /*d*/ ctx[4].title);
     			add_location(img, file$5, 30, 24, 894);
-    			attr_dev(p0, "class", "author svelte-1q0nea1");
+    			attr_dev(p0, "class", "author svelte-10o4oke");
     			add_location(p0, file$5, 31, 24, 980);
-    			attr_dev(p1, "class", "article-title svelte-1q0nea1");
+    			attr_dev(p1, "class", "article-title svelte-10o4oke");
     			add_location(p1, file$5, 32, 24, 1037);
-    			attr_dev(div, "class", "news svelte-1q0nea1");
+    			attr_dev(div, "class", "news svelte-10o4oke");
     			add_location(div, file$5, 29, 20, 850);
     			attr_dev(a, "href", /*d*/ ctx[4].source_url);
     			add_location(a, file$5, 28, 16, 805);
@@ -29281,13 +29281,13 @@ var app = (function () {
     			div1 = element("div");
     			div0 = element("div");
     			info.block.c();
-    			attr_dev(p, "class", "title svelte-1q0nea1");
+    			attr_dev(p, "class", "title svelte-10o4oke");
     			add_location(p, file$5, 21, 4, 569);
-    			attr_dev(div0, "class", "slider svelte-1q0nea1");
+    			attr_dev(div0, "class", "slider svelte-10o4oke");
     			add_location(div0, file$5, 23, 8, 643);
-    			attr_dev(div1, "class", "slider-container svelte-1q0nea1");
+    			attr_dev(div1, "class", "slider-container svelte-10o4oke");
     			add_location(div1, file$5, 22, 4, 603);
-    			attr_dev(div2, "class", "container svelte-1q0nea1");
+    			attr_dev(div2, "class", "container svelte-10o4oke");
     			add_location(div2, file$5, 20, 0, 540);
     		},
     		l: function claim(nodes) {
@@ -29533,7 +29533,7 @@ var app = (function () {
     			iframe.allowFullscreen = "";
     			attr_dev(iframe, "allow", "autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture");
     			add_location(iframe, file$4, 52, 24, 1797);
-    			attr_dev(div, "class", "podcast svelte-tbjcar");
+    			attr_dev(div, "class", "podcast svelte-la1zk0");
     			add_location(div, file$4, 51, 20, 1750);
     		},
     		m: function mount(target, anchor) {
@@ -29663,15 +29663,15 @@ var app = (function () {
     			div4 = element("div");
     			div3 = element("div");
     			iframe = element("iframe");
-    			attr_dev(p, "class", "title svelte-tbjcar");
+    			attr_dev(p, "class", "title svelte-la1zk0");
     			add_location(p, file$4, 40, 8, 1384);
-    			attr_dev(div0, "class", "title-container svelte-tbjcar");
+    			attr_dev(div0, "class", "title-container svelte-la1zk0");
     			add_location(div0, file$4, 39, 4, 1345);
-    			attr_dev(div1, "class", "album svelte-tbjcar");
+    			attr_dev(div1, "class", "album svelte-la1zk0");
     			add_location(div1, file$4, 45, 8, 1521);
-    			attr_dev(div2, "class", "album-container svelte-tbjcar");
+    			attr_dev(div2, "class", "album-container svelte-la1zk0");
     			add_location(div2, file$4, 44, 4, 1482);
-    			attr_dev(iframe, "class", "playlist-embed svelte-tbjcar");
+    			attr_dev(iframe, "class", "playlist-embed svelte-la1zk0");
     			attr_dev(iframe, "title", "Podcast Turun Minum");
     			set_style(iframe, "border-radius", "12px");
     			if (!src_url_equal(iframe.src, iframe_src_value = "https://open.spotify.com/embed/playlist/71njl32GXQTjiwmKKuXUyR?utm_source=generator")) attr_dev(iframe, "src", iframe_src_value);
@@ -29681,11 +29681,11 @@ var app = (function () {
     			iframe.allowFullscreen = "";
     			attr_dev(iframe, "allow", "autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture");
     			add_location(iframe, file$4, 65, 12, 2376);
-    			attr_dev(div3, "class", "playlist svelte-tbjcar");
+    			attr_dev(div3, "class", "playlist svelte-la1zk0");
     			add_location(div3, file$4, 64, 8, 2340);
-    			attr_dev(div4, "class", "inner svelte-tbjcar");
+    			attr_dev(div4, "class", "inner svelte-la1zk0");
     			add_location(div4, file$4, 62, 4, 2254);
-    			attr_dev(div5, "class", "container svelte-tbjcar");
+    			attr_dev(div5, "class", "container svelte-la1zk0");
     			attr_dev(div5, "id", "podcast");
     			add_location(div5, file$4, 38, 0, 1303);
     		},
@@ -29801,16 +29801,16 @@ var app = (function () {
     			t2 = space();
     			if (!src_url_equal(img.src, img_src_value = /*list*/ ctx[3].source)) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", img_alt_value = /*list*/ ctx[3].menu);
-    			attr_dev(img, "class", "svelte-vg2q14");
-    			add_location(img, file$3, 24, 20, 868);
-    			attr_dev(div0, "class", "circle svelte-vg2q14");
-    			add_location(div0, file$3, 23, 16, 826);
-    			attr_dev(h4, "class", "menutext svelte-vg2q14");
+    			attr_dev(img, "class", "svelte-1t3zmgy");
+    			add_location(img, file$3, 24, 20, 869);
+    			attr_dev(div0, "class", "circle svelte-1t3zmgy");
+    			add_location(div0, file$3, 23, 16, 827);
+    			attr_dev(h4, "class", "menutext svelte-1t3zmgy");
     			attr_dev(h4, "id", h4_id_value = /*list*/ ctx[3].id);
-    			add_location(h4, file$3, 27, 16, 955);
-    			attr_dev(div1, "class", "menu svelte-vg2q14");
+    			add_location(h4, file$3, 27, 16, 956);
+    			attr_dev(div1, "class", "menu svelte-1t3zmgy");
     			toggle_class(div1, "selected", /*list*/ ctx[3].active === true);
-    			add_location(div1, file$3, 22, 12, 749);
+    			add_location(div1, file$3, 22, 12, 750);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div1, anchor);
@@ -29878,13 +29878,13 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			attr_dev(div0, "class", "menubar svelte-vg2q14");
-    			add_location(div0, file$3, 20, 8, 674);
-    			attr_dev(div1, "class", "container svelte-vg2q14");
+    			attr_dev(div0, "class", "menubar svelte-1t3zmgy");
+    			add_location(div0, file$3, 20, 8, 675);
+    			attr_dev(div1, "class", "container svelte-1t3zmgy");
     			toggle_class(div1, "moveDown", /*showMenu*/ ctx[0]);
-    			add_location(div1, file$3, 19, 4, 614);
-    			attr_dev(nav, "class", "svelte-vg2q14");
-    			add_location(nav, file$3, 18, 0, 603);
+    			add_location(div1, file$3, 19, 4, 615);
+    			attr_dev(nav, "class", "svelte-1t3zmgy");
+    			add_location(nav, file$3, 18, 0, 604);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -29954,7 +29954,7 @@ var app = (function () {
     		{
     			menu: 'Jurno',
     			id: 0,
-    			active: true,
+    			active: false,
     			link: "#jurno",
     			source: "./image/home.svg"
     		},
@@ -30488,13 +30488,13 @@ var app = (function () {
     			div = element("div");
     			iframe = element("iframe");
     			t = space();
-    			attr_dev(iframe, "class", "imgthumb svelte-68xygm");
+    			attr_dev(iframe, "class", "imgthumb svelte-1owpgi6");
     			if (!src_url_equal(iframe.src, iframe_src_value = /*short*/ ctx[3].url)) attr_dev(iframe, "src", iframe_src_value);
     			attr_dev(iframe, "title", /*short*/ ctx[3].title);
     			attr_dev(iframe, "frameborder", "0");
     			iframe.allowFullscreen = true;
     			add_location(iframe, file$1, 41, 28, 1425);
-    			attr_dev(div, "class", "news svelte-68xygm");
+    			attr_dev(div, "class", "news svelte-1owpgi6");
     			add_location(div, file$1, 40, 24, 1377);
     		},
     		m: function mount(target, anchor) {
@@ -30547,13 +30547,13 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			attr_dev(h4, "class", "title svelte-68xygm");
+    			attr_dev(h4, "class", "title svelte-1owpgi6");
     			add_location(h4, file$1, 33, 8, 1091);
-    			attr_dev(div0, "class", "slider svelte-68xygm");
+    			attr_dev(div0, "class", "slider svelte-1owpgi6");
     			add_location(div0, file$1, 35, 12, 1175);
-    			attr_dev(div1, "class", "slider-container svelte-68xygm");
+    			attr_dev(div1, "class", "slider-container svelte-1owpgi6");
     			add_location(div1, file$1, 34, 8, 1131);
-    			attr_dev(div2, "class", "container svelte-68xygm");
+    			attr_dev(div2, "class", "container svelte-1owpgi6");
     			add_location(div2, file$1, 32, 4, 1058);
     		},
     		l: function claim(nodes) {
@@ -36378,7 +36378,7 @@ var app = (function () {
     /* src\App.svelte generated by Svelte v3.46.4 */
     const file = "src\\App.svelte";
 
-    // (149:0) {:catch error}
+    // (147:0) {:catch error}
     function create_catch_block(ctx) {
     	let p;
 
@@ -36386,7 +36386,7 @@ var app = (function () {
     		c: function create() {
     			p = element("p");
     			p.textContent = "An error occurred!";
-    			add_location(p, file, 149, 0, 3447);
+    			add_location(p, file, 147, 0, 3397);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -36403,7 +36403,7 @@ var app = (function () {
     		block,
     		id: create_catch_block.name,
     		type: "catch",
-    		source: "(149:0) {:catch error}",
+    		source: "(147:0) {:catch error}",
     		ctx
     	});
 
@@ -36420,7 +36420,6 @@ var app = (function () {
     	let t0;
     	let article;
     	let voronoinewsmap;
-    	let updating_margin;
     	let t1;
     	let sentiment;
     	let div_2;
@@ -36462,23 +36461,7 @@ var app = (function () {
 
     	header = new Header({ props: header_props, $$inline: true });
     	binding_callbacks.push(() => bind$1(header, 'height', header_height_binding));
-
-    	function voronoinewsmap_margin_binding(value) {
-    		/*voronoinewsmap_margin_binding*/ ctx[16](value);
-    	}
-
-    	let voronoinewsmap_props = {};
-
-    	if (/*margin*/ ctx[1] !== void 0) {
-    		voronoinewsmap_props.margin = /*margin*/ ctx[1];
-    	}
-
-    	voronoinewsmap = new VoronoiNewsmap({
-    			props: voronoinewsmap_props,
-    			$$inline: true
-    		});
-
-    	binding_callbacks.push(() => bind$1(voronoinewsmap, 'margin', voronoinewsmap_margin_binding));
+    	voronoinewsmap = new VoronoiNewsmap({ $$inline: true });
 
     	sentiment = new Sentiment({
     			props: { params: /*params*/ ctx[11] },
@@ -36574,8 +36557,7 @@ var app = (function () {
     			set_style(div_2, "display", "contents");
     			set_style(div_2, "--fontfamily1", /*fontfamily1*/ ctx[2]);
     			set_style(div_2, "--fontfamily2", /*fontfamily2*/ ctx[3]);
-    			set_style(div_2, "--margintop", /*margin*/ ctx[1]);
-    			attr_dev(article, "class", "headlines svelte-412vt4");
+    			attr_dev(article, "class", "headlines svelte-1yhbm8z");
     			add_location(article, file, 90, 2, 2236);
     			set_style(div_3, "display", "contents");
     			set_style(div_3, "--fontfamily1", /*fontfamily1*/ ctx[2]);
@@ -36601,9 +36583,9 @@ var app = (function () {
     			set_style(div_9, "--fontfamily2", /*fontfamily2*/ ctx[3]);
     			set_style(div_10, "display", "contents");
     			set_style(div_10, "--fontfamily3", /*fontfamily3*/ ctx[4]);
-    			attr_dev(div, "class", "container svelte-412vt4");
+    			attr_dev(div, "class", "container svelte-1yhbm8z");
     			add_location(div, file, 76, 1, 1911);
-    			attr_dev(main, "class", "svelte-412vt4");
+    			attr_dev(main, "class", "svelte-1yhbm8z");
     			add_location(main, file, 75, 0, 1903);
     		},
     		m: function mount(target, anchor) {
@@ -36654,20 +36636,6 @@ var app = (function () {
     			}
 
     			header.$set(header_changes);
-    			const voronoinewsmap_changes = {};
-
-    			if (!updating_margin && dirty & /*margin*/ 2) {
-    				updating_margin = true;
-    				voronoinewsmap_changes.margin = /*margin*/ ctx[1];
-    				add_flush_callback(() => updating_margin = false);
-    			}
-
-    			voronoinewsmap.$set(voronoinewsmap_changes);
-
-    			if (dirty & /*margin*/ 2) {
-    				set_style(div_2, "--margintop", /*margin*/ ctx[1]);
-    			}
-
     			const menu_changes = {};
     			if (dirty & /*y*/ 1) menu_changes.showMenu = /*y*/ ctx[0] < 50;
     			menu.$set(menu_changes);
@@ -36784,8 +36752,8 @@ var app = (function () {
     		pending: create_pending_block,
     		then: create_then_block,
     		catch: create_catch_block,
-    		value: 19,
-    		error: 20,
+    		value: 18,
+    		error: 19,
     		blocks: [,,,]
     	};
 
@@ -36930,11 +36898,6 @@ var app = (function () {
     		$$invalidate(1, margin);
     	}
 
-    	function voronoinewsmap_margin_binding(value) {
-    		margin = value;
-    		$$invalidate(1, margin);
-    	}
-
     	$$self.$capture_state = () => ({
     		VoronoiNewsmap,
     		Header,
@@ -37006,8 +36969,7 @@ var app = (function () {
     		paramsNasional,
     		paramsDaerah,
     		onwindowscroll,
-    		header_height_binding,
-    		voronoinewsmap_margin_binding
+    		header_height_binding
     	];
     }
 

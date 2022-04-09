@@ -120,6 +120,9 @@
                 width:20vw;
                 height:40vw;
             }
+            .slider {
+                margin-left: 0;
+            }
         }
         @media only screen /*medium*/
         and (min-width: 768px)
@@ -135,6 +138,9 @@
             .imgthumb {
                 width:18vw;
                 height:35vw;
+            }
+            .slider {
+                margin-left: 0;
             }
         }
         @media only screen /*large*/
@@ -152,6 +158,9 @@
                 width:18vw;
                 height:35vw;
             }
+            .slider {
+                margin-left: 0;
+            }
         }
         @media only screen /*xtralarge*/
         and (min-width: 1200px) {
@@ -166,6 +175,9 @@
             .imgthumb {
                 width:18vw;
                 height:35vw;
+            }
+            .slider {
+                margin-left: 0;
             }
         }
     </style>

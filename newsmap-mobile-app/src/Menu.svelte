@@ -1,6 +1,6 @@
 <script>
     let menus = [
-        {menu:'Jurno',id:0, active:true, link:"#jurno", source:"./image/home.svg"},
+        {menu:'Jurno',id:0, active:false, link:"#jurno", source:"./image/home.svg"},
         {menu:'Original',id:1, active:false, link:"#original", source:"./image/search.svg"},
         {menu:'Deduktif',id:2, active:false, link:"#deduktif", source:"./image/artikel.svg"},
         {menu:'Podcast',id:3, active:false, link:"#podcast", source:"./image/podcast.svg"}
@@ -69,6 +69,7 @@
         justify-content: center;
         align-items: center;
         margin-top: 1rem;
+        cursor: pointer;
     }
     .menutext{
         font-family: var(--fontfamily3);
@@ -99,9 +100,57 @@
     .selected img {
         color: #eefffc;
     }
-    @media only screen and (min-width:1200px) {
-        nav {
-            display: none;
+    @media only screen /*xtrasmall*/
+        and (max-width: 575px) {
+
+
+    }
+    @media only screen /*small*/
+    and (min-width: 576px)
+    and (max-width: 767px) {
+    
+    }
+    @media only screen /*medium*/
+    and (min-width: 768px)
+    and (max-width: 991px) {
+      
+    }
+    @media only screen /*large*/
+    and (min-width: 992px)
+    and (max-width: 1199px) {
+       
+    }
+    @media only screen /*xtralarge*/
+    and (min-width: 1200px) {
+        .menubar {
+            width: 50vw;
+        }
+        .container {
+            height: 90px;
+            width: 50vw;
+            left: 25vw;
+            border-radius: 2rem;
+            bottom: 1rem;
+        }
+        .circle {
+            width: 3.6vw;
+            height: 3.6vw;
+        }
+        img {
+            width:2vw;
+            height:2vw;
+        }
+        .moveDown {
+            bottom:-80px;
+            transition: bottom 400ms ease-in-out;
+        }
+        .menu:hover {
+            color:#242053;
+            transition: color 400ms ease-in-out;
+        }
+        .circle:hover {
+            background-color:#242053;
+            transition: background-color 400ms ease-in-out;
         }
     }
 </style>
