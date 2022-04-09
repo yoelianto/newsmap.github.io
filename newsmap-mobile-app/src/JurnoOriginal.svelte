@@ -9,6 +9,7 @@
 
     const fetchData = (async () => {
         const result = await get(ihttp.URI_ARTICLE_LIST, {size: 3});
+        console.log(result.data)
         return await result.data;
     })()
 
@@ -47,9 +48,9 @@
                     event.target.style.transition =
                     `transform 100ms ease-in-out`
                     
-                    if (event.target.id > 0) {
-                        event.target.previousElementSibling.setAttribute('data-status', 'current');
-                    } else if (event.target.id == 0) {
+                    if (event.target.id < 2) {
+                        event.target.nextElementSibling.setAttribute('data-status', 'current');
+                    } else if (event.target.id == 2) {
                         let swipe = document.querySelectorAll('.swipe')
                         console.log(swipe)
                         swipe.forEach((item) => {
@@ -57,7 +58,7 @@
                             item.style.transform = `translate(0px) rotate(0deg)`
                             item.setAttribute('data-status', 'waiting')                    
                         })
-                        swipe[2].setAttribute('data-status', 'current')
+                        swipe[0].setAttribute('data-status', 'current')
                     }
                     
                     position.x = 0
@@ -96,9 +97,9 @@
         
         {#each data as d, i}
 
-        <div class='swipe' data-dragging='false' data-status="{i === 2 ? 'current' : 'waiting' }" id={i}>
+        <div class='swipe' data-dragging='false' data-status="{i === 0 ? 'current' : 'waiting' }" id={i} style="z-index:{3-i}">
             <a class="card-link" href={`${process['env']['DOMAIN']}/article/${d.slug}`}>
-                <div class="card" >
+                <div class="card" style="z-index:{3-i}">
                     <img class="thumb" src={`${process['env']['URL_IMAGE']}news/${d.thumbnail}`} alt="" >
                     <div class="bottom"></div>
                     <div class="inner-card">
@@ -131,6 +132,9 @@
     i {
         margin-left: 0.25rem;
         margin-right:0.25rem;
+    }
+    .swipe {
+        position: relative;
     }
     .title {
         font-family: var(--fontfamily1);

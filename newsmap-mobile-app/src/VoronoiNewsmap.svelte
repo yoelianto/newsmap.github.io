@@ -20,12 +20,9 @@
 
     let w = document.body.clientWidth;
     let width = 0.95 * w;
-
-    console.log(w, width)
     
     const fetchData = (async () => {
         const result = await get(ihttp.URI_LAST_TOPIC, { size: 18 });
-        // console.log(result.data)
         return result.data;
     })()
 
@@ -92,8 +89,6 @@
         maxX = Math.max(...x)
         maxY = Math.max(...y)
 
-        // console.log(minX, minY, maxX, maxY)
-
         scale = width / (maxY-minY)
 
         //scale function
@@ -138,8 +133,6 @@
         }
 
         let polygons = state.polygons;
-
-        console.log(polygons)
 
         let container = d3.select(el)
 
