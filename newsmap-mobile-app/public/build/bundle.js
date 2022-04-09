@@ -218,6 +218,10 @@ var app = (function () {
             resolved_promise.then(flush);
         }
     }
+    function tick() {
+        schedule_update();
+        return resolved_promise;
+    }
     function add_render_callback(fn) {
         render_callbacks.push(fn);
     }
@@ -26481,26 +26485,24 @@ var app = (function () {
     			svg1 = svg_element("svg");
     			attr_dev(path0, "class", "cls-1");
     			attr_dev(path0, "d", "M94.6,14.335v3.81l-.09,4.17-.19,4.65-.31,5.31-.3,4.3-.45,5.47-.54,5.6,.22,1.07,.59,4.55,.08,4.58-.4,4.54-.83,4.46-1.31,4.34-1.76,4.16-2.16,3.95-2.53,3.7-2.93,3.38-3.25,3.05-3.53,2.71-3.76,2.35-3.98,1.93-4.14,1.53-4.27,1.11-4.36,.69-4.38,.26-4.38-.26-4.36-.69-4.26-1.11-4.15-1.53-3.98-1.93-3.76-2.35-3.52-2.71-3.26-3.05-2.92-3.38-2.54-3.7-2.16-3.95-1.75-4.16-1.31-4.34-.84-4.46-.4-4.54,.08-4.58,.6-4.55,.21-1.07-.53-5.6-.45-5.47-.31-4.3-.31-5.31-.19-4.65-.08-4.17v-3.81l.15-3.65,.22-2.8,.32-2.46,.5-1.95,.14-.41,.14-.4,.15-.4,.18-.38,.2-.39,.25-.33,.3-.35,.34-.28,.37-.23,.41-.17,.43-.11,.43-.02h.43l.42,.05,.41,.08,.39,.12,.38,.14,.36,.17s1.29,.71,1.58,.86c.03,.02,.05,.03,.05,.03l2.48,1.9,1.56,1.47,1.68,1.81,1.54,1.8,1.73,2.13,1.47,1.91,1.43,1.91,1.02,1.43,1.34,1.95,1.1,1.67,2.98-1.38,4.28-1.57,4.39-1.2,4.49-.76,4.53-.29,4.53,.29,4.5,.76,4.39,1.2,4.27,1.57,2.98,1.38,1.11-1.67,1.34-1.95,1.02-1.43,1.42-1.91,1.48-1.91,1.72-2.13,1.55-1.8,1.68-1.81,1.56-1.47,2.47-1.9,.06-.03c.28-.15,1.58-.86,1.58-.86l.36-.17,.38-.14,.39-.12,.4-.08,.42-.05h.43l.44,.02,.43,.11,.4,.17,.38,.23,.34,.28,.29,.35,.26,.33,.2,.39,.18,.38,.15,.4,.14,.4,.13,.41,.5,1.95,.33,2.46,.22,2.8,.15,3.65h0Z");
-    			add_location(path0, file$a, 314, 4, 9539);
+    			add_location(path0, file$a, 328, 4, 10880);
     			attr_dev(path1, "class", "cls-1");
     			attr_dev(path1, "d", "M91.153,57.13c0,22.372-18.411,40.502-41.123,40.502S8.917,79.503,8.917,57.13c0-7.001,1.806-13.594,4.981-19.343,2.865-5.176,6.836-9.662,11.614-13.167,6.846-5.011,15.333-7.982,24.518-7.982s17.624,2.952,24.47,7.943c4.768,3.486,8.739,7.953,11.614,13.099,3.214,5.778,5.04,12.4,5.04,19.45Z");
-    			add_location(path1, file$a, 316, 4, 10769);
+    			add_location(path1, file$a, 330, 4, 12110);
     			attr_dev(path2, "class", "cls-1");
     			attr_dev(path2, "d", "M88.04,21.18v1.95l-.04,2.14-.1,2.39-.16,2.73-.16,2.21-.2,2.48c-2.88-4.7-6.64-8.81-11.06-12.12l.01-.02,.69-1,.53-.74,.72-.98,.76-.98,.89-1.09,.79-.93,.87-.93,.8-.75,1.27-.98,.03-.01c.14-.08,.81-.44,.81-.44l.18-.09,.4-.14,.2-.04,.22-.02h.22l.23,.01,.22,.05,.2,.09,.2,.12,.17,.14,.15,.18,.13,.17,.11,.2,.09,.2,.08,.2,.07,.21,.07,.21,.25,1,.17,1.26,.11,1.44,.08,1.88Z");
-    			add_location(path2, file$a, 318, 4, 11110);
+    			add_location(path2, file$a, 332, 4, 12451);
     			attr_dev(path3, "class", "cls-1");
     			attr_dev(path3, "d", "M23.7,22.99c-4.43,3.32-8.2,7.46-11.07,12.19l-.21-2.58-.16-2.21-.16-2.73-.1-2.39-.04-2.14v-1.95l.08-1.88,.11-1.44,.17-1.26,.25-1,.07-.21,.07-.21,.08-.2,.09-.2,.11-.2,.13-.17,.15-.18,.17-.14,.2-.12,.2-.09,.22-.05,.23-.01h.22l.22,.02,.2,.04,.4,.14,.18,.09s.67,.36,.81,.44l.03,.01,1.27,.98,.8,.75,.87,.93,.79,.93,.89,1.09,.76,.98,.72,.98,.53,.74,.69,1,.03,.05Z");
-    			add_location(path3, file$a, 320, 4, 11530);
+    			add_location(path3, file$a, 334, 4, 12871);
     			attr_dev(svg0, "xmlns", "http://www.w3.org/2000/svg");
     			attr_dev(svg0, "xmlns:xlink", "http://www.w3.org/1999/xlink");
-    			attr_dev(svg0, "class", "example svelte-5mv2ac");
+    			attr_dev(svg0, "class", "example svelte-rp56y3");
     			attr_dev(svg0, "fill", "none");
-    			add_location(svg0, file$a, 313, 0, 9422);
+    			add_location(svg0, file$a, 327, 0, 10763);
     			set_style(svg1, "margin-top", /*margin*/ ctx[0] + "px");
-    			set_style(svg1, "width", /*width*/ ctx[6]);
-    			set_style(svg1, "height", /*width*/ ctx[6]);
-    			attr_dev(svg1, "class", "build svelte-5mv2ac");
-    			add_location(svg1, file$a, 323, 0, 11947);
+    			attr_dev(svg1, "class", "build svelte-rp56y3");
+    			add_location(svg1, file$a, 337, 0, 13288);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -26508,16 +26510,16 @@ var app = (function () {
     		m: function mount(target, anchor) {
     			insert_dev(target, svg0, anchor);
     			append_dev(svg0, path0);
-    			/*path0_binding*/ ctx[7](path0);
+    			/*path0_binding*/ ctx[6](path0);
     			append_dev(svg0, path1);
-    			/*path1_binding*/ ctx[8](path1);
+    			/*path1_binding*/ ctx[7](path1);
     			append_dev(svg0, path2);
-    			/*path2_binding*/ ctx[9](path2);
+    			/*path2_binding*/ ctx[8](path2);
     			append_dev(svg0, path3);
-    			/*path3_binding*/ ctx[10](path3);
+    			/*path3_binding*/ ctx[9](path3);
     			insert_dev(target, t, anchor);
     			insert_dev(target, svg1, anchor);
-    			/*svg1_binding*/ ctx[11](svg1);
+    			/*svg1_binding*/ ctx[10](svg1);
     		},
     		p: function update(ctx, [dirty]) {
     			if (dirty & /*margin*/ 1) {
@@ -26528,13 +26530,13 @@ var app = (function () {
     		o: noop$5,
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(svg0);
-    			/*path0_binding*/ ctx[7](null);
-    			/*path1_binding*/ ctx[8](null);
-    			/*path2_binding*/ ctx[9](null);
-    			/*path3_binding*/ ctx[10](null);
+    			/*path0_binding*/ ctx[6](null);
+    			/*path1_binding*/ ctx[7](null);
+    			/*path2_binding*/ ctx[8](null);
+    			/*path3_binding*/ ctx[9](null);
     			if (detaching) detach_dev(t);
     			if (detaching) detach_dev(svg1);
-    			/*svg1_binding*/ ctx[11](null);
+    			/*svg1_binding*/ ctx[10](null);
     		}
     	};
 
@@ -26572,7 +26574,8 @@ var app = (function () {
     	let minX, minY, maxX, maxY;
     	let { margin } = $$props;
     	let w = document.body.clientWidth;
-    	let width = 0.95 * w;
+    	let h = document.body.clientHeight;
+    	let width;
 
     	const fetchData = (async () => {
     		const result = await get(URI_LAST_TOPIC, { size: 18 });
@@ -26599,189 +26602,205 @@ var app = (function () {
     			data[i].color = `hsla(0, 82%, ${60 + i * 2.5}%, 1)`;
     		}
 
-    		let num = 240;
-    		let numear = 30;
-    		circlelen = circleanchor.getTotalLength();
-    		catlen = catanchor.getTotalLength();
-    		earlen1 = earanchor1.getTotalLength();
-    		earlen2 = earanchor2.getTotalLength();
-    		let path = catanchor.outerHTML.substring(23);
-    		path = path.substring(0, 1172);
+    		function drawVoronoi() {
+    			let num = 240;
+    			let numear = 30;
+    			circlelen = circleanchor.getTotalLength();
+    			catlen = catanchor.getTotalLength();
+    			earlen1 = earanchor1.getTotalLength();
+    			earlen2 = earanchor2.getTotalLength();
+    			let path = catanchor.outerHTML.substring(23);
+    			path = path.substring(0, 1172);
 
-    		for (let i = 0; i < num; i++) {
-    			let pt = circleanchor.getPointAtLength(i * circlelen / (num - 1));
-    			pointcircle.push([pt.x, pt.y]);
-    		}
+    			for (let i = 0; i < num; i++) {
+    				let pt = circleanchor.getPointAtLength(i * circlelen / (num - 1));
+    				pointcircle.push([pt.x, pt.y]);
+    			}
 
-    		for (let i = 0; i < num; i++) {
-    			let pt = catanchor.getPointAtLength(i * catlen / (num - 1));
-    			pointcat.push([pt.x, pt.y]);
-    		}
+    			for (let i = 0; i < num; i++) {
+    				let pt = catanchor.getPointAtLength(i * catlen / (num - 1));
+    				pointcat.push([pt.x, pt.y]);
+    			}
 
-    		for (let i = 0; i < numear; i++) {
-    			let pt = earanchor1.getPointAtLength(i * earlen1 / (numear - 1));
-    			pointear1.push([pt.x, pt.y]);
-    		}
+    			for (let i = 0; i < numear; i++) {
+    				let pt = earanchor1.getPointAtLength(i * earlen1 / (numear - 1));
+    				pointear1.push([pt.x, pt.y]);
+    			}
 
-    		for (let i = 0; i < numear; i++) {
-    			let pt = earanchor2.getPointAtLength(i * earlen2 / (numear - 1));
-    			pointear2.push([pt.x, pt.y]);
-    		}
+    			for (let i = 0; i < numear; i++) {
+    				let pt = earanchor2.getPointAtLength(i * earlen2 / (numear - 1));
+    				pointear2.push([pt.x, pt.y]);
+    			}
 
-    		//get X and Y coordinates
-    		pointcat.forEach(arr => {
-    			x.push(arr[0]);
-    			y.push(arr[1]);
-    		});
-
-    		//check min and max value for each X and Y coordinates
-    		minX = Math.min(...x);
-
-    		minY = Math.min(...y);
-    		maxX = Math.max(...x);
-    		maxY = Math.max(...y);
-    		scale = width / (maxY - minY);
-
-    		//scale function
-    		let scaledpoint = pointcircle.map(coord => {
-    			return coord.map(val => {
-    				return scaleObject(val);
+    			//get X and Y coordinates
+    			pointcat.forEach(arr => {
+    				x.push(arr[0]);
+    				y.push(arr[1]);
     			});
-    		});
 
-    		let scaledcat = pointcat.map(coord => {
-    			return coord.map(val => {
-    				return scaleObject(val);
+    			//check min and max value for each X and Y coordinates
+    			minX = Math.min(...x);
+
+    			minY = Math.min(...y);
+    			maxX = Math.max(...x);
+    			maxY = Math.max(...y);
+
+    			//check screen orientation
+    			if (w > h) {
+    				// horizontal (desktop)
+    				width = 0.65 * h;
+
+    				scale = width / (maxY - minY);
+    			} else if (h > w) {
+    				// vertical (mobile)
+    				width = 0.95 * w;
+
+    				scale = width / (maxY - minY);
+    			}
+
+    			//scale function
+    			let scaledpoint = pointcircle.map(coord => {
+    				return coord.map(val => {
+    					return scaleObject(val);
+    				});
     			});
-    		});
 
-    		let scaledear1 = pointear1.map(coord => {
-    			return coord.map(val => {
-    				return scaleObject(val);
+    			let scaledcat = pointcat.map(coord => {
+    				return coord.map(val => {
+    					return scaleObject(val);
+    				});
     			});
-    		});
 
-    		let scaledear2 = pointear2.map(coord => {
-    			return coord.map(val => {
-    				return scaleObject(val);
+    			let scaledear1 = pointear1.map(coord => {
+    				return coord.map(val => {
+    					return scaleObject(val);
+    				});
     			});
-    		});
 
-    		//scale function
-    		function scaleObject(val) {
-    			return val * scale;
+    			let scaledear2 = pointear2.map(coord => {
+    				return coord.map(val => {
+    					return scaleObject(val);
+    				});
+    			});
+
+    			//scale function
+    			function scaleObject(val) {
+    				return val * scale;
+    			}
+
+    			let simulation = d3VoronoiMap.voronoiMapSimulation(data).weight(d => {
+    				return d.weight * d.weight;
+    			}).clip(scaledpoint).stop();
+
+    			let state = simulation.state();
+
+    			while (!state.ended) {
+    				simulation.tick();
+    				state = simulation.state();
+    			}
+
+    			let polygons = state.polygons;
+    			let container = select(el).attr('width', width).attr('height', width);
+    			let cells = container.append('g').classed('cells', true);
+    			let cathead = container.append('g').classed('cat', true);
+    			let catear1 = container.append('g').classed('catear1', true);
+    			let catear2 = container.append('g').classed('catear2', true);
+    			let text = container.append('g').classed('labels', true);
+
+    			cells.selectAll('.voronoi').data(polygons).enter().append('path').classed('voronoi', true).attr("d", d => {
+    				return "M" + d.join(",") + "z";
+    			}).style("stroke-linejoin", "round").style("fill", d => {
+    				return d.site.originalObject.data.originalData.color;
+    			}).style('z-index', 10);
+
+    			cathead.append('path').classed('cathead', true).attr('d', "M" + scaledcat.join(",") + "z").style("fill", "#f17474");
+    			catear1.append('path').classed('cathead', true).attr('d', "M" + scaledear1.join(",") + "z").style("fill", "#ee5151");
+    			catear2.append('path').classed('cathead', true).attr('d', "M" + scaledear2.join(",") + "z").style("fill", "#ee5151");
+
+    			text.selectAll('.label').data(polygons).enter().append('text').classed('label', true).text(d => {
+    				if (d.site.originalObject.data.originalData.weight >= 2) {
+    					return d.site.originalObject.data.originalData.keywords[0];
+    				}
+    			}).style('fill', 'white').attr('text-anchor', 'middle').attr('x', d => {
+    				return d.site.x;
+    			}).attr('y', d => {
+    				return d.site.y;
+    			}).style('font-size', d => {
+    				if (d.site.originalObject.data.originalData.weight == 4) {
+    					return '1.5rem';
+    				} else if (d.site.originalObject.data.originalData.weight == 3) {
+    					return '1rem';
+    				} else {
+    					return '0.5rem';
+    				}
+    			}).style('font-weight', d => {
+    				if (d.site.originalObject.data.originalData.weight == 4) {
+    					return '700';
+    				} else if (d.site.originalObject.data.originalData.weight == 3) {
+    					return '500';
+    				} else {
+    					return '300';
+    				}
+    			});
+
+    			text.selectAll('.secondarylabel').data(polygons).enter().append('text').classed('secondarylabel', true).text(d => {
+    				if (d.site.originalObject.data.originalData.weight >= 3) {
+    					return d.site.originalObject.data.originalData.keywords[1];
+    				}
+    			}).style('fill', 'white').attr('text-anchor', 'middle').attr('x', d => {
+    				return d.site.x;
+    			}).attr('y', d => {
+    				return d.site.y + d.site.originalObject.data.originalData.weight * 5;
+    			}).style('font-size', d => {
+    				if (d.site.originalObject.data.originalData.weight == 4) {
+    					return '1rem';
+    				} else if (d.site.originalObject.data.originalData.weight == 3) {
+    					return '0.6rem';
+    				} else {
+    					return '0.4rem';
+    				}
+    			}).style('font-weight', d => {
+    				if (d.site.originalObject.data.originalData.weight == 4) {
+    					return '700';
+    				} else if (d.site.originalObject.data.originalData.weight == 3) {
+    					return '500';
+    				} else {
+    					return '300';
+    				}
+    			});
+
+    			text.selectAll('.tersierlabel').data(polygons).enter().append('text').classed('tersierlabel', true).text(d => {
+    				if (d.site.originalObject.data.originalData.weight >= 3) {
+    					return d.site.originalObject.data.originalData.keywords[2];
+    				}
+    			}).style('fill', 'white').attr('text-anchor', 'middle').attr('x', d => {
+    				return d.site.x;
+    			}).attr('y', d => {
+    				return d.site.y + d.site.originalObject.data.originalData.weight * 5 * 1.7;
+    			}).style('font-size', d => {
+    				if (d.site.originalObject.data.originalData.weight == 4) {
+    					return '1rem';
+    				} else if (d.site.originalObject.data.originalData.weight == 3) {
+    					return '0.6rem';
+    				} else {
+    					return '0.4rem';
+    				}
+    			}).style('font-weight', d => {
+    				if (d.site.originalObject.data.originalData.weight == 4) {
+    					return '700';
+    				} else if (d.site.originalObject.data.originalData.weight == 3) {
+    					return '500';
+    				} else {
+    					return '300';
+    				}
+    			});
+
+    			cells.raise();
+    			cathead.lower();
+    			text.raise();
     		}
 
-    		let simulation = d3VoronoiMap.voronoiMapSimulation(data).weight(d => {
-    			return d.weight * d.weight;
-    		}).clip(scaledpoint).stop();
-
-    		let state = simulation.state();
-
-    		while (!state.ended) {
-    			simulation.tick();
-    			state = simulation.state();
-    		}
-
-    		let polygons = state.polygons;
-    		let container = select(el);
-    		let cells = container.append('g').classed('cells', true);
-    		let cathead = container.append('g').classed('cat', true);
-    		let catear1 = container.append('g').classed('catear1', true);
-    		let catear2 = container.append('g').classed('catear2', true);
-    		let text = container.append('g').classed('labels', true);
-
-    		cells.selectAll('.voronoi').data(polygons).enter().append('path').classed('voronoi', true).attr("d", d => {
-    			return "M" + d.join(",") + "z";
-    		}).style("stroke-linejoin", "round").style("fill", d => {
-    			return d.site.originalObject.data.originalData.color;
-    		}).style('z-index', 10);
-
-    		cathead.append('path').classed('cathead', true).attr('d', "M" + scaledcat.join(",") + "z").style("fill", "#f17474");
-    		catear1.append('path').classed('cathead', true).attr('d', "M" + scaledear1.join(",") + "z").style("fill", "#ee5151");
-    		catear2.append('path').classed('cathead', true).attr('d', "M" + scaledear2.join(",") + "z").style("fill", "#ee5151");
-
-    		text.selectAll('.label').data(polygons).enter().append('text').classed('label', true).text(d => {
-    			if (d.site.originalObject.data.originalData.weight >= 2) {
-    				return d.site.originalObject.data.originalData.keywords[0];
-    			}
-    		}).style('fill', 'white').attr('text-anchor', 'middle').attr('x', d => {
-    			return d.site.x;
-    		}).attr('y', d => {
-    			return d.site.y;
-    		}).style('font-size', d => {
-    			if (d.site.originalObject.data.originalData.weight == 4) {
-    				return '1.5rem';
-    			} else if (d.site.originalObject.data.originalData.weight == 3) {
-    				return '1rem';
-    			} else {
-    				return '0.5rem';
-    			}
-    		}).style('font-weight', d => {
-    			if (d.site.originalObject.data.originalData.weight == 4) {
-    				return '700';
-    			} else if (d.site.originalObject.data.originalData.weight == 3) {
-    				return '500';
-    			} else {
-    				return '300';
-    			}
-    		});
-
-    		text.selectAll('.secondarylabel').data(polygons).enter().append('text').classed('secondarylabel', true).text(d => {
-    			if (d.site.originalObject.data.originalData.weight >= 3) {
-    				return d.site.originalObject.data.originalData.keywords[1];
-    			}
-    		}).style('fill', 'white').attr('text-anchor', 'middle').attr('x', d => {
-    			return d.site.x;
-    		}).attr('y', d => {
-    			return d.site.y + d.site.originalObject.data.originalData.weight * 5;
-    		}).style('font-size', d => {
-    			if (d.site.originalObject.data.originalData.weight == 4) {
-    				return '1rem';
-    			} else if (d.site.originalObject.data.originalData.weight == 3) {
-    				return '0.6rem';
-    			} else {
-    				return '0.4rem';
-    			}
-    		}).style('font-weight', d => {
-    			if (d.site.originalObject.data.originalData.weight == 4) {
-    				return '700';
-    			} else if (d.site.originalObject.data.originalData.weight == 3) {
-    				return '500';
-    			} else {
-    				return '300';
-    			}
-    		});
-
-    		text.selectAll('.tersierlabel').data(polygons).enter().append('text').classed('tersierlabel', true).text(d => {
-    			if (d.site.originalObject.data.originalData.weight >= 3) {
-    				return d.site.originalObject.data.originalData.keywords[2];
-    			}
-    		}).style('fill', 'white').attr('text-anchor', 'middle').attr('x', d => {
-    			return d.site.x;
-    		}).attr('y', d => {
-    			return d.site.y + d.site.originalObject.data.originalData.weight * 5 * 1.7;
-    		}).style('font-size', d => {
-    			if (d.site.originalObject.data.originalData.weight == 4) {
-    				return '1rem';
-    			} else if (d.site.originalObject.data.originalData.weight == 3) {
-    				return '0.6rem';
-    			} else {
-    				return '0.4rem';
-    			}
-    		}).style('font-weight', d => {
-    			if (d.site.originalObject.data.originalData.weight == 4) {
-    				return '700';
-    			} else if (d.site.originalObject.data.originalData.weight == 3) {
-    				return '500';
-    			} else {
-    				return '300';
-    			}
-    		});
-
-    		cells.raise();
-    		cathead.lower();
-    		text.raise();
+    		drawVoronoi();
     	});
 
     	const writable_props = ['margin'];
@@ -26833,10 +26852,9 @@ var app = (function () {
     		d3,
     		voronoiMapSimulation: d3VoronoiMap.voronoiMapSimulation,
     		onMount,
+    		tick,
     		ihttp,
     		get,
-    		truncText,
-    		stringToDom,
     		circleanchor,
     		catanchor,
     		scale,
@@ -26859,6 +26877,7 @@ var app = (function () {
     		maxY,
     		margin,
     		w,
+    		h,
     		width,
     		fetchData
     	});
@@ -26886,7 +26905,8 @@ var app = (function () {
     		if ('maxY' in $$props) maxY = $$props.maxY;
     		if ('margin' in $$props) $$invalidate(0, margin = $$props.margin);
     		if ('w' in $$props) w = $$props.w;
-    		if ('width' in $$props) $$invalidate(6, width = $$props.width);
+    		if ('h' in $$props) h = $$props.h;
+    		if ('width' in $$props) width = $$props.width;
     	};
 
     	if ($$props && "$$inject" in $$props) {
@@ -26900,7 +26920,6 @@ var app = (function () {
     		earanchor1,
     		earanchor2,
     		el,
-    		width,
     		path0_binding,
     		path1_binding,
     		path2_binding,
@@ -27791,15 +27810,15 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			attr_dev(i0, "class", "fas fa-long-arrow-alt-left svelte-1k4xzlw");
+    			attr_dev(i0, "class", "fas fa-long-arrow-alt-left svelte-18mn2rm");
     			add_location(i0, file$8, 92, 12, 3359);
-    			attr_dev(i1, "class", "far fa-hand-pointer svelte-1k4xzlw");
+    			attr_dev(i1, "class", "far fa-hand-pointer svelte-18mn2rm");
     			add_location(i1, file$8, 93, 12, 3415);
-    			attr_dev(i2, "class", "fas fa-long-arrow-alt-right svelte-1k4xzlw");
+    			attr_dev(i2, "class", "fas fa-long-arrow-alt-right svelte-18mn2rm");
     			add_location(i2, file$8, 94, 12, 3464);
-    			attr_dev(div0, "class", "icon svelte-1k4xzlw");
+    			attr_dev(div0, "class", "icon svelte-18mn2rm");
     			add_location(div0, file$8, 91, 8, 3327);
-    			attr_dev(div1, "class", "inner-container svelte-1k4xzlw");
+    			attr_dev(div1, "class", "inner-container svelte-18mn2rm");
     			add_location(div1, file$8, 90, 4, 3288);
     		},
     		m: function mount(target, anchor) {
@@ -27892,7 +27911,7 @@ var app = (function () {
     			div2 = element("div");
     			t4 = text$1(t4_value);
     			t5 = space();
-    			attr_dev(img, "class", "thumb svelte-1k4xzlw");
+    			attr_dev(img, "class", "thumb svelte-18mn2rm");
 
     			if (!src_url_equal(img.src, img_src_value = `${({
 				"env": {
@@ -27907,15 +27926,15 @@ var app = (function () {
 
     			attr_dev(img, "alt", "");
     			add_location(img, file$8, 102, 20, 4075);
-    			attr_dev(div0, "class", "bottom svelte-1k4xzlw");
+    			attr_dev(div0, "class", "bottom svelte-18mn2rm");
     			add_location(div0, file$8, 103, 20, 4393);
-    			attr_dev(div1, "class", "sub-title svelte-1k4xzlw");
+    			attr_dev(div1, "class", "sub-title svelte-18mn2rm");
     			add_location(div1, file$8, 105, 24, 4491);
-    			attr_dev(div2, "class", "card-title svelte-1k4xzlw");
+    			attr_dev(div2, "class", "card-title svelte-18mn2rm");
     			add_location(div2, file$8, 106, 24, 4560);
-    			attr_dev(div3, "class", "inner-card svelte-1k4xzlw");
+    			attr_dev(div3, "class", "inner-card svelte-18mn2rm");
     			add_location(div3, file$8, 104, 20, 4441);
-    			attr_dev(div4, "class", "card svelte-1k4xzlw");
+    			attr_dev(div4, "class", "card svelte-18mn2rm");
     			set_style(div4, "z-index", 3 - /*i*/ ctx[7]);
     			add_location(div4, file$8, 101, 16, 4013);
     			attr_dev(a, "class", "card-link");
@@ -27932,7 +27951,7 @@ var app = (function () {
 			})['env']['DOMAIN']}/article/${/*d*/ ctx[5].slug}`);
 
     			add_location(a, file$8, 100, 12, 3708);
-    			attr_dev(div5, "class", "swipe svelte-1k4xzlw");
+    			attr_dev(div5, "class", "swipe svelte-18mn2rm");
     			attr_dev(div5, "data-dragging", "false");
     			attr_dev(div5, "data-status", /*i*/ ctx[7] === 0 ? 'current' : 'waiting');
     			attr_dev(div5, "id", /*i*/ ctx[7]);
@@ -28036,7 +28055,7 @@ var app = (function () {
     			if (!src_url_equal(script.src, script_src_value = "https://kit.fontawesome.com/f57950db7e.js")) attr_dev(script, "src", script_src_value);
     			attr_dev(script, "crossorigin", "anonymous");
     			add_location(script, file$8, 81, 4, 2990);
-    			attr_dev(p, "class", "title svelte-1k4xzlw");
+    			attr_dev(p, "class", "title svelte-18mn2rm");
     			add_location(p, file$8, 85, 4, 3176);
     			attr_dev(div, "class", "container");
     			attr_dev(div, "id", "original");
@@ -28206,7 +28225,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (53:8) {:catch error}
+    // (57:8) {:catch error}
     function create_catch_block$5(ctx) {
     	let p;
 
@@ -28214,7 +28233,7 @@ var app = (function () {
     		c: function create() {
     			p = element("p");
     			p.textContent = "An error occurred!";
-    			add_location(p, file$7, 53, 12, 1704);
+    			add_location(p, file$7, 57, 12, 1880);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -28229,7 +28248,7 @@ var app = (function () {
     		block,
     		id: create_catch_block$5.name,
     		type: "catch",
-    		source: "(53:8) {:catch error}",
+    		source: "(57:8) {:catch error}",
     		ctx
     	});
 
@@ -28306,79 +28325,89 @@ var app = (function () {
 
     // (37:12) {#each data as d}
     function create_each_block$6(ctx) {
-    	let div5;
-    	let div4;
+    	let div7;
+    	let div6;
+    	let div2;
     	let div0;
     	let img;
     	let img_src_value;
     	let t0;
     	let div1;
     	let t1;
-    	let div2;
+    	let div5;
+    	let div3;
     	let t2_value = /*d*/ ctx[3].percent + "";
     	let t2;
     	let t3;
     	let t4;
-    	let div3;
+    	let div4;
     	let t5_value = /*d*/ ctx[3].name + "";
     	let t5;
     	let t6;
 
     	const block = {
     		c: function create() {
-    			div5 = element("div");
-    			div4 = element("div");
+    			div7 = element("div");
+    			div6 = element("div");
+    			div2 = element("div");
     			div0 = element("div");
     			img = element("img");
     			t0 = space();
     			div1 = element("div");
     			t1 = space();
-    			div2 = element("div");
+    			div5 = element("div");
+    			div3 = element("div");
     			t2 = text$1(t2_value);
     			t3 = text$1("%");
     			t4 = space();
-    			div3 = element("div");
+    			div4 = element("div");
     			t5 = text$1(t5_value);
     			t6 = space();
-    			attr_dev(img, "class", "people svelte-6xcw0w");
+    			attr_dev(img, "class", "people svelte-1qa3gh9");
     			if (!src_url_equal(img.src, img_src_value = /*d*/ ctx[3].thumbnail)) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", /*d*/ ctx[3].name);
-    			add_location(img, file$7, 42, 28, 1266);
-    			attr_dev(div0, "class", "person svelte-6xcw0w");
-    			add_location(div0, file$7, 40, 24, 1186);
-    			attr_dev(div1, "class", "pie svelte-6xcw0w");
+    			add_location(img, file$7, 42, 28, 1287);
+    			attr_dev(div0, "class", "person svelte-1qa3gh9");
+    			add_location(div0, file$7, 41, 24, 1237);
+    			attr_dev(div1, "class", "pie svelte-1qa3gh9");
     			set_style(div1, "--p", /*d*/ ctx[3].percentAbs);
     			set_style(div1, "--c", /*d*/ ctx[3].color);
-    			add_location(div1, file$7, 44, 24, 1377);
-    			attr_dev(div2, "class", "percent svelte-6xcw0w");
-    			set_style(div2, "color", /*d*/ ctx[3].color);
-    			add_location(div2, file$7, 46, 20, 1466);
-    			attr_dev(div3, "class", "name svelte-6xcw0w");
-    			add_location(div3, file$7, 47, 20, 1551);
-    			attr_dev(div4, "class", "sentiment svelte-6xcw0w");
-    			add_location(div4, file$7, 38, 16, 1135);
-    			attr_dev(div5, "class", "sentiment-container");
-    			add_location(div5, file$7, 37, 12, 1084);
+    			add_location(div1, file$7, 44, 24, 1398);
+    			attr_dev(div2, "class", "personcontainer svelte-1qa3gh9");
+    			add_location(div2, file$7, 40, 20, 1182);
+    			attr_dev(div3, "class", "percent svelte-1qa3gh9");
+    			set_style(div3, "color", /*d*/ ctx[3].color);
+    			add_location(div3, file$7, 48, 24, 1588);
+    			attr_dev(div4, "class", "name svelte-1qa3gh9");
+    			add_location(div4, file$7, 49, 24, 1677);
+    			attr_dev(div5, "class", "namecontainer svelte-1qa3gh9");
+    			add_location(div5, file$7, 47, 20, 1535);
+    			attr_dev(div6, "class", "sentiment svelte-1qa3gh9");
+    			add_location(div6, file$7, 38, 16, 1135);
+    			attr_dev(div7, "class", "sentiment-container svelte-1qa3gh9");
+    			add_location(div7, file$7, 37, 12, 1084);
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, div5, anchor);
-    			append_dev(div5, div4);
-    			append_dev(div4, div0);
+    			insert_dev(target, div7, anchor);
+    			append_dev(div7, div6);
+    			append_dev(div6, div2);
+    			append_dev(div2, div0);
     			append_dev(div0, img);
-    			append_dev(div4, t0);
-    			append_dev(div4, div1);
-    			append_dev(div4, t1);
-    			append_dev(div4, div2);
-    			append_dev(div2, t2);
-    			append_dev(div2, t3);
-    			append_dev(div4, t4);
-    			append_dev(div4, div3);
-    			append_dev(div3, t5);
-    			append_dev(div5, t6);
+    			append_dev(div2, t0);
+    			append_dev(div2, div1);
+    			append_dev(div6, t1);
+    			append_dev(div6, div5);
+    			append_dev(div5, div3);
+    			append_dev(div3, t2);
+    			append_dev(div3, t3);
+    			append_dev(div5, t4);
+    			append_dev(div5, div4);
+    			append_dev(div4, t5);
+    			append_dev(div7, t6);
     		},
     		p: noop$5,
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(div5);
+    			if (detaching) detach_dev(div7);
     		}
     	};
 
@@ -28446,9 +28475,9 @@ var app = (function () {
     			div1 = element("div");
     			div0 = element("div");
     			info.block.c();
-    			attr_dev(div0, "class", "slider svelte-6xcw0w");
+    			attr_dev(div0, "class", "slider svelte-1qa3gh9");
     			add_location(div0, file$7, 32, 4, 942);
-    			attr_dev(div1, "class", "container svelte-6xcw0w");
+    			attr_dev(div1, "class", "container svelte-1qa3gh9");
     			add_location(div1, file$7, 31, 0, 913);
     		},
     		l: function claim(nodes) {
@@ -28729,7 +28758,7 @@ var app = (function () {
     			div7 = element("div");
     			t7 = text$1(t7_value);
     			t8 = space();
-    			attr_dev(img0, "class", "authorprofile svelte-zkzk0i");
+    			attr_dev(img0, "class", "authorprofile svelte-1waody5");
 
     			if (!src_url_equal(img0.src, img0_src_value = `${({
 				"env": {
@@ -28755,17 +28784,17 @@ var app = (function () {
 
     			attr_dev(img0, "alt", "author profile");
     			add_location(img0, file$6, 29, 24, 856);
-    			attr_dev(div0, "class", "profile svelte-zkzk0i");
+    			attr_dev(div0, "class", "profile svelte-1waody5");
     			add_location(div0, file$6, 28, 20, 809);
-    			attr_dev(div1, "class", "left svelte-zkzk0i");
+    			attr_dev(div1, "class", "left svelte-1waody5");
     			add_location(div1, file$6, 27, 16, 769);
-    			attr_dev(div2, "class", "excerpt svelte-zkzk0i");
+    			attr_dev(div2, "class", "excerpt svelte-1waody5");
     			add_location(div2, file$6, 33, 20, 1568);
-    			attr_dev(div3, "class", "right svelte-zkzk0i");
+    			attr_dev(div3, "class", "right svelte-1waody5");
     			add_location(div3, file$6, 32, 16, 1527);
-    			attr_dev(div4, "class", "contentbot svelte-zkzk0i");
+    			attr_dev(div4, "class", "contentbot svelte-1waody5");
     			add_location(div4, file$6, 26, 12, 727);
-    			attr_dev(img1, "class", "header svelte-zkzk0i");
+    			attr_dev(img1, "class", "header svelte-1waody5");
 
     			if (!src_url_equal(img1.src, img1_src_value = `${({
 				"env": {
@@ -28780,23 +28809,23 @@ var app = (function () {
 
     			attr_dev(img1, "alt", /*d*/ ctx[4].title);
     			add_location(img1, file$6, 41, 24, 1883);
-    			attr_dev(div5, "class", "headerbottom svelte-zkzk0i");
+    			attr_dev(div5, "class", "headerbottom svelte-1waody5");
     			add_location(div5, file$6, 43, 20, 2232);
-    			attr_dev(div6, "class", "author svelte-zkzk0i");
+    			attr_dev(div6, "class", "author svelte-1waody5");
     			add_location(div6, file$6, 45, 24, 2332);
-    			attr_dev(div7, "class", "title svelte-zkzk0i");
+    			attr_dev(div7, "class", "title svelte-1waody5");
     			add_location(div7, file$6, 47, 28, 2458);
     			attr_dev(a, "href", /*deduktifurl*/ ctx[1] + /*d*/ ctx[4].slug);
     			add_location(a, file$6, 46, 24, 2397);
-    			attr_dev(div8, "class", "detail svelte-zkzk0i");
+    			attr_dev(div8, "class", "detail svelte-1waody5");
     			add_location(div8, file$6, 44, 20, 2286);
-    			attr_dev(div9, "class", "headline svelte-zkzk0i");
+    			attr_dev(div9, "class", "headline svelte-1waody5");
     			add_location(div9, file$6, 40, 16, 1835);
     			attr_dev(div10, "class", "contenttop");
     			add_location(div10, file$6, 38, 12, 1775);
-    			attr_dev(div11, "class", "content svelte-zkzk0i");
+    			attr_dev(div11, "class", "content svelte-1waody5");
     			add_location(div11, file$6, 25, 8, 692);
-    			attr_dev(div12, "class", "bottom svelte-zkzk0i");
+    			attr_dev(div12, "class", "bottom svelte-1waody5");
     			add_location(div12, file$6, 24, 4, 662);
     		},
     		m: function mount(target, anchor) {
@@ -28902,9 +28931,9 @@ var app = (function () {
     			t0 = space();
     			p = element("p");
     			p.textContent = "DEDUKTIF";
-    			attr_dev(p, "class", "deduktif svelte-zkzk0i");
+    			attr_dev(p, "class", "deduktif svelte-1waody5");
     			add_location(p, file$6, 59, 4, 2743);
-    			attr_dev(div, "class", "container svelte-zkzk0i");
+    			attr_dev(div, "class", "container svelte-1waody5");
     			attr_dev(div, "id", "deduktif");
     			add_location(div, file$6, 19, 0, 520);
     		},
@@ -29149,15 +29178,15 @@ var app = (function () {
     			t2 = space();
     			p1 = element("p");
     			t3 = space();
-    			attr_dev(img, "class", "imgthumb svelte-a07q9g");
+    			attr_dev(img, "class", "imgthumb svelte-1q0nea1");
     			if (!src_url_equal(img.src, img_src_value = /*d*/ ctx[4].origin_images)) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", /*d*/ ctx[4].title);
     			add_location(img, file$5, 30, 24, 894);
-    			attr_dev(p0, "class", "author svelte-a07q9g");
+    			attr_dev(p0, "class", "author svelte-1q0nea1");
     			add_location(p0, file$5, 31, 24, 980);
-    			attr_dev(p1, "class", "article-title svelte-a07q9g");
+    			attr_dev(p1, "class", "article-title svelte-1q0nea1");
     			add_location(p1, file$5, 32, 24, 1037);
-    			attr_dev(div, "class", "news svelte-a07q9g");
+    			attr_dev(div, "class", "news svelte-1q0nea1");
     			add_location(div, file$5, 29, 20, 850);
     			attr_dev(a, "href", /*d*/ ctx[4].source_url);
     			add_location(a, file$5, 28, 16, 805);
@@ -29252,13 +29281,13 @@ var app = (function () {
     			div1 = element("div");
     			div0 = element("div");
     			info.block.c();
-    			attr_dev(p, "class", "title svelte-a07q9g");
+    			attr_dev(p, "class", "title svelte-1q0nea1");
     			add_location(p, file$5, 21, 4, 569);
-    			attr_dev(div0, "class", "slider svelte-a07q9g");
+    			attr_dev(div0, "class", "slider svelte-1q0nea1");
     			add_location(div0, file$5, 23, 8, 643);
-    			attr_dev(div1, "class", "slider-container svelte-a07q9g");
+    			attr_dev(div1, "class", "slider-container svelte-1q0nea1");
     			add_location(div1, file$5, 22, 4, 603);
-    			attr_dev(div2, "class", "container");
+    			attr_dev(div2, "class", "container svelte-1q0nea1");
     			add_location(div2, file$5, 20, 0, 540);
     		},
     		l: function claim(nodes) {
@@ -29504,7 +29533,7 @@ var app = (function () {
     			iframe.allowFullscreen = "";
     			attr_dev(iframe, "allow", "autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture");
     			add_location(iframe, file$4, 52, 24, 1797);
-    			attr_dev(div, "class", "podcast svelte-15cpx27");
+    			attr_dev(div, "class", "podcast svelte-tbjcar");
     			add_location(div, file$4, 51, 20, 1750);
     		},
     		m: function mount(target, anchor) {
@@ -29634,14 +29663,15 @@ var app = (function () {
     			div4 = element("div");
     			div3 = element("div");
     			iframe = element("iframe");
-    			attr_dev(p, "class", "title svelte-15cpx27");
+    			attr_dev(p, "class", "title svelte-tbjcar");
     			add_location(p, file$4, 40, 8, 1384);
-    			attr_dev(div0, "class", "title-container svelte-15cpx27");
+    			attr_dev(div0, "class", "title-container svelte-tbjcar");
     			add_location(div0, file$4, 39, 4, 1345);
-    			attr_dev(div1, "class", "album svelte-15cpx27");
+    			attr_dev(div1, "class", "album svelte-tbjcar");
     			add_location(div1, file$4, 45, 8, 1521);
-    			attr_dev(div2, "class", "album-container svelte-15cpx27");
+    			attr_dev(div2, "class", "album-container svelte-tbjcar");
     			add_location(div2, file$4, 44, 4, 1482);
+    			attr_dev(iframe, "class", "playlist-embed svelte-tbjcar");
     			attr_dev(iframe, "title", "Podcast Turun Minum");
     			set_style(iframe, "border-radius", "12px");
     			if (!src_url_equal(iframe.src, iframe_src_value = "https://open.spotify.com/embed/playlist/71njl32GXQTjiwmKKuXUyR?utm_source=generator")) attr_dev(iframe, "src", iframe_src_value);
@@ -29651,11 +29681,11 @@ var app = (function () {
     			iframe.allowFullscreen = "";
     			attr_dev(iframe, "allow", "autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture");
     			add_location(iframe, file$4, 65, 12, 2376);
-    			attr_dev(div3, "class", "playlist svelte-15cpx27");
+    			attr_dev(div3, "class", "playlist svelte-tbjcar");
     			add_location(div3, file$4, 64, 8, 2340);
-    			attr_dev(div4, "class", "inner svelte-15cpx27");
+    			attr_dev(div4, "class", "inner svelte-tbjcar");
     			add_location(div4, file$4, 62, 4, 2254);
-    			attr_dev(div5, "class", "container svelte-15cpx27");
+    			attr_dev(div5, "class", "container svelte-tbjcar");
     			attr_dev(div5, "id", "podcast");
     			add_location(div5, file$4, 38, 0, 1303);
     		},
@@ -30088,7 +30118,7 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			attr_dev(img, "class", "imgthumb svelte-1a2m2wu");
+    			attr_dev(img, "class", "imgthumb svelte-1ta6m3z");
 
     			if (!src_url_equal(img.src, img_src_value = /*rewara*/ ctx[2][0].thumbnail
     			? `${({
@@ -30116,13 +30146,13 @@ var app = (function () {
 
     			attr_dev(img, "alt", /*rewara*/ ctx[2][0].title);
     			add_location(img, file$2, 44, 24, 1817);
-    			attr_dev(p, "class", "article-title svelte-1a2m2wu");
+    			attr_dev(p, "class", "article-title svelte-1ta6m3z");
     			add_location(p, file$2, 45, 24, 2475);
     			attr_dev(div, "class", "firstnews");
     			add_location(div, file$2, 43, 20, 1768);
     			attr_dev(a, "href", /*rewara*/ ctx[2][0].url);
     			add_location(a, file$2, 42, 16, 1722);
-    			attr_dev(ul, "class", "othernews svelte-1a2m2wu");
+    			attr_dev(ul, "class", "othernews svelte-1ta6m3z");
     			add_location(ul, file$2, 49, 20, 2611);
     		},
     		m: function mount(target, anchor) {
@@ -30199,9 +30229,9 @@ var app = (function () {
     			p = element("p");
     			t0 = text$1(t0_value);
     			t1 = space();
-    			attr_dev(p, "class", "article-title svelte-1a2m2wu");
+    			attr_dev(p, "class", "article-title svelte-1ta6m3z");
     			add_location(p, file$2, 54, 32, 2871);
-    			attr_dev(li, "class", "news svelte-1a2m2wu");
+    			attr_dev(li, "class", "news svelte-1ta6m3z");
     			add_location(li, file$2, 53, 28, 2820);
     			attr_dev(a, "href", "rewara.url");
     			add_location(a, file$2, 52, 24, 2769);
@@ -30325,13 +30355,13 @@ var app = (function () {
     			div1 = element("div");
     			div0 = element("div");
     			info.block.c();
-    			attr_dev(p, "class", "title svelte-1a2m2wu");
+    			attr_dev(p, "class", "title svelte-1ta6m3z");
     			add_location(p, file$2, 36, 8, 1499);
-    			attr_dev(div0, "class", "rewara svelte-1a2m2wu");
+    			attr_dev(div0, "class", "rewara svelte-1ta6m3z");
     			add_location(div0, file$2, 38, 12, 1581);
-    			attr_dev(div1, "class", "rewara-container svelte-1a2m2wu");
+    			attr_dev(div1, "class", "rewara-container svelte-1ta6m3z");
     			add_location(div1, file$2, 37, 8, 1537);
-    			attr_dev(div2, "class", "container");
+    			attr_dev(div2, "class", "container svelte-1ta6m3z");
     			add_location(div2, file$2, 35, 4, 1466);
     		},
     		l: function claim(nodes) {
@@ -30458,13 +30488,13 @@ var app = (function () {
     			div = element("div");
     			iframe = element("iframe");
     			t = space();
-    			attr_dev(iframe, "class", "imgthumb svelte-14sjumh");
+    			attr_dev(iframe, "class", "imgthumb svelte-68xygm");
     			if (!src_url_equal(iframe.src, iframe_src_value = /*short*/ ctx[3].url)) attr_dev(iframe, "src", iframe_src_value);
     			attr_dev(iframe, "title", /*short*/ ctx[3].title);
     			attr_dev(iframe, "frameborder", "0");
     			iframe.allowFullscreen = true;
     			add_location(iframe, file$1, 41, 28, 1425);
-    			attr_dev(div, "class", "news svelte-14sjumh");
+    			attr_dev(div, "class", "news svelte-68xygm");
     			add_location(div, file$1, 40, 24, 1377);
     		},
     		m: function mount(target, anchor) {
@@ -30517,13 +30547,13 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			attr_dev(h4, "class", "title svelte-14sjumh");
+    			attr_dev(h4, "class", "title svelte-68xygm");
     			add_location(h4, file$1, 33, 8, 1091);
-    			attr_dev(div0, "class", "slider svelte-14sjumh");
+    			attr_dev(div0, "class", "slider svelte-68xygm");
     			add_location(div0, file$1, 35, 12, 1175);
-    			attr_dev(div1, "class", "slider-container svelte-14sjumh");
+    			attr_dev(div1, "class", "slider-container svelte-68xygm");
     			add_location(div1, file$1, 34, 8, 1131);
-    			attr_dev(div2, "class", "container");
+    			attr_dev(div2, "class", "container svelte-68xygm");
     			add_location(div2, file$1, 32, 4, 1058);
     		},
     		l: function claim(nodes) {
@@ -30736,8 +30766,9 @@ var app = (function () {
 
         function map(arr, fn) {
             var res = [],
-                i;
-            for (i = 0; i < arr.length; ++i) {
+                i,
+                arrLen = arr.length;
+            for (i = 0; i < arrLen; ++i) {
                 res.push(fn(arr[i], i));
             }
             return res;
@@ -30866,7 +30897,10 @@ var app = (function () {
             updateInProgress = false;
 
         function copyConfig(to, from) {
-            var i, prop, val;
+            var i,
+                prop,
+                val,
+                momentPropertiesLen = momentProperties.length;
 
             if (!isUndefined(from._isAMomentObject)) {
                 to._isAMomentObject = from._isAMomentObject;
@@ -30899,8 +30933,8 @@ var app = (function () {
                 to._locale = from._locale;
             }
 
-            if (momentProperties.length > 0) {
-                for (i = 0; i < momentProperties.length; i++) {
+            if (momentPropertiesLen > 0) {
+                for (i = 0; i < momentPropertiesLen; i++) {
                     prop = momentProperties[i];
                     val = from[prop];
                     if (!isUndefined(val)) {
@@ -30955,8 +30989,9 @@ var app = (function () {
                     var args = [],
                         arg,
                         i,
-                        key;
-                    for (i = 0; i < arguments.length; i++) {
+                        key,
+                        argLen = arguments.length;
+                    for (i = 0; i < argLen; i++) {
                         arg = '';
                         if (typeof arguments[i] === 'object') {
                             arg += '\n[' + i + '] ';
@@ -31106,7 +31141,8 @@ var app = (function () {
             );
         }
 
-        var formattingTokens = /(\[[^\[]*\])|(\\)?([Hh]mm(ss)?|Mo|MM?M?M?|Do|DDDo|DD?D?D?|ddd?d?|do?|w[o|w]?|W[o|W]?|Qo?|N{1,5}|YYYYYY|YYYYY|YYYY|YY|y{2,4}|yo?|gg(ggg?)?|GG(GGG?)?|e|E|a|A|hh?|HH?|kk?|mm?|ss?|S{1,9}|x|X|zz?|ZZ?|.)/g,
+        var formattingTokens =
+                /(\[[^\[]*\])|(\\)?([Hh]mm(ss)?|Mo|MM?M?M?|Do|DDDo|DD?D?D?|ddd?d?|do?|w[o|w]?|W[o|W]?|Qo?|N{1,5}|YYYYYY|YYYYY|YYYY|YY|y{2,4}|yo?|gg(ggg?)?|GG(GGG?)?|e|E|a|A|hh?|HH?|kk?|mm?|ss?|S{1,9}|x|X|zz?|ZZ?|.)/g,
             localFormattingTokens = /(\[[^\[]*\])|(\\)?(LTS|LT|LL?L?L?|l{1,4})/g,
             formatFunctions = {},
             formatTokenFunctions = {};
@@ -31410,8 +31446,9 @@ var app = (function () {
             if (typeof units === 'object') {
                 units = normalizeObjectUnits(units);
                 var prioritized = getPrioritizedUnits(units),
-                    i;
-                for (i = 0; i < prioritized.length; i++) {
+                    i,
+                    prioritizedLen = prioritized.length;
+                for (i = 0; i < prioritizedLen; i++) {
                     this[prioritized[i].unit](units[prioritized[i].unit]);
                 }
             } else {
@@ -31441,7 +31478,8 @@ var app = (function () {
             matchTimestamp = /[+-]?\d+(\.\d{1,3})?/, // 123456789 123456789.123
             // any word (or two) characters or numbers including two/three word month in arabic.
             // includes scottish gaelic two word and hyphenated months
-            matchWord = /[0-9]{0,256}['a-z\u00A0-\u05FF\u0700-\uD7FF\uF900-\uFDCF\uFDF0-\uFF07\uFF10-\uFFEF]{1,256}|[\u0600-\u06FF\/]{1,256}(\s*?[\u0600-\u06FF]{1,256}){1,2}/i,
+            matchWord =
+                /[0-9]{0,256}['a-z\u00A0-\u05FF\u0700-\uD7FF\uF900-\uFDCF\uFDF0-\uFF07\uFF10-\uFFEF]{1,256}|[\u0600-\u06FF\/]{1,256}(\s*?[\u0600-\u06FF]{1,256}){1,2}/i,
             regexes;
 
         regexes = {};
@@ -31467,15 +31505,12 @@ var app = (function () {
             return regexEscape(
                 s
                     .replace('\\', '')
-                    .replace(/\\(\[)|\\(\])|\[([^\]\[]*)\]|\\(.)/g, function (
-                        matched,
-                        p1,
-                        p2,
-                        p3,
-                        p4
-                    ) {
-                        return p1 || p2 || p3 || p4;
-                    })
+                    .replace(
+                        /\\(\[)|\\(\])|\[([^\]\[]*)\]|\\(.)/g,
+                        function (matched, p1, p2, p3, p4) {
+                            return p1 || p2 || p3 || p4;
+                        }
+                    )
             );
         }
 
@@ -31487,7 +31522,8 @@ var app = (function () {
 
         function addParseToken(token, callback) {
             var i,
-                func = callback;
+                func = callback,
+                tokenLen;
             if (typeof token === 'string') {
                 token = [token];
             }
@@ -31496,7 +31532,8 @@ var app = (function () {
                     array[callback] = toInt(input);
                 };
             }
-            for (i = 0; i < token.length; i++) {
+            tokenLen = token.length;
+            for (i = 0; i < tokenLen; i++) {
                 tokens[token[i]] = func;
             }
         }
@@ -31607,12 +31644,12 @@ var app = (function () {
 
         // LOCALES
 
-        var defaultLocaleMonths = 'January_February_March_April_May_June_July_August_September_October_November_December'.split(
-                '_'
-            ),
-            defaultLocaleMonthsShort = 'Jan_Feb_Mar_Apr_May_Jun_Jul_Aug_Sep_Oct_Nov_Dec'.split(
-                '_'
-            ),
+        var defaultLocaleMonths =
+                'January_February_March_April_May_June_July_August_September_October_November_December'.split(
+                    '_'
+                ),
+            defaultLocaleMonthsShort =
+                'Jan_Feb_Mar_Apr_May_Jun_Jul_Aug_Sep_Oct_Nov_Dec'.split('_'),
             MONTHS_IN_FORMAT = /D[oD]?(\[[^\[\]]*\]|\s)+MMMM?/,
             defaultMonthsShortRegex = matchWord,
             defaultMonthsRegex = matchWord;
@@ -32054,14 +32091,12 @@ var app = (function () {
         addRegexToken('W', match1to2);
         addRegexToken('WW', match1to2, match2);
 
-        addWeekParseToken(['w', 'ww', 'W', 'WW'], function (
-            input,
-            week,
-            config,
-            token
-        ) {
-            week[token.substr(0, 1)] = toInt(input);
-        });
+        addWeekParseToken(
+            ['w', 'ww', 'W', 'WW'],
+            function (input, week, config, token) {
+                week[token.substr(0, 1)] = toInt(input);
+            }
+        );
 
         // HELPERS
 
@@ -32186,9 +32221,8 @@ var app = (function () {
             return ws.slice(n, 7).concat(ws.slice(0, n));
         }
 
-        var defaultLocaleWeekdays = 'Sunday_Monday_Tuesday_Wednesday_Thursday_Friday_Saturday'.split(
-                '_'
-            ),
+        var defaultLocaleWeekdays =
+                'Sunday_Monday_Tuesday_Wednesday_Thursday_Friday_Saturday'.split('_'),
             defaultLocaleWeekdaysShort = 'Sun_Mon_Tue_Wed_Thu_Fri_Sat'.split('_'),
             defaultLocaleWeekdaysMin = 'Su_Mo_Tu_We_Th_Fr_Sa'.split('_'),
             defaultWeekdaysRegex = matchWord,
@@ -32736,6 +32770,11 @@ var app = (function () {
             return globalLocale;
         }
 
+        function isLocaleNameSane(name) {
+            // Prevent names that look like filesystem paths, i.e contain '/' or '\'
+            return name.match('^[^/\\\\]*$') != null;
+        }
+
         function loadLocale(name) {
             var oldLocale = null,
                 aliasedRequire;
@@ -32744,7 +32783,8 @@ var app = (function () {
                 locales[name] === undefined &&
                 'object' !== 'undefined' &&
                 module &&
-                module.exports
+                module.exports &&
+                isLocaleNameSane(name)
             ) {
                 try {
                     oldLocale = globalLocale._abbr;
@@ -32961,8 +33001,10 @@ var app = (function () {
 
         // iso 8601 regex
         // 0000-00-00 0000-W00 or 0000-W00-0 + T + 00 or 00:00 or 00:00:00 or 00:00:00.000 + +00:00 or +0000 or +00)
-        var extendedIsoRegex = /^\s*((?:[+-]\d{6}|\d{4})-(?:\d\d-\d\d|W\d\d-\d|W\d\d|\d\d\d|\d\d))(?:(T| )(\d\d(?::\d\d(?::\d\d(?:[.,]\d+)?)?)?)([+-]\d\d(?::?\d\d)?|\s*Z)?)?$/,
-            basicIsoRegex = /^\s*((?:[+-]\d{6}|\d{4})(?:\d\d\d\d|W\d\d\d|W\d\d|\d\d\d|\d\d|))(?:(T| )(\d\d(?:\d\d(?:\d\d(?:[.,]\d+)?)?)?)([+-]\d\d(?::?\d\d)?|\s*Z)?)?$/,
+        var extendedIsoRegex =
+                /^\s*((?:[+-]\d{6}|\d{4})-(?:\d\d-\d\d|W\d\d-\d|W\d\d|\d\d\d|\d\d))(?:(T| )(\d\d(?::\d\d(?::\d\d(?:[.,]\d+)?)?)?)([+-]\d\d(?::?\d\d)?|\s*Z)?)?$/,
+            basicIsoRegex =
+                /^\s*((?:[+-]\d{6}|\d{4})(?:\d\d\d\d|W\d\d\d|W\d\d|\d\d\d|\d\d|))(?:(T| )(\d\d(?:\d\d(?:\d\d(?:[.,]\d+)?)?)?)([+-]\d\d(?::?\d\d)?|\s*Z)?)?$/,
             tzRegex = /Z|[+-]\d\d(?::?\d\d)?/,
             isoDates = [
                 ['YYYYYY-MM-DD', /[+-]\d{6}-\d\d-\d\d/],
@@ -32993,7 +33035,8 @@ var app = (function () {
             ],
             aspNetJsonRegex = /^\/?Date\((-?\d+)/i,
             // RFC 2822 regex: For details see https://tools.ietf.org/html/rfc2822#section-3.3
-            rfc2822 = /^(?:(Mon|Tue|Wed|Thu|Fri|Sat|Sun),?\s)?(\d{1,2})\s(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\s(\d{2,4})\s(\d\d):(\d\d)(?::(\d\d))?\s(?:(UT|GMT|[ECMP][SD]T)|([Zz])|([+-]\d{4}))$/,
+            rfc2822 =
+                /^(?:(Mon|Tue|Wed|Thu|Fri|Sat|Sun),?\s)?(\d{1,2})\s(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\s(\d{2,4})\s(\d\d):(\d\d)(?::(\d\d))?\s(?:(UT|GMT|[ECMP][SD]T)|([Zz])|([+-]\d{4}))$/,
             obsOffsets = {
                 UT: 0,
                 GMT: 0,
@@ -33016,12 +33059,13 @@ var app = (function () {
                 allowTime,
                 dateFormat,
                 timeFormat,
-                tzFormat;
+                tzFormat,
+                isoDatesLen = isoDates.length,
+                isoTimesLen = isoTimes.length;
 
             if (match) {
                 getParsingFlags(config).iso = true;
-
-                for (i = 0, l = isoDates.length; i < l; i++) {
+                for (i = 0, l = isoDatesLen; i < l; i++) {
                     if (isoDates[i][1].exec(match[1])) {
                         dateFormat = isoDates[i][0];
                         allowTime = isoDates[i][2] !== false;
@@ -33033,7 +33077,7 @@ var app = (function () {
                     return;
                 }
                 if (match[3]) {
-                    for (i = 0, l = isoTimes.length; i < l; i++) {
+                    for (i = 0, l = isoTimesLen; i < l; i++) {
                         if (isoTimes[i][1].exec(match[3])) {
                             // match[2] should be 'T' or space
                             timeFormat = (match[2] || ' ') + isoTimes[i][0];
@@ -33413,12 +33457,13 @@ var app = (function () {
                 skipped,
                 stringLength = string.length,
                 totalParsedInputLength = 0,
-                era;
+                era,
+                tokenLen;
 
             tokens =
                 expandFormat(config._f, config._locale).match(formattingTokens) || [];
-
-            for (i = 0; i < tokens.length; i++) {
+            tokenLen = tokens.length;
+            for (i = 0; i < tokenLen; i++) {
                 token = tokens[i];
                 parsedInput = (string.match(getParseRegexForToken(token, config)) ||
                     [])[0];
@@ -33513,15 +33558,16 @@ var app = (function () {
                 i,
                 currentScore,
                 validFormatFound,
-                bestFormatIsValid = false;
+                bestFormatIsValid = false,
+                configfLen = config._f.length;
 
-            if (config._f.length === 0) {
+            if (configfLen === 0) {
                 getParsingFlags(config).invalidFormat = true;
                 config._d = new Date(NaN);
                 return;
             }
 
-            for (i = 0; i < config._f.length; i++) {
+            for (i = 0; i < configfLen; i++) {
                 currentScore = 0;
                 validFormatFound = false;
                 tempConfig = copyConfig({}, config);
@@ -33762,7 +33808,8 @@ var app = (function () {
         function isDurationValid(m) {
             var key,
                 unitHasDecimal = false,
-                i;
+                i,
+                orderLen = ordering.length;
             for (key in m) {
                 if (
                     hasOwnProp(m, key) &&
@@ -33775,7 +33822,7 @@ var app = (function () {
                 }
             }
 
-            for (i = 0; i < ordering.length; ++i) {
+            for (i = 0; i < orderLen; ++i) {
                 if (m[ordering[i]]) {
                     if (unitHasDecimal) {
                         return false; // only allow non-integers for smallest unit
@@ -34100,7 +34147,8 @@ var app = (function () {
             // from http://docs.closure-library.googlecode.com/git/closure_goog_date_date.js.source.html
             // somewhat more in line with 4.4.3.2 2004 spec, but allows decimal anywhere
             // and further modified to allow for strings containing both week and day
-            isoRegex = /^(-|\+)?P(?:([-+]?[0-9,.]*)Y)?(?:([-+]?[0-9,.]*)M)?(?:([-+]?[0-9,.]*)W)?(?:([-+]?[0-9,.]*)D)?(?:T(?:([-+]?[0-9,.]*)H)?(?:([-+]?[0-9,.]*)M)?(?:([-+]?[0-9,.]*)S)?)?$/;
+            isoRegex =
+                /^(-|\+)?P(?:([-+]?[0-9,.]*)Y)?(?:([-+]?[0-9,.]*)M)?(?:([-+]?[0-9,.]*)W)?(?:([-+]?[0-9,.]*)D)?(?:T(?:([-+]?[0-9,.]*)H)?(?:([-+]?[0-9,.]*)M)?(?:([-+]?[0-9,.]*)S)?)?$/;
 
         function createDuration(input, key) {
             var duration = input,
@@ -34321,9 +34369,10 @@ var app = (function () {
                     'ms',
                 ],
                 i,
-                property;
+                property,
+                propertyLen = properties.length;
 
-            for (i = 0; i < properties.length; i += 1) {
+            for (i = 0; i < propertyLen; i += 1) {
                 property = properties[i];
                 propertyTest = propertyTest || hasOwnProp(input, property);
             }
@@ -34946,19 +34995,17 @@ var app = (function () {
         addRegexToken('NNNN', matchEraName);
         addRegexToken('NNNNN', matchEraNarrow);
 
-        addParseToken(['N', 'NN', 'NNN', 'NNNN', 'NNNNN'], function (
-            input,
-            array,
-            config,
-            token
-        ) {
-            var era = config._locale.erasParse(input, token, config._strict);
-            if (era) {
-                getParsingFlags(config).era = era;
-            } else {
-                getParsingFlags(config).invalidEra = input;
+        addParseToken(
+            ['N', 'NN', 'NNN', 'NNNN', 'NNNNN'],
+            function (input, array, config, token) {
+                var era = config._locale.erasParse(input, token, config._strict);
+                if (era) {
+                    getParsingFlags(config).era = era;
+                } else {
+                    getParsingFlags(config).invalidEra = input;
+                }
             }
-        });
+        );
 
         addRegexToken('y', matchUnsigned);
         addRegexToken('yy', matchUnsigned);
@@ -35250,14 +35297,12 @@ var app = (function () {
         addRegexToken('GGGGG', match1to6, match6);
         addRegexToken('ggggg', match1to6, match6);
 
-        addWeekParseToken(['gggg', 'ggggg', 'GGGG', 'GGGGG'], function (
-            input,
-            week,
-            config,
-            token
-        ) {
-            week[token.substr(0, 2)] = toInt(input);
-        });
+        addWeekParseToken(
+            ['gggg', 'ggggg', 'GGGG', 'GGGGG'],
+            function (input, week, config, token) {
+                week[token.substr(0, 2)] = toInt(input);
+            }
+        );
 
         addWeekParseToken(['gg', 'GG'], function (input, week, config, token) {
             week[token] = hooks.parseTwoDigitYear(input);
@@ -36280,7 +36325,7 @@ var app = (function () {
 
         //! moment.js
 
-        hooks.version = '2.29.1';
+        hooks.version = '2.29.2';
 
         setHookCallback(createLocal);
 
@@ -36333,7 +36378,7 @@ var app = (function () {
     /* src\App.svelte generated by Svelte v3.46.4 */
     const file = "src\\App.svelte";
 
-    // (152:0) {:catch error}
+    // (149:0) {:catch error}
     function create_catch_block(ctx) {
     	let p;
 
@@ -36341,7 +36386,7 @@ var app = (function () {
     		c: function create() {
     			p = element("p");
     			p.textContent = "An error occurred!";
-    			add_location(p, file, 152, 0, 3546);
+    			add_location(p, file, 149, 0, 3447);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -36358,14 +36403,14 @@ var app = (function () {
     		block,
     		id: create_catch_block.name,
     		type: "catch",
-    		source: "(152:0) {:catch error}",
+    		source: "(149:0) {:catch error}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (74:0) {:then data}
+    // (75:0) {:then data}
     function create_then_block(ctx) {
     	let main;
     	let div;
@@ -36373,6 +36418,7 @@ var app = (function () {
     	let div_1;
     	let updating_height;
     	let t0;
+    	let article;
     	let voronoinewsmap;
     	let updating_margin;
     	let t1;
@@ -36491,6 +36537,7 @@ var app = (function () {
     			div_1 = element("div");
     			create_component(header.$$.fragment);
     			t0 = space();
+    			article = element("article");
     			create_component(voronoinewsmap.$$.fragment);
     			t1 = space();
     			div_2 = element("div");
@@ -36527,6 +36574,9 @@ var app = (function () {
     			set_style(div_2, "display", "contents");
     			set_style(div_2, "--fontfamily1", /*fontfamily1*/ ctx[2]);
     			set_style(div_2, "--fontfamily2", /*fontfamily2*/ ctx[3]);
+    			set_style(div_2, "--margintop", /*margin*/ ctx[1]);
+    			attr_dev(article, "class", "headlines svelte-412vt4");
+    			add_location(article, file, 90, 2, 2236);
     			set_style(div_3, "display", "contents");
     			set_style(div_3, "--fontfamily1", /*fontfamily1*/ ctx[2]);
     			set_style(div_3, "--fontfamily2", /*fontfamily2*/ ctx[3]);
@@ -36551,10 +36601,10 @@ var app = (function () {
     			set_style(div_9, "--fontfamily2", /*fontfamily2*/ ctx[3]);
     			set_style(div_10, "display", "contents");
     			set_style(div_10, "--fontfamily3", /*fontfamily3*/ ctx[4]);
-    			attr_dev(div, "class", "container svelte-1dcss62");
-    			add_location(div, file, 75, 1, 1855);
-    			attr_dev(main, "class", "svelte-1dcss62");
-    			add_location(main, file, 74, 0, 1847);
+    			attr_dev(div, "class", "container svelte-412vt4");
+    			add_location(div, file, 76, 1, 1911);
+    			attr_dev(main, "class", "svelte-412vt4");
+    			add_location(main, file, 75, 0, 1903);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, main, anchor);
@@ -36562,9 +36612,10 @@ var app = (function () {
     			append_dev(div, div_1);
     			mount_component(header, div_1, null);
     			append_dev(div, t0);
-    			mount_component(voronoinewsmap, div, null);
-    			append_dev(div, t1);
-    			append_dev(div, div_2);
+    			append_dev(div, article);
+    			mount_component(voronoinewsmap, article, null);
+    			append_dev(article, t1);
+    			append_dev(article, div_2);
     			mount_component(sentiment, div_2, null);
     			append_dev(div, t2);
     			append_dev(div, div_3);
@@ -36612,6 +36663,11 @@ var app = (function () {
     			}
 
     			voronoinewsmap.$set(voronoinewsmap_changes);
+
+    			if (dirty & /*margin*/ 2) {
+    				set_style(div_2, "--margintop", /*margin*/ ctx[1]);
+    			}
+
     			const menu_changes = {};
     			if (dirty & /*y*/ 1) menu_changes.showMenu = /*y*/ ctx[0] < 50;
     			menu.$set(menu_changes);
@@ -36665,14 +36721,14 @@ var app = (function () {
     		block,
     		id: create_then_block.name,
     		type: "then",
-    		source: "(74:0) {:then data}",
+    		source: "(75:0) {:then data}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (72:19)  <p>...waiting</p> {:then data}
+    // (73:19)  <p>...waiting</p> {:then data}
     function create_pending_block(ctx) {
     	let p;
 
@@ -36680,7 +36736,7 @@ var app = (function () {
     		c: function create() {
     			p = element("p");
     			p.textContent = "...waiting";
-    			add_location(p, file, 72, 0, 1816);
+    			add_location(p, file, 73, 0, 1872);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -36697,7 +36753,7 @@ var app = (function () {
     		block,
     		id: create_pending_block.name,
     		type: "pending",
-    		source: "(72:19)  <p>...waiting</p> {:then data}",
+    		source: "(73:19)  <p>...waiting</p> {:then data}",
     		ctx
     	});
 
@@ -36743,7 +36799,7 @@ var app = (function () {
     			info.block.c();
     			attr_dev(link, "rel", "stylesheet");
     			attr_dev(link, "href", "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
-    			add_location(link, file, 65, 1, 1595);
+    			add_location(link, file, 66, 1, 1651);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");

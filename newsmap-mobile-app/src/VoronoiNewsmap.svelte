@@ -1,10 +1,9 @@
 <script>
     import * as d3 from 'd3'
     import { voronoiMapSimulation } from 'd3-voronoi-map'
-    import { onMount } from 'svelte'
+    import { onMount, tick} from 'svelte'
     import * as ihttp from "./constants/initialHttp";
     import { get } from "./api";
-    import { truncText, stringToDom } from './helper';
 
     let circleanchor, catanchor, scale, circlelen, catlen, earanchor1, earanchor2, earlen1, earlen2,
         pointcircle = [],
@@ -19,7 +18,8 @@
     export let margin;
 
     let w = document.body.clientWidth;
-    let width = 0.95 * w;
+    let h = document.body.clientHeight;
+    let width
     
     const fetchData = (async () => {
         const result = await get(ihttp.URI_LAST_TOPIC, { size: 18 });
@@ -48,264 +48,278 @@
             data[i].color = `hsla(0, 82%, ${60 + i * 2.5}%, 1)`
         }
 
-        let num = 240
-        let numear = 30
-        circlelen = circleanchor.getTotalLength()
-        catlen = catanchor.getTotalLength()
-        earlen1 = earanchor1.getTotalLength()
-        earlen2 = earanchor2.getTotalLength()
-        let path = catanchor.outerHTML.substring(23)
-        path = path.substring(0,1172)
+        function drawVoronoi() {
+            let num = 240
+            let numear = 30
+            circlelen = circleanchor.getTotalLength()
+            catlen = catanchor.getTotalLength()
+            earlen1 = earanchor1.getTotalLength()
+            earlen2 = earanchor2.getTotalLength()
+            let path = catanchor.outerHTML.substring(23)
+            path = path.substring(0,1172)
 
-        for (let i=0; i < num; i++) {
-            let pt = circleanchor.getPointAtLength(i * circlelen / (num-1));
-            pointcircle.push([pt.x, pt.y]);
-        }
+            for (let i=0; i < num; i++) {
+                let pt = circleanchor.getPointAtLength(i * circlelen / (num-1));
+                pointcircle.push([pt.x, pt.y]);
+            }
 
-        for (let i=0; i < num; i++) {
-            let pt = catanchor.getPointAtLength(i * catlen / (num-1));
-            pointcat.push([pt.x, pt.y]);
-        }
+            for (let i=0; i < num; i++) {
+                let pt = catanchor.getPointAtLength(i * catlen / (num-1));
+                pointcat.push([pt.x, pt.y]);
+            }
 
-        for (let i=0; i < numear; i++) {
-            let pt = earanchor1.getPointAtLength(i * earlen1 / (numear-1));
-            pointear1.push([pt.x, pt.y]);
-        }
+            for (let i=0; i < numear; i++) {
+                let pt = earanchor1.getPointAtLength(i * earlen1 / (numear-1));
+                pointear1.push([pt.x, pt.y]);
+            }
 
-        for (let i=0; i < numear; i++) {
-            let pt = earanchor2.getPointAtLength(i * earlen2 / (numear-1));
-            pointear2.push([pt.x, pt.y]);
-        }
+            for (let i=0; i < numear; i++) {
+                let pt = earanchor2.getPointAtLength(i * earlen2 / (numear-1));
+                pointear2.push([pt.x, pt.y]);
+            }
 
-        //get X and Y coordinates
-        pointcat.forEach(arr => {
-        x.push(arr[0])
-        y.push(arr[1])
-        })
-
-        //check min and max value for each X and Y coordinates
-        minX = Math.min(...x)
-        minY = Math.min(...y)
-        maxX = Math.max(...x)
-        maxY = Math.max(...y)
-
-        scale = width / (maxY-minY)
-
-        //scale function
-        let scaledpoint = pointcircle.map(coord => {
-            return coord.map(val => {
-                return scaleObject(val)
+            //get X and Y coordinates
+            pointcat.forEach(arr => {
+            x.push(arr[0])
+            y.push(arr[1])
             })
-        })
-        let scaledcat = pointcat.map(coord => {
-            return coord.map(val => {
-                return scaleObject(val)
-            })
-        })
 
-        let scaledear1 = pointear1.map(coord => {
-            return coord.map(val => {
-                return scaleObject(val)
-            })
-        })
+            //check min and max value for each X and Y coordinates
+            minX = Math.min(...x)
+            minY = Math.min(...y)
+            maxX = Math.max(...x)
+            maxY = Math.max(...y)
 
-        let scaledear2 = pointear2.map(coord => {
-            return coord.map(val => {
-                return scaleObject(val)
-            })
-        })
+            //check screen orientation
+            if (w > h) { // horizontal (desktop)
+                width = 0.65 * h
+                scale = width / (maxY-minY)
+            } else if (h > w) { // vertical (mobile)
+                width = 0.95 * w
+                scale = width / (maxY-minY)
+            }
+            
 
-        //scale function
-        function scaleObject(val) {
-            return val * scale
+            //scale function
+            let scaledpoint = pointcircle.map(coord => {
+                return coord.map(val => {
+                    return scaleObject(val)
+                })
+            })
+            let scaledcat = pointcat.map(coord => {
+                return coord.map(val => {
+                    return scaleObject(val)
+                })
+            })
+
+            let scaledear1 = pointear1.map(coord => {
+                return coord.map(val => {
+                    return scaleObject(val)
+                })
+            })
+
+            let scaledear2 = pointear2.map(coord => {
+                return coord.map(val => {
+                    return scaleObject(val)
+                })
+            })
+
+            //scale function
+            function scaleObject(val) {
+                return val * scale
+            }
+
+            let simulation = voronoiMapSimulation(data)
+                .weight((d) => { return d.weight * d.weight })
+                .clip(scaledpoint)
+                .stop();
+
+            let state = simulation.state(); 
+
+            while (!state.ended) {
+                simulation.tick();
+                state = simulation.state();
+            }
+
+            let polygons = state.polygons;
+
+            let container = d3.select(el)
+                .attr('width', width)
+                .attr('height', width)
+
+            let cells = container
+            .append('g')
+            .classed('cells', true)
+
+            let cathead = container
+            .append('g')
+            .classed('cat', true)
+
+            let catear1 = container
+            .append('g')
+            .classed('catear1', true)
+
+            let catear2 = container
+            .append('g')
+            .classed('catear2', true)
+
+            let text = container
+            .append('g')
+            .classed('labels', true)
+
+            cells
+            .selectAll('.voronoi')
+            .data(polygons)
+            .enter()
+            .append('path')
+            .classed('voronoi', true)
+            .attr("d", (d) => {
+                return "M" + d.join(",") + "z";
+                })
+            .style("stroke-linejoin", "round")
+            .style("fill", (d) => {
+                    return d.site.originalObject.data.originalData.color;
+                })
+            .style('z-index', 10)
+
+            cathead
+            .append('path')
+            .classed('cathead', true)
+            .attr('d', "M" + scaledcat.join(",") + "z")
+            .style("fill", "#f17474")
+
+            catear1
+            .append('path')
+            .classed('cathead', true)
+            .attr('d', "M" + scaledear1.join(",") + "z")
+            .style("fill", "#ee5151")
+
+            catear2
+            .append('path')
+            .classed('cathead', true)
+            .attr('d', "M" + scaledear2.join(",") + "z")
+            .style("fill", "#ee5151")
+
+            text
+            .selectAll('.label')
+            .data(polygons)
+            .enter()
+            .append('text')
+            .classed('label', true)
+            .text((d) => {
+                if (d.site.originalObject.data.originalData.weight >= 2) {
+                    return d.site.originalObject.data.originalData.keywords[0]
+                }
+            })
+            .style('fill', 'white')
+            .attr('text-anchor', 'middle')
+            .attr('x', (d) => {
+                return d.site.x
+            })
+            .attr('y', (d) => {
+                return d.site.y
+            })
+            .style('font-size', (d) => {
+                if (d.site.originalObject.data.originalData.weight == 4) {
+                    return '1.5rem'
+                } else if (d.site.originalObject.data.originalData.weight == 3) {
+                    return '1rem'
+                } else {
+                    return '0.5rem'
+                }
+            })
+            .style('font-weight', (d) => {
+                if (d.site.originalObject.data.originalData.weight == 4) {
+                    return '700'
+                } else if (d.site.originalObject.data.originalData.weight == 3) {
+                    return '500'
+                } else {
+                    return '300'
+                }
+            })
+
+            text
+            .selectAll('.secondarylabel')
+            .data(polygons)
+            .enter()
+            .append('text')
+            .classed('secondarylabel', true)
+            .text((d) => {
+                if (d.site.originalObject.data.originalData.weight >= 3) {
+                    return d.site.originalObject.data.originalData.keywords[1]
+                }
+            })
+            .style('fill', 'white')
+            .attr('text-anchor', 'middle')
+            .attr('x', (d) => {
+                return d.site.x
+            })
+            .attr('y', (d) => {
+                return d.site.y + (d.site.originalObject.data.originalData.weight * 5)
+            })
+            .style('font-size', (d) => {
+                if (d.site.originalObject.data.originalData.weight == 4) {
+                    return '1rem'
+                } else if (d.site.originalObject.data.originalData.weight == 3) {
+                    return '0.6rem'
+                } else {
+                    return '0.4rem'
+                }
+            })
+            .style('font-weight', (d) => {
+                if (d.site.originalObject.data.originalData.weight == 4) {
+                    return '700'
+                } else if (d.site.originalObject.data.originalData.weight == 3) {
+                    return '500'
+                } else {
+                    return '300'
+                }
+            })
+
+            text
+            .selectAll('.tersierlabel')
+            .data(polygons)
+            .enter()
+            .append('text')
+            .classed('tersierlabel', true)
+            .text((d) => {
+                if (d.site.originalObject.data.originalData.weight >= 3) {
+                    return d.site.originalObject.data.originalData.keywords[2]
+                }
+            })
+            .style('fill', 'white')
+            .attr('text-anchor', 'middle')
+            .attr('x', (d) => {
+                return d.site.x
+            })
+            .attr('y', (d) => {
+                return d.site.y + (d.site.originalObject.data.originalData.weight * 5 * 1.7)
+            })
+            .style('font-size', (d) => {
+                if (d.site.originalObject.data.originalData.weight == 4) {
+                    return '1rem'
+                } else if (d.site.originalObject.data.originalData.weight == 3) {
+                    return '0.6rem'
+                } else {
+                    return '0.4rem'
+                }
+            })
+            .style('font-weight', (d) => {
+                if (d.site.originalObject.data.originalData.weight == 4) {
+                    return '700'
+                } else if (d.site.originalObject.data.originalData.weight == 3) {
+                    return '500'
+                } else {
+                    return '300'
+                }
+            })
+
+            cells.raise()
+            cathead.lower()
+            text.raise()
         }
-
-        let simulation = voronoiMapSimulation(data)
-            .weight((d) => { return d.weight * d.weight })
-            .clip(scaledpoint)
-            .stop();
-
-        let state = simulation.state(); 
-
-        while (!state.ended) {
-            simulation.tick();
-            state = simulation.state();
-        }
-
-        let polygons = state.polygons;
-
-        let container = d3.select(el)
-
-        let cells = container
-        .append('g')
-        .classed('cells', true)
-
-        let cathead = container
-        .append('g')
-        .classed('cat', true)
-
-        let catear1 = container
-        .append('g')
-        .classed('catear1', true)
-
-        let catear2 = container
-        .append('g')
-        .classed('catear2', true)
-
-        let text = container
-        .append('g')
-        .classed('labels', true)
-
-        cells
-        .selectAll('.voronoi')
-        .data(polygons)
-        .enter()
-        .append('path')
-        .classed('voronoi', true)
-        .attr("d", (d) => {
-            return "M" + d.join(",") + "z";
-            })
-        .style("stroke-linejoin", "round")
-        .style("fill", (d) => {
-                return d.site.originalObject.data.originalData.color;
-            })
-        .style('z-index', 10)
-
-        cathead
-        .append('path')
-        .classed('cathead', true)
-        .attr('d', "M" + scaledcat.join(",") + "z")
-        .style("fill", "#f17474")
-
-        catear1
-        .append('path')
-        .classed('cathead', true)
-        .attr('d', "M" + scaledear1.join(",") + "z")
-        .style("fill", "#ee5151")
-
-        catear2
-        .append('path')
-        .classed('cathead', true)
-        .attr('d', "M" + scaledear2.join(",") + "z")
-        .style("fill", "#ee5151")
-
-        text
-        .selectAll('.label')
-        .data(polygons)
-        .enter()
-        .append('text')
-        .classed('label', true)
-        .text((d) => {
-            if (d.site.originalObject.data.originalData.weight >= 2) {
-                return d.site.originalObject.data.originalData.keywords[0]
-            }
-        })
-        .style('fill', 'white')
-        .attr('text-anchor', 'middle')
-        .attr('x', (d) => {
-            return d.site.x
-        })
-        .attr('y', (d) => {
-            return d.site.y
-        })
-        .style('font-size', (d) => {
-            if (d.site.originalObject.data.originalData.weight == 4) {
-                return '1.5rem'
-            } else if (d.site.originalObject.data.originalData.weight == 3) {
-                return '1rem'
-            } else {
-                return '0.5rem'
-            }
-        })
-        .style('font-weight', (d) => {
-            if (d.site.originalObject.data.originalData.weight == 4) {
-                return '700'
-            } else if (d.site.originalObject.data.originalData.weight == 3) {
-                return '500'
-            } else {
-                return '300'
-            }
-        })
-
-        text
-        .selectAll('.secondarylabel')
-        .data(polygons)
-        .enter()
-        .append('text')
-        .classed('secondarylabel', true)
-        .text((d) => {
-            if (d.site.originalObject.data.originalData.weight >= 3) {
-                return d.site.originalObject.data.originalData.keywords[1]
-            }
-        })
-        .style('fill', 'white')
-        .attr('text-anchor', 'middle')
-        .attr('x', (d) => {
-            return d.site.x
-        })
-        .attr('y', (d) => {
-            return d.site.y + (d.site.originalObject.data.originalData.weight * 5)
-        })
-        .style('font-size', (d) => {
-            if (d.site.originalObject.data.originalData.weight == 4) {
-                return '1rem'
-            } else if (d.site.originalObject.data.originalData.weight == 3) {
-                return '0.6rem'
-            } else {
-                return '0.4rem'
-            }
-        })
-        .style('font-weight', (d) => {
-            if (d.site.originalObject.data.originalData.weight == 4) {
-                return '700'
-            } else if (d.site.originalObject.data.originalData.weight == 3) {
-                return '500'
-            } else {
-                return '300'
-            }
-        })
-
-        text
-        .selectAll('.tersierlabel')
-        .data(polygons)
-        .enter()
-        .append('text')
-        .classed('tersierlabel', true)
-        .text((d) => {
-            if (d.site.originalObject.data.originalData.weight >= 3) {
-                return d.site.originalObject.data.originalData.keywords[2]
-            }
-        })
-        .style('fill', 'white')
-        .attr('text-anchor', 'middle')
-        .attr('x', (d) => {
-            return d.site.x
-        })
-        .attr('y', (d) => {
-            return d.site.y + (d.site.originalObject.data.originalData.weight * 5 * 1.7)
-        })
-        .style('font-size', (d) => {
-            if (d.site.originalObject.data.originalData.weight == 4) {
-                return '1rem'
-            } else if (d.site.originalObject.data.originalData.weight == 3) {
-                return '0.6rem'
-            } else {
-                return '0.4rem'
-            }
-        })
-        .style('font-weight', (d) => {
-            if (d.site.originalObject.data.originalData.weight == 4) {
-                return '700'
-            } else if (d.site.originalObject.data.originalData.weight == 3) {
-                return '500'
-            } else {
-                return '300'
-            }
-        })
-
-        cells.raise()
-        cathead.lower()
-        text.raise()
+        
+        drawVoronoi()
 
     })    
 
@@ -321,7 +335,7 @@
     <path bind:this={earanchor2} class="cls-1" d="M23.7,22.99c-4.43,3.32-8.2,7.46-11.07,12.19l-.21-2.58-.16-2.21-.16-2.73-.1-2.39-.04-2.14v-1.95l.08-1.88,.11-1.44,.17-1.26,.25-1,.07-.21,.07-.21,.08-.2,.09-.2,.11-.2,.13-.17,.15-.18,.17-.14,.2-.12,.2-.09,.22-.05,.23-.01h.22l.22,.02,.2,.04,.4,.14,.18,.09s.67,.36,.81,.44l.03,.01,1.27,.98,.8,.75,.87,.93,.79,.93,.89,1.09,.76,.98,.72,.98,.53,.74,.69,1,.03,.05Z"/>
 </svg>
 
-<svg bind:this={el} style="margin-top:{margin}px;width:{width};height:{width}" class='build' >
+<svg bind:this={el} style="margin-top:{margin}px" class='build' >
 </svg>
 
 <style>
@@ -330,6 +344,7 @@
     }
     .example{
         position: absolute;
+        display: none;
     }
 </style>
 

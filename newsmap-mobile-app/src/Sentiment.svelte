@@ -38,14 +38,18 @@
             <div class="sentiment-container">
                 <div class="sentiment">
 
+                    <div class="personcontainer">
                         <div class="person">
-                            
                             <img class='people' src={d.thumbnail} alt={d.name} />
                         </div>
                         <div class="pie" style="--p:{d.percentAbs};--c:{d.color};"></div>
-
-                    <div class="percent" style="color:{d.color}">{d.percent}%</div>
-                    <div class="name">{d.name}</div>
+                    </div>
+                    
+                    <div class='namecontainer'>
+                        <div class="percent" style="color:{d.color}">{d.percent}%</div>
+                        <div class="name">{d.name}</div>
+                    </div>
+                    
                 </div>
             </div>
                 
@@ -62,6 +66,17 @@
         margin-bottom: 1rem;
         margin-top: 1rem;
     }
+
+    .namecontainer {
+        display: flex;
+    }
+    .personcontainer {
+        display:inline-flex;
+        flex-direction: column;
+        width:25vw;
+        margin:0.5rem;
+        position:relative;
+    }
     .slider {
         overflow-x: scroll;
         overflow-y:hidden;
@@ -69,11 +84,8 @@
         display: flex;
     }
     .sentiment {
-        display:inline-flex;
-        flex-direction: column;
-        width:25vw;
-        margin:0.5rem;
-        position: relative;
+        display: flex;
+        flex-direction: row;
     }
     .person{
         clip-path: circle(40%);
@@ -152,21 +164,58 @@
         background:var(--c);
         transform:rotate(calc(var(--p)*3.6deg)) translateY(calc(50% - var(--w)/2));
     }
-    @media only screen and (min-width:1200px) {
+    @media only screen /*xtrasmall*/
+	and (max-width: 575px) {
+        .sentiment {
+            flex-direction: column;
+        }
+        .namecontainer {
+            flex-direction: column;
+        }
+
+	}
+	@media only screen /*small*/
+	and (min-width: 576px)
+	and (max-width: 767px) {
+
+	}
+	@media only screen /*medium*/
+	and (min-width: 768px)
+	and (max-width: 991px) {
+
+	}
+	@media only screen /*large*/
+	and (min-width: 992px)
+	and (max-width: 1199px) {
+
+	}
+	@media only screen /*xtralarge*/
+	and (min-width: 1200px) {
+        .sentiment-container {
+            width:20vw;
+        }
+        .slider {
+            flex-direction: column;
+        }
+        .namecontainer {
+            flex-direction: column;
+            justify-content: center;
+        }
         .sentiment {
             width:10vw;
             cursor: pointer;
+            flex-direction: row;
         }
         .person {
-            width: 10vw;
-            height:10vw;
+            width: 6vw;
+            height:6vw;
         }
         .slider {
             margin: 0 auto;
         }
         .pie {
-            --w:10vw;
-            --b:10px;
+            --w:6vw;
+            --b:6px;
         }
         .percent{
             width:10vw;
@@ -179,6 +228,7 @@
         }
         .container {
             display: flex;
+            margin-top:8vw;
         }
-    }
+	}
 </style>

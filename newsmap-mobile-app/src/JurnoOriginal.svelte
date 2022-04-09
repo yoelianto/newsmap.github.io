@@ -196,6 +196,7 @@
         font-size:1.25rem;
         font-weight: 700;
         line-height: 1.25rem;
+        white-space: normal;
     }
     @media only screen and (min-width:1200px) {
         .card {

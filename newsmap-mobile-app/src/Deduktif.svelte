@@ -131,7 +131,8 @@
     }
     .header{
         position: absolute;
-        height: 100%;
+        width: 100%;
+        left:0;
     }
     .detail {
         width:70%;
@@ -145,6 +146,7 @@
         line-height: 1.2rem;
         font-weight: 700;
         padding-right:1rem;
+        white-space: normal;
     }
     .author {
         font-size: 0.8rem;

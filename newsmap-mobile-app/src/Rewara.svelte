@@ -112,4 +112,62 @@
             flex-direction: column;
             padding-left: 2rem;
         }
+        @media only screen /*xtrasmall*/
+	and (max-width: 575px) {
+
+
+	}
+	@media only screen /*small*/
+	and (min-width: 576px)
+	and (max-width: 767px) {
+        .title {
+            font-size:2rem
+        }
+        .container {
+            max-width:900px;
+            width:90%;
+            margin:1rem auto;
+        }
+
+	}
+	@media only screen /*medium*/
+	and (min-width: 768px)
+	and (max-width: 991px) {
+        .title {
+            font-size:2rem
+        }
+        .container {
+            max-width:900px;
+            width:90%;
+            margin:1rem auto;
+        }
+
+	}
+	@media only screen /*large*/
+	and (min-width: 992px)
+	and (max-width: 1199px) {
+        .title {
+            font-size:2rem
+        }
+        .container {
+            max-width:800px;
+            width:80%;
+            margin:1rem auto;
+        }
+
+	}
+	@media only screen /*xtralarge*/
+	and (min-width: 1200px) {
+        .title {
+            font-size:2rem
+        }
+        .container {
+            max-width:1100px;
+            width:80%;
+            margin:1rem auto 0 auto;
+        }
+        .rewara {
+            margin-left: 6%;
+        }
+	}
     </style>

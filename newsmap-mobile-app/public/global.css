@@ -67,6 +67,7 @@ body {
 	margin: 0;
 	padding: 0;
 	background-color: #fafafa;
+	white-space: nowrap;
 	overflow-x: hidden;
 }
 

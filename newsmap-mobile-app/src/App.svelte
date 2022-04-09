@@ -15,6 +15,7 @@
 	import moment from 'moment';
 	import { getToken } from './api';
 	import { onMount } from 'svelte'
+	// import DeviceDetector from "svelte-device-detector"
 
 	let y
 	let showHeader = true
@@ -87,25 +88,21 @@
 			bind:margin={margin}
 			--fontfamily2={fontfamily2}
 		/> -->
-
-		<VoronoiNewsmap 
+		<article class='headlines'>
+			<VoronoiNewsmap 
 			bind:margin={margin}	
-		/>
-		<!-- <Newsmap
-			margin={margin}
-			--fontfamily1 ={fontfamily1}
-			--fontfamily2={fontfamily2}
-			--color-brand-red={colorBrandRed}
-			--color-brand-blue={colorBrandBlue}
-			--color-brand-darkblue={colorBrandDarkBlue}
-		/> -->
-		<Sentiment
-			--fontfamily1 ={fontfamily1}
-			--fontfamily2={fontfamily2}
-			params={params}
-		/>
+			/>
+
+			<Sentiment
+				--fontfamily1={fontfamily1}
+				--fontfamily2={fontfamily2}
+				params={params}
+				--margintop={margin}
+			/>
+		</article>
+		
 		<Original
-			--fontfamily1 ={fontfamily1}
+			--fontfamily1={fontfamily1}
 			--fontfamily2={fontfamily2}
 		/>
 		<Deduktif 
@@ -113,7 +110,7 @@
 			author = {author}
 			authorprofileimage = {authorprofileimage}
 			authorprofilealt = {author}
-			--fontfamily1 ={fontfamily1}
+			--fontfamily1={fontfamily1}
 			--fontfamily2={fontfamily2}
 			--color-brand-darkblue={colorBrandDarkBlue}
 		/>
@@ -156,24 +153,48 @@
 <style>
 	main {
 		margin: 0 auto;
-		width:100vw;
-		/* max-width: 600px; */
-		
+		overflow-x: hidden;	
 	}
-
-	/* h1 {
-		color: #ff3e00;
-		text-transform: uppercase;
-		font-size: 4em;
-		font-weight: 100;
-	} */
+	.headlines {
+		display: flex;
+		flex-direction: row;
+		margin: 0 auto;
+	}
 
 	.container {
 		display: flex;
 		flex-direction: column;
-		width:100vw;
 	}
 
-	@media (min-width: 640px) {
+
+	@media only screen /*xtrasmall*/
+	and (max-width: 575px) {
+		.headlines {
+			flex-direction: column;
+		}
 	}
+	@media only screen /*small*/
+	and (min-width: 576px)
+	and (max-width: 767px) {
+		.headlines {
+			flex-direction: column;
+		}
+	}
+	@media only screen /*medium*/
+	and (min-width: 768px)
+	and (max-width: 991px) {
+		.headlines {
+			flex-direction: column;
+		}
+	}
+	@media only screen /*large*/
+	and (min-width: 992px)
+	and (max-width: 1199px) {
+
+	}
+	@media only screen /*xtralarge*/
+	and (min-width: 1200px) {
+
+	}
+
 </style>

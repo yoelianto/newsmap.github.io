@@ -63,7 +63,7 @@
     <div class="inner">
         <!-- <p class="playlist-title">Playlist</p> -->
         <div class="playlist">
-            <iframe title='Podcast Turun Minum' style="border-radius:12px" src="https://open.spotify.com/embed/playlist/71njl32GXQTjiwmKKuXUyR?utm_source=generator" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+            <iframe class='playlist-embed'title='Podcast Turun Minum' style="border-radius:12px" src="https://open.spotify.com/embed/playlist/71njl32GXQTjiwmKKuXUyR?utm_source=generator" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
             <!-- {#await fetchData}
             <p>...waiting</p>
             {:then data}
@@ -171,4 +171,117 @@
         width:10vw;
         color:#7B7A7C;
     } */
+
+    @media only screen /*xtrasmall*/
+	and (max-width: 575px) {
+
+
+	}
+	@media only screen /*small*/
+	and (min-width: 576px)
+	and (max-width: 767px) {
+        .title {
+            font-size:2rem
+        }
+        .container {
+            max-width:900px;
+            width:90%;
+            margin:1rem auto;
+        }
+        .playlist-embed {
+            width:90%;
+            margin:0 auto;
+        }
+        .inner {
+            width:100%;
+        }
+        .album {
+            margin: 0 auto;
+        }
+        .album-container {
+            display: flex;
+            justify-content: center;
+        }
+
+	}
+	@media only screen /*medium*/
+	and (min-width: 768px)
+	and (max-width: 991px) {
+        .title {
+            font-size:2rem
+        }
+        .container {
+            max-width:900px;
+            width:90%;
+            margin:1rem auto;
+        }
+        .playlist-embed {
+            width:80%;
+            margin:0 auto;
+        }
+        .inner {
+            width:100%;
+        }
+        .album {
+            margin: 0 auto;
+        }
+        .album-container {
+            display: flex;
+            justify-content: center;
+        }
+
+	}
+	@media only screen /*large*/
+	and (min-width: 992px)
+	and (max-width: 1199px) {
+        .title {
+            font-size:2rem
+        }
+        .container {
+            max-width:800px;
+            width:80%;
+            margin:1rem auto;
+        }
+        .playlist-embed {
+            width:80%;
+            margin:0 auto;
+        }
+        .inner {
+            width:100%;
+        }
+        .album {
+            margin: 0 auto;
+        }
+        .album-container {
+            display: flex;
+            justify-content: center;
+        }
+
+	}
+	@media only screen /*xtralarge*/
+	and (min-width: 1200px) {
+        .title {
+            font-size:2rem
+        }
+        .container {
+            max-width:1100px;
+            width:80%;
+            margin:1rem auto 0 auto;
+        }
+        .playlist-embed {
+            width:80%;
+            margin:0 auto;
+        }
+        .inner {
+            width:100%;
+        }
+        .album {
+            margin: 0 auto;
+        }
+        .album-container {
+            display: flex;
+            justify-content: center;
+        }
+
+	}
 </style>

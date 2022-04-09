@@ -95,14 +95,73 @@ const fetchData = (async () => {
         -ms-overflow-style: none;  /* IE and Edge */
         scrollbar-width: none;  /* Firefox */
     }
-    @media only screen and (min-width:1200px) {
+
+    @media only screen /*xtrasmall*/
+	and (max-width: 575px) {
+
+
+	}
+	@media only screen /*small*/
+	and (min-width: 576px)
+	and (max-width: 767px) {
         .title {
-            font-family: var(--fontfamily1);
-            font-weight:700;
-            font-size:2.5rem;
-            margin-left: 6%;
-            margin-top: 1rem;
-            margin-bottom:1rem;
+            font-size:2rem
         }
-    }
+        .container {
+            max-width:900px;
+            width:90%;
+            margin:1rem auto;
+        }
+        .imgthumb {
+            width:20vw;
+            height:15vw;
+        }
+	}
+	@media only screen /*medium*/
+	and (min-width: 768px)
+	and (max-width: 991px) {
+        .title {
+            font-size:2rem
+        }
+        .container {
+            max-width:900px;
+            width:90%;
+            margin:1rem auto;
+        }
+        .imgthumb {
+            width:18vw;
+            height:13.5vw;
+        }
+	}
+	@media only screen /*large*/
+	and (min-width: 992px)
+	and (max-width: 1199px) {
+        .title {
+            font-size:2rem
+        }
+        .container {
+            max-width:800px;
+            width:80%;
+            margin:1rem auto;
+        }
+        .imgthumb {
+            width:18vw;
+            height:13.5vw;
+        }
+	}
+	@media only screen /*xtralarge*/
+	and (min-width: 1200px) {
+        .title {
+            font-size:2rem
+        }
+        .container {
+            max-width:1100px;
+            width:80%;
+            margin:1rem auto 0 auto;
+        }
+        .imgthumb {
+            width:18vw;
+            height:13.5vw;
+        }
+	}
 </style>
