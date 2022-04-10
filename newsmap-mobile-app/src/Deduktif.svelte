@@ -39,7 +39,7 @@
             <div class="contenttop">
                 
                 <div class="headline">
-                        <img class="header" src={`${process['env']['URL_IMAGE']}/news/${d.thumbnail}`} alt={d.title} >
+                    <img class="header" src={`${process['env']['URL_IMAGE']}/news/${d.thumbnail}`} alt={d.title} >
                     
                     <div class="headerbottom"></div>
                     <div class="detail">
@@ -164,14 +164,100 @@
         border-radius: 50%;
         overflow: hidden;
     }
-    @media only screen and (min-width:1200px) {
+
+    @media only screen /*xtrasmall*/
+	and (max-width: 575px) {
+
+
+	}
+	@media only screen /*small*/
+	and (min-width: 576px)
+	and (max-width: 767px) {
+        .title {
+            font-size:2rem
+        }
+        .container {
+            max-width:900px;
+            width:90%;
+            margin:1rem auto;
+        }
+
+	}
+	@media only screen /*medium*/
+	and (min-width: 768px)
+	and (max-width: 991px) {
+        .title {
+            font-size:2rem
+        }
+        .container {
+            max-width:900px;
+            width:90%;
+            margin:1rem auto;
+        }
+
+	}
+	@media only screen /*large*/
+	and (min-width: 992px)
+	and (max-width: 1199px) {
+        .title {
+            font-size:2rem
+        }
+        .container {
+            max-width:800px;
+            width:80%;
+            margin:1rem auto;
+        }
+
+	}
+	@media only screen /*xtralarge*/
+	and (min-width: 1200px) {
+        .title {
+            font-size:2rem;
+            margin-left:0;
+        }
+        .container {
+            max-width:1100px;
+            width:70.4%;
+            margin:1rem auto;
+            height:25vw;
+        }
+        .author {
+            margin-bottom: 1rem;
+        }
         .deduktif {
             font-family: var(--fontfamily1);
             font-weight:700;
-            font-size:2.5rem;
-            margin-left: 6%;
+            font-size:2rem;
             margin-top: 1rem;
-            margin-bottom:25vw;
+            margin-bottom:18vw;
+            margin-left: 0;
         }
-    }
+        .headline {
+            width:50vw;
+            height: 31.8vw;
+        }
+        .bottom {
+            height:25vw;
+            border-radius: 0 2rem 0 2rem;
+        }
+        .profile {
+            top:-4vw;
+            width:7vw;
+            height:7vw;
+        }
+        .contenttop {
+            display: flex;
+            justify-content: center;
+        }
+        .detail {
+            width: 75%;
+            margin-bottom: 1.5rem;
+        }
+        .left {
+            justify-content: flex-end;
+        }
+        .right {
+            margin-left: 1rem;
+        }
+	}
 </style>

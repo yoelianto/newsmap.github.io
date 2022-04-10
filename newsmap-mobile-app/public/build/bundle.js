@@ -27742,12 +27742,12 @@ var app = (function () {
 
     function get_each_context$7(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[5] = list[i];
-    	child_ctx[7] = i;
+    	child_ctx[7] = list[i];
+    	child_ctx[9] = i;
     	return child_ctx;
     }
 
-    // (116:4) {:catch error}
+    // (126:4) {:catch error}
     function create_catch_block$6(ctx) {
     	let p;
 
@@ -27755,7 +27755,7 @@ var app = (function () {
     		c: function create() {
     			p = element("p");
     			p.textContent = "An error occurred!";
-    			add_location(p, file$8, 116, 8, 4748);
+    			add_location(p, file$8, 126, 8, 4973);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -27770,14 +27770,14 @@ var app = (function () {
     		block,
     		id: create_catch_block$6.name,
     		type: "catch",
-    		source: "(116:4) {:catch error}",
+    		source: "(126:4) {:catch error}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (89:4) {:then data}
+    // (99:4) {:then data}
     function create_then_block$6(ctx) {
     	let div1;
     	let div0;
@@ -27787,7 +27787,7 @@ var app = (function () {
     	let t1;
     	let i2;
     	let t2;
-    	let each_value = /*data*/ ctx[4];
+    	let each_value = /*data*/ ctx[6];
     	validate_each_argument(each_value);
     	let each_blocks = [];
 
@@ -27810,16 +27810,16 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			attr_dev(i0, "class", "fas fa-long-arrow-alt-left svelte-18mn2rm");
-    			add_location(i0, file$8, 92, 12, 3359);
-    			attr_dev(i1, "class", "far fa-hand-pointer svelte-18mn2rm");
-    			add_location(i1, file$8, 93, 12, 3415);
-    			attr_dev(i2, "class", "fas fa-long-arrow-alt-right svelte-18mn2rm");
-    			add_location(i2, file$8, 94, 12, 3464);
-    			attr_dev(div0, "class", "icon svelte-18mn2rm");
-    			add_location(div0, file$8, 91, 8, 3327);
-    			attr_dev(div1, "class", "inner-container svelte-18mn2rm");
-    			add_location(div1, file$8, 90, 4, 3288);
+    			attr_dev(i0, "class", "fas fa-long-arrow-alt-left svelte-of59cz");
+    			add_location(i0, file$8, 102, 12, 3584);
+    			attr_dev(i1, "class", "far fa-hand-pointer svelte-of59cz");
+    			add_location(i1, file$8, 103, 12, 3640);
+    			attr_dev(i2, "class", "fas fa-long-arrow-alt-right svelte-of59cz");
+    			add_location(i2, file$8, 104, 12, 3689);
+    			attr_dev(div0, "class", "icon svelte-of59cz");
+    			add_location(div0, file$8, 101, 8, 3552);
+    			attr_dev(div1, "class", "inner-container svelte-of59cz");
+    			add_location(div1, file$8, 100, 4, 3513);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div1, anchor);
@@ -27837,7 +27837,7 @@ var app = (function () {
     		},
     		p: function update(ctx, dirty) {
     			if (dirty & /*fetchData*/ 2) {
-    				each_value = /*data*/ ctx[4];
+    				each_value = /*data*/ ctx[6];
     				validate_each_argument(each_value);
     				let i;
 
@@ -27870,14 +27870,14 @@ var app = (function () {
     		block,
     		id: create_then_block$6.name,
     		type: "then",
-    		source: "(89:4) {:then data}",
+    		source: "(99:4) {:then data}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (98:8) {#each data as d, i}
+    // (108:8) {#each data as d, i}
     function create_each_block$7(ctx) {
     	let div5;
     	let a;
@@ -27891,7 +27891,7 @@ var app = (function () {
     	let div1;
     	let t3;
     	let div2;
-    	let t4_value = /*d*/ ctx[5].title + "";
+    	let t4_value = /*d*/ ctx[7].title + "";
     	let t4;
     	let t5;
 
@@ -27911,7 +27911,7 @@ var app = (function () {
     			div2 = element("div");
     			t4 = text$1(t4_value);
     			t5 = space();
-    			attr_dev(img, "class", "thumb svelte-18mn2rm");
+    			attr_dev(img, "class", "thumb svelte-of59cz");
 
     			if (!src_url_equal(img.src, img_src_value = `${({
 				"env": {
@@ -27922,21 +27922,21 @@ var app = (function () {
 					"NO_IMAGE": "./image/logo-jurno-web.svg",
 					"isProd": false
 				}
-			})['env']['URL_IMAGE']}news/${/*d*/ ctx[5].thumbnail}`)) attr_dev(img, "src", img_src_value);
+			})['env']['URL_IMAGE']}news/${/*d*/ ctx[7].thumbnail}`)) attr_dev(img, "src", img_src_value);
 
     			attr_dev(img, "alt", "");
-    			add_location(img, file$8, 102, 20, 4075);
-    			attr_dev(div0, "class", "bottom svelte-18mn2rm");
-    			add_location(div0, file$8, 103, 20, 4393);
-    			attr_dev(div1, "class", "sub-title svelte-18mn2rm");
-    			add_location(div1, file$8, 105, 24, 4491);
-    			attr_dev(div2, "class", "card-title svelte-18mn2rm");
-    			add_location(div2, file$8, 106, 24, 4560);
-    			attr_dev(div3, "class", "inner-card svelte-18mn2rm");
-    			add_location(div3, file$8, 104, 20, 4441);
-    			attr_dev(div4, "class", "card svelte-18mn2rm");
-    			set_style(div4, "z-index", 3 - /*i*/ ctx[7]);
-    			add_location(div4, file$8, 101, 16, 4013);
+    			add_location(img, file$8, 112, 20, 4300);
+    			attr_dev(div0, "class", "bottom svelte-of59cz");
+    			add_location(div0, file$8, 113, 20, 4618);
+    			attr_dev(div1, "class", "sub-title svelte-of59cz");
+    			add_location(div1, file$8, 115, 24, 4716);
+    			attr_dev(div2, "class", "card-title svelte-of59cz");
+    			add_location(div2, file$8, 116, 24, 4785);
+    			attr_dev(div3, "class", "inner-card svelte-of59cz");
+    			add_location(div3, file$8, 114, 20, 4666);
+    			attr_dev(div4, "class", "card svelte-of59cz");
+    			set_style(div4, "z-index", 3 - /*i*/ ctx[9]);
+    			add_location(div4, file$8, 111, 16, 4238);
     			attr_dev(a, "class", "card-link");
 
     			attr_dev(a, "href", `${({
@@ -27948,15 +27948,15 @@ var app = (function () {
 					"NO_IMAGE": "./image/logo-jurno-web.svg",
 					"isProd": false
 				}
-			})['env']['DOMAIN']}/article/${/*d*/ ctx[5].slug}`);
+			})['env']['DOMAIN']}/article/${/*d*/ ctx[7].slug}`);
 
-    			add_location(a, file$8, 100, 12, 3708);
-    			attr_dev(div5, "class", "swipe svelte-18mn2rm");
+    			add_location(a, file$8, 110, 12, 3933);
+    			attr_dev(div5, "class", "swipe svelte-of59cz");
     			attr_dev(div5, "data-dragging", "false");
-    			attr_dev(div5, "data-status", /*i*/ ctx[7] === 0 ? 'current' : 'waiting');
-    			attr_dev(div5, "id", /*i*/ ctx[7]);
-    			set_style(div5, "z-index", 3 - /*i*/ ctx[7]);
-    			add_location(div5, file$8, 99, 8, 3575);
+    			attr_dev(div5, "data-status", /*i*/ ctx[9] === 0 ? 'current' : 'waiting');
+    			attr_dev(div5, "id", /*i*/ ctx[9]);
+    			set_style(div5, "z-index", 3 - /*i*/ ctx[9]);
+    			add_location(div5, file$8, 109, 8, 3800);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div5, anchor);
@@ -27983,14 +27983,14 @@ var app = (function () {
     		block,
     		id: create_each_block$7.name,
     		type: "each",
-    		source: "(98:8) {#each data as d, i}",
+    		source: "(108:8) {#each data as d, i}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (87:22)           <p>...waiting</p>      {:then data}
+    // (97:22)           <p>...waiting</p>      {:then data}
     function create_pending_block$6(ctx) {
     	let p;
 
@@ -27998,7 +27998,7 @@ var app = (function () {
     		c: function create() {
     			p = element("p");
     			p.textContent = "...waiting";
-    			add_location(p, file$8, 87, 8, 3245);
+    			add_location(p, file$8, 97, 8, 3470);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -28013,7 +28013,7 @@ var app = (function () {
     		block,
     		id: create_pending_block$6.name,
     		type: "pending",
-    		source: "(87:22)           <p>...waiting</p>      {:then data}",
+    		source: "(97:22)           <p>...waiting</p>      {:then data}",
     		ctx
     	});
 
@@ -28037,8 +28037,8 @@ var app = (function () {
     		pending: create_pending_block$6,
     		then: create_then_block$6,
     		catch: create_catch_block$6,
-    		value: 4,
-    		error: 8
+    		value: 6,
+    		error: 10
     	};
 
     	handle_promise(/*fetchData*/ ctx[1], info);
@@ -28054,13 +28054,13 @@ var app = (function () {
     			info.block.c();
     			if (!src_url_equal(script.src, script_src_value = "https://kit.fontawesome.com/f57950db7e.js")) attr_dev(script, "src", script_src_value);
     			attr_dev(script, "crossorigin", "anonymous");
-    			add_location(script, file$8, 81, 4, 2990);
-    			attr_dev(p, "class", "title svelte-18mn2rm");
-    			add_location(p, file$8, 85, 4, 3176);
-    			attr_dev(div, "class", "container");
+    			add_location(script, file$8, 91, 4, 3215);
+    			attr_dev(p, "class", "title svelte-of59cz");
+    			add_location(p, file$8, 95, 4, 3401);
+    			attr_dev(div, "class", "container svelte-of59cz");
     			attr_dev(div, "id", "original");
     			add_render_callback(() => /*div_elementresize_handler*/ ctx[2].call(div));
-    			add_location(div, file$8, 84, 0, 3099);
+    			add_location(div, file$8, 94, 0, 3324);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -28116,60 +28116,65 @@ var app = (function () {
 
     	const position = { x: 0, y: 0 };
     	let containerWidth;
+    	let width = document.body.clientWidth;
+    	let height = document.body.clientHeight;
 
-    	interact('.swipe[data-status="current"]').draggable({
-    		listeners: {
-    			start(event) {
-    				event.target.setAttribute('data-dragging', true);
-    			},
-    			move(event) {
-    				position.x += event.dx;
-    				event.target.style.transform = `translate(${position.x}px) rotate(${position.x * 0.05}deg)`;
-    				event.target.style.transition = `transform 0s`;
-    			},
-    			end(event) {
-    				let moved = Math.abs(position.x);
-    				event.target.setAttribute('data-dragging', false);
+    	//mobile
+    	if (width < height && width < 768) {
+    		interact('.swipe[data-status="current"]').draggable({
+    			listeners: {
+    				start(event) {
+    					event.target.setAttribute('data-dragging', true);
+    				},
+    				move(event) {
+    					position.x += event.dx;
+    					event.target.style.transform = `translate(${position.x}px) rotate(${position.x * 0.05}deg)`;
+    					event.target.style.transition = `transform 0s`;
+    				},
+    				end(event) {
+    					let moved = Math.abs(position.x);
+    					event.target.setAttribute('data-dragging', false);
 
-    				if (moved > 150) {
-    					event.target.setAttribute('data-status', 'transition');
+    					if (moved > 150) {
+    						event.target.setAttribute('data-status', 'transition');
 
-    					if (position.x > 0) {
-    						// move right
-    						position.x = containerWidth * 1.5;
+    						if (position.x > 0) {
+    							// move right
+    							position.x = containerWidth * 1.5;
+    						} else {
+    							// move left
+    							position.x = -containerWidth * 1.5;
+    						}
+
+    						event.target.style.transform = `translate(${position.x}px) rotate(${position.x * 0.05}deg)`;
+    						event.target.style.transition = `transform 100ms ease-in-out`;
+
+    						if (event.target.id < 2) {
+    							event.target.nextElementSibling.setAttribute('data-status', 'current');
+    						} else if (event.target.id == 2) {
+    							let swipe = document.querySelectorAll('.swipe');
+    							console.log(swipe);
+
+    							swipe.forEach(item => {
+    								item.style.transition = `transform 0ms ease-in-out`;
+    								item.style.transform = `translate(0px) rotate(0deg)`;
+    								item.setAttribute('data-status', 'waiting');
+    							});
+
+    							swipe[0].setAttribute('data-status', 'current');
+    						}
+
+    						position.x = 0;
     					} else {
-    						// move left
-    						position.x = -containerWidth * 1.5;
+    						position.x = 0;
+    						event.target.style.transform = `translate(${position.x}px) rotate(${position.x * 0.05}deg)`;
+    						event.target.style.transition = `transform 100ms ease-in-out`;
+    						console.log('not-moved', moved);
     					}
-
-    					event.target.style.transform = `translate(${position.x}px) rotate(${position.x * 0.05}deg)`;
-    					event.target.style.transition = `transform 100ms ease-in-out`;
-
-    					if (event.target.id < 2) {
-    						event.target.nextElementSibling.setAttribute('data-status', 'current');
-    					} else if (event.target.id == 2) {
-    						let swipe = document.querySelectorAll('.swipe');
-    						console.log(swipe);
-
-    						swipe.forEach(item => {
-    							item.style.transition = `transform 0ms ease-in-out`;
-    							item.style.transform = `translate(0px) rotate(0deg)`;
-    							item.setAttribute('data-status', 'waiting');
-    						});
-
-    						swipe[0].setAttribute('data-status', 'current');
-    					}
-
-    					position.x = 0;
-    				} else {
-    					position.x = 0;
-    					event.target.style.transform = `translate(${position.x}px) rotate(${position.x * 0.05}deg)`;
-    					event.target.style.transition = `transform 100ms ease-in-out`;
-    					console.log('not-moved', moved);
     				}
     			}
-    		}
-    	});
+    		});
+    	}
 
     	const writable_props = [];
 
@@ -28188,11 +28193,15 @@ var app = (function () {
     		ihttp,
     		fetchData,
     		position,
-    		containerWidth
+    		containerWidth,
+    		width,
+    		height
     	});
 
     	$$self.$inject_state = $$props => {
     		if ('containerWidth' in $$props) $$invalidate(0, containerWidth = $$props.containerWidth);
+    		if ('width' in $$props) width = $$props.width;
+    		if ('height' in $$props) height = $$props.height;
     	};
 
     	if ($$props && "$$inject" in $$props) {
@@ -28605,7 +28614,7 @@ var app = (function () {
     		c: function create() {
     			p = element("p");
     			p.textContent = "An error occurred!";
-    			add_location(p, file$6, 57, 8, 2698);
+    			add_location(p, file$6, 57, 8, 2694);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -28758,7 +28767,7 @@ var app = (function () {
     			div7 = element("div");
     			t7 = text$1(t7_value);
     			t8 = space();
-    			attr_dev(img0, "class", "authorprofile svelte-1waody5");
+    			attr_dev(img0, "class", "authorprofile svelte-12x4vtn");
 
     			if (!src_url_equal(img0.src, img0_src_value = `${({
 				"env": {
@@ -28784,17 +28793,17 @@ var app = (function () {
 
     			attr_dev(img0, "alt", "author profile");
     			add_location(img0, file$6, 29, 24, 856);
-    			attr_dev(div0, "class", "profile svelte-1waody5");
+    			attr_dev(div0, "class", "profile svelte-12x4vtn");
     			add_location(div0, file$6, 28, 20, 809);
-    			attr_dev(div1, "class", "left svelte-1waody5");
+    			attr_dev(div1, "class", "left svelte-12x4vtn");
     			add_location(div1, file$6, 27, 16, 769);
-    			attr_dev(div2, "class", "excerpt svelte-1waody5");
+    			attr_dev(div2, "class", "excerpt svelte-12x4vtn");
     			add_location(div2, file$6, 33, 20, 1568);
-    			attr_dev(div3, "class", "right svelte-1waody5");
+    			attr_dev(div3, "class", "right svelte-12x4vtn");
     			add_location(div3, file$6, 32, 16, 1527);
-    			attr_dev(div4, "class", "contentbot svelte-1waody5");
+    			attr_dev(div4, "class", "contentbot svelte-12x4vtn");
     			add_location(div4, file$6, 26, 12, 727);
-    			attr_dev(img1, "class", "header svelte-1waody5");
+    			attr_dev(img1, "class", "header svelte-12x4vtn");
 
     			if (!src_url_equal(img1.src, img1_src_value = `${({
 				"env": {
@@ -28808,24 +28817,24 @@ var app = (function () {
 			})['env']['URL_IMAGE']}/news/${/*d*/ ctx[4].thumbnail}`)) attr_dev(img1, "src", img1_src_value);
 
     			attr_dev(img1, "alt", /*d*/ ctx[4].title);
-    			add_location(img1, file$6, 41, 24, 1883);
-    			attr_dev(div5, "class", "headerbottom svelte-1waody5");
-    			add_location(div5, file$6, 43, 20, 2232);
-    			attr_dev(div6, "class", "author svelte-1waody5");
-    			add_location(div6, file$6, 45, 24, 2332);
-    			attr_dev(div7, "class", "title svelte-1waody5");
-    			add_location(div7, file$6, 47, 28, 2458);
+    			add_location(img1, file$6, 41, 20, 1879);
+    			attr_dev(div5, "class", "headerbottom svelte-12x4vtn");
+    			add_location(div5, file$6, 43, 20, 2228);
+    			attr_dev(div6, "class", "author svelte-12x4vtn");
+    			add_location(div6, file$6, 45, 24, 2328);
+    			attr_dev(div7, "class", "title svelte-12x4vtn");
+    			add_location(div7, file$6, 47, 28, 2454);
     			attr_dev(a, "href", /*deduktifurl*/ ctx[1] + /*d*/ ctx[4].slug);
-    			add_location(a, file$6, 46, 24, 2397);
-    			attr_dev(div8, "class", "detail svelte-1waody5");
-    			add_location(div8, file$6, 44, 20, 2286);
-    			attr_dev(div9, "class", "headline svelte-1waody5");
+    			add_location(a, file$6, 46, 24, 2393);
+    			attr_dev(div8, "class", "detail svelte-12x4vtn");
+    			add_location(div8, file$6, 44, 20, 2282);
+    			attr_dev(div9, "class", "headline svelte-12x4vtn");
     			add_location(div9, file$6, 40, 16, 1835);
-    			attr_dev(div10, "class", "contenttop");
+    			attr_dev(div10, "class", "contenttop svelte-12x4vtn");
     			add_location(div10, file$6, 38, 12, 1775);
-    			attr_dev(div11, "class", "content svelte-1waody5");
+    			attr_dev(div11, "class", "content svelte-12x4vtn");
     			add_location(div11, file$6, 25, 8, 692);
-    			attr_dev(div12, "class", "bottom svelte-1waody5");
+    			attr_dev(div12, "class", "bottom svelte-12x4vtn");
     			add_location(div12, file$6, 24, 4, 662);
     		},
     		m: function mount(target, anchor) {
@@ -28931,9 +28940,9 @@ var app = (function () {
     			t0 = space();
     			p = element("p");
     			p.textContent = "DEDUKTIF";
-    			attr_dev(p, "class", "deduktif svelte-1waody5");
-    			add_location(p, file$6, 59, 4, 2743);
-    			attr_dev(div, "class", "container svelte-1waody5");
+    			attr_dev(p, "class", "deduktif svelte-12x4vtn");
+    			add_location(p, file$6, 59, 4, 2739);
+    			attr_dev(div, "class", "container svelte-12x4vtn");
     			attr_dev(div, "id", "deduktif");
     			add_location(div, file$6, 19, 0, 520);
     		},
@@ -29178,15 +29187,15 @@ var app = (function () {
     			t2 = space();
     			p1 = element("p");
     			t3 = space();
-    			attr_dev(img, "class", "imgthumb svelte-10o4oke");
+    			attr_dev(img, "class", "imgthumb svelte-wtzgvg");
     			if (!src_url_equal(img.src, img_src_value = /*d*/ ctx[4].origin_images)) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", /*d*/ ctx[4].title);
     			add_location(img, file$5, 30, 24, 894);
-    			attr_dev(p0, "class", "author svelte-10o4oke");
+    			attr_dev(p0, "class", "author svelte-wtzgvg");
     			add_location(p0, file$5, 31, 24, 980);
-    			attr_dev(p1, "class", "article-title svelte-10o4oke");
+    			attr_dev(p1, "class", "article-title svelte-wtzgvg");
     			add_location(p1, file$5, 32, 24, 1037);
-    			attr_dev(div, "class", "news svelte-10o4oke");
+    			attr_dev(div, "class", "news svelte-wtzgvg");
     			add_location(div, file$5, 29, 20, 850);
     			attr_dev(a, "href", /*d*/ ctx[4].source_url);
     			add_location(a, file$5, 28, 16, 805);
@@ -29281,13 +29290,13 @@ var app = (function () {
     			div1 = element("div");
     			div0 = element("div");
     			info.block.c();
-    			attr_dev(p, "class", "title svelte-10o4oke");
+    			attr_dev(p, "class", "title svelte-wtzgvg");
     			add_location(p, file$5, 21, 4, 569);
-    			attr_dev(div0, "class", "slider svelte-10o4oke");
+    			attr_dev(div0, "class", "slider svelte-wtzgvg");
     			add_location(div0, file$5, 23, 8, 643);
-    			attr_dev(div1, "class", "slider-container svelte-10o4oke");
+    			attr_dev(div1, "class", "slider-container svelte-wtzgvg");
     			add_location(div1, file$5, 22, 4, 603);
-    			attr_dev(div2, "class", "container svelte-10o4oke");
+    			attr_dev(div2, "class", "container svelte-wtzgvg");
     			add_location(div2, file$5, 20, 0, 540);
     		},
     		l: function claim(nodes) {
@@ -29533,7 +29542,7 @@ var app = (function () {
     			iframe.allowFullscreen = "";
     			attr_dev(iframe, "allow", "autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture");
     			add_location(iframe, file$4, 52, 24, 1797);
-    			attr_dev(div, "class", "podcast svelte-la1zk0");
+    			attr_dev(div, "class", "podcast svelte-1l3ypo");
     			add_location(div, file$4, 51, 20, 1750);
     		},
     		m: function mount(target, anchor) {
@@ -29663,15 +29672,15 @@ var app = (function () {
     			div4 = element("div");
     			div3 = element("div");
     			iframe = element("iframe");
-    			attr_dev(p, "class", "title svelte-la1zk0");
+    			attr_dev(p, "class", "title svelte-1l3ypo");
     			add_location(p, file$4, 40, 8, 1384);
-    			attr_dev(div0, "class", "title-container svelte-la1zk0");
+    			attr_dev(div0, "class", "title-container svelte-1l3ypo");
     			add_location(div0, file$4, 39, 4, 1345);
-    			attr_dev(div1, "class", "album svelte-la1zk0");
+    			attr_dev(div1, "class", "album svelte-1l3ypo");
     			add_location(div1, file$4, 45, 8, 1521);
-    			attr_dev(div2, "class", "album-container svelte-la1zk0");
+    			attr_dev(div2, "class", "album-container svelte-1l3ypo");
     			add_location(div2, file$4, 44, 4, 1482);
-    			attr_dev(iframe, "class", "playlist-embed svelte-la1zk0");
+    			attr_dev(iframe, "class", "playlist-embed svelte-1l3ypo");
     			attr_dev(iframe, "title", "Podcast Turun Minum");
     			set_style(iframe, "border-radius", "12px");
     			if (!src_url_equal(iframe.src, iframe_src_value = "https://open.spotify.com/embed/playlist/71njl32GXQTjiwmKKuXUyR?utm_source=generator")) attr_dev(iframe, "src", iframe_src_value);
@@ -29681,11 +29690,11 @@ var app = (function () {
     			iframe.allowFullscreen = "";
     			attr_dev(iframe, "allow", "autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture");
     			add_location(iframe, file$4, 65, 12, 2376);
-    			attr_dev(div3, "class", "playlist svelte-la1zk0");
+    			attr_dev(div3, "class", "playlist svelte-1l3ypo");
     			add_location(div3, file$4, 64, 8, 2340);
-    			attr_dev(div4, "class", "inner svelte-la1zk0");
+    			attr_dev(div4, "class", "inner svelte-1l3ypo");
     			add_location(div4, file$4, 62, 4, 2254);
-    			attr_dev(div5, "class", "container svelte-la1zk0");
+    			attr_dev(div5, "class", "container svelte-1l3ypo");
     			attr_dev(div5, "id", "podcast");
     			add_location(div5, file$4, 38, 0, 1303);
     		},
@@ -30488,13 +30497,13 @@ var app = (function () {
     			div = element("div");
     			iframe = element("iframe");
     			t = space();
-    			attr_dev(iframe, "class", "imgthumb svelte-1owpgi6");
+    			attr_dev(iframe, "class", "imgthumb svelte-cuatht");
     			if (!src_url_equal(iframe.src, iframe_src_value = /*short*/ ctx[3].url)) attr_dev(iframe, "src", iframe_src_value);
     			attr_dev(iframe, "title", /*short*/ ctx[3].title);
     			attr_dev(iframe, "frameborder", "0");
     			iframe.allowFullscreen = true;
     			add_location(iframe, file$1, 41, 28, 1425);
-    			attr_dev(div, "class", "news svelte-1owpgi6");
+    			attr_dev(div, "class", "news svelte-cuatht");
     			add_location(div, file$1, 40, 24, 1377);
     		},
     		m: function mount(target, anchor) {
@@ -30547,13 +30556,13 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			attr_dev(h4, "class", "title svelte-1owpgi6");
+    			attr_dev(h4, "class", "title svelte-cuatht");
     			add_location(h4, file$1, 33, 8, 1091);
-    			attr_dev(div0, "class", "slider svelte-1owpgi6");
+    			attr_dev(div0, "class", "slider svelte-cuatht");
     			add_location(div0, file$1, 35, 12, 1175);
-    			attr_dev(div1, "class", "slider-container svelte-1owpgi6");
+    			attr_dev(div1, "class", "slider-container svelte-cuatht");
     			add_location(div1, file$1, 34, 8, 1131);
-    			attr_dev(div2, "class", "container svelte-1owpgi6");
+    			attr_dev(div2, "class", "container svelte-cuatht");
     			add_location(div2, file$1, 32, 4, 1058);
     		},
     		l: function claim(nodes) {

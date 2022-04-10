@@ -17,7 +17,12 @@
     const position = { x: 0, y: 0 }
     let containerWidth
 
-    interact('.swipe[data-status="current"]').draggable({
+    let width = document.body.clientWidth
+    let height = document.body.clientHeight
+
+    //mobile
+    if (width < height && width < 768) {
+        interact('.swipe[data-status="current"]').draggable({
         listeners: {
             start(event) {
                 event.target.setAttribute('data-dragging', true)
@@ -76,6 +81,11 @@
             }
         }
     })
+    } else if (height < width && width >= 768) {
+        
+    }
+
+    
 </script>
 
 <svelte:head>
@@ -198,38 +208,85 @@
         line-height: 1.25rem;
         white-space: normal;
     }
-    @media only screen and (min-width:1200px) {
-        .card {
-            width:30vw;
-            height:30vw;
-            margin-left: 1rem;
-            margin-right: 1rem;
-            filter: grayscale(1);
-            transition: filter 1000ms ease-in-out;
-            -webkit-transition: -webkit-filter 200ms ease-in-out;
+    @media only screen /*xtrasmall*/
+	and (max-width: 575px) {
+
+
+	}
+	@media only screen /*small*/
+	and (min-width: 576px)
+	and (max-width: 767px) {
+        .title {
+            font-size:2rem
         }
-        .card:hover {
-            filter: grayscale(0);
+        .container {
+            max-width:900px;
+            width:90%;
+            margin:1rem auto;
+        }
+
+	}
+	@media only screen /*medium*/
+	and (min-width: 768px)
+	and (max-width: 991px) {
+        .title {
+            font-size:2rem
+        }
+        .container {
+            max-width:900px;
+            width:90%;
+            margin:1rem auto;
+        }
+
+	}
+	@media only screen /*large*/
+	and (min-width: 992px)
+	and (max-width: 1199px) {
+        .title {
+            font-size:2rem
+        }
+        .container {
+            max-width:800px;
+            width:80%;
+            margin:1rem auto;
+        }
+
+	}
+	@media only screen /*xtralarge*/
+	and (min-width: 1200px) {
+        .title {
+            font-size:2rem;
+            margin-left:0;
+            margin-top:2rem;
+            margin-bottom: 1rem;
+        }
+        .container {
+            width: 70.4%;
+            margin:0 auto;
         }
         .inner-container {
             display: flex;
             flex-direction: row;
-            justify-content: center;
-            align-items: center;
+            height: 100vh;
+            justify-content: space-evenly;
         }
-        .card-title {
-            font-size:2rem;
-            font-weight: 700;
-            line-height: 2rem;
-            z-index: 15;
+        .card {
+            width:18vw;
+            height:35vw;
+            position: relative;
+            left: 0;
+            filter: grayscale(0.5);
+            transition: filter 400ms ease-in-out;
         }
-        .title {
-            font-family: var(--fontfamily1);
-            font-weight:700;
-            font-size:2.5rem;
-            margin-left: 6%;
-            margin-top: 1rem;
-            margin-bottom:1rem;
+        .card:hover {
+            filter:grayscale(0);
         }
-    }
+        .icon {
+            display: none;
+        }
+        .swipe {
+            height: 80vh;
+        }
+        
+	}
 </style>

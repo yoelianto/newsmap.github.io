@@ -270,18 +270,21 @@
             padding-bottom: 120px;
         }
         .playlist-embed {
-            width:80%;
+            width:88%;
             margin:0 auto;
         }
         .inner {
             width:100%;
         }
         .album {
-            margin: 0 auto;
+            margin:0;
+            display: flex;
+            justify-content: space-evenly;
         }
         .album-container {
-            display: flex;
-            justify-content: center;
+            margin:0 auto;
+            width:88%;
+            
         }
 
 	}

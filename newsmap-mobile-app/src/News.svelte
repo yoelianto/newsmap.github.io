@@ -162,10 +162,12 @@ const fetchData = (async () => {
 	and (min-width: 1200px) {
         .title {
             font-size:2rem;
+            margin-left:0;
+            margin-bottom:1rem;
         }
         .container {
             max-width:1100px;
-            width:80%;
+            width:70.4%;
             margin:1rem auto 0 auto;
         }
         .imgthumb {
