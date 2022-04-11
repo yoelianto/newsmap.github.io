@@ -169,7 +169,7 @@
 	and (max-width: 575px) {
 		.headlines {
 			flex-direction: column;
-			margin-top: 30vw;
+			margin-top: 31vw;
 		}
 	}
 	@media only screen /*small*/
@@ -194,7 +194,7 @@
 	@media only screen /*xtralarge*/
 	and (min-width: 1200px) {
 		.headlines {
-			margin-top:10vw;
+			margin-top:12vw;
 		}
 	}
 

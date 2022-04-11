@@ -101,6 +101,7 @@
         display:flex;
         justify-content: center;
         color:#B9B5A8;
+        margin-bottom: 0.5rem;
     }
     .selected {
         color:black;
@@ -119,6 +120,7 @@
         position: absolute;
         transition: top 400ms ease-in-out;
         top: 4.5rem;
+        /* box-shadow: 0rem -1rem 1rem 1rem rgba(0,0,0,0.1); */
     }
     .moveUp {
         top:0;

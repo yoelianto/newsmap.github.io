@@ -383,20 +383,7 @@
 	}
 	@media only screen /*xtralarge*/
 	and (min-width: 1200px) {
-        .container {
-            height: 10vw;
-        }
-        .header-menu {
-            width: 60vw;
-            margin:0 auto;
-        }
-        h4 {
-            font-size:1.5rem;
-        }
-        h4:hover {
-            color:#242053;
-            transition:color 400ms ease-in-out;
-        }
+
 	}
 </style>
 

@@ -26499,13 +26499,13 @@ var app = (function () {
     			add_location(path3, file$a, 338, 4, 13035);
     			attr_dev(svg0, "xmlns", "http://www.w3.org/2000/svg");
     			attr_dev(svg0, "xmlns:xlink", "http://www.w3.org/1999/xlink");
-    			attr_dev(svg0, "class", "example svelte-1gadqtt");
+    			attr_dev(svg0, "class", "example svelte-i0vo92");
     			attr_dev(svg0, "fill", "none");
     			add_location(svg0, file$a, 331, 0, 10927);
     			set_style(svg1, "margin-top", /*margin*/ ctx[0] + "px");
-    			attr_dev(svg1, "class", "build svelte-1gadqtt");
+    			attr_dev(svg1, "class", "build svelte-i0vo92");
     			add_location(svg1, file$a, 341, 4, 13479);
-    			attr_dev(div, "class", "container svelte-1gadqtt");
+    			attr_dev(div, "class", "container svelte-i0vo92");
     			add_location(div, file$a, 340, 0, 13450);
     		},
     		l: function claim(nodes) {
@@ -27410,7 +27410,7 @@ var app = (function () {
     			h4 = element("h4");
     			t0 = text$1(t0_value);
     			t1 = space();
-    			attr_dev(h4, "class", "menu svelte-a5ysga");
+    			attr_dev(h4, "class", "menu svelte-195gvv5");
     			attr_dev(h4, "id", h4_id_value = /*list*/ ctx[12].id);
     			toggle_class(h4, "selected", /*list*/ ctx[12].active === true);
     			add_location(h4, file$9, 56, 20, 1664);
@@ -27489,19 +27489,19 @@ var app = (function () {
 
     			if (!src_url_equal(img.src, img_src_value = "./image/logo-jurno-web.svg")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "Logo Jurno Website");
-    			attr_dev(img, "class", "svelte-a5ysga");
+    			attr_dev(img, "class", "svelte-195gvv5");
     			add_location(img, file$9, 51, 12, 1419);
-    			attr_dev(div0, "class", "header-logo svelte-a5ysga");
+    			attr_dev(div0, "class", "header-logo svelte-195gvv5");
     			add_location(div0, file$9, 50, 8, 1380);
-    			attr_dev(div1, "class", "headertext svelte-a5ysga");
+    			attr_dev(div1, "class", "headertext svelte-195gvv5");
     			add_location(div1, file$9, 54, 12, 1574);
-    			attr_dev(div2, "class", "header-menu svelte-a5ysga");
+    			attr_dev(div2, "class", "header-menu svelte-195gvv5");
     			toggle_class(div2, "moveUp", !/*showHeader*/ ctx[1]);
     			add_location(div2, file$9, 53, 8, 1508);
-    			attr_dev(div3, "class", "container svelte-a5ysga");
+    			attr_dev(div3, "class", "container svelte-195gvv5");
     			add_render_callback(() => /*div3_elementresize_handler*/ ctx[5].call(div3));
     			add_location(div3, file$9, 49, 4, 1320);
-    			attr_dev(nav, "class", "svelte-a5ysga");
+    			attr_dev(nav, "class", "svelte-195gvv5");
     			add_location(nav, file$9, 48, 0, 1309);
     		},
     		l: function claim(nodes) {
@@ -36571,7 +36571,7 @@ var app = (function () {
     			set_style(div_2, "display", "contents");
     			set_style(div_2, "--fontfamily1", /*fontfamily1*/ ctx[2]);
     			set_style(div_2, "--fontfamily2", /*fontfamily2*/ ctx[3]);
-    			attr_dev(article, "class", "headlines svelte-19abtfb");
+    			attr_dev(article, "class", "headlines svelte-1l3zb5u");
     			add_location(article, file, 90, 2, 2236);
     			set_style(div_3, "display", "contents");
     			set_style(div_3, "--fontfamily1", /*fontfamily1*/ ctx[2]);
@@ -36597,9 +36597,9 @@ var app = (function () {
     			set_style(div_9, "--fontfamily2", /*fontfamily2*/ ctx[3]);
     			set_style(div_10, "display", "contents");
     			set_style(div_10, "--fontfamily3", /*fontfamily3*/ ctx[4]);
-    			attr_dev(div, "class", "container svelte-19abtfb");
+    			attr_dev(div, "class", "container svelte-1l3zb5u");
     			add_location(div, file, 76, 1, 1911);
-    			attr_dev(main, "class", "svelte-19abtfb");
+    			attr_dev(main, "class", "svelte-1l3zb5u");
     			add_location(main, file, 75, 0, 1903);
     		},
     		m: function mount(target, anchor) {
