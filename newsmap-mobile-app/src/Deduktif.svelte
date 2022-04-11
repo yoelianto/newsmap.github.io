@@ -11,7 +11,6 @@
 
     const fetchData = (async () => {
         const result = await get(ihttp.URI_ARTICLE_LIST, {size: 1});
-        console.log(result.data)
         return await result.data;
     })()
 
@@ -219,7 +218,7 @@
         .container {
             max-width:1100px;
             width:70.4%;
-            margin:22rem auto 1rem auto;
+            margin:calc(18vw + 5rem) auto 1rem auto;
             height:25vw;
         }
         .author {
@@ -230,7 +229,7 @@
             font-weight:700;
             font-size:2rem;
             margin-top: 2rem;
-            margin-bottom:16rem;
+            margin-bottom:17vw;
             margin-left: 0;
         }
         .headline {
