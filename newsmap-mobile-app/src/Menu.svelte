@@ -133,8 +133,8 @@
             bottom: 1rem;
         }
         .circle {
-            width: 3.6vw;
-            height: 3.6vw;
+            width: 3vw;
+            height: 3vw;
         }
         img {
             width:2vw;

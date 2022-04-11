@@ -338,11 +338,18 @@
 
     <path bind:this={earanchor2} class="cls-1" d="M23.7,22.99c-4.43,3.32-8.2,7.46-11.07,12.19l-.21-2.58-.16-2.21-.16-2.73-.1-2.39-.04-2.14v-1.95l.08-1.88,.11-1.44,.17-1.26,.25-1,.07-.21,.07-.21,.08-.2,.09-.2,.11-.2,.13-.17,.15-.18,.17-.14,.2-.12,.2-.09,.22-.05,.23-.01h.22l.22,.02,.2,.04,.4,.14,.18,.09s.67,.36,.81,.44l.03,.01,1.27,.98,.8,.75,.87,.93,.79,.93,.89,1.09,.76,.98,.72,.98,.53,.74,.69,1,.03,.05Z"/>
 </svg>
+<div class="container">
+    <svg bind:this={el} style="margin-top:{margin}px" class='build' >
+    </svg>
+</div>
 
-<svg bind:this={el} style="margin-top:{margin}px" class='build' >
-</svg>
 
 <style>
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
     .build {
         margin:0 auto;
     }

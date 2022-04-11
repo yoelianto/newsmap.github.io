@@ -267,7 +267,7 @@
         .inner-container {
             display: flex;
             flex-direction: row;
-            height: 100vh;
+            height: 35vw;
             justify-content: space-evenly;
         }
         .card {
