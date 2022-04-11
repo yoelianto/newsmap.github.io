@@ -194,7 +194,7 @@
 	@media only screen /*xtralarge*/
 	and (min-width: 1200px) {
 		.headlines {
-			margin-top:12vw;
+			margin-top:8vw;
 		}
 	}
 

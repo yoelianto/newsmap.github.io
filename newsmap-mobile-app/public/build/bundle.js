@@ -36571,7 +36571,7 @@ var app = (function () {
     			set_style(div_2, "display", "contents");
     			set_style(div_2, "--fontfamily1", /*fontfamily1*/ ctx[2]);
     			set_style(div_2, "--fontfamily2", /*fontfamily2*/ ctx[3]);
-    			attr_dev(article, "class", "headlines svelte-1l3zb5u");
+    			attr_dev(article, "class", "headlines svelte-dh7gwz");
     			add_location(article, file, 90, 2, 2236);
     			set_style(div_3, "display", "contents");
     			set_style(div_3, "--fontfamily1", /*fontfamily1*/ ctx[2]);
@@ -36597,9 +36597,9 @@ var app = (function () {
     			set_style(div_9, "--fontfamily2", /*fontfamily2*/ ctx[3]);
     			set_style(div_10, "display", "contents");
     			set_style(div_10, "--fontfamily3", /*fontfamily3*/ ctx[4]);
-    			attr_dev(div, "class", "container svelte-1l3zb5u");
+    			attr_dev(div, "class", "container svelte-dh7gwz");
     			add_location(div, file, 76, 1, 1911);
-    			attr_dev(main, "class", "svelte-1l3zb5u");
+    			attr_dev(main, "class", "svelte-dh7gwz");
     			add_location(main, file, 75, 0, 1903);
     		},
     		m: function mount(target, anchor) {
