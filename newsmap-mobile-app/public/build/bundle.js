@@ -26499,13 +26499,13 @@ var app = (function () {
     			add_location(path3, file$a, 338, 4, 13035);
     			attr_dev(svg0, "xmlns", "http://www.w3.org/2000/svg");
     			attr_dev(svg0, "xmlns:xlink", "http://www.w3.org/1999/xlink");
-    			attr_dev(svg0, "class", "example svelte-139axfm");
+    			attr_dev(svg0, "class", "example svelte-1gadqtt");
     			attr_dev(svg0, "fill", "none");
     			add_location(svg0, file$a, 331, 0, 10927);
     			set_style(svg1, "margin-top", /*margin*/ ctx[0] + "px");
-    			attr_dev(svg1, "class", "build svelte-139axfm");
+    			attr_dev(svg1, "class", "build svelte-1gadqtt");
     			add_location(svg1, file$a, 341, 4, 13479);
-    			attr_dev(div, "class", "container svelte-139axfm");
+    			attr_dev(div, "class", "container svelte-1gadqtt");
     			add_location(div, file$a, 340, 0, 13450);
     		},
     		l: function claim(nodes) {
@@ -28377,28 +28377,28 @@ var app = (function () {
     			div4 = element("div");
     			t5 = text$1(t5_value);
     			t6 = space();
-    			attr_dev(img, "class", "people svelte-bb0m2w");
+    			attr_dev(img, "class", "people svelte-u231je");
     			if (!src_url_equal(img.src, img_src_value = /*d*/ ctx[3].thumbnail)) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", /*d*/ ctx[3].name);
     			add_location(img, file$7, 42, 28, 1287);
-    			attr_dev(div0, "class", "person svelte-bb0m2w");
+    			attr_dev(div0, "class", "person svelte-u231je");
     			add_location(div0, file$7, 41, 24, 1237);
-    			attr_dev(div1, "class", "pie svelte-bb0m2w");
+    			attr_dev(div1, "class", "pie svelte-u231je");
     			set_style(div1, "--p", /*d*/ ctx[3].percentAbs);
     			set_style(div1, "--c", /*d*/ ctx[3].color);
     			add_location(div1, file$7, 44, 24, 1398);
-    			attr_dev(div2, "class", "personcontainer svelte-bb0m2w");
+    			attr_dev(div2, "class", "personcontainer svelte-u231je");
     			add_location(div2, file$7, 40, 20, 1182);
-    			attr_dev(div3, "class", "percent svelte-bb0m2w");
+    			attr_dev(div3, "class", "percent svelte-u231je");
     			set_style(div3, "color", /*d*/ ctx[3].color);
     			add_location(div3, file$7, 48, 24, 1588);
-    			attr_dev(div4, "class", "name svelte-bb0m2w");
+    			attr_dev(div4, "class", "name svelte-u231je");
     			add_location(div4, file$7, 49, 24, 1677);
-    			attr_dev(div5, "class", "namecontainer svelte-bb0m2w");
+    			attr_dev(div5, "class", "namecontainer svelte-u231je");
     			add_location(div5, file$7, 47, 20, 1535);
-    			attr_dev(div6, "class", "sentiment svelte-bb0m2w");
+    			attr_dev(div6, "class", "sentiment svelte-u231je");
     			add_location(div6, file$7, 38, 16, 1135);
-    			attr_dev(div7, "class", "sentiment-container svelte-bb0m2w");
+    			attr_dev(div7, "class", "sentiment-container svelte-u231je");
     			add_location(div7, file$7, 37, 12, 1084);
     		},
     		m: function mount(target, anchor) {
@@ -28489,9 +28489,9 @@ var app = (function () {
     			div1 = element("div");
     			div0 = element("div");
     			info.block.c();
-    			attr_dev(div0, "class", "slider svelte-bb0m2w");
+    			attr_dev(div0, "class", "slider svelte-u231je");
     			add_location(div0, file$7, 32, 4, 942);
-    			attr_dev(div1, "class", "container svelte-bb0m2w");
+    			attr_dev(div1, "class", "container svelte-u231je");
     			add_location(div1, file$7, 31, 0, 913);
     		},
     		l: function claim(nodes) {
@@ -36571,7 +36571,7 @@ var app = (function () {
     			set_style(div_2, "display", "contents");
     			set_style(div_2, "--fontfamily1", /*fontfamily1*/ ctx[2]);
     			set_style(div_2, "--fontfamily2", /*fontfamily2*/ ctx[3]);
-    			attr_dev(article, "class", "headlines svelte-1yhbm8z");
+    			attr_dev(article, "class", "headlines svelte-19abtfb");
     			add_location(article, file, 90, 2, 2236);
     			set_style(div_3, "display", "contents");
     			set_style(div_3, "--fontfamily1", /*fontfamily1*/ ctx[2]);
@@ -36597,9 +36597,9 @@ var app = (function () {
     			set_style(div_9, "--fontfamily2", /*fontfamily2*/ ctx[3]);
     			set_style(div_10, "display", "contents");
     			set_style(div_10, "--fontfamily3", /*fontfamily3*/ ctx[4]);
-    			attr_dev(div, "class", "container svelte-1yhbm8z");
+    			attr_dev(div, "class", "container svelte-19abtfb");
     			add_location(div, file, 76, 1, 1911);
-    			attr_dev(main, "class", "svelte-1yhbm8z");
+    			attr_dev(main, "class", "svelte-19abtfb");
     			add_location(main, file, 75, 0, 1903);
     		},
     		m: function mount(target, anchor) {

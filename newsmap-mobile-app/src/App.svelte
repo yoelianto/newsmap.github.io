@@ -169,6 +169,7 @@
 	and (max-width: 575px) {
 		.headlines {
 			flex-direction: column;
+			margin-top: 30vw;
 		}
 	}
 	@media only screen /*small*/

@@ -166,11 +166,16 @@
     }
     @media only screen /*xtrasmall*/
 	and (max-width: 575px) {
+        .container {
+            width:100vw;
+        }
         .sentiment {
             flex-direction: column;
         }
         .namecontainer {
             flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
 
 	}
