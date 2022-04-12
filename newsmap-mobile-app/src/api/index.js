@@ -3,6 +3,7 @@ import * as ihttp from '../constants/initialHttp';
 import { localStore } from '../helper';
 
 const URL_API = process['env']['URL_API'];
+const URL_API_DEDUKTIF = process['env']['URL_API_DEDUKTIF'];
 
 export const getToken = async (isServer = false) => {
     const url = `${URL_API}${ihttp.URI_TOKEN}`;
@@ -22,6 +23,19 @@ export const getToken = async (isServer = false) => {
 
 export const get = async (uri, params = {}, isServer = false) => {
     const url = `${URL_API}${uri}`;
+    const tokenStr = isServer ? await getToken(true) : localStore('token');
+
+    const result = await axios.get(url, { headers: { "Authorization": `JWT ${tokenStr}` }, params })
+        .then(result => result.data)
+        .catch(error => {
+            return { error: true, message: error };
+        });
+
+    return result;
+}
+
+export const getDeduktif = async (uri, params = {}, isServer = false) => {
+    const url = `${URL_API_DEDUKTIF}${uri}`;
     const tokenStr = isServer ? await getToken(true) : localStore('token');
 
     const result = await axios.get(url, { headers: { "Authorization": `JWT ${tokenStr}` }, params })
