@@ -1,4 +1,5 @@
 <script context="module">
+	import { Link } from "svelte-navigator";
     import interact from 'interactjs'
 </script>
 
@@ -108,16 +109,16 @@
         {#each data as d, i}
 
         <div class='swipe' data-dragging='false' data-status="{i === 0 ? 'current' : 'waiting' }" id={i} style="z-index:{3-i}">
-            <a class="card-link" href={`${process['env']['DOMAIN']}/article/${d.slug}`}>
-                <div class="card" style="z-index:{3-i}">
-                    <img class="thumb" src={`${process['env']['URL_IMAGE']}news/${d.thumbnail}`} alt="" >
-                    <div class="bottom"></div>
+                <Link class="card-link" to={`/article/${d.slug}`}>
+                    <div class="card" style="z-index:{3-i}">
+                        <img class="thumb" src={`${process['env']['URL_IMAGE']}news/${d.thumbnail}`} alt="" >
+                        <div class="bottom"></div>
                     <div class="inner-card">
                         <div class="sub-title">Original Jurno</div>
                         <div class="card-title">{d.title}</div>
                     </div>
                 </div>
-            </a>
+            </Link>
         </div>
 
         {/each}

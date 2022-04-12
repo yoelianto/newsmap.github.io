@@ -1,6 +1,6 @@
-import App from './App.svelte';
+import InitApp from './InitApp.svelte';
 
-const app = new App({
+const app = new InitApp({
 	target: document.body,
 	props: {
 		name: 'world'

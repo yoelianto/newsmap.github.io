@@ -5,7 +5,7 @@
   "scripts": {
     "build": "rollup -c",
     "dev": "rollup -c -w",
-    "start": "sirv public --no-clear --port 9023"
+    "start": "sirv public --no-clear -s --port 9023"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^17.0.0",
@@ -32,6 +32,7 @@
     "moment": "^2.29.1",
     "sirv-cli": "^2.0.0",
     "svelte-device-detector": "^0.2.2",
-    "svelte-hammer": "^0.1.7"
+    "svelte-hammer": "^0.1.7",
+    "svelte-navigator": "^3.1.5"
   }
 }

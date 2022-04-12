@@ -5,12 +5,13 @@
 
     //export let  authorprofileimage, authorprofilealt;
 
-    import { get } from "./api";
+	import { Link } from "svelte-navigator";
+    import { getDeduktif } from "./api";
     import * as ihttp from './constants/initialHttp';
     import {truncText, stringToDom} from './helper';
 
     const fetchData = (async () => {
-        const result = await get(ihttp.URI_ARTICLE_LIST, {size: 1});
+        const result = await getDeduktif(ihttp.URI_ARTICLE_LIST, {size: 1});
         return await result.data;
     })()
 
@@ -44,9 +45,9 @@
                     <div class="headerbottom"></div>
                     <div class="detail">
                         <div class="author">oleh {author}</div>
-                        <a href = {deduktifurl+d.slug}>
+                        <Link to={`/deduktif/${d.slug}`}>
                             <div class="title">{d.title}</div>  
-                        </a>
+                        </Link>
                          
                     </div>
                 </div>

@@ -13,8 +13,7 @@
 	import Rewara from './Rewara.svelte'
 	import Video from './Video.svelte'
 	import moment from 'moment';
-	import { getToken } from './api';
-	import { onMount } from 'svelte'
+	import { afterUpdate, onMount } from 'svelte'
 	// import DeviceDetector from "svelte-device-detector"
 
 	let y
@@ -60,6 +59,13 @@
 		media_scope: 'Daerah'
 	}
 
+	afterUpdate(() => {
+		// remove backround after open custom html
+		const elems = document.querySelectorAll("svelte-scroller-background-container");
+		elems.forEach(el => {
+			el.remove();
+		})
+	});
 
 </script>
 
@@ -70,9 +76,6 @@
 <svelte:window bind:scrollY={y} />
 
 <!-- svelte-ignore empty-block -->
-{#await getToken()}
-<p>...waiting</p>
-{:then data}
 <main>
 	<div class="container">
 		<Header
@@ -144,9 +147,6 @@
 		/>
 	</div>
 </main>
-{:catch error}
-<p>An error occurred!</p>
-{/await}
 
 <style>
 	main {
