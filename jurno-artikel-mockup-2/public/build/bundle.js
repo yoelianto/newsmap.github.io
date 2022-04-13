@@ -3136,7 +3136,7 @@ var app = (function () {
 
     const file = "src\\App.svelte";
 
-    // (401:24) 
+    // (447:24) 
     function create_if_block_9(ctx) {
     	let div1;
     	let div0;
@@ -3195,81 +3195,86 @@ var app = (function () {
     			t8 = space();
     			img4 = element("img");
     			set_style(div0, "padding", "0 0 218.75% 0");
-    			add_location(div0, file, 404, 4, 21516);
+    			add_location(div0, file, 451, 4, 23863);
     			attr_dev(img0, "id", "g-Bisa-Ular-smallplus-10-img");
-    			attr_dev(img0, "class", "g-aiImg svelte-1xu0tm5");
+    			attr_dev(img0, "class", "g-aiImg svelte-ma5ld9");
     			attr_dev(img0, "alt", "");
     			if (!src_url_equal(img0.src, img0_src_value = "./images/Bisa-Ular-smallplus-10.png")) attr_dev(img0, "src", img0_src_value);
-    			add_location(img0, file, 405, 4, 21564);
+    			add_location(img0, file, 452, 4, 23911);
     			attr_dev(div1, "id", "g-Bisa-Ular-smallplus-10");
-    			attr_dev(div1, "class", "g-artboard svelte-1xu0tm5");
+    			attr_dev(div1, "class", "g-artboard svelte-ma5ld9");
     			set_style(div1, "max-width", "509px");
     			set_style(div1, "max-height", "1113px");
     			attr_dev(div1, "data-aspect-ratio", "0.457");
     			attr_dev(div1, "data-min-width", "0");
     			attr_dev(div1, "data-max-width", "509");
-    			add_location(div1, file, 403, 4, 21347);
+    			set_style(div1, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    			add_location(div1, file, 449, 4, 23643);
     			set_style(div2, "padding", "0 0 156.8627% 0");
-    			add_location(div2, file, 410, 4, 21910);
+    			add_location(div2, file, 458, 4, 24308);
     			attr_dev(img1, "id", "g-Bisa-Ular-submedium-10-img");
-    			attr_dev(img1, "class", "g-aiImg svelte-1xu0tm5");
+    			attr_dev(img1, "class", "g-aiImg svelte-ma5ld9");
     			attr_dev(img1, "alt", "");
     			if (!src_url_equal(img1.src, img1_src_value = "./images/Bisa-Ular-submedium-10.png")) attr_dev(img1, "src", img1_src_value);
-    			add_location(img1, file, 411, 4, 21960);
+    			add_location(img1, file, 459, 4, 24358);
     			attr_dev(div3, "id", "g-Bisa-Ular-submedium-10");
-    			attr_dev(div3, "class", "g-artboard svelte-1xu0tm5");
+    			attr_dev(div3, "class", "g-artboard svelte-ma5ld9");
     			set_style(div3, "min-width", "510px");
     			set_style(div3, "max-width", "689px");
     			set_style(div3, "max-height", "1081px");
     			attr_dev(div3, "data-aspect-ratio", "0.638");
     			attr_dev(div3, "data-min-width", "510");
     			attr_dev(div3, "data-max-width", "689");
-    			add_location(div3, file, 409, 4, 21722);
+    			set_style(div3, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    			add_location(div3, file, 456, 4, 24069);
     			set_style(div4, "padding", "0 0 148.4058% 0");
-    			add_location(div4, file, 416, 4, 22300);
+    			add_location(div4, file, 465, 4, 24749);
     			attr_dev(img2, "id", "g-Bisa-Ular-medium-10-img");
-    			attr_dev(img2, "class", "g-aiImg svelte-1xu0tm5");
+    			attr_dev(img2, "class", "g-aiImg svelte-ma5ld9");
     			attr_dev(img2, "alt", "");
     			if (!src_url_equal(img2.src, img2_src_value = "./images/Bisa-Ular-medium-10.png")) attr_dev(img2, "src", img2_src_value);
-    			add_location(img2, file, 417, 4, 22350);
+    			add_location(img2, file, 466, 4, 24799);
     			attr_dev(div5, "id", "g-Bisa-Ular-medium-10");
-    			attr_dev(div5, "class", "g-artboard svelte-1xu0tm5");
+    			attr_dev(div5, "class", "g-artboard svelte-ma5ld9");
     			set_style(div5, "min-width", "690px");
     			set_style(div5, "max-width", "919px");
     			set_style(div5, "max-height", "1364px");
     			attr_dev(div5, "data-aspect-ratio", "0.674");
     			attr_dev(div5, "data-min-width", "690");
     			attr_dev(div5, "data-max-width", "919");
-    			add_location(div5, file, 415, 4, 22115);
+    			set_style(div5, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    			add_location(div5, file, 463, 4, 24513);
     			set_style(div6, "padding", "0 0 100% 0");
-    			add_location(div6, file, 422, 4, 22680);
+    			add_location(div6, file, 472, 4, 25180);
     			attr_dev(img3, "id", "g-Bisa-Ular-large-10-img");
-    			attr_dev(img3, "class", "g-aiImg svelte-1xu0tm5");
+    			attr_dev(img3, "class", "g-aiImg svelte-ma5ld9");
     			attr_dev(img3, "alt", "");
     			if (!src_url_equal(img3.src, img3_src_value = "./images/Bisa-Ular-large-10.png")) attr_dev(img3, "src", img3_src_value);
-    			add_location(img3, file, 423, 4, 22725);
+    			add_location(img3, file, 473, 4, 25225);
     			attr_dev(div7, "id", "g-Bisa-Ular-large-10");
-    			attr_dev(div7, "class", "g-artboard svelte-1xu0tm5");
+    			attr_dev(div7, "class", "g-artboard svelte-ma5ld9");
     			set_style(div7, "min-width", "920px");
     			set_style(div7, "max-width", "1399px");
     			set_style(div7, "max-height", "1399px");
     			attr_dev(div7, "data-aspect-ratio", "1");
     			attr_dev(div7, "data-min-width", "920");
     			attr_dev(div7, "data-max-width", "1399");
-    			add_location(div7, file, 421, 4, 22498);
+    			set_style(div7, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    			add_location(div7, file, 470, 4, 24947);
     			set_style(div8, "padding", "0 0 56.25% 0");
-    			add_location(div8, file, 428, 4, 23003);
+    			add_location(div8, file, 479, 4, 25554);
     			attr_dev(img4, "id", "g-Bisa-Ular-xlarge-10-img");
-    			attr_dev(img4, "class", "g-aiImg svelte-1xu0tm5");
+    			attr_dev(img4, "class", "g-aiImg svelte-ma5ld9");
     			attr_dev(img4, "alt", "");
     			if (!src_url_equal(img4.src, img4_src_value = "./images/Bisa-Ular-xlarge-10.png")) attr_dev(img4, "src", img4_src_value);
-    			add_location(img4, file, 429, 4, 23050);
+    			add_location(img4, file, 480, 4, 25601);
     			attr_dev(div9, "id", "g-Bisa-Ular-xlarge-10");
-    			attr_dev(div9, "class", "g-artboard svelte-1xu0tm5");
+    			attr_dev(div9, "class", "g-artboard svelte-ma5ld9");
     			set_style(div9, "min-width", "1400px");
     			attr_dev(div9, "data-aspect-ratio", "1.778");
     			attr_dev(div9, "data-min-width", "1400");
-    			add_location(div9, file, 427, 4, 22872);
+    			set_style(div9, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    			add_location(div9, file, 477, 4, 25372);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div1, anchor);
@@ -3297,6 +3302,27 @@ var app = (function () {
     			append_dev(div9, t8);
     			append_dev(div9, img4);
     		},
+    		p: function update(ctx, dirty) {
+    			if (dirty & /*offset*/ 4) {
+    				set_style(div1, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    			}
+
+    			if (dirty & /*offset*/ 4) {
+    				set_style(div3, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    			}
+
+    			if (dirty & /*offset*/ 4) {
+    				set_style(div5, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    			}
+
+    			if (dirty & /*offset*/ 4) {
+    				set_style(div7, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    			}
+
+    			if (dirty & /*offset*/ 4) {
+    				set_style(div9, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    			}
+    		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(div1);
     			if (detaching) detach_dev(t1);
@@ -3314,14 +3340,14 @@ var app = (function () {
     		block,
     		id: create_if_block_9.name,
     		type: "if",
-    		source: "(401:24) ",
+    		source: "(447:24) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (370:24) 
+    // (411:24) 
     function create_if_block_8(ctx) {
     	let div1;
     	let div0;
@@ -3380,81 +3406,86 @@ var app = (function () {
     			t8 = space();
     			img4 = element("img");
     			set_style(div0, "padding", "0 0 218.75% 0");
-    			add_location(div0, file, 373, 4, 19631);
+    			add_location(div0, file, 415, 4, 21723);
     			attr_dev(img0, "id", "g-Bisa-Ular-smallplus-9-img");
-    			attr_dev(img0, "class", "g-aiImg svelte-1xu0tm5");
+    			attr_dev(img0, "class", "g-aiImg svelte-ma5ld9");
     			attr_dev(img0, "alt", "");
     			if (!src_url_equal(img0.src, img0_src_value = "./images/Bisa-Ular-smallplus-9.png")) attr_dev(img0, "src", img0_src_value);
-    			add_location(img0, file, 374, 4, 19679);
+    			add_location(img0, file, 416, 4, 21771);
     			attr_dev(div1, "id", "g-Bisa-Ular-smallplus-9");
-    			attr_dev(div1, "class", "g-artboard svelte-1xu0tm5");
+    			attr_dev(div1, "class", "g-artboard svelte-ma5ld9");
     			set_style(div1, "max-width", "509px");
     			set_style(div1, "max-height", "1113px");
     			attr_dev(div1, "data-aspect-ratio", "0.457");
     			attr_dev(div1, "data-min-width", "0");
     			attr_dev(div1, "data-max-width", "509");
-    			add_location(div1, file, 372, 4, 19463);
+    			set_style(div1, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    			add_location(div1, file, 413, 4, 21504);
     			set_style(div2, "padding", "0 0 156.8627% 0");
-    			add_location(div2, file, 379, 4, 20021);
+    			add_location(div2, file, 422, 4, 22164);
     			attr_dev(img1, "id", "g-Bisa-Ular-submedium-9-img");
-    			attr_dev(img1, "class", "g-aiImg svelte-1xu0tm5");
+    			attr_dev(img1, "class", "g-aiImg svelte-ma5ld9");
     			attr_dev(img1, "alt", "");
     			if (!src_url_equal(img1.src, img1_src_value = "./images/Bisa-Ular-submedium-9.png")) attr_dev(img1, "src", img1_src_value);
-    			add_location(img1, file, 380, 4, 20071);
+    			add_location(img1, file, 423, 4, 22214);
     			attr_dev(div3, "id", "g-Bisa-Ular-submedium-9");
-    			attr_dev(div3, "class", "g-artboard svelte-1xu0tm5");
+    			attr_dev(div3, "class", "g-artboard svelte-ma5ld9");
     			set_style(div3, "min-width", "510px");
     			set_style(div3, "max-width", "689px");
     			set_style(div3, "max-height", "1081px");
     			attr_dev(div3, "data-aspect-ratio", "0.638");
     			attr_dev(div3, "data-min-width", "510");
     			attr_dev(div3, "data-max-width", "689");
-    			add_location(div3, file, 378, 4, 19834);
+    			set_style(div3, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    			add_location(div3, file, 420, 4, 21926);
     			set_style(div4, "padding", "0 0 148.4058% 0");
-    			add_location(div4, file, 385, 4, 20407);
+    			add_location(div4, file, 429, 4, 22601);
     			attr_dev(img2, "id", "g-Bisa-Ular-medium-9-img");
-    			attr_dev(img2, "class", "g-aiImg svelte-1xu0tm5");
+    			attr_dev(img2, "class", "g-aiImg svelte-ma5ld9");
     			attr_dev(img2, "alt", "");
     			if (!src_url_equal(img2.src, img2_src_value = "./images/Bisa-Ular-medium-9.png")) attr_dev(img2, "src", img2_src_value);
-    			add_location(img2, file, 386, 4, 20457);
+    			add_location(img2, file, 430, 4, 22651);
     			attr_dev(div5, "id", "g-Bisa-Ular-medium-9");
-    			attr_dev(div5, "class", "g-artboard svelte-1xu0tm5");
+    			attr_dev(div5, "class", "g-artboard svelte-ma5ld9");
     			set_style(div5, "min-width", "690px");
     			set_style(div5, "max-width", "919px");
     			set_style(div5, "max-height", "1364px");
     			attr_dev(div5, "data-aspect-ratio", "0.674");
     			attr_dev(div5, "data-min-width", "690");
     			attr_dev(div5, "data-max-width", "919");
-    			add_location(div5, file, 384, 4, 20223);
+    			set_style(div5, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    			add_location(div5, file, 427, 4, 22366);
     			set_style(div6, "padding", "0 0 100% 0");
-    			add_location(div6, file, 391, 4, 20783);
+    			add_location(div6, file, 436, 4, 23028);
     			attr_dev(img3, "id", "g-Bisa-Ular-large-9-img");
-    			attr_dev(img3, "class", "g-aiImg svelte-1xu0tm5");
+    			attr_dev(img3, "class", "g-aiImg svelte-ma5ld9");
     			attr_dev(img3, "alt", "");
     			if (!src_url_equal(img3.src, img3_src_value = "./images/Bisa-Ular-large-9.png")) attr_dev(img3, "src", img3_src_value);
-    			add_location(img3, file, 392, 4, 20828);
+    			add_location(img3, file, 437, 4, 23073);
     			attr_dev(div7, "id", "g-Bisa-Ular-large-9");
-    			attr_dev(div7, "class", "g-artboard svelte-1xu0tm5");
+    			attr_dev(div7, "class", "g-artboard svelte-ma5ld9");
     			set_style(div7, "min-width", "920px");
     			set_style(div7, "max-width", "1399px");
     			set_style(div7, "max-height", "1399px");
     			attr_dev(div7, "data-aspect-ratio", "1");
     			attr_dev(div7, "data-min-width", "920");
     			attr_dev(div7, "data-max-width", "1399");
-    			add_location(div7, file, 390, 4, 20602);
+    			set_style(div7, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    			add_location(div7, file, 434, 4, 22796);
     			set_style(div8, "padding", "0 0 56.25% 0");
-    			add_location(div8, file, 397, 4, 21102);
+    			add_location(div8, file, 443, 4, 23398);
     			attr_dev(img4, "id", "g-Bisa-Ular-xlarge-9-img");
-    			attr_dev(img4, "class", "g-aiImg svelte-1xu0tm5");
+    			attr_dev(img4, "class", "g-aiImg svelte-ma5ld9");
     			attr_dev(img4, "alt", "");
     			if (!src_url_equal(img4.src, img4_src_value = "./images/Bisa-Ular-xlarge-9.png")) attr_dev(img4, "src", img4_src_value);
-    			add_location(img4, file, 398, 4, 21149);
+    			add_location(img4, file, 444, 4, 23445);
     			attr_dev(div9, "id", "g-Bisa-Ular-xlarge-9");
-    			attr_dev(div9, "class", "g-artboard svelte-1xu0tm5");
+    			attr_dev(div9, "class", "g-artboard svelte-ma5ld9");
     			set_style(div9, "min-width", "1400px");
     			attr_dev(div9, "data-aspect-ratio", "1.778");
     			attr_dev(div9, "data-min-width", "1400");
-    			add_location(div9, file, 396, 4, 20972);
+    			set_style(div9, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    			add_location(div9, file, 441, 4, 23217);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div1, anchor);
@@ -3482,6 +3513,27 @@ var app = (function () {
     			append_dev(div9, t8);
     			append_dev(div9, img4);
     		},
+    		p: function update(ctx, dirty) {
+    			if (dirty & /*offset*/ 4) {
+    				set_style(div1, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    			}
+
+    			if (dirty & /*offset*/ 4) {
+    				set_style(div3, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    			}
+
+    			if (dirty & /*offset*/ 4) {
+    				set_style(div5, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    			}
+
+    			if (dirty & /*offset*/ 4) {
+    				set_style(div7, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    			}
+
+    			if (dirty & /*offset*/ 4) {
+    				set_style(div9, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    			}
+    		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(div1);
     			if (detaching) detach_dev(t1);
@@ -3499,14 +3551,14 @@ var app = (function () {
     		block,
     		id: create_if_block_8.name,
     		type: "if",
-    		source: "(370:24) ",
+    		source: "(411:24) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (339:24) 
+    // (375:24) 
     function create_if_block_7(ctx) {
     	let div1;
     	let div0;
@@ -3565,81 +3617,86 @@ var app = (function () {
     			t8 = space();
     			img4 = element("img");
     			set_style(div0, "padding", "0 0 218.75% 0");
-    			add_location(div0, file, 342, 4, 17749);
+    			add_location(div0, file, 379, 4, 19586);
     			attr_dev(img0, "id", "g-Bisa-Ular-smallplus-8-img");
-    			attr_dev(img0, "class", "g-aiImg svelte-1xu0tm5");
+    			attr_dev(img0, "class", "g-aiImg svelte-ma5ld9");
     			attr_dev(img0, "alt", "");
     			if (!src_url_equal(img0.src, img0_src_value = "./images/Bisa-Ular-smallplus-8.png")) attr_dev(img0, "src", img0_src_value);
-    			add_location(img0, file, 343, 4, 17797);
+    			add_location(img0, file, 380, 4, 19634);
     			attr_dev(div1, "id", "g-Bisa-Ular-smallplus-8");
-    			attr_dev(div1, "class", "g-artboard svelte-1xu0tm5");
+    			attr_dev(div1, "class", "g-artboard svelte-ma5ld9");
     			set_style(div1, "max-width", "509px");
     			set_style(div1, "max-height", "1113px");
     			attr_dev(div1, "data-aspect-ratio", "0.457");
     			attr_dev(div1, "data-min-width", "0");
     			attr_dev(div1, "data-max-width", "509");
-    			add_location(div1, file, 341, 4, 17581);
+    			set_style(div1, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    			add_location(div1, file, 377, 4, 19367);
     			set_style(div2, "padding", "0 0 156.8627% 0");
-    			add_location(div2, file, 348, 4, 18139);
+    			add_location(div2, file, 386, 4, 20027);
     			attr_dev(img1, "id", "g-Bisa-Ular-submedium-8-img");
-    			attr_dev(img1, "class", "g-aiImg svelte-1xu0tm5");
+    			attr_dev(img1, "class", "g-aiImg svelte-ma5ld9");
     			attr_dev(img1, "alt", "");
     			if (!src_url_equal(img1.src, img1_src_value = "./images/Bisa-Ular-submedium-8.png")) attr_dev(img1, "src", img1_src_value);
-    			add_location(img1, file, 349, 4, 18189);
+    			add_location(img1, file, 387, 4, 20077);
     			attr_dev(div3, "id", "g-Bisa-Ular-submedium-8");
-    			attr_dev(div3, "class", "g-artboard svelte-1xu0tm5");
+    			attr_dev(div3, "class", "g-artboard svelte-ma5ld9");
     			set_style(div3, "min-width", "510px");
     			set_style(div3, "max-width", "689px");
     			set_style(div3, "max-height", "1081px");
     			attr_dev(div3, "data-aspect-ratio", "0.638");
     			attr_dev(div3, "data-min-width", "510");
     			attr_dev(div3, "data-max-width", "689");
-    			add_location(div3, file, 347, 4, 17952);
+    			set_style(div3, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    			add_location(div3, file, 384, 4, 19789);
     			set_style(div4, "padding", "0 0 148.4058% 0");
-    			add_location(div4, file, 354, 4, 18525);
+    			add_location(div4, file, 393, 4, 20464);
     			attr_dev(img2, "id", "g-Bisa-Ular-medium-8-img");
-    			attr_dev(img2, "class", "g-aiImg svelte-1xu0tm5");
+    			attr_dev(img2, "class", "g-aiImg svelte-ma5ld9");
     			attr_dev(img2, "alt", "");
     			if (!src_url_equal(img2.src, img2_src_value = "./images/Bisa-Ular-medium-8.png")) attr_dev(img2, "src", img2_src_value);
-    			add_location(img2, file, 355, 4, 18575);
+    			add_location(img2, file, 394, 4, 20514);
     			attr_dev(div5, "id", "g-Bisa-Ular-medium-8");
-    			attr_dev(div5, "class", "g-artboard svelte-1xu0tm5");
+    			attr_dev(div5, "class", "g-artboard svelte-ma5ld9");
     			set_style(div5, "min-width", "690px");
     			set_style(div5, "max-width", "919px");
     			set_style(div5, "max-height", "1364px");
     			attr_dev(div5, "data-aspect-ratio", "0.674");
     			attr_dev(div5, "data-min-width", "690");
     			attr_dev(div5, "data-max-width", "919");
-    			add_location(div5, file, 353, 4, 18341);
+    			set_style(div5, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    			add_location(div5, file, 391, 4, 20229);
     			set_style(div6, "padding", "0 0 100% 0");
-    			add_location(div6, file, 360, 4, 18901);
+    			add_location(div6, file, 400, 4, 20891);
     			attr_dev(img3, "id", "g-Bisa-Ular-large-8-img");
-    			attr_dev(img3, "class", "g-aiImg svelte-1xu0tm5");
+    			attr_dev(img3, "class", "g-aiImg svelte-ma5ld9");
     			attr_dev(img3, "alt", "");
     			if (!src_url_equal(img3.src, img3_src_value = "./images/Bisa-Ular-large-8.png")) attr_dev(img3, "src", img3_src_value);
-    			add_location(img3, file, 361, 4, 18946);
+    			add_location(img3, file, 401, 4, 20936);
     			attr_dev(div7, "id", "g-Bisa-Ular-large-8");
-    			attr_dev(div7, "class", "g-artboard svelte-1xu0tm5");
+    			attr_dev(div7, "class", "g-artboard svelte-ma5ld9");
     			set_style(div7, "min-width", "920px");
     			set_style(div7, "max-width", "1399px");
     			set_style(div7, "max-height", "1399px");
     			attr_dev(div7, "data-aspect-ratio", "1");
     			attr_dev(div7, "data-min-width", "920");
     			attr_dev(div7, "data-max-width", "1399");
-    			add_location(div7, file, 359, 4, 18720);
+    			set_style(div7, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    			add_location(div7, file, 398, 4, 20659);
     			set_style(div8, "padding", "0 0 56.25% 0");
-    			add_location(div8, file, 366, 4, 19220);
+    			add_location(div8, file, 407, 4, 21261);
     			attr_dev(img4, "id", "g-Bisa-Ular-xlarge-8-img");
-    			attr_dev(img4, "class", "g-aiImg svelte-1xu0tm5");
+    			attr_dev(img4, "class", "g-aiImg svelte-ma5ld9");
     			attr_dev(img4, "alt", "");
     			if (!src_url_equal(img4.src, img4_src_value = "./images/Bisa-Ular-xlarge-8.png")) attr_dev(img4, "src", img4_src_value);
-    			add_location(img4, file, 367, 4, 19267);
+    			add_location(img4, file, 408, 4, 21308);
     			attr_dev(div9, "id", "g-Bisa-Ular-xlarge-8");
-    			attr_dev(div9, "class", "g-artboard svelte-1xu0tm5");
+    			attr_dev(div9, "class", "g-artboard svelte-ma5ld9");
     			set_style(div9, "min-width", "1400px");
     			attr_dev(div9, "data-aspect-ratio", "1.778");
     			attr_dev(div9, "data-min-width", "1400");
-    			add_location(div9, file, 365, 4, 19090);
+    			set_style(div9, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    			add_location(div9, file, 405, 4, 21080);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div1, anchor);
@@ -3667,6 +3724,27 @@ var app = (function () {
     			append_dev(div9, t8);
     			append_dev(div9, img4);
     		},
+    		p: function update(ctx, dirty) {
+    			if (dirty & /*offset*/ 4) {
+    				set_style(div1, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    			}
+
+    			if (dirty & /*offset*/ 4) {
+    				set_style(div3, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    			}
+
+    			if (dirty & /*offset*/ 4) {
+    				set_style(div5, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    			}
+
+    			if (dirty & /*offset*/ 4) {
+    				set_style(div7, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    			}
+
+    			if (dirty & /*offset*/ 4) {
+    				set_style(div9, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    			}
+    		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(div1);
     			if (detaching) detach_dev(t1);
@@ -3684,14 +3762,14 @@ var app = (function () {
     		block,
     		id: create_if_block_7.name,
     		type: "if",
-    		source: "(339:24) ",
+    		source: "(375:24) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (308:24) 
+    // (339:24) 
     function create_if_block_6(ctx) {
     	let div1;
     	let div0;
@@ -3750,81 +3828,86 @@ var app = (function () {
     			t8 = space();
     			img4 = element("img");
     			set_style(div0, "padding", "0 0 218.75% 0");
-    			add_location(div0, file, 311, 4, 15867);
+    			add_location(div0, file, 343, 4, 17449);
     			attr_dev(img0, "id", "g-Bisa-Ular-smallplus-7-img");
-    			attr_dev(img0, "class", "g-aiImg svelte-1xu0tm5");
+    			attr_dev(img0, "class", "g-aiImg svelte-ma5ld9");
     			attr_dev(img0, "alt", "");
     			if (!src_url_equal(img0.src, img0_src_value = "./images/Bisa-Ular-smallplus-7.png")) attr_dev(img0, "src", img0_src_value);
-    			add_location(img0, file, 312, 4, 15915);
+    			add_location(img0, file, 344, 4, 17497);
     			attr_dev(div1, "id", "g-Bisa-Ular-smallplus-7");
-    			attr_dev(div1, "class", "g-artboard svelte-1xu0tm5");
+    			attr_dev(div1, "class", "g-artboard svelte-ma5ld9");
     			set_style(div1, "max-width", "509px");
     			set_style(div1, "max-height", "1113px");
     			attr_dev(div1, "data-aspect-ratio", "0.457");
     			attr_dev(div1, "data-min-width", "0");
     			attr_dev(div1, "data-max-width", "509");
-    			add_location(div1, file, 310, 4, 15699);
+    			set_style(div1, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    			add_location(div1, file, 341, 4, 17230);
     			set_style(div2, "padding", "0 0 156.8627% 0");
-    			add_location(div2, file, 317, 4, 16257);
+    			add_location(div2, file, 350, 4, 17890);
     			attr_dev(img1, "id", "g-Bisa-Ular-submedium-7-img");
-    			attr_dev(img1, "class", "g-aiImg svelte-1xu0tm5");
+    			attr_dev(img1, "class", "g-aiImg svelte-ma5ld9");
     			attr_dev(img1, "alt", "");
     			if (!src_url_equal(img1.src, img1_src_value = "./images/Bisa-Ular-submedium-7.png")) attr_dev(img1, "src", img1_src_value);
-    			add_location(img1, file, 318, 4, 16307);
+    			add_location(img1, file, 351, 4, 17940);
     			attr_dev(div3, "id", "g-Bisa-Ular-submedium-7");
-    			attr_dev(div3, "class", "g-artboard svelte-1xu0tm5");
+    			attr_dev(div3, "class", "g-artboard svelte-ma5ld9");
     			set_style(div3, "min-width", "510px");
     			set_style(div3, "max-width", "689px");
     			set_style(div3, "max-height", "1081px");
     			attr_dev(div3, "data-aspect-ratio", "0.638");
     			attr_dev(div3, "data-min-width", "510");
     			attr_dev(div3, "data-max-width", "689");
-    			add_location(div3, file, 316, 4, 16070);
+    			set_style(div3, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    			add_location(div3, file, 348, 4, 17652);
     			set_style(div4, "padding", "0 0 148.4058% 0");
-    			add_location(div4, file, 323, 4, 16643);
+    			add_location(div4, file, 357, 4, 18327);
     			attr_dev(img2, "id", "g-Bisa-Ular-medium-7-img");
-    			attr_dev(img2, "class", "g-aiImg svelte-1xu0tm5");
+    			attr_dev(img2, "class", "g-aiImg svelte-ma5ld9");
     			attr_dev(img2, "alt", "");
     			if (!src_url_equal(img2.src, img2_src_value = "./images/Bisa-Ular-medium-7.png")) attr_dev(img2, "src", img2_src_value);
-    			add_location(img2, file, 324, 4, 16693);
+    			add_location(img2, file, 358, 4, 18377);
     			attr_dev(div5, "id", "g-Bisa-Ular-medium-7");
-    			attr_dev(div5, "class", "g-artboard svelte-1xu0tm5");
+    			attr_dev(div5, "class", "g-artboard svelte-ma5ld9");
     			set_style(div5, "min-width", "690px");
     			set_style(div5, "max-width", "919px");
     			set_style(div5, "max-height", "1364px");
     			attr_dev(div5, "data-aspect-ratio", "0.674");
     			attr_dev(div5, "data-min-width", "690");
     			attr_dev(div5, "data-max-width", "919");
-    			add_location(div5, file, 322, 4, 16459);
+    			set_style(div5, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    			add_location(div5, file, 355, 4, 18092);
     			set_style(div6, "padding", "0 0 100% 0");
-    			add_location(div6, file, 329, 4, 17019);
+    			add_location(div6, file, 364, 4, 18754);
     			attr_dev(img3, "id", "g-Bisa-Ular-large-7-img");
-    			attr_dev(img3, "class", "g-aiImg svelte-1xu0tm5");
+    			attr_dev(img3, "class", "g-aiImg svelte-ma5ld9");
     			attr_dev(img3, "alt", "");
     			if (!src_url_equal(img3.src, img3_src_value = "./images/Bisa-Ular-large-7.png")) attr_dev(img3, "src", img3_src_value);
-    			add_location(img3, file, 330, 4, 17064);
+    			add_location(img3, file, 365, 4, 18799);
     			attr_dev(div7, "id", "g-Bisa-Ular-large-7");
-    			attr_dev(div7, "class", "g-artboard svelte-1xu0tm5");
+    			attr_dev(div7, "class", "g-artboard svelte-ma5ld9");
     			set_style(div7, "min-width", "920px");
     			set_style(div7, "max-width", "1399px");
     			set_style(div7, "max-height", "1399px");
     			attr_dev(div7, "data-aspect-ratio", "1");
     			attr_dev(div7, "data-min-width", "920");
     			attr_dev(div7, "data-max-width", "1399");
-    			add_location(div7, file, 328, 4, 16838);
+    			set_style(div7, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    			add_location(div7, file, 362, 4, 18522);
     			set_style(div8, "padding", "0 0 56.25% 0");
-    			add_location(div8, file, 335, 4, 17338);
+    			add_location(div8, file, 371, 4, 19124);
     			attr_dev(img4, "id", "g-Bisa-Ular-xlarge-7-img");
-    			attr_dev(img4, "class", "g-aiImg svelte-1xu0tm5");
+    			attr_dev(img4, "class", "g-aiImg svelte-ma5ld9");
     			attr_dev(img4, "alt", "");
     			if (!src_url_equal(img4.src, img4_src_value = "./images/Bisa-Ular-xlarge-7.png")) attr_dev(img4, "src", img4_src_value);
-    			add_location(img4, file, 336, 4, 17385);
+    			add_location(img4, file, 372, 4, 19171);
     			attr_dev(div9, "id", "g-Bisa-Ular-xlarge-7");
-    			attr_dev(div9, "class", "g-artboard svelte-1xu0tm5");
+    			attr_dev(div9, "class", "g-artboard svelte-ma5ld9");
     			set_style(div9, "min-width", "1400px");
     			attr_dev(div9, "data-aspect-ratio", "1.778");
     			attr_dev(div9, "data-min-width", "1400");
-    			add_location(div9, file, 334, 4, 17208);
+    			set_style(div9, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    			add_location(div9, file, 369, 4, 18943);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div1, anchor);
@@ -3852,6 +3935,27 @@ var app = (function () {
     			append_dev(div9, t8);
     			append_dev(div9, img4);
     		},
+    		p: function update(ctx, dirty) {
+    			if (dirty & /*offset*/ 4) {
+    				set_style(div1, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    			}
+
+    			if (dirty & /*offset*/ 4) {
+    				set_style(div3, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    			}
+
+    			if (dirty & /*offset*/ 4) {
+    				set_style(div5, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    			}
+
+    			if (dirty & /*offset*/ 4) {
+    				set_style(div7, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    			}
+
+    			if (dirty & /*offset*/ 4) {
+    				set_style(div9, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    			}
+    		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(div1);
     			if (detaching) detach_dev(t1);
@@ -3869,14 +3973,14 @@ var app = (function () {
     		block,
     		id: create_if_block_6.name,
     		type: "if",
-    		source: "(308:24) ",
+    		source: "(339:24) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (277:24) 
+    // (303:24) 
     function create_if_block_5(ctx) {
     	let div1;
     	let div0;
@@ -3935,81 +4039,86 @@ var app = (function () {
     			t8 = space();
     			img4 = element("img");
     			set_style(div0, "padding", "0 0 218.75% 0");
-    			add_location(div0, file, 280, 4, 13985);
+    			add_location(div0, file, 307, 4, 15312);
     			attr_dev(img0, "id", "g-Bisa-Ular-smallplus-6-img");
-    			attr_dev(img0, "class", "g-aiImg svelte-1xu0tm5");
+    			attr_dev(img0, "class", "g-aiImg svelte-ma5ld9");
     			attr_dev(img0, "alt", "");
     			if (!src_url_equal(img0.src, img0_src_value = "./images/Bisa-Ular-smallplus-6.png")) attr_dev(img0, "src", img0_src_value);
-    			add_location(img0, file, 281, 4, 14033);
+    			add_location(img0, file, 308, 4, 15360);
     			attr_dev(div1, "id", "g-Bisa-Ular-smallplus-6");
-    			attr_dev(div1, "class", "g-artboard svelte-1xu0tm5");
+    			attr_dev(div1, "class", "g-artboard svelte-ma5ld9");
     			set_style(div1, "max-width", "509px");
     			set_style(div1, "max-height", "1113px");
     			attr_dev(div1, "data-aspect-ratio", "0.457");
     			attr_dev(div1, "data-min-width", "0");
     			attr_dev(div1, "data-max-width", "509");
-    			add_location(div1, file, 279, 4, 13817);
+    			set_style(div1, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    			add_location(div1, file, 305, 4, 15093);
     			set_style(div2, "padding", "0 0 156.8627% 0");
-    			add_location(div2, file, 286, 4, 14375);
+    			add_location(div2, file, 314, 4, 15753);
     			attr_dev(img1, "id", "g-Bisa-Ular-submedium-6-img");
-    			attr_dev(img1, "class", "g-aiImg svelte-1xu0tm5");
+    			attr_dev(img1, "class", "g-aiImg svelte-ma5ld9");
     			attr_dev(img1, "alt", "");
     			if (!src_url_equal(img1.src, img1_src_value = "./images/Bisa-Ular-submedium-6.png")) attr_dev(img1, "src", img1_src_value);
-    			add_location(img1, file, 287, 4, 14425);
+    			add_location(img1, file, 315, 4, 15803);
     			attr_dev(div3, "id", "g-Bisa-Ular-submedium-6");
-    			attr_dev(div3, "class", "g-artboard svelte-1xu0tm5");
+    			attr_dev(div3, "class", "g-artboard svelte-ma5ld9");
     			set_style(div3, "min-width", "510px");
     			set_style(div3, "max-width", "689px");
     			set_style(div3, "max-height", "1081px");
     			attr_dev(div3, "data-aspect-ratio", "0.638");
     			attr_dev(div3, "data-min-width", "510");
     			attr_dev(div3, "data-max-width", "689");
-    			add_location(div3, file, 285, 4, 14188);
+    			set_style(div3, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    			add_location(div3, file, 312, 4, 15515);
     			set_style(div4, "padding", "0 0 148.4058% 0");
-    			add_location(div4, file, 292, 4, 14761);
+    			add_location(div4, file, 321, 4, 16190);
     			attr_dev(img2, "id", "g-Bisa-Ular-medium-6-img");
-    			attr_dev(img2, "class", "g-aiImg svelte-1xu0tm5");
+    			attr_dev(img2, "class", "g-aiImg svelte-ma5ld9");
     			attr_dev(img2, "alt", "");
     			if (!src_url_equal(img2.src, img2_src_value = "./images/Bisa-Ular-medium-6.png")) attr_dev(img2, "src", img2_src_value);
-    			add_location(img2, file, 293, 4, 14811);
+    			add_location(img2, file, 322, 4, 16240);
     			attr_dev(div5, "id", "g-Bisa-Ular-medium-6");
-    			attr_dev(div5, "class", "g-artboard svelte-1xu0tm5");
+    			attr_dev(div5, "class", "g-artboard svelte-ma5ld9");
     			set_style(div5, "min-width", "690px");
     			set_style(div5, "max-width", "919px");
     			set_style(div5, "max-height", "1364px");
     			attr_dev(div5, "data-aspect-ratio", "0.674");
     			attr_dev(div5, "data-min-width", "690");
     			attr_dev(div5, "data-max-width", "919");
-    			add_location(div5, file, 291, 4, 14577);
+    			set_style(div5, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    			add_location(div5, file, 319, 4, 15955);
     			set_style(div6, "padding", "0 0 100% 0");
-    			add_location(div6, file, 298, 4, 15137);
+    			add_location(div6, file, 328, 4, 16617);
     			attr_dev(img3, "id", "g-Bisa-Ular-large-6-img");
-    			attr_dev(img3, "class", "g-aiImg svelte-1xu0tm5");
+    			attr_dev(img3, "class", "g-aiImg svelte-ma5ld9");
     			attr_dev(img3, "alt", "");
     			if (!src_url_equal(img3.src, img3_src_value = "./images/Bisa-Ular-large-6.png")) attr_dev(img3, "src", img3_src_value);
-    			add_location(img3, file, 299, 4, 15182);
+    			add_location(img3, file, 329, 4, 16662);
     			attr_dev(div7, "id", "g-Bisa-Ular-large-6");
-    			attr_dev(div7, "class", "g-artboard svelte-1xu0tm5");
+    			attr_dev(div7, "class", "g-artboard svelte-ma5ld9");
     			set_style(div7, "min-width", "920px");
     			set_style(div7, "max-width", "1399px");
     			set_style(div7, "max-height", "1399px");
     			attr_dev(div7, "data-aspect-ratio", "1");
     			attr_dev(div7, "data-min-width", "920");
     			attr_dev(div7, "data-max-width", "1399");
-    			add_location(div7, file, 297, 4, 14956);
+    			set_style(div7, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    			add_location(div7, file, 326, 4, 16385);
     			set_style(div8, "padding", "0 0 56.25% 0");
-    			add_location(div8, file, 304, 4, 15456);
+    			add_location(div8, file, 335, 4, 16987);
     			attr_dev(img4, "id", "g-Bisa-Ular-xlarge-6-img");
-    			attr_dev(img4, "class", "g-aiImg svelte-1xu0tm5");
+    			attr_dev(img4, "class", "g-aiImg svelte-ma5ld9");
     			attr_dev(img4, "alt", "");
     			if (!src_url_equal(img4.src, img4_src_value = "./images/Bisa-Ular-xlarge-6.png")) attr_dev(img4, "src", img4_src_value);
-    			add_location(img4, file, 305, 4, 15503);
+    			add_location(img4, file, 336, 4, 17034);
     			attr_dev(div9, "id", "g-Bisa-Ular-xlarge-6");
-    			attr_dev(div9, "class", "g-artboard svelte-1xu0tm5");
+    			attr_dev(div9, "class", "g-artboard svelte-ma5ld9");
     			set_style(div9, "min-width", "1400px");
     			attr_dev(div9, "data-aspect-ratio", "1.778");
     			attr_dev(div9, "data-min-width", "1400");
-    			add_location(div9, file, 303, 4, 15326);
+    			set_style(div9, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    			add_location(div9, file, 333, 4, 16806);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div1, anchor);
@@ -4037,6 +4146,27 @@ var app = (function () {
     			append_dev(div9, t8);
     			append_dev(div9, img4);
     		},
+    		p: function update(ctx, dirty) {
+    			if (dirty & /*offset*/ 4) {
+    				set_style(div1, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    			}
+
+    			if (dirty & /*offset*/ 4) {
+    				set_style(div3, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    			}
+
+    			if (dirty & /*offset*/ 4) {
+    				set_style(div5, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    			}
+
+    			if (dirty & /*offset*/ 4) {
+    				set_style(div7, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    			}
+
+    			if (dirty & /*offset*/ 4) {
+    				set_style(div9, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    			}
+    		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(div1);
     			if (detaching) detach_dev(t1);
@@ -4054,14 +4184,14 @@ var app = (function () {
     		block,
     		id: create_if_block_5.name,
     		type: "if",
-    		source: "(277:24) ",
+    		source: "(303:24) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (244:24) 
+    // (265:24) 
     function create_if_block_4(ctx) {
     	let div1;
     	let div0;
@@ -4120,81 +4250,86 @@ var app = (function () {
     			t8 = space();
     			img4 = element("img");
     			set_style(div0, "padding", "0 0 218.75% 0");
-    			add_location(div0, file, 247, 4, 12098);
+    			add_location(div0, file, 269, 4, 13170);
     			attr_dev(img0, "id", "g-Bisa-Ular-smallplus-5-img");
-    			attr_dev(img0, "class", "g-aiImg svelte-1xu0tm5");
+    			attr_dev(img0, "class", "g-aiImg svelte-ma5ld9");
     			attr_dev(img0, "alt", "");
     			if (!src_url_equal(img0.src, img0_src_value = "./images/Bisa-Ular-smallplus-5.png")) attr_dev(img0, "src", img0_src_value);
-    			add_location(img0, file, 248, 4, 12146);
+    			add_location(img0, file, 270, 4, 13218);
     			attr_dev(div1, "id", "g-Bisa-Ular-smallplus-5");
-    			attr_dev(div1, "class", "g-artboard svelte-1xu0tm5");
+    			attr_dev(div1, "class", "g-artboard svelte-ma5ld9");
     			set_style(div1, "max-width", "509px");
     			set_style(div1, "max-height", "1113px");
     			attr_dev(div1, "data-aspect-ratio", "0.457");
     			attr_dev(div1, "data-min-width", "0");
     			attr_dev(div1, "data-max-width", "509");
-    			add_location(div1, file, 246, 4, 11930);
+    			set_style(div1, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    			add_location(div1, file, 267, 4, 12951);
     			set_style(div2, "padding", "0 0 156.8627% 0");
-    			add_location(div2, file, 253, 4, 12488);
+    			add_location(div2, file, 276, 4, 13611);
     			attr_dev(img1, "id", "g-Bisa-Ular-submedium-5-img");
-    			attr_dev(img1, "class", "g-aiImg svelte-1xu0tm5");
+    			attr_dev(img1, "class", "g-aiImg svelte-ma5ld9");
     			attr_dev(img1, "alt", "");
     			if (!src_url_equal(img1.src, img1_src_value = "./images/Bisa-Ular-submedium-5.png")) attr_dev(img1, "src", img1_src_value);
-    			add_location(img1, file, 254, 4, 12538);
+    			add_location(img1, file, 277, 4, 13661);
     			attr_dev(div3, "id", "g-Bisa-Ular-submedium-5");
-    			attr_dev(div3, "class", "g-artboard svelte-1xu0tm5");
+    			attr_dev(div3, "class", "g-artboard svelte-ma5ld9");
     			set_style(div3, "min-width", "510px");
     			set_style(div3, "max-width", "689px");
     			set_style(div3, "max-height", "1081px");
     			attr_dev(div3, "data-aspect-ratio", "0.638");
     			attr_dev(div3, "data-min-width", "510");
     			attr_dev(div3, "data-max-width", "689");
-    			add_location(div3, file, 252, 4, 12301);
+    			set_style(div3, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    			add_location(div3, file, 274, 4, 13373);
     			set_style(div4, "padding", "0 0 148.4058% 0");
-    			add_location(div4, file, 259, 4, 12874);
+    			add_location(div4, file, 283, 4, 14048);
     			attr_dev(img2, "id", "g-Bisa-Ular-medium-5-img");
-    			attr_dev(img2, "class", "g-aiImg svelte-1xu0tm5");
+    			attr_dev(img2, "class", "g-aiImg svelte-ma5ld9");
     			attr_dev(img2, "alt", "");
     			if (!src_url_equal(img2.src, img2_src_value = "./images/Bisa-Ular-medium-5.png")) attr_dev(img2, "src", img2_src_value);
-    			add_location(img2, file, 260, 4, 12924);
+    			add_location(img2, file, 284, 4, 14098);
     			attr_dev(div5, "id", "g-Bisa-Ular-medium-5");
-    			attr_dev(div5, "class", "g-artboard svelte-1xu0tm5");
+    			attr_dev(div5, "class", "g-artboard svelte-ma5ld9");
     			set_style(div5, "min-width", "690px");
     			set_style(div5, "max-width", "919px");
     			set_style(div5, "max-height", "1364px");
     			attr_dev(div5, "data-aspect-ratio", "0.674");
     			attr_dev(div5, "data-min-width", "690");
     			attr_dev(div5, "data-max-width", "919");
-    			add_location(div5, file, 258, 4, 12690);
+    			set_style(div5, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    			add_location(div5, file, 281, 4, 13813);
     			set_style(div6, "padding", "0 0 100% 0");
-    			add_location(div6, file, 265, 4, 13250);
+    			add_location(div6, file, 290, 4, 14475);
     			attr_dev(img3, "id", "g-Bisa-Ular-large-5-img");
-    			attr_dev(img3, "class", "g-aiImg svelte-1xu0tm5");
+    			attr_dev(img3, "class", "g-aiImg svelte-ma5ld9");
     			attr_dev(img3, "alt", "");
     			if (!src_url_equal(img3.src, img3_src_value = "./images/Bisa-Ular-large-5.png")) attr_dev(img3, "src", img3_src_value);
-    			add_location(img3, file, 266, 4, 13295);
+    			add_location(img3, file, 291, 4, 14520);
     			attr_dev(div7, "id", "g-Bisa-Ular-large-5");
-    			attr_dev(div7, "class", "g-artboard svelte-1xu0tm5");
+    			attr_dev(div7, "class", "g-artboard svelte-ma5ld9");
     			set_style(div7, "min-width", "920px");
     			set_style(div7, "max-width", "1399px");
     			set_style(div7, "max-height", "1399px");
     			attr_dev(div7, "data-aspect-ratio", "1");
     			attr_dev(div7, "data-min-width", "920");
     			attr_dev(div7, "data-max-width", "1399");
-    			add_location(div7, file, 264, 4, 13069);
+    			set_style(div7, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    			add_location(div7, file, 288, 4, 14243);
     			set_style(div8, "padding", "0 0 56.25% 0");
-    			add_location(div8, file, 271, 4, 13569);
+    			add_location(div8, file, 297, 4, 14845);
     			attr_dev(img4, "id", "g-Bisa-Ular-xlarge-5-img");
-    			attr_dev(img4, "class", "g-aiImg svelte-1xu0tm5");
+    			attr_dev(img4, "class", "g-aiImg svelte-ma5ld9");
     			attr_dev(img4, "alt", "");
     			if (!src_url_equal(img4.src, img4_src_value = "./images/Bisa-Ular-xlarge-5.png")) attr_dev(img4, "src", img4_src_value);
-    			add_location(img4, file, 272, 4, 13616);
+    			add_location(img4, file, 298, 4, 14892);
     			attr_dev(div9, "id", "g-Bisa-Ular-xlarge-5");
-    			attr_dev(div9, "class", "g-artboard svelte-1xu0tm5");
+    			attr_dev(div9, "class", "g-artboard svelte-ma5ld9");
     			set_style(div9, "min-width", "1400px");
     			attr_dev(div9, "data-aspect-ratio", "1.778");
     			attr_dev(div9, "data-min-width", "1400");
-    			add_location(div9, file, 270, 4, 13439);
+    			set_style(div9, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    			add_location(div9, file, 295, 4, 14664);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div1, anchor);
@@ -4222,6 +4357,27 @@ var app = (function () {
     			append_dev(div9, t8);
     			append_dev(div9, img4);
     		},
+    		p: function update(ctx, dirty) {
+    			if (dirty & /*offset*/ 4) {
+    				set_style(div1, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    			}
+
+    			if (dirty & /*offset*/ 4) {
+    				set_style(div3, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    			}
+
+    			if (dirty & /*offset*/ 4) {
+    				set_style(div5, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    			}
+
+    			if (dirty & /*offset*/ 4) {
+    				set_style(div7, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    			}
+
+    			if (dirty & /*offset*/ 4) {
+    				set_style(div9, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    			}
+    		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(div1);
     			if (detaching) detach_dev(t1);
@@ -4239,14 +4395,14 @@ var app = (function () {
     		block,
     		id: create_if_block_4.name,
     		type: "if",
-    		source: "(244:24) ",
+    		source: "(265:24) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (212:24) 
+    // (228:24) 
     function create_if_block_3(ctx) {
     	let div1;
     	let div0;
@@ -4305,81 +4461,86 @@ var app = (function () {
     			t8 = space();
     			img4 = element("img");
     			set_style(div0, "padding", "0 0 218.75% 0");
-    			add_location(div0, file, 215, 4, 10212);
+    			add_location(div0, file, 232, 4, 11029);
     			attr_dev(img0, "id", "g-Bisa-Ular-smallplus-4-img");
-    			attr_dev(img0, "class", "g-aiImg svelte-1xu0tm5");
+    			attr_dev(img0, "class", "g-aiImg svelte-ma5ld9");
     			attr_dev(img0, "alt", "");
     			if (!src_url_equal(img0.src, img0_src_value = "./images/Bisa-Ular-smallplus-4.png")) attr_dev(img0, "src", img0_src_value);
-    			add_location(img0, file, 216, 4, 10260);
+    			add_location(img0, file, 233, 4, 11077);
     			attr_dev(div1, "id", "g-Bisa-Ular-smallplus-4");
-    			attr_dev(div1, "class", "g-artboard svelte-1xu0tm5");
+    			attr_dev(div1, "class", "g-artboard svelte-ma5ld9");
     			set_style(div1, "max-width", "509px");
     			set_style(div1, "max-height", "1113px");
     			attr_dev(div1, "data-aspect-ratio", "0.457");
     			attr_dev(div1, "data-min-width", "0");
     			attr_dev(div1, "data-max-width", "509");
-    			add_location(div1, file, 214, 4, 10044);
+    			set_style(div1, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    			add_location(div1, file, 230, 4, 10810);
     			set_style(div2, "padding", "0 0 156.8627% 0");
-    			add_location(div2, file, 221, 4, 10602);
+    			add_location(div2, file, 239, 4, 11470);
     			attr_dev(img1, "id", "g-Bisa-Ular-submedium-4-img");
-    			attr_dev(img1, "class", "g-aiImg svelte-1xu0tm5");
+    			attr_dev(img1, "class", "g-aiImg svelte-ma5ld9");
     			attr_dev(img1, "alt", "");
     			if (!src_url_equal(img1.src, img1_src_value = "./images/Bisa-Ular-submedium-4.png")) attr_dev(img1, "src", img1_src_value);
-    			add_location(img1, file, 222, 4, 10652);
+    			add_location(img1, file, 240, 4, 11520);
     			attr_dev(div3, "id", "g-Bisa-Ular-submedium-4");
-    			attr_dev(div3, "class", "g-artboard svelte-1xu0tm5");
+    			attr_dev(div3, "class", "g-artboard svelte-ma5ld9");
     			set_style(div3, "min-width", "510px");
     			set_style(div3, "max-width", "689px");
     			set_style(div3, "max-height", "1081px");
     			attr_dev(div3, "data-aspect-ratio", "0.638");
     			attr_dev(div3, "data-min-width", "510");
     			attr_dev(div3, "data-max-width", "689");
-    			add_location(div3, file, 220, 4, 10415);
+    			set_style(div3, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    			add_location(div3, file, 237, 4, 11232);
     			set_style(div4, "padding", "0 0 148.4058% 0");
-    			add_location(div4, file, 227, 4, 10988);
+    			add_location(div4, file, 246, 4, 11907);
     			attr_dev(img2, "id", "g-Bisa-Ular-medium-4-img");
-    			attr_dev(img2, "class", "g-aiImg svelte-1xu0tm5");
+    			attr_dev(img2, "class", "g-aiImg svelte-ma5ld9");
     			attr_dev(img2, "alt", "");
     			if (!src_url_equal(img2.src, img2_src_value = "./images/Bisa-Ular-medium-4.png")) attr_dev(img2, "src", img2_src_value);
-    			add_location(img2, file, 228, 4, 11038);
+    			add_location(img2, file, 247, 4, 11957);
     			attr_dev(div5, "id", "g-Bisa-Ular-medium-4");
-    			attr_dev(div5, "class", "g-artboard svelte-1xu0tm5");
+    			attr_dev(div5, "class", "g-artboard svelte-ma5ld9");
     			set_style(div5, "min-width", "690px");
     			set_style(div5, "max-width", "919px");
     			set_style(div5, "max-height", "1364px");
     			attr_dev(div5, "data-aspect-ratio", "0.674");
     			attr_dev(div5, "data-min-width", "690");
     			attr_dev(div5, "data-max-width", "919");
-    			add_location(div5, file, 226, 4, 10804);
+    			set_style(div5, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    			add_location(div5, file, 244, 4, 11672);
     			set_style(div6, "padding", "0 0 100% 0");
-    			add_location(div6, file, 233, 4, 11364);
+    			add_location(div6, file, 253, 4, 12334);
     			attr_dev(img3, "id", "g-Bisa-Ular-large-4-img");
-    			attr_dev(img3, "class", "g-aiImg svelte-1xu0tm5");
+    			attr_dev(img3, "class", "g-aiImg svelte-ma5ld9");
     			attr_dev(img3, "alt", "");
     			if (!src_url_equal(img3.src, img3_src_value = "./images/Bisa-Ular-large-4.png")) attr_dev(img3, "src", img3_src_value);
-    			add_location(img3, file, 234, 4, 11409);
+    			add_location(img3, file, 254, 4, 12379);
     			attr_dev(div7, "id", "g-Bisa-Ular-large-4");
-    			attr_dev(div7, "class", "g-artboard svelte-1xu0tm5");
+    			attr_dev(div7, "class", "g-artboard svelte-ma5ld9");
     			set_style(div7, "min-width", "920px");
     			set_style(div7, "max-width", "1399px");
     			set_style(div7, "max-height", "1399px");
     			attr_dev(div7, "data-aspect-ratio", "1");
     			attr_dev(div7, "data-min-width", "920");
     			attr_dev(div7, "data-max-width", "1399");
-    			add_location(div7, file, 232, 4, 11183);
+    			set_style(div7, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    			add_location(div7, file, 251, 4, 12102);
     			set_style(div8, "padding", "0 0 56.25% 0");
-    			add_location(div8, file, 239, 4, 11683);
+    			add_location(div8, file, 260, 4, 12704);
     			attr_dev(img4, "id", "g-Bisa-Ular-xlarge-4-img");
-    			attr_dev(img4, "class", "g-aiImg svelte-1xu0tm5");
+    			attr_dev(img4, "class", "g-aiImg svelte-ma5ld9");
     			attr_dev(img4, "alt", "");
     			if (!src_url_equal(img4.src, img4_src_value = "./images/Bisa-Ular-xlarge-4.png")) attr_dev(img4, "src", img4_src_value);
-    			add_location(img4, file, 240, 4, 11730);
+    			add_location(img4, file, 261, 4, 12751);
     			attr_dev(div9, "id", "g-Bisa-Ular-xlarge-4");
-    			attr_dev(div9, "class", "g-artboard svelte-1xu0tm5");
+    			attr_dev(div9, "class", "g-artboard svelte-ma5ld9");
     			set_style(div9, "min-width", "1400px");
     			attr_dev(div9, "data-aspect-ratio", "1.778");
     			attr_dev(div9, "data-min-width", "1400");
-    			add_location(div9, file, 238, 4, 11553);
+    			set_style(div9, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    			add_location(div9, file, 258, 4, 12523);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div1, anchor);
@@ -4407,6 +4568,27 @@ var app = (function () {
     			append_dev(div9, t8);
     			append_dev(div9, img4);
     		},
+    		p: function update(ctx, dirty) {
+    			if (dirty & /*offset*/ 4) {
+    				set_style(div1, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    			}
+
+    			if (dirty & /*offset*/ 4) {
+    				set_style(div3, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    			}
+
+    			if (dirty & /*offset*/ 4) {
+    				set_style(div5, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    			}
+
+    			if (dirty & /*offset*/ 4) {
+    				set_style(div7, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    			}
+
+    			if (dirty & /*offset*/ 4) {
+    				set_style(div9, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    			}
+    		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(div1);
     			if (detaching) detach_dev(t1);
@@ -4424,14 +4606,14 @@ var app = (function () {
     		block,
     		id: create_if_block_3.name,
     		type: "if",
-    		source: "(212:24) ",
+    		source: "(228:24) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (179:24) 
+    // (190:24) 
     function create_if_block_2(ctx) {
     	let div1;
     	let div0;
@@ -4490,81 +4672,86 @@ var app = (function () {
     			t8 = space();
     			img4 = element("img");
     			set_style(div0, "padding", "0 0 218.75% 0");
-    			add_location(div0, file, 182, 4, 8328);
+    			add_location(div0, file, 194, 4, 8890);
     			attr_dev(img0, "id", "g-Bisa-Ular-smallplus-3-img");
-    			attr_dev(img0, "class", "g-aiImg svelte-1xu0tm5");
+    			attr_dev(img0, "class", "g-aiImg svelte-ma5ld9");
     			attr_dev(img0, "alt", "");
     			if (!src_url_equal(img0.src, img0_src_value = "./images/Bisa-Ular-smallplus-3.png")) attr_dev(img0, "src", img0_src_value);
-    			add_location(img0, file, 183, 4, 8376);
+    			add_location(img0, file, 195, 4, 8938);
     			attr_dev(div1, "id", "g-Bisa-Ular-smallplus-3");
-    			attr_dev(div1, "class", "g-artboard svelte-1xu0tm5");
+    			attr_dev(div1, "class", "g-artboard svelte-ma5ld9");
     			set_style(div1, "max-width", "509px");
     			set_style(div1, "max-height", "1113px");
     			attr_dev(div1, "data-aspect-ratio", "0.457");
     			attr_dev(div1, "data-min-width", "0");
     			attr_dev(div1, "data-max-width", "509");
-    			add_location(div1, file, 181, 4, 8160);
+    			set_style(div1, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    			add_location(div1, file, 192, 4, 8671);
     			set_style(div2, "padding", "0 0 156.8627% 0");
-    			add_location(div2, file, 188, 4, 8718);
+    			add_location(div2, file, 201, 4, 9331);
     			attr_dev(img1, "id", "g-Bisa-Ular-submedium-3-img");
-    			attr_dev(img1, "class", "g-aiImg svelte-1xu0tm5");
+    			attr_dev(img1, "class", "g-aiImg svelte-ma5ld9");
     			attr_dev(img1, "alt", "");
     			if (!src_url_equal(img1.src, img1_src_value = "./images/Bisa-Ular-submedium-3.png")) attr_dev(img1, "src", img1_src_value);
-    			add_location(img1, file, 189, 4, 8768);
+    			add_location(img1, file, 202, 4, 9381);
     			attr_dev(div3, "id", "g-Bisa-Ular-submedium-3");
-    			attr_dev(div3, "class", "g-artboard svelte-1xu0tm5");
+    			attr_dev(div3, "class", "g-artboard svelte-ma5ld9");
     			set_style(div3, "min-width", "510px");
     			set_style(div3, "max-width", "689px");
     			set_style(div3, "max-height", "1081px");
     			attr_dev(div3, "data-aspect-ratio", "0.638");
     			attr_dev(div3, "data-min-width", "510");
     			attr_dev(div3, "data-max-width", "689");
-    			add_location(div3, file, 187, 4, 8531);
+    			set_style(div3, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    			add_location(div3, file, 199, 4, 9093);
     			set_style(div4, "padding", "0 0 148.4058% 0");
-    			add_location(div4, file, 194, 4, 9104);
+    			add_location(div4, file, 208, 4, 9768);
     			attr_dev(img2, "id", "g-Bisa-Ular-medium-3-img");
-    			attr_dev(img2, "class", "g-aiImg svelte-1xu0tm5");
+    			attr_dev(img2, "class", "g-aiImg svelte-ma5ld9");
     			attr_dev(img2, "alt", "");
     			if (!src_url_equal(img2.src, img2_src_value = "./images/Bisa-Ular-medium-3.png")) attr_dev(img2, "src", img2_src_value);
-    			add_location(img2, file, 195, 4, 9154);
+    			add_location(img2, file, 209, 4, 9818);
     			attr_dev(div5, "id", "g-Bisa-Ular-medium-3");
-    			attr_dev(div5, "class", "g-artboard svelte-1xu0tm5");
+    			attr_dev(div5, "class", "g-artboard svelte-ma5ld9");
     			set_style(div5, "min-width", "690px");
     			set_style(div5, "max-width", "919px");
     			set_style(div5, "max-height", "1364px");
     			attr_dev(div5, "data-aspect-ratio", "0.674");
     			attr_dev(div5, "data-min-width", "690");
     			attr_dev(div5, "data-max-width", "919");
-    			add_location(div5, file, 193, 4, 8920);
+    			set_style(div5, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    			add_location(div5, file, 206, 4, 9533);
     			set_style(div6, "padding", "0 0 100% 0");
-    			add_location(div6, file, 200, 4, 9480);
+    			add_location(div6, file, 215, 4, 10195);
     			attr_dev(img3, "id", "g-Bisa-Ular-large-3-img");
-    			attr_dev(img3, "class", "g-aiImg svelte-1xu0tm5");
+    			attr_dev(img3, "class", "g-aiImg svelte-ma5ld9");
     			attr_dev(img3, "alt", "");
     			if (!src_url_equal(img3.src, img3_src_value = "./images/Bisa-Ular-large-3.png")) attr_dev(img3, "src", img3_src_value);
-    			add_location(img3, file, 201, 4, 9525);
+    			add_location(img3, file, 216, 4, 10240);
     			attr_dev(div7, "id", "g-Bisa-Ular-large-3");
-    			attr_dev(div7, "class", "g-artboard svelte-1xu0tm5");
+    			attr_dev(div7, "class", "g-artboard svelte-ma5ld9");
     			set_style(div7, "min-width", "920px");
     			set_style(div7, "max-width", "1399px");
     			set_style(div7, "max-height", "1399px");
     			attr_dev(div7, "data-aspect-ratio", "1");
     			attr_dev(div7, "data-min-width", "920");
     			attr_dev(div7, "data-max-width", "1399");
-    			add_location(div7, file, 199, 4, 9299);
+    			set_style(div7, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    			add_location(div7, file, 213, 4, 9963);
     			set_style(div8, "padding", "0 0 56.25% 0");
-    			add_location(div8, file, 206, 4, 9799);
+    			add_location(div8, file, 222, 4, 10565);
     			attr_dev(img4, "id", "g-Bisa-Ular-xlarge-3-img");
-    			attr_dev(img4, "class", "g-aiImg svelte-1xu0tm5");
+    			attr_dev(img4, "class", "g-aiImg svelte-ma5ld9");
     			attr_dev(img4, "alt", "");
     			if (!src_url_equal(img4.src, img4_src_value = "./images/Bisa-Ular-xlarge-3.png")) attr_dev(img4, "src", img4_src_value);
-    			add_location(img4, file, 207, 4, 9846);
+    			add_location(img4, file, 223, 4, 10612);
     			attr_dev(div9, "id", "g-Bisa-Ular-xlarge-3");
-    			attr_dev(div9, "class", "g-artboard svelte-1xu0tm5");
+    			attr_dev(div9, "class", "g-artboard svelte-ma5ld9");
     			set_style(div9, "min-width", "1400px");
     			attr_dev(div9, "data-aspect-ratio", "1.778");
     			attr_dev(div9, "data-min-width", "1400");
-    			add_location(div9, file, 205, 4, 9669);
+    			set_style(div9, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    			add_location(div9, file, 220, 4, 10384);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div1, anchor);
@@ -4592,6 +4779,27 @@ var app = (function () {
     			append_dev(div9, t8);
     			append_dev(div9, img4);
     		},
+    		p: function update(ctx, dirty) {
+    			if (dirty & /*offset*/ 4) {
+    				set_style(div1, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    			}
+
+    			if (dirty & /*offset*/ 4) {
+    				set_style(div3, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    			}
+
+    			if (dirty & /*offset*/ 4) {
+    				set_style(div5, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    			}
+
+    			if (dirty & /*offset*/ 4) {
+    				set_style(div7, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    			}
+
+    			if (dirty & /*offset*/ 4) {
+    				set_style(div9, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    			}
+    		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(div1);
     			if (detaching) detach_dev(t1);
@@ -4609,14 +4817,14 @@ var app = (function () {
     		block,
     		id: create_if_block_2.name,
     		type: "if",
-    		source: "(179:24) ",
+    		source: "(190:24) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (146:24) 
+    // (152:24) 
     function create_if_block_1(ctx) {
     	let div1;
     	let div0;
@@ -4675,81 +4883,86 @@ var app = (function () {
     			t8 = space();
     			img4 = element("img");
     			set_style(div0, "padding", "0 0 218.75% 0");
-    			add_location(div0, file, 149, 4, 6444);
+    			add_location(div0, file, 156, 4, 6751);
     			attr_dev(img0, "id", "g-Bisa-Ular-smallplus-2-img");
-    			attr_dev(img0, "class", "g-aiImg svelte-1xu0tm5");
+    			attr_dev(img0, "class", "g-aiImg svelte-ma5ld9");
     			attr_dev(img0, "alt", "");
     			if (!src_url_equal(img0.src, img0_src_value = "./images/Bisa-Ular-smallplus-2.png")) attr_dev(img0, "src", img0_src_value);
-    			add_location(img0, file, 150, 4, 6492);
+    			add_location(img0, file, 157, 4, 6799);
     			attr_dev(div1, "id", "g-Bisa-Ular-smallplus-2");
-    			attr_dev(div1, "class", "g-artboard svelte-1xu0tm5");
+    			attr_dev(div1, "class", "g-artboard svelte-ma5ld9");
     			set_style(div1, "max-width", "509px");
     			set_style(div1, "max-height", "1113px");
     			attr_dev(div1, "data-aspect-ratio", "0.457");
     			attr_dev(div1, "data-min-width", "0");
     			attr_dev(div1, "data-max-width", "509");
-    			add_location(div1, file, 148, 4, 6276);
+    			set_style(div1, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    			add_location(div1, file, 154, 4, 6532);
     			set_style(div2, "padding", "0 0 156.8627% 0");
-    			add_location(div2, file, 155, 4, 6834);
+    			add_location(div2, file, 163, 4, 7192);
     			attr_dev(img1, "id", "g-Bisa-Ular-submedium-2-img");
-    			attr_dev(img1, "class", "g-aiImg svelte-1xu0tm5");
+    			attr_dev(img1, "class", "g-aiImg svelte-ma5ld9");
     			attr_dev(img1, "alt", "");
     			if (!src_url_equal(img1.src, img1_src_value = "./images/Bisa-Ular-submedium-2.png")) attr_dev(img1, "src", img1_src_value);
-    			add_location(img1, file, 156, 4, 6884);
+    			add_location(img1, file, 164, 4, 7242);
     			attr_dev(div3, "id", "g-Bisa-Ular-submedium-2");
-    			attr_dev(div3, "class", "g-artboard svelte-1xu0tm5");
+    			attr_dev(div3, "class", "g-artboard svelte-ma5ld9");
     			set_style(div3, "min-width", "510px");
     			set_style(div3, "max-width", "689px");
     			set_style(div3, "max-height", "1081px");
     			attr_dev(div3, "data-aspect-ratio", "0.638");
     			attr_dev(div3, "data-min-width", "510");
     			attr_dev(div3, "data-max-width", "689");
-    			add_location(div3, file, 154, 4, 6647);
+    			set_style(div3, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    			add_location(div3, file, 161, 4, 6954);
     			set_style(div4, "padding", "0 0 148.4058% 0");
-    			add_location(div4, file, 161, 4, 7220);
+    			add_location(div4, file, 170, 4, 7629);
     			attr_dev(img2, "id", "g-Bisa-Ular-medium-2-img");
-    			attr_dev(img2, "class", "g-aiImg svelte-1xu0tm5");
+    			attr_dev(img2, "class", "g-aiImg svelte-ma5ld9");
     			attr_dev(img2, "alt", "");
     			if (!src_url_equal(img2.src, img2_src_value = "./images/Bisa-Ular-medium-2.png")) attr_dev(img2, "src", img2_src_value);
-    			add_location(img2, file, 162, 4, 7270);
+    			add_location(img2, file, 171, 4, 7679);
     			attr_dev(div5, "id", "g-Bisa-Ular-medium-2");
-    			attr_dev(div5, "class", "g-artboard svelte-1xu0tm5");
+    			attr_dev(div5, "class", "g-artboard svelte-ma5ld9");
     			set_style(div5, "min-width", "690px");
     			set_style(div5, "max-width", "919px");
     			set_style(div5, "max-height", "1364px");
     			attr_dev(div5, "data-aspect-ratio", "0.674");
     			attr_dev(div5, "data-min-width", "690");
     			attr_dev(div5, "data-max-width", "919");
-    			add_location(div5, file, 160, 4, 7036);
+    			set_style(div5, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    			add_location(div5, file, 168, 4, 7394);
     			set_style(div6, "padding", "0 0 100% 0");
-    			add_location(div6, file, 167, 4, 7596);
+    			add_location(div6, file, 177, 4, 8056);
     			attr_dev(img3, "id", "g-Bisa-Ular-large-2-img");
-    			attr_dev(img3, "class", "g-aiImg svelte-1xu0tm5");
+    			attr_dev(img3, "class", "g-aiImg svelte-ma5ld9");
     			attr_dev(img3, "alt", "");
     			if (!src_url_equal(img3.src, img3_src_value = "./images/Bisa-Ular-large-2.png")) attr_dev(img3, "src", img3_src_value);
-    			add_location(img3, file, 168, 4, 7641);
+    			add_location(img3, file, 178, 4, 8101);
     			attr_dev(div7, "id", "g-Bisa-Ular-large-2");
-    			attr_dev(div7, "class", "g-artboard svelte-1xu0tm5");
+    			attr_dev(div7, "class", "g-artboard svelte-ma5ld9");
     			set_style(div7, "min-width", "920px");
     			set_style(div7, "max-width", "1399px");
     			set_style(div7, "max-height", "1399px");
     			attr_dev(div7, "data-aspect-ratio", "1");
     			attr_dev(div7, "data-min-width", "920");
     			attr_dev(div7, "data-max-width", "1399");
-    			add_location(div7, file, 166, 4, 7415);
+    			set_style(div7, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    			add_location(div7, file, 175, 4, 7824);
     			set_style(div8, "padding", "0 0 56.25% 0");
-    			add_location(div8, file, 173, 4, 7915);
+    			add_location(div8, file, 184, 4, 8426);
     			attr_dev(img4, "id", "g-Bisa-Ular-xlarge-2-img");
-    			attr_dev(img4, "class", "g-aiImg svelte-1xu0tm5");
+    			attr_dev(img4, "class", "g-aiImg svelte-ma5ld9");
     			attr_dev(img4, "alt", "");
     			if (!src_url_equal(img4.src, img4_src_value = "./images/Bisa-Ular-xlarge-2.png")) attr_dev(img4, "src", img4_src_value);
-    			add_location(img4, file, 174, 4, 7962);
+    			add_location(img4, file, 185, 4, 8473);
     			attr_dev(div9, "id", "g-Bisa-Ular-xlarge-2");
-    			attr_dev(div9, "class", "g-artboard svelte-1xu0tm5");
+    			attr_dev(div9, "class", "g-artboard svelte-ma5ld9");
     			set_style(div9, "min-width", "1400px");
     			attr_dev(div9, "data-aspect-ratio", "1.778");
     			attr_dev(div9, "data-min-width", "1400");
-    			add_location(div9, file, 172, 4, 7785);
+    			set_style(div9, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    			add_location(div9, file, 182, 4, 8245);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div1, anchor);
@@ -4777,6 +4990,27 @@ var app = (function () {
     			append_dev(div9, t8);
     			append_dev(div9, img4);
     		},
+    		p: function update(ctx, dirty) {
+    			if (dirty & /*offset*/ 4) {
+    				set_style(div1, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    			}
+
+    			if (dirty & /*offset*/ 4) {
+    				set_style(div3, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    			}
+
+    			if (dirty & /*offset*/ 4) {
+    				set_style(div5, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    			}
+
+    			if (dirty & /*offset*/ 4) {
+    				set_style(div7, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    			}
+
+    			if (dirty & /*offset*/ 4) {
+    				set_style(div9, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    			}
+    		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(div1);
     			if (detaching) detach_dev(t1);
@@ -4794,14 +5028,14 @@ var app = (function () {
     		block,
     		id: create_if_block_1.name,
     		type: "if",
-    		source: "(146:24) ",
+    		source: "(152:24) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (113:3) {#if index == 0}
+    // (114:3) {#if index == 0}
     function create_if_block(ctx) {
     	let div1;
     	let div0;
@@ -4860,81 +5094,86 @@ var app = (function () {
     			t8 = space();
     			img4 = element("img");
     			set_style(div0, "padding", "0 0 218.75% 0");
-    			add_location(div0, file, 116, 4, 4560);
+    			add_location(div0, file, 118, 4, 4612);
     			attr_dev(img0, "id", "g-Bisa-Ular-smallplus-1-img");
-    			attr_dev(img0, "class", "g-aiImg svelte-1xu0tm5");
+    			attr_dev(img0, "class", "g-aiImg svelte-ma5ld9");
     			attr_dev(img0, "alt", "");
     			if (!src_url_equal(img0.src, img0_src_value = "./images/Bisa-Ular-smallplus-1.png")) attr_dev(img0, "src", img0_src_value);
-    			add_location(img0, file, 117, 4, 4608);
+    			add_location(img0, file, 119, 4, 4660);
     			attr_dev(div1, "id", "g-Bisa-Ular-smallplus-1");
-    			attr_dev(div1, "class", "g-artboard svelte-1xu0tm5");
+    			attr_dev(div1, "class", "g-artboard svelte-ma5ld9");
     			set_style(div1, "max-width", "509px");
     			set_style(div1, "max-height", "1113px");
     			attr_dev(div1, "data-aspect-ratio", "0.457");
     			attr_dev(div1, "data-min-width", "0");
     			attr_dev(div1, "data-max-width", "509");
-    			add_location(div1, file, 115, 4, 4392);
+    			set_style(div1, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    			add_location(div1, file, 116, 4, 4393);
     			set_style(div2, "padding", "0 0 156.8627% 0");
-    			add_location(div2, file, 122, 4, 4950);
+    			add_location(div2, file, 125, 4, 5053);
     			attr_dev(img1, "id", "g-Bisa-Ular-submedium-1-img");
-    			attr_dev(img1, "class", "g-aiImg svelte-1xu0tm5");
+    			attr_dev(img1, "class", "g-aiImg svelte-ma5ld9");
     			attr_dev(img1, "alt", "");
     			if (!src_url_equal(img1.src, img1_src_value = "./images/Bisa-Ular-submedium-1.png")) attr_dev(img1, "src", img1_src_value);
-    			add_location(img1, file, 123, 4, 5000);
+    			add_location(img1, file, 126, 4, 5103);
     			attr_dev(div3, "id", "g-Bisa-Ular-submedium-1");
-    			attr_dev(div3, "class", "g-artboard svelte-1xu0tm5");
+    			attr_dev(div3, "class", "g-artboard svelte-ma5ld9");
     			set_style(div3, "min-width", "510px");
     			set_style(div3, "max-width", "689px");
     			set_style(div3, "max-height", "1081px");
     			attr_dev(div3, "data-aspect-ratio", "0.638");
     			attr_dev(div3, "data-min-width", "510");
     			attr_dev(div3, "data-max-width", "689");
-    			add_location(div3, file, 121, 4, 4763);
+    			set_style(div3, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    			add_location(div3, file, 123, 4, 4815);
     			set_style(div4, "padding", "0 0 148.4058% 0");
-    			add_location(div4, file, 128, 4, 5336);
+    			add_location(div4, file, 132, 4, 5490);
     			attr_dev(img2, "id", "g-Bisa-Ular-medium-1-img");
-    			attr_dev(img2, "class", "g-aiImg svelte-1xu0tm5");
+    			attr_dev(img2, "class", "g-aiImg svelte-ma5ld9");
     			attr_dev(img2, "alt", "");
     			if (!src_url_equal(img2.src, img2_src_value = "./images/Bisa-Ular-medium-1.png")) attr_dev(img2, "src", img2_src_value);
-    			add_location(img2, file, 129, 4, 5386);
+    			add_location(img2, file, 133, 4, 5540);
     			attr_dev(div5, "id", "g-Bisa-Ular-medium-1");
-    			attr_dev(div5, "class", "g-artboard svelte-1xu0tm5");
+    			attr_dev(div5, "class", "g-artboard svelte-ma5ld9");
     			set_style(div5, "min-width", "690px");
     			set_style(div5, "max-width", "919px");
     			set_style(div5, "max-height", "1364px");
     			attr_dev(div5, "data-aspect-ratio", "0.674");
     			attr_dev(div5, "data-min-width", "690");
     			attr_dev(div5, "data-max-width", "919");
-    			add_location(div5, file, 127, 4, 5152);
+    			set_style(div5, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    			add_location(div5, file, 130, 4, 5255);
     			set_style(div6, "padding", "0 0 100% 0");
-    			add_location(div6, file, 134, 4, 5712);
+    			add_location(div6, file, 139, 4, 5917);
     			attr_dev(img3, "id", "g-Bisa-Ular-large-1-img");
-    			attr_dev(img3, "class", "g-aiImg svelte-1xu0tm5");
+    			attr_dev(img3, "class", "g-aiImg svelte-ma5ld9");
     			attr_dev(img3, "alt", "");
     			if (!src_url_equal(img3.src, img3_src_value = "./images/Bisa-Ular-large-1.png")) attr_dev(img3, "src", img3_src_value);
-    			add_location(img3, file, 135, 4, 5757);
+    			add_location(img3, file, 140, 4, 5962);
     			attr_dev(div7, "id", "g-Bisa-Ular-large-1");
-    			attr_dev(div7, "class", "g-artboard svelte-1xu0tm5");
+    			attr_dev(div7, "class", "g-artboard svelte-ma5ld9");
     			set_style(div7, "min-width", "920px");
     			set_style(div7, "max-width", "1399px");
     			set_style(div7, "max-height", "1399px");
     			attr_dev(div7, "data-aspect-ratio", "1");
     			attr_dev(div7, "data-min-width", "920");
     			attr_dev(div7, "data-max-width", "1399");
-    			add_location(div7, file, 133, 4, 5531);
+    			set_style(div7, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    			add_location(div7, file, 137, 4, 5685);
     			set_style(div8, "padding", "0 0 56.25% 0");
-    			add_location(div8, file, 140, 4, 6031);
+    			add_location(div8, file, 146, 4, 6287);
     			attr_dev(img4, "id", "g-Bisa-Ular-xlarge-1-img");
-    			attr_dev(img4, "class", "g-aiImg svelte-1xu0tm5");
+    			attr_dev(img4, "class", "g-aiImg svelte-ma5ld9");
     			attr_dev(img4, "alt", "");
     			if (!src_url_equal(img4.src, img4_src_value = "./images/Bisa-Ular-xlarge-1.png")) attr_dev(img4, "src", img4_src_value);
-    			add_location(img4, file, 141, 4, 6078);
+    			add_location(img4, file, 147, 4, 6334);
     			attr_dev(div9, "id", "g-Bisa-Ular-xlarge-1");
-    			attr_dev(div9, "class", "g-artboard svelte-1xu0tm5");
+    			attr_dev(div9, "class", "g-artboard svelte-ma5ld9");
     			set_style(div9, "min-width", "1400px");
     			attr_dev(div9, "data-aspect-ratio", "1.778");
     			attr_dev(div9, "data-min-width", "1400");
-    			add_location(div9, file, 139, 4, 5901);
+    			set_style(div9, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    			add_location(div9, file, 144, 4, 6106);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div1, anchor);
@@ -4962,6 +5201,27 @@ var app = (function () {
     			append_dev(div9, t8);
     			append_dev(div9, img4);
     		},
+    		p: function update(ctx, dirty) {
+    			if (dirty & /*offset*/ 4) {
+    				set_style(div1, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    			}
+
+    			if (dirty & /*offset*/ 4) {
+    				set_style(div3, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    			}
+
+    			if (dirty & /*offset*/ 4) {
+    				set_style(div5, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    			}
+
+    			if (dirty & /*offset*/ 4) {
+    				set_style(div7, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    			}
+
+    			if (dirty & /*offset*/ 4) {
+    				set_style(div9, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    			}
+    		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(div1);
     			if (detaching) detach_dev(t1);
@@ -4979,7 +5239,7 @@ var app = (function () {
     		block,
     		id: create_if_block.name,
     		type: "if",
-    		source: "(113:3) {#if index == 0}",
+    		source: "(114:3) {#if index == 0}",
     		ctx
     	});
 
@@ -5001,7 +5261,7 @@ var app = (function () {
     		if (/*index*/ ctx[1] == 6) return create_if_block_6;
     		if (/*index*/ ctx[1] == 7) return create_if_block_7;
     		if (/*index*/ ctx[1] == 8) return create_if_block_8;
-    		if (/*index*/ ctx[1] == 9) return create_if_block_9;
+    		if (/*index*/ ctx[1] >= 9) return create_if_block_9;
     	}
 
     	let current_block_type = select_block_type(ctx);
@@ -5013,10 +5273,10 @@ var app = (function () {
     			div0 = element("div");
     			if (if_block) if_block.c();
     			attr_dev(div0, "id", "g-Bisa-Ular-box");
-    			attr_dev(div0, "class", "ai2html svelte-1xu0tm5");
+    			attr_dev(div0, "class", "ai2html svelte-ma5ld9");
     			add_location(div0, file, 111, 3, 4267);
     			attr_dev(div1, "slot", "background");
-    			attr_dev(div1, "class", "svelte-1xu0tm5");
+    			attr_dev(div1, "class", "svelte-ma5ld9");
     			add_location(div1, file, 110, 2, 4240);
     		},
     		m: function mount(target, anchor) {
@@ -5025,7 +5285,9 @@ var app = (function () {
     			if (if_block) if_block.m(div0, null);
     		},
     		p: function update(ctx, dirty) {
-    			if (current_block_type !== (current_block_type = select_block_type(ctx))) {
+    			if (current_block_type === (current_block_type = select_block_type(ctx)) && if_block) {
+    				if_block.p(ctx, dirty);
+    			} else {
     				if (if_block) if_block.d(1);
     				if_block = current_block_type && current_block_type(ctx);
 
@@ -5055,7 +5317,7 @@ var app = (function () {
     	return block;
     }
 
-    // (436:2) 
+    // (489:2) 
     function create_foreground_slot(ctx) {
     	let div;
     	let section0;
@@ -5134,51 +5396,51 @@ var app = (function () {
     			section10 = element("section");
     			p9 = element("p");
     			p9.textContent = "Tepat pukul 12 malam hari itu, saat usia Martinus resmi bertambah, kondisinya membaik. Pendarahan di organ-organ penting mulai berhenti. Ginjalnya pun membaik. Kini, ia telah sembuh dan menjalani hidup normal kembali.";
-    			attr_dev(section0, "class", "svelte-1xu0tm5");
-    			add_location(section0, file, 436, 3, 23220);
-    			attr_dev(p0, "class", "svelte-1xu0tm5");
-    			add_location(p0, file, 438, 4, 23257);
-    			attr_dev(section1, "class", "svelte-1xu0tm5");
-    			add_location(section1, file, 437, 3, 23243);
-    			attr_dev(p1, "class", "svelte-1xu0tm5");
-    			add_location(p1, file, 443, 4, 23477);
-    			attr_dev(section2, "class", "svelte-1xu0tm5");
-    			add_location(section2, file, 442, 3, 23463);
-    			attr_dev(p2, "class", "svelte-1xu0tm5");
-    			add_location(p2, file, 448, 4, 23800);
-    			attr_dev(section3, "class", "svelte-1xu0tm5");
-    			add_location(section3, file, 447, 3, 23786);
-    			attr_dev(p3, "class", "svelte-1xu0tm5");
-    			add_location(p3, file, 453, 4, 24040);
-    			attr_dev(section4, "class", "svelte-1xu0tm5");
-    			add_location(section4, file, 452, 3, 24026);
-    			attr_dev(p4, "class", "svelte-1xu0tm5");
-    			add_location(p4, file, 458, 4, 24251);
-    			attr_dev(section5, "class", "svelte-1xu0tm5");
-    			add_location(section5, file, 457, 3, 24237);
-    			attr_dev(p5, "class", "svelte-1xu0tm5");
-    			add_location(p5, file, 463, 4, 24607);
-    			attr_dev(section6, "class", "svelte-1xu0tm5");
-    			add_location(section6, file, 462, 3, 24593);
-    			attr_dev(p6, "class", "svelte-1xu0tm5");
-    			add_location(p6, file, 468, 4, 24849);
-    			attr_dev(section7, "class", "svelte-1xu0tm5");
-    			add_location(section7, file, 467, 3, 24835);
-    			attr_dev(p7, "class", "svelte-1xu0tm5");
-    			add_location(p7, file, 473, 4, 25276);
-    			attr_dev(section8, "class", "svelte-1xu0tm5");
-    			add_location(section8, file, 472, 3, 25262);
-    			attr_dev(p8, "class", "svelte-1xu0tm5");
-    			add_location(p8, file, 478, 4, 25593);
-    			attr_dev(section9, "class", "svelte-1xu0tm5");
-    			add_location(section9, file, 477, 3, 25579);
-    			attr_dev(p9, "class", "svelte-1xu0tm5");
-    			add_location(p9, file, 483, 4, 25848);
-    			attr_dev(section10, "class", "svelte-1xu0tm5");
-    			add_location(section10, file, 482, 3, 25834);
+    			attr_dev(section0, "class", "svelte-ma5ld9");
+    			add_location(section0, file, 489, 3, 25773);
+    			attr_dev(p0, "class", "svelte-ma5ld9");
+    			add_location(p0, file, 491, 4, 25810);
+    			attr_dev(section1, "class", "svelte-ma5ld9");
+    			add_location(section1, file, 490, 3, 25796);
+    			attr_dev(p1, "class", "svelte-ma5ld9");
+    			add_location(p1, file, 496, 4, 26030);
+    			attr_dev(section2, "class", "svelte-ma5ld9");
+    			add_location(section2, file, 495, 3, 26016);
+    			attr_dev(p2, "class", "svelte-ma5ld9");
+    			add_location(p2, file, 501, 4, 26353);
+    			attr_dev(section3, "class", "svelte-ma5ld9");
+    			add_location(section3, file, 500, 3, 26339);
+    			attr_dev(p3, "class", "svelte-ma5ld9");
+    			add_location(p3, file, 506, 4, 26593);
+    			attr_dev(section4, "class", "svelte-ma5ld9");
+    			add_location(section4, file, 505, 3, 26579);
+    			attr_dev(p4, "class", "svelte-ma5ld9");
+    			add_location(p4, file, 511, 4, 26804);
+    			attr_dev(section5, "class", "svelte-ma5ld9");
+    			add_location(section5, file, 510, 3, 26790);
+    			attr_dev(p5, "class", "svelte-ma5ld9");
+    			add_location(p5, file, 516, 4, 27160);
+    			attr_dev(section6, "class", "svelte-ma5ld9");
+    			add_location(section6, file, 515, 3, 27146);
+    			attr_dev(p6, "class", "svelte-ma5ld9");
+    			add_location(p6, file, 521, 4, 27402);
+    			attr_dev(section7, "class", "svelte-ma5ld9");
+    			add_location(section7, file, 520, 3, 27388);
+    			attr_dev(p7, "class", "svelte-ma5ld9");
+    			add_location(p7, file, 526, 4, 27829);
+    			attr_dev(section8, "class", "svelte-ma5ld9");
+    			add_location(section8, file, 525, 3, 27815);
+    			attr_dev(p8, "class", "svelte-ma5ld9");
+    			add_location(p8, file, 531, 4, 28146);
+    			attr_dev(section9, "class", "svelte-ma5ld9");
+    			add_location(section9, file, 530, 3, 28132);
+    			attr_dev(p9, "class", "svelte-ma5ld9");
+    			add_location(p9, file, 536, 4, 28401);
+    			attr_dev(section10, "class", "svelte-ma5ld9");
+    			add_location(section10, file, 535, 3, 28387);
     			attr_dev(div, "slot", "foreground");
-    			attr_dev(div, "class", "svelte-1xu0tm5");
-    			add_location(div, file, 435, 2, 23192);
+    			attr_dev(div, "class", "svelte-ma5ld9");
+    			add_location(div, file, 488, 2, 25745);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -5223,7 +5485,7 @@ var app = (function () {
     		block,
     		id: create_foreground_slot.name,
     		type: "slot",
-    		source: "(436:2) ",
+    		source: "(489:2) ",
     		ctx
     	});
 
@@ -5426,12 +5688,12 @@ var app = (function () {
     			set_style(div0, "padding", "0 0 100% 0");
     			add_location(div0, file, 53, 2, 2172);
     			attr_dev(img0, "id", "g-Bisa-Ular-smallplus-cover-img");
-    			attr_dev(img0, "class", "g-aiImg svelte-1xu0tm5");
+    			attr_dev(img0, "class", "g-aiImg svelte-ma5ld9");
     			attr_dev(img0, "alt", "");
     			if (!src_url_equal(img0.src, img0_src_value = "./images/Bisa-Ular-smallplus-cover.png")) attr_dev(img0, "src", img0_src_value);
     			add_location(img0, file, 54, 2, 2215);
     			attr_dev(div1, "id", "g-Bisa-Ular-smallplus-cover");
-    			attr_dev(div1, "class", "g-artboard svelte-1xu0tm5");
+    			attr_dev(div1, "class", "g-artboard svelte-ma5ld9");
     			set_style(div1, "max-width", "509px");
     			set_style(div1, "max-height", "509px");
     			attr_dev(div1, "data-aspect-ratio", "1");
@@ -5441,12 +5703,12 @@ var app = (function () {
     			set_style(div2, "padding", "0 0 62.7451% 0");
     			add_location(div2, file, 59, 2, 2567);
     			attr_dev(img1, "id", "g-Bisa-Ular-submedium-cover-img");
-    			attr_dev(img1, "class", "g-aiImg svelte-1xu0tm5");
+    			attr_dev(img1, "class", "g-aiImg svelte-ma5ld9");
     			attr_dev(img1, "alt", "");
     			if (!src_url_equal(img1.src, img1_src_value = "./images/Bisa-Ular-submedium-cover.png")) attr_dev(img1, "src", img1_src_value);
     			add_location(img1, file, 60, 2, 2614);
     			attr_dev(div3, "id", "g-Bisa-Ular-submedium-cover");
-    			attr_dev(div3, "class", "g-artboard svelte-1xu0tm5");
+    			attr_dev(div3, "class", "g-artboard svelte-ma5ld9");
     			set_style(div3, "min-width", "510px");
     			set_style(div3, "max-width", "689px");
     			set_style(div3, "max-height", "432px");
@@ -5457,12 +5719,12 @@ var app = (function () {
     			set_style(div4, "padding", "0 0 46.3768% 0");
     			add_location(div4, file, 65, 2, 2960);
     			attr_dev(img2, "id", "g-Bisa-Ular-medium-cover-img");
-    			attr_dev(img2, "class", "g-aiImg svelte-1xu0tm5");
+    			attr_dev(img2, "class", "g-aiImg svelte-ma5ld9");
     			attr_dev(img2, "alt", "");
     			if (!src_url_equal(img2.src, img2_src_value = "./images/Bisa-Ular-medium-cover.png")) attr_dev(img2, "src", img2_src_value);
     			add_location(img2, file, 66, 2, 3007);
     			attr_dev(div5, "id", "g-Bisa-Ular-medium-cover");
-    			attr_dev(div5, "class", "g-artboard svelte-1xu0tm5");
+    			attr_dev(div5, "class", "g-artboard svelte-ma5ld9");
     			set_style(div5, "min-width", "690px");
     			set_style(div5, "max-width", "919px");
     			set_style(div5, "max-height", "426px");
@@ -5473,12 +5735,12 @@ var app = (function () {
     			set_style(div6, "padding", "0 0 34.6739% 0");
     			add_location(div6, file, 71, 2, 3347);
     			attr_dev(img3, "id", "g-Bisa-Ular-large-cover-img");
-    			attr_dev(img3, "class", "g-aiImg svelte-1xu0tm5");
+    			attr_dev(img3, "class", "g-aiImg svelte-ma5ld9");
     			attr_dev(img3, "alt", "");
     			if (!src_url_equal(img3.src, img3_src_value = "./images/Bisa-Ular-large-cover.png")) attr_dev(img3, "src", img3_src_value);
     			add_location(img3, file, 72, 3, 3395);
     			attr_dev(div7, "id", "g-Bisa-Ular-large-cover");
-    			attr_dev(div7, "class", "g-artboard svelte-1xu0tm5");
+    			attr_dev(div7, "class", "g-artboard svelte-ma5ld9");
     			set_style(div7, "min-width", "920px");
     			set_style(div7, "max-width", "1399px");
     			set_style(div7, "max-height", "485px");
@@ -5489,28 +5751,28 @@ var app = (function () {
     			set_style(div8, "padding", "0 0 22.3929% 0");
     			add_location(div8, file, 77, 2, 3680);
     			attr_dev(img4, "id", "g-Bisa-Ular-xlarge-cover-img");
-    			attr_dev(img4, "class", "g-aiImg svelte-1xu0tm5");
+    			attr_dev(img4, "class", "g-aiImg svelte-ma5ld9");
     			attr_dev(img4, "alt", "");
     			if (!src_url_equal(img4.src, img4_src_value = "./images/Bisa-Ular-xlarge-cover.png")) attr_dev(img4, "src", img4_src_value);
     			add_location(img4, file, 78, 3, 3728);
     			attr_dev(div9, "id", "g-Bisa-Ular-xlarge-cover");
-    			attr_dev(div9, "class", "g-artboard svelte-1xu0tm5");
+    			attr_dev(div9, "class", "g-artboard svelte-ma5ld9");
     			set_style(div9, "min-width", "1400px");
     			attr_dev(div9, "data-aspect-ratio", "4.466");
     			attr_dev(div9, "data-min-width", "1400");
     			add_location(div9, file, 76, 2, 3548);
     			attr_dev(div10, "id", "g-Bisa-Ular-box");
-    			attr_dev(div10, "class", "ai2html svelte-1xu0tm5");
+    			attr_dev(div10, "class", "ai2html svelte-ma5ld9");
     			add_location(div10, file, 50, 1, 1925);
     			set_style(div, "display", "contents");
     			set_style(div, "--headerBackground", /*headerBackground*/ ctx[8]);
     			set_style(div, "--titleColor", /*titleColor*/ ctx[9]);
     			set_style(div, "--subtitleColor", /*subtitleColor*/ ctx[10]);
     			set_style(div, "--subheadColor", /*subheadColor*/ ctx[11]);
-    			attr_dev(div11, "class", "divider svelte-1xu0tm5");
+    			attr_dev(div11, "class", "divider svelte-ma5ld9");
     			add_location(div11, file, 99, 1, 4106);
-    			attr_dev(div12, "class", "divider svelte-1xu0tm5");
-    			add_location(div12, file, 490, 1, 26122);
+    			attr_dev(div12, "class", "divider svelte-ma5ld9");
+    			add_location(div12, file, 543, 1, 28675);
     			set_style(div_1, "display", "contents");
     			set_style(div_1, "--font-color", "#f9f9e1");
     			set_style(div_2, "display", "contents");
@@ -5572,7 +5834,7 @@ var app = (function () {
     		p: function update(ctx, [dirty]) {
     			const scroller_changes = {};
 
-    			if (dirty & /*$$scope, index*/ 524290) {
+    			if (dirty & /*$$scope, offset, index*/ 524294) {
     				scroller_changes.$$scope = { dirty, ctx };
     			}
 
