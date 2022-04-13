@@ -12,6 +12,7 @@
 
     const fetchData = (async () => {
         const result = await getDeduktif(ihttp.URI_ARTICLE_LIST, {size: 1});
+        console.log(result.data)
         return await result.data;
     })()
 

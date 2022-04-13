@@ -162,7 +162,12 @@ const move = direction => {
 
     @media only screen /*xtrasmall*/
 	and (max-width: 575px) {
-
+        .nav_prev {
+            display: none;
+        }
+        .nav_next {
+            display: none;
+        }
 
 	}
 	@media only screen /*small*/
