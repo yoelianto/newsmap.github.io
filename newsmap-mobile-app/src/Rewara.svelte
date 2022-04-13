@@ -5,11 +5,9 @@
 
     const fetchData = (async () => {
         const result = await get(ihttp.URI_REWARA_LIST, {size: 5});
-        console.log(result.data)
         return await result.data;
     })()
 
-    console.log(`${process['env']['URL_IMAGE']}`)
 
     export let title
     

@@ -1,16 +1,16 @@
 <script context="module">
 	import { Link } from "svelte-navigator";
-    import interact from 'interactjs'
+    import interact from 'interactjs';
+    
 </script>
 
 <script>
     import { get } from "./api";
     import * as ihttp from './constants/initialHttp';
-    // import { onMount } from 'svelte'
+    import { onMount } from 'svelte'
 
     const fetchData = (async () => {
         const result = await get(ihttp.URI_ARTICLE_LIST, {size: 3});
-        console.log(result.data)
         return await result.data;
     })()
 
@@ -21,8 +21,11 @@
     let width = document.body.clientWidth
     let height = document.body.clientHeight
 
+
     //mobile
     if (width < height && width < 768) {
+
+
         interact('.swipe[data-status="current"]').draggable({
         listeners: {
             start(event) {
@@ -58,25 +61,24 @@
                         event.target.nextElementSibling.setAttribute('data-status', 'current');
                     } else if (event.target.id == 2) {
                         let swipe = document.querySelectorAll('.swipe')
-                        console.log(swipe)
-                        swipe.forEach((item) => {
+                        swipe.forEach((item, index) => {
                             item.style.transition =`transform 0ms ease-in-out`
-                            item.style.transform = `translate(0px) rotate(0deg)`
+                            item.style.transform = `translate(${index*10}px, ${index*10}px) rotate(0deg)`
                             item.setAttribute('data-status', 'waiting')                    
                         })
                         swipe[0].setAttribute('data-status', 'current')
                     }
                     
                     position.x = 0
+                    position.y = 0
                 } else {
                     position.x = 0
+                    position.y = 0
 
                     event.target.style.transform = 
                     `translate(${position.x}px) rotate(${position.x * 0.05}deg)`
                     event.target.style.transition =
                     `transform 100ms ease-in-out`
-
-                    console.log('not-moved', moved)
                 }
                 
             }
@@ -100,21 +102,20 @@
     {:then data}
 
     <div class="inner-container">
-        <div class="icon">
-            <i class="fas fa-long-arrow-alt-left"></i>
-            <i class="far fa-hand-pointer"></i>
-            <i class="fas fa-long-arrow-alt-right"></i>
-        </div>
         
         {#each data as d, i}
 
-        <div class='swipe' data-dragging='false' data-status="{i === 0 ? 'current' : 'waiting' }" id={i} style="z-index:{3-i}">
+        <div class='swipe'
+            data-dragging='false'
+            data-status="{i === 0 ? 'current' : 'waiting' }"
+            id={i}
+            style="z-index:{3-i};transform:translate({i * 10}px, {i * 10}px)">
                 <Link class="card-link" to={`/article/${d.slug}`}>
                     <div class="card" style="z-index:{3-i}">
                         <img class="thumb" src={`${process['env']['URL_IMAGE']}news/${d.thumbnail}`} alt="" >
                         <div class="bottom"></div>
                     <div class="inner-card">
-                        <div class="sub-title">Original Jurno</div>
+                        <div class="sub-title">oleh {d.author_name}</div>
                         <div class="card-title">{d.title}</div>
                     </div>
                 </div>
@@ -211,7 +212,7 @@
     }
     @media only screen /*xtrasmall*/
 	and (max-width: 575px) {
-
+        
 
 	}
 	@media only screen /*small*/
