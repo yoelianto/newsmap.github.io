@@ -133,7 +133,7 @@
 			params={paramsDaerah}
 		/>
 		<Video
-			title='SHORT VIDEOS'
+			title='VIDEO'
 			--fontfamily1 ={fontfamily1}
 			--fontfamily2={fontfamily2}
 		/>

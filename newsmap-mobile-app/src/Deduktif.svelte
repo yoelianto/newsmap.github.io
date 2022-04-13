@@ -1,7 +1,7 @@
 <script>
     //export let title;
     export let author;
-    let deduktifurl = "https://newsmap.id/article/";
+    // let deduktifurl = "https://newsmap.id/article/";
 
     //export let  authorprofileimage, authorprofilealt;
 
@@ -14,6 +14,21 @@
         const result = await getDeduktif(ihttp.URI_ARTICLE_LIST, {size: 1});
         return await result.data;
     })()
+
+    let width = document.body.clientWidth
+    let truncNum
+
+    if (width < 575) {
+        truncNum = 75
+    } else if (width < 767 && width >= 576) {
+        truncNum = 100
+    } else if (width < 991 && width >= 768) {
+        truncNum = 100
+    } else if (width < 1199 && width >= 992) {
+        truncNum = 100
+    } else if (width >= 1200 ) {
+        truncNum = 280
+    }
 
     // $:console.log(fetchData)
 </script>
@@ -33,7 +48,7 @@
                 </div>
                 <div class="right">
                     <div class="excerpt">
-                        {@html truncText(stringToDom(d.is_custom_html ? d.html_body : d.article))}
+                        {@html truncText(stringToDom(d.is_custom_html ? d.html_body : d.article),truncNum)}
                     </div>
                 </div>
             </div>
@@ -69,7 +84,7 @@
         font-size:1.5rem;
         margin-left: 6%;
         margin-top: 1rem;
-        margin-bottom:40vw;
+        margin-bottom:30vw;
         color: var(--color-brand-darkblue);
     }
     .container {
@@ -100,9 +115,11 @@
     }
     .contentbot{
         display: flex;
-        justify-content: space-around;
         margin-bottom:1rem;
         margin-top:0.5rem;
+        width: 88vw;
+        margin-left: auto;
+        margin-right: auto;
     }
     .right {
         width:70%;
@@ -132,7 +149,7 @@
     }
     .header{
         position: absolute;
-        width: 100%;
+        height: 100%;
         left:0;
     }
     .detail {
@@ -156,6 +173,8 @@
     }
     .excerpt {
         font-size: 0.8rem;
+        width: 100%;
+        white-space: normal;
     }
     .profile {
         position: relative;
@@ -215,6 +234,7 @@
         .title {
             font-size:2rem;
             margin-left:0;
+            line-height: 2rem;
         }
         .container {
             max-width:1100px;
@@ -255,10 +275,16 @@
             margin-bottom: 1.5rem;
         }
         .left {
-            justify-content: flex-end;
+            justify-content: center;
+            width: 25%;
         }
-        .right {
-            margin-left: 1rem;
+        .contentbot {
+            width: 50vw;
+        }
+        .excerpt {
+            width: 100%;
+            white-space: normal;
+            font-size: 1rem;
         }
 	}
 </style>
