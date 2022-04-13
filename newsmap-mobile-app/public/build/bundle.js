@@ -32029,7 +32029,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (56:12) {:catch error}
+    // (59:12) {:catch error}
     function create_catch_block$5(ctx) {
     	let p;
 
@@ -32037,7 +32037,7 @@ var app = (function () {
     		c: function create() {
     			p = element("p");
     			p.textContent = "An error occurred!";
-    			add_location(p, file$9, 56, 16, 1784);
+    			add_location(p, file$9, 59, 16, 1934);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -32052,14 +32052,14 @@ var app = (function () {
     		block,
     		id: create_catch_block$5.name,
     		type: "catch",
-    		source: "(56:12) {:catch error}",
+    		source: "(59:12) {:catch error}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (44:12) {:then data}
+    // (47:12) {:then data}
     function create_then_block$5(ctx) {
     	let each_1_anchor;
     	let each_value = /*data*/ ctx[12];
@@ -32120,14 +32120,14 @@ var app = (function () {
     		block,
     		id: create_then_block$5.name,
     		type: "then",
-    		source: "(44:12) {:then data}",
+    		source: "(47:12) {:then data}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (45:16) {#each data as d}
+    // (48:16) {#each data as d}
     function create_each_block$4(ctx) {
     	let a;
     	let div;
@@ -32153,18 +32153,18 @@ var app = (function () {
     			t2 = space();
     			p1 = element("p");
     			t3 = space();
-    			attr_dev(img, "class", "imgthumb svelte-u3fxp5");
+    			attr_dev(img, "class", "imgthumb svelte-9fcm01");
     			if (!src_url_equal(img.src, img_src_value = /*d*/ ctx[13].origin_images)) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", /*d*/ ctx[13].title);
-    			add_location(img, file$9, 47, 24, 1405);
-    			attr_dev(p0, "class", "author svelte-u3fxp5");
-    			add_location(p0, file$9, 48, 24, 1491);
-    			attr_dev(p1, "class", "article-title svelte-u3fxp5");
-    			add_location(p1, file$9, 49, 24, 1548);
-    			attr_dev(div, "class", "news svelte-u3fxp5");
-    			add_location(div, file$9, 46, 20, 1361);
+    			add_location(img, file$9, 50, 24, 1555);
+    			attr_dev(p0, "class", "author svelte-9fcm01");
+    			add_location(p0, file$9, 51, 24, 1641);
+    			attr_dev(p1, "class", "article-title svelte-9fcm01");
+    			add_location(p1, file$9, 52, 24, 1698);
+    			attr_dev(div, "class", "news svelte-9fcm01");
+    			add_location(div, file$9, 49, 20, 1511);
     			attr_dev(a, "href", /*d*/ ctx[13].source_url);
-    			add_location(a, file$9, 45, 16, 1316);
+    			add_location(a, file$9, 48, 16, 1466);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, a, anchor);
@@ -32188,14 +32188,14 @@ var app = (function () {
     		block,
     		id: create_each_block$4.name,
     		type: "each",
-    		source: "(45:16) {#each data as d}",
+    		source: "(48:16) {#each data as d}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (42:30)               <p>...waiting</p>              {:then data}
+    // (45:30)               <p>...waiting</p>              {:then data}
     function create_pending_block$5(ctx) {
     	let p;
 
@@ -32203,7 +32203,7 @@ var app = (function () {
     		c: function create() {
     			p = element("p");
     			p.textContent = "...waiting";
-    			add_location(p, file$9, 42, 12, 1220);
+    			add_location(p, file$9, 45, 12, 1370);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -32218,7 +32218,7 @@ var app = (function () {
     		block,
     		id: create_pending_block$5.name,
     		type: "pending",
-    		source: "(42:30)               <p>...waiting</p>              {:then data}",
+    		source: "(45:30)               <p>...waiting</p>              {:then data}",
     		ctx
     	});
 
@@ -32226,18 +32226,20 @@ var app = (function () {
     }
 
     function create_fragment$9(ctx) {
+    	let link;
+    	let t0;
     	let div2;
     	let p;
-    	let t0;
     	let t1;
+    	let t2;
     	let div1;
     	let div0;
-    	let t2;
-    	let button0;
     	let t3;
+    	let button0;
+    	let i0;
     	let t4;
     	let button1;
-    	let t5;
+    	let i1;
     	let mounted;
     	let dispose;
 
@@ -32257,56 +32259,67 @@ var app = (function () {
 
     	const block = {
     		c: function create() {
+    			link = element("link");
+    			t0 = space();
     			div2 = element("div");
     			p = element("p");
-    			t0 = text$1(/*title*/ ctx[0]);
-    			t1 = space();
+    			t1 = text$1(/*title*/ ctx[0]);
+    			t2 = space();
     			div1 = element("div");
     			div0 = element("div");
     			info.block.c();
-    			t2 = space();
+    			t3 = space();
     			button0 = element("button");
-    			t3 = text$1("prev");
+    			i0 = element("i");
     			t4 = space();
     			button1 = element("button");
-    			t5 = text$1("next");
-    			attr_dev(p, "class", "title svelte-u3fxp5");
-    			add_location(p, file$9, 38, 4, 1037);
-    			attr_dev(div0, "class", "slider svelte-u3fxp5");
+    			i1 = element("i");
+    			attr_dev(link, "rel", "stylesheet");
+    			attr_dev(link, "href", "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
+    			add_location(link, file$9, 37, 4, 1025);
+    			attr_dev(p, "class", "title svelte-9fcm01");
+    			add_location(p, file$9, 41, 4, 1187);
+    			attr_dev(div0, "class", "slider svelte-9fcm01");
     			set_style(div0, "transform", "translateX(" + /*offset*/ ctx[1] + "px)");
-    			add_location(div0, file$9, 40, 8, 1111);
+    			add_location(div0, file$9, 43, 8, 1261);
+    			attr_dev(i0, "class", "fa fa-angle-left svelte-9fcm01");
+    			add_location(i0, file$9, 63, 12, 2107);
     			attr_dev(button0, "type", "button");
-    			attr_dev(button0, "class", "nav_prev svelte-u3fxp5");
+    			attr_dev(button0, "class", "nav_prev svelte-9fcm01");
     			button0.disabled = /*atStart*/ ctx[2];
-    			add_location(button0, file$9, 59, 8, 1857);
+    			add_location(button0, file$9, 62, 8, 2007);
+    			attr_dev(i1, "class", "fa fa-angle-right svelte-9fcm01");
+    			add_location(i1, file$9, 66, 12, 2266);
     			attr_dev(button1, "type", "button");
-    			attr_dev(button1, "class", "nav_next svelte-u3fxp5");
+    			attr_dev(button1, "class", "nav_next svelte-9fcm01");
     			button1.disabled = /*atEnd*/ ctx[3];
-    			add_location(button1, file$9, 60, 8, 1966);
-    			attr_dev(div1, "class", "slider-container svelte-u3fxp5");
-    			add_location(div1, file$9, 39, 4, 1071);
-    			attr_dev(div2, "class", "container svelte-u3fxp5");
-    			add_location(div2, file$9, 37, 0, 1008);
+    			add_location(button1, file$9, 65, 8, 2169);
+    			attr_dev(div1, "class", "slider-container svelte-9fcm01");
+    			add_location(div1, file$9, 42, 4, 1221);
+    			attr_dev(div2, "class", "container svelte-9fcm01");
+    			add_location(div2, file$9, 40, 0, 1158);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
+    			append_dev(document.head, link);
+    			insert_dev(target, t0, anchor);
     			insert_dev(target, div2, anchor);
     			append_dev(div2, p);
-    			append_dev(p, t0);
-    			append_dev(div2, t1);
+    			append_dev(p, t1);
+    			append_dev(div2, t2);
     			append_dev(div2, div1);
     			append_dev(div1, div0);
     			info.block.m(div0, info.anchor = null);
     			info.mount = () => div0;
     			info.anchor = null;
-    			append_dev(div1, t2);
+    			append_dev(div1, t3);
     			append_dev(div1, button0);
-    			append_dev(button0, t3);
+    			append_dev(button0, i0);
     			append_dev(div1, t4);
     			append_dev(div1, button1);
-    			append_dev(button1, t5);
+    			append_dev(button1, i1);
 
     			if (!mounted) {
     				dispose = [
@@ -32319,7 +32332,7 @@ var app = (function () {
     		},
     		p: function update(new_ctx, [dirty]) {
     			ctx = new_ctx;
-    			if (dirty & /*title*/ 1) set_data_dev(t0, /*title*/ ctx[0]);
+    			if (dirty & /*title*/ 1) set_data_dev(t1, /*title*/ ctx[0]);
     			update_await_block_branch(info, ctx, dirty);
 
     			if (dirty & /*offset*/ 2) {
@@ -32337,6 +32350,8 @@ var app = (function () {
     		i: noop$5,
     		o: noop$5,
     		d: function destroy(detaching) {
+    			detach_dev(link);
+    			if (detaching) detach_dev(t0);
     			if (detaching) detach_dev(div2);
     			info.block.d();
     			info.token = null;
@@ -32367,7 +32382,7 @@ var app = (function () {
     	validate_slots('News', slots, []);
     	let { title = '' } = $$props;
     	let { params = {} } = $$props;
-    	let { scrollBy = 1 } = $$props;
+    	let { scrollBy = 2 } = $$props;
     	const per_page = 5;
 
     	const fetchData = (async () => {

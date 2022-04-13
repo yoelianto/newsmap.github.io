@@ -5,7 +5,7 @@ import {truncText, stringToDom} from './helper';
 
 export let title = ''
 export let params = {}
-export let scrollBy = 1;
+export let scrollBy = 2;
 export const per_page = 5;
 
 const fetchData = (async () => {
@@ -34,6 +34,9 @@ const move = direction => {
 };
 
 </script>
+<svelte:head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</svelte:head>
 
 <div class="container">
     <p class="title">{title}</p>
@@ -57,8 +60,12 @@ const move = direction => {
                 <p>An error occurred!</p>
             {/await}
         </div>
-        <button type="button" class="nav_prev" disabled={atStart} on:click="{() => move(-1)}">prev</button>
-        <button type="button" class="nav_next" disabled={atEnd} on:click="{() => move(1)}">next</button>
+        <button type="button" class="nav_prev" disabled={atStart} on:click="{() => move(-1)}">
+            <i class="fa fa-angle-left" ></i>
+        </button>
+        <button type="button" class="nav_next" disabled={atEnd} on:click="{() => move(1)}">
+            <i class="fa fa-angle-right" ></i>
+        </button>
     </div>
 </div>
 
@@ -81,28 +88,23 @@ const move = direction => {
         margin-left: 6%;
         display: flex;
         position: relative;
+        transition: transform 200ms ease-in-out;
     }
     .nav_prev {
         position: absolute;
         top: 30%;
         z-index: 9999;
-        left: 25px;
+        left: 15px;
         width: 30px;
         height: 30px;
         background: #fff;
         color: #000;
         text-decoration: none;
-        font-size: 0;
         cursor: pointer;
-        background-image: url(../image/arrow.svg);
-        background-repeat: no-repeat;
-        background-position: center center;
-        -webkit-transform: translate(-50%,-50%) rotate(-90deg);
-        -ms-transform: translate(-50%,-50%) rotate(-90deg);
-        transform: translate(-50%,-50%) rotate(-90deg);
         border-radius: 50%;
-        border: none;
-        outline: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .nav_next {
@@ -113,18 +115,15 @@ const move = direction => {
         height: 30px;
         background: #fff;
         color: #252154;
-        font-size: 0;
         cursor: pointer;
         right: 15px;
-        background-image: url(../image/arrow.svg);
-        background-repeat: no-repeat;
-        background-position: center center;
-        -webkit-transform: translate(50%,-50%) rotate(90deg);
-        -ms-transform: translate(50%,-50%) rotate(90deg);
-        transform: translate(50%,-50%) rotate(90deg);
         border-radius: 50%;
-        border: none;
-        outline: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .fa {
+        margin: 0;
     }
     .news {
         margin-right:0.8rem;
