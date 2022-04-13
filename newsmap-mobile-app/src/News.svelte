@@ -5,6 +5,8 @@ import {truncText, stringToDom} from './helper';
 
 export let title = ''
 export let params = {}
+export let scrollBy = 1;
+export const per_page = 5;
 
 const fetchData = (async () => {
     const result = await get(ihttp.URI_NEWS_LIST, {...params, media_type: 'print,online'});
@@ -16,12 +18,27 @@ const fetchData = (async () => {
 //     return await response.json()
 // 	})()
 
+const paginationFactor = 95;
+const totalPaginationPixels = scrollBy * paginationFactor;
+
+$: offset = 0;
+$: atStart = offset === 0;
+$: atEnd = offset <= paginationFactor * (per_page - scrollBy) * -1;
+
+const move = direction => {
+    if (direction > 0 && !atEnd) {
+        offset -= totalPaginationPixels;
+    } else if (direction < 0 && !atStart) {
+        offset += totalPaginationPixels;
+    }
+};
+
 </script>
 
 <div class="container">
     <p class="title">{title}</p>
     <div class="slider-container">
-        <div class="slider">
+        <div class="slider" style="transform: translateX({offset}px);">
             {#await fetchData}
             <p>...waiting</p>
             {:then data}
@@ -40,6 +57,8 @@ const fetchData = (async () => {
                 <p>An error occurred!</p>
             {/await}
         </div>
+        <button type="button" class="nav_prev" disabled={atStart} on:click="{() => move(-1)}">prev</button>
+        <button type="button" class="nav_next" disabled={atEnd} on:click="{() => move(1)}">next</button>
     </div>
 </div>
 
@@ -55,11 +74,57 @@ const fetchData = (async () => {
     .slider-container {
         overflow-x: scroll;
         overflow-y:hidden;
-        white-space: nowrap;  
+        white-space: nowrap;
+        position: relative;
     }
     .slider {
         margin-left: 6%;
         display: flex;
+        position: relative;
+    }
+    .nav_prev {
+        position: absolute;
+        top: 30%;
+        z-index: 9999;
+        left: 25px;
+        width: 30px;
+        height: 30px;
+        background: #fff;
+        color: #000;
+        text-decoration: none;
+        font-size: 0;
+        cursor: pointer;
+        background-image: url(../image/arrow.svg);
+        background-repeat: no-repeat;
+        background-position: center center;
+        -webkit-transform: translate(-50%,-50%) rotate(-90deg);
+        -ms-transform: translate(-50%,-50%) rotate(-90deg);
+        transform: translate(-50%,-50%) rotate(-90deg);
+        border-radius: 50%;
+        border: none;
+        outline: none;
+    }
+
+    .nav_next {
+        position: absolute;
+        top: 30%;
+        z-index: 9999;
+        width: 30px;
+        height: 30px;
+        background: #fff;
+        color: #252154;
+        font-size: 0;
+        cursor: pointer;
+        right: 15px;
+        background-image: url(../image/arrow.svg);
+        background-repeat: no-repeat;
+        background-position: center center;
+        -webkit-transform: translate(50%,-50%) rotate(90deg);
+        -ms-transform: translate(50%,-50%) rotate(90deg);
+        transform: translate(50%,-50%) rotate(90deg);
+        border-radius: 50%;
+        border: none;
+        outline: none;
     }
     .news {
         margin-right:0.8rem;
@@ -119,6 +184,7 @@ const fetchData = (async () => {
         .slider {
             margin-left:0;
         }
+
 	}
 	@media only screen /*medium*/
 	and (min-width: 768px)
@@ -176,6 +242,16 @@ const fetchData = (async () => {
         }
         .slider {
             margin-left:0;
+        }
+
+        .nav_prev, .nav_next {
+            width: 40px;
+            height: 40px;
+            top: 35%;
+        }
+
+        .nav_next {
+            right: 25px;
         }
 	}
 </style>
