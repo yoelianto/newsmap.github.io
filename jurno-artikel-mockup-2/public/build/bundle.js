@@ -3195,12 +3195,12 @@ var app = (function () {
     			t8 = space();
     			img4 = element("img");
     			set_style(div0, "padding", "0 0 218.75% 0");
-    			add_location(div0, file, 451, 4, 23863);
+    			add_location(div0, file, 451, 4, 25013);
     			attr_dev(img0, "id", "g-Bisa-Ular-smallplus-10-img");
     			attr_dev(img0, "class", "g-aiImg svelte-ma5ld9");
     			attr_dev(img0, "alt", "");
     			if (!src_url_equal(img0.src, img0_src_value = "./images/Bisa-Ular-smallplus-10.png")) attr_dev(img0, "src", img0_src_value);
-    			add_location(img0, file, 452, 4, 23911);
+    			add_location(img0, file, 452, 4, 25061);
     			attr_dev(div1, "id", "g-Bisa-Ular-smallplus-10");
     			attr_dev(div1, "class", "g-artboard svelte-ma5ld9");
     			set_style(div1, "max-width", "509px");
@@ -3208,15 +3208,24 @@ var app = (function () {
     			attr_dev(div1, "data-aspect-ratio", "0.457");
     			attr_dev(div1, "data-min-width", "0");
     			attr_dev(div1, "data-max-width", "509");
-    			set_style(div1, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
-    			add_location(div1, file, 449, 4, 23643);
+
+    			set_style(
+    				div1,
+    				"opacity",
+    				/*offset*/ ctx[2] <= 0.2
+    				? /*offset*/ ctx[2]
+    				: /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2],
+    				false
+    			);
+
+    			add_location(div1, file, 449, 4, 24768);
     			set_style(div2, "padding", "0 0 156.8627% 0");
-    			add_location(div2, file, 458, 4, 24308);
+    			add_location(div2, file, 458, 4, 25483);
     			attr_dev(img1, "id", "g-Bisa-Ular-submedium-10-img");
     			attr_dev(img1, "class", "g-aiImg svelte-ma5ld9");
     			attr_dev(img1, "alt", "");
     			if (!src_url_equal(img1.src, img1_src_value = "./images/Bisa-Ular-submedium-10.png")) attr_dev(img1, "src", img1_src_value);
-    			add_location(img1, file, 459, 4, 24358);
+    			add_location(img1, file, 459, 4, 25533);
     			attr_dev(div3, "id", "g-Bisa-Ular-submedium-10");
     			attr_dev(div3, "class", "g-artboard svelte-ma5ld9");
     			set_style(div3, "min-width", "510px");
@@ -3225,15 +3234,24 @@ var app = (function () {
     			attr_dev(div3, "data-aspect-ratio", "0.638");
     			attr_dev(div3, "data-min-width", "510");
     			attr_dev(div3, "data-max-width", "689");
-    			set_style(div3, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
-    			add_location(div3, file, 456, 4, 24069);
+
+    			set_style(
+    				div3,
+    				"opacity",
+    				/*offset*/ ctx[2] <= 0.2
+    				? /*offset*/ ctx[2]
+    				: /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2],
+    				false
+    			);
+
+    			add_location(div3, file, 456, 4, 25219);
     			set_style(div4, "padding", "0 0 148.4058% 0");
-    			add_location(div4, file, 465, 4, 24749);
+    			add_location(div4, file, 465, 4, 25949);
     			attr_dev(img2, "id", "g-Bisa-Ular-medium-10-img");
     			attr_dev(img2, "class", "g-aiImg svelte-ma5ld9");
     			attr_dev(img2, "alt", "");
     			if (!src_url_equal(img2.src, img2_src_value = "./images/Bisa-Ular-medium-10.png")) attr_dev(img2, "src", img2_src_value);
-    			add_location(img2, file, 466, 4, 24799);
+    			add_location(img2, file, 466, 4, 25999);
     			attr_dev(div5, "id", "g-Bisa-Ular-medium-10");
     			attr_dev(div5, "class", "g-artboard svelte-ma5ld9");
     			set_style(div5, "min-width", "690px");
@@ -3242,15 +3260,24 @@ var app = (function () {
     			attr_dev(div5, "data-aspect-ratio", "0.674");
     			attr_dev(div5, "data-min-width", "690");
     			attr_dev(div5, "data-max-width", "919");
-    			set_style(div5, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
-    			add_location(div5, file, 463, 4, 24513);
+
+    			set_style(
+    				div5,
+    				"opacity",
+    				/*offset*/ ctx[2] <= 0.2
+    				? /*offset*/ ctx[2]
+    				: /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2],
+    				false
+    			);
+
+    			add_location(div5, file, 463, 4, 25688);
     			set_style(div6, "padding", "0 0 100% 0");
-    			add_location(div6, file, 472, 4, 25180);
+    			add_location(div6, file, 472, 4, 26405);
     			attr_dev(img3, "id", "g-Bisa-Ular-large-10-img");
     			attr_dev(img3, "class", "g-aiImg svelte-ma5ld9");
     			attr_dev(img3, "alt", "");
     			if (!src_url_equal(img3.src, img3_src_value = "./images/Bisa-Ular-large-10.png")) attr_dev(img3, "src", img3_src_value);
-    			add_location(img3, file, 473, 4, 25225);
+    			add_location(img3, file, 473, 4, 26450);
     			attr_dev(div7, "id", "g-Bisa-Ular-large-10");
     			attr_dev(div7, "class", "g-artboard svelte-ma5ld9");
     			set_style(div7, "min-width", "920px");
@@ -3259,22 +3286,40 @@ var app = (function () {
     			attr_dev(div7, "data-aspect-ratio", "1");
     			attr_dev(div7, "data-min-width", "920");
     			attr_dev(div7, "data-max-width", "1399");
-    			set_style(div7, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
-    			add_location(div7, file, 470, 4, 24947);
+
+    			set_style(
+    				div7,
+    				"opacity",
+    				/*offset*/ ctx[2] <= 0.2
+    				? /*offset*/ ctx[2]
+    				: /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2],
+    				false
+    			);
+
+    			add_location(div7, file, 470, 4, 26147);
     			set_style(div8, "padding", "0 0 56.25% 0");
-    			add_location(div8, file, 479, 4, 25554);
+    			add_location(div8, file, 479, 4, 26804);
     			attr_dev(img4, "id", "g-Bisa-Ular-xlarge-10-img");
     			attr_dev(img4, "class", "g-aiImg svelte-ma5ld9");
     			attr_dev(img4, "alt", "");
     			if (!src_url_equal(img4.src, img4_src_value = "./images/Bisa-Ular-xlarge-10.png")) attr_dev(img4, "src", img4_src_value);
-    			add_location(img4, file, 480, 4, 25601);
+    			add_location(img4, file, 480, 4, 26851);
     			attr_dev(div9, "id", "g-Bisa-Ular-xlarge-10");
     			attr_dev(div9, "class", "g-artboard svelte-ma5ld9");
     			set_style(div9, "min-width", "1400px");
     			attr_dev(div9, "data-aspect-ratio", "1.778");
     			attr_dev(div9, "data-min-width", "1400");
-    			set_style(div9, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
-    			add_location(div9, file, 477, 4, 25372);
+
+    			set_style(
+    				div9,
+    				"opacity",
+    				/*offset*/ ctx[2] <= 0.2
+    				? /*offset*/ ctx[2]
+    				: /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2],
+    				false
+    			);
+
+    			add_location(div9, file, 477, 4, 26597);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div1, anchor);
@@ -3304,23 +3349,58 @@ var app = (function () {
     		},
     		p: function update(ctx, dirty) {
     			if (dirty & /*offset*/ 4) {
-    				set_style(div1, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    				set_style(
+    					div1,
+    					"opacity",
+    					/*offset*/ ctx[2] <= 0.2
+    					? /*offset*/ ctx[2]
+    					: /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2],
+    					false
+    				);
     			}
 
     			if (dirty & /*offset*/ 4) {
-    				set_style(div3, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    				set_style(
+    					div3,
+    					"opacity",
+    					/*offset*/ ctx[2] <= 0.2
+    					? /*offset*/ ctx[2]
+    					: /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2],
+    					false
+    				);
     			}
 
     			if (dirty & /*offset*/ 4) {
-    				set_style(div5, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    				set_style(
+    					div5,
+    					"opacity",
+    					/*offset*/ ctx[2] <= 0.2
+    					? /*offset*/ ctx[2]
+    					: /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2],
+    					false
+    				);
     			}
 
     			if (dirty & /*offset*/ 4) {
-    				set_style(div7, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    				set_style(
+    					div7,
+    					"opacity",
+    					/*offset*/ ctx[2] <= 0.2
+    					? /*offset*/ ctx[2]
+    					: /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2],
+    					false
+    				);
     			}
 
     			if (dirty & /*offset*/ 4) {
-    				set_style(div9, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    				set_style(
+    					div9,
+    					"opacity",
+    					/*offset*/ ctx[2] <= 0.2
+    					? /*offset*/ ctx[2]
+    					: /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2],
+    					false
+    				);
     			}
     		},
     		d: function destroy(detaching) {
@@ -3406,12 +3486,12 @@ var app = (function () {
     			t8 = space();
     			img4 = element("img");
     			set_style(div0, "padding", "0 0 218.75% 0");
-    			add_location(div0, file, 415, 4, 21723);
+    			add_location(div0, file, 415, 4, 22748);
     			attr_dev(img0, "id", "g-Bisa-Ular-smallplus-9-img");
     			attr_dev(img0, "class", "g-aiImg svelte-ma5ld9");
     			attr_dev(img0, "alt", "");
     			if (!src_url_equal(img0.src, img0_src_value = "./images/Bisa-Ular-smallplus-9.png")) attr_dev(img0, "src", img0_src_value);
-    			add_location(img0, file, 416, 4, 21771);
+    			add_location(img0, file, 416, 4, 22796);
     			attr_dev(div1, "id", "g-Bisa-Ular-smallplus-9");
     			attr_dev(div1, "class", "g-artboard svelte-ma5ld9");
     			set_style(div1, "max-width", "509px");
@@ -3419,15 +3499,24 @@ var app = (function () {
     			attr_dev(div1, "data-aspect-ratio", "0.457");
     			attr_dev(div1, "data-min-width", "0");
     			attr_dev(div1, "data-max-width", "509");
-    			set_style(div1, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
-    			add_location(div1, file, 413, 4, 21504);
+
+    			set_style(
+    				div1,
+    				"opacity",
+    				/*offset*/ ctx[2] <= 0.2
+    				? /*offset*/ ctx[2]
+    				: /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2],
+    				false
+    			);
+
+    			add_location(div1, file, 413, 4, 22504);
     			set_style(div2, "padding", "0 0 156.8627% 0");
-    			add_location(div2, file, 422, 4, 22164);
+    			add_location(div2, file, 422, 4, 23214);
     			attr_dev(img1, "id", "g-Bisa-Ular-submedium-9-img");
     			attr_dev(img1, "class", "g-aiImg svelte-ma5ld9");
     			attr_dev(img1, "alt", "");
     			if (!src_url_equal(img1.src, img1_src_value = "./images/Bisa-Ular-submedium-9.png")) attr_dev(img1, "src", img1_src_value);
-    			add_location(img1, file, 423, 4, 22214);
+    			add_location(img1, file, 423, 4, 23264);
     			attr_dev(div3, "id", "g-Bisa-Ular-submedium-9");
     			attr_dev(div3, "class", "g-artboard svelte-ma5ld9");
     			set_style(div3, "min-width", "510px");
@@ -3436,15 +3525,24 @@ var app = (function () {
     			attr_dev(div3, "data-aspect-ratio", "0.638");
     			attr_dev(div3, "data-min-width", "510");
     			attr_dev(div3, "data-max-width", "689");
-    			set_style(div3, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
-    			add_location(div3, file, 420, 4, 21926);
+
+    			set_style(
+    				div3,
+    				"opacity",
+    				/*offset*/ ctx[2] <= 0.2
+    				? /*offset*/ ctx[2]
+    				: /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2],
+    				false
+    			);
+
+    			add_location(div3, file, 420, 4, 22951);
     			set_style(div4, "padding", "0 0 148.4058% 0");
-    			add_location(div4, file, 429, 4, 22601);
+    			add_location(div4, file, 429, 4, 23676);
     			attr_dev(img2, "id", "g-Bisa-Ular-medium-9-img");
     			attr_dev(img2, "class", "g-aiImg svelte-ma5ld9");
     			attr_dev(img2, "alt", "");
     			if (!src_url_equal(img2.src, img2_src_value = "./images/Bisa-Ular-medium-9.png")) attr_dev(img2, "src", img2_src_value);
-    			add_location(img2, file, 430, 4, 22651);
+    			add_location(img2, file, 430, 4, 23726);
     			attr_dev(div5, "id", "g-Bisa-Ular-medium-9");
     			attr_dev(div5, "class", "g-artboard svelte-ma5ld9");
     			set_style(div5, "min-width", "690px");
@@ -3453,15 +3551,24 @@ var app = (function () {
     			attr_dev(div5, "data-aspect-ratio", "0.674");
     			attr_dev(div5, "data-min-width", "690");
     			attr_dev(div5, "data-max-width", "919");
-    			set_style(div5, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
-    			add_location(div5, file, 427, 4, 22366);
+
+    			set_style(
+    				div5,
+    				"opacity",
+    				/*offset*/ ctx[2] <= 0.2
+    				? /*offset*/ ctx[2]
+    				: /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2],
+    				false
+    			);
+
+    			add_location(div5, file, 427, 4, 23416);
     			set_style(div6, "padding", "0 0 100% 0");
-    			add_location(div6, file, 436, 4, 23028);
+    			add_location(div6, file, 436, 4, 24128);
     			attr_dev(img3, "id", "g-Bisa-Ular-large-9-img");
     			attr_dev(img3, "class", "g-aiImg svelte-ma5ld9");
     			attr_dev(img3, "alt", "");
     			if (!src_url_equal(img3.src, img3_src_value = "./images/Bisa-Ular-large-9.png")) attr_dev(img3, "src", img3_src_value);
-    			add_location(img3, file, 437, 4, 23073);
+    			add_location(img3, file, 437, 4, 24173);
     			attr_dev(div7, "id", "g-Bisa-Ular-large-9");
     			attr_dev(div7, "class", "g-artboard svelte-ma5ld9");
     			set_style(div7, "min-width", "920px");
@@ -3470,22 +3577,40 @@ var app = (function () {
     			attr_dev(div7, "data-aspect-ratio", "1");
     			attr_dev(div7, "data-min-width", "920");
     			attr_dev(div7, "data-max-width", "1399");
-    			set_style(div7, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
-    			add_location(div7, file, 434, 4, 22796);
+
+    			set_style(
+    				div7,
+    				"opacity",
+    				/*offset*/ ctx[2] <= 0.2
+    				? /*offset*/ ctx[2]
+    				: /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2],
+    				false
+    			);
+
+    			add_location(div7, file, 434, 4, 23871);
     			set_style(div8, "padding", "0 0 56.25% 0");
-    			add_location(div8, file, 443, 4, 23398);
+    			add_location(div8, file, 443, 4, 24523);
     			attr_dev(img4, "id", "g-Bisa-Ular-xlarge-9-img");
     			attr_dev(img4, "class", "g-aiImg svelte-ma5ld9");
     			attr_dev(img4, "alt", "");
     			if (!src_url_equal(img4.src, img4_src_value = "./images/Bisa-Ular-xlarge-9.png")) attr_dev(img4, "src", img4_src_value);
-    			add_location(img4, file, 444, 4, 23445);
+    			add_location(img4, file, 444, 4, 24570);
     			attr_dev(div9, "id", "g-Bisa-Ular-xlarge-9");
     			attr_dev(div9, "class", "g-artboard svelte-ma5ld9");
     			set_style(div9, "min-width", "1400px");
     			attr_dev(div9, "data-aspect-ratio", "1.778");
     			attr_dev(div9, "data-min-width", "1400");
-    			set_style(div9, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
-    			add_location(div9, file, 441, 4, 23217);
+
+    			set_style(
+    				div9,
+    				"opacity",
+    				/*offset*/ ctx[2] <= 0.2
+    				? /*offset*/ ctx[2]
+    				: /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2],
+    				false
+    			);
+
+    			add_location(div9, file, 441, 4, 24317);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div1, anchor);
@@ -3515,23 +3640,58 @@ var app = (function () {
     		},
     		p: function update(ctx, dirty) {
     			if (dirty & /*offset*/ 4) {
-    				set_style(div1, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    				set_style(
+    					div1,
+    					"opacity",
+    					/*offset*/ ctx[2] <= 0.2
+    					? /*offset*/ ctx[2]
+    					: /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2],
+    					false
+    				);
     			}
 
     			if (dirty & /*offset*/ 4) {
-    				set_style(div3, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    				set_style(
+    					div3,
+    					"opacity",
+    					/*offset*/ ctx[2] <= 0.2
+    					? /*offset*/ ctx[2]
+    					: /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2],
+    					false
+    				);
     			}
 
     			if (dirty & /*offset*/ 4) {
-    				set_style(div5, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    				set_style(
+    					div5,
+    					"opacity",
+    					/*offset*/ ctx[2] <= 0.2
+    					? /*offset*/ ctx[2]
+    					: /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2],
+    					false
+    				);
     			}
 
     			if (dirty & /*offset*/ 4) {
-    				set_style(div7, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    				set_style(
+    					div7,
+    					"opacity",
+    					/*offset*/ ctx[2] <= 0.2
+    					? /*offset*/ ctx[2]
+    					: /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2],
+    					false
+    				);
     			}
 
     			if (dirty & /*offset*/ 4) {
-    				set_style(div9, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    				set_style(
+    					div9,
+    					"opacity",
+    					/*offset*/ ctx[2] <= 0.2
+    					? /*offset*/ ctx[2]
+    					: /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2],
+    					false
+    				);
     			}
     		},
     		d: function destroy(detaching) {
@@ -3617,12 +3777,12 @@ var app = (function () {
     			t8 = space();
     			img4 = element("img");
     			set_style(div0, "padding", "0 0 218.75% 0");
-    			add_location(div0, file, 379, 4, 19586);
+    			add_location(div0, file, 379, 4, 20486);
     			attr_dev(img0, "id", "g-Bisa-Ular-smallplus-8-img");
     			attr_dev(img0, "class", "g-aiImg svelte-ma5ld9");
     			attr_dev(img0, "alt", "");
     			if (!src_url_equal(img0.src, img0_src_value = "./images/Bisa-Ular-smallplus-8.png")) attr_dev(img0, "src", img0_src_value);
-    			add_location(img0, file, 380, 4, 19634);
+    			add_location(img0, file, 380, 4, 20534);
     			attr_dev(div1, "id", "g-Bisa-Ular-smallplus-8");
     			attr_dev(div1, "class", "g-artboard svelte-ma5ld9");
     			set_style(div1, "max-width", "509px");
@@ -3630,15 +3790,24 @@ var app = (function () {
     			attr_dev(div1, "data-aspect-ratio", "0.457");
     			attr_dev(div1, "data-min-width", "0");
     			attr_dev(div1, "data-max-width", "509");
-    			set_style(div1, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
-    			add_location(div1, file, 377, 4, 19367);
+
+    			set_style(
+    				div1,
+    				"opacity",
+    				/*offset*/ ctx[2] <= 0.2
+    				? /*offset*/ ctx[2]
+    				: /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2],
+    				false
+    			);
+
+    			add_location(div1, file, 377, 4, 20242);
     			set_style(div2, "padding", "0 0 156.8627% 0");
-    			add_location(div2, file, 386, 4, 20027);
+    			add_location(div2, file, 386, 4, 20952);
     			attr_dev(img1, "id", "g-Bisa-Ular-submedium-8-img");
     			attr_dev(img1, "class", "g-aiImg svelte-ma5ld9");
     			attr_dev(img1, "alt", "");
     			if (!src_url_equal(img1.src, img1_src_value = "./images/Bisa-Ular-submedium-8.png")) attr_dev(img1, "src", img1_src_value);
-    			add_location(img1, file, 387, 4, 20077);
+    			add_location(img1, file, 387, 4, 21002);
     			attr_dev(div3, "id", "g-Bisa-Ular-submedium-8");
     			attr_dev(div3, "class", "g-artboard svelte-ma5ld9");
     			set_style(div3, "min-width", "510px");
@@ -3647,15 +3816,24 @@ var app = (function () {
     			attr_dev(div3, "data-aspect-ratio", "0.638");
     			attr_dev(div3, "data-min-width", "510");
     			attr_dev(div3, "data-max-width", "689");
-    			set_style(div3, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
-    			add_location(div3, file, 384, 4, 19789);
+
+    			set_style(
+    				div3,
+    				"opacity",
+    				/*offset*/ ctx[2] <= 0.2
+    				? /*offset*/ ctx[2]
+    				: /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2],
+    				false
+    			);
+
+    			add_location(div3, file, 384, 4, 20689);
     			set_style(div4, "padding", "0 0 148.4058% 0");
-    			add_location(div4, file, 393, 4, 20464);
+    			add_location(div4, file, 393, 4, 21414);
     			attr_dev(img2, "id", "g-Bisa-Ular-medium-8-img");
     			attr_dev(img2, "class", "g-aiImg svelte-ma5ld9");
     			attr_dev(img2, "alt", "");
     			if (!src_url_equal(img2.src, img2_src_value = "./images/Bisa-Ular-medium-8.png")) attr_dev(img2, "src", img2_src_value);
-    			add_location(img2, file, 394, 4, 20514);
+    			add_location(img2, file, 394, 4, 21464);
     			attr_dev(div5, "id", "g-Bisa-Ular-medium-8");
     			attr_dev(div5, "class", "g-artboard svelte-ma5ld9");
     			set_style(div5, "min-width", "690px");
@@ -3664,15 +3842,24 @@ var app = (function () {
     			attr_dev(div5, "data-aspect-ratio", "0.674");
     			attr_dev(div5, "data-min-width", "690");
     			attr_dev(div5, "data-max-width", "919");
-    			set_style(div5, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
-    			add_location(div5, file, 391, 4, 20229);
+
+    			set_style(
+    				div5,
+    				"opacity",
+    				/*offset*/ ctx[2] <= 0.2
+    				? /*offset*/ ctx[2]
+    				: /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2],
+    				false
+    			);
+
+    			add_location(div5, file, 391, 4, 21154);
     			set_style(div6, "padding", "0 0 100% 0");
-    			add_location(div6, file, 400, 4, 20891);
+    			add_location(div6, file, 400, 4, 21866);
     			attr_dev(img3, "id", "g-Bisa-Ular-large-8-img");
     			attr_dev(img3, "class", "g-aiImg svelte-ma5ld9");
     			attr_dev(img3, "alt", "");
     			if (!src_url_equal(img3.src, img3_src_value = "./images/Bisa-Ular-large-8.png")) attr_dev(img3, "src", img3_src_value);
-    			add_location(img3, file, 401, 4, 20936);
+    			add_location(img3, file, 401, 4, 21911);
     			attr_dev(div7, "id", "g-Bisa-Ular-large-8");
     			attr_dev(div7, "class", "g-artboard svelte-ma5ld9");
     			set_style(div7, "min-width", "920px");
@@ -3681,22 +3868,40 @@ var app = (function () {
     			attr_dev(div7, "data-aspect-ratio", "1");
     			attr_dev(div7, "data-min-width", "920");
     			attr_dev(div7, "data-max-width", "1399");
-    			set_style(div7, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
-    			add_location(div7, file, 398, 4, 20659);
+
+    			set_style(
+    				div7,
+    				"opacity",
+    				/*offset*/ ctx[2] <= 0.2
+    				? /*offset*/ ctx[2]
+    				: /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2],
+    				false
+    			);
+
+    			add_location(div7, file, 398, 4, 21609);
     			set_style(div8, "padding", "0 0 56.25% 0");
-    			add_location(div8, file, 407, 4, 21261);
+    			add_location(div8, file, 407, 4, 22261);
     			attr_dev(img4, "id", "g-Bisa-Ular-xlarge-8-img");
     			attr_dev(img4, "class", "g-aiImg svelte-ma5ld9");
     			attr_dev(img4, "alt", "");
     			if (!src_url_equal(img4.src, img4_src_value = "./images/Bisa-Ular-xlarge-8.png")) attr_dev(img4, "src", img4_src_value);
-    			add_location(img4, file, 408, 4, 21308);
+    			add_location(img4, file, 408, 4, 22308);
     			attr_dev(div9, "id", "g-Bisa-Ular-xlarge-8");
     			attr_dev(div9, "class", "g-artboard svelte-ma5ld9");
     			set_style(div9, "min-width", "1400px");
     			attr_dev(div9, "data-aspect-ratio", "1.778");
     			attr_dev(div9, "data-min-width", "1400");
-    			set_style(div9, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
-    			add_location(div9, file, 405, 4, 21080);
+
+    			set_style(
+    				div9,
+    				"opacity",
+    				/*offset*/ ctx[2] <= 0.2
+    				? /*offset*/ ctx[2]
+    				: /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2],
+    				false
+    			);
+
+    			add_location(div9, file, 405, 4, 22055);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div1, anchor);
@@ -3726,23 +3931,58 @@ var app = (function () {
     		},
     		p: function update(ctx, dirty) {
     			if (dirty & /*offset*/ 4) {
-    				set_style(div1, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    				set_style(
+    					div1,
+    					"opacity",
+    					/*offset*/ ctx[2] <= 0.2
+    					? /*offset*/ ctx[2]
+    					: /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2],
+    					false
+    				);
     			}
 
     			if (dirty & /*offset*/ 4) {
-    				set_style(div3, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    				set_style(
+    					div3,
+    					"opacity",
+    					/*offset*/ ctx[2] <= 0.2
+    					? /*offset*/ ctx[2]
+    					: /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2],
+    					false
+    				);
     			}
 
     			if (dirty & /*offset*/ 4) {
-    				set_style(div5, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    				set_style(
+    					div5,
+    					"opacity",
+    					/*offset*/ ctx[2] <= 0.2
+    					? /*offset*/ ctx[2]
+    					: /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2],
+    					false
+    				);
     			}
 
     			if (dirty & /*offset*/ 4) {
-    				set_style(div7, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    				set_style(
+    					div7,
+    					"opacity",
+    					/*offset*/ ctx[2] <= 0.2
+    					? /*offset*/ ctx[2]
+    					: /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2],
+    					false
+    				);
     			}
 
     			if (dirty & /*offset*/ 4) {
-    				set_style(div9, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    				set_style(
+    					div9,
+    					"opacity",
+    					/*offset*/ ctx[2] <= 0.2
+    					? /*offset*/ ctx[2]
+    					: /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2],
+    					false
+    				);
     			}
     		},
     		d: function destroy(detaching) {
@@ -3828,12 +4068,12 @@ var app = (function () {
     			t8 = space();
     			img4 = element("img");
     			set_style(div0, "padding", "0 0 218.75% 0");
-    			add_location(div0, file, 343, 4, 17449);
+    			add_location(div0, file, 343, 4, 18224);
     			attr_dev(img0, "id", "g-Bisa-Ular-smallplus-7-img");
     			attr_dev(img0, "class", "g-aiImg svelte-ma5ld9");
     			attr_dev(img0, "alt", "");
     			if (!src_url_equal(img0.src, img0_src_value = "./images/Bisa-Ular-smallplus-7.png")) attr_dev(img0, "src", img0_src_value);
-    			add_location(img0, file, 344, 4, 17497);
+    			add_location(img0, file, 344, 4, 18272);
     			attr_dev(div1, "id", "g-Bisa-Ular-smallplus-7");
     			attr_dev(div1, "class", "g-artboard svelte-ma5ld9");
     			set_style(div1, "max-width", "509px");
@@ -3841,15 +4081,24 @@ var app = (function () {
     			attr_dev(div1, "data-aspect-ratio", "0.457");
     			attr_dev(div1, "data-min-width", "0");
     			attr_dev(div1, "data-max-width", "509");
-    			set_style(div1, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
-    			add_location(div1, file, 341, 4, 17230);
+
+    			set_style(
+    				div1,
+    				"opacity",
+    				/*offset*/ ctx[2] <= 0.2
+    				? /*offset*/ ctx[2]
+    				: /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2],
+    				false
+    			);
+
+    			add_location(div1, file, 341, 4, 17980);
     			set_style(div2, "padding", "0 0 156.8627% 0");
-    			add_location(div2, file, 350, 4, 17890);
+    			add_location(div2, file, 350, 4, 18690);
     			attr_dev(img1, "id", "g-Bisa-Ular-submedium-7-img");
     			attr_dev(img1, "class", "g-aiImg svelte-ma5ld9");
     			attr_dev(img1, "alt", "");
     			if (!src_url_equal(img1.src, img1_src_value = "./images/Bisa-Ular-submedium-7.png")) attr_dev(img1, "src", img1_src_value);
-    			add_location(img1, file, 351, 4, 17940);
+    			add_location(img1, file, 351, 4, 18740);
     			attr_dev(div3, "id", "g-Bisa-Ular-submedium-7");
     			attr_dev(div3, "class", "g-artboard svelte-ma5ld9");
     			set_style(div3, "min-width", "510px");
@@ -3858,15 +4107,24 @@ var app = (function () {
     			attr_dev(div3, "data-aspect-ratio", "0.638");
     			attr_dev(div3, "data-min-width", "510");
     			attr_dev(div3, "data-max-width", "689");
-    			set_style(div3, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
-    			add_location(div3, file, 348, 4, 17652);
+
+    			set_style(
+    				div3,
+    				"opacity",
+    				/*offset*/ ctx[2] <= 0.2
+    				? /*offset*/ ctx[2]
+    				: /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2],
+    				false
+    			);
+
+    			add_location(div3, file, 348, 4, 18427);
     			set_style(div4, "padding", "0 0 148.4058% 0");
-    			add_location(div4, file, 357, 4, 18327);
+    			add_location(div4, file, 357, 4, 19152);
     			attr_dev(img2, "id", "g-Bisa-Ular-medium-7-img");
     			attr_dev(img2, "class", "g-aiImg svelte-ma5ld9");
     			attr_dev(img2, "alt", "");
     			if (!src_url_equal(img2.src, img2_src_value = "./images/Bisa-Ular-medium-7.png")) attr_dev(img2, "src", img2_src_value);
-    			add_location(img2, file, 358, 4, 18377);
+    			add_location(img2, file, 358, 4, 19202);
     			attr_dev(div5, "id", "g-Bisa-Ular-medium-7");
     			attr_dev(div5, "class", "g-artboard svelte-ma5ld9");
     			set_style(div5, "min-width", "690px");
@@ -3875,15 +4133,24 @@ var app = (function () {
     			attr_dev(div5, "data-aspect-ratio", "0.674");
     			attr_dev(div5, "data-min-width", "690");
     			attr_dev(div5, "data-max-width", "919");
-    			set_style(div5, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
-    			add_location(div5, file, 355, 4, 18092);
+
+    			set_style(
+    				div5,
+    				"opacity",
+    				/*offset*/ ctx[2] <= 0.2
+    				? /*offset*/ ctx[2]
+    				: /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2],
+    				false
+    			);
+
+    			add_location(div5, file, 355, 4, 18892);
     			set_style(div6, "padding", "0 0 100% 0");
-    			add_location(div6, file, 364, 4, 18754);
+    			add_location(div6, file, 364, 4, 19604);
     			attr_dev(img3, "id", "g-Bisa-Ular-large-7-img");
     			attr_dev(img3, "class", "g-aiImg svelte-ma5ld9");
     			attr_dev(img3, "alt", "");
     			if (!src_url_equal(img3.src, img3_src_value = "./images/Bisa-Ular-large-7.png")) attr_dev(img3, "src", img3_src_value);
-    			add_location(img3, file, 365, 4, 18799);
+    			add_location(img3, file, 365, 4, 19649);
     			attr_dev(div7, "id", "g-Bisa-Ular-large-7");
     			attr_dev(div7, "class", "g-artboard svelte-ma5ld9");
     			set_style(div7, "min-width", "920px");
@@ -3892,22 +4159,40 @@ var app = (function () {
     			attr_dev(div7, "data-aspect-ratio", "1");
     			attr_dev(div7, "data-min-width", "920");
     			attr_dev(div7, "data-max-width", "1399");
-    			set_style(div7, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
-    			add_location(div7, file, 362, 4, 18522);
+
+    			set_style(
+    				div7,
+    				"opacity",
+    				/*offset*/ ctx[2] <= 0.2
+    				? /*offset*/ ctx[2]
+    				: /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2],
+    				false
+    			);
+
+    			add_location(div7, file, 362, 4, 19347);
     			set_style(div8, "padding", "0 0 56.25% 0");
-    			add_location(div8, file, 371, 4, 19124);
+    			add_location(div8, file, 371, 4, 19999);
     			attr_dev(img4, "id", "g-Bisa-Ular-xlarge-7-img");
     			attr_dev(img4, "class", "g-aiImg svelte-ma5ld9");
     			attr_dev(img4, "alt", "");
     			if (!src_url_equal(img4.src, img4_src_value = "./images/Bisa-Ular-xlarge-7.png")) attr_dev(img4, "src", img4_src_value);
-    			add_location(img4, file, 372, 4, 19171);
+    			add_location(img4, file, 372, 4, 20046);
     			attr_dev(div9, "id", "g-Bisa-Ular-xlarge-7");
     			attr_dev(div9, "class", "g-artboard svelte-ma5ld9");
     			set_style(div9, "min-width", "1400px");
     			attr_dev(div9, "data-aspect-ratio", "1.778");
     			attr_dev(div9, "data-min-width", "1400");
-    			set_style(div9, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
-    			add_location(div9, file, 369, 4, 18943);
+
+    			set_style(
+    				div9,
+    				"opacity",
+    				/*offset*/ ctx[2] <= 0.2
+    				? /*offset*/ ctx[2]
+    				: /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2],
+    				false
+    			);
+
+    			add_location(div9, file, 369, 4, 19793);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div1, anchor);
@@ -3937,23 +4222,58 @@ var app = (function () {
     		},
     		p: function update(ctx, dirty) {
     			if (dirty & /*offset*/ 4) {
-    				set_style(div1, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    				set_style(
+    					div1,
+    					"opacity",
+    					/*offset*/ ctx[2] <= 0.2
+    					? /*offset*/ ctx[2]
+    					: /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2],
+    					false
+    				);
     			}
 
     			if (dirty & /*offset*/ 4) {
-    				set_style(div3, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    				set_style(
+    					div3,
+    					"opacity",
+    					/*offset*/ ctx[2] <= 0.2
+    					? /*offset*/ ctx[2]
+    					: /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2],
+    					false
+    				);
     			}
 
     			if (dirty & /*offset*/ 4) {
-    				set_style(div5, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    				set_style(
+    					div5,
+    					"opacity",
+    					/*offset*/ ctx[2] <= 0.2
+    					? /*offset*/ ctx[2]
+    					: /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2],
+    					false
+    				);
     			}
 
     			if (dirty & /*offset*/ 4) {
-    				set_style(div7, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    				set_style(
+    					div7,
+    					"opacity",
+    					/*offset*/ ctx[2] <= 0.2
+    					? /*offset*/ ctx[2]
+    					: /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2],
+    					false
+    				);
     			}
 
     			if (dirty & /*offset*/ 4) {
-    				set_style(div9, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    				set_style(
+    					div9,
+    					"opacity",
+    					/*offset*/ ctx[2] <= 0.2
+    					? /*offset*/ ctx[2]
+    					: /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2],
+    					false
+    				);
     			}
     		},
     		d: function destroy(detaching) {
@@ -4039,12 +4359,12 @@ var app = (function () {
     			t8 = space();
     			img4 = element("img");
     			set_style(div0, "padding", "0 0 218.75% 0");
-    			add_location(div0, file, 307, 4, 15312);
+    			add_location(div0, file, 307, 4, 15962);
     			attr_dev(img0, "id", "g-Bisa-Ular-smallplus-6-img");
     			attr_dev(img0, "class", "g-aiImg svelte-ma5ld9");
     			attr_dev(img0, "alt", "");
     			if (!src_url_equal(img0.src, img0_src_value = "./images/Bisa-Ular-smallplus-6.png")) attr_dev(img0, "src", img0_src_value);
-    			add_location(img0, file, 308, 4, 15360);
+    			add_location(img0, file, 308, 4, 16010);
     			attr_dev(div1, "id", "g-Bisa-Ular-smallplus-6");
     			attr_dev(div1, "class", "g-artboard svelte-ma5ld9");
     			set_style(div1, "max-width", "509px");
@@ -4052,15 +4372,24 @@ var app = (function () {
     			attr_dev(div1, "data-aspect-ratio", "0.457");
     			attr_dev(div1, "data-min-width", "0");
     			attr_dev(div1, "data-max-width", "509");
-    			set_style(div1, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
-    			add_location(div1, file, 305, 4, 15093);
+
+    			set_style(
+    				div1,
+    				"opacity",
+    				/*offset*/ ctx[2] <= 0.2
+    				? /*offset*/ ctx[2]
+    				: /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2],
+    				false
+    			);
+
+    			add_location(div1, file, 305, 4, 15718);
     			set_style(div2, "padding", "0 0 156.8627% 0");
-    			add_location(div2, file, 314, 4, 15753);
+    			add_location(div2, file, 314, 4, 16428);
     			attr_dev(img1, "id", "g-Bisa-Ular-submedium-6-img");
     			attr_dev(img1, "class", "g-aiImg svelte-ma5ld9");
     			attr_dev(img1, "alt", "");
     			if (!src_url_equal(img1.src, img1_src_value = "./images/Bisa-Ular-submedium-6.png")) attr_dev(img1, "src", img1_src_value);
-    			add_location(img1, file, 315, 4, 15803);
+    			add_location(img1, file, 315, 4, 16478);
     			attr_dev(div3, "id", "g-Bisa-Ular-submedium-6");
     			attr_dev(div3, "class", "g-artboard svelte-ma5ld9");
     			set_style(div3, "min-width", "510px");
@@ -4069,15 +4398,24 @@ var app = (function () {
     			attr_dev(div3, "data-aspect-ratio", "0.638");
     			attr_dev(div3, "data-min-width", "510");
     			attr_dev(div3, "data-max-width", "689");
-    			set_style(div3, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
-    			add_location(div3, file, 312, 4, 15515);
+
+    			set_style(
+    				div3,
+    				"opacity",
+    				/*offset*/ ctx[2] <= 0.2
+    				? /*offset*/ ctx[2]
+    				: /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2],
+    				false
+    			);
+
+    			add_location(div3, file, 312, 4, 16165);
     			set_style(div4, "padding", "0 0 148.4058% 0");
-    			add_location(div4, file, 321, 4, 16190);
+    			add_location(div4, file, 321, 4, 16890);
     			attr_dev(img2, "id", "g-Bisa-Ular-medium-6-img");
     			attr_dev(img2, "class", "g-aiImg svelte-ma5ld9");
     			attr_dev(img2, "alt", "");
     			if (!src_url_equal(img2.src, img2_src_value = "./images/Bisa-Ular-medium-6.png")) attr_dev(img2, "src", img2_src_value);
-    			add_location(img2, file, 322, 4, 16240);
+    			add_location(img2, file, 322, 4, 16940);
     			attr_dev(div5, "id", "g-Bisa-Ular-medium-6");
     			attr_dev(div5, "class", "g-artboard svelte-ma5ld9");
     			set_style(div5, "min-width", "690px");
@@ -4086,15 +4424,24 @@ var app = (function () {
     			attr_dev(div5, "data-aspect-ratio", "0.674");
     			attr_dev(div5, "data-min-width", "690");
     			attr_dev(div5, "data-max-width", "919");
-    			set_style(div5, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
-    			add_location(div5, file, 319, 4, 15955);
+
+    			set_style(
+    				div5,
+    				"opacity",
+    				/*offset*/ ctx[2] <= 0.2
+    				? /*offset*/ ctx[2]
+    				: /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2],
+    				false
+    			);
+
+    			add_location(div5, file, 319, 4, 16630);
     			set_style(div6, "padding", "0 0 100% 0");
-    			add_location(div6, file, 328, 4, 16617);
+    			add_location(div6, file, 328, 4, 17342);
     			attr_dev(img3, "id", "g-Bisa-Ular-large-6-img");
     			attr_dev(img3, "class", "g-aiImg svelte-ma5ld9");
     			attr_dev(img3, "alt", "");
     			if (!src_url_equal(img3.src, img3_src_value = "./images/Bisa-Ular-large-6.png")) attr_dev(img3, "src", img3_src_value);
-    			add_location(img3, file, 329, 4, 16662);
+    			add_location(img3, file, 329, 4, 17387);
     			attr_dev(div7, "id", "g-Bisa-Ular-large-6");
     			attr_dev(div7, "class", "g-artboard svelte-ma5ld9");
     			set_style(div7, "min-width", "920px");
@@ -4103,22 +4450,40 @@ var app = (function () {
     			attr_dev(div7, "data-aspect-ratio", "1");
     			attr_dev(div7, "data-min-width", "920");
     			attr_dev(div7, "data-max-width", "1399");
-    			set_style(div7, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
-    			add_location(div7, file, 326, 4, 16385);
+
+    			set_style(
+    				div7,
+    				"opacity",
+    				/*offset*/ ctx[2] <= 0.2
+    				? /*offset*/ ctx[2]
+    				: /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2],
+    				false
+    			);
+
+    			add_location(div7, file, 326, 4, 17085);
     			set_style(div8, "padding", "0 0 56.25% 0");
-    			add_location(div8, file, 335, 4, 16987);
+    			add_location(div8, file, 335, 4, 17737);
     			attr_dev(img4, "id", "g-Bisa-Ular-xlarge-6-img");
     			attr_dev(img4, "class", "g-aiImg svelte-ma5ld9");
     			attr_dev(img4, "alt", "");
     			if (!src_url_equal(img4.src, img4_src_value = "./images/Bisa-Ular-xlarge-6.png")) attr_dev(img4, "src", img4_src_value);
-    			add_location(img4, file, 336, 4, 17034);
+    			add_location(img4, file, 336, 4, 17784);
     			attr_dev(div9, "id", "g-Bisa-Ular-xlarge-6");
     			attr_dev(div9, "class", "g-artboard svelte-ma5ld9");
     			set_style(div9, "min-width", "1400px");
     			attr_dev(div9, "data-aspect-ratio", "1.778");
     			attr_dev(div9, "data-min-width", "1400");
-    			set_style(div9, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
-    			add_location(div9, file, 333, 4, 16806);
+
+    			set_style(
+    				div9,
+    				"opacity",
+    				/*offset*/ ctx[2] <= 0.2
+    				? /*offset*/ ctx[2]
+    				: /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2],
+    				false
+    			);
+
+    			add_location(div9, file, 333, 4, 17531);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div1, anchor);
@@ -4148,23 +4513,58 @@ var app = (function () {
     		},
     		p: function update(ctx, dirty) {
     			if (dirty & /*offset*/ 4) {
-    				set_style(div1, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    				set_style(
+    					div1,
+    					"opacity",
+    					/*offset*/ ctx[2] <= 0.2
+    					? /*offset*/ ctx[2]
+    					: /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2],
+    					false
+    				);
     			}
 
     			if (dirty & /*offset*/ 4) {
-    				set_style(div3, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    				set_style(
+    					div3,
+    					"opacity",
+    					/*offset*/ ctx[2] <= 0.2
+    					? /*offset*/ ctx[2]
+    					: /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2],
+    					false
+    				);
     			}
 
     			if (dirty & /*offset*/ 4) {
-    				set_style(div5, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    				set_style(
+    					div5,
+    					"opacity",
+    					/*offset*/ ctx[2] <= 0.2
+    					? /*offset*/ ctx[2]
+    					: /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2],
+    					false
+    				);
     			}
 
     			if (dirty & /*offset*/ 4) {
-    				set_style(div7, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    				set_style(
+    					div7,
+    					"opacity",
+    					/*offset*/ ctx[2] <= 0.2
+    					? /*offset*/ ctx[2]
+    					: /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2],
+    					false
+    				);
     			}
 
     			if (dirty & /*offset*/ 4) {
-    				set_style(div9, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    				set_style(
+    					div9,
+    					"opacity",
+    					/*offset*/ ctx[2] <= 0.2
+    					? /*offset*/ ctx[2]
+    					: /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2],
+    					false
+    				);
     			}
     		},
     		d: function destroy(detaching) {
@@ -4250,12 +4650,12 @@ var app = (function () {
     			t8 = space();
     			img4 = element("img");
     			set_style(div0, "padding", "0 0 218.75% 0");
-    			add_location(div0, file, 269, 4, 13170);
+    			add_location(div0, file, 269, 4, 13695);
     			attr_dev(img0, "id", "g-Bisa-Ular-smallplus-5-img");
     			attr_dev(img0, "class", "g-aiImg svelte-ma5ld9");
     			attr_dev(img0, "alt", "");
     			if (!src_url_equal(img0.src, img0_src_value = "./images/Bisa-Ular-smallplus-5.png")) attr_dev(img0, "src", img0_src_value);
-    			add_location(img0, file, 270, 4, 13218);
+    			add_location(img0, file, 270, 4, 13743);
     			attr_dev(div1, "id", "g-Bisa-Ular-smallplus-5");
     			attr_dev(div1, "class", "g-artboard svelte-ma5ld9");
     			set_style(div1, "max-width", "509px");
@@ -4263,15 +4663,24 @@ var app = (function () {
     			attr_dev(div1, "data-aspect-ratio", "0.457");
     			attr_dev(div1, "data-min-width", "0");
     			attr_dev(div1, "data-max-width", "509");
-    			set_style(div1, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
-    			add_location(div1, file, 267, 4, 12951);
+
+    			set_style(
+    				div1,
+    				"opacity",
+    				/*offset*/ ctx[2] <= 0.2
+    				? /*offset*/ ctx[2]
+    				: /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2],
+    				false
+    			);
+
+    			add_location(div1, file, 267, 4, 13451);
     			set_style(div2, "padding", "0 0 156.8627% 0");
-    			add_location(div2, file, 276, 4, 13611);
+    			add_location(div2, file, 276, 4, 14161);
     			attr_dev(img1, "id", "g-Bisa-Ular-submedium-5-img");
     			attr_dev(img1, "class", "g-aiImg svelte-ma5ld9");
     			attr_dev(img1, "alt", "");
     			if (!src_url_equal(img1.src, img1_src_value = "./images/Bisa-Ular-submedium-5.png")) attr_dev(img1, "src", img1_src_value);
-    			add_location(img1, file, 277, 4, 13661);
+    			add_location(img1, file, 277, 4, 14211);
     			attr_dev(div3, "id", "g-Bisa-Ular-submedium-5");
     			attr_dev(div3, "class", "g-artboard svelte-ma5ld9");
     			set_style(div3, "min-width", "510px");
@@ -4280,15 +4689,24 @@ var app = (function () {
     			attr_dev(div3, "data-aspect-ratio", "0.638");
     			attr_dev(div3, "data-min-width", "510");
     			attr_dev(div3, "data-max-width", "689");
-    			set_style(div3, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
-    			add_location(div3, file, 274, 4, 13373);
+
+    			set_style(
+    				div3,
+    				"opacity",
+    				/*offset*/ ctx[2] <= 0.2
+    				? /*offset*/ ctx[2]
+    				: /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2],
+    				false
+    			);
+
+    			add_location(div3, file, 274, 4, 13898);
     			set_style(div4, "padding", "0 0 148.4058% 0");
-    			add_location(div4, file, 283, 4, 14048);
+    			add_location(div4, file, 283, 4, 14623);
     			attr_dev(img2, "id", "g-Bisa-Ular-medium-5-img");
     			attr_dev(img2, "class", "g-aiImg svelte-ma5ld9");
     			attr_dev(img2, "alt", "");
     			if (!src_url_equal(img2.src, img2_src_value = "./images/Bisa-Ular-medium-5.png")) attr_dev(img2, "src", img2_src_value);
-    			add_location(img2, file, 284, 4, 14098);
+    			add_location(img2, file, 284, 4, 14673);
     			attr_dev(div5, "id", "g-Bisa-Ular-medium-5");
     			attr_dev(div5, "class", "g-artboard svelte-ma5ld9");
     			set_style(div5, "min-width", "690px");
@@ -4297,15 +4715,24 @@ var app = (function () {
     			attr_dev(div5, "data-aspect-ratio", "0.674");
     			attr_dev(div5, "data-min-width", "690");
     			attr_dev(div5, "data-max-width", "919");
-    			set_style(div5, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
-    			add_location(div5, file, 281, 4, 13813);
+
+    			set_style(
+    				div5,
+    				"opacity",
+    				/*offset*/ ctx[2] <= 0.2
+    				? /*offset*/ ctx[2]
+    				: /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2],
+    				false
+    			);
+
+    			add_location(div5, file, 281, 4, 14363);
     			set_style(div6, "padding", "0 0 100% 0");
-    			add_location(div6, file, 290, 4, 14475);
+    			add_location(div6, file, 290, 4, 15075);
     			attr_dev(img3, "id", "g-Bisa-Ular-large-5-img");
     			attr_dev(img3, "class", "g-aiImg svelte-ma5ld9");
     			attr_dev(img3, "alt", "");
     			if (!src_url_equal(img3.src, img3_src_value = "./images/Bisa-Ular-large-5.png")) attr_dev(img3, "src", img3_src_value);
-    			add_location(img3, file, 291, 4, 14520);
+    			add_location(img3, file, 291, 4, 15120);
     			attr_dev(div7, "id", "g-Bisa-Ular-large-5");
     			attr_dev(div7, "class", "g-artboard svelte-ma5ld9");
     			set_style(div7, "min-width", "920px");
@@ -4314,22 +4741,40 @@ var app = (function () {
     			attr_dev(div7, "data-aspect-ratio", "1");
     			attr_dev(div7, "data-min-width", "920");
     			attr_dev(div7, "data-max-width", "1399");
-    			set_style(div7, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
-    			add_location(div7, file, 288, 4, 14243);
+
+    			set_style(
+    				div7,
+    				"opacity",
+    				/*offset*/ ctx[2] <= 0.2
+    				? /*offset*/ ctx[2]
+    				: /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2],
+    				false
+    			);
+
+    			add_location(div7, file, 288, 4, 14818);
     			set_style(div8, "padding", "0 0 56.25% 0");
-    			add_location(div8, file, 297, 4, 14845);
+    			add_location(div8, file, 297, 4, 15470);
     			attr_dev(img4, "id", "g-Bisa-Ular-xlarge-5-img");
     			attr_dev(img4, "class", "g-aiImg svelte-ma5ld9");
     			attr_dev(img4, "alt", "");
     			if (!src_url_equal(img4.src, img4_src_value = "./images/Bisa-Ular-xlarge-5.png")) attr_dev(img4, "src", img4_src_value);
-    			add_location(img4, file, 298, 4, 14892);
+    			add_location(img4, file, 298, 4, 15517);
     			attr_dev(div9, "id", "g-Bisa-Ular-xlarge-5");
     			attr_dev(div9, "class", "g-artboard svelte-ma5ld9");
     			set_style(div9, "min-width", "1400px");
     			attr_dev(div9, "data-aspect-ratio", "1.778");
     			attr_dev(div9, "data-min-width", "1400");
-    			set_style(div9, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
-    			add_location(div9, file, 295, 4, 14664);
+
+    			set_style(
+    				div9,
+    				"opacity",
+    				/*offset*/ ctx[2] <= 0.2
+    				? /*offset*/ ctx[2]
+    				: /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2],
+    				false
+    			);
+
+    			add_location(div9, file, 295, 4, 15264);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div1, anchor);
@@ -4359,23 +4804,58 @@ var app = (function () {
     		},
     		p: function update(ctx, dirty) {
     			if (dirty & /*offset*/ 4) {
-    				set_style(div1, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    				set_style(
+    					div1,
+    					"opacity",
+    					/*offset*/ ctx[2] <= 0.2
+    					? /*offset*/ ctx[2]
+    					: /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2],
+    					false
+    				);
     			}
 
     			if (dirty & /*offset*/ 4) {
-    				set_style(div3, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    				set_style(
+    					div3,
+    					"opacity",
+    					/*offset*/ ctx[2] <= 0.2
+    					? /*offset*/ ctx[2]
+    					: /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2],
+    					false
+    				);
     			}
 
     			if (dirty & /*offset*/ 4) {
-    				set_style(div5, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    				set_style(
+    					div5,
+    					"opacity",
+    					/*offset*/ ctx[2] <= 0.2
+    					? /*offset*/ ctx[2]
+    					: /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2],
+    					false
+    				);
     			}
 
     			if (dirty & /*offset*/ 4) {
-    				set_style(div7, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    				set_style(
+    					div7,
+    					"opacity",
+    					/*offset*/ ctx[2] <= 0.2
+    					? /*offset*/ ctx[2]
+    					: /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2],
+    					false
+    				);
     			}
 
     			if (dirty & /*offset*/ 4) {
-    				set_style(div9, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    				set_style(
+    					div9,
+    					"opacity",
+    					/*offset*/ ctx[2] <= 0.2
+    					? /*offset*/ ctx[2]
+    					: /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2],
+    					false
+    				);
     			}
     		},
     		d: function destroy(detaching) {
@@ -4461,12 +4941,12 @@ var app = (function () {
     			t8 = space();
     			img4 = element("img");
     			set_style(div0, "padding", "0 0 218.75% 0");
-    			add_location(div0, file, 232, 4, 11029);
+    			add_location(div0, file, 232, 4, 11429);
     			attr_dev(img0, "id", "g-Bisa-Ular-smallplus-4-img");
     			attr_dev(img0, "class", "g-aiImg svelte-ma5ld9");
     			attr_dev(img0, "alt", "");
     			if (!src_url_equal(img0.src, img0_src_value = "./images/Bisa-Ular-smallplus-4.png")) attr_dev(img0, "src", img0_src_value);
-    			add_location(img0, file, 233, 4, 11077);
+    			add_location(img0, file, 233, 4, 11477);
     			attr_dev(div1, "id", "g-Bisa-Ular-smallplus-4");
     			attr_dev(div1, "class", "g-artboard svelte-ma5ld9");
     			set_style(div1, "max-width", "509px");
@@ -4474,15 +4954,24 @@ var app = (function () {
     			attr_dev(div1, "data-aspect-ratio", "0.457");
     			attr_dev(div1, "data-min-width", "0");
     			attr_dev(div1, "data-max-width", "509");
-    			set_style(div1, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
-    			add_location(div1, file, 230, 4, 10810);
+
+    			set_style(
+    				div1,
+    				"opacity",
+    				/*offset*/ ctx[2] <= 0.2
+    				? /*offset*/ ctx[2]
+    				: /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2],
+    				false
+    			);
+
+    			add_location(div1, file, 230, 4, 11185);
     			set_style(div2, "padding", "0 0 156.8627% 0");
-    			add_location(div2, file, 239, 4, 11470);
+    			add_location(div2, file, 239, 4, 11895);
     			attr_dev(img1, "id", "g-Bisa-Ular-submedium-4-img");
     			attr_dev(img1, "class", "g-aiImg svelte-ma5ld9");
     			attr_dev(img1, "alt", "");
     			if (!src_url_equal(img1.src, img1_src_value = "./images/Bisa-Ular-submedium-4.png")) attr_dev(img1, "src", img1_src_value);
-    			add_location(img1, file, 240, 4, 11520);
+    			add_location(img1, file, 240, 4, 11945);
     			attr_dev(div3, "id", "g-Bisa-Ular-submedium-4");
     			attr_dev(div3, "class", "g-artboard svelte-ma5ld9");
     			set_style(div3, "min-width", "510px");
@@ -4491,15 +4980,24 @@ var app = (function () {
     			attr_dev(div3, "data-aspect-ratio", "0.638");
     			attr_dev(div3, "data-min-width", "510");
     			attr_dev(div3, "data-max-width", "689");
-    			set_style(div3, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
-    			add_location(div3, file, 237, 4, 11232);
+
+    			set_style(
+    				div3,
+    				"opacity",
+    				/*offset*/ ctx[2] <= 0.2
+    				? /*offset*/ ctx[2]
+    				: /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2],
+    				false
+    			);
+
+    			add_location(div3, file, 237, 4, 11632);
     			set_style(div4, "padding", "0 0 148.4058% 0");
-    			add_location(div4, file, 246, 4, 11907);
+    			add_location(div4, file, 246, 4, 12357);
     			attr_dev(img2, "id", "g-Bisa-Ular-medium-4-img");
     			attr_dev(img2, "class", "g-aiImg svelte-ma5ld9");
     			attr_dev(img2, "alt", "");
     			if (!src_url_equal(img2.src, img2_src_value = "./images/Bisa-Ular-medium-4.png")) attr_dev(img2, "src", img2_src_value);
-    			add_location(img2, file, 247, 4, 11957);
+    			add_location(img2, file, 247, 4, 12407);
     			attr_dev(div5, "id", "g-Bisa-Ular-medium-4");
     			attr_dev(div5, "class", "g-artboard svelte-ma5ld9");
     			set_style(div5, "min-width", "690px");
@@ -4508,15 +5006,24 @@ var app = (function () {
     			attr_dev(div5, "data-aspect-ratio", "0.674");
     			attr_dev(div5, "data-min-width", "690");
     			attr_dev(div5, "data-max-width", "919");
-    			set_style(div5, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
-    			add_location(div5, file, 244, 4, 11672);
+
+    			set_style(
+    				div5,
+    				"opacity",
+    				/*offset*/ ctx[2] <= 0.2
+    				? /*offset*/ ctx[2]
+    				: /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2],
+    				false
+    			);
+
+    			add_location(div5, file, 244, 4, 12097);
     			set_style(div6, "padding", "0 0 100% 0");
-    			add_location(div6, file, 253, 4, 12334);
+    			add_location(div6, file, 253, 4, 12809);
     			attr_dev(img3, "id", "g-Bisa-Ular-large-4-img");
     			attr_dev(img3, "class", "g-aiImg svelte-ma5ld9");
     			attr_dev(img3, "alt", "");
     			if (!src_url_equal(img3.src, img3_src_value = "./images/Bisa-Ular-large-4.png")) attr_dev(img3, "src", img3_src_value);
-    			add_location(img3, file, 254, 4, 12379);
+    			add_location(img3, file, 254, 4, 12854);
     			attr_dev(div7, "id", "g-Bisa-Ular-large-4");
     			attr_dev(div7, "class", "g-artboard svelte-ma5ld9");
     			set_style(div7, "min-width", "920px");
@@ -4525,22 +5032,40 @@ var app = (function () {
     			attr_dev(div7, "data-aspect-ratio", "1");
     			attr_dev(div7, "data-min-width", "920");
     			attr_dev(div7, "data-max-width", "1399");
-    			set_style(div7, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
-    			add_location(div7, file, 251, 4, 12102);
+
+    			set_style(
+    				div7,
+    				"opacity",
+    				/*offset*/ ctx[2] <= 0.2
+    				? /*offset*/ ctx[2]
+    				: /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2],
+    				false
+    			);
+
+    			add_location(div7, file, 251, 4, 12552);
     			set_style(div8, "padding", "0 0 56.25% 0");
-    			add_location(div8, file, 260, 4, 12704);
+    			add_location(div8, file, 260, 4, 13204);
     			attr_dev(img4, "id", "g-Bisa-Ular-xlarge-4-img");
     			attr_dev(img4, "class", "g-aiImg svelte-ma5ld9");
     			attr_dev(img4, "alt", "");
     			if (!src_url_equal(img4.src, img4_src_value = "./images/Bisa-Ular-xlarge-4.png")) attr_dev(img4, "src", img4_src_value);
-    			add_location(img4, file, 261, 4, 12751);
+    			add_location(img4, file, 261, 4, 13251);
     			attr_dev(div9, "id", "g-Bisa-Ular-xlarge-4");
     			attr_dev(div9, "class", "g-artboard svelte-ma5ld9");
     			set_style(div9, "min-width", "1400px");
     			attr_dev(div9, "data-aspect-ratio", "1.778");
     			attr_dev(div9, "data-min-width", "1400");
-    			set_style(div9, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
-    			add_location(div9, file, 258, 4, 12523);
+
+    			set_style(
+    				div9,
+    				"opacity",
+    				/*offset*/ ctx[2] <= 0.2
+    				? /*offset*/ ctx[2]
+    				: /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2],
+    				false
+    			);
+
+    			add_location(div9, file, 258, 4, 12998);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div1, anchor);
@@ -4570,23 +5095,58 @@ var app = (function () {
     		},
     		p: function update(ctx, dirty) {
     			if (dirty & /*offset*/ 4) {
-    				set_style(div1, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    				set_style(
+    					div1,
+    					"opacity",
+    					/*offset*/ ctx[2] <= 0.2
+    					? /*offset*/ ctx[2]
+    					: /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2],
+    					false
+    				);
     			}
 
     			if (dirty & /*offset*/ 4) {
-    				set_style(div3, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    				set_style(
+    					div3,
+    					"opacity",
+    					/*offset*/ ctx[2] <= 0.2
+    					? /*offset*/ ctx[2]
+    					: /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2],
+    					false
+    				);
     			}
 
     			if (dirty & /*offset*/ 4) {
-    				set_style(div5, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    				set_style(
+    					div5,
+    					"opacity",
+    					/*offset*/ ctx[2] <= 0.2
+    					? /*offset*/ ctx[2]
+    					: /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2],
+    					false
+    				);
     			}
 
     			if (dirty & /*offset*/ 4) {
-    				set_style(div7, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    				set_style(
+    					div7,
+    					"opacity",
+    					/*offset*/ ctx[2] <= 0.2
+    					? /*offset*/ ctx[2]
+    					: /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2],
+    					false
+    				);
     			}
 
     			if (dirty & /*offset*/ 4) {
-    				set_style(div9, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    				set_style(
+    					div9,
+    					"opacity",
+    					/*offset*/ ctx[2] <= 0.2
+    					? /*offset*/ ctx[2]
+    					: /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2],
+    					false
+    				);
     			}
     		},
     		d: function destroy(detaching) {
@@ -4672,12 +5232,12 @@ var app = (function () {
     			t8 = space();
     			img4 = element("img");
     			set_style(div0, "padding", "0 0 218.75% 0");
-    			add_location(div0, file, 194, 4, 8890);
+    			add_location(div0, file, 194, 4, 9165);
     			attr_dev(img0, "id", "g-Bisa-Ular-smallplus-3-img");
     			attr_dev(img0, "class", "g-aiImg svelte-ma5ld9");
     			attr_dev(img0, "alt", "");
     			if (!src_url_equal(img0.src, img0_src_value = "./images/Bisa-Ular-smallplus-3.png")) attr_dev(img0, "src", img0_src_value);
-    			add_location(img0, file, 195, 4, 8938);
+    			add_location(img0, file, 195, 4, 9213);
     			attr_dev(div1, "id", "g-Bisa-Ular-smallplus-3");
     			attr_dev(div1, "class", "g-artboard svelte-ma5ld9");
     			set_style(div1, "max-width", "509px");
@@ -4685,15 +5245,24 @@ var app = (function () {
     			attr_dev(div1, "data-aspect-ratio", "0.457");
     			attr_dev(div1, "data-min-width", "0");
     			attr_dev(div1, "data-max-width", "509");
-    			set_style(div1, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
-    			add_location(div1, file, 192, 4, 8671);
+
+    			set_style(
+    				div1,
+    				"opacity",
+    				/*offset*/ ctx[2] <= 0.2
+    				? /*offset*/ ctx[2]
+    				: /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2],
+    				false
+    			);
+
+    			add_location(div1, file, 192, 4, 8921);
     			set_style(div2, "padding", "0 0 156.8627% 0");
-    			add_location(div2, file, 201, 4, 9331);
+    			add_location(div2, file, 201, 4, 9631);
     			attr_dev(img1, "id", "g-Bisa-Ular-submedium-3-img");
     			attr_dev(img1, "class", "g-aiImg svelte-ma5ld9");
     			attr_dev(img1, "alt", "");
     			if (!src_url_equal(img1.src, img1_src_value = "./images/Bisa-Ular-submedium-3.png")) attr_dev(img1, "src", img1_src_value);
-    			add_location(img1, file, 202, 4, 9381);
+    			add_location(img1, file, 202, 4, 9681);
     			attr_dev(div3, "id", "g-Bisa-Ular-submedium-3");
     			attr_dev(div3, "class", "g-artboard svelte-ma5ld9");
     			set_style(div3, "min-width", "510px");
@@ -4702,15 +5271,24 @@ var app = (function () {
     			attr_dev(div3, "data-aspect-ratio", "0.638");
     			attr_dev(div3, "data-min-width", "510");
     			attr_dev(div3, "data-max-width", "689");
-    			set_style(div3, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
-    			add_location(div3, file, 199, 4, 9093);
+
+    			set_style(
+    				div3,
+    				"opacity",
+    				/*offset*/ ctx[2] <= 0.2
+    				? /*offset*/ ctx[2]
+    				: /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2],
+    				false
+    			);
+
+    			add_location(div3, file, 199, 4, 9368);
     			set_style(div4, "padding", "0 0 148.4058% 0");
-    			add_location(div4, file, 208, 4, 9768);
+    			add_location(div4, file, 208, 4, 10093);
     			attr_dev(img2, "id", "g-Bisa-Ular-medium-3-img");
     			attr_dev(img2, "class", "g-aiImg svelte-ma5ld9");
     			attr_dev(img2, "alt", "");
     			if (!src_url_equal(img2.src, img2_src_value = "./images/Bisa-Ular-medium-3.png")) attr_dev(img2, "src", img2_src_value);
-    			add_location(img2, file, 209, 4, 9818);
+    			add_location(img2, file, 209, 4, 10143);
     			attr_dev(div5, "id", "g-Bisa-Ular-medium-3");
     			attr_dev(div5, "class", "g-artboard svelte-ma5ld9");
     			set_style(div5, "min-width", "690px");
@@ -4719,15 +5297,24 @@ var app = (function () {
     			attr_dev(div5, "data-aspect-ratio", "0.674");
     			attr_dev(div5, "data-min-width", "690");
     			attr_dev(div5, "data-max-width", "919");
-    			set_style(div5, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
-    			add_location(div5, file, 206, 4, 9533);
+
+    			set_style(
+    				div5,
+    				"opacity",
+    				/*offset*/ ctx[2] <= 0.2
+    				? /*offset*/ ctx[2]
+    				: /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2],
+    				false
+    			);
+
+    			add_location(div5, file, 206, 4, 9833);
     			set_style(div6, "padding", "0 0 100% 0");
-    			add_location(div6, file, 215, 4, 10195);
+    			add_location(div6, file, 215, 4, 10545);
     			attr_dev(img3, "id", "g-Bisa-Ular-large-3-img");
     			attr_dev(img3, "class", "g-aiImg svelte-ma5ld9");
     			attr_dev(img3, "alt", "");
     			if (!src_url_equal(img3.src, img3_src_value = "./images/Bisa-Ular-large-3.png")) attr_dev(img3, "src", img3_src_value);
-    			add_location(img3, file, 216, 4, 10240);
+    			add_location(img3, file, 216, 4, 10590);
     			attr_dev(div7, "id", "g-Bisa-Ular-large-3");
     			attr_dev(div7, "class", "g-artboard svelte-ma5ld9");
     			set_style(div7, "min-width", "920px");
@@ -4736,22 +5323,40 @@ var app = (function () {
     			attr_dev(div7, "data-aspect-ratio", "1");
     			attr_dev(div7, "data-min-width", "920");
     			attr_dev(div7, "data-max-width", "1399");
-    			set_style(div7, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
-    			add_location(div7, file, 213, 4, 9963);
+
+    			set_style(
+    				div7,
+    				"opacity",
+    				/*offset*/ ctx[2] <= 0.2
+    				? /*offset*/ ctx[2]
+    				: /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2],
+    				false
+    			);
+
+    			add_location(div7, file, 213, 4, 10288);
     			set_style(div8, "padding", "0 0 56.25% 0");
-    			add_location(div8, file, 222, 4, 10565);
+    			add_location(div8, file, 222, 4, 10940);
     			attr_dev(img4, "id", "g-Bisa-Ular-xlarge-3-img");
     			attr_dev(img4, "class", "g-aiImg svelte-ma5ld9");
     			attr_dev(img4, "alt", "");
     			if (!src_url_equal(img4.src, img4_src_value = "./images/Bisa-Ular-xlarge-3.png")) attr_dev(img4, "src", img4_src_value);
-    			add_location(img4, file, 223, 4, 10612);
+    			add_location(img4, file, 223, 4, 10987);
     			attr_dev(div9, "id", "g-Bisa-Ular-xlarge-3");
     			attr_dev(div9, "class", "g-artboard svelte-ma5ld9");
     			set_style(div9, "min-width", "1400px");
     			attr_dev(div9, "data-aspect-ratio", "1.778");
     			attr_dev(div9, "data-min-width", "1400");
-    			set_style(div9, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
-    			add_location(div9, file, 220, 4, 10384);
+
+    			set_style(
+    				div9,
+    				"opacity",
+    				/*offset*/ ctx[2] <= 0.2
+    				? /*offset*/ ctx[2]
+    				: /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2],
+    				false
+    			);
+
+    			add_location(div9, file, 220, 4, 10734);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div1, anchor);
@@ -4781,23 +5386,58 @@ var app = (function () {
     		},
     		p: function update(ctx, dirty) {
     			if (dirty & /*offset*/ 4) {
-    				set_style(div1, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    				set_style(
+    					div1,
+    					"opacity",
+    					/*offset*/ ctx[2] <= 0.2
+    					? /*offset*/ ctx[2]
+    					: /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2],
+    					false
+    				);
     			}
 
     			if (dirty & /*offset*/ 4) {
-    				set_style(div3, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    				set_style(
+    					div3,
+    					"opacity",
+    					/*offset*/ ctx[2] <= 0.2
+    					? /*offset*/ ctx[2]
+    					: /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2],
+    					false
+    				);
     			}
 
     			if (dirty & /*offset*/ 4) {
-    				set_style(div5, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    				set_style(
+    					div5,
+    					"opacity",
+    					/*offset*/ ctx[2] <= 0.2
+    					? /*offset*/ ctx[2]
+    					: /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2],
+    					false
+    				);
     			}
 
     			if (dirty & /*offset*/ 4) {
-    				set_style(div7, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    				set_style(
+    					div7,
+    					"opacity",
+    					/*offset*/ ctx[2] <= 0.2
+    					? /*offset*/ ctx[2]
+    					: /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2],
+    					false
+    				);
     			}
 
     			if (dirty & /*offset*/ 4) {
-    				set_style(div9, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    				set_style(
+    					div9,
+    					"opacity",
+    					/*offset*/ ctx[2] <= 0.2
+    					? /*offset*/ ctx[2]
+    					: /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2],
+    					false
+    				);
     			}
     		},
     		d: function destroy(detaching) {
@@ -4883,12 +5523,12 @@ var app = (function () {
     			t8 = space();
     			img4 = element("img");
     			set_style(div0, "padding", "0 0 218.75% 0");
-    			add_location(div0, file, 156, 4, 6751);
+    			add_location(div0, file, 156, 4, 6901);
     			attr_dev(img0, "id", "g-Bisa-Ular-smallplus-2-img");
     			attr_dev(img0, "class", "g-aiImg svelte-ma5ld9");
     			attr_dev(img0, "alt", "");
     			if (!src_url_equal(img0.src, img0_src_value = "./images/Bisa-Ular-smallplus-2.png")) attr_dev(img0, "src", img0_src_value);
-    			add_location(img0, file, 157, 4, 6799);
+    			add_location(img0, file, 157, 4, 6949);
     			attr_dev(div1, "id", "g-Bisa-Ular-smallplus-2");
     			attr_dev(div1, "class", "g-artboard svelte-ma5ld9");
     			set_style(div1, "max-width", "509px");
@@ -4896,15 +5536,24 @@ var app = (function () {
     			attr_dev(div1, "data-aspect-ratio", "0.457");
     			attr_dev(div1, "data-min-width", "0");
     			attr_dev(div1, "data-max-width", "509");
-    			set_style(div1, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
-    			add_location(div1, file, 154, 4, 6532);
+
+    			set_style(
+    				div1,
+    				"opacity",
+    				/*offset*/ ctx[2] <= 0.2
+    				? /*offset*/ ctx[2]
+    				: /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2],
+    				false
+    			);
+
+    			add_location(div1, file, 154, 4, 6657);
     			set_style(div2, "padding", "0 0 156.8627% 0");
-    			add_location(div2, file, 163, 4, 7192);
+    			add_location(div2, file, 163, 4, 7367);
     			attr_dev(img1, "id", "g-Bisa-Ular-submedium-2-img");
     			attr_dev(img1, "class", "g-aiImg svelte-ma5ld9");
     			attr_dev(img1, "alt", "");
     			if (!src_url_equal(img1.src, img1_src_value = "./images/Bisa-Ular-submedium-2.png")) attr_dev(img1, "src", img1_src_value);
-    			add_location(img1, file, 164, 4, 7242);
+    			add_location(img1, file, 164, 4, 7417);
     			attr_dev(div3, "id", "g-Bisa-Ular-submedium-2");
     			attr_dev(div3, "class", "g-artboard svelte-ma5ld9");
     			set_style(div3, "min-width", "510px");
@@ -4913,15 +5562,24 @@ var app = (function () {
     			attr_dev(div3, "data-aspect-ratio", "0.638");
     			attr_dev(div3, "data-min-width", "510");
     			attr_dev(div3, "data-max-width", "689");
-    			set_style(div3, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
-    			add_location(div3, file, 161, 4, 6954);
+
+    			set_style(
+    				div3,
+    				"opacity",
+    				/*offset*/ ctx[2] <= 0.2
+    				? /*offset*/ ctx[2]
+    				: /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2],
+    				false
+    			);
+
+    			add_location(div3, file, 161, 4, 7104);
     			set_style(div4, "padding", "0 0 148.4058% 0");
-    			add_location(div4, file, 170, 4, 7629);
+    			add_location(div4, file, 170, 4, 7829);
     			attr_dev(img2, "id", "g-Bisa-Ular-medium-2-img");
     			attr_dev(img2, "class", "g-aiImg svelte-ma5ld9");
     			attr_dev(img2, "alt", "");
     			if (!src_url_equal(img2.src, img2_src_value = "./images/Bisa-Ular-medium-2.png")) attr_dev(img2, "src", img2_src_value);
-    			add_location(img2, file, 171, 4, 7679);
+    			add_location(img2, file, 171, 4, 7879);
     			attr_dev(div5, "id", "g-Bisa-Ular-medium-2");
     			attr_dev(div5, "class", "g-artboard svelte-ma5ld9");
     			set_style(div5, "min-width", "690px");
@@ -4930,15 +5588,24 @@ var app = (function () {
     			attr_dev(div5, "data-aspect-ratio", "0.674");
     			attr_dev(div5, "data-min-width", "690");
     			attr_dev(div5, "data-max-width", "919");
-    			set_style(div5, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
-    			add_location(div5, file, 168, 4, 7394);
+
+    			set_style(
+    				div5,
+    				"opacity",
+    				/*offset*/ ctx[2] <= 0.2
+    				? /*offset*/ ctx[2]
+    				: /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2],
+    				false
+    			);
+
+    			add_location(div5, file, 168, 4, 7569);
     			set_style(div6, "padding", "0 0 100% 0");
-    			add_location(div6, file, 177, 4, 8056);
+    			add_location(div6, file, 177, 4, 8281);
     			attr_dev(img3, "id", "g-Bisa-Ular-large-2-img");
     			attr_dev(img3, "class", "g-aiImg svelte-ma5ld9");
     			attr_dev(img3, "alt", "");
     			if (!src_url_equal(img3.src, img3_src_value = "./images/Bisa-Ular-large-2.png")) attr_dev(img3, "src", img3_src_value);
-    			add_location(img3, file, 178, 4, 8101);
+    			add_location(img3, file, 178, 4, 8326);
     			attr_dev(div7, "id", "g-Bisa-Ular-large-2");
     			attr_dev(div7, "class", "g-artboard svelte-ma5ld9");
     			set_style(div7, "min-width", "920px");
@@ -4947,22 +5614,40 @@ var app = (function () {
     			attr_dev(div7, "data-aspect-ratio", "1");
     			attr_dev(div7, "data-min-width", "920");
     			attr_dev(div7, "data-max-width", "1399");
-    			set_style(div7, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
-    			add_location(div7, file, 175, 4, 7824);
+
+    			set_style(
+    				div7,
+    				"opacity",
+    				/*offset*/ ctx[2] <= 0.2
+    				? /*offset*/ ctx[2]
+    				: /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2],
+    				false
+    			);
+
+    			add_location(div7, file, 175, 4, 8024);
     			set_style(div8, "padding", "0 0 56.25% 0");
-    			add_location(div8, file, 184, 4, 8426);
+    			add_location(div8, file, 184, 4, 8676);
     			attr_dev(img4, "id", "g-Bisa-Ular-xlarge-2-img");
     			attr_dev(img4, "class", "g-aiImg svelte-ma5ld9");
     			attr_dev(img4, "alt", "");
     			if (!src_url_equal(img4.src, img4_src_value = "./images/Bisa-Ular-xlarge-2.png")) attr_dev(img4, "src", img4_src_value);
-    			add_location(img4, file, 185, 4, 8473);
+    			add_location(img4, file, 185, 4, 8723);
     			attr_dev(div9, "id", "g-Bisa-Ular-xlarge-2");
     			attr_dev(div9, "class", "g-artboard svelte-ma5ld9");
     			set_style(div9, "min-width", "1400px");
     			attr_dev(div9, "data-aspect-ratio", "1.778");
     			attr_dev(div9, "data-min-width", "1400");
-    			set_style(div9, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
-    			add_location(div9, file, 182, 4, 8245);
+
+    			set_style(
+    				div9,
+    				"opacity",
+    				/*offset*/ ctx[2] <= 0.2
+    				? /*offset*/ ctx[2]
+    				: /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2],
+    				false
+    			);
+
+    			add_location(div9, file, 182, 4, 8470);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div1, anchor);
@@ -4992,23 +5677,58 @@ var app = (function () {
     		},
     		p: function update(ctx, dirty) {
     			if (dirty & /*offset*/ 4) {
-    				set_style(div1, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    				set_style(
+    					div1,
+    					"opacity",
+    					/*offset*/ ctx[2] <= 0.2
+    					? /*offset*/ ctx[2]
+    					: /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2],
+    					false
+    				);
     			}
 
     			if (dirty & /*offset*/ 4) {
-    				set_style(div3, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    				set_style(
+    					div3,
+    					"opacity",
+    					/*offset*/ ctx[2] <= 0.2
+    					? /*offset*/ ctx[2]
+    					: /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2],
+    					false
+    				);
     			}
 
     			if (dirty & /*offset*/ 4) {
-    				set_style(div5, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    				set_style(
+    					div5,
+    					"opacity",
+    					/*offset*/ ctx[2] <= 0.2
+    					? /*offset*/ ctx[2]
+    					: /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2],
+    					false
+    				);
     			}
 
     			if (dirty & /*offset*/ 4) {
-    				set_style(div7, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    				set_style(
+    					div7,
+    					"opacity",
+    					/*offset*/ ctx[2] <= 0.2
+    					? /*offset*/ ctx[2]
+    					: /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2],
+    					false
+    				);
     			}
 
     			if (dirty & /*offset*/ 4) {
-    				set_style(div9, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    				set_style(
+    					div9,
+    					"opacity",
+    					/*offset*/ ctx[2] <= 0.2
+    					? /*offset*/ ctx[2]
+    					: /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2],
+    					false
+    				);
     			}
     		},
     		d: function destroy(detaching) {
@@ -5094,12 +5814,12 @@ var app = (function () {
     			t8 = space();
     			img4 = element("img");
     			set_style(div0, "padding", "0 0 218.75% 0");
-    			add_location(div0, file, 118, 4, 4612);
+    			add_location(div0, file, 118, 4, 4637);
     			attr_dev(img0, "id", "g-Bisa-Ular-smallplus-1-img");
     			attr_dev(img0, "class", "g-aiImg svelte-ma5ld9");
     			attr_dev(img0, "alt", "");
     			if (!src_url_equal(img0.src, img0_src_value = "./images/Bisa-Ular-smallplus-1.png")) attr_dev(img0, "src", img0_src_value);
-    			add_location(img0, file, 119, 4, 4660);
+    			add_location(img0, file, 119, 4, 4685);
     			attr_dev(div1, "id", "g-Bisa-Ular-smallplus-1");
     			attr_dev(div1, "class", "g-artboard svelte-ma5ld9");
     			set_style(div1, "max-width", "509px");
@@ -5107,15 +5827,24 @@ var app = (function () {
     			attr_dev(div1, "data-aspect-ratio", "0.457");
     			attr_dev(div1, "data-min-width", "0");
     			attr_dev(div1, "data-max-width", "509");
-    			set_style(div1, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+
+    			set_style(
+    				div1,
+    				"opacity",
+    				/*offset*/ ctx[2] <= 0.2
+    				? /*offset*/ ctx[2]
+    				: /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2],
+    				false
+    			);
+
     			add_location(div1, file, 116, 4, 4393);
     			set_style(div2, "padding", "0 0 156.8627% 0");
-    			add_location(div2, file, 125, 4, 5053);
+    			add_location(div2, file, 125, 4, 5103);
     			attr_dev(img1, "id", "g-Bisa-Ular-submedium-1-img");
     			attr_dev(img1, "class", "g-aiImg svelte-ma5ld9");
     			attr_dev(img1, "alt", "");
     			if (!src_url_equal(img1.src, img1_src_value = "./images/Bisa-Ular-submedium-1.png")) attr_dev(img1, "src", img1_src_value);
-    			add_location(img1, file, 126, 4, 5103);
+    			add_location(img1, file, 126, 4, 5153);
     			attr_dev(div3, "id", "g-Bisa-Ular-submedium-1");
     			attr_dev(div3, "class", "g-artboard svelte-ma5ld9");
     			set_style(div3, "min-width", "510px");
@@ -5124,15 +5853,24 @@ var app = (function () {
     			attr_dev(div3, "data-aspect-ratio", "0.638");
     			attr_dev(div3, "data-min-width", "510");
     			attr_dev(div3, "data-max-width", "689");
-    			set_style(div3, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
-    			add_location(div3, file, 123, 4, 4815);
+
+    			set_style(
+    				div3,
+    				"opacity",
+    				/*offset*/ ctx[2] <= 0.2
+    				? /*offset*/ ctx[2]
+    				: /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2],
+    				false
+    			);
+
+    			add_location(div3, file, 123, 4, 4840);
     			set_style(div4, "padding", "0 0 148.4058% 0");
-    			add_location(div4, file, 132, 4, 5490);
+    			add_location(div4, file, 132, 4, 5565);
     			attr_dev(img2, "id", "g-Bisa-Ular-medium-1-img");
     			attr_dev(img2, "class", "g-aiImg svelte-ma5ld9");
     			attr_dev(img2, "alt", "");
     			if (!src_url_equal(img2.src, img2_src_value = "./images/Bisa-Ular-medium-1.png")) attr_dev(img2, "src", img2_src_value);
-    			add_location(img2, file, 133, 4, 5540);
+    			add_location(img2, file, 133, 4, 5615);
     			attr_dev(div5, "id", "g-Bisa-Ular-medium-1");
     			attr_dev(div5, "class", "g-artboard svelte-ma5ld9");
     			set_style(div5, "min-width", "690px");
@@ -5141,15 +5879,24 @@ var app = (function () {
     			attr_dev(div5, "data-aspect-ratio", "0.674");
     			attr_dev(div5, "data-min-width", "690");
     			attr_dev(div5, "data-max-width", "919");
-    			set_style(div5, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
-    			add_location(div5, file, 130, 4, 5255);
+
+    			set_style(
+    				div5,
+    				"opacity",
+    				/*offset*/ ctx[2] <= 0.2
+    				? /*offset*/ ctx[2]
+    				: /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2],
+    				false
+    			);
+
+    			add_location(div5, file, 130, 4, 5305);
     			set_style(div6, "padding", "0 0 100% 0");
-    			add_location(div6, file, 139, 4, 5917);
+    			add_location(div6, file, 139, 4, 6017);
     			attr_dev(img3, "id", "g-Bisa-Ular-large-1-img");
     			attr_dev(img3, "class", "g-aiImg svelte-ma5ld9");
     			attr_dev(img3, "alt", "");
     			if (!src_url_equal(img3.src, img3_src_value = "./images/Bisa-Ular-large-1.png")) attr_dev(img3, "src", img3_src_value);
-    			add_location(img3, file, 140, 4, 5962);
+    			add_location(img3, file, 140, 4, 6062);
     			attr_dev(div7, "id", "g-Bisa-Ular-large-1");
     			attr_dev(div7, "class", "g-artboard svelte-ma5ld9");
     			set_style(div7, "min-width", "920px");
@@ -5158,22 +5905,40 @@ var app = (function () {
     			attr_dev(div7, "data-aspect-ratio", "1");
     			attr_dev(div7, "data-min-width", "920");
     			attr_dev(div7, "data-max-width", "1399");
-    			set_style(div7, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
-    			add_location(div7, file, 137, 4, 5685);
+
+    			set_style(
+    				div7,
+    				"opacity",
+    				/*offset*/ ctx[2] <= 0.2
+    				? /*offset*/ ctx[2]
+    				: /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2],
+    				false
+    			);
+
+    			add_location(div7, file, 137, 4, 5760);
     			set_style(div8, "padding", "0 0 56.25% 0");
-    			add_location(div8, file, 146, 4, 6287);
+    			add_location(div8, file, 146, 4, 6412);
     			attr_dev(img4, "id", "g-Bisa-Ular-xlarge-1-img");
     			attr_dev(img4, "class", "g-aiImg svelte-ma5ld9");
     			attr_dev(img4, "alt", "");
     			if (!src_url_equal(img4.src, img4_src_value = "./images/Bisa-Ular-xlarge-1.png")) attr_dev(img4, "src", img4_src_value);
-    			add_location(img4, file, 147, 4, 6334);
+    			add_location(img4, file, 147, 4, 6459);
     			attr_dev(div9, "id", "g-Bisa-Ular-xlarge-1");
     			attr_dev(div9, "class", "g-artboard svelte-ma5ld9");
     			set_style(div9, "min-width", "1400px");
     			attr_dev(div9, "data-aspect-ratio", "1.778");
     			attr_dev(div9, "data-min-width", "1400");
-    			set_style(div9, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
-    			add_location(div9, file, 144, 4, 6106);
+
+    			set_style(
+    				div9,
+    				"opacity",
+    				/*offset*/ ctx[2] <= 0.2
+    				? /*offset*/ ctx[2]
+    				: /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2],
+    				false
+    			);
+
+    			add_location(div9, file, 144, 4, 6206);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div1, anchor);
@@ -5203,23 +5968,58 @@ var app = (function () {
     		},
     		p: function update(ctx, dirty) {
     			if (dirty & /*offset*/ 4) {
-    				set_style(div1, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    				set_style(
+    					div1,
+    					"opacity",
+    					/*offset*/ ctx[2] <= 0.2
+    					? /*offset*/ ctx[2]
+    					: /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2],
+    					false
+    				);
     			}
 
     			if (dirty & /*offset*/ 4) {
-    				set_style(div3, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    				set_style(
+    					div3,
+    					"opacity",
+    					/*offset*/ ctx[2] <= 0.2
+    					? /*offset*/ ctx[2]
+    					: /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2],
+    					false
+    				);
     			}
 
     			if (dirty & /*offset*/ 4) {
-    				set_style(div5, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    				set_style(
+    					div5,
+    					"opacity",
+    					/*offset*/ ctx[2] <= 0.2
+    					? /*offset*/ ctx[2]
+    					: /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2],
+    					false
+    				);
     			}
 
     			if (dirty & /*offset*/ 4) {
-    				set_style(div7, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    				set_style(
+    					div7,
+    					"opacity",
+    					/*offset*/ ctx[2] <= 0.2
+    					? /*offset*/ ctx[2]
+    					: /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2],
+    					false
+    				);
     			}
 
     			if (dirty & /*offset*/ 4) {
-    				set_style(div9, "opacity", /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2], false);
+    				set_style(
+    					div9,
+    					"opacity",
+    					/*offset*/ ctx[2] <= 0.2
+    					? /*offset*/ ctx[2]
+    					: /*offset*/ ctx[2] <= 0.8 ? 1 : 1 - /*offset*/ ctx[2],
+    					false
+    				);
     			}
     		},
     		d: function destroy(detaching) {
@@ -5397,50 +6197,50 @@ var app = (function () {
     			p9 = element("p");
     			p9.textContent = "Tepat pukul 12 malam hari itu, saat usia Martinus resmi bertambah, kondisinya membaik. Pendarahan di organ-organ penting mulai berhenti. Ginjalnya pun membaik. Kini, ia telah sembuh dan menjalani hidup normal kembali.";
     			attr_dev(section0, "class", "svelte-ma5ld9");
-    			add_location(section0, file, 489, 3, 25773);
+    			add_location(section0, file, 489, 3, 27023);
     			attr_dev(p0, "class", "svelte-ma5ld9");
-    			add_location(p0, file, 491, 4, 25810);
+    			add_location(p0, file, 491, 4, 27060);
     			attr_dev(section1, "class", "svelte-ma5ld9");
-    			add_location(section1, file, 490, 3, 25796);
+    			add_location(section1, file, 490, 3, 27046);
     			attr_dev(p1, "class", "svelte-ma5ld9");
-    			add_location(p1, file, 496, 4, 26030);
+    			add_location(p1, file, 496, 4, 27280);
     			attr_dev(section2, "class", "svelte-ma5ld9");
-    			add_location(section2, file, 495, 3, 26016);
+    			add_location(section2, file, 495, 3, 27266);
     			attr_dev(p2, "class", "svelte-ma5ld9");
-    			add_location(p2, file, 501, 4, 26353);
+    			add_location(p2, file, 501, 4, 27603);
     			attr_dev(section3, "class", "svelte-ma5ld9");
-    			add_location(section3, file, 500, 3, 26339);
+    			add_location(section3, file, 500, 3, 27589);
     			attr_dev(p3, "class", "svelte-ma5ld9");
-    			add_location(p3, file, 506, 4, 26593);
+    			add_location(p3, file, 506, 4, 27843);
     			attr_dev(section4, "class", "svelte-ma5ld9");
-    			add_location(section4, file, 505, 3, 26579);
+    			add_location(section4, file, 505, 3, 27829);
     			attr_dev(p4, "class", "svelte-ma5ld9");
-    			add_location(p4, file, 511, 4, 26804);
+    			add_location(p4, file, 511, 4, 28054);
     			attr_dev(section5, "class", "svelte-ma5ld9");
-    			add_location(section5, file, 510, 3, 26790);
+    			add_location(section5, file, 510, 3, 28040);
     			attr_dev(p5, "class", "svelte-ma5ld9");
-    			add_location(p5, file, 516, 4, 27160);
+    			add_location(p5, file, 516, 4, 28410);
     			attr_dev(section6, "class", "svelte-ma5ld9");
-    			add_location(section6, file, 515, 3, 27146);
+    			add_location(section6, file, 515, 3, 28396);
     			attr_dev(p6, "class", "svelte-ma5ld9");
-    			add_location(p6, file, 521, 4, 27402);
+    			add_location(p6, file, 521, 4, 28652);
     			attr_dev(section7, "class", "svelte-ma5ld9");
-    			add_location(section7, file, 520, 3, 27388);
+    			add_location(section7, file, 520, 3, 28638);
     			attr_dev(p7, "class", "svelte-ma5ld9");
-    			add_location(p7, file, 526, 4, 27829);
+    			add_location(p7, file, 526, 4, 29079);
     			attr_dev(section8, "class", "svelte-ma5ld9");
-    			add_location(section8, file, 525, 3, 27815);
+    			add_location(section8, file, 525, 3, 29065);
     			attr_dev(p8, "class", "svelte-ma5ld9");
-    			add_location(p8, file, 531, 4, 28146);
+    			add_location(p8, file, 531, 4, 29396);
     			attr_dev(section9, "class", "svelte-ma5ld9");
-    			add_location(section9, file, 530, 3, 28132);
+    			add_location(section9, file, 530, 3, 29382);
     			attr_dev(p9, "class", "svelte-ma5ld9");
-    			add_location(p9, file, 536, 4, 28401);
+    			add_location(p9, file, 536, 4, 29651);
     			attr_dev(section10, "class", "svelte-ma5ld9");
-    			add_location(section10, file, 535, 3, 28387);
+    			add_location(section10, file, 535, 3, 29637);
     			attr_dev(div, "slot", "foreground");
     			attr_dev(div, "class", "svelte-ma5ld9");
-    			add_location(div, file, 488, 2, 25745);
+    			add_location(div, file, 488, 2, 26995);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -5772,7 +6572,7 @@ var app = (function () {
     			attr_dev(div11, "class", "divider svelte-ma5ld9");
     			add_location(div11, file, 99, 1, 4106);
     			attr_dev(div12, "class", "divider svelte-ma5ld9");
-    			add_location(div12, file, 543, 1, 28675);
+    			add_location(div12, file, 543, 1, 29925);
     			set_style(div_1, "display", "contents");
     			set_style(div_1, "--font-color", "#f9f9e1");
     			set_style(div_2, "display", "contents");
