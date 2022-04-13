@@ -33241,7 +33241,7 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			attr_dev(img, "class", "imgthumb svelte-uzktmw");
+    			attr_dev(img, "class", "imgthumb svelte-1jogm5x");
 
     			if (!src_url_equal(img.src, img_src_value = /*rewara*/ ctx[2][0].thumbnail
     			? `${({
@@ -33271,14 +33271,14 @@ var app = (function () {
 
     			attr_dev(img, "alt", /*rewara*/ ctx[2][0].title);
     			add_location(img, file$6, 26, 24, 1074);
-    			attr_dev(p, "class", "article-title svelte-uzktmw");
+    			attr_dev(p, "class", "article-title svelte-1jogm5x");
     			attr_dev(p, "id", "first-article");
     			add_location(p, file$6, 27, 24, 1859);
-    			attr_dev(div, "class", "firstnews svelte-uzktmw");
+    			attr_dev(div, "class", "firstnews svelte-1jogm5x");
     			add_location(div, file$6, 25, 20, 1025);
     			attr_dev(a, "href", /*rewara*/ ctx[2][0].slug);
     			add_location(a, file$6, 24, 16, 978);
-    			attr_dev(ul, "class", "othernews svelte-uzktmw");
+    			attr_dev(ul, "class", "othernews svelte-1jogm5x");
     			add_location(ul, file$6, 31, 20, 2014);
     		},
     		m: function mount(target, anchor) {
@@ -33360,14 +33360,14 @@ var app = (function () {
     			t1 = space();
     			p1 = element("p");
     			t2 = space();
-    			attr_dev(p0, "class", "article-title svelte-uzktmw");
+    			attr_dev(p0, "class", "article-title svelte-1jogm5x");
     			add_location(p0, file$6, 36, 32, 2280);
-    			attr_dev(p1, "class", "excerpt svelte-uzktmw");
+    			attr_dev(p1, "class", "excerpt svelte-1jogm5x");
     			add_location(p1, file$6, 37, 32, 2362);
-    			attr_dev(li, "class", "news svelte-uzktmw");
+    			attr_dev(li, "class", "news svelte-1jogm5x");
     			add_location(li, file$6, 35, 28, 2229);
     			attr_dev(a, "href", /*rewara*/ ctx[2][/*i*/ ctx[5] + 1].slug);
-    			attr_dev(a, "class", "svelte-uzktmw");
+    			attr_dev(a, "class", "svelte-1jogm5x");
     			add_location(a, file$6, 34, 24, 2172);
     		},
     		m: function mount(target, anchor) {
@@ -33492,13 +33492,13 @@ var app = (function () {
     			div1 = element("div");
     			div0 = element("div");
     			info.block.c();
-    			attr_dev(p, "class", "title svelte-uzktmw");
+    			attr_dev(p, "class", "title svelte-1jogm5x");
     			add_location(p, file$6, 18, 8, 755);
-    			attr_dev(div0, "class", "rewara svelte-uzktmw");
+    			attr_dev(div0, "class", "rewara svelte-1jogm5x");
     			add_location(div0, file$6, 20, 12, 837);
-    			attr_dev(div1, "class", "rewara-container svelte-uzktmw");
+    			attr_dev(div1, "class", "rewara-container svelte-1jogm5x");
     			add_location(div1, file$6, 19, 8, 793);
-    			attr_dev(div2, "class", "container svelte-uzktmw");
+    			attr_dev(div2, "class", "container svelte-1jogm5x");
     			add_location(div2, file$6, 17, 4, 722);
     		},
     		l: function claim(nodes) {

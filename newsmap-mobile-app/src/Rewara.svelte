@@ -74,7 +74,7 @@
         .news {
             margin-right:0rem;
             margin-bottom: 0.5rem;
-            
+            font-family: var(--fontfamily2);
         }
         .imgthumb {
             width:35vw;
@@ -172,15 +172,18 @@
         .rewara {
             margin-left: 0;
         }
+        .news {
+            width:30vw;
+        }
         .excerpt {
             display: block;
-            width:30vw;
             white-space: normal;
             margin-bottom: 1.2rem;
             margin-top: -0.5rem;
         }
         .article-title {
             font-size: 1.2rem;
+            line-height: 1.2rem;
             margin-bottom: 0.8rem;
         }
 
