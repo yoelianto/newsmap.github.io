@@ -1,36 +1,18 @@
 <script>
     import { get } from "./api";
     import * as ihttp from './constants/initialHttp';
+    import {truncText, stringToDom} from './helper';
 
     const fetchData = (async () => {
         const result = await get(ihttp.URI_REWARA_LIST, {size: 5});
+        console.log(result.data)
         return await result.data;
     })()
 
+    console.log(`${process['env']['URL_IMAGE']}`)
+
     export let title
     
-    // const fetchImage = (async () => {
-    //         const response = await fetch('https://jsonplaceholder.typicode.com/photos')
-    //     return await response.json()
-    //     })()
-    
-    // let rewara = [
-    //     {
-    //         title: "Mengenal Kei Car, Mobil Mungil Khas Jepang",
-	// 		url:"https://newsmap.id/youtube/mengenal-kei-car-mobil-mungil-khas-jepang",
-	// 		thumb:"https://newsmap.id/_next/image?url=https%3A%2F%2Fimg.youtube.com%2Fvi%2FHqJRApyuaqY%2Fhqdefault.jpg&w=1920&q=75"
-    //     },
-    //     {
-    //         title: "Mengenal Kei Car, Mobil Mungil Khas Jepang",
-	// 		url:"https://newsmap.id/youtube/mengenal-kei-car-mobil-mungil-khas-jepang",
-	// 		thumb:"https://newsmap.id/_next/image?url=https%3A%2F%2Fimg.youtube.com%2Fvi%2FHqJRApyuaqY%2Fhqdefault.jpg&w=1920&q=75"
-    //     },
-    //     {
-    //         title: "Mengenal Kei Car, Mobil Mungil Khas Jepang",
-	// 		url:"https://newsmap.id/youtube/mengenal-kei-car-mobil-mungil-khas-jepang",
-	// 		thumb:"https://newsmap.id/_next/image?url=https%3A%2F%2Fimg.youtube.com%2Fvi%2FHqJRApyuaqY%2Fhqdefault.jpg&w=1920&q=75"
-    //     }
-    //     ]
     </script>
     
     <div class="container">
@@ -40,19 +22,22 @@
                 {#await fetchData}
                 <p>...waiting</p>
                 {:then rewara}
-                <a href={rewara[0].url}>
+                <a href={rewara[0].slug}>
                     <div class="firstnews">
-                        <img class='imgthumb' src={rewara[0].thumbnail? `${process['env']['URL_IMAGE']}news/${rewara[0].thumbnail}` : ''} onerror={`this.onerror=null;this.src='${process['env']['NO_IMAGE']}';`} alt={rewara[0].title} />
-                        <p class="article-title">{rewara[0].title}</p>
+                        <img class='imgthumb' src={rewara[0].thumbnail ? `${process['env']['URL_IMAGE']}rewara/${rewara[0].thumbnail}` : ''} onerror={`this.onerror=null;this.src='${process['env']['NO_IMAGE']}';`} alt={rewara[0].title} />
+                        <p class="article-title" id='first-article'>{rewara[0].title}</p>
                     </div>
                 </a>
                 
                     <ul class="othernews">
                         {#each {length: 4} as _, i}
                         {#if rewara[i+1] !== undefined}
-                        <a href="rewara.url">
+                        <a href={rewara[i+1].slug}>
                             <li class="news">
                                 <p class="article-title">{rewara[i+1].title}</p>
+                                <p class="excerpt">
+                                    {@html truncText(stringToDom(rewara[i+1].article),130)}
+                                </p>
                             </li>
                         </a>
                         {/if}    
@@ -67,6 +52,10 @@
     
     
     <style>
+        .excerpt {
+            color:#363636;
+            display:none;
+        }
         .title {
             font-family: var(--fontfamily1);
             font-weight:700;
@@ -92,6 +81,18 @@
             height:25.2vw;
             border-radius:0.5rem;
             object-fit: cover;
+            
+        }
+
+        .firstnews {
+            transition: filter 400ms ease-in-out;
+        }
+        #first-article {
+            font-size: 1rem;
+            color: #363636;
+        }
+        .othernews>a>li>.article-title:hover {
+            transition: color 200ms ease-in-out;
         }
         .article-title {
             font-family: var(--fontfamily2);
@@ -111,6 +112,7 @@
             display: flex;
             flex-direction: column;
             padding-left: 2rem;
+            
         }
         @media only screen /*xtrasmall*/
 	and (max-width: 575px) {
@@ -159,15 +161,48 @@
 	@media only screen /*xtralarge*/
 	and (min-width: 1200px) {
         .title {
-            font-size:2rem
+            font-size:2rem;
+            margin-left:0;
         }
         .container {
             max-width:1100px;
-            width:80%;
+            width:70.4%;
             margin:1rem auto 0 auto;
         }
         .rewara {
-            margin-left: 6%;
+            margin-left: 0;
         }
+        .excerpt {
+            display: block;
+            width:30vw;
+            white-space: normal;
+            margin-bottom: 1.2rem;
+            margin-top: -0.5rem;
+        }
+        .article-title {
+            font-size: 1.2rem;
+            margin-bottom: 0.8rem;
+        }
+
+        #first-article {
+            font-size: 2rem;
+            color: white;
+            position:absolute;
+            bottom: 0;
+            line-height: 2rem;
+            padding:1rem;
+        }
+
+        .firstnews {
+            position: relative;
+            filter: grayscale(0.5);
+        }
+        .firstnews:hover {
+            filter:grayscale(0)
+        }
+        .othernews>a>li>.article-title:hover {
+            color:#ef5959;
+        }
+
 	}
     </style>
