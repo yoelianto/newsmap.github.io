@@ -1,4 +1,5 @@
 <script>
+    import { link } from "svelte-spa-router";
     import { get } from "./api";
     import * as ihttp from './constants/initialHttp';
     import {truncText, stringToDom} from './helper';
@@ -30,7 +31,7 @@
                     <ul class="othernews">
                         {#each {length: 4} as _, i}
                         {#if rewara[i+1] !== undefined}
-                        <a href={rewara[i+1].slug}>
+                        <a href={`/rewara/${rewara[i+1].slug}`} use:link>
                             <li class="news">
                                 <p class="article-title">{rewara[i+1].title}</p>
                                 <p class="excerpt">

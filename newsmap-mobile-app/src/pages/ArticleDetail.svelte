@@ -20,7 +20,7 @@
                 <div class="mt-5 text-center">
                     <img
                         width="50%"
-                        src={`${process["env"]["URL_IMAGE"]}news/${data.thumbnail}`}
+                        src={data.thumbnail}
                         title={data.title}
                         alt={data.title}
                         onError={(e) => {

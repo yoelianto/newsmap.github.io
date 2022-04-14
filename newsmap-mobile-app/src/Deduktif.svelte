@@ -1,18 +1,13 @@
 <script>
-    //export let title;
-    export let author;
-    // let deduktifurl = "https://newsmap.id/article/";
+    let deduktifurl = "https://deduktif.id/";
 
-    //export let  authorprofileimage, authorprofilealt;
-
-	import { Link } from "svelte-navigator";
-    import { getDeduktif } from "./api";
+    import { get } from "./api";
     import * as ihttp from './constants/initialHttp';
     import {truncText, stringToDom} from './helper';
+    import { link } from "svelte-spa-router";
 
     const fetchData = (async () => {
-        const result = await getDeduktif(ihttp.URI_ARTICLE_LIST, {size: 1});
-        console.log(result.data)
+        const result = await get(ihttp.URI_DEDUKTIF_LIST, {size: 1});
         return await result.data;
     })()
 
@@ -44,28 +39,27 @@
             <div class="contentbot">
                 <div class="left">
                     <div class="profile">
-                        <img class="authorprofile" src={`${process['env']['URL_IMAGE']}/news/${d.thumbnail}`} onerror={`this.onerror=null;this.src='${process['env']['NO_IMAGE']}';`} alt="author profile">
+                        <img class="authorprofile" src={`${process['env']['URL_IMAGE']}/author/${d.author_image}`} onerror={`this.onerror=null;this.src='${process['env']['NO_IMAGE']}';`} alt="author profile">
                     </div>
                 </div>
                 <div class="right">
                     <div class="excerpt">
-                        {@html truncText(stringToDom(d.is_custom_html ? d.html_body : d.article),truncNum)}
+                        {@html truncText(stringToDom(d.is_custom_html ? d.description : d.article),truncNum)}
                     </div>
                 </div>
             </div>
             <div class="contenttop">
                 
                 <div class="headline">
-                    <img class="header" src={`${process['env']['URL_IMAGE']}/news/${d.thumbnail}`} alt={d.title} >
+                    <img class="header" src={`${process['env']['URL_IMAGE']}/deduktif/${d.thumbnail}`} onerror={`this.onerror=null;this.src='${process['env']['NO_IMAGE']}';`} alt={d.title} >
                     
                     <div class="headerbottom"></div>
-                    <div class="detail">
-                        <div class="author">oleh {author}</div>
-                        <Link to={`/deduktif/${d.slug}`}>
-                            <div class="title">{d.title}</div>  
-                        </Link>
-                         
-                    </div>
+                        <div class="detail">
+                            <div class="author">oleh {d.author_name}</div>
+                            <a href={`/deduktif/${d.slug}${d.is_custom_html ? '/1' : ''}`} use:link>
+                                <div class="title">{d.title}</div>  
+                            </a>
+                        </div>
                 </div>
             </div>
         </div>

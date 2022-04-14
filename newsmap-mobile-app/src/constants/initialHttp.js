@@ -5,12 +5,16 @@ export const URI_SPOTIFY_LIST = 'spotify/list';
 export const URI_YOUTUBE_LIST = 'youtube/list';
 export const URI_YOUTUBE_DETAIL = 'youtube/detail';
 
-// article original deduktif
+// jurno
 export const URI_ARTICLE_LIST = 'article/list';
 export const URI_ARTICLE_DETAIL = 'article/detail';
 export const URI_ARTICLE_PREV_NEXT = 'article/prev-next';
 
-// article original deduktif
+// deduktif
+export const URI_DEDUKTIF_LIST = 'deduktif/list';
+export const URI_DEDUKTIF_DETAIL = 'deduktif/detail';
+
+// rewara
 export const URI_REWARA_LIST = 'rewara/list';
 export const URI_REWARA_DETAIL = 'rewara/detail';
 export const URI_REWARA_PREV_NEXT = 'rewara/prev-next';

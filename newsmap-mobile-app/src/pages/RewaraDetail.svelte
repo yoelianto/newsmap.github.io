@@ -7,18 +7,10 @@
     const slug = params.slug;
 
     const fetchData = (async () => {
-        const result = await get(ihttp.URI_ARTICLE_DETAIL, { slug });
+        const result = await get(ihttp.URI_REWARA_DETAIL, { slug });
         return await result;
     })();
 </script>
-
-<svelte:head>
-    {#if params.custom}
-        <link rel="stylesheet" href={`./article/${slug}/global.css`} />
-        <link rel="stylesheet" href={`./article/${slug}/bundle.css`} />
-        <script src={`./article/${slug}/bundle.js`}></script>
-    {/if}
-</svelte:head>
 
 {#await fetchData}
     <p>...waiting</p>
@@ -26,7 +18,7 @@
     <ArticleDetail
         data={{
             ...data,
-            thumbnail: process["env"]["URL_IMAGE"] + "article/" + data.thumbnail,
+            thumbnail: process["env"]["URL_IMAGE"] + "rewara/" + data.thumbnail,
         }}
     />
 {:catch error}
