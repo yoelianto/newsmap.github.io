@@ -1,5 +1,5 @@
 <script context="module">
-	import { Link } from "svelte-navigator";
+    import { link } from "svelte-spa-router";
     import interact from 'interactjs';
     
 </script>
@@ -110,7 +110,7 @@
             data-status="{i === 0 ? 'current' : 'waiting' }"
             id={i}
             style="z-index:{3-i};transform:translate({i * 10}px, {i * 10}px)">
-                <Link class="card-link" to={`/article/${d.slug}`}>
+                <a class="card-link" href={`/article/${d.slug}${d.is_custom_html ? '/1' : ''}`}  use:link>
                     <div class="card" style="z-index:{3-i}">
                         <img class="thumb" src={`${process['env']['URL_IMAGE']}news/${d.thumbnail}`} alt="" >
                         <div class="bottom"></div>
@@ -119,7 +119,7 @@
                         <div class="card-title">{d.title}</div>
                     </div>
                 </div>
-            </Link>
+            </a>
         </div>
 
         {/each}
