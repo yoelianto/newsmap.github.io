@@ -51,6 +51,9 @@
     
     
     <style>
+        .container {
+            padding-bottom: 120px;
+        }
         .excerpt {
             color:#363636;
             display:none;

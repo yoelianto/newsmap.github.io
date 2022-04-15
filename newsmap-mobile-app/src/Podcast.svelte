@@ -89,9 +89,9 @@
 <style>
     .container {
         margin-top:1.5rem;
-        padding-bottom: 100px;
+        padding-bottom: 2rem;
         background-color: #121212;
-        border-radius: 2rem 2rem 0 0;
+        border-radius: 2rem;
     }
     .album-container {
         overflow-x: scroll;
@@ -267,7 +267,7 @@
             max-width:1100px;
             width:80%;
             margin:2rem auto 0 auto;
-            padding-bottom: 120px;
+            padding-bottom: 4rem;
         }
         .playlist-embed {
             width:88%;

@@ -109,7 +109,8 @@
             data-dragging='false'
             data-status="{i === 0 ? 'current' : 'waiting' }"
             id={i}
-            style="z-index:{3-i};transform:translate({i * 10}px, {i * 10}px)">
+            style="z-index:{3-i};
+                transform:{width < height && width < 768 ? `translate(${i * 10}px, ${i * 10}px)` : `translate(0px, 0px)`}">
                 <a class="card-link" href={`/article/${d.slug}${d.is_custom_html ? '/1' : ''}`}  use:link>
                     <div class="card" style="z-index:{3-i}">
                         <img class="thumb" src={`${process['env']['URL_IMAGE']}news/${d.thumbnail}`} alt="" >
@@ -131,20 +132,7 @@
 </div>
 
 <style>
-    .icon {
-        color: white;
-        top:1rem;
-        font-size: 1.5rem;
-        position: absolute;
-        width: 100%;
-        justify-content: center;
-        display: flex;
-        z-index:10;
-    }
-    i {
-        margin-left: 0.25rem;
-        margin-right:0.25rem;
-    }
+
     .swipe {
         position: relative;
     }
@@ -283,9 +271,7 @@
         .card:hover {
             filter:grayscale(0);
         }
-        .icon {
-            display: none;
-        }
+
         .swipe {
             height: 80vh;
         }

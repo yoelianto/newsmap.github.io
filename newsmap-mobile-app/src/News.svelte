@@ -5,8 +5,10 @@ import {truncText, stringToDom} from './helper';
 
 export let title = ''
 export let params = {}
-export let scrollBy = 2;
-export const per_page = 5;
+export let scrollBy = 5;
+let per_page = 10;
+let screenWidth = document.body.clientWidth
+let sliderWidth = (0.18 * screenWidth * (per_page - 4))
 
 const fetchData = (async () => {
     const result = await get(ihttp.URI_NEWS_LIST, {...params, media_type: 'print,online'});
@@ -18,12 +20,12 @@ const fetchData = (async () => {
 //     return await response.json()
 // 	})()
 
-const paginationFactor = 95;
-const totalPaginationPixels = scrollBy * paginationFactor;
+const paginationFactor = sliderWidth;
+const totalPaginationPixels = Math.floor(paginationFactor / scrollBy) ;
 
 $: offset = 0;
 $: atStart = offset === 0;
-$: atEnd = offset <= paginationFactor * (per_page - scrollBy) * -1;
+$: atEnd = offset <= paginationFactor * -1;
 
 const move = direction => {
     if (direction > 0 && !atEnd) {
@@ -31,6 +33,7 @@ const move = direction => {
     } else if (direction < 0 && !atStart) {
         offset += totalPaginationPixels;
     }
+    console.log(offset)
 };
 
 </script>
@@ -86,9 +89,10 @@ const move = direction => {
     }
     .slider {
         margin-left: 6%;
+        width: calc(10 * (33.6vw + 0.8rem));
         display: flex;
-        position: relative;
         transition: transform 200ms ease-in-out;
+        margin-right: 15vw;
     }
     .nav_prev {
         position: absolute;

@@ -46,7 +46,7 @@
 		to: moment().format('YYYY-MM-DD'),
 		sort_by: 'published_date', 
 		sort_dir: 'desc',
-		per_page: 5,
+		per_page: 10,
 		media_scope: 'Nasional'
 	}
 
@@ -55,7 +55,7 @@
 		to: moment().format('YYYY-MM-DD'),
 		sort_by: 'published_date', 
 		sort_dir: 'desc',
-		per_page: 5,
+		per_page: 10,
 		media_scope: 'Daerah'
 	}
 
@@ -92,7 +92,7 @@
 			--fontfamily2={fontfamily2}
 		/> -->
 		<article class='headlines'>
-			<VoronoiNewsmap 
+			<VoronoiNewsmap
 			/>
 
 			<Sentiment
@@ -115,8 +115,12 @@
 			--fontfamily2={fontfamily2}
 			--color-brand-darkblue={colorBrandDarkBlue}
 		/>
-		<Rewara
-			title='REWARA'  
+		<Video
+			title='VIDEO'
+			--fontfamily1 ={fontfamily1}
+			--fontfamily2={fontfamily2}
+		/>
+		<Podcast  
 			--fontfamily1 ={fontfamily1}
 			--fontfamily2={fontfamily2}
 		/>
@@ -132,15 +136,12 @@
 			--fontfamily2={fontfamily2}
 			params={paramsDaerah}
 		/>
-		<Video
-			title='VIDEO'
+		<Rewara
+			title='REWARA'  
 			--fontfamily1 ={fontfamily1}
 			--fontfamily2={fontfamily2}
 		/>
-		<Podcast  
-			--fontfamily1 ={fontfamily1}
-			--fontfamily2={fontfamily2}
-		/>
+		
 		<Menu
 			--fontfamily3={fontfamily3}
 			showMenu = { y < 50}

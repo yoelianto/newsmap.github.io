@@ -233,6 +233,7 @@
         }
         .container {
             display: flex;
+            margin-left: 6vw;
         }
 	}
 </style>
