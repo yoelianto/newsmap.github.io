@@ -8,6 +8,7 @@
 
     const fetchData = (async () => {
         const result = await get(ihttp.URI_DEDUKTIF_LIST, {size: 1});
+        console.log(result.data)
         return await result.data;
     })()
 
