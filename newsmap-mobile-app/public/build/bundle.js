@@ -38727,13 +38727,14 @@ var app = (function () {
     			t1 = space();
     			script = element("script");
     			attr_dev(link0, "rel", "stylesheet");
-    			attr_dev(link0, "href", `./article/${/*slug*/ ctx[1]}/global.css`);
+    			attr_dev(link0, "href", `./deduktif/${/*slug*/ ctx[1]}/global.css`);
     			add_location(link0, file$4, 16, 8, 417);
     			attr_dev(link1, "rel", "stylesheet");
-    			attr_dev(link1, "href", `./article/${/*slug*/ ctx[1]}/bundle.css`);
-    			add_location(link1, file$4, 17, 8, 489);
-    			if (!src_url_equal(script.src, script_src_value = `./article/${/*slug*/ ctx[1]}/bundle.js`)) attr_dev(script, "src", script_src_value);
-    			add_location(script, file$4, 18, 8, 561);
+    			attr_dev(link1, "href", `./deduktif/${/*slug*/ ctx[1]}/build/bundle.css`);
+    			add_location(link1, file$4, 17, 8, 490);
+    			script.defer = true;
+    			if (!src_url_equal(script.src, script_src_value = `./deduktif/${/*slug*/ ctx[1]}/bundle.js`)) attr_dev(script, "src", script_src_value);
+    			add_location(script, file$4, 18, 8, 569);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, link0, anchor);
@@ -38771,7 +38772,7 @@ var app = (function () {
     		c: function create() {
     			p = element("p");
     			p.textContent = "An error occurred!";
-    			add_location(p, file$4, 32, 4, 1081);
+    			add_location(p, file$4, 32, 4, 1096);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -38861,7 +38862,7 @@ var app = (function () {
     		c: function create() {
     			p = element("p");
     			p.textContent = "...waiting";
-    			add_location(p, file$4, 23, 4, 664);
+    			add_location(p, file$4, 23, 4, 679);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -39067,10 +39068,11 @@ var app = (function () {
     			attr_dev(link0, "href", `./deduktif/${/*slug*/ ctx[1]}/global.css`);
     			add_location(link0, file$3, 16, 4, 389);
     			attr_dev(link1, "rel", "stylesheet");
-    			attr_dev(link1, "href", `./deduktif/${/*slug*/ ctx[1]}/bundle.css`);
+    			attr_dev(link1, "href", `./deduktif/${/*slug*/ ctx[1]}/build/bundle.css`);
     			add_location(link1, file$3, 17, 4, 458);
+    			script.defer = true;
     			if (!src_url_equal(script.src, script_src_value = `./deduktif/${/*slug*/ ctx[1]}/bundle.js`)) attr_dev(script, "src", script_src_value);
-    			add_location(script, file$3, 18, 4, 527);
+    			add_location(script, file$3, 18, 4, 533);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, link0, anchor);
@@ -39108,7 +39110,7 @@ var app = (function () {
     		c: function create() {
     			p = element("p");
     			p.textContent = "An error occurred!";
-    			add_location(p, file$3, 32, 2, 1019);
+    			add_location(p, file$3, 32, 2, 1031);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -39198,7 +39200,7 @@ var app = (function () {
     		c: function create() {
     			p = element("p");
     			p.textContent = "...waiting";
-    			add_location(p, file$3, 23, 2, 627);
+    			add_location(p, file$3, 23, 2, 639);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
