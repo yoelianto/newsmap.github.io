@@ -591,6 +591,7 @@
         text-align: left;
 		border-radius: 1rem;
 		font-family: 'Roboto-Mono', monospace;
+		white-space: normal;
 	}
 	/* main {
 		text-align: center;

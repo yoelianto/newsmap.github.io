@@ -93,6 +93,7 @@
         line-height: 1.8rem;
         font-family: 'Roboto Mono', monospace;
         color: var(--subheadColor);
+        white-space: normal;
     }
     .credit {
         width:100%;
