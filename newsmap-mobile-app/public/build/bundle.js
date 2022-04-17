@@ -38761,13 +38761,13 @@ var app = (function () {
     			script = element("script");
     			attr_dev(link0, "rel", "stylesheet");
     			attr_dev(link0, "href", `./article/${/*slug*/ ctx[1]}/global.css`);
-    			add_location(link0, file$4, 17, 8, 445);
+    			add_location(link0, file$4, 18, 8, 450);
     			attr_dev(link1, "rel", "stylesheet");
-    			attr_dev(link1, "href", `./article/${/*slug*/ ctx[1]}/build/bundle.css`);
-    			add_location(link1, file$4, 18, 8, 517);
+    			attr_dev(link1, "href", `./article/${/*slug*/ ctx[1]}/bundle.css`);
+    			add_location(link1, file$4, 19, 8, 522);
     			script.defer = true;
-    			if (!src_url_equal(script.src, script_src_value = `./article/${/*slug*/ ctx[1]}/build/bundle.js`)) attr_dev(script, "src", script_src_value);
-    			add_location(script, file$4, 19, 8, 595);
+    			if (!src_url_equal(script.src, script_src_value = `./article/${/*slug*/ ctx[1]}/bundle.js`)) attr_dev(script, "src", script_src_value);
+    			add_location(script, file$4, 20, 8, 594);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, link0, anchor);
@@ -38797,7 +38797,7 @@ var app = (function () {
     	return block;
     }
 
-    // (33:0) {:catch error}
+    // (34:0) {:catch error}
     function create_catch_block$3(ctx) {
     	let p;
 
@@ -38805,7 +38805,7 @@ var app = (function () {
     		c: function create() {
     			p = element("p");
     			p.textContent = "An error occurred!";
-    			add_location(p, file$4, 33, 4, 1127);
+    			add_location(p, file$4, 34, 4, 1120);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -38822,14 +38822,14 @@ var app = (function () {
     		block,
     		id: create_catch_block$3.name,
     		type: "catch",
-    		source: "(33:0) {:catch error}",
+    		source: "(34:0) {:catch error}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (26:0) {:then data}
+    // (27:0) {:then data}
     function create_then_block$3(ctx) {
     	let articledetail;
     	let current;
@@ -38880,14 +38880,14 @@ var app = (function () {
     		block,
     		id: create_then_block$3.name,
     		type: "then",
-    		source: "(26:0) {:then data}",
+    		source: "(27:0) {:then data}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (24:18)      <p>...waiting</p> {:then data}
+    // (25:18)      <p>...waiting</p> {:then data}
     function create_pending_block$3(ctx) {
     	let p;
 
@@ -38895,7 +38895,7 @@ var app = (function () {
     		c: function create() {
     			p = element("p");
     			p.textContent = "...waiting";
-    			add_location(p, file$4, 24, 4, 710);
+    			add_location(p, file$4, 25, 4, 703);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -38912,7 +38912,7 @@ var app = (function () {
     		block,
     		id: create_pending_block$3.name,
     		type: "pending",
-    		source: "(24:18)      <p>...waiting</p> {:then data}",
+    		source: "(25:18)      <p>...waiting</p> {:then data}",
     		ctx
     	});
 
