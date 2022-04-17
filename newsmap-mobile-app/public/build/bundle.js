@@ -38733,7 +38733,7 @@ var app = (function () {
     			attr_dev(link1, "href", `./deduktif/${/*slug*/ ctx[1]}/build/bundle.css`);
     			add_location(link1, file$4, 17, 8, 490);
     			script.defer = true;
-    			if (!src_url_equal(script.src, script_src_value = `./deduktif/${/*slug*/ ctx[1]}/bundle.js`)) attr_dev(script, "src", script_src_value);
+    			if (!src_url_equal(script.src, script_src_value = `./deduktif/${/*slug*/ ctx[1]}/build/bundle.js`)) attr_dev(script, "src", script_src_value);
     			add_location(script, file$4, 18, 8, 569);
     		},
     		m: function mount(target, anchor) {
@@ -38772,7 +38772,7 @@ var app = (function () {
     		c: function create() {
     			p = element("p");
     			p.textContent = "An error occurred!";
-    			add_location(p, file$4, 32, 4, 1096);
+    			add_location(p, file$4, 32, 4, 1102);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -38862,7 +38862,7 @@ var app = (function () {
     		c: function create() {
     			p = element("p");
     			p.textContent = "...waiting";
-    			add_location(p, file$4, 23, 4, 679);
+    			add_location(p, file$4, 23, 4, 685);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -39071,7 +39071,7 @@ var app = (function () {
     			attr_dev(link1, "href", `./deduktif/${/*slug*/ ctx[1]}/build/bundle.css`);
     			add_location(link1, file$3, 17, 4, 458);
     			script.defer = true;
-    			if (!src_url_equal(script.src, script_src_value = `./deduktif/${/*slug*/ ctx[1]}/bundle.js`)) attr_dev(script, "src", script_src_value);
+    			if (!src_url_equal(script.src, script_src_value = `./deduktif/${/*slug*/ ctx[1]}/build/bundle.js`)) attr_dev(script, "src", script_src_value);
     			add_location(script, file$3, 18, 4, 533);
     		},
     		m: function mount(target, anchor) {
@@ -39110,7 +39110,7 @@ var app = (function () {
     		c: function create() {
     			p = element("p");
     			p.textContent = "An error occurred!";
-    			add_location(p, file$3, 32, 2, 1031);
+    			add_location(p, file$3, 32, 2, 1037);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -39200,7 +39200,7 @@ var app = (function () {
     		c: function create() {
     			p = element("p");
     			p.textContent = "...waiting";
-    			add_location(p, file$3, 23, 2, 639);
+    			add_location(p, file$3, 23, 2, 645);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);

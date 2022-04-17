@@ -16,7 +16,7 @@
   {#if params.custom}
     <link rel="stylesheet" href={`./deduktif/${slug}/global.css`} />
     <link rel="stylesheet" href={`./deduktif/${slug}/build/bundle.css`} />
-    <script defer src={`./deduktif/${slug}/bundle.js`}></script>
+    <script defer src={`./deduktif/${slug}/build/bundle.js`}></script>
   {/if}
 </svelte:head>
 
