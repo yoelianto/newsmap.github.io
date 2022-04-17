@@ -1,9 +1,20 @@
 <script>
+	import Head from './Head.svelte';
 	import Header from './Header.svelte';
 	import Paragraph from './Paragraph.svelte';
 	import Quote from './Quote.svelte';
 	import Image from './Image.svelte';
 	import Credit from './Credit.svelte';
+	import Foot from './Foot.svelte'
+
+	//Main Font
+	let fontfamily1 = "Roboto Mono"
+
+	//Main Color
+	let fontColor = '#f9f9e1'
+
+	//Secondary Dark Color
+	let colorBrandDarkBlue = "#242053"
 
 	// scroller
 	import Scroller from '@sveltejs/svelte-scroller';
@@ -20,6 +31,8 @@
 	let subtitleColor='#f9f9e1'
 	let subheadColor='#f9f9e1'
 
+	let height
+
 	let subhead = ['Indonesia adalah salah satu negara dengan jumlah jenis ular berbisa terbanyak di dunia. Totalnya 77 jenis yang terbagi ke dalam tiga famili: <em>elapidae</em>, <em>viperidae</em>, & <em>colubridae</em>',
 
 	'Namun,  sampai saat ini Indonesia hanya memiliki stok antivenom untuk 8-10 jenis ular berbisa. Masih ada 67 jenis ular berbisa lain yang tak punya antivenom. Jumlah tersebut lebih sedikit dari Australia yang masing-masing memiliki antivenom untuk 7-12 jenis ular dan Thailand yang punya 12-20 antivenom.',
@@ -29,12 +42,6 @@
 
 	let credit =[{
 		role : 'Penulis',
-		name : 'Lorem Ipsum'
-		},{
-		role : 'Editor',
-		name : 'Lorem Ipsum'
-		},{
-		role : 'Periset',
 		name : 'Lorem Ipsum'
 		}]
 	let source = 'Sed nec pellentesque massa. Vestibulum eu sem ut dolor placerat ultricies at sit amet massa'
@@ -48,37 +55,43 @@
 </svelte:head>
 
 <main style="background-color: {mainBackground}">
-	<div id="g-Bisa-Ular-box" class="ai2html">
-		<!-- Artboard: smallplus-cover -->
-		<div id="g-Bisa-Ular-smallplus-cover" class="g-artboard" style="max-width: 509px;max-height: 509px" data-aspect-ratio="1" data-min-width="0" data-max-width="509">
-		<div style="padding: 0 0 100% 0;"></div>
-		<img id="g-Bisa-Ular-smallplus-cover-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-smallplus-cover.png"/>
+	<Head 
+		bind:height = {height}
+	/>
+	<div class="headerilustrasi" style="margin-top:{height}px;">
+		<div id="g-Bisa-Ular-box" class="ai2html">
+			<!-- Artboard: smallplus-cover -->
+			<div id="g-Bisa-Ular-smallplus-cover" class="g-artboard" style="max-width: 509px;max-height: 509px" data-aspect-ratio="1" data-min-width="0" data-max-width="509">
+			<div style="padding: 0 0 100% 0;"></div>
+			<img id="g-Bisa-Ular-smallplus-cover-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-smallplus-cover.png"/>
+			</div>
+				
+			<!-- Artboard: submedium-cover -->
+			<div id="g-Bisa-Ular-submedium-cover" class="g-artboard" style="min-width: 510px;max-width: 689px;max-height: 432px" data-aspect-ratio="1.594" data-min-width="510" data-max-width="689">
+			<div style="padding: 0 0 62.7451% 0;"></div>
+			<img id="g-Bisa-Ular-submedium-cover-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-submedium-cover.png"/>
+			</div>
+				
+			<!-- Artboard: medium-cover -->
+			<div id="g-Bisa-Ular-medium-cover" class="g-artboard" style="min-width: 690px;max-width: 919px;max-height: 426px" data-aspect-ratio="2.156" data-min-width="690" data-max-width="919">
+			<div style="padding: 0 0 46.3768% 0;"></div>
+			<img id="g-Bisa-Ular-medium-cover-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-medium-cover.png"/>
+			</div>
+				
+			<!-- Artboard: large-cover -->
+			<div id="g-Bisa-Ular-large-cover" class="g-artboard" style="min-width: 920px;max-width: 1399px;max-height: 485px" data-aspect-ratio="2.884" data-min-width="920" data-max-width="1399">
+			<div style="padding: 0 0 34.6739% 0;"></div>
+				<img id="g-Bisa-Ular-large-cover-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-large-cover.png"/>
+			</div>
+				
+			<!-- Artboard: xlarge-cover -->
+			<div id="g-Bisa-Ular-xlarge-cover" class="g-artboard" style="min-width: 1400px;" data-aspect-ratio="4.466" data-min-width="1400">
+			<div style="padding: 0 0 22.3929% 0;"></div>
+				<img id="g-Bisa-Ular-xlarge-cover-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-xlarge-cover.png"/>
+			</div>
 		</div>
-			
-		<!-- Artboard: submedium-cover -->
-		<div id="g-Bisa-Ular-submedium-cover" class="g-artboard" style="min-width: 510px;max-width: 689px;max-height: 432px" data-aspect-ratio="1.594" data-min-width="510" data-max-width="689">
-		<div style="padding: 0 0 62.7451% 0;"></div>
-		<img id="g-Bisa-Ular-submedium-cover-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-submedium-cover.png"/>
-		</div>
-			
-		<!-- Artboard: medium-cover -->
-		<div id="g-Bisa-Ular-medium-cover" class="g-artboard" style="min-width: 690px;max-width: 919px;max-height: 426px" data-aspect-ratio="2.156" data-min-width="690" data-max-width="919">
-		<div style="padding: 0 0 46.3768% 0;"></div>
-		<img id="g-Bisa-Ular-medium-cover-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-medium-cover.png"/>
-		</div>
-			
-		<!-- Artboard: large-cover -->
-		<div id="g-Bisa-Ular-large-cover" class="g-artboard" style="min-width: 920px;max-width: 1399px;max-height: 485px" data-aspect-ratio="2.884" data-min-width="920" data-max-width="1399">
-		<div style="padding: 0 0 34.6739% 0;"></div>
-			<img id="g-Bisa-Ular-large-cover-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-large-cover.png"/>
-		</div>
-			
-		<!-- Artboard: xlarge-cover -->
-		<div id="g-Bisa-Ular-xlarge-cover" class="g-artboard" style="min-width: 1400px;" data-aspect-ratio="4.466" data-min-width="1400">
-		<div style="padding: 0 0 22.3929% 0;"></div>
-			<img id="g-Bisa-Ular-xlarge-cover-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-xlarge-cover.png"/>
-		</div>
-	</div>
+	</div>	
+	
 
 	<Header 
 		--headerBackground={headerBackground}
@@ -445,44 +458,42 @@
 				<img id="g-Bisa-Ular-xlarge-9-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-xlarge-9.png"/>
 				</div>
 			{:else if index >= 9}
-				<!-- Halaman 1- -->
+				<!-- Halaman 10 -->
 				<!-- Artboard: smallplus-10 -->
 				<div id="g-Bisa-Ular-smallplus-10" class="g-artboard" style="max-width: 509px;max-height: 1113px" data-aspect-ratio="0.457" data-min-width="0" data-max-width="509"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
+				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : offset}>
 				<div style="padding: 0 0 218.75% 0;"></div>
 				<img id="g-Bisa-Ular-smallplus-10-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-smallplus-10.png"/>
 				</div>
 
 				<!-- Artboard: submedium-10 -->
 				<div id="g-Bisa-Ular-submedium-10" class="g-artboard" style="min-width: 510px;max-width: 689px;max-height: 1081px" data-aspect-ratio="0.638" data-min-width="510" data-max-width="689"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
+				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : offset}>
 				<div style="padding: 0 0 156.8627% 0;"></div>
 				<img id="g-Bisa-Ular-submedium-10-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-submedium-10.png"/>
 				</div>
 
 				<!-- Artboard: medium-10 -->
 				<div id="g-Bisa-Ular-medium-10" class="g-artboard" style="min-width: 690px;max-width: 919px;max-height: 1364px" data-aspect-ratio="0.674" data-min-width="690" data-max-width="919"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
+				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : offset}>
 				<div style="padding: 0 0 148.4058% 0;"></div>
 				<img id="g-Bisa-Ular-medium-10-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-medium-10.png"/>
 				</div>
 
 				<!-- Artboard: large-10 -->
 				<div id="g-Bisa-Ular-large-10" class="g-artboard" style="min-width: 920px;max-width: 1399px;max-height: 1399px" data-aspect-ratio="1" data-min-width="920" data-max-width="1399"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
+				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : offset}>
 				<div style="padding: 0 0 100% 0;"></div>
 				<img id="g-Bisa-Ular-large-10-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-large-10.png"/>
 				</div>
 
 				<!-- Artboard: xlarge-10 -->
 				<div id="g-Bisa-Ular-xlarge-10" class="g-artboard" style="min-width: 1400px;" data-aspect-ratio="1.778" data-min-width="1400"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
+				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : offset}>
 				<div style="padding: 0 0 56.25% 0;"></div>
 				<img id="g-Bisa-Ular-xlarge-10-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-xlarge-10.png"/>
 				</div>
 			{/if}
-
-
 			</div>
 		</div>
 
@@ -551,9 +562,15 @@
 		'Data tersebut sebetulnya tak bisa menjadi gambaran utuh atas kasus gigitan ular di Indonesia. Pasalnya, tak ada catatan resmi dari pemerintah terkait persoalan kesehatan serius ini. Maka, menurut Maha, bisa jadi jumlah kasus dan kematian lebih dari angka tersebut.'
 		]}
 	/>
-	<Credit 
-		--font-color ='#f9f9e1'
+	<Credit
+		--fontfamily1={fontfamily1}
+		--font-color = {fontColor}
 		{ source } { credit }
+	/>
+	<Foot 
+		--fontfamily1={fontfamily1}
+		--font-color = {fontColor}
+		--bgColorDark = {colorBrandDarkBlue}
 	/>
 </main>
 

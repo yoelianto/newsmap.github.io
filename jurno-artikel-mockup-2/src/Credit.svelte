@@ -1,6 +1,7 @@
 <script>
     export let credit=[];
     export let source;
+
 </script>
 
 <section>
@@ -29,6 +30,7 @@ section {
     width:90%;
     max-width: 650px;
     margin: auto;
+    padding-bottom: 2rem;
 }
 
 .profile {
@@ -54,7 +56,7 @@ section {
 
 .name {
     font-size: 2rem;
-    font-family: "Noto Sans", sans-serif;
+    font-family: var(--fontfamily1);
     font-weight: 700;
 }
 
