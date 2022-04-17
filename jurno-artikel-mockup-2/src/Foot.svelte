@@ -1,4 +1,5 @@
 <script>
+
     let data = [{
         title: 'Lorem Ipsum',
         source_url: '',

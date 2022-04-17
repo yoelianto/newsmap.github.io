@@ -2737,7 +2737,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (28:20) {#each data as d}
+    // (29:20) {#each data as d}
     function create_each_block(ctx) {
     	let a;
     	let div2;
@@ -2772,20 +2772,20 @@ var app = (function () {
     			attr_dev(img, "class", "imgthumb svelte-1xnibgn");
     			if (!src_url_equal(img.src, img_src_value = /*d*/ ctx[1].origin_images)) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", /*d*/ ctx[1].title);
-    			add_location(img, file$2, 31, 32, 889);
+    			add_location(img, file$2, 32, 32, 891);
     			attr_dev(div0, "class", "images svelte-1xnibgn");
-    			add_location(div0, file$2, 30, 28, 835);
+    			add_location(div0, file$2, 31, 28, 837);
     			attr_dev(p0, "class", "author svelte-1xnibgn");
-    			add_location(p0, file$2, 34, 32, 1069);
+    			add_location(p0, file$2, 35, 32, 1071);
     			attr_dev(p1, "class", "article-title svelte-1xnibgn");
-    			add_location(p1, file$2, 35, 32, 1135);
+    			add_location(p1, file$2, 36, 32, 1137);
     			attr_dev(div1, "class", "credit");
-    			add_location(div1, file$2, 33, 28, 1015);
+    			add_location(div1, file$2, 34, 28, 1017);
     			attr_dev(div2, "class", "news svelte-1xnibgn");
-    			add_location(div2, file$2, 29, 24, 787);
+    			add_location(div2, file$2, 30, 24, 789);
     			attr_dev(a, "href", /*d*/ ctx[1].source_url);
     			attr_dev(a, "class", "newspart svelte-1xnibgn");
-    			add_location(a, file$2, 28, 20, 721);
+    			add_location(a, file$2, 29, 20, 723);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, a, anchor);
@@ -2811,7 +2811,7 @@ var app = (function () {
     		block,
     		id: create_each_block.name,
     		type: "each",
-    		source: "(28:20) {#each data as d}",
+    		source: "(29:20) {#each data as d}",
     		ctx
     	});
 
@@ -2846,13 +2846,13 @@ var app = (function () {
     			}
 
     			attr_dev(p, "class", "title svelte-1xnibgn");
-    			add_location(p, file$2, 22, 8, 474);
+    			add_location(p, file$2, 23, 8, 476);
     			attr_dev(div0, "class", "slider-container svelte-1xnibgn");
-    			add_location(div0, file$2, 23, 8, 520);
+    			add_location(div0, file$2, 24, 8, 522);
     			attr_dev(div1, "class", "container svelte-1xnibgn");
-    			add_location(div1, file$2, 21, 4, 441);
+    			add_location(div1, file$2, 22, 4, 443);
     			attr_dev(nav, "class", "svelte-1xnibgn");
-    			add_location(nav, file$2, 20, 0, 430);
+    			add_location(nav, file$2, 21, 0, 432);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
