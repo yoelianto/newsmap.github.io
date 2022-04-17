@@ -20,7 +20,7 @@
 	let subtitleColor='#f9f9e1'
 	let subheadColor='#f9f9e1'
 
-	let subhead = ['Indonesia adalah salah satu negara dengan jumlah jenis ular berbisa terbanyak di dunia. Totalnya 77 jenis yang terbagi ke dalam tiga famili: elapidae, viperidae, & colubridae',
+	let subhead = ['Indonesia adalah salah satu negara dengan jumlah jenis ular berbisa terbanyak di dunia. Totalnya 77 jenis yang terbagi ke dalam tiga famili: <em>elapidae</em>, <em>viperidae</em>, & <em>colubridae</em>',
 
 	'Namun,  sampai saat ini Indonesia hanya memiliki stok antivenom untuk 8-10 jenis ular berbisa. Masih ada 67 jenis ular berbisa lain yang tak punya antivenom. Jumlah tersebut lebih sedikit dari Australia yang masing-masing memiliki antivenom untuk 7-12 jenis ular dan Thailand yang punya 12-20 antivenom.',
 
@@ -495,7 +495,7 @@
 			</section>
 			<section>
 				<p>
-					Namun, a menginjak dan digigit seekor ular berbisa langka bernama ilmiah daboia ruselli siamensis. Ular ini termasuk golongan viperia ruselli yang hanya hidup di beberapa wilayah Indonesia Tengah, antara lain Pulau Flores, Pulau Komodo, NTT, Adonara, Ende, dan Pulau Solor.
+					Namun, a menginjak dan digigit seekor ular berbisa langka bernama ilmiah <em>daboia ruselli siamensis</em> . Ular ini termasuk golongan <em>viperia ruselli</em> yang hanya hidup di beberapa wilayah Indonesia Tengah, antara lain Pulau Flores, Pulau Komodo, NTT, Adonara, Ende, dan Pulau Solor.
 				</p>
 			</section>
 			<section>
