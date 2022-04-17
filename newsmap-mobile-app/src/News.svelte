@@ -1,9 +1,7 @@
 <script>
-import { get, medium } from "./api";
+import { get} from "./api";
 import * as ihttp from './constants/initialHttp';
 import {truncText, stringToDom} from './helper';
-
-console.log(medium)
 
 export let title = ''
 export let params = {}

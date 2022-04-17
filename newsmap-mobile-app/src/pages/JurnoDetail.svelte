@@ -8,15 +8,17 @@
 
     const fetchData = (async () => {
         const result = await get(ihttp.URI_ARTICLE_DETAIL, { slug });
+        console.log(result)
         return await result;
     })();
 </script>
 
 <svelte:head>
     {#if params.custom}
+    
         <link rel="stylesheet" href={`./article/${slug}/global.css`} />
-        <link rel="stylesheet" href={`./article/${slug}/build/bundle.css`} />
-        <script defer src={`./article/${slug}/build/bundle.js`}></script>
+        <link rel="stylesheet" href={`./article/${slug}/bundle.css`} />
+        <script defer src={`./article/${slug}/bundle.js`}></script>
     {/if}
 </svelte:head>
 
