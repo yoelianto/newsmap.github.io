@@ -55,3 +55,4 @@ export const URI_NEWS_COMMENT_TOTAL = 'news/comment-total';
 
 // sitemap
 export const URI_SITEMAP = 'sitemap';
+

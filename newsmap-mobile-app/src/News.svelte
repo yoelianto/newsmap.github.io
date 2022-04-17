@@ -1,7 +1,9 @@
 <script>
-import { get } from "./api";
+import { get, medium } from "./api";
 import * as ihttp from './constants/initialHttp';
 import {truncText, stringToDom} from './helper';
+
+console.log(medium)
 
 export let title = ''
 export let params = {}
@@ -14,6 +16,12 @@ const fetchData = (async () => {
     const result = await get(ihttp.URI_NEWS_LIST, {...params, media_type: 'print,online'});
     return await result.data;
 })()
+
+const fetchMedium =async () => {
+    const resultMedium = await fetch('https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@binokular')
+    console.log(resultMedium)
+    return await resultMedium
+}
 
 // const fetchImage = (async () => {
 // 		const response = await fetch('https://jsonplaceholder.typicode.com/photos')
