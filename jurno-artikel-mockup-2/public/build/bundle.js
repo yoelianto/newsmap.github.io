@@ -686,7 +686,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (24:0) {:else}
+    // (26:0) {:else}
     function create_else_block(ctx) {
     	let section;
     	let div3;
@@ -732,17 +732,17 @@ var app = (function () {
     			}
 
     			attr_dev(div0, "class", "title svelte-1974078");
-    			add_location(div0, file$7, 27, 12, 854);
-    			add_location(strong, file$7, 30, 41, 1030);
+    			add_location(div0, file$7, 29, 12, 909);
+    			add_location(strong, file$7, 32, 41, 1085);
     			attr_dev(div1, "class", "author");
-    			add_location(div1, file$7, 30, 16, 1005);
+    			add_location(div1, file$7, 32, 16, 1060);
     			attr_dev(div2, "class", "tanggal");
-    			add_location(div2, file$7, 31, 16, 1081);
+    			add_location(div2, file$7, 33, 16, 1136);
     			attr_dev(aside, "class", "credit svelte-1974078");
-    			add_location(aside, file$7, 29, 12, 965);
+    			add_location(aside, file$7, 31, 12, 1020);
     			attr_dev(div3, "class", "title-section svelte-1974078");
-    			add_location(div3, file$7, 26, 8, 813);
-    			add_location(section, file$7, 24, 4, 792);
+    			add_location(div3, file$7, 28, 8, 868);
+    			add_location(section, file$7, 26, 4, 847);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, section, anchor);
@@ -803,7 +803,7 @@ var app = (function () {
     		block,
     		id: create_else_block.name,
     		type: "else",
-    		source: "(24:0) {:else}",
+    		source: "(26:0) {:else}",
     		ctx
     	});
 
@@ -871,17 +871,17 @@ var app = (function () {
     			add_location(div0, file$7, 9, 16, 243);
     			attr_dev(div1, "class", "subtitle svelte-1974078");
     			add_location(div1, file$7, 10, 16, 295);
-    			add_location(strong, file$7, 16, 45, 567);
+    			add_location(strong, file$7, 18, 45, 622);
     			attr_dev(div2, "class", "author");
-    			add_location(div2, file$7, 16, 20, 542);
+    			add_location(div2, file$7, 18, 20, 597);
     			attr_dev(div3, "class", "tanggal");
-    			add_location(div3, file$7, 17, 20, 622);
+    			add_location(div3, file$7, 19, 20, 677);
     			attr_dev(aside, "class", "credit svelte-1974078");
-    			add_location(aside, file$7, 15, 16, 498);
+    			add_location(aside, file$7, 17, 16, 553);
     			attr_dev(div4, "class", "title-section svelte-1974078");
     			add_location(div4, file$7, 8, 12, 198);
     			attr_dev(div5, "class", "gradient svelte-1974078");
-    			add_location(div5, file$7, 20, 12, 717);
+    			add_location(div5, file$7, 22, 12, 772);
     			attr_dev(div6, "class", "full-header-img svelte-1974078");
     			add_location(div6, file$7, 7, 8, 155);
     			add_location(section, file$7, 6, 4, 136);
@@ -961,7 +961,7 @@ var app = (function () {
     	return block;
     }
 
-    // (34:12) {#each subhead as sub}
+    // (36:12) {#each subhead as sub}
     function create_each_block_1(ctx) {
     	let div;
     	let t_value = /*sub*/ ctx[6] + "";
@@ -972,7 +972,7 @@ var app = (function () {
     			div = element("div");
     			t = text(t_value);
     			attr_dev(div, "class", "subhead svelte-1974078");
-    			add_location(div, file$7, 34, 20, 1196);
+    			add_location(div, file$7, 36, 20, 1251);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -990,7 +990,7 @@ var app = (function () {
     		block,
     		id: create_each_block_1.name,
     		type: "each",
-    		source: "(34:12) {#each subhead as sub}",
+    		source: "(36:12) {#each subhead as sub}",
     		ctx
     	});
 
@@ -1000,6 +1000,7 @@ var app = (function () {
     // (12:16) {#each subhead as sub}
     function create_each_block$3(ctx) {
     	let div;
+    	let p;
     	let t0_value = /*sub*/ ctx[6] + "";
     	let t0;
     	let t1;
@@ -1008,16 +1009,19 @@ var app = (function () {
     	const block = {
     		c: function create() {
     			div = element("div");
+    			p = element("p");
     			t0 = text(t0_value);
     			t1 = space();
     			br = element("br");
+    			add_location(p, file$7, 13, 24, 444);
     			attr_dev(div, "class", "subhead svelte-1974078");
     			add_location(div, file$7, 12, 20, 397);
-    			add_location(br, file$7, 13, 20, 451);
+    			add_location(br, file$7, 15, 20, 506);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
-    			append_dev(div, t0);
+    			append_dev(div, p);
+    			append_dev(p, t0);
     			insert_dev(target, t1, anchor);
     			insert_dev(target, br, anchor);
     		},
@@ -2769,22 +2773,22 @@ var app = (function () {
     			p1 = element("p");
     			t3 = text(t3_value);
     			t4 = space();
-    			attr_dev(img, "class", "imgthumb svelte-1xnibgn");
+    			attr_dev(img, "class", "imgthumb svelte-jsdlg0");
     			if (!src_url_equal(img.src, img_src_value = /*d*/ ctx[1].origin_images)) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", /*d*/ ctx[1].title);
     			add_location(img, file$2, 32, 32, 891);
-    			attr_dev(div0, "class", "images svelte-1xnibgn");
+    			attr_dev(div0, "class", "images svelte-jsdlg0");
     			add_location(div0, file$2, 31, 28, 837);
-    			attr_dev(p0, "class", "author svelte-1xnibgn");
+    			attr_dev(p0, "class", "author svelte-jsdlg0");
     			add_location(p0, file$2, 35, 32, 1071);
-    			attr_dev(p1, "class", "article-title svelte-1xnibgn");
+    			attr_dev(p1, "class", "article-title svelte-jsdlg0");
     			add_location(p1, file$2, 36, 32, 1137);
     			attr_dev(div1, "class", "credit");
     			add_location(div1, file$2, 34, 28, 1017);
-    			attr_dev(div2, "class", "news svelte-1xnibgn");
+    			attr_dev(div2, "class", "news svelte-jsdlg0");
     			add_location(div2, file$2, 30, 24, 789);
     			attr_dev(a, "href", /*d*/ ctx[1].source_url);
-    			attr_dev(a, "class", "newspart svelte-1xnibgn");
+    			attr_dev(a, "class", "newspart svelte-jsdlg0");
     			add_location(a, file$2, 29, 20, 723);
     		},
     		m: function mount(target, anchor) {
@@ -2845,13 +2849,13 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			attr_dev(p, "class", "title svelte-1xnibgn");
+    			attr_dev(p, "class", "title svelte-jsdlg0");
     			add_location(p, file$2, 23, 8, 476);
-    			attr_dev(div0, "class", "slider-container svelte-1xnibgn");
+    			attr_dev(div0, "class", "slider-container svelte-jsdlg0");
     			add_location(div0, file$2, 24, 8, 522);
-    			attr_dev(div1, "class", "container svelte-1xnibgn");
+    			attr_dev(div1, "class", "container svelte-jsdlg0");
     			add_location(div1, file$2, 22, 4, 443);
-    			attr_dev(nav, "class", "svelte-1xnibgn");
+    			attr_dev(nav, "class", "svelte-jsdlg0");
     			add_location(nav, file$2, 21, 0, 432);
     		},
     		l: function claim(nodes) {
@@ -3617,12 +3621,12 @@ var app = (function () {
     			t8 = space();
     			img4 = element("img");
     			set_style(div0, "padding", "0 0 218.75% 0");
-    			add_location(div0, file, 464, 4, 25312);
+    			add_location(div0, file, 464, 4, 25301);
     			attr_dev(img0, "id", "g-Bisa-Ular-smallplus-10-img");
     			attr_dev(img0, "class", "g-aiImg svelte-c8c1aj");
     			attr_dev(img0, "alt", "");
     			if (!src_url_equal(img0.src, img0_src_value = "./images/Bisa-Ular-smallplus-10.png")) attr_dev(img0, "src", img0_src_value);
-    			add_location(img0, file, 465, 4, 25360);
+    			add_location(img0, file, 465, 4, 25349);
     			attr_dev(div1, "id", "g-Bisa-Ular-smallplus-10");
     			attr_dev(div1, "class", "g-artboard svelte-c8c1aj");
     			set_style(div1, "max-width", "509px");
@@ -3634,20 +3638,20 @@ var app = (function () {
     			set_style(
     				div1,
     				"opacity",
-    				/*offset*/ ctx[2] <= 0.2
+    				/*offset*/ ctx[2] <= 0.2 && /*index*/ ctx[1] == 9
     				? /*offset*/ ctx[2]
-    				: /*offset*/ ctx[2] <= 0.8 ? 1 : /*offset*/ ctx[2],
+    				: 1,
     				false
     			);
 
     			add_location(div1, file, 462, 4, 25071);
     			set_style(div2, "padding", "0 0 156.8627% 0");
-    			add_location(div2, file, 471, 4, 25778);
+    			add_location(div2, file, 471, 4, 25756);
     			attr_dev(img1, "id", "g-Bisa-Ular-submedium-10-img");
     			attr_dev(img1, "class", "g-aiImg svelte-c8c1aj");
     			attr_dev(img1, "alt", "");
     			if (!src_url_equal(img1.src, img1_src_value = "./images/Bisa-Ular-submedium-10.png")) attr_dev(img1, "src", img1_src_value);
-    			add_location(img1, file, 472, 4, 25828);
+    			add_location(img1, file, 472, 4, 25806);
     			attr_dev(div3, "id", "g-Bisa-Ular-submedium-10");
     			attr_dev(div3, "class", "g-artboard svelte-c8c1aj");
     			set_style(div3, "min-width", "510px");
@@ -3660,20 +3664,20 @@ var app = (function () {
     			set_style(
     				div3,
     				"opacity",
-    				/*offset*/ ctx[2] <= 0.2
+    				/*offset*/ ctx[2] <= 0.2 && /*index*/ ctx[1] == 9
     				? /*offset*/ ctx[2]
-    				: /*offset*/ ctx[2] <= 0.8 ? 1 : /*offset*/ ctx[2],
+    				: 1,
     				false
     			);
 
-    			add_location(div3, file, 469, 4, 25518);
+    			add_location(div3, file, 469, 4, 25507);
     			set_style(div4, "padding", "0 0 148.4058% 0");
-    			add_location(div4, file, 478, 4, 26240);
+    			add_location(div4, file, 478, 4, 26207);
     			attr_dev(img2, "id", "g-Bisa-Ular-medium-10-img");
     			attr_dev(img2, "class", "g-aiImg svelte-c8c1aj");
     			attr_dev(img2, "alt", "");
     			if (!src_url_equal(img2.src, img2_src_value = "./images/Bisa-Ular-medium-10.png")) attr_dev(img2, "src", img2_src_value);
-    			add_location(img2, file, 479, 4, 26290);
+    			add_location(img2, file, 479, 4, 26257);
     			attr_dev(div5, "id", "g-Bisa-Ular-medium-10");
     			attr_dev(div5, "class", "g-artboard svelte-c8c1aj");
     			set_style(div5, "min-width", "690px");
@@ -3686,20 +3690,20 @@ var app = (function () {
     			set_style(
     				div5,
     				"opacity",
-    				/*offset*/ ctx[2] <= 0.2
+    				/*offset*/ ctx[2] <= 0.2 && /*index*/ ctx[1] == 9
     				? /*offset*/ ctx[2]
-    				: /*offset*/ ctx[2] <= 0.8 ? 1 : /*offset*/ ctx[2],
+    				: 1,
     				false
     			);
 
-    			add_location(div5, file, 476, 4, 25983);
+    			add_location(div5, file, 476, 4, 25961);
     			set_style(div6, "padding", "0 0 100% 0");
-    			add_location(div6, file, 485, 4, 26692);
+    			add_location(div6, file, 485, 4, 26648);
     			attr_dev(img3, "id", "g-Bisa-Ular-large-10-img");
     			attr_dev(img3, "class", "g-aiImg svelte-c8c1aj");
     			attr_dev(img3, "alt", "");
     			if (!src_url_equal(img3.src, img3_src_value = "./images/Bisa-Ular-large-10.png")) attr_dev(img3, "src", img3_src_value);
-    			add_location(img3, file, 486, 4, 26737);
+    			add_location(img3, file, 486, 4, 26693);
     			attr_dev(div7, "id", "g-Bisa-Ular-large-10");
     			attr_dev(div7, "class", "g-artboard svelte-c8c1aj");
     			set_style(div7, "min-width", "920px");
@@ -3712,20 +3716,20 @@ var app = (function () {
     			set_style(
     				div7,
     				"opacity",
-    				/*offset*/ ctx[2] <= 0.2
+    				/*offset*/ ctx[2] <= 0.2 && /*index*/ ctx[1] == 9
     				? /*offset*/ ctx[2]
-    				: /*offset*/ ctx[2] <= 0.8 ? 1 : /*offset*/ ctx[2],
+    				: 1,
     				false
     			);
 
-    			add_location(div7, file, 483, 4, 26438);
+    			add_location(div7, file, 483, 4, 26405);
     			set_style(div8, "padding", "0 0 56.25% 0");
-    			add_location(div8, file, 492, 4, 27087);
+    			add_location(div8, file, 492, 4, 27032);
     			attr_dev(img4, "id", "g-Bisa-Ular-xlarge-10-img");
     			attr_dev(img4, "class", "g-aiImg svelte-c8c1aj");
     			attr_dev(img4, "alt", "");
     			if (!src_url_equal(img4.src, img4_src_value = "./images/Bisa-Ular-xlarge-10.png")) attr_dev(img4, "src", img4_src_value);
-    			add_location(img4, file, 493, 4, 27134);
+    			add_location(img4, file, 493, 4, 27079);
     			attr_dev(div9, "id", "g-Bisa-Ular-xlarge-10");
     			attr_dev(div9, "class", "g-artboard svelte-c8c1aj");
     			set_style(div9, "min-width", "1400px");
@@ -3735,13 +3739,13 @@ var app = (function () {
     			set_style(
     				div9,
     				"opacity",
-    				/*offset*/ ctx[2] <= 0.2
+    				/*offset*/ ctx[2] <= 0.2 && /*index*/ ctx[1] == 9
     				? /*offset*/ ctx[2]
-    				: /*offset*/ ctx[2] <= 0.8 ? 1 : /*offset*/ ctx[2],
+    				: 1,
     				false
     			);
 
-    			add_location(div9, file, 490, 4, 26884);
+    			add_location(div9, file, 490, 4, 26840);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div1, anchor);
@@ -3770,57 +3774,57 @@ var app = (function () {
     			append_dev(div9, img4);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty & /*offset*/ 4) {
+    			if (dirty & /*offset, index*/ 6) {
     				set_style(
     					div1,
     					"opacity",
-    					/*offset*/ ctx[2] <= 0.2
+    					/*offset*/ ctx[2] <= 0.2 && /*index*/ ctx[1] == 9
     					? /*offset*/ ctx[2]
-    					: /*offset*/ ctx[2] <= 0.8 ? 1 : /*offset*/ ctx[2],
+    					: 1,
     					false
     				);
     			}
 
-    			if (dirty & /*offset*/ 4) {
+    			if (dirty & /*offset, index*/ 6) {
     				set_style(
     					div3,
     					"opacity",
-    					/*offset*/ ctx[2] <= 0.2
+    					/*offset*/ ctx[2] <= 0.2 && /*index*/ ctx[1] == 9
     					? /*offset*/ ctx[2]
-    					: /*offset*/ ctx[2] <= 0.8 ? 1 : /*offset*/ ctx[2],
+    					: 1,
     					false
     				);
     			}
 
-    			if (dirty & /*offset*/ 4) {
+    			if (dirty & /*offset, index*/ 6) {
     				set_style(
     					div5,
     					"opacity",
-    					/*offset*/ ctx[2] <= 0.2
+    					/*offset*/ ctx[2] <= 0.2 && /*index*/ ctx[1] == 9
     					? /*offset*/ ctx[2]
-    					: /*offset*/ ctx[2] <= 0.8 ? 1 : /*offset*/ ctx[2],
+    					: 1,
     					false
     				);
     			}
 
-    			if (dirty & /*offset*/ 4) {
+    			if (dirty & /*offset, index*/ 6) {
     				set_style(
     					div7,
     					"opacity",
-    					/*offset*/ ctx[2] <= 0.2
+    					/*offset*/ ctx[2] <= 0.2 && /*index*/ ctx[1] == 9
     					? /*offset*/ ctx[2]
-    					: /*offset*/ ctx[2] <= 0.8 ? 1 : /*offset*/ ctx[2],
+    					: 1,
     					false
     				);
     			}
 
-    			if (dirty & /*offset*/ 4) {
+    			if (dirty & /*offset, index*/ 6) {
     				set_style(
     					div9,
     					"opacity",
-    					/*offset*/ ctx[2] <= 0.2
+    					/*offset*/ ctx[2] <= 0.2 && /*index*/ ctx[1] == 9
     					? /*offset*/ ctx[2]
-    					: /*offset*/ ctx[2] <= 0.8 ? 1 : /*offset*/ ctx[2],
+    					: 1,
     					false
     				);
     			}
@@ -6630,52 +6634,52 @@ var app = (function () {
     			p9 = element("p");
     			p9.textContent = "Tepat pukul 12 malam hari itu, saat usia Martinus resmi bertambah, kondisinya membaik. Pendarahan di organ-organ penting mulai berhenti. Ginjalnya pun membaik. Kini, ia telah sembuh dan menjalani hidup normal kembali.";
     			attr_dev(section0, "class", "svelte-c8c1aj");
-    			add_location(section0, file, 500, 3, 27304);
+    			add_location(section0, file, 500, 3, 27249);
     			attr_dev(p0, "class", "svelte-c8c1aj");
-    			add_location(p0, file, 502, 4, 27341);
+    			add_location(p0, file, 502, 4, 27286);
     			attr_dev(section1, "class", "svelte-c8c1aj");
-    			add_location(section1, file, 501, 3, 27327);
-    			add_location(em0, file, 508, 78, 27643);
-    			add_location(em1, file, 508, 141, 27706);
+    			add_location(section1, file, 501, 3, 27272);
+    			add_location(em0, file, 508, 78, 27588);
+    			add_location(em1, file, 508, 141, 27651);
     			attr_dev(p1, "class", "svelte-c8c1aj");
-    			add_location(p1, file, 507, 4, 27561);
+    			add_location(p1, file, 507, 4, 27506);
     			attr_dev(section2, "class", "svelte-c8c1aj");
-    			add_location(section2, file, 506, 3, 27547);
+    			add_location(section2, file, 506, 3, 27492);
     			attr_dev(p2, "class", "svelte-c8c1aj");
-    			add_location(p2, file, 512, 4, 27903);
+    			add_location(p2, file, 512, 4, 27848);
     			attr_dev(section3, "class", "svelte-c8c1aj");
-    			add_location(section3, file, 511, 3, 27889);
+    			add_location(section3, file, 511, 3, 27834);
     			attr_dev(p3, "class", "svelte-c8c1aj");
-    			add_location(p3, file, 517, 4, 28143);
+    			add_location(p3, file, 517, 4, 28088);
     			attr_dev(section4, "class", "svelte-c8c1aj");
-    			add_location(section4, file, 516, 3, 28129);
+    			add_location(section4, file, 516, 3, 28074);
     			attr_dev(p4, "class", "svelte-c8c1aj");
-    			add_location(p4, file, 522, 4, 28354);
+    			add_location(p4, file, 522, 4, 28299);
     			attr_dev(section5, "class", "svelte-c8c1aj");
-    			add_location(section5, file, 521, 3, 28340);
+    			add_location(section5, file, 521, 3, 28285);
     			attr_dev(p5, "class", "svelte-c8c1aj");
-    			add_location(p5, file, 527, 4, 28710);
+    			add_location(p5, file, 527, 4, 28655);
     			attr_dev(section6, "class", "svelte-c8c1aj");
-    			add_location(section6, file, 526, 3, 28696);
+    			add_location(section6, file, 526, 3, 28641);
     			attr_dev(p6, "class", "svelte-c8c1aj");
-    			add_location(p6, file, 532, 4, 28952);
+    			add_location(p6, file, 532, 4, 28897);
     			attr_dev(section7, "class", "svelte-c8c1aj");
-    			add_location(section7, file, 531, 3, 28938);
+    			add_location(section7, file, 531, 3, 28883);
     			attr_dev(p7, "class", "svelte-c8c1aj");
-    			add_location(p7, file, 537, 4, 29379);
+    			add_location(p7, file, 537, 4, 29324);
     			attr_dev(section8, "class", "svelte-c8c1aj");
-    			add_location(section8, file, 536, 3, 29365);
+    			add_location(section8, file, 536, 3, 29310);
     			attr_dev(p8, "class", "svelte-c8c1aj");
-    			add_location(p8, file, 542, 4, 29696);
+    			add_location(p8, file, 542, 4, 29641);
     			attr_dev(section9, "class", "svelte-c8c1aj");
-    			add_location(section9, file, 541, 3, 29682);
+    			add_location(section9, file, 541, 3, 29627);
     			attr_dev(p9, "class", "svelte-c8c1aj");
-    			add_location(p9, file, 547, 4, 29951);
+    			add_location(p9, file, 547, 4, 29896);
     			attr_dev(section10, "class", "svelte-c8c1aj");
-    			add_location(section10, file, 546, 3, 29937);
+    			add_location(section10, file, 546, 3, 29882);
     			attr_dev(div, "slot", "foreground");
     			attr_dev(div, "class", "svelte-c8c1aj");
-    			add_location(div, file, 499, 2, 27276);
+    			add_location(div, file, 499, 2, 27221);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -7043,7 +7047,7 @@ var app = (function () {
     			attr_dev(div12, "class", "divider svelte-c8c1aj");
     			add_location(div12, file, 112, 1, 4409);
     			attr_dev(div13, "class", "divider svelte-c8c1aj");
-    			add_location(div13, file, 554, 1, 30225);
+    			add_location(div13, file, 554, 1, 30170);
     			set_style(div_1, "display", "contents");
     			set_style(div_1, "--font-color", "#f9f9e1");
     			set_style(div_2, "display", "contents");

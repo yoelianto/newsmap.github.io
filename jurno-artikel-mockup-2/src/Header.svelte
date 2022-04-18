@@ -10,7 +10,9 @@
                 <div class="title">{ title }</div>
                 <div class="subtitle">{ subtitle }</div>
                 {#each subhead as sub}
-                    <div class="subhead">{sub}</div>
+                    <div class="subhead">
+                        <p>{sub}</p>
+                    </div>
                     <br>
                 {/each}
                 <aside class="credit">

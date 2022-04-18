@@ -53,6 +53,7 @@
 
 <style>
     nav {
+        width:100%;
         background-color: var(--bgColorDark);
     }
     .container {

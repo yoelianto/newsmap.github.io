@@ -461,35 +461,35 @@
 				<!-- Halaman 10 -->
 				<!-- Artboard: smallplus-10 -->
 				<div id="g-Bisa-Ular-smallplus-10" class="g-artboard" style="max-width: 509px;max-height: 1113px" data-aspect-ratio="0.457" data-min-width="0" data-max-width="509"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : offset}>
+				style:opacity={offset <= 0.2 && index == 9 ? offset : 1}>
 				<div style="padding: 0 0 218.75% 0;"></div>
 				<img id="g-Bisa-Ular-smallplus-10-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-smallplus-10.png"/>
 				</div>
 
 				<!-- Artboard: submedium-10 -->
 				<div id="g-Bisa-Ular-submedium-10" class="g-artboard" style="min-width: 510px;max-width: 689px;max-height: 1081px" data-aspect-ratio="0.638" data-min-width="510" data-max-width="689"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : offset}>
+				style:opacity={offset <= 0.2 && index == 9 ? offset : 1}>
 				<div style="padding: 0 0 156.8627% 0;"></div>
 				<img id="g-Bisa-Ular-submedium-10-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-submedium-10.png"/>
 				</div>
 
 				<!-- Artboard: medium-10 -->
 				<div id="g-Bisa-Ular-medium-10" class="g-artboard" style="min-width: 690px;max-width: 919px;max-height: 1364px" data-aspect-ratio="0.674" data-min-width="690" data-max-width="919"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : offset}>
+				style:opacity={offset <= 0.2 && index == 9 ? offset : 1}>
 				<div style="padding: 0 0 148.4058% 0;"></div>
 				<img id="g-Bisa-Ular-medium-10-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-medium-10.png"/>
 				</div>
 
 				<!-- Artboard: large-10 -->
 				<div id="g-Bisa-Ular-large-10" class="g-artboard" style="min-width: 920px;max-width: 1399px;max-height: 1399px" data-aspect-ratio="1" data-min-width="920" data-max-width="1399"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : offset}>
+				style:opacity={offset <= 0.2 && index == 9 ? offset : 1}>
 				<div style="padding: 0 0 100% 0;"></div>
 				<img id="g-Bisa-Ular-large-10-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-large-10.png"/>
 				</div>
 
 				<!-- Artboard: xlarge-10 -->
 				<div id="g-Bisa-Ular-xlarge-10" class="g-artboard" style="min-width: 1400px;" data-aspect-ratio="1.778" data-min-width="1400"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : offset}>
+				style:opacity={offset <= 0.2 && index == 9 ? offset : 1}>
 				<div style="padding: 0 0 56.25% 0;"></div>
 				<img id="g-Bisa-Ular-xlarge-10-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-xlarge-10.png"/>
 				</div>
