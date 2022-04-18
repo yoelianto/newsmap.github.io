@@ -732,17 +732,17 @@ var app = (function () {
     			}
 
     			attr_dev(div0, "class", "title svelte-1974078");
-    			add_location(div0, file$7, 29, 12, 909);
-    			add_location(strong, file$7, 32, 41, 1085);
+    			add_location(div0, file$7, 29, 12, 915);
+    			add_location(strong, file$7, 32, 41, 1091);
     			attr_dev(div1, "class", "author");
-    			add_location(div1, file$7, 32, 16, 1060);
+    			add_location(div1, file$7, 32, 16, 1066);
     			attr_dev(div2, "class", "tanggal");
-    			add_location(div2, file$7, 33, 16, 1136);
+    			add_location(div2, file$7, 33, 16, 1142);
     			attr_dev(aside, "class", "credit svelte-1974078");
-    			add_location(aside, file$7, 31, 12, 1020);
+    			add_location(aside, file$7, 31, 12, 1026);
     			attr_dev(div3, "class", "title-section svelte-1974078");
-    			add_location(div3, file$7, 28, 8, 868);
-    			add_location(section, file$7, 26, 4, 847);
+    			add_location(div3, file$7, 28, 8, 874);
+    			add_location(section, file$7, 26, 4, 853);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, section, anchor);
@@ -871,17 +871,17 @@ var app = (function () {
     			add_location(div0, file$7, 9, 16, 243);
     			attr_dev(div1, "class", "subtitle svelte-1974078");
     			add_location(div1, file$7, 10, 16, 295);
-    			add_location(strong, file$7, 18, 45, 622);
+    			add_location(strong, file$7, 18, 45, 628);
     			attr_dev(div2, "class", "author");
-    			add_location(div2, file$7, 18, 20, 597);
+    			add_location(div2, file$7, 18, 20, 603);
     			attr_dev(div3, "class", "tanggal");
-    			add_location(div3, file$7, 19, 20, 677);
+    			add_location(div3, file$7, 19, 20, 683);
     			attr_dev(aside, "class", "credit svelte-1974078");
-    			add_location(aside, file$7, 17, 16, 553);
+    			add_location(aside, file$7, 17, 16, 559);
     			attr_dev(div4, "class", "title-section svelte-1974078");
     			add_location(div4, file$7, 8, 12, 198);
     			attr_dev(div5, "class", "gradient svelte-1974078");
-    			add_location(div5, file$7, 22, 12, 772);
+    			add_location(div5, file$7, 22, 12, 778);
     			attr_dev(div6, "class", "full-header-img svelte-1974078");
     			add_location(div6, file$7, 7, 8, 155);
     			add_location(section, file$7, 6, 4, 136);
@@ -972,7 +972,7 @@ var app = (function () {
     			div = element("div");
     			t = text(t_value);
     			attr_dev(div, "class", "subhead svelte-1974078");
-    			add_location(div, file$7, 36, 20, 1251);
+    			add_location(div, file$7, 36, 20, 1257);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -1001,36 +1001,33 @@ var app = (function () {
     function create_each_block$3(ctx) {
     	let div;
     	let p;
-    	let t0_value = /*sub*/ ctx[6] + "";
-    	let t0;
-    	let t1;
+    	let raw_value = /*sub*/ ctx[6] + "";
+    	let t;
     	let br;
 
     	const block = {
     		c: function create() {
     			div = element("div");
     			p = element("p");
-    			t0 = text(t0_value);
-    			t1 = space();
+    			t = space();
     			br = element("br");
     			add_location(p, file$7, 13, 24, 444);
     			attr_dev(div, "class", "subhead svelte-1974078");
     			add_location(div, file$7, 12, 20, 397);
-    			add_location(br, file$7, 15, 20, 506);
+    			add_location(br, file$7, 15, 20, 512);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
     			append_dev(div, p);
-    			append_dev(p, t0);
-    			insert_dev(target, t1, anchor);
+    			p.innerHTML = raw_value;
+    			insert_dev(target, t, anchor);
     			insert_dev(target, br, anchor);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty & /*subhead*/ 4 && t0_value !== (t0_value = /*sub*/ ctx[6] + "")) set_data_dev(t0, t0_value);
-    		},
+    			if (dirty & /*subhead*/ 4 && raw_value !== (raw_value = /*sub*/ ctx[6] + "")) p.innerHTML = raw_value;		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(div);
-    			if (detaching) detach_dev(t1);
+    			if (detaching) detach_dev(t);
     			if (detaching) detach_dev(br);
     		}
     	};
@@ -1252,23 +1249,20 @@ var app = (function () {
     // (8:4) {#each para as p}
     function create_each_block$2(ctx) {
     	let p;
-    	let t_value = /*p*/ ctx[1] + "";
-    	let t;
+    	let raw_value = /*p*/ ctx[1] + "";
 
     	const block = {
     		c: function create() {
     			p = element("p");
-    			t = text(t_value);
     			attr_dev(p, "class", "svelte-1o0jkfx");
     			add_location(p, file$6, 8, 8, 157);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
-    			append_dev(p, t);
+    			p.innerHTML = raw_value;
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty & /*para*/ 1 && t_value !== (t_value = /*p*/ ctx[1] + "")) set_data_dev(t, t_value);
-    		},
+    			if (dirty & /*para*/ 1 && raw_value !== (raw_value = /*p*/ ctx[1] + "")) p.innerHTML = raw_value;		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(p);
     		}

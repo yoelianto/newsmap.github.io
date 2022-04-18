@@ -11,7 +11,7 @@
                 <div class="subtitle">{ subtitle }</div>
                 {#each subhead as sub}
                     <div class="subhead">
-                        <p>{sub}</p>
+                        <p>{@html sub}</p>
                     </div>
                     <br>
                 {/each}

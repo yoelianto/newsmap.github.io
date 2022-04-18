@@ -6,7 +6,7 @@
 <section>
     <!-- <h3>{ subjudul }</h3> -->
     {#each para as p}
-        <p>{ p }</p>
+        <p>{@html p}</p>
     {/each}
 </section>
 
