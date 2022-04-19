@@ -1,9 +1,9 @@
 <script>
     let menus = [
-        {menu:'Jurno',id:0, active:false, link:"#jurno", source:"./image/home.svg"},
-        {menu:'Original',id:1, active:false, link:"#original", source:"./image/search.svg"},
-        {menu:'Deduktif',id:2, active:false, link:"#deduktif", source:"./image/deduktif.svg"},
-        {menu:'Podcast',id:3, active:false, link:"#podcast", source:"./image/podcast.svg"}
+        {menu:'Jurno',id:0, active:false, link:"#jurno", source:"./images/home.svg"},
+        {menu:'Original',id:1, active:false, link:"#original", source:"./images/search.svg"},
+        {menu:'Deduktif',id:2, active:false, link:"#deduktif", source:"./images/deduktif.svg"},
+        {menu:'Podcast',id:3, active:false, link:"#podcast", source:"./images/podcast.svg"}
     ]
 
     const menuClick = (id) => {

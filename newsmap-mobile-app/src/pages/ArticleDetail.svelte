@@ -1,25 +1,33 @@
 <script>
     import { stringToDom } from "../helper";
 	import moment from 'moment';
+    import Head from '../Head.svelte'
+    import Foot from '../Foot.svelte'
 
     export let data = {};
 
     const format = (text) => {
         return text !== undefined ? text : null;
     };
+
+    let y;
+    let height;
 </script>
+
+<svelte:window bind:scrollY={y} />
+
+<Head 
+    bind:height = {height}
+/>
 
 {#if !data.is_custom_html}
     <main class="content-section">
         <div class="container">
-            <div class="text-center">
-                <h3>{format(data.title)}</h3>
-                <span>{moment(data.post_date).format('ddd, DD MMM YYYY, HH:mm')}</span>
-            </div>
-            {#if format(data.thumbnail)}
-                <div class="mt-5 text-center">
+            {#if format(data.thumbnail)} <!-- thumbnail image -->
+                <div class="header"
+                    style:transform="translate(0px, {-y/4}px)"
+                    style:margin-top={height}px>
                     <img
-                        width="50%"
                         src={data.thumbnail}
                         title={data.title}
                         alt={data.title}
@@ -39,12 +47,27 @@
                     </video>
                 </div>
             {/if}
-            {#if format(data.article)}
-                <div class="row mt-5">
-                    <div class="col">
-                        {@html stringToDom(data.article)}
-                    </div>
-                </div>
+            {#if format(data.article)} <!-- article content -->
+                <article>
+                    <section class="content">
+                        <h1>{format(data.title)}</h1> <!-- title -->
+                        <!-- <span>{moment(data.post_date).format('ddd, DD MMM YYYY, HH:mm')}</span> -->
+                        <div class="author">
+                            {#if format(data.author_image)}
+                            <img class='authorpic'
+                                src={process["env"]["URL_IMAGE"] + "author/" + data.author_image}
+                                alt={data.author_name}>
+                            {/if}
+                            <span class='authorname'>{data.author_name}</span>
+                        </div>
+                        <div>
+                            {@html stringToDom(data.article)}
+                        </div> 
+                    </section>
+                    
+                    <Foot />
+                </article>
+                                      
             {/if}
             {#if format(data.source_link)}
                 <div class="mt-5">
@@ -58,10 +81,32 @@
 {/if}
 
 <style>
+    .header {
+        position: fixed;
+        z-index: -1;
+        top: -40vh;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .author {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    .authorpic {
+        width:50px;
+        height: 50px;
+        background-color: steelblue;
+        clip-path: circle(50%);
+    }
+    .authorname {
+        color:hsl(0, 0%, 50%);
+        font-weight: 500;
+        margin-left: 0.5rem;
+    }
     .container {
         width: 100%;
-        padding-right: 15px;
-        padding-left: 15px;
         margin-right: auto;
         margin-left: auto;
         white-space: normal;
@@ -70,36 +115,99 @@
     .content-section {
         width: 100%;
         display: block;
-        padding: 20px 0;
         position: relative;
     }
-    .text-center {
+    /* .text-center {
         text-align: center !important;
+    } */
+    article {
+        width:100%;
+        background-color: #fafafa;
+        border-radius: 2rem 2rem 0 0;
+        position: relative;
+        top:50vh;
     }
-    .mt-5 {
-        margin-top: 3rem !important;
+    h1 {
+        font-family: 'Roboto Mono';
     }
-    .row {
-        display: flex;
-        flex-wrap: wrap;
-        margin-right: -15px;
-        margin-left: -15px;
+    .content {
+        padding:1rem;
+        margin:0 auto;
     }
-    .col {
-        flex-basis: 0;
-        -moz-box-flex: 1;
-        flex-grow: 1;
-        max-width: 100%;
+    img {
+        object-fit: cover;
     }
+    @media only screen /*xtrasmall*/
+	and (max-width: 575px) {
+        .header {
+            top: 0;
+            height:50vh;
+        }
+        img {
+            height:50vh;
+        }
+        h1 {
+            font-size: 1.8rem;
+            line-height: 2rem;
+        }
 
-    @media (min-width: 1280px) {
-        .container {
-            max-width: 1260px;
+	}
+	@media only screen /*small*/
+	and (min-width: 576px)
+	and (max-width: 767px) {
+        .header {
+            top: 0
         }
-    }
-    @media (min-width: 1170px) {
-        .container {
-            max-width: 1100px;
+
+	}
+	@media only screen /*medium*/
+	and (min-width: 768px)
+	and (max-width: 991px) {
+        .header {
+            top: 0
         }
-    }
+        .content {
+            max-width:650px;
+        }
+        h1 {
+            font-size: 1.8rem;
+            line-height: 2rem;
+        }
+
+	}
+	@media only screen /*large*/
+	and (min-width: 992px)
+	and (max-width: 1199px) {
+        .header {
+            top: 0;
+        }
+        .content {
+            max-width:650px;
+        }
+        h1 {
+            font-size: 1.8rem;
+            line-height: 2rem;
+        }
+        img {
+            width: 100vw;
+        }
+
+	}
+	@media only screen /*xtralarge*/
+	and (min-width: 1200px) {
+        .header {
+            top: -40vh
+        }
+        .content {
+            max-width:650px;
+        }
+        h1 {
+            font-size: 1.8rem;
+            line-height: 2rem;
+        }
+        img {
+            width: 100vw;
+        }
+	}
+
 </style>
