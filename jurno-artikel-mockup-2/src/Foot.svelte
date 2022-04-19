@@ -1,19 +1,19 @@
 <script>
 
-    let data = [{
+let data = [{
         title: 'Lorem Ipsum',
         source_url: '',
-        origin_images:'',
+        origin_images:'./images/1__0iFAE8-sgh2ycQHD90BfQ.png',
         author:'Ann Putri'
         },{
         title: 'Lorem Ipsum Dolor',
         source_url: '',
-        origin_images:'',
+        origin_images:'./images/1_86BC3VqISaNyv2sd3pY6PA.png',
         author:'Ahsan Ridhoi'
         },{
         title: 'Sit Amet',
         source_url: '',
-        origin_images:'',
+        origin_images:'./images/1_bxLV9w6DAzlVJW7GxKq4Hg.png',
         author:'Ann Putri'
         },
         ]
@@ -21,7 +21,7 @@
 
 <nav>
     <div class="container">
-        <p class="title">Artikel Populer</p>
+        <p class="title">Artikel Lainnya</p>
         <div class="slider-container">
                 <!-- {#await fetchData}
                 <p>...waiting</p>
@@ -90,10 +90,11 @@
         width: 160px;
         height: 125px;
         background-color: indianred;
+        border-radius:0.5rem;
     }
     .imgthumb {
-        width:90%;
-        height:67.5%;
+        width:100%;
+        height:100%;
         border-radius:0.5rem;
         object-fit: cover;
     }
@@ -141,8 +142,8 @@
             margin:1rem auto;
         }
         .imgthumb {
-            width:20vw;
-            height:15vw;
+            width:100%;
+            height:100%;
         }
 
 
@@ -159,8 +160,8 @@
             margin:1rem auto;
         }
         .imgthumb {
-            width:18vw;
-            height:13.5vw;
+            width:100%;
+            height:100%;
         }
         
 
@@ -177,8 +178,8 @@
             margin:1rem auto;
         }
         .imgthumb {
-            width:18vw;
-            height:13.5vw;
+            width:100%;
+            height:100%;
         }
 
 	}
@@ -195,8 +196,8 @@
             margin:1rem auto 0 auto;
         }
         .imgthumb {
-            width:18vw;
-            height:13.5vw;
+            width:100%;
+            height:100%;
         }
 
 	}
