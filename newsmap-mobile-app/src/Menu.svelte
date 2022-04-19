@@ -2,7 +2,7 @@
     let menus = [
         {menu:'Jurno',id:0, active:false, link:"#jurno", source:"./image/home.svg"},
         {menu:'Original',id:1, active:false, link:"#original", source:"./image/search.svg"},
-        {menu:'Deduktif',id:2, active:false, link:"#deduktif", source:"./image/artikel.svg"},
+        {menu:'Deduktif',id:2, active:false, link:"#deduktif", source:"./image/deduktif.svg"},
         {menu:'Podcast',id:3, active:false, link:"#podcast", source:"./image/podcast.svg"}
     ]
 
@@ -113,7 +113,36 @@
     @media only screen /*medium*/
     and (min-width: 768px)
     and (max-width: 991px) {
-      
+        .menubar {
+            width: 50vw;
+        }
+        .container {
+            height: 90px;
+            width: 50vw;
+            left: 25vw;
+            border-radius: 2rem;
+            bottom: 1rem;
+        }
+        .circle {
+            width: 5vw;
+            height: 5vw;
+        }
+        img {
+            width:3vw;
+            height:3vw;
+        }
+        .moveDown {
+            bottom:-90px;
+            transition: bottom 400ms ease-in-out;
+        }
+        .menu:hover {
+            color:#242053;
+            transition: color 400ms ease-in-out;
+        }
+        .circle:hover {
+            background-color:#242053;
+            transition: background-color 400ms ease-in-out;
+        }
     }
     @media only screen /*large*/
     and (min-width: 992px)

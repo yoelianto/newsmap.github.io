@@ -24,7 +24,7 @@
 
 
     //mobile
-    if (width < height && width < 768) {
+    if (width < height && width < 991) {
 
 
         interact('.swipe[data-status="current"]').draggable({
@@ -48,9 +48,9 @@
                 if (moved > 150) {
                     event.target.setAttribute('data-status', 'transition')
                     if (position.x > 0) { // move right
-                        position.x = containerWidth * 1.5
+                        position.x = width * 1.5
                     } else { // move left
-                        position.x = -containerWidth * 1.5
+                        position.x = -width * 1.5
                     }
 
                     event.target.style.transform = 
@@ -111,7 +111,7 @@
             data-status="{i === 0 ? 'current' : 'waiting' }"
             id={i}
             style="z-index:{3-i};
-                transform:{width < height && width < 768 ? `translate(${i * 10}px, ${i * 10}px)` : `translate(0px, 0px)`}">
+                transform:{width < height && width < 991 ? `translate(${i * 10}px, ${i * 10}px)` : `translate(0px, 0px)`}">
                 <a class="card-link" href={`/article/${d.slug}${d.is_custom_html ? '/1' : ''}`}  use:link>
                     <div class="card" style="z-index:{3-i}">
                         <img class="thumb" src={`${process['env']['URL_IMAGE']}news/${d.thumbnail}`} alt="" >
@@ -130,6 +130,17 @@
     {:catch error}
         <p>An error occurred!</p>
     {/await}
+    <div class="buttons">
+        <button>
+            next
+        </button>
+        <button>
+            undo
+        </button>
+        <button>
+            read
+        </button>
+    </div>
 </div>
 
 <style>
@@ -178,6 +189,16 @@
         z-index: 0;
         height: 100%;
     }
+    .buttons {
+        margin-top: 1rem;
+        display: flex;
+        border-radius: 50px;
+        justify-content: center;
+    }
+    button {
+        width:100px;
+        height:100px;
+    }
     .inner-card {
         position: absolute;
         font-family: var(--fontfamily2);
@@ -215,6 +236,7 @@
             width:90%;
             margin:1rem auto;
         }
+        
 
 	}
 	@media only screen /*medium*/
@@ -227,6 +249,13 @@
             max-width:900px;
             width:90%;
             margin:1rem auto;
+        }
+        .card {
+            width:40vw;
+            height:71vw;
+        }
+        .inner-container {
+            height: 72vw;
         }
 
 	}

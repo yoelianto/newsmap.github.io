@@ -189,7 +189,7 @@
 	@media only screen /*small*/
 	and (min-width: 576px)
 	and (max-width: 767px) {
-        .title {
+        .deduktif {
             font-size:2rem
         }
         .container {
@@ -202,7 +202,7 @@
 	@media only screen /*medium*/
 	and (min-width: 768px)
 	and (max-width: 991px) {
-        .title {
+        .deduktif {
             font-size:2rem
         }
         .container {
@@ -215,7 +215,7 @@
 	@media only screen /*large*/
 	and (min-width: 992px)
 	and (max-width: 1199px) {
-        .title {
+        .deduktif {
             font-size:2rem
         }
         .container {
@@ -227,7 +227,7 @@
 	}
 	@media only screen /*xtralarge*/
 	and (min-width: 1200px) {
-        .title {
+        .deduktif {
             font-size:2rem;
             margin-left:0;
             line-height: 2rem;

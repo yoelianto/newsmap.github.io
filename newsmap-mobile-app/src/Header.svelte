@@ -171,7 +171,17 @@
 	@media only screen /*medium*/
 	and (min-width: 768px)
 	and (max-width: 991px) {
-
+        .container {
+            height: 10vw;
+            width:100%;
+        }
+        .header-menu {
+            width: 60vw;
+            margin:0 auto;
+        }
+        h4 {
+            font-size:1.5rem;
+        }
 	}
 	@media only screen /*large*/
 	and (min-width: 992px)

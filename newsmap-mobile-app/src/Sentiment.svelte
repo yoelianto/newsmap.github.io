@@ -187,7 +187,45 @@
 	@media only screen /*medium*/
 	and (min-width: 768px)
 	and (max-width: 991px) {
+        .sentiment-container {
+            width:18vw;
+        }
+        .slider {
+            flex-direction: row;
+        }
+        .namecontainer {
+            flex-direction: column;
+            justify-content: center;
+        }
+        .sentiment {
+            width:10vw;
+            cursor: pointer;
+            flex-direction: column;
+        }
+        .person {
+            width: 15vw;
+            height:15vw;
+        }
+        .slider {
+            margin: 0 auto;
+        }
+        .pie {
+            --w:15vw;
+            --b:8px;
+        }
+        .percent{
+            width:15vw;
+            font-size: 1.5rem;
+        }
 
+        .name {
+            width:10vw;
+            font-size: 1rem;
+        }
+        .container {
+            display: flex;
+            margin-left: 6vw;
+        }
 	}
 	@media only screen /*large*/
 	and (min-width: 992px)
