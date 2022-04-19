@@ -10,21 +10,21 @@ let per_page = 10;
 let screenWidth = document.body.clientWidth
 let sliderWidth = (0.18 * screenWidth * (per_page - 4))
 
+let truncNum = 40
+if (screenWidth > 1024) {
+    truncNum = 100
+}
+
 const fetchData = (async () => {
     const result = await get(ihttp.URI_NEWS_LIST, {...params, media_type: 'print,online'});
     return await result.data;
 })()
 
-const fetchMedium =async () => {
-    const resultMedium = await fetch('https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@binokular')
-    console.log(resultMedium)
-    return await resultMedium
-}
-
-// const fetchImage = (async () => {
-// 		const response = await fetch('https://jsonplaceholder.typicode.com/photos')
-//     return await response.json()
-// 	})()
+const fetchInfogramData = (async () => {
+    const result = await get(ihttp.URI_INFOGRAM_LIST, {size: 10});
+    console.log(result.data)
+    return await result.data;
+})()
 
 const paginationFactor = sliderWidth;
 const totalPaginationPixels = Math.floor(paginationFactor / scrollBy) ;
@@ -42,6 +42,7 @@ const move = direction => {
     console.log(offset)
 };
 
+
 </script>
 <svelte:head>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -49,8 +50,10 @@ const move = direction => {
 
 <div class="container">
     <p class="title">{title}</p>
+
     <div class="slider-container">
         <div class="slider" style="transform: translateX({offset}px);">
+            {#if title != 'INFOGRAM'}
             {#await fetchData}
             <p>...waiting</p>
             {:then data}
@@ -60,7 +63,7 @@ const move = direction => {
                         <img class='imgthumb' src={d.origin_images} alt={d.title} />
                         <p class="author">{d.media}</p>
                         <p class="article-title">
-                            {@html truncText(d.title, 40)}
+                            {@html truncText(d.title, truncNum)}
                         </p>
                     </div>
                 </a>
@@ -68,15 +71,39 @@ const move = direction => {
             {:catch error}
                 <p>An error occurred!</p>
             {/await}
+            {:else if title === 'INFOGRAM'}
+            {#await fetchInfogramData}
+            <p>...waiting</p>
+            {:then data}
+                {#each data as d}
+                <a href={d.source_url}>
+                    <div class="news">
+                        <img class='imgthumb' src={`${process['env']['URL_IMAGE']}infogram/${d.thumbnail}`} alt={d.title} />
+                        <p class="author">{d.author}</p>
+                        <p class="article-title">
+                            {@html truncText(d.title, truncNum)}
+                        </p>
+                    </div>
+                </a>
+                {/each}
+            {:catch error}
+                <p>An error occurred!</p>
+            {/await}
+            {/if}
         </div>
+        {#if screenWidth > 1024}
         <button type="button" class="nav_prev" disabled={atStart} on:click="{() => move(-1)}">
             <i class="fa fa-angle-left" ></i>
         </button>
         <button type="button" class="nav_next" disabled={atEnd} on:click="{() => move(1)}">
             <i class="fa fa-angle-right" ></i>
         </button>
+        {/if}
     </div>
+    
+
 </div>
+
 
 
 <style>
@@ -137,7 +164,7 @@ const move = direction => {
     }
     .news {
         margin-right:0.8rem;
-        
+        width:33.6vw;
     }
     .imgthumb {
         width:33.6vw;
@@ -191,6 +218,9 @@ const move = direction => {
             width:90%;
             margin:1rem auto;
         }
+        .news {
+            width:20vw;
+        }
         .imgthumb {
             width:20vw;
             height:15vw;
@@ -211,6 +241,9 @@ const move = direction => {
             width:90%;
             margin:1rem auto;
         }
+        .news {
+            width:18vw;
+        }
         .imgthumb {
             width:18vw;
             height:13.5vw;
@@ -229,6 +262,9 @@ const move = direction => {
             max-width:800px;
             width:80%;
             margin:1rem auto;
+        }
+        .news {
+            width:18vw;
         }
         .imgthumb {
             width:18vw;
@@ -249,6 +285,9 @@ const move = direction => {
             max-width:1100px;
             width:70.4%;
             margin:1rem auto 0 auto;
+        }
+        .news {
+            width:18vw;
         }
         .imgthumb {
             width:18vw;

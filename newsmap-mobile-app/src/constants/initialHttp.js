@@ -14,6 +14,9 @@ export const URI_ARTICLE_PREV_NEXT = 'article/prev-next';
 export const URI_DEDUKTIF_LIST = 'deduktif/list';
 export const URI_DEDUKTIF_DETAIL = 'deduktif/detail';
 
+//infogram
+export const URI_INFOGRAM_LIST = 'infogram/list';
+
 // rewara
 export const URI_REWARA_LIST = 'rewara/list';
 export const URI_REWARA_DETAIL = 'rewara/detail';
