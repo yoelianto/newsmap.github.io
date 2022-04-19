@@ -105,6 +105,7 @@
 		<Original
 			--fontfamily1={fontfamily1}
 			--fontfamily2={fontfamily2}
+			--color-brand-red={colorBrandRed}
 		/>
 		<Deduktif 
 			title="Menelusuri Indahnya Jalur Pantai Pangandaran"

@@ -11,14 +11,11 @@
     };
 
     let y;
-    let height;
+    export let height;
+    
 </script>
 
 <svelte:window bind:scrollY={y} />
-
-<Head 
-    bind:height = {height}
-/>
 
 {#if !data.is_custom_html}
     <main class="content-section">

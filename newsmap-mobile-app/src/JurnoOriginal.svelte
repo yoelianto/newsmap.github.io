@@ -8,6 +8,8 @@
     import { get } from "./api";
     import * as ihttp from './constants/initialHttp';
     import { onMount } from 'svelte'
+    import Icon from 'svelte-awesome';
+    import { fileText, undo, times, book } from 'svelte-awesome/icons';
 
     const fetchData = (async () => {
         const result = await get(ihttp.URI_ARTICLE_LIST, {size: 3});
@@ -130,15 +132,15 @@
     {:catch error}
         <p>An error occurred!</p>
     {/await}
-    <div class="buttons">
+    <div class="buttons" style:display={width < height && width < 991 ? 'flex' : 'none'}>
         <button>
-            next
+            <Icon data={times} scale={2}/>
         </button>
         <button>
-            undo
+            <Icon data={undo} scale={2}/>
         </button>
         <button>
-            read
+            <Icon data={fileText} scale={2}/>
         </button>
     </div>
 </div>
@@ -196,8 +198,12 @@
         justify-content: center;
     }
     button {
-        width:100px;
-        height:100px;
+        width:75px;
+        height:75px;
+        border-radius: 50%;
+        margin:0.5rem;
+        background-color: #fafafa;
+        color: var(--color-brand-red);
     }
     .inner-card {
         position: absolute;

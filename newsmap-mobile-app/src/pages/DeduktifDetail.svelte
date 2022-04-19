@@ -2,6 +2,7 @@
   import { get } from "../api";
   import * as ihttp from "../constants/initialHttp";
   import ArticleDetail from "./ArticleDetail.svelte";
+  import Head from '../Head.svelte'
 
   export let params = {};
   const slug = params.slug;
@@ -11,6 +12,8 @@
     console.log(result)
     return await result;
   })();
+
+  let height;
 </script>
 
 <svelte:head>
@@ -24,12 +27,16 @@
 {#await fetchData}
   <p>...waiting</p>
 {:then data}
+  <Head 
+    bind:height = {height}
+  />
   <ArticleDetail
     data={{
       ...data,
       thumbnail: process["env"]["URL_IMAGE"] + "deduktif/" + data.thumbnail,
     }}
   />
+  
 {:catch error}
   <p>An error occurred!</p>
 {/await}

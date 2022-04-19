@@ -2,6 +2,9 @@
     import { get } from "../api";
     import * as ihttp from "../constants/initialHttp";
     import ArticleDetail from "./ArticleDetail.svelte";
+    import Head from '../Head.svelte'
+
+    let height;
 
     export let params = {};
     const slug = params.slug;
@@ -15,6 +18,9 @@
 {#await fetchData}
     <p>...waiting</p>
 {:then data}
+    <Head 
+    bind:height = {height}
+    />
     <ArticleDetail
         data={{
             ...data,
