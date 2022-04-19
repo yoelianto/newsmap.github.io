@@ -23,10 +23,52 @@
     let width = document.body.clientWidth
     let height = document.body.clientHeight
 
+    const next = () => {
+        let card = document.querySelector('.swipe[data-status="current"]')
+        
+        card.setAttribute('data-status', 'transition')
+        position.x = -width * 1.5
+        card.style.transform = `translate(${position.x}px) rotate(${position.x * 0.05}deg)`
+        card.style.transition =`transform 100ms ease-in-out`
+
+        if (card.id < 2) {
+            card.nextElementSibling.setAttribute('data-status', 'current');
+        } else if (card.id == 2) {
+            let swipe = document.querySelectorAll('.swipe')
+            swipe.forEach((item, index) => {
+                item.style.transition =`transform 0ms ease-in-out`
+                item.style.transform = `translate(${index*10}px, ${index*10}px) rotate(0deg)`
+                item.setAttribute('data-status', 'waiting')                    
+            })
+            swipe[0].setAttribute('data-status', 'current')
+        }
+        
+        position.x = 0
+        position.y = 0
+
+        
+    }
+
+    const undofunction = () => {
+        let card = document.querySelectorAll('.swipe[data-status="transition"]')
+        card = card[card.length - 1]
+        
+        card.setAttribute('data-status', 'current')
+        position.x = 0
+        card.style.transform = `translate(${card.id * 10}px, ${card.id * 10}px) rotate(0deg)`
+        card.style.transition =`transform 100ms ease-in-out`
+
+        card.nextElementSibling.setAttribute('data-status', 'waiting');
+    }
+
+    const read = () => {
+        let card = document.querySelector('.swipe[data-status="current"]')
+        let link = card.children[0].href
+        window.location.href = link
+    }
 
     //mobile
     if (width < height && width < 991) {
-
 
         interact('.swipe[data-status="current"]').draggable({
         listeners: {
@@ -132,13 +174,13 @@
         <p>An error occurred!</p>
     {/await}
     <div class="buttons" style:display={width < height && width < 991 ? 'flex' : 'none'}>
-        <button>
+        <button on:click={next}>
             <Icon data={times} scale={2}/>
         </button>
-        <button>
+        <button on:click={undofunction}>
             <Icon data={undo} scale={2}/>
         </button>
-        <button>
+        <button on:click={read}>
             <Icon data={fileText} scale={2}/>
         </button>
     </div>
