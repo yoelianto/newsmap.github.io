@@ -34,7 +34,7 @@
                 <div class="tanggal">{ date }</div>
             </aside>
             {#each subhead as sub}
-                    <div class="subhead">{sub}</div>
+                    <div class="subhead">{@html sub}</div>
             {/each}
         </div>
     </section>
