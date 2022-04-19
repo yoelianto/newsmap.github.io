@@ -9,7 +9,6 @@
 
   const fetchData = (async () => {
     const result = await get(ihttp.URI_ARTICLE_DETAIL, { slug });
-    console.log(result)
     return await result;
   })();
 

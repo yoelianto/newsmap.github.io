@@ -22,7 +22,6 @@ const fetchData = (async () => {
 
 const fetchInfogramData = (async () => {
     const result = await get(ihttp.URI_INFOGRAM_LIST, {size: 10});
-    console.log(result.data)
     return await result.data;
 })()
 
@@ -39,7 +38,6 @@ const move = direction => {
     } else if (direction < 0 && !atStart) {
         offset += totalPaginationPixels;
     }
-    console.log(offset)
 };
 
 
