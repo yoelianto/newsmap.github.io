@@ -9,7 +9,7 @@
     import * as ihttp from './constants/initialHttp';
     import { onMount } from 'svelte'
     import Icon from 'svelte-awesome';
-    import { fileText, undo, times, book } from 'svelte-awesome/icons';
+    import { fileText, undo, times } from 'svelte-awesome/icons';
 
     const fetchData = (async () => {
         const result = await get(ihttp.URI_ARTICLE_LIST, {size: 3});
@@ -92,6 +92,7 @@
                     event.target.setAttribute('data-status', 'transition')
                     if (position.x > 0) { // move right
                         position.x = width * 1.5
+                        window.location.href = event.target.children[0].href
                     } else { // move left
                         position.x = -width * 1.5
                     }
@@ -175,13 +176,13 @@
     {/await}
     <div class="buttons" style:display={width < height && width < 991 ? 'flex' : 'none'}>
         <button on:click={next}>
-            <Icon data={times} scale={2}/>
+            <Icon data={times} scale={1.5}/>
         </button>
         <button on:click={undofunction}>
-            <Icon data={undo} scale={2}/>
+            <Icon data={undo} scale={1.5}/>
         </button>
         <button on:click={read}>
-            <Icon data={fileText} scale={2}/>
+            <Icon data={fileText} scale={1.5}/>
         </button>
     </div>
 </div>
@@ -239,10 +240,10 @@
         justify-content: center;
     }
     button {
-        width:75px;
-        height:75px;
+        width:50px;
+        height:50px;
         border-radius: 50%;
-        margin:0.5rem;
+        margin:0.25rem;
         background-color: #fafafa;
         color: var(--color-brand-red);
     }

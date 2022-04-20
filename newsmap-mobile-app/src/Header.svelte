@@ -86,7 +86,7 @@
     }
     img {
         margin:0.5rem auto;
-        height:3.5rem;
+        height:35px;
     }
     .container {
         height:30vw;
@@ -119,7 +119,7 @@
         width:100vw;
         position: absolute;
         transition: top 400ms ease-in-out;
-        top: 4.5rem;
+        top: calc(1rem + 35px);
         /* box-shadow: 0rem -1rem 1rem 1rem rgba(0,0,0,0.1); */
     }
     .moveUp {

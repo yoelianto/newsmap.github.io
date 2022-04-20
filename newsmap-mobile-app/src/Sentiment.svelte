@@ -1,6 +1,15 @@
 <script>
     import { get } from "./api";
     import * as ihttp from './constants/initialHttp';
+    import {createEventDispatcher} from 'svelte'
+    export let name
+
+    const dispatch = createEventDispatcher()
+
+    function forward(event) {
+        dispatch('modalIn')
+        name = event.path[2].children[1].children[1].innerHTML
+    }
 
     export let params = {}
 
@@ -36,7 +45,7 @@
         {:then data}
             {#each data as d}
             <div class="sentiment-container">
-                <div class="sentiment">
+                <div class="sentiment" on:click={forward}>
 
                     <div class="personcontainer">
                         <div class="person">

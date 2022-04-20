@@ -1,6 +1,7 @@
 <script>
 
 	import VoronoiNewsmap from './VoronoiNewsmap.svelte'
+	import Newstensity from './Newstensity.svelte'
 	// import LabelNewsmap from './LabelNewsmap.svelte'
 	import Header from './Header.svelte'
 	// import Newsmap from './Newsmap.svelte'
@@ -19,6 +20,15 @@
 	let y
 	let showHeader = true
 	let showMenu = false
+	let moveIn = false
+	let name
+
+	const modalIn = () => {
+		moveIn = true
+	}
+	const modalOut = () => {
+		moveIn = false
+	}
 
 	let margin;
 	let fontfamily1 = "Roboto Mono",
@@ -38,7 +48,7 @@
 		to: moment().format('YYYY-MM-DD'),
 		sort_by: 'published_date', 
 		sort_dir: 'desc',
-		per_page: 5
+		per_page: 10
 	}
 
 	let paramsNasional = {
@@ -78,6 +88,13 @@
 <!-- svelte-ignore empty-block -->
 <main>
 	<div class="container">
+		<Newstensity
+			bind:moveIn
+			bind:name
+			on:modalOut = {modalOut}
+			params={params}
+		/>
+
 		<Header
 			bind:height={margin}
 			--fontfamily3={fontfamily3}
@@ -99,6 +116,8 @@
 				--fontfamily1={fontfamily1}
 				--fontfamily2={fontfamily2}
 				params={params}
+				on:modalIn = {modalIn}
+				bind:name
 			/>
 		</article>
 		
