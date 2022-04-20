@@ -5,7 +5,7 @@
 <nav>
     <div class="container" bind:clientHeight={height}>
         <div class="header-logo">
-            <a href='https://dev.jurno.id'>
+            <a href='/'>
                 <img src="./images/logo-jurno-web.svg" alt="Logo Jurno Website">
             </a>
         </div>

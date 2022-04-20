@@ -211,13 +211,13 @@
     .inner-container {
         display: block;
         position: relative;
-        height:110vw;
+        height:95vw;
         overflow-x: hidden;
         overflow-y: hidden;
     }
     .card {
-        width:66vw;
-        height:101vw;
+        width:50vw;
+        height:88vw;
         background-color: steelblue;
         border-radius:0.5rem;
         display: flex;
@@ -225,7 +225,7 @@
         align-items: center;
         position:absolute;
         overflow: hidden;
-        left: 17vw;
+        left: 25vw;
         touch-action: none;
         user-select: none;
     }

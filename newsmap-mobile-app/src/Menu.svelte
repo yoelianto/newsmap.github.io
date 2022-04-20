@@ -1,8 +1,8 @@
 <script>
     let menus = [
         {menu:'Jurno',id:0, active:false, link:"#jurno", source:"./images/jurno.svg"},
-        {menu:'Original',id:1, active:false, link:"#original", source:"./images/original.svg"},
-        {menu:'Deduktif',id:2, active:false, link:"#deduktif", source:"./images/deduktif.svg"},
+        {menu:'Original',id:1, active:false, link:"/#/article/", source:"./images/original.svg"},
+        {menu:'Deduktif',id:2, active:false, link:"/#/deduktif/", source:"./images/deduktif.svg"},
         {menu:'Podcast',id:3, active:false, link:"#podcast", source:"./images/podcast.svg"}
     ]
 
@@ -20,16 +20,17 @@
     <div class="container"  class:moveDown={showMenu}>
         <div class="menubar">
             {#each menus as list, key}
-            <div class="menu" class:selected ="{list.active === true}">
-                <div class="circle">
-                    <img src={list.source} alt={list.menu}>
+            <a href={list.link}>
+                <div class="menu" class:selected ="{list.active === true}">
+                    <div class="circle">
+                        <img src={list.source} alt={list.menu}>
+                    </div>
+        
+                    <h4 class="menutext" id={list.id}>
+                        {list.menu}
+                    </h4>
                 </div>
-    
-                <h4 class="menutext" id={list.id}>
-                    {list.menu}
-                </h4>
-            </div>
-                
+            </a>
             {/each}
         </div>
     </div>

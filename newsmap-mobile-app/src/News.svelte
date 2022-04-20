@@ -74,7 +74,7 @@ const move = direction => {
             <p>...waiting</p>
             {:then data}
                 {#each data as d}
-                <a href={d.source_url}>
+                <a href={d.link}>
                     <div class="news">
                         <img class='imgthumb' src={`${process['env']['URL_IMAGE']}infogram/${d.thumbnail}`} alt={d.title} />
                         <p class="author">{d.author}</p>
