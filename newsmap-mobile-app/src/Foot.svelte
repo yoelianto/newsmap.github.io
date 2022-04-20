@@ -17,23 +17,37 @@
         author:'Ann Putri'
         },
         ]
+
+    import { get } from "./api";
+    import { link } from "svelte-spa-router";
+
+    export let uri = null;
+    export let params = {};
+    export let type = null;
+    export let thumbnailFolder = "";
+
+    const fetchData = (async () => {
+        const result = await get(uri, params);
+        return await result.data;
+    })();
+
 </script>
 
-<nav>
+<nav class="footer">
     <div class="container">
         <p class="title">Artikel Lainnya</p>
         <div class="slider-container">
-                <!-- {#await fetchData}
+                {#await fetchData}
                 <p>...waiting</p>
-                {:then data} -->
+                {:then data}
                     {#each data as d}
-                    <a href={d.source_url} class='newspart'>
+                    <a href={`/${type}/${d.slug}`} class='newspart' use:link>
                         <div class="news">
                             <div class="images">
-                                <img class='imgthumb' src={d.origin_images} alt={d.title} />
+                                <img class='imgthumb' src={`${process["env"]["URL_IMAGE"]}${thumbnailFolder}/${d.thumbnail}`} title={d.title} alt={d.title} onError={(e) => {e.target.onerror = null;e.target.src = process["env"]["NO_IMAGE"];}} />
                             </div>
                             <div class="credit">
-                                <p class="author">{d.author}</p>
+                                <p class="author">{d.author_name}</p>
                                 <p class="article-title">
                                     {d.title}
                                 </p>
@@ -41,10 +55,9 @@
                         </div>
                     </a>
                     {/each}
-                <!-- {:catch error}
+                {:catch error}
                     <p>An error occurred!</p>
-                {/await} -->
-    
+                {/await}
         </div>
     </div>
 </nav>

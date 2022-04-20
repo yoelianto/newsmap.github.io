@@ -155,7 +155,7 @@
             id={i}
             style="z-index:{3-i};
                 transform:{width < height && width < 991 ? `translate(${i * 10}px, ${i * 10}px)` : `translate(0px, 0px)`}">
-                <a class="card-link" href={`/article/${d.slug}${d.is_custom_html ? '/1' : ''}`}  use:link>
+                <a class="card-link" href={`/article/${d.slug}`} use:link>
                     <div class="card" style="z-index:{3-i}">
                         <img class="thumb" src={`${process['env']['URL_IMAGE']}news/${d.thumbnail}`} alt="" >
                         <div class="bottom"></div>

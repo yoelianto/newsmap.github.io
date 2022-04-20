@@ -6,6 +6,7 @@
 
   export let params = {};
   const slug = params.slug;
+  const type = 'deduktif';
 
   const fetchData = (async () => {
     const result = await get(ihttp.URI_ARTICLE_DETAIL, { slug });
@@ -14,14 +15,6 @@
 
   let height;
 </script>
-
-<svelte:head>
-  {#if params.custom}
-    <link rel="stylesheet" href={`./deduktif/${slug}/global.css`} />
-    <link rel="stylesheet" href={`./deduktif/${slug}/bundle.css`} />
-    <script defer src={`./deduktif/${slug}/bundle.js`}></script>
-  {/if}
-</svelte:head>
 
 {#await fetchData}
   <p>...waiting</p>
@@ -32,7 +25,8 @@
   <ArticleDetail
     data={{
       ...data,
-      thumbnail: process["env"]["URL_IMAGE"] + "deduktif/" + data.thumbnail,
+      type,
+      thumbnail: process["env"]["URL_IMAGE"] + type + "/" + data.thumbnail,
     }}
   />
   

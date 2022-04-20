@@ -60,11 +60,11 @@
 	}
 
 	afterUpdate(() => {
-		// remove backround after open custom html
-		const elems = document.querySelectorAll("svelte-scroller-background-container");
-		elems.forEach(el => {
-			el.remove();
-		})
+		for(const element of document.body.querySelectorAll('main')) {
+			if(element.nextElementSibling) {
+				element.nextElementSibling.remove();
+			}
+		}
 	});
 
 </script>
