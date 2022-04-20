@@ -75,7 +75,11 @@
                                 src={process["env"]["URL_IMAGE"] + "author/" + data.author_image}
                                 alt={data.author_name}>
                             {/if}
+                            {#if data.type != 'rewara'}
                             <span class='authorname'>{data.author_name}</span>
+                            {:else if data.type == 'rewara'}
+                            <span class='authorname'>Rewara</span>
+                            {/if}
                         </div>
                         <div>
                             {@html stringToDom(data.article)}

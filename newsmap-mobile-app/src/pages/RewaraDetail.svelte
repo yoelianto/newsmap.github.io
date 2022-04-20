@@ -3,6 +3,8 @@
     import * as ihttp from "../constants/initialHttp";
     import ArticleDetail from "./ArticleDetail.svelte";
     import Head from '../Head.svelte'
+    import * as animateScroll from 'svelte-scrollto'
+    import {onMount} from 'svelte'
 
     let height;
 
@@ -13,6 +15,10 @@
         const result = await get(ihttp.URI_REWARA_DETAIL, { slug });
         return await result;
     })();
+
+    onMount(()=>{
+    animateScroll.scrollToTop()
+  })
 </script>
 
 {#await fetchData}
@@ -25,6 +31,7 @@
         data={{
             ...data,
             thumbnail: process["env"]["URL_IMAGE"] + "rewara/" + data.thumbnail,
+            type: 'rewara'
         }}
     />
 {:catch error}

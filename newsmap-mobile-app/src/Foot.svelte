@@ -37,9 +37,9 @@
     <div class="container">
         <p class="title">Artikel Lainnya</p>
         <div class="slider-container">
-                {#await fetchData}
+                <!-- {#await fetchData}
                 <p>...waiting</p>
-                {:then data}
+                {:then data} -->
                     {#each data as d}
                     <a href={`/${type}/${d.slug}`} class='newspart' use:link>
                         <div class="news">
@@ -55,9 +55,9 @@
                         </div>
                     </a>
                     {/each}
-                {:catch error}
+                <!-- {:catch error}
                     <p>An error occurred!</p>
-                {/await}
+                {/await} -->
         </div>
     </div>
 </nav>

@@ -3,6 +3,8 @@
     import * as ihttp from "../constants/initialHttp";
     import ArticleDetail from "./ArticleDetail.svelte";
     import Head from '../Head.svelte'
+    import * as animateScroll from 'svelte-scrollto'
+    import {onMount} from 'svelte'
 
     export let params = {};
     const slug = params.slug;
@@ -14,6 +16,10 @@
         return await result;
     })();
     let height;
+
+    onMount(()=>{
+    animateScroll.scrollToTop()
+  })
 </script>
 
 {#await fetchData}
