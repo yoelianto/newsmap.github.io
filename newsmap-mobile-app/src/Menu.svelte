@@ -1,7 +1,7 @@
 <script>
     let menus = [
-        {menu:'Jurno',id:0, active:false, link:"#jurno", source:"./images/home.svg"},
-        {menu:'Original',id:1, active:false, link:"#original", source:"./images/search.svg"},
+        {menu:'Jurno',id:0, active:false, link:"#jurno", source:"./images/jurno.svg"},
+        {menu:'Original',id:1, active:false, link:"#original", source:"./images/original.svg"},
         {menu:'Deduktif',id:2, active:false, link:"#deduktif", source:"./images/deduktif.svg"},
         {menu:'Podcast',id:3, active:false, link:"#podcast", source:"./images/podcast.svg"}
     ]
