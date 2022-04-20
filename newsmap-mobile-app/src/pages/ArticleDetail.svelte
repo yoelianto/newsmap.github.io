@@ -3,6 +3,7 @@
 	import moment from 'moment';
     import Head from '../Head.svelte'
     import Foot from '../Foot.svelte'
+    import { afterUpdate } from "svelte";
 
     export let data = {};
 
@@ -13,11 +14,30 @@
     let y;
     export let height;
     
+    if (data.is_custom_html) {
+        setTimeout(() => {
+            const footer = document.querySelector("nav.footer");
+            document.querySelector("body").append(footer);
+        }, 1000);
+    }
 </script>
 
 <svelte:window bind:scrollY={y} />
 
-{#if !data.is_custom_html}
+<svelte:head>
+    <title>{data.title}</title>
+    {#if data.is_custom_html}
+        <link rel="stylesheet" href={`./${data.type}/${data.slug}/global.css`} />
+        <link rel="stylesheet" href={`./${data.type}/${data.slug}/bundle.css`} />
+        <script src={`./${data.type}/${data.slug}/bundle.js`}></script>
+    {/if}
+</svelte:head>
+
+{#if data.is_custom_html}
+    {#if data.footer !== undefined}
+        <Foot {...data.footer} type={data.type} />
+    {/if}
+{:else}
     <main class="content-section">
         <div class="container">
             {#if format(data.thumbnail)} <!-- thumbnail image -->
@@ -62,7 +82,9 @@
                         </div> 
                     </section>
                     
-                    <Foot />
+                    {#if data.footer !== undefined}
+                    <Foot {...data.footer} type={data.type} />
+                    {/if}
                 </article>
                                       
             {/if}

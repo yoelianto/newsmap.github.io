@@ -55,7 +55,7 @@
                     <div class="headerbottom"></div>
                         <div class="detail">
                             <div class="author">oleh {d.author_name}</div>
-                            <a href={`/deduktif/${d.slug}${d.is_custom_html ? '/1' : ''}`} use:link>
+                            <a href={`/deduktif/${d.slug}`} use:link>
                                 <div class="title">{d.title}</div>  
                             </a>
                         </div>

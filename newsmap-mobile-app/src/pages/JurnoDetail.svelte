@@ -6,6 +6,7 @@
 
     export let params = {};
     const slug = params.slug;
+    const type = "article";
 
     const fetchData = (async () => {
         const result = await get(ihttp.URI_ARTICLE_DETAIL, { slug });
@@ -14,15 +15,6 @@
     })();
     let height;
 </script>
-
-<svelte:head>
-    {#if params.custom}
-    
-        <link rel="stylesheet" href={`./article/${slug}/global.css`} />
-        <link rel="stylesheet" href={`./article/${slug}/bundle.css`} />
-        <script defer src={`./article/${slug}/bundle.js`}></script>
-    {/if}
-</svelte:head>
 
 {#await fetchData}
     <p>...waiting</p>
@@ -33,7 +25,13 @@
     <ArticleDetail
         data={{
             ...data,
-            thumbnail: process["env"]["URL_IMAGE"] + "article/" + data.thumbnail,
+            type,
+            footer: {
+                uri: ihttp.URI_ARTICLE_LIST,
+                params: { except: data.id, size: 3 },
+                thumbnailFolder: "news",
+            },
+            thumbnail: process["env"]["URL_IMAGE"] + type + "/" + data.thumbnail,
         }}
     />
 {:catch error}
