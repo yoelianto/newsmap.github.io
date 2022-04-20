@@ -44,10 +44,14 @@
                     <a href={`/${type}/${d.slug}`} class='newspart' use:link>
                         <div class="news">
                             <div class="images">
-                                <img class='imgthumb' src={`${process["env"]["URL_IMAGE"]}${thumbnailFolder}/${d.thumbnail}`} title={d.title} alt={d.title} onError={(e) => {e.target.onerror = null;e.target.src = process["env"]["NO_IMAGE"];}} />
+                                <!-- src={`${process["env"]["URL_IMAGE"]}${thumbnailFolder}/${d.thumbnail}`} -->
+                                <img class='imgthumb'
+                                src={d.origin_images}
+                                title={d.title} alt={d.title}
+                                onError={(e) => {e.target.onerror = null;e.target.src = process["env"]["NO_IMAGE"];}} />
                             </div>
                             <div class="credit">
-                                <p class="author">{d.author_name}</p>
+                                <p class="author">{d.author}</p> <!-- harusnya {d.author_name}-->
                                 <p class="article-title">
                                     {d.title}
                                 </p>
@@ -142,6 +146,9 @@
         }
         .images {
             margin-right: 1rem;
+        }
+        .title {
+            margin-left: 0;
         }
 	}
 	@media only screen /*small*/
