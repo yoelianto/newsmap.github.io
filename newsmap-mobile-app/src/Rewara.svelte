@@ -21,7 +21,7 @@
                 {#await fetchData}
                 <p>...waiting</p>
                 {:then rewara}
-                <a href={rewara[0].slug} use:link>
+                <a href={`/rewara/${rewara[0].slug}`} use:link>
                     <div class="firstnews">
                         <img class='imgthumb' src={rewara[0].thumbnail ? `${process['env']['URL_IMAGE']}rewara/${rewara[0].thumbnail}` : ''} onerror={`this.onerror=null;this.src='${process['env']['NO_IMAGE']}';`} alt={rewara[0].title} />
                         <p class="article-title" id='first-article'>{rewara[0].title}</p>

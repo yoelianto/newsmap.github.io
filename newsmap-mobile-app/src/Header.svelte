@@ -1,8 +1,12 @@
 <script>
     import { cubicInOut, quintInOut } from 'svelte/easing';
+    import Head from './Head.svelte';
     import { tweened } from 'svelte/motion';
     import * as animateScroll from "svelte-scrollto";
     export let height;
+    import BurgerMenu from './BurgerMenu.svelte';
+
+    let burgerIn
     
     const tweenConfig1 = {
         duration: 500,
@@ -43,14 +47,18 @@
     }
 
     export let showHeader
-   
-</script>
 
+    const burgerMenuIn = () => {
+        burgerIn = true
+    }
+</script>
+<BurgerMenu bind:burgerIn />
 <nav>
     <div class="container" bind:clientHeight={height}>
-        <div class="header-logo">
-            <img src="./images/logo-jurno-web.svg" alt="Logo Jurno Website">
-        </div>
+        <Head
+            page='indeks'
+            on:burgerIn = {burgerMenuIn}
+        />
         <div class="header-menu" class:moveUp={!showHeader}>
             <div class="headertext">
                 {#each menus as list, key}

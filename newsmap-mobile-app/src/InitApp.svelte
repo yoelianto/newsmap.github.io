@@ -10,6 +10,7 @@
     import IndeksJurno from "./pages/IndeksJurno.svelte";
     import IndeksRewara from "./pages/IndeksRewara.svelte";
     import Router from "svelte-spa-router";
+    import IndeksInfogram from "./pages/IndeksInfogram.svelte";
 
     const routes = {
         "/": App,
@@ -17,6 +18,7 @@
         "/deduktif/": IndeksDeduktif,
         "/rewara/": IndeksRewara,
         "/search/": IndeksCari,
+        "/infogram/": IndeksInfogram,
         "/article/:slug/:custom?": JurnoDetail,
         "/deduktif/:slug/:custom?": DeduktifDetail,
         "/rewara/:slug/:custom?": RewaraDetail,

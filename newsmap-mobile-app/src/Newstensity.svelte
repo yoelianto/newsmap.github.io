@@ -3,7 +3,8 @@
     import * as ihttp from './constants/initialHttp';
     import Icon from 'svelte-awesome';
     import { angleLeft } from 'svelte-awesome/icons';
-    import { createEventDispatcher } from 'svelte'
+    import { createEventDispatcher } from 'svelte';
+    import PieChart from "./PieChart.svelte";
 
     const dispatch = createEventDispatcher()
 
@@ -13,17 +14,12 @@
     }
 
     export let moveIn
-    export let name
-    export let params = {}
+    export let name, pos, neg, neu, count, img
     let width
-
-    const fetchData = (async () => {
-        const mergeParams = {...params, kind: 'person'}
-        mergeParams.per_page = 10
-
-        const result = await get(ihttp.URI_NEWS_TOP_ENTITY, mergeParams);
-        return await result.data;
-    })()
+    let profilewidth
+    let fgColor1 = 'hsl(244, 30%, 30%)'
+    let fgColor2 = 'hsl(244, 30%, 70%)'
+    let fgColor3 = 'hsl(0, 82%, 64%)'
 
 </script>
 
@@ -33,28 +29,67 @@
     <div class="close" on:click={forward}>
         <Icon data={angleLeft} scale={2} />
     </div>
-
-    {#await fetchData}
-        <p>...waiting</p>
-        {:then data}
-            {#each data as d}
-                <section style:margin-top='45px'>
-                    <h1>{name}</h1>
-                </section>
-                <section>
-                    <h1>Part 2</h1>
-                </section>
-                <section>
-                    <h1>Part 3</h1>
-                </section>
-            {/each}
-        {:catch error}
-            <p>An error occurred!</p>
-        {/await}
+    <h1>{name}</h1>
+    <section id='section-1'>
+        <h3>Sentiment Analysis</h3>
+        <div class="inner-section">
+            <div class="profile" bind:clientWidth={profilewidth}>
+                <PieChart 
+                    percent1 = {100}
+                    percent2 = {Math.abs(Math.ceil((parseInt(neu))/(parseInt(pos)+parseInt(neg)+parseInt(neu))*100))+Math.abs(Math.ceil((parseInt(neg))/(parseInt(pos)+parseInt(neg)+parseInt(neu))*100))}
+                    percent3 = {Math.abs(Math.ceil((parseInt(neg))/(parseInt(pos)+parseInt(neg)+parseInt(neu))*100))}
+                    imagelink = {img}
+                    size = {profilewidth}
+                    bind:fgColor1
+                    bind:fgColor2
+                    bind:fgColor3
+                />
+            </div>
+            <div class="right">
+                <div class="data pos">
+                    <p>positive</p>
+                    <p class='percent positive' style:color={fgColor1}>
+                        {Math.abs(Math.ceil((parseInt(pos))/(parseInt(pos)+parseInt(neg)+parseInt(neu))*100))}%
+                    </p>
+                </div>
+                <div class="data neg">
+                    <p>negative</p>
+                    <p class='percent negative' style:color={fgColor3}>
+                        {Math.abs(Math.ceil((parseInt(neg))/(parseInt(pos)+parseInt(neg)+parseInt(neu))*100))}%
+                    </p>
+                </div>
+                <div class="data neu">
+                    <p>neutral</p>
+                    <p class='percent neutral' style:color={fgColor2}>
+                        {Math.abs(Math.ceil((parseInt(neu))/(parseInt(pos)+parseInt(neg)+parseInt(neu))*100))}%
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+    <section>
+        <h3>Statement List</h3>
+    </section>
+    <button>
+        Trial by Combat
+    </button>
 
 </article>
 
 <style>
+    h1 {
+        font-family: 'Roboto Mono';
+        font-weight: 500;
+        font-size: 1.5rem;
+        margin-bottom: 0.2rem;
+    }
+    h3 {
+        margin-left: 5%;
+        font-family: 'Roboto Mono';
+        font-weight: 500;
+        font-size: 1rem;
+    }
     article {
         position: fixed;
         height:100vh;
@@ -66,9 +101,39 @@
     }
     section {
         width:calc(100% - 2rem);
-        height: 25vh;
         margin-top: 0.5rem;
         margin-bottom: 0.5rem;
         border: 1px black solid;
+        border-radius: 1rem;
     }
+    .profile {
+        width:45%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+    .inner-section {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    .right {
+        width:45%;
+        display: flex;
+        flex-direction: column;
+    }
+    p {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    .data {
+        margin-bottom: 0.5rem;
+    }
+    .percent {
+        font-size: 1.5rem;
+        font-weight: 800;
+        font-family: 'Roboto Mono';
+    }
+
 </style>

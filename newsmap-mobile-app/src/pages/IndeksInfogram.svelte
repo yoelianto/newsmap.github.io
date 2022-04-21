@@ -8,8 +8,8 @@
     let height
 
     const fetchData = (async () => {
-        const result = await get(ihttp.URI_ARTICLE_LIST, {size: 10});
-        return await result.data;
+    const result = await get(ihttp.URI_INFOGRAM_LIST, {size: 10});
+    return await result.data;
     })()
 
     onMount(()=>{
@@ -18,17 +18,17 @@
 </script>
 
 <svelte:head>
-    <title>Jurno Original - Indeks</title>
+    <title>Infogram - Indeks</title>
 </svelte:head>
 
 <Head 
     bind:height
     page='indeks'
-     />
+    />
 <article style="margin-top:{height}px">
-    <h1>JURNO ORIGINAL</h1>
+    <h1>INFOGRAM</h1>
     <form>
-        <input type="search" placeholder="Cari Artikel Jurno...">
+        <input type="search" placeholder="Cari Artikel Infogram...">
         <button type="submit">Search</button>
     </form>
     {#await fetchData}
@@ -38,10 +38,10 @@
         <a href='/'>
             <div class="article">
                 <div class="left">
-                    <img src={`${process['env']['URL_IMAGE']}news/${d.thumbnail}`} alt={d.title} />
+                    <img src={`${process['env']['URL_IMAGE']}infogram/${d.thumbnail}`} alt={d.title} />
                 </div>
                 <div class="credit">
-                    <p class="author">{d.author_name}</p>
+                    <p class="author">{d.author}</p>
                     <p class="article-title">
                         {d.title}
                     </p>

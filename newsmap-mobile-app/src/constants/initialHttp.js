@@ -37,6 +37,7 @@ export const URI_NEWS_LAST_TOPIC_STAT = 'news/last-topic-stat';
 
 // entity
 export const URI_ENTITY_PROFILE = 'entity/profile';
+export const URI_ENTITY_VOICES = 'entity/voices';
 export const URI_ENTITY_RELATED_TOPICS = 'entity/related-topics';
 export const URI_ENTITY_RELATED_ENTITIES = 'entity/related-entities';
 

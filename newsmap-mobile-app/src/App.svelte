@@ -21,7 +21,7 @@
 	let showHeader = true
 	let showMenu = false
 	let moveIn = false
-	let name
+	let name, pos, neg, neu, count, img
 
 	const modalIn = () => {
 		moveIn = true
@@ -91,6 +91,11 @@
 		<Newstensity
 			bind:moveIn
 			bind:name
+			bind:pos
+			bind:neg
+			bind:neu
+			bind:count
+			bind:img
 			on:modalOut = {modalOut}
 			params={params}
 		/>
@@ -118,6 +123,11 @@
 				params={params}
 				on:modalIn = {modalIn}
 				bind:name
+				bind:pos
+				bind:neg
+				bind:neu
+				bind:count
+				bind:img
 			/>
 		</article>
 		
