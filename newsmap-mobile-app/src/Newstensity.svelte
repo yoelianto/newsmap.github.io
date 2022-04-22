@@ -5,106 +5,193 @@
     import { angleLeft } from 'svelte-awesome/icons';
     import { createEventDispatcher } from 'svelte';
     import PieChart from "./PieChart.svelte";
+import Result2 from "../../../../2022/IDJN/food_waste_calculator/foodwaste-calculator/src/Result2.svelte";
 
     const dispatch = createEventDispatcher()
 
     function forward(event) {
         dispatch('modalOut')
-        // dispatch('name', event.path[2].children[1].children[1].innerHTML)
     }
 
     export let moveIn
-    export let name, pos, neg, neu, count, img
+
+    export let id
+
     let width
     let profilewidth
     let fgColor1 = 'hsl(244, 30%, 30%)'
     let fgColor2 = 'hsl(244, 30%, 70%)'
     let fgColor3 = 'hsl(0, 82%, 64%)'
 
+    let dataPromise
+
+    export let params = {}
+
+    const fetchData = (async () => {
+        const mergeParams = {...params, kind: 'person', size:10}
+
+        const result = await get(ihttp.URI_NEWS_TOP_ENTITY, mergeParams);
+        const result2 = await get(ihttp.URI_ENTITY_PROFILE, {entity_id:id});
+
+        let filter = result.data.filter((data) => {
+             return data.id == id
+        })
+
+        let allResult = {...filter, result2}
+        console.log(allResult)
+        return await allResult
+    })
+
+    const fetchData3 = (async () => {
+        const mergeParams = {...params, entity_id:id}
+
+        const result = await get(ihttp.URI_ENTITY_RELATED_TOPICS, mergeParams);
+        console.log(result)
+        return await result
+    })
+
+    $: id, dataPromise = fetchData()
+    $: id, fetchData3()
+
+
 </script>
 
 <svelte:window bind:innerWidth={width}></svelte:window>
 
 <article style:left='{moveIn ? `0` : `${width}px`}' >
-    <div class="close" on:click={forward}>
-        <Icon data={angleLeft} scale={2} />
-    </div>
-    <h1>{name}</h1>
-    <section id='section-1'>
-        <h3>Sentiment Analysis</h3>
-        <div class="inner-section">
-            <div class="profile" bind:clientWidth={profilewidth}>
-                <PieChart 
-                    percent1 = {100}
-                    percent2 = {Math.abs(Math.ceil((parseInt(neu))/(parseInt(pos)+parseInt(neg)+parseInt(neu))*100))+Math.abs(Math.ceil((parseInt(neg))/(parseInt(pos)+parseInt(neg)+parseInt(neu))*100))}
-                    percent3 = {Math.abs(Math.ceil((parseInt(neg))/(parseInt(pos)+parseInt(neg)+parseInt(neu))*100))}
-                    imagelink = {img}
-                    size = {profilewidth}
-                    bind:fgColor1
-                    bind:fgColor2
-                    bind:fgColor3
-                />
-            </div>
-            <div class="right">
-                <div class="data pos">
-                    <p>positive</p>
-                    <p class='percent positive' style:color={fgColor1}>
-                        {Math.abs(Math.ceil((parseInt(pos))/(parseInt(pos)+parseInt(neg)+parseInt(neu))*100))}%
-                    </p>
-                </div>
-                <div class="data neg">
-                    <p>negative</p>
-                    <p class='percent negative' style:color={fgColor3}>
-                        {Math.abs(Math.ceil((parseInt(neg))/(parseInt(pos)+parseInt(neg)+parseInt(neu))*100))}%
-                    </p>
-                </div>
-                <div class="data neu">
-                    <p>neutral</p>
-                    <p class='percent neutral' style:color={fgColor2}>
-                        {Math.abs(Math.ceil((parseInt(neu))/(parseInt(pos)+parseInt(neg)+parseInt(neu))*100))}%
-                    </p>
-                </div>
-            </div>
+    {#if id != undefined}
+    <div class="top">
+        <div class="close" on:click={forward}>
+            <Icon data={angleLeft} scale={2} />
         </div>
-        
-    </section>
-    <section>
-        <h3>Statement List</h3>
-    </section>
-    <button>
-        Trial by Combat
-    </button>
 
+        {#await dataPromise}
+            <p>waiting...</p>
+        {:then data}
+            <h1>{data[0].name}</h1>
+            <h3>{data.result2[0].positions}</h3>
+            <div class="detail">
+                <p>Jumlah artikel : {data[0].count.toLocaleString('de-DE')}</p>
+                <p>Cakupan media sosial : {data[0].count.toLocaleString('de-DE')}</p>
+            </div>
+        {:catch error}
+            <p>an error occured</p>
+        {/await}
+    </div>
+    <div class="bottom">
+        {#await dataPromise}
+            <p>waiting...</p>
+        {:then data}
+        <section id='section-1'>
+            <h3>Sentiment Analysis</h3>
+            <div class="inner-section">
+                <div class="profile" bind:clientWidth={profilewidth}>
+                    <PieChart
+                        percent1 = {100}
+                        percent2 = {Math.abs(Math.ceil((parseInt(data[0].neutral))/(parseInt(data[0].positive)+parseInt(data[0].negative)+parseInt(data[0].neutral))*100))+Math.abs(Math.ceil((parseInt(data[0].negative))/(parseInt(data[0].positive)+parseInt(data[0].negative)+parseInt(data[0].neutral))*100))}
+                        percent3 = {Math.abs(Math.ceil((parseInt(data[0].negative))/(parseInt(data[0].positive)+parseInt(data[0].negative)+parseInt(data[0].neutral))*100))}
+                        imagelink = {data[0].thumbnail}
+                        size = {profilewidth}
+                        bind:fgColor1
+                        bind:fgColor2
+                        bind:fgColor3
+                    />
+                </div>
+                <div class="right">
+                    <div class="data pos">
+                        <p>positive</p>
+                        <p class='percent positive' style:color={fgColor1}>
+                            {Math.abs(Math.ceil((parseInt(data[0].positive))/(parseInt(data[0].positive)+parseInt(data[0].negative)+parseInt(data[0].neutral))*100))}%
+                        </p>
+                    </div>
+                    <div class="data neg">
+                        <p>negative</p>
+                        <p class='percent negative' style:color={fgColor3}>
+                            {Math.abs(Math.ceil((parseInt(data[0].negative))/(parseInt(data[0].positive)+parseInt(data[0].negative)+parseInt(data[0].neutral))*100))}%
+                        </p>
+                    </div>
+                    <div class="data neu">
+                        <p>neutral</p>
+                        <p class='percent neutral' style:color={fgColor2}>
+                            {Math.abs(Math.ceil((parseInt(data[0].neutral))/(parseInt(data[0].positive)+parseInt(data[0].negative)+parseInt(data[0].neutral))*100))}%
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+        <section>
+            <h3>Statement List</h3>
+        </section>
+        {:catch error}
+            <p>an error occured</p>
+        {/await}
+    </div>
+    <div class="foot">
+        <button>
+            Selengkapnya
+        </button>
+    </div>
+
+    {/if}
 </article>
 
 <style>
     h1 {
-        font-family: 'Roboto Mono';
+        font-family: var(--fontfamily1);
         font-weight: 500;
         font-size: 1.5rem;
         margin-bottom: 0.2rem;
+        margin-top: 0.5rem;
+        margin-left: 5%;
+        color: var(--color-brand-darkblue)
     }
     h3 {
         margin-left: 5%;
-        font-family: 'Roboto Mono';
+        font-family: var(--fontfamily1);
         font-weight: 500;
         font-size: 1rem;
+        color: var(--color-brand-darkblue);
+        margin-top: 0.2rem;
+        margin-bottom: 0.5rem;
+    }
+    .detail {
+        font-family: var(--fontfamily2);
+        margin-left: 5%;
+        padding-bottom: 1rem;
+        font-size: 0.8rem;
     }
     article {
         position: fixed;
         height:100vh;
         width:100vw;
-        background-color: #fafafa;
+        background-color: hsla(0, 0%, 93%, 1);
         z-index: 1000;
         transition: left 200ms ease-in-out;
-        padding: 1rem;
+    }
+    .top {
+        padding-left: 1rem;
+        padding-right: 1rem;
+        background-color: #fafafa;
+        width:100%;
+    }
+    .bottom {
+        margin-top: 1rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        width:calc(100% - 2rem);
+    }
+    .close {
+        padding-top: 1rem;
     }
     section {
-        width:calc(100% - 2rem);
+        width:100%;
         margin-top: 0.5rem;
         margin-bottom: 0.5rem;
-        border: 1px black solid;
         border-radius: 1rem;
+        background-color: #fafafa;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
     }
     .profile {
         width:45%;
@@ -129,11 +216,27 @@
     }
     .data {
         margin-bottom: 0.5rem;
+        font-size:0.8rem;
+        font-family: var(--fontfamily2);
     }
     .percent {
         font-size: 1.5rem;
         font-weight: 800;
-        font-family: 'Roboto Mono';
+        font-family: var(--fontfamily1);
+    }
+    .foot {
+        position: fixed;
+        bottom: 0;
+        height: 50px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    button {
+        border-radius: 0.25rem;
+        background-color: var(--color-brand-red);
+        color: #fafafa;
     }
 
 </style>

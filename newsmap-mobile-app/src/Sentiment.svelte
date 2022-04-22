@@ -2,25 +2,20 @@
     import { get } from "./api";
     import * as ihttp from './constants/initialHttp';
     import {createEventDispatcher} from 'svelte'
-    export let name, pos, neg, neu, count, img
 
     const dispatch = createEventDispatcher()
 
+    export let id
+
     function forward(event) {
         dispatch('modalIn')
-        name = event.path[2].children[1].children[1].innerHTML
-        pos = event.path[2].dataset.pos
-        neg = event.path[2].dataset.neg
-        neu = event.path[2].dataset.neu
-        count = event.path[2].dataset.count
-        img = event.path[2].dataset.img
+        id = event.path[2].dataset.id
     }
 
     export let params = {}
 
     const fetchData = (async () => {
         const mergeParams = {...params, kind: 'person', size:10}
-        mergeParams.per_page = 10
 
         const result = await get(ihttp.URI_NEWS_TOP_ENTITY, mergeParams);
 
@@ -40,7 +35,6 @@
         return await result.data;
     })()
 
-
 </script>
 
 <div class="container">
@@ -51,11 +45,7 @@
             {#each data as d}
             <div class="sentiment-container">
                 <div class="sentiment"
-                    data-pos={d.positive}
-                    data-neg={d.negative}
-                    data-neu={d.neutral}
-                    data-count={d.count}
-                    data-img={d.thumbnail}
+                    data-id={d.id}
                     on:click={forward}>
 
                     <div class="personcontainer">

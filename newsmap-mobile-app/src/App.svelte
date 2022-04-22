@@ -17,11 +17,12 @@
 	import { afterUpdate, onMount } from 'svelte'
 	// import DeviceDetector from "svelte-device-detector"
 
+
 	let y
 	let showHeader = true
 	let showMenu = false
 	let moveIn = false
-	let name, pos, neg, neu, count, img
+	let id
 
 	const modalIn = () => {
 		moveIn = true
@@ -90,14 +91,13 @@
 	<div class="container">
 		<Newstensity
 			bind:moveIn
-			bind:name
-			bind:pos
-			bind:neg
-			bind:neu
-			bind:count
-			bind:img
+			bind:id
 			on:modalOut = {modalOut}
 			params={params}
+			--fontfamily1 = {fontfamily1}
+			--fontfamily2 = {fontfamily2}
+			--color-brand-dark-blue = {colorBrandDarkBlue}
+			--color-brand-red = {colorBrandRed}
 		/>
 
 		<Header
@@ -122,12 +122,7 @@
 				--fontfamily2={fontfamily2}
 				params={params}
 				on:modalIn = {modalIn}
-				bind:name
-				bind:pos
-				bind:neg
-				bind:neu
-				bind:count
-				bind:img
+				bind:id
 			/>
 		</article>
 		
