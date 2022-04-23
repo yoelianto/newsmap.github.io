@@ -1,6 +1,8 @@
 <script>
     import Icon from 'svelte-awesome';
-    import { angleLeft, instagram, twitter, facebook, youtubePlay } from 'svelte-awesome/icons';
+    import { angleLeft } from 'svelte-awesome/icons';
+    import Fa from 'svelte-fa'
+    import { faTiktok, faInstagram, faTwitter, faFacebook, faYoutube } from '@fortawesome/free-brands-svg-icons'
     import { link } from "svelte-spa-router";
 
     export let burgerIn = false
@@ -53,32 +55,29 @@
             <div class="sosmed">
                 <a href='https://www.instagram.com/jurnoid/'> <!-- INSTAGRAM LINK HERE -->
                     <div class="sm ig">
-                        <Icon
-                            data={instagram} scale ={1.5}
-                        />
+                        <Fa icon={faInstagram} />
                     </div>
                 </a>
                 <a href=''> <!-- FACEBOOK LINK HERE -->
                     <div class="sm fb">
-                        <Icon
-                            data={facebook} scale ={1.5}
-                        />
+                        <Fa icon={faFacebook} />
                     </div>
                 </a>
                 <a href='https://twitter.com/jurno_id' > <!-- TWITTER LINK HERE -->
                     <div class="sm tw">
-                        <Icon
-                            data={twitter} scale ={1.5}
-                        />
+                        <Fa icon={faTwitter} />
                     </div>
                 </a>
-                <a href=''> <!-- YOUTUBE LINK HERE -->
+                <a href='https://www.youtube.com/channel/UCSGTUIGbrpONOTayMXAIcqw'> <!-- YOUTUBE LINK HERE -->
                     <div class="sm yt">
-                        <Icon
-                            data={youtubePlay} scale ={1.5}
-                        />
+                        <Fa icon={faYoutube} />
                     </div>
-                </a>     
+                </a>
+                <a href='www.tiktok.com/@jurnoid'> <!-- TIKTOK LINK HERE -->
+                    <div class="sm tt">
+                        <Fa icon={faTiktok} />
+                    </div>
+                </a> 
             </div>
         </div>
     </section>
