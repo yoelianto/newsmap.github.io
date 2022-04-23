@@ -6,6 +6,11 @@
     const dispatch = createEventDispatcher()
 
     export let id
+    let w = document.body.clientWidth
+    let size
+    if (w < 768) {size = 10}
+    else if (w > 767) {size = 5}
+    let placeholder = [1,2,3,4,5]
 
     function forward(event) {
         dispatch('modalIn')
@@ -15,7 +20,7 @@
     export let params = {}
 
     const fetchData = (async () => {
-        const mergeParams = {...params, kind: 'person', size:10}
+        const mergeParams = {...params, kind: 'person', size:size}
 
         const result = await get(ihttp.URI_NEWS_TOP_ENTITY, mergeParams);
 
@@ -40,7 +45,24 @@
 <div class="container">
     <div class="slider">
         {#await fetchData}
-        <p>...waiting</p>
+        {#each placeholder as d}
+        <div class="sentiment-container">
+            <div class="sentiment">
+                <div class="personcontainer">
+                    <div class="placeholder person">
+                        Loading...
+                    </div>
+                    <div class="pie" style="--p:{60};--c:hsl(0,0%,88%);"></div>
+                </div>
+                
+                <div class='namecontainer'>
+                    <div class="placeholder percent" style="color:hsl(0,0%,95%)"></div>
+                    <div class="placeholder name"></div>
+                </div>
+                
+            </div>
+        </div>
+        {/each}
         {:then data}
             {#each data as d}
             <div class="sentiment-container">
@@ -71,6 +93,26 @@
 </div>
 
 <style>
+    .placeholder {
+        background-color: hsl(0,0%,88%);
+    }
+    .placeholder.name {
+        height: 0.8rem;
+        width:50%;
+        border-radius: 0.25rem;
+    }
+    .placeholder.person {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 0.5rem;
+        color: hsl(0,0%,50%);
+    }
+    .placeholder.percent {
+        height: 1.2rem;
+        width:25%;
+        border-radius: 0.25rem;
+    }
     .container {
         margin-left: 5px;
         margin-bottom: 1rem;

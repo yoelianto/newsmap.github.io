@@ -15,6 +15,7 @@
 	import Video from './Video.svelte'
 	import moment from 'moment';
 	import { afterUpdate, onMount } from 'svelte'
+	import Footer from './Footer.svelte';
 	// import DeviceDetector from "svelte-device-detector"
 
 
@@ -101,7 +102,6 @@
 		/>
 
 		<Header
-			bind:height={margin}
 			--fontfamily3={fontfamily3}
 			--color-brand-white={colorBrandWhite}
 			--color-brand-red={colorBrandRed}
@@ -170,6 +170,12 @@
 			title='REWARA'  
 			--fontfamily1 ={fontfamily1}
 			--fontfamily2={fontfamily2}
+		/>
+
+		<Footer 
+			--color-brand-dark-blue = {colorBrandDarkBlue}
+			--color-brand-white = {colorBrandWhite}
+			--fontfamily2 = {fontfamily2}
 		/>
 		
 		<Menu

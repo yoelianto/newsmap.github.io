@@ -1,17 +1,18 @@
 <script>
     import Icon from 'svelte-awesome';
     import { search, bars } from 'svelte-awesome/icons';
-    import { createEventDispatcher } from 'svelte'
+    import { createEventDispatcher } from 'svelte';
+    import BurgerMenu from './BurgerMenu.svelte';
 
     const dispatch = createEventDispatcher()
 
     export let height
     export let page
     export let burgerIn
-
-    const forward = (event) => {
-        dispatch('burgerIn')
-    }
+    let colorBrandWhite = "#fafafa",
+		colorBrandRed = "#ef5959",
+		colorBrandDarkBlue = "#242053",
+		colorBrandBlue ="#A4D9D2";
 
     //page == artikel (jurno, rewara), logo mepet kiri
     //page == deduktif, logo mepet kiri, tab mepet kanan --> space between
@@ -19,6 +20,12 @@
 </script>
 <!-- CENTER -->
 <!-- LEFT -->
+<BurgerMenu
+    bind:burgerIn
+    --color-brand-dark-blue= {colorBrandDarkBlue}
+    --color-brand-white = {colorBrandWhite}
+    --color-brand-red = {colorBrandRed}
+/>
 <nav>
     <div class="container" bind:clientHeight={height}>
         <div class="header-logo" style='justify-content:{page =='artikel' ? 'flex-start' : 'space-between'}'>
@@ -33,7 +40,7 @@
                 </a>
             {/if}
             {#if page == 'indeks'}
-                <div class="before" on:click={forward}>
+                <div class="before" on:click={()=> {burgerIn = true}}>
                     <Icon data={bars} />
                 </div>
                 <a href='/'>
@@ -79,19 +86,12 @@
             margin:0.5rem auto;
             height:35px;
         }
-        .container {
-            height:10vw;
-        }
 	}
 	@media only screen /*small*/
 	and (min-width: 576px)
 	and (max-width: 767px) {
         img {
             margin: 1.25vw;
-            height:7.5vw;
-        }
-        .container {
-            height:10vw;
         }
 	}
 	@media only screen /*medium*/
@@ -101,9 +101,7 @@
             margin: 1vw;
             height:7vw;
         }
-        .container {
-            height:9vw;
-        }
+
 	}
 	@media only screen /*large*/
 	and (min-width: 992px)
@@ -112,9 +110,7 @@
             margin: 1vw;
             height:7vw;
         }
-        .container {
-            height:9vw;
-        }
+
 	}
 	@media only screen /*xtralarge*/
 	and (min-width: 1200px) {
@@ -122,8 +118,6 @@
             margin:0.5vw;
             height:2.5vw;
         }
-        .container {
-            height:3.5vw;
-        }
+
 	}
 </style>

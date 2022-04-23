@@ -3,8 +3,6 @@
     import Head from './Head.svelte';
     import { tweened } from 'svelte/motion';
     import * as animateScroll from "svelte-scrollto";
-    export let height;
-    import BurgerMenu from './BurgerMenu.svelte';
 
     let burgerIn
     
@@ -48,16 +46,12 @@
 
     export let showHeader
 
-    const burgerMenuIn = () => {
-        burgerIn = true
-    }
 </script>
-<BurgerMenu bind:burgerIn />
+
 <nav>
-    <div class="container" bind:clientHeight={height}>
+    <div class="container">
         <Head
             page='indeks'
-            on:burgerIn = {burgerMenuIn}
         />
         <div class="header-menu" class:moveUp={!showHeader}>
             <div class="headertext">
@@ -85,7 +79,7 @@
     nav {
         z-index: 999;
     }
-    .header-logo{
+    /* .header-logo{
         width: 100%;
         display: flex;
         background-color: var(--color-brand-white);
@@ -95,15 +89,15 @@
     img {
         margin:0.5rem auto;
         height:35px;
-    }
+    } */
     .container {
-        height:30vw;
         z-index: 99;
         position: fixed;
         width:100vw;
         display: flex;
         flex-direction: column;
         align-items: center;
+        height: calc(35px + 1rem);
     }
     .headertext {
         display:flex;
@@ -168,7 +162,9 @@
 
     @media only screen /*xtrasmall*/
 	and (max-width: 575px) {
-
+        .container {
+           height: calc(35px + 1rem);
+        }
 
 	}
 	@media only screen /*small*/
@@ -180,7 +176,7 @@
 	and (min-width: 768px)
 	and (max-width: 991px) {
         .container {
-            height: 10vw;
+            height:calc(35px + 1rem);;
             width:100%;
         }
         .header-menu {
@@ -199,7 +195,7 @@
 	@media only screen /*xtralarge*/
 	and (min-width: 1200px) {
         .container {
-            height: 10vw;
+            height: calc(35px + 1rem);
         }
         .header-menu {
             width: 60vw;

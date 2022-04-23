@@ -15,6 +15,8 @@ if (screenWidth > 1024) {
     truncNum = 100
 }
 
+let placeholder = [1,2,3,4,5,6,7,8,9,10]
+
 const fetchData = (async () => {
     const result = await get(ihttp.URI_NEWS_LIST, {...params, media_type: 'print,online'});
     return await result.data;
@@ -53,7 +55,13 @@ const move = direction => {
         <div class="slider" style="transform: translateX({offset}px);">
             {#if title != 'INFOGRAM'}
             {#await fetchData}
-            <p>...waiting</p>
+                {#each placeholder as d}
+                    <div class="news">
+                        <div class='placeholder imgthumb'>Loading...</div>
+                        <p class="placeholder author">}</p>
+                        <p class="placeholder article-title"></p>
+                    </div>
+                {/each}
             {:then data}
                 {#each data as d}
                 <a href={d.source_url}>
@@ -71,7 +79,13 @@ const move = direction => {
             {/await}
             {:else if title === 'INFOGRAM'}
             {#await fetchInfogramData}
-            <p>...waiting</p>
+                {#each placeholder as d}
+                    <div class="news">
+                        <div class='placeholder imgthumb'>Loading...</div>
+                        <p class="placeholder author">}</p>
+                        <p class="placeholder article-title"></p>
+                    </div>
+                {/each}
             {:then data}
                 {#each data as d}
                 <a href={d.link}>
@@ -125,6 +139,26 @@ const move = direction => {
         transition: transform 200ms ease-in-out;
         margin-right: 15vw;
     }
+    .placeholder {
+        background-color: hsl(0,0%,88%);
+    }
+    .placeholder.author {
+        height: 0.8rem;
+        width:50%;
+        border-radius: 0.25rem;
+    }
+    .placeholder.imgthumb {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 0.5rem;
+        color: hsl(0,0%,50%);
+    }
+    .placeholder.article-title {
+        height: 1rem;
+        width:100%;
+        border-radius: 0.25rem;
+    }
     .nav_prev {
         position: absolute;
         top: 30%;
@@ -141,7 +175,6 @@ const move = direction => {
         justify-content: center;
         align-items: center;
     }
-
     .nav_next {
         position: absolute;
         top: 30%;

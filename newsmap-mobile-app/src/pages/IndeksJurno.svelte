@@ -6,6 +6,7 @@
     import {onMount} from 'svelte'
 
     let height
+    let placeholder = [1,2,3,4,5,6]
 
     const fetchData = (async () => {
         const result = await get(ihttp.URI_ARTICLE_LIST, {size: 10});
@@ -32,7 +33,19 @@
         <button type="submit">Search</button>
     </form>
     {#await fetchData}
-    <p>waiting...</p>
+        {#each placeholder as d}
+        <div class="article">
+            <div class="left">
+                <div class='placeholder img'></div>
+            </div>
+            <div class="credit">
+                <p class="placeholder author"></p>
+                <p class="placeholder article-title"></p>
+                <p class="placeholder article-title"></p>
+                <p class="placeholder article-title"></p>
+            </div>
+        </div>
+        {/each}
     {:then data}
         {#each data as d}
         <a href='/'>
@@ -55,6 +68,26 @@
 </article>
 
 <style>
+    .placeholder {
+        background-color: hsl(0, 0%, 88%);
+    }
+    .img {
+        aspect-ratio: 4/3;
+        width: 100%;
+        border-radius:0.5rem;
+        object-fit: cover;
+    }
+    .placeholder.author {
+        width:50%;
+        height:0.8rem;
+        border-radius:0.25rem;
+    }
+    .placeholder.article-title {
+        width:100%;
+        height:1rem;
+        margin-bottom:0.2rem;
+        border-radius:0.25rem;
+    }
     a {
         color: black;
     }

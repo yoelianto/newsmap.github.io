@@ -52,7 +52,7 @@
     
     <style>
         .container {
-            padding-bottom: 120px;
+            margin-bottom: 2rem;
         }
         .excerpt {
             color:#363636;
