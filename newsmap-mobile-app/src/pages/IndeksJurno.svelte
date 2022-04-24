@@ -7,15 +7,50 @@
 
     let height
     let placeholder = [1,2,3,4,5,6]
+    let searchValue
 
     const fetchData = (async () => {
         const result = await get(ihttp.URI_ARTICLE_LIST, {size: 10});
         return await result.data;
-    })()
+    })
+
+    const searchData = (async () => {
+        let result1 = await get(ihttp.URI_ARTICLE_LIST, {size: 1000});
+        let result2 = await get(ihttp.URI_ARTICLE_LIST, {size: 1000});
+        let result3 = await get(ihttp.URI_ARTICLE_LIST, {size: 1000});
+        result1 = result1.data.filter((data) => { //search by title
+            return data.title.toLowerCase().includes(searchValue.toLowerCase())
+        })
+        result2 = result2.data.filter((data) => { //search by article content
+            if (data.article != null) {
+                return data.article.toLowerCase().includes(searchValue.toLowerCase())
+            }
+        })
+        result3 = result3.data.filter((data) => { //search by article author name
+            return data.author_name.toLowerCase().includes(searchValue.toLowerCase())
+        })
+
+        let allResult = [...result1, ...result2, ...result3]
+
+        var filteredResult = allResult.reduce((unique, o) => {
+            if(!unique.some(obj => obj.id === o.id)) {
+            unique.push(o);
+            }
+            return unique;
+        },[]);
+
+        return filteredResult;
+    })
 
     onMount(()=>{
         animateScroll.scrollToTop()
     })
+
+    let dataPromise = fetchData()
+    const search = () => {
+         dataPromise = searchData()
+     }
+
 </script>
 
 <svelte:head>
@@ -29,10 +64,10 @@
 <article style="margin-top:{height}px">
     <h1>JURNO ORIGINAL</h1>
     <form>
-        <input type="search" placeholder="Cari Artikel Jurno...">
-        <button type="submit">Search</button>
+        <input type="search" placeholder="Cari Artikel Jurno..." bind:value={searchValue}>
+        <button type="submit" on:click={search}>Search</button>
     </form>
-    {#await fetchData}
+    {#await dataPromise}
         {#each placeholder as d}
         <div class="article">
             <div class="left">
@@ -47,6 +82,7 @@
         </div>
         {/each}
     {:then data}
+        {#if data.length > 0}
         {#each data as d}
         <a href='/'>
             <div class="article">
@@ -62,6 +98,9 @@
             </div>
         </a>
         {/each}
+        {:else if data.length == 0}
+        <p style='text-align:center; font-size:0.8rem;'>Artikel tidak ditemukan</p>
+        {/if}
     {:catch error}
     <p>an error occured</p>
     {/await}
