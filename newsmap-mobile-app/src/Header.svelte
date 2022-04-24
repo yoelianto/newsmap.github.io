@@ -123,7 +123,7 @@
         /* box-shadow: 0rem -1rem 1rem 1rem rgba(0,0,0,0.1); */
     }
     .moveUp {
-        top:0;
+        top:-20px;
         transition: top 400ms ease-in-out;
     }
     /* .headerbar {
