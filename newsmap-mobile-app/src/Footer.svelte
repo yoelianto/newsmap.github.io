@@ -1,13 +1,85 @@
 <script>
+    import Fa from 'svelte-fa'
+    import { faTiktok, faInstagram, faTwitter, faFacebook, faYoutube } from '@fortawesome/free-brands-svg-icons'
+    import { faCopyright } from '@fortawesome/free-solid-svg-icons'
+    import { link } from "svelte-spa-router";
+    import {onMount} from 'svelte'
 
+    let now = new Date(), year;
+	let dateString;
+	
+	onMount(()=> {
+        year = now.getFullYear();
+
+    dateString = [year].join('-');
+	})
 </script>
 
 <footer>
     <div class="divider"></div>
     <section>
-        <p>
-            Cras feugiat lobortis auctor. In hac habitasse platea dictumst. Morbi at luctus ipsum. Mauris laoreet efficitur nulla non vehicula. Aliquam in tortor libero. Pellentesque vehicula malesuada odio, a auctor odio dictum sit amet. Nam enim lacus, suscipit aliquam dolor at, tincidunt tincidunt tortor. Aliquam posuere dolor purus, non ullamcorper massa finibus in. Curabitur ante odio, pulvinar sed enim nec, imperdiet rhoncus metus. Ut at cursus mauris, nec facilisis odio. Nulla rutrum auctor laoreet. Praesent at auctor diam, ac pulvinar tortor. Donec tristique a lorem ut euismod. Fusce nec convallis urna. Sed in facilisis felis.
-        </p>
+        <div class="menu">
+            <div class="left">
+                <a href={`/about/`} use:link>
+                    <p>Tentang Kami</p>
+                </a>
+                <a href={`/contact/`} use:link>
+                    <p>Kontak</p>
+                </a>
+                <a href={`/redaksi/`} use:link>
+                    <p>Redaksi</p>
+                </a>
+                <a href=''> <!-- DISCORD LINK HERE -->
+                    <p>Klub Sosial Jurno</p>
+                </a>
+            </div>
+
+            <div class="right">
+                <a href={`/article/`} use:link>
+                    <p>Jurno Original</p>
+                </a>
+                <a href={`/deduktif/`} use:link>
+                    <p>Deduktif</p>
+                </a>
+                <a href={`/infogram/`} use:link>
+                    <p>Infogram</p>
+                </a>
+    
+                
+                <div class="sosmed">
+                    <a href='https://www.instagram.com/jurnoid/'> <!-- INSTAGRAM LINK HERE -->
+                        <div class="sm ig">
+                            <Fa icon={faInstagram} />
+                        </div>
+                    </a>
+                    <a href=''> <!-- FACEBOOK LINK HERE -->
+                        <div class="sm fb">
+                            <Fa icon={faFacebook} />
+                        </div>
+                    </a>
+                    <a href='https://twitter.com/jurno_id' > <!-- TWITTER LINK HERE -->
+                        <div class="sm tw">
+                            <Fa icon={faTwitter} />
+                        </div>
+                    </a>
+                    <a href='https://www.youtube.com/channel/UCSGTUIGbrpONOTayMXAIcqw'> <!-- YOUTUBE LINK HERE -->
+                        <div class="sm yt">
+                            <Fa icon={faYoutube} />
+                        </div>
+                    </a>
+                    <a href='www.tiktok.com/@jurnoid'> <!-- TIKTOK LINK HERE -->
+                        <div class="sm tt">
+                            <Fa icon={faTiktok} />
+                        </div>
+                    </a> 
+                </div>
+            </div>
+        </div>
+        <div class="bottom">
+            <p>
+                Nestara Teknologi Teradata <Fa icon={faCopyright} /> {dateString}
+            </p>
+        </div>
     </section>
 
 </footer>
@@ -27,9 +99,15 @@
         position: absolute;
         top:-1rem;
     }
+    .bottom {
+        margin-top: 2rem;
+        width:100%;
+        text-align: center;
+    }
     section {
         width:88%;
         margin:0 auto;
+        padding-top: 3rem;
     }
     p {
         width:100%;
@@ -37,6 +115,39 @@
         font-family: var(--fontfamily2);
         color: hsl(0,0%,50%);
         white-space: normal;
-        margin-top: 3rem;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+    .menu {
+        width:90%;
+        display: flex;
+        flex-direction: row;
+        margin-left:20px;
+        justify-content: space-between;
+    }
+    .sosmed {
+        margin-top: 1rem;
+        display: flex;
+        color: hsl(0,0%,50%);
+    }
+    .sm {
+        margin-right: 0.5rem;
+        color:hsl(0,0%,50%);
+    }
+    .left {
+        width:45%;
+    }
+    .right {
+        width:45%;
+    }
+
+    .sm:hover {
+        color:var(--color-brand-dark-blue)
+    }
+    a{
+        color:var(--color-brand-white)
+    }
+    a:hover {
+        color:var(--color-brand-dark-blue)
     }
 </style>

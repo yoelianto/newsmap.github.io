@@ -5,7 +5,8 @@
     import { angleLeft } from 'svelte-awesome/icons';
     import { createEventDispatcher } from 'svelte';
     import PieChart from "./PieChart.svelte";
-import Result2 from "../../../../2022/IDJN/food_waste_calculator/foodwaste-calculator/src/Result2.svelte";
+    import Fa from 'svelte-fa'
+    import { faSpinner } from '@fortawesome/free-solid-svg-icons'
 
     const dispatch = createEventDispatcher()
 
@@ -38,7 +39,6 @@ import Result2 from "../../../../2022/IDJN/food_waste_calculator/foodwaste-calcu
         })
 
         let allResult = {...filter, result2}
-        console.log(allResult)
         return await allResult
     })
 
@@ -46,7 +46,6 @@ import Result2 from "../../../../2022/IDJN/food_waste_calculator/foodwaste-calcu
         const mergeParams = {...params, entity_id:id}
 
         const result = await get(ihttp.URI_ENTITY_RELATED_TOPICS, mergeParams);
-        console.log(result)
         return await result
     })
 
@@ -66,7 +65,12 @@ import Result2 from "../../../../2022/IDJN/food_waste_calculator/foodwaste-calcu
         </div>
 
         {#await dataPromise}
-            <p>waiting...</p>
+            <h1 class='placeholder'></h1>
+            <h3 class='placeholder'></h3>
+            <div class="detail">
+                <p class='placeholder'></p>
+                <p class='placeholder'></p>
+            </div>
         {:then data}
             <h1>{data[0].name}</h1>
             <h3>{data.result2[0].positions}</h3>
@@ -80,7 +84,9 @@ import Result2 from "../../../../2022/IDJN/food_waste_calculator/foodwaste-calcu
     </div>
     <div class="bottom">
         {#await dataPromise}
-            <p>waiting...</p>
+            <div class="placeholder-container">
+                <Fa icon={faSpinner} size="3x" pulse />
+            </div>
         {:then data}
         <section id='section-1'>
             <h3>Sentiment Analysis</h3>
@@ -137,6 +143,32 @@ import Result2 from "../../../../2022/IDJN/food_waste_calculator/foodwaste-calcu
 </article>
 
 <style>
+    .placeholder-container {
+        width:100%;
+        height:60vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 0.8rem;
+        color: hsl(0,0%,50%);
+    }
+    .placeholder {
+        background-color:hsl(0, 0%, 88%);
+        border-radius: 0.25rem;
+    }
+    h1.placeholder {
+        height:1.5rem;
+        width:50%;
+    }
+    h3.placeholder {
+        height:1rem;
+        width:80%;
+    }
+    p.placeholder {
+        height:0.8rem;
+        width:40%;
+        margin-bottom: 0.25rem;
+    }
     h1 {
         font-family: var(--fontfamily1);
         font-weight: 500;

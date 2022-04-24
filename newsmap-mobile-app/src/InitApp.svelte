@@ -14,6 +14,8 @@
     import AboutUs from "./pages/AboutUs.svelte";
     import Contact from "./pages/Contact.svelte";
     import Redaksi from "./pages/Redaksi.svelte";
+    import Fa from 'svelte-fa'
+    import { faSpinner } from '@fortawesome/free-solid-svg-icons'
 
     const routes = {
         "/": App,
@@ -35,7 +37,7 @@
 {#await getToken()}
     <!-- Put Loading Animation Here-->
     <div class="loading">
-        Loading...
+        <Fa icon={faSpinner} size="3x" pulse />
     </div>
 {:then data}
     <Router {routes} />
@@ -57,6 +59,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        color:hsl(0, 0%, 50%);
     }
     .error {
         background-color:hsla(353, 100%, 75%, 1);

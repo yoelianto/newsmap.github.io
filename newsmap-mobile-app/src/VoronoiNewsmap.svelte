@@ -337,7 +337,6 @@
     xmlns="http://www.w3.org/2000/svg"
     xmlns:xlink="http://www.w3.org/1999/xlink"
     class='example'
-    style="margin-top:{margin}px"
     width={w > h ? 0.65 * h : 0.95 * w}
     height={w > h ? 0.65 * h : 0.95 * w}
     viewBox = "0 0 100 100">
@@ -356,7 +355,7 @@
         Loading...
     </text>
 </svg>
-    <svg bind:this={el} style="margin-top:{margin}px" class='build' >
+    <svg bind:this={el} class='build' >
     </svg>
 </div>
 

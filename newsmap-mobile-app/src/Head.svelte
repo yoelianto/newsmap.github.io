@@ -70,8 +70,8 @@
         align-items: center;
     }
     img {
-        margin:0.5rem auto;
-        height:35px;
+        margin:0.3rem auto;
+        height:25px;
     }
     .container {
         z-index: 99;
@@ -83,8 +83,8 @@
     @media only screen /*xtrasmall*/
 	and (max-width: 575px) {
         img {
-            margin:0.5rem auto;
-            height:35px;
+            margin:0.3rem auto;
+            height:25px;
         }
 	}
 	@media only screen /*small*/

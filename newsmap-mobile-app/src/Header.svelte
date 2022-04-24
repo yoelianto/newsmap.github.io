@@ -121,7 +121,7 @@
         width:100vw;
         position: absolute;
         transition: top 400ms ease-in-out;
-        top: calc(1rem + 35px);
+        top: calc(0.6rem + 25px);
         /* box-shadow: 0rem -1rem 1rem 1rem rgba(0,0,0,0.1); */
     }
     .moveUp {
@@ -163,7 +163,7 @@
     @media only screen /*xtrasmall*/
 	and (max-width: 575px) {
         .container {
-           height: calc(35px + 1rem);
+           height: calc(25px + 0.6rem);
         }
 
 	}

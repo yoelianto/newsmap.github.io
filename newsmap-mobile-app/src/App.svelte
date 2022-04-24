@@ -206,7 +206,7 @@
 	and (max-width: 575px) {
 		.headlines {
 			flex-direction: column;
-			margin-top: 31vw;
+			margin-top: calc(0.6rem + 25px + 2.5rem)
 		}
 	}
 	@media only screen /*small*/

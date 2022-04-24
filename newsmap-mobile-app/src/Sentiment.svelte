@@ -1,7 +1,9 @@
 <script>
     import { get } from "./api";
     import * as ihttp from './constants/initialHttp';
-    import {createEventDispatcher} from 'svelte'
+    import {createEventDispatcher} from 'svelte';
+    import Fa from 'svelte-fa'
+    import { faSpinner } from '@fortawesome/free-solid-svg-icons'
 
     const dispatch = createEventDispatcher()
 
@@ -50,7 +52,7 @@
             <div class="sentiment">
                 <div class="personcontainer">
                     <div class="placeholder person">
-                        Loading...
+                        <Fa icon={faSpinner} size="3x" pulse />
                     </div>
                     <div class="pie" style="--p:{60};--c:hsl(0,0%,88%);"></div>
                 </div>
