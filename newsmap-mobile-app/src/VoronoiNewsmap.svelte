@@ -4,6 +4,11 @@
     import { onMount, tick} from 'svelte'
     import * as ihttp from "./constants/initialHttp";
     import { get } from "./api";
+    import {createEventDispatcher} from 'svelte'
+
+    const dispatch = createEventDispatcher()
+
+    export let topicId
 
     let circleanchor, catanchor, scale, circlelen, catlen, earanchor1, earanchor2, earlen1, earlen2,
         pointcircle = [],
@@ -174,6 +179,9 @@
             .enter()
             .append('path')
             .classed('voronoi', true)
+            .attr("id", (d) => {
+                    return d.site.originalObject.data.originalData.topicId;
+                })
             .attr("d", (d) => {
                 return "M" + d.join(",") + "z";
                 })
@@ -183,6 +191,11 @@
                     return d.site.originalObject.data.originalData.color;
                 })
             .style('z-index', 10)
+            .on('click', (d)=> {
+                topicId =  d.srcElement.__data__.site.originalObject.data.originalData.topicId
+                dispatch('modalIn')
+            })
+
 
             cathead
             .append('path')

@@ -24,9 +24,16 @@
 	let showMenu = false
 	let moveIn = false
 	let id
+	let topicId
+	let type
 
 	const modalIn = () => {
 		moveIn = true
+		type = 'people'
+	}
+	const modalTopicIn = () => {
+		moveIn = true
+		type = 'topic'
 	}
 	const modalOut = () => {
 		moveIn = false
@@ -79,6 +86,7 @@
 		}
 	});
 
+
 </script>
 
 <svelte:head>
@@ -93,6 +101,8 @@
 		<Newstensity
 			bind:moveIn
 			bind:id
+			bind:topicId
+			bind:type
 			on:modalOut = {modalOut}
 			params={params}
 			--fontfamily1 = {fontfamily1}
@@ -115,6 +125,8 @@
 		/> -->
 		<article class='headlines'>
 			<VoronoiNewsmap
+				on:modalIn = {modalTopicIn}
+				bind:topicId
 			/>
 
 			<Sentiment

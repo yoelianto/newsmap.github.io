@@ -17,6 +17,8 @@
     export let moveIn
 
     export let id
+    export let topicId
+    export let type
 
     let width
     let profilewidth
@@ -58,87 +60,140 @@
 <svelte:window bind:innerWidth={width}></svelte:window>
 
 <article style:left='{moveIn ? `0` : `${width}px`}' >
-    {#if id != undefined}
-    <div class="top">
-        <div class="close" on:click={forward}>
-            <Icon data={angleLeft} scale={2} />
+    {#if type == 'topic'}
+    {#if topicId != undefined}
+        <div class="top">
+            <div class="close" on:click={forward}>
+                <Icon data={angleLeft} scale={2} />
+            </div>
+            <h1>{topicId}</h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum, a praesentium. Perspiciatis incidunt dignissimos facere eos aut ullam aspernatur, molestiae dolores, non eveniet omnis doloribus facilis consequatur itaque voluptates corrupti fuga asperiores accusamus qui atque nisi quia dolorem! Ducimus quisquam inventore perspiciatis obcaecati, unde atque velit veritatis in aliquid a.</p>
+
+            <!-- {#await dataPromise}
+                <h1 class='placeholder'></h1>
+                <h3 class='placeholder'></h3>
+                <div class="detail">
+                    <p class='placeholder'></p>
+                    <p class='placeholder'></p>
+                </div>
+            {:then data}
+                <h1>{data[0].name}</h1>
+                <h3>{data.result2[0].positions}</h3>
+                <div class="detail">
+                    <p>Jumlah artikel : {data[0].count.toLocaleString('de-DE')}</p>
+                    <p>Cakupan media sosial : {data[0].count.toLocaleString('de-DE')}</p>
+                </div>
+            {:catch error}
+                <p>an error occured</p>
+            {/await} -->
+        </div>
+        <div class="bottom">
+            <!-- {#await dataPromise}
+                <div class="placeholder-container">
+                    <Fa icon={faSpinner} size="3x" pulse />
+                </div>
+            {:then data}
+            <section id='section-1'>
+                <h3>Sentiment Analysis</h3>                
+            </section>
+            <section>
+                <h3>Statement List</h3>
+            </section>
+            {:catch error}
+                <p>an error occured</p>
+            {/await} -->
+        </div>
+        <div class="foot">
+            <button>
+                Selengkapnya
+            </button>
         </div>
 
-        {#await dataPromise}
-            <h1 class='placeholder'></h1>
-            <h3 class='placeholder'></h3>
-            <div class="detail">
-                <p class='placeholder'></p>
-                <p class='placeholder'></p>
+        {/if}
+    {/if}
+    {#if type == 'people'}
+        {#if id != undefined}
+        <div class="top">
+            <div class="close" on:click={forward}>
+                <Icon data={angleLeft} scale={2} />
             </div>
-        {:then data}
-            <h1>{data[0].name}</h1>
-            <h3>{data.result2[0].positions}</h3>
-            <div class="detail">
-                <p>Jumlah artikel : {data[0].count.toLocaleString('de-DE')}</p>
-                <p>Cakupan media sosial : {data[0].count.toLocaleString('de-DE')}</p>
-            </div>
-        {:catch error}
-            <p>an error occured</p>
-        {/await}
-    </div>
-    <div class="bottom">
-        {#await dataPromise}
-            <div class="placeholder-container">
-                <Fa icon={faSpinner} size="3x" pulse />
-            </div>
-        {:then data}
-        <section id='section-1'>
-            <h3>Sentiment Analysis</h3>
-            <div class="inner-section">
-                <div class="profile" bind:clientWidth={profilewidth}>
-                    <PieChart
-                        percent1 = {100}
-                        percent2 = {Math.abs(Math.ceil((parseInt(data[0].neutral))/(parseInt(data[0].positive)+parseInt(data[0].negative)+parseInt(data[0].neutral))*100))+Math.abs(Math.ceil((parseInt(data[0].negative))/(parseInt(data[0].positive)+parseInt(data[0].negative)+parseInt(data[0].neutral))*100))}
-                        percent3 = {Math.abs(Math.ceil((parseInt(data[0].negative))/(parseInt(data[0].positive)+parseInt(data[0].negative)+parseInt(data[0].neutral))*100))}
-                        imagelink = {data[0].thumbnail}
-                        size = {profilewidth}
-                        bind:fgColor1
-                        bind:fgColor2
-                        bind:fgColor3
-                    />
-                </div>
-                <div class="right">
-                    <div class="data pos">
-                        <p>positive</p>
-                        <p class='percent positive' style:color={fgColor1}>
-                            {Math.abs(Math.ceil((parseInt(data[0].positive))/(parseInt(data[0].positive)+parseInt(data[0].negative)+parseInt(data[0].neutral))*100))}%
-                        </p>
-                    </div>
-                    <div class="data neg">
-                        <p>negative</p>
-                        <p class='percent negative' style:color={fgColor3}>
-                            {Math.abs(Math.ceil((parseInt(data[0].negative))/(parseInt(data[0].positive)+parseInt(data[0].negative)+parseInt(data[0].neutral))*100))}%
-                        </p>
-                    </div>
-                    <div class="data neu">
-                        <p>neutral</p>
-                        <p class='percent neutral' style:color={fgColor2}>
-                            {Math.abs(Math.ceil((parseInt(data[0].neutral))/(parseInt(data[0].positive)+parseInt(data[0].negative)+parseInt(data[0].neutral))*100))}%
-                        </p>
-                    </div>
-                </div>
-            </div>
-            
-        </section>
-        <section>
-            <h3>Statement List</h3>
-        </section>
-        {:catch error}
-            <p>an error occured</p>
-        {/await}
-    </div>
-    <div class="foot">
-        <button>
-            Selengkapnya
-        </button>
-    </div>
 
+            {#await dataPromise}
+                <h1 class='placeholder'></h1>
+                <h3 class='placeholder'></h3>
+                <div class="detail">
+                    <p class='placeholder'></p>
+                    <p class='placeholder'></p>
+                </div>
+            {:then data}
+                <h1>{data[0].name}</h1>
+                <h3>{data.result2[0].positions}</h3>
+                <div class="detail">
+                    <p>Jumlah artikel : {data[0].count.toLocaleString('de-DE')}</p>
+                    <p>Cakupan media sosial : {data[0].count.toLocaleString('de-DE')}</p>
+                </div>
+            {:catch error}
+                <p>an error occured</p>
+            {/await}
+        </div>
+        <div class="bottom">
+            {#await dataPromise}
+                <div class="placeholder-container">
+                    <Fa icon={faSpinner} size="3x" pulse />
+                </div>
+            {:then data}
+            <section id='section-1'>
+                <h3>Sentiment Analysis</h3>
+                <div class="inner-section">
+                    <div class="profile" bind:clientWidth={profilewidth}>
+                        <PieChart
+                            percent1 = {100}
+                            percent2 = {Math.abs(Math.ceil((parseInt(data[0].neutral))/(parseInt(data[0].positive)+parseInt(data[0].negative)+parseInt(data[0].neutral))*100))+Math.abs(Math.ceil((parseInt(data[0].negative))/(parseInt(data[0].positive)+parseInt(data[0].negative)+parseInt(data[0].neutral))*100))}
+                            percent3 = {Math.abs(Math.ceil((parseInt(data[0].negative))/(parseInt(data[0].positive)+parseInt(data[0].negative)+parseInt(data[0].neutral))*100))}
+                            imagelink = {data[0].thumbnail}
+                            size = {profilewidth}
+                            bind:fgColor1
+                            bind:fgColor2
+                            bind:fgColor3
+                        />
+                    </div>
+                    <div class="right">
+                        <div class="data pos">
+                            <p>positive</p>
+                            <p class='percent positive' style:color={fgColor1}>
+                                {Math.abs(Math.ceil((parseInt(data[0].positive))/(parseInt(data[0].positive)+parseInt(data[0].negative)+parseInt(data[0].neutral))*100))}%
+                            </p>
+                        </div>
+                        <div class="data neg">
+                            <p>negative</p>
+                            <p class='percent negative' style:color={fgColor3}>
+                                {Math.abs(Math.ceil((parseInt(data[0].negative))/(parseInt(data[0].positive)+parseInt(data[0].negative)+parseInt(data[0].neutral))*100))}%
+                            </p>
+                        </div>
+                        <div class="data neu">
+                            <p>neutral</p>
+                            <p class='percent neutral' style:color={fgColor2}>
+                                {Math.abs(Math.ceil((parseInt(data[0].neutral))/(parseInt(data[0].positive)+parseInt(data[0].negative)+parseInt(data[0].neutral))*100))}%
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+            </section>
+            <section>
+                <h3>Statement List</h3>
+            </section>
+            {:catch error}
+                <p>an error occured</p>
+            {/await}
+        </div>
+        <div class="foot">
+            <button>
+                Selengkapnya
+            </button>
+        </div>
+
+        {/if}
     {/if}
 </article>
 
