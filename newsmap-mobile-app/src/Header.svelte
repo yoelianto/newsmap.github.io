@@ -3,8 +3,6 @@
     import Head from './Head.svelte';
     import { tweened } from 'svelte/motion';
     import * as animateScroll from "svelte-scrollto";
-
-    let burgerIn
     
     const tweenConfig1 = {
         duration: 500,

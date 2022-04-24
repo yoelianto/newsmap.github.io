@@ -3,12 +3,13 @@
     import { search, bars } from 'svelte-awesome/icons';
     import { createEventDispatcher } from 'svelte';
     import BurgerMenu from './BurgerMenu.svelte';
+    import Search from './Search.svelte';
 
     const dispatch = createEventDispatcher()
 
     export let height
     export let page
-    export let burgerIn
+    export let burgerIn, searchIn
     let colorBrandWhite = "#fafafa",
 		colorBrandRed = "#ef5959",
 		colorBrandDarkBlue = "#242053",
@@ -25,6 +26,9 @@
     --color-brand-dark-blue= {colorBrandDarkBlue}
     --color-brand-white = {colorBrandWhite}
     --color-brand-red = {colorBrandRed}
+/>
+<Search
+    bind:searchIn
 />
 <nav>
     <div class="container" bind:clientHeight={height}>
@@ -46,7 +50,7 @@
                 <a href='/'>
                     <img src="./images/logo-jurno-web.svg" alt="Logo Jurno Website">
                 </a>
-                <div class="after">
+                <div class="after" on:click={()=> {searchIn = true}}>
                     <Icon data={search} />
                 </div>
             {/if}

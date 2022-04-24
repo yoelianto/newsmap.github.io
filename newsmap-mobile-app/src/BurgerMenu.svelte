@@ -104,7 +104,7 @@
     }
     .close {
         width:100%;
-        height:calc(35px + 1rem);
+        height:calc(25px + 0.6rem);
         display: flex;
         justify-content: flex-end;
         align-items: center;
