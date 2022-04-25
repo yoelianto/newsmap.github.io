@@ -8,7 +8,6 @@
     import moment from "moment";
     import Fa from 'svelte-fa';
     import { faCameraAlt } from '@fortawesome/free-solid-svg-icons'
-    import { Canvg } from 'canvg';
 
     // let v = null
 
@@ -413,7 +412,7 @@
 <button class="snapshot" >
     <Fa icon={faCameraAlt} size='1.2x'/>
 </button>
-<canvas></canvas>
+<!-- <canvas></canvas> -->
 </div>
 
 
