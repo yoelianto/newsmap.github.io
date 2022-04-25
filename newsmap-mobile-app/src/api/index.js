@@ -16,7 +16,6 @@ export const getToken = async (isServer = false) => {
     if (!isServer) {
         localStore('token', token, 'set');
     }
-
     return token;
 }
 

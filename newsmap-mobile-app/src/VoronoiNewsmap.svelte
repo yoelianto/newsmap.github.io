@@ -4,11 +4,38 @@
     import { onMount, tick} from 'svelte'
     import * as ihttp from "./constants/initialHttp";
     import { get } from "./api";
-    import {createEventDispatcher} from 'svelte'
+    import {createEventDispatcher} from 'svelte';
+    import moment from "moment";
+    import Fa from 'svelte-fa';
+    import { faCameraAlt } from '@fortawesome/free-solid-svg-icons'
+    import { Canvg } from 'canvg';
+
+    // let v = null
+
+    // const save = () => {
+	// 		const canvas = document.querySelector('canvas');
+	// 		const ctx = canvas.getContext('2d');
+
+	// 		// Read the SVG string using the fromString method
+	// 		// of Canvg
+	// 		v = Canvg.fromString(ctx, el);
+
+	// 		// Start drawing the SVG on the canvas
+	// 		v.start();
+
+	// 		// Convert the Canvas to an image
+	// 		var img = canvas.toDataURL("img/png");
+
+	// 		// Write the image on the screen
+	// 		document.write('<img src="' + img + '"/>');
+	// 	}
+
+    let today = moment().format("YYYY-MM-DD")
+    let yesterday = moment().subtract(1, 'days').format("YYYY-MM-DD")
 
     const dispatch = createEventDispatcher()
 
-    export let topicId
+    export let topicId, newsId
 
     let circleanchor, catanchor, scale, circlelen, catlen, earanchor1, earanchor2, earlen1, earlen2,
         pointcircle = [],
@@ -20,14 +47,12 @@
         y = []
     let minX, minY, maxX, maxY;
 
-    export let margin;
-
     let w = document.body.clientWidth;
     let h = document.body.clientHeight;
     let width, placeholder
-    
+
     const fetchData = (async () => {
-        const result = await get(ihttp.URI_LAST_TOPIC, { size: 18 });
+        const result = await get(ihttp.URI_LAST_TOPIC, { from:yesterday, to:today, size: 18 });
         placeholder.style.display = 'none'
         return result.data;
     })()
@@ -104,7 +129,6 @@
                 width = 0.95 * w
                 scale = width / (maxY-minY)
             }
-            
 
             //scale function
             let scaledpoint = pointcircle.map(coord => {
@@ -192,10 +216,10 @@
                 })
             .style('z-index', 10)
             .on('click', (d)=> {
-                topicId =  d.srcElement.__data__.site.originalObject.data.originalData.topicId
+                topicId =  d.srcElement.__data__.site.originalObject.data.originalData._id
+                newsId = d.srcElement.__data__.site.originalObject.data.originalData.topic_id
                 dispatch('modalIn')
             })
-
 
             cathead
             .append('path')
@@ -253,6 +277,11 @@
                     return '300'
                 }
             })
+            .on('click', (d)=> {
+                topicId =  d.srcElement.__data__.site.originalObject.data.originalData._id
+                newsId = d.srcElement.__data__.site.originalObject.data.originalData.topic_id
+                dispatch('modalIn')
+            })
 
             text
             .selectAll('.secondarylabel')
@@ -291,6 +320,11 @@
                 } else {
                     return '300'
                 }
+            })
+            .on('click', (d)=> {
+                topicId =  d.srcElement.__data__.site.originalObject.data.originalData._id
+                newsId = d.srcElement.__data__.site.originalObject.data.originalData.topic_id
+                dispatch('modalIn')
             })
 
             text
@@ -331,6 +365,11 @@
                     return '300'
                 }
             })
+            .on('click', (d)=> {
+                topicId =  d.srcElement.__data__.site.originalObject.data.originalData._id
+                newsId = d.srcElement.__data__.site.originalObject.data.originalData.topic_id
+                dispatch('modalIn')
+            })
 
             cells.raise()
             cathead.lower()
@@ -339,10 +378,11 @@
         
         drawVoronoi()
 
-    })    
+    })
+
+    $: el, console.log(el)
 
 </script>
-
 
 <div class="container">
     <svg
@@ -368,8 +408,12 @@
         Loading...
     </text>
 </svg>
-    <svg bind:this={el} class='build' >
-    </svg>
+<svg id='pala-koceng' bind:this={el} class='build' >
+</svg>
+<button class="snapshot" >
+    <Fa icon={faCameraAlt} size='1.2x'/>
+</button>
+<canvas></canvas>
 </div>
 
 
@@ -379,6 +423,16 @@
         justify-content: center;
         align-items: center;
         flex-direction: column;
+        position: relative;
+    }
+    .snapshot {
+        position: absolute;
+        bottom: 0;
+        right: 6%;
+        color: var(--color-brand-dark-blue);
+        padding:0.4rem;
+        border-radius: 0.5rem;
+        border:solid 1px hsl(0,0%,75%);
     }
     .build {
         margin:0 auto;

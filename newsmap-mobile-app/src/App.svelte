@@ -24,7 +24,7 @@
 	let showMenu = false
 	let moveIn = false
 	let id
-	let topicId
+	let topicId, newsId
 	let type
 
 	const modalIn = () => {
@@ -53,8 +53,8 @@
 	let authorprofileimage = "./image/ahsan.png";
 
 	let params = {
-		from: moment().subtract(7, 'd').format('YYYY-MM-DD'),
-		to: moment().format('YYYY-MM-DD'),
+		from: moment().subtract(6, 'hour').format('YYYY-MM-DD h:mm:ss'),
+		to: moment().format('YYYY-MM-DD h:mm:ss'),
 		sort_by: 'published_date', 
 		sort_dir: 'desc',
 		per_page: 10
@@ -127,6 +127,8 @@
 			<VoronoiNewsmap
 				on:modalIn = {modalTopicIn}
 				bind:topicId
+				bind:newsId
+				--color-brand-dark-blue={colorBrandDarkBlue}
 			/>
 
 			<Sentiment
