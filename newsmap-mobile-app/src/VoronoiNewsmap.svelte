@@ -8,26 +8,7 @@
     import moment from "moment";
     import Fa from 'svelte-fa';
     import { faCameraAlt } from '@fortawesome/free-solid-svg-icons'
-
-    // let v = null
-
-    // const save = () => {
-	// 		const canvas = document.querySelector('canvas');
-	// 		const ctx = canvas.getContext('2d');
-
-	// 		// Read the SVG string using the fromString method
-	// 		// of Canvg
-	// 		v = Canvg.fromString(ctx, el);
-
-	// 		// Start drawing the SVG on the canvas
-	// 		v.start();
-
-	// 		// Convert the Canvas to an image
-	// 		var img = canvas.toDataURL("img/png");
-
-	// 		// Write the image on the screen
-	// 		document.write('<img src="' + img + '"/>');
-	// 	}
+    import html2canvas from 'html2canvas';
 
     let today = moment().format("YYYY-MM-DD")
     let yesterday = moment().subtract(1, 'days').format("YYYY-MM-DD")
@@ -48,7 +29,7 @@
 
     let w = document.body.clientWidth;
     let h = document.body.clientHeight;
-    let width, placeholder
+    let width, placeholder, container
 
     const fetchData = (async () => {
         const result = await get(ihttp.URI_LAST_TOPIC, { from:yesterday, to:today, size: 18 });
@@ -379,11 +360,20 @@
 
     })
 
-    $: el, console.log(el)
+
+    function save() {
+        let a = document.querySelector('#pala-koceng')
+        console.log(a)
+        console.log(container)
+        html2canvas(a).then(canvas => {
+            console.log(canvas)
+        container.appendChild(canvas)
+    }); 
+    }
 
 </script>
 
-<div class="container">
+<div class="container" bind:this={container}>
     <svg
     bind:this={placeholder}
     xmlns="http://www.w3.org/2000/svg"
@@ -409,10 +399,9 @@
 </svg>
 <svg id='pala-koceng' bind:this={el} class='build' >
 </svg>
-<button class="snapshot" >
+<button class="snapshot" on:click={save}>
     <Fa icon={faCameraAlt} size='1.2x'/>
 </button>
-<!-- <canvas></canvas> -->
 </div>
 
 
@@ -444,7 +433,6 @@
         .container {
             width: 100vw;
         }
-
 	}
 	@media only screen /*small*/
 	and (min-width: 576px)

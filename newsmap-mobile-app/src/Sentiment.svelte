@@ -3,7 +3,11 @@
     import * as ihttp from './constants/initialHttp';
     import {createEventDispatcher} from 'svelte';
     import Fa from 'svelte-fa'
-    import { faSpinner } from '@fortawesome/free-solid-svg-icons'
+    import { faSpinner } from '@fortawesome/free-solid-svg-icons';
+    import moment from "moment";
+
+    let today = moment().format("YYYY-MM-DD")
+    let yesterday = moment().subtract(1, 'days').format("YYYY-MM-DD")
 
     const dispatch = createEventDispatcher()
 
@@ -19,13 +23,9 @@
         id = event.path[2].dataset.id
     }
 
-    export let params = {}
-
     const fetchData = (async () => {
-        const mergeParams = {...params, kind: 'person', size:size}
-
-        const result = await get(ihttp.URI_NEWS_TOP_ENTITY, mergeParams);
-
+        const result = await get(ihttp.URI_NEWS_TOP_ENTITY, {size:size, from:yesterday, to:today});
+        console.log(result)
         //percentage calculation
         result.data.forEach((data) => {
             data.percent = Math.ceil((data.positive-data.negative-data.neutral)/(data.positive+data.negative+data.neutral)*100)
@@ -38,7 +38,7 @@
                 data.color = "hsl(0, 82%, 64%)"
             }
         });
-
+        console.log(result.data)
         return await result.data;
     })()
 

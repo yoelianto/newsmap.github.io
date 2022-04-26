@@ -37,17 +37,19 @@
     export let params = {}
 
     const fetchData = (async () => {
-        const mergeParams = {...params, kind: 'person', size:10}
-
-        const result = await get(ihttp.URI_NEWS_TOP_ENTITY, mergeParams);
-        const result2 = await get(ihttp.URI_ENTITY_PROFILE, {entity_id:id});
-        const result3 = await get(ihttp.URI_ENTITY_VOICES, {from:yesterday, to:today,entity_id:id});
+        const result = await get(ihttp.URI_NEWS_TOP_ENTITY, { size:10, from:yesterday, to:today})
+        const result2 = await get(ihttp.URI_ENTITY_PROFILE, { entity_id:id });
+        const result3 = await get(ihttp.URI_ENTITY_VOICES, { from:yesterday, to:today,entity_id:id });
 
         let filter = result.data.filter((data) => {
              return data.id == id
         })
+        console.log(filter)
+        console.log(result2)
+        console.log(result3)
 
-        let allResult = [{...filter[0], ...result2, ...result3}]
+        let allResult = [{...filter,result2,...result3}]
+        console.log(allResult)
         return allResult
     })
 
@@ -63,6 +65,7 @@
         console.log(newsList)
         //console.log(statResult)
         let allResult = [...filter, ...result.data]
+        console.log(allResult)
         return allResult
     })
 
@@ -155,12 +158,14 @@
                     <p class='placeholder'></p>
                 </div>
             {:then data}
-                <h1>{data[0].name}</h1>
-                <h3>{data[0][0].positions[0]}</h3>
-                <div class="detail">
-                    <p>Jumlah artikel : {data[0].count.toLocaleString('de-DE')}</p>
-                    <p>Cakupan media sosial : {(data[0].Facebook+data[0].Instagram+data[0].Twitter+data[0].Youtube).toLocaleString('de-DE')}</p>
-                </div>
+                {#each data as d}
+                    <h1>{d[0].name}</h1>
+                    <h3>{d['result2'][0].positions[0]}</h3>
+                    <div class="detail">
+                        <p>Jumlah artikel : {d[0].count.toLocaleString('de-DE')}</p>
+                        <p>Cakupan media sosial : {(d.Facebook+d.Instagram+d.Twitter+d.Youtube).toLocaleString('de-DE')}</p>
+                    </div>
+                {/each}
             {:catch error}
                 <p>an error occured</p>
             {/await}
@@ -171,15 +176,16 @@
                     <Fa icon={faSpinner} size="3x" pulse />
                 </div>
             {:then data}
+            {#each data as d}
             <section id='section-1'>
                 <h3>Media Sentiment Analysis</h3>
                 <div class="inner-section">
                     <div class="profile" bind:clientWidth={profilewidth}>
                         <PieChart
                             percent1 = {100}
-                            percent2 = {Math.abs(Math.ceil((parseInt(data[0].neutral))/(parseInt(data[0].positive)+parseInt(data[0].negative)+parseInt(data[0].neutral))*100))+Math.abs(Math.ceil((parseInt(data[0].negative))/(parseInt(data[0].positive)+parseInt(data[0].negative)+parseInt(data[0].neutral))*100))}
-                            percent3 = {Math.abs(Math.ceil((parseInt(data[0].negative))/(parseInt(data[0].positive)+parseInt(data[0].negative)+parseInt(data[0].neutral))*100))}
-                            imagelink = {data[0].thumbnail}
+                            percent2 = {Math.abs(Math.ceil((parseInt(d[0].neutral))/(parseInt(d[0].positive)+parseInt(d[0].negative)+parseInt(d[0].neutral))*100))+Math.abs(Math.ceil((parseInt(d[0].negative))/(parseInt(d[0].positive)+parseInt(d[0].negative)+parseInt(d[0].neutral))*100))}
+                            percent3 = {Math.abs(Math.ceil((parseInt(d[0].negative))/(parseInt(d[0].positive)+parseInt(d[0].negative)+parseInt(d[0].neutral))*100))}
+                            imagelink = {d[0].thumbnail}
                             size = {profilewidth}
                             bind:fgColor1
                             bind:fgColor2
@@ -190,19 +196,19 @@
                         <div class="data pos">
                             <p>positive</p>
                             <p class='percent positive' style:color={fgColor1}>
-                                {Math.abs(Math.ceil((parseInt(data[0].positive))/(parseInt(data[0].positive)+parseInt(data[0].negative)+parseInt(data[0].neutral))*100))}%
+                                {Math.abs(Math.ceil((parseInt(d[0].positive))/(parseInt(d[0].positive)+parseInt(d[0].negative)+parseInt(d[0].neutral))*100))}%
                             </p>
                         </div>
                         <div class="data neg">
                             <p>negative</p>
                             <p class='percent negative' style:color={fgColor3}>
-                                {Math.abs(Math.ceil((parseInt(data[0].negative))/(parseInt(data[0].positive)+parseInt(data[0].negative)+parseInt(data[0].neutral))*100))}%
+                                {Math.abs(Math.ceil((parseInt(d[0].negative))/(parseInt(d[0].positive)+parseInt(d[0].negative)+parseInt(d[0].neutral))*100))}%
                             </p>
                         </div>
                         <div class="data neu">
                             <p>neutral</p>
                             <p class='percent neutral' style:color={fgColor2}>
-                                {Math.abs(Math.ceil((parseInt(data[0].neutral))/(parseInt(data[0].positive)+parseInt(data[0].negative)+parseInt(data[0].neutral))*100))}%
+                                {Math.abs(Math.ceil((parseInt(d[0].neutral))/(parseInt(d[0].positive)+parseInt(d[0].negative)+parseInt(d[0].neutral))*100))}%
                             </p>
                         </div>
                     </div>
@@ -212,6 +218,7 @@
             <section>
                 <h3>Statement List</h3>
             </section>
+            {/each}
             {:catch error}
                 <p>an error occured</p>
             {/await}
