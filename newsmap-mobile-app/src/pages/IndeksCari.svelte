@@ -62,12 +62,13 @@
     {:then data}
         {#if data.length > 0}
         {#each data as d}
-        <a href='/'>
+        <a style='cursor:pointer' href='/'>
             <div class="article">
                 <div class="left">
                     <img src={`${process['env']['URL_IMAGE']}${d.type == 'jurno' ? 'article' : d.type}/${d.thumbnail}`} alt={d.title} />
                 </div>
                 <div class="credit">
+                    <p class='type'>{d.type ? d.type : 'news'}</p>
                     <p class="author">{d.author ? d.author : d.author_name}</p>
                     <p class="article-title">
                         {d.title}
@@ -181,6 +182,17 @@
         font-weight:500;
         white-space: normal;
         margin: 0.2rem 0;
+    }
+    .type {
+        font-family: 'Roboto';
+        font-size: 0.6rem;
+        white-space: normal;
+        margin: 0.1rem 0;
+        color: white;
+        background-color: hsl(0, 0%, 50%);
+        width: fit-content;
+        padding:0.2rem;
+        border-radius: 0.2rem;
     }
     .article-title {
         font-family: 'Roboto';

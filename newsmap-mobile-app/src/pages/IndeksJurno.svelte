@@ -61,7 +61,7 @@
     {:then data}
         {#if data.length > 0}
         {#each data as d}
-        <a href='/'>
+        <a style='cursor:pointer' href='/'>
             <div class="article">
                 <div class="left">
                     <img src={`${process['env']['URL_IMAGE']}news/${d.thumbnail}`} alt={d.title} />

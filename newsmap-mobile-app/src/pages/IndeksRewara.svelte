@@ -63,7 +63,7 @@
     {:then data}
     {#if data.length > 0}
         {#each data as d}
-        <a href={`/rewara/${d.slug}`}>
+        <a style='cursor:pointer' href={`/rewara/${d.slug}`}>
             <div class="article">
                 <div class="left">
                     <img src={`${process['env']['URL_IMAGE']}rewara/${d.thumbnail}`} alt={d.title} />
