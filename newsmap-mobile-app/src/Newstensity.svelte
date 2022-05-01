@@ -8,6 +8,46 @@
     import Fa from 'svelte-fa'
     import { faSpinner } from '@fortawesome/free-solid-svg-icons'
     import moment from "moment";
+    import { onMount } from 'svelte';
+    import Siema from 'siema'
+
+    let width
+
+    let slider, prev, next
+
+    onMount(() => {
+        slider = new Siema({
+                selector: '.siema',
+                duration: 200,
+                easing: 'ease-in-out',
+                perPage: 1,
+                startIndex: 0,
+                draggable: true,
+                multipleDrag: true,
+                threshold: 20,
+                loop: true,
+                rtl: false,
+                onInit: () => {},
+                onChange: () => {},
+            }); //end Siema constructor
+            
+            prev = () => {
+                slider.prev()
+            }
+            
+            next = () => {
+                slider.next()
+            }
+	}) //end onMount
+
+    const options = {
+        arrows: true,
+        pagination: false,
+        autoWidth: true,
+        rewind: false,
+        gap: 10
+        };
+
 
     let today = moment().format("YYYY-MM-DD")
     let yesterday = moment().subtract(1, 'days').format("YYYY-MM-DD")
@@ -26,7 +66,6 @@
     export let topicId, newsId
     export let type
 
-    let width
     let profilewidth
     let fgColor1 = 'hsl(244, 30%, 30%)'
     let fgColor2 = 'hsl(244, 30%, 70%)'
@@ -39,35 +78,40 @@
     const fetchData = (async () => {
         const result = await get(ihttp.URI_NEWS_TOP_ENTITY, { size:10, from:yesterday, to:today})
         const result2 = await get(ihttp.URI_ENTITY_PROFILE, { entity_id:id });
-        const result3 = await get(ihttp.URI_ENTITY_VOICES, { from:yesterday, to:today,entity_id:id });
+        const result3 = await get(ihttp.URI_ENTITY_VOICES, { from:yesterday, to:today, entity_id:id });
+        const statementlist = await get(ihttp.URI_NEWS_STATEMENT_LIST, { from:yesterday, to:today, size:5, entities:id })
 
         let filter = result.data.filter((data) => {
              return data.id == id
         })
-        console.log(filter)
-        console.log(result2)
-        console.log(result3)
 
-        let allResult = [{...filter,result2,...result3}]
+        let statement = statementlist.data
+
+        let allResult = [{...filter,result2,...result3, statement}]
         console.log(allResult)
         return allResult
     })
 
 
     const fetchEntity = (async () => {
+        console.log('topicId', topicId)
+        console.log('newsId', newsId)
         const topicResult = await get(ihttp.URI_LAST_TOPIC, {_id:topicId})
         const result = await get(ihttp.URI_NEWS_TOP_ENTITY, { from:yesterday, to:today, topic_id:topicId, type:'person' });
-        const newsList = await get(ihttp.URI_NEWS_LIST, {topic_id:newsId})
+        const newsList = await get(ihttp.URI_NEWS_LIST, { topic_id:topicId, from:yesterday, to:today })
+
         //const statResult = await get(ihttp.URI_NEWS_LAST_TOPIC_STAT)
         let filter = topicResult.data.filter((data) => {
              return data._id == topicId
         })
-        console.log(newsList)
+
+        let news = newsList.data
         //console.log(statResult)
-        let allResult = [...filter, ...result.data]
+        let allResult = [...filter, news, ...result.data ]
         console.log(allResult)
         return allResult
     })
+    
 
     $: id, dataPromise = fetchData()
     $: topicId, entityPromise = fetchEntity()
@@ -75,7 +119,10 @@
 </script>
 
 <svelte:window bind:innerWidth={width}></svelte:window>
-
+<svelte:head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
+</svelte:head>
 <article style:left='{moveIn ? `0` : `${width}px`}' >
     {#if type == 'topic'}
     {#if topicId != undefined}
@@ -125,7 +172,22 @@
                 <section>
                     <h3>News List</h3>
                     <div class="inner-section">
-                        
+
+                        <div class="news-container">
+                            {#each data[1].slice(0,4) as d}
+                            <a href={d.source_url}>
+                                <p style='color:hsl(0,0%,50%);font-size:0.8rem'>{d.media}</p>
+                                <div class="news-tab">
+                                    <p class='news-title'>{d.title}</p>
+                                    <p class="sentiment"
+                                        style='background-color:{d.sentiment == 'positive' ? '#242053' : d.sentiment == 'neutral' ? 'hsl(0,0%,50%)' : '#ef5959' }'>
+                                        {d.sentiment}
+                                    </p>
+                                </div>
+                            </a>
+                            {/each}
+                        </div>
+
                     </div>
                 </section>
             {:catch error}
@@ -215,10 +277,33 @@
                 </div>
                 
             </section>
+            {/each}
             <section>
                 <h3>Statement List</h3>
+                <div class="inner-section">
+                    <div class="siema">
+                        {#each data[0]['statement'].slice(0,4) as d}
+                        <a href={d.sourceUrl} >
+                            <div class="statement">
+                                <p style='color:hsl(0,0%,50%);font-size:0.8rem'>{d.media}</p>
+                                <div class="news-tab">
+                                    <p class='news-title'>{d.statement_text}</p>
+                                    <p class="sentiment"
+                                        style='background-color:{d.statement_sentiment == 'positive' ? '#242053' : d.statement_sentiment == 'neutral' ? 'hsl(0,0%,50%)' : '#ef5959' }'>{d.statement_sentiment}</p>
+                                </div>
+                            </div>
+                        </a>
+                        {/each}
+                    </div>
+                </div>
+                <button class='statement stm-prev' on:click={prev}>
+                    prev
+                </button>
+                <button class='statement stm-next' on:click={next}>
+                    next
+                </button>
             </section>
-            {/each}
+            
             {:catch error}
                 <p>an error occured</p>
             {/await}
@@ -234,6 +319,39 @@
 </article>
 
 <style>
+    .news-container {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        white-space: normal;
+    }
+    .statement {
+        margin-right:1rem;
+        white-space: normal;
+        width:90%;
+    }
+    .news-tab {
+        width:100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .sentiment {
+        font-size: 0.6rem;
+        padding:0.25rem;
+        border-radius: 0.25rem;
+        color:#fafafa;
+        background-color: black;
+        margin-left: 1rem;
+        height: fit-content;
+    }
+    .news-title {
+        font-size: 0.8rem;
+        font-family: var(--fontfamily2);
+        font-weight: 500;
+        margin-bottom: 0.8rem;
+        color:black;
+    }
     .topic {
         justify-content: center;
     }

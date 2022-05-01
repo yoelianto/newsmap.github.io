@@ -16,38 +16,15 @@
     })
 
     const searchData = (async () => {
-        let result1 = await get(ihttp.URI_DEDUKTIF_LIST, {size: 1000});
-        let result2 = await get(ihttp.URI_DEDUKTIF_LIST, {size: 1000});
-        let result3 = await get(ihttp.URI_DEDUKTIF_LIST, {size: 1000});
-        result1 = result1.data.filter((data) => { //search by title
-            return data.title.toLowerCase().includes(searchValue.toLowerCase())
-        })
-        result2 = result2.data.filter((data) => { //search by article content
-            if (data.article != null) {
-                return data.article.toLowerCase().includes(searchValue.toLowerCase())
-            }
-        })
-        result3 = result3.data.filter((data) => { //search by article author name
-            return data.author_name.toLowerCase().includes(searchValue.toLowerCase())
-        })
-
-        let allResult = [...result1, ...result2, ...result3]
-
-        var filteredResult = allResult.reduce((unique, o) => {
-            if(!unique.some(obj => obj.id === o.id)) {
-            unique.push(o);
-            }
-            return unique;
-        },[]);
-
-        return filteredResult;
+        let searchResult = await get(ihttp.URI_SEARCH, { keywords:searchValue , type:'deduktif' }) 
+        return searchResult.data;
     })
 
     let dataPromise = fetchData()
+
     const search = () => {
          dataPromise = searchData()
      }  
-    
 
     onMount(()=>{
         animateScroll.scrollToTop()

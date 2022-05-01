@@ -1,0 +1,78 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Users\ASUS\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add siema
+
+PATH: 
+  C:\Python310\Scripts\;C:\Python310\;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64\compiler;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Program Files\Git\cmd;C:\xampp\php;C:\ProgramData\ComposerSetup\bin;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Users\ASUS\AppData\Local\Microsoft\WindowsApps;;C:\Users\ASUS\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\ASUS\AppData\Roaming\npm;C:\Program Files\mongosh\;C:\Users\ASUS\AppData\Roaming\Composer\vendor\bin
+
+Yarn version: 
+  1.22.17
+
+Node version: 
+  16.13.2
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: EPERM: operation not permitted, copyfile 'C:\Users\ASUS\AppData\Local\Yarn\Cache\v6\npm-@fortawesome-free-brands-svg-icons-6.1.1-3580961d4f42bd51dc171842402f23a18a5480b1-integrity\node_modules\@fortawesome\free-brands-svg-icons\index.es.js' -> 'A:\Work\NEWSMAP\newsmap.github.io\newsmap-mobile-app\node_modules\@fortawesome\free-brands-svg-icons\index.es.js'
+
+npm manifest: 
+  {
+    "name": "svelte-app",
+    "version": "1.0.0",
+    "private": true,
+    "scripts": {
+      "build": "rollup -c",
+      "dev": "rollup -c -w",
+      "start": "sirv public --no-clear --port 9023"
+    },
+    "devDependencies": {
+      "@beyonk/svelte-carousel": "^2.9.0",
+      "@rollup/plugin-commonjs": "^17.0.0",
+      "@rollup/plugin-node-resolve": "^11.0.0",
+      "@rollup/plugin-replace": "^4.0.0",
+      "@types/siema": "^1.4.8",
+      "rollup": "^2.3.4",
+      "rollup-plugin-css-only": "^3.1.0",
+      "rollup-plugin-livereload": "^2.0.0",
+      "rollup-plugin-svelte": "^7.0.0",
+      "rollup-plugin-terser": "^7.0.0",
+      "svelte": "^3.0.0",
+      "svelte-feather-icons": "^4.0.0",
+      "svelte-scrollto": "^0.2.0"
+    },
+    "dependencies": {
+      "@fortawesome/free-brands-svg-icons": "^6.1.1",
+      "@fortawesome/free-solid-svg-icons": "^6.1.1",
+      "@snlab/florence": "^0.4.0",
+      "@splidejs/splide": "^4.0.1",
+      "@splidejs/svelte-splide": "^0.2.1",
+      "axios": "^0.26.1",
+      "canvg": "^4.0.0",
+      "carbon-components-svelte": "^0.62.3",
+      "d3": "^7.4.0",
+      "d3-svg-to-png": "^0.1.7",
+      "d3-voronoi-map": "^2.1.0",
+      "d3-voronoi-treemap": "^1.1.1",
+      "d3-weighted-voronoi": "^1.1.2",
+      "html2canvas": "^1.4.1",
+      "interactjs": "^1.10.11",
+      "moment": "^2.29.3",
+      "siema": "^1.5.1",
+      "sirv-cli": "^2.0.0",
+      "svelte-awesome": "^2.4.6",
+      "svelte-carousel": "^1.0.17-rc4",
+      "svelte-device-detector": "^0.2.2",
+      "svelte-fa": "^2.4.0",
+      "svelte-hammer": "^0.1.7",
+      "svelte-share-buttons-component": "^1.5.0",
+      "svelte-spa-router": "^3.2.0",
+      "tiny-slider": "^2.9.4"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

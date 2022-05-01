@@ -11,36 +11,13 @@
     let searchValue
 
     const fetchData = (async () => {
-    const result = await get(ihttp.URI_INFOGRAM_LIST, {size: 10});
+    const result = await get(ihttp.URI_SEARCH, {size: 10});
     return await result.data;
     })
 
     const searchData = (async () => {
-        let result1 = await get(ihttp.URI_INFOGRAM_LIST, {size: 1000});
-        let result2 = await get(ihttp.URI_INFOGRAM_LIST, {size: 1000});
-        let result3 = await get(ihttp.URI_INFOGRAM_LIST, {size: 1000});
-        result1 = result1.data.filter((data) => { //search by title
-            return data.title.toLowerCase().includes(searchValue.toLowerCase())
-        })
-        result2 = result2.data.filter((data) => { //search by article content
-            if (data.article != null) {
-                return data.article.toLowerCase().includes(searchValue.toLowerCase())
-            }
-        })
-        result3 = result3.data.filter((data) => { //search by article author name
-            return data.author.toLowerCase().includes(searchValue.toLowerCase())
-        })
-
-        let allResult = [...result1, ...result2, ...result3]
-
-        var filteredResult = allResult.reduce((unique, o) => {
-            if(!unique.some(obj => obj.id === o.id)) {
-            unique.push(o);
-            }
-            return unique;
-        },[]);
-
-        return filteredResult;
+        let searchResult = await get(ihttp.URI_SEARCH, { keywords:searchValue })
+        return searchResult.data;
     })
 
     let dataPromise = fetchData()
@@ -54,17 +31,18 @@
 </script>
 
 <svelte:head>
-    <title>Infogram - Indeks</title>
+    <title>Cari - Indeks</title>
 </svelte:head>
 
 <Head 
     bind:height
     page='indeks'
+    bind:searchValue
     />
 <article style="margin-top:{height}px">
     <h1>CARI ARTIKEL</h1>
     <form>
-        <input type="search" placeholder="Cari Artikel Infogram..." bind:value={searchValue}>
+        <input type="search" placeholder="Cari Artikel" bind:value={searchValue}>
         <button type="submit" on:click={search}>Search</button>
     </form>
     {#await dataPromise}
@@ -87,10 +65,10 @@
         <a href='/'>
             <div class="article">
                 <div class="left">
-                    <img src={`${process['env']['URL_IMAGE']}infogram/${d.thumbnail}`} alt={d.title} />
+                    <img src={`${process['env']['URL_IMAGE']}${d.type == 'jurno' ? 'article' : d.type}/${d.thumbnail}`} alt={d.title} />
                 </div>
                 <div class="credit">
-                    <p class="author">{d.author}</p>
+                    <p class="author">{d.author ? d.author : d.author_name}</p>
                     <p class="article-title">
                         {d.title}
                     </p>

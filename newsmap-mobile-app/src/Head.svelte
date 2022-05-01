@@ -9,7 +9,8 @@
 
     export let height
     export let page
-    export let burgerIn, searchIn
+    export let burgerIn, searchIn, searchValue
+
     let colorBrandWhite = "#fafafa",
 		colorBrandRed = "#ef5959",
 		colorBrandDarkBlue = "#242053",
@@ -29,6 +30,8 @@
 />
 <Search
     bind:searchIn
+    --color-brand-red = {colorBrandRed}
+    bind:searchValue
 />
 <nav>
     <div class="container" bind:clientHeight={height}>

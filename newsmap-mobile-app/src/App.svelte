@@ -117,6 +117,7 @@
 			--color-brand-red={colorBrandRed}
 			--color-brand-blue={colorBrandBlue}
 			showHeader = { y < 50}
+			page = 'indeks'
 		/>
 
 		<!-- <LabelNewsmap

@@ -34,6 +34,7 @@ export const URI_NEWS_ONTOLOGY = 'news/ontology';
 export const URI_NEWS_TOP_MEDIA = 'news/top-media';
 export const URI_NEWS_TOP_ENTITY = 'news/top-entity';
 export const URI_NEWS_LAST_TOPIC_STAT = 'news/last-topic-stat';
+export const URI_NEWS_STATEMENT_LIST = 'news/statement-list';
 
 // entity
 export const URI_ENTITY_PROFILE = 'entity/profile';
@@ -59,4 +60,7 @@ export const URI_NEWS_COMMENT_TOTAL = 'news/comment-total';
 
 // sitemap
 export const URI_SITEMAP = 'sitemap';
+
+// search
+export const URI_SEARCH = 'search';
 
