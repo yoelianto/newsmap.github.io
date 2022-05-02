@@ -6,16 +6,17 @@
     import { createEventDispatcher } from 'svelte';
     import PieChart from "./PieChart.svelte";
     import Fa from 'svelte-fa'
-    import { faSpinner } from '@fortawesome/free-solid-svg-icons'
+    import { faSpinner, faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons'
     import moment from "moment";
     import { onMount } from 'svelte';
     import Siema from 'siema'
 
     let width
 
-    let slider, prev, next
+    let slider, radioSlider
+    let select = 0;
 
-    onMount(() => {
+    const siema = (node, options) => {
         slider = new Siema({
                 selector: '.siema',
                 duration: 200,
@@ -28,25 +29,21 @@
                 loop: true,
                 rtl: false,
                 onInit: () => {},
-                onChange: () => {},
-            }); //end Siema constructor
-            
-            prev = () => {
-                slider.prev()
-            }
-            
-            next = () => {
-                slider.next()
-            }
-	}) //end onMount
+                onChange: () => {select = slider.currentSlide},
+        }); //end Siema constructor
+    }
 
-    const options = {
-        arrows: true,
-        pagination: false,
-        autoWidth: true,
-        rewind: false,
-        gap: 10
-        };
+    const prev = () => {
+		if (!slider) return;
+		slider.prev()
+		select = slider.currentSlide;
+	}
+
+	const next = () => {
+		if (!slider) return;
+		slider.next()
+		select = slider.currentSlide;
+	}
 
 
     let today = moment().format("YYYY-MM-DD")
@@ -281,7 +278,7 @@
             <section>
                 <h3>Statement List</h3>
                 <div class="inner-section">
-                    <div class="siema">
+                    <div class="siema" style='width:90%' use:siema>
                         {#each data[0]['statement'].slice(0,4) as d}
                         <a href={d.sourceUrl} >
                             <div class="statement">
@@ -296,12 +293,25 @@
                         {/each}
                     </div>
                 </div>
-                <button class='statement stm-prev' on:click={prev}>
-                    prev
-                </button>
-                <button class='statement stm-next' on:click={next}>
-                    next
-                </button>
+                <div class='bullet'>
+                    {#each data[0]['statement'].slice(0,4) as d, i}
+                        <input 
+                            bind:this={radioSlider}
+                            type="radio" 
+                            id={i} name="slider-radio" 
+                            value={i}
+                            checked = { select == i }
+                            on:click= {() => {slider.goTo(i); select = slider.currentSlide;}}
+                        >
+                    {/each}
+                    <button class='stm-btn stm-prev' on:click={prev}>
+                        <Fa icon={faAngleLeft}/>
+                    </button>
+                    <button class='stm-btn stm-next' on:click={next}>
+                        <Fa icon={faAngleRight}/>
+                    </button>
+                </div>
+                    
             </section>
             
             {:catch error}
@@ -319,6 +329,30 @@
 </article>
 
 <style>
+    .bullet {
+		width:100%;
+		display:flex;
+		justify-content:center;
+	}
+	input {
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		appearance: none;
+
+		border-radius: 50%;
+		width: 8px;
+		height: 8px;
+		
+		background-color:lightgrey;
+		transition: 0.2s all linear;
+		margin-right: 5px;
+
+		position: relative;
+		top: 4px;
+	}
+	input:checked {
+		background-color:grey;
+	}
     .news-container {
         display: flex;
         flex-direction: column;
@@ -329,6 +363,22 @@
         margin-right:1rem;
         white-space: normal;
         width:90%;
+    }
+    .stm-btn {
+        position: absolute;
+        background-color: hsl(0,0%,50%);
+        color: white;
+        width:1rem;
+        height:1rem;
+        padding: 0;
+        font-size: 0.5rem;
+        border-radius: 50%;
+    }
+    .stm-prev {
+        left:10%;
+    }
+    .stm-next {
+        right:10%;
     }
     .news-tab {
         width:100%;
@@ -351,9 +401,6 @@
         font-weight: 500;
         margin-bottom: 0.8rem;
         color:black;
-    }
-    .topic {
-        justify-content: center;
     }
     .person {
         display: flex;
