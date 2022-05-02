@@ -401,6 +401,11 @@
         font-weight: 500;
         margin-bottom: 0.8rem;
         color:black;
+        text-overflow: ellipsis;
+        display: -webkit-box !important;
+        -webkit-line-clamp: 6;
+        -webkit-box-orient: vertical;
+        white-space: normal;
     }
     .person {
         display: flex;
