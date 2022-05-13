@@ -67,19 +67,30 @@
     {:catch error}
         <p>An error occurred!</p>
     {/await}
-    <p class="deduktif">DEDUKTIF</p>
+    <div class="deduktif">
+        <h2>EXCLUSIVE PARTNER</h2>
+        <h1>DEDUKTIF</h1>
+    </div>
 </div>
 
 
 <style>
     .deduktif {
         font-family: var(--fontfamily1);
-        font-weight:700;
-        font-size:1.5rem;
         margin-left: 6%;
         margin-top: 1rem;
         margin-bottom:30vw;
         color: var(--color-brand-darkblue);
+    }
+    .deduktif > h2 {
+        font-weight:500;
+        font-size:0.8rem;
+        margin-bottom:0;
+    }
+    .deduktif > h1{
+        font-weight:700;
+        font-size:1.5rem;
+        margin-top:0;
     }
     .container {
         display: flex;
@@ -187,8 +198,11 @@
 	@media only screen /*small*/
 	and (min-width: 576px)
 	and (max-width: 767px) {
-        .deduktif {
-            font-size:2rem
+        .deduktif > h2 {
+            font-size:1rem;
+        }
+        .deduktif > h1{
+            font-size:2rem;
         }
         .container {
             max-width:900px;
@@ -200,8 +214,11 @@
 	@media only screen /*medium*/
 	and (min-width: 768px)
 	and (max-width: 991px) {
-        .deduktif {
-            font-size:2rem
+        .deduktif > h2 {
+            font-size:1rem;
+        }
+        .deduktif > h1{
+            font-size:2rem;
         }
         .container {
             max-width:900px;
@@ -213,8 +230,11 @@
 	@media only screen /*large*/
 	and (min-width: 992px)
 	and (max-width: 1199px) {
-        .deduktif {
-            font-size:2rem
+        .deduktif > h2 {
+            font-size:1rem;
+        }
+        .deduktif > h1{
+            font-size:2rem;
         }
         .container {
             max-width:800px;
@@ -225,9 +245,13 @@
 	}
 	@media only screen /*xtralarge*/
 	and (min-width: 1200px) {
-        .deduktif {
+        .deduktif > h2 {
+            font-size:1rem;
+            margin-left: 0;
+        }
+        .deduktif > h1{
             font-size:2rem;
-            margin-left:0;
+            margin-left: 0;
             line-height: 2rem;
         }
         .container {

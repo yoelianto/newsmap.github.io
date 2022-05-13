@@ -88,7 +88,7 @@
 
                 event.target.setAttribute('data-dragging', false)
 
-                if (moved > 150) {
+                if (moved > 70) {
                     event.target.setAttribute('data-status', 'transition')
                     if (position.x > 0) { // move right
                         position.x = width * 1.5
