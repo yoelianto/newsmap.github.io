@@ -12,7 +12,7 @@
   const type = 'deduktif';
 
   const fetchData = (async () => {
-    const result = await get(ihttp.URI_ARTICLE_DETAIL, { slug });
+    const result = await get(`${ihttp.URI_ARTICLE_DETAIL}/${slug}`);
     return await result;
   });
 
@@ -48,6 +48,11 @@
       ...data,
       type,
       thumbnail: process["env"]["URL_IMAGE"] + type + "/" + data.thumbnail,
+      footer: {
+          uri: ihttp.URI_DEDUKTIF_LIST,
+          params: { except: data.id, size: 3 },
+          thumbnailFolder: "news",
+      }
     }}
   />
   

@@ -13,7 +13,7 @@
 
 </script>
 
-<nav style='right:{ searchIn ? '0px' : '-100vh'}'>
+<nav style='right:{ searchIn ? '0px' : '-100vw'}'>
     <section>
         <form action='/#/search?keywords={searchValue}'>
             <input type="search" placeholder="Cari Artikel..." bind:value ={searchValue}>

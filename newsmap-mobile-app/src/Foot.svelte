@@ -1,22 +1,7 @@
 <script>
 
-    let data = [{
-        title: 'Lorem Ipsum',
-        source_url: '',
-        origin_images:'./images/1__0iFAE8-sgh2ycQHD90BfQ.png',
-        author:'Ann Putri'
-        },{
-        title: 'Lorem Ipsum Dolor',
-        source_url: '',
-        origin_images:'./images/1_86BC3VqISaNyv2sd3pY6PA.png',
-        author:'Ahsan Ridhoi'
-        },{
-        title: 'Sit Amet',
-        source_url: '',
-        origin_images:'./images/1_bxLV9w6DAzlVJW7GxKq4Hg.png',
-        author:'Ann Putri'
-        },
-        ]
+    export let data = {}
+    console.log('footer', data)
 
     import { get } from "./api";
     import { link } from "svelte-spa-router";
@@ -26,10 +11,13 @@
     export let type = null;
     export let thumbnailFolder = "";
 
+    console.log(type)
+
     const fetchData = (async () => {
         const result = await get(uri, params);
+        console.log(result)
         return await result.data;
-    })();
+    });
 
 </script>
 
@@ -37,21 +25,21 @@
     <div class="container">
         <p class="title">Artikel Lainnya</p>
         <div class="slider-container">
-                <!-- {#await fetchData}
+                {#await fetchData()}
                 <p>...waiting</p>
-                {:then data} -->
+                {:then data}
                     {#each data as d}
                     <a href={`/${type}/${d.slug}`} class='newspart' use:link>
                         <div class="news">
                             <div class="images">
-                                <!-- src={`${process["env"]["URL_IMAGE"]}${thumbnailFolder}/${d.thumbnail}`} -->
+                                <!--  -->
                                 <img class='imgthumb'
-                                src={d.origin_images}
+                                src={`${process["env"]["URL_IMAGE"]}${thumbnailFolder}/${d.thumbnail}`}
                                 title={d.title} alt={d.title}
                                 onError={(e) => {e.target.onerror = null;e.target.src = process["env"]["NO_IMAGE"];}} />
                             </div>
                             <div class="credit">
-                                <p class="author">{d.author}</p> <!-- harusnya {d.author_name}-->
+                                <p class="author">{d.author_name}</p> <!-- harusnya {d.author_name}-->
                                 <p class="article-title">
                                     {d.title}
                                 </p>
@@ -59,9 +47,9 @@
                         </div>
                     </a>
                     {/each}
-                <!-- {:catch error}
+                {:catch error}
                     <p>An error occurred!</p>
-                {/await} -->
+                {/await}
         </div>
     </div>
 </nav>

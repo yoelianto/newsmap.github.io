@@ -34,9 +34,9 @@
 </svelte:head>
 
 {#if data.is_custom_html}
-    <!-- {#if data.footer !== undefined}
+    {#if data.footer !== undefined}
         <Foot {...data.footer} type={data.type} />
-    {/if} -->
+    {/if}
 {:else}
     <main class="content-section">
         <div class="container">
@@ -86,10 +86,9 @@
                         </div> 
                     </section>
                     
-                    <!-- {#if data.footer !== undefined}
-                    <Foot {...data.footer} type={data.type} />
-                    {/if} -->
-                    <Foot />
+                    {#if data.footer !== undefined}
+                        <Foot {...data.footer} type={data.type} />
+                    {/if}
                 </article>
                                       
             {/if}
