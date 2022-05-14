@@ -48,7 +48,7 @@
             footer: {
                 uri: ihttp.URI_ARTICLE_LIST,
                 params: { except: data.id, size: 3 },
-                thumbnailFolder: "news",
+                thumbnailFolder: "article",
             },
             thumbnail: process["env"]["URL_IMAGE"] + type + "/" + data.thumbnail,
         }}
