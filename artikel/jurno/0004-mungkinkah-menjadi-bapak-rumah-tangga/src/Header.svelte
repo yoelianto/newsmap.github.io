@@ -33,9 +33,11 @@
                 <div class="author">Oleh <strong>{ author }</strong></div>
                 <div class="tanggal">{ date }</div>
             </aside>
+            {#if subhead}
             {#each subhead as sub}
                     <div class="subhead">{@html sub}</div>
             {/each}
+            {/if}
         </div>
     </section>
 {/if}
@@ -77,10 +79,12 @@
     }
     .title {
         font-weight: 700;
-        font-size: 3.1rem;
+        font-size: 4rem;
         margin: 0 auto 3rem auto;
-        font-family: 'Fondamento', cursive;
-        letter-spacing: 0.1em;
+        font-family: 'Koulen', sans-serif;
+        letter-spacing: 0;
+        line-height: 2rem;
+        white-space: normal;
     }
     .subtitle {
         margin: -1rem auto 3rem auto;
@@ -90,7 +94,7 @@
     }
     .subhead {
         font-weight: 300;
-        margin: 0 auto 1.2rem auto;
+        margin: 0 auto 0 auto;
         max-width: 700px;
         line-height: 1.8rem;
         font-family: 'Roboto Mono', monospace;
@@ -108,15 +112,16 @@
 
     @media only screen and (max-width:420px) {
         .title {
-            font-size:2rem;
-            margin: 0 auto 0.5rem auto;
+            font-size:3rem;
+            margin: 0 auto 0rem auto;
+            line-height: 2.5rem;
         }
         .subtitle {
             font-size: 1.4rem;
-            margin: 0 auto 1rem auto;
+            margin: 0 auto 0rem auto;
         }
         .subhead {
-            margin-top: 1.5rem;
+            margin-top: 0rem;
             line-height: 1.5rem;
             
         }
@@ -125,7 +130,7 @@
             height:100vw;
         } */
         .title-section {
-            margin: 1rem auto 2rem auto;
+            margin: 1rem auto 0rem auto;
         }
     }
 

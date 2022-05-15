@@ -9,12 +9,14 @@
             <div class="title-section">
                 <div class="title">{ title }</div>
                 <div class="subtitle">{ subtitle }</div>
+                {#if subhead}
                 {#each subhead as sub}
                     <div class="subhead">
                         <p>{@html sub}</p>
                     </div>
                     <br>
                 {/each}
+                {/if}
                 <aside class="credit">
                     <div class="author">Oleh <strong>{ author }</strong></div>
                     <div class="tanggal">{ date }</div>
@@ -35,9 +37,11 @@
                 <div class="author">Oleh <strong>{ author }</strong></div>
                 <div class="tanggal">{ date }</div>
             </aside>
+            {#if subhead}
             {#each subhead as sub}
                     <div class="subhead">{@html sub}</div>
             {/each}
+            {/if}
         </div>
     </section>
 {/if}
@@ -83,6 +87,7 @@
         margin: 3rem auto 1rem auto;
         font-family: 'Koulen', cursive;
         letter-spacing: 0.1em;
+        white-space: normal;
     }
     .subtitle {
         margin: -1rem auto 3rem auto;
@@ -114,6 +119,7 @@
             font-size:3rem;
             margin: 0 auto 0 auto;
             line-height: 2.75rem;
+            white-space: normal;
         }
         .subtitle {
             font-size: 1.4rem;

@@ -16,8 +16,8 @@ body {
 }
 
 a {
-	color: rgb(0,100,200);
-	text-decoration: none;
+	color: hsl(210, 100%, 39%);
+	text-decoration: underline;
 }
 
 a:hover {

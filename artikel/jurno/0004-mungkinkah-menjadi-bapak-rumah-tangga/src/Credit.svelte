@@ -8,7 +8,9 @@
     <div class="section-bar"></div>
     {#each credit as person}
         <div class="profile" id="p1">
-            <div class="profpic"></div>
+            <div class="profpic">
+                <img src="./images/{person.name}.png" alt={person.name}>
+            </div>
             <div class="profname">
                 <div class="role">{ person.role }</div>
                 <div class="name">{ person.name}</div>
@@ -18,11 +20,17 @@
     {/each} 
     
     <br>
+    {#if source}
     Sumber: { source }<br>
+    {/if}
 
 </section>
 
 <style>
+img {
+    width:100%;
+    border-radius: 50%;
+}
 section {
     color: var(--font-color);
     font-size: 1rem;
@@ -61,7 +69,7 @@ section {
 }
 
 .profile-bar {
-    background-color: rgb(200,200,200);
+    background-color: #ef6771;
     width:100%;
     height:2px;
     max-width: 650px;
@@ -69,7 +77,7 @@ section {
 }
 
 .section-bar {
-    background-color: rgb(200,200,200);
+    background-color: #ef6771;
     width:100%;
     height:4px;
     max-width: 650px;

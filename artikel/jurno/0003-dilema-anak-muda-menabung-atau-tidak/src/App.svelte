@@ -6,6 +6,7 @@
 	import Image from './Image.svelte';
 	import Credit from './Credit.svelte';
 	import Foot from './Foot.svelte';
+	import Tabungan from './Tabungan.svelte';
 
 	import { Parallax, ParallaxLayer } from 'svelte-parallax'
 
@@ -13,7 +14,7 @@
 	let fontfamily1 = "Roboto Mono"
 
 	//Main Color
-	let fontColor = 'hsl(207, 100%, 69%)'
+	let fontColor = 'hsl(207, 100%, 25%)'
 
 	//Secondary Dark Color
 	let colorBrandDarkBlue = "#242053"
@@ -35,14 +36,24 @@
 
 	let height
 
-	let subhead = ['Sejak kecil kita sudah dididik untuk menabung. Namun, peribahasa “hemat pangkal kaya” nampaknya tak lagi relevan.',
-	]
-
 	let credit =[{
 		role : 'Penulis',
 		name : 'Ann Putri'
 		}]
 	let source = 'Sed nec pellentesque massa. Vestibulum eu sem ut dolor placerat ultricies at sit amet massa'
+
+	let left;
+	let percentScrolled;
+	let sectionNum;
+
+	const handleProgress = (progress) => {
+		const { parallaxProgress, section, sectionProgress } = progress;
+		sectionNum = section
+		if (section === 1) {
+		left = sectionProgress * 100
+		}
+		percentScrolled = Math.floor(parallaxProgress * 100);
+	};
 
 </script>
 
@@ -74,8 +85,6 @@
 		title='Dilema Anak Muda'
 		subtitle='Menabung atau Tidak?'
 
-		subhead={subhead}
-
 		author='Ann Putri'
 		date='12 Mei 2022'
 	/>
@@ -83,475 +92,308 @@
 	<div class="divider"></div>
 
 	<Paragraph
-		--font-color ='#f9f9e1'
+		--font-color ={fontColor}
 		para={[
-		'Sejak kecil kita sudah dididik untuk menabung. Namun, peribahasa “hemat pangkal kaya” nampaknya tak lagi relevan.'
+		'Sejak kecil kita sudah dididik untuk menabung. Namun, peribahasa “hemat pangkal kaya” nampaknya tak lagi relevan.',
+		"Generasi milenial dan Z dari berbagai negara mengaku kesulitan menabung. Anak muda Korea Selatan bahkan <a href='https://foreignpolicy.com/2019/07/04/why-young-koreans-love-to-splurge-shibal-biyong-millennial-fuck-it-expense/'>lebih memilih foya-foya</a> ketimbang menabung."
 		]}
 	/>
 
-	<Scroller
-		{top}
-		{threshold}
-		{bottom}
-		bind:count
-		bind:index
-		bind:offset
-		bind:progress
-	>
-		<div slot="background">
-			<div id="g-Bisa-Ular-box" class="ai2html">
+	<Parallax sections={3} config={{stiffness: 1, damping: 1}} onProgress={handleProgress}>
+		<!-- SECTION 1-->
+		<ParallaxLayer offset={0.6} rate={0}
+			style='display: flex;z-index:2'
+			>
+			<p class='paralaxtext'>Lebih dari setengah milenial belanja online setidaknya sekali dalam sebulan <em><a style='color:hsl(210, 100%, 60%)' href='https://www.ipsos.com/sites/default/files/ct/publication/documents/2018-11/18-056896-01_-_e-commerce_syndicated_-_final_report_-_v2.pdf'>(IPSOS 2018)</a></em></p>
+		</ParallaxLayer>
+		<ParallaxLayer offset={0.3} rate={1}
+			style=
+				'transform: translate({left}vw,{left * 1}vh);
+				top:30vh;
+				left:40vw;'>
+			<img id='imgparalaxleft'
+				class='imgparalax'
+				src="./images/orang-menabung-kiri-01.png"
+				alt=""
+			>
+		</ParallaxLayer>
+		<ParallaxLayer offset={0.3} rate={-1}
+			style=
+				'transform: translate({left*0.15}vw,{left * 1}vh);
+				top:30vh;
+				left:6vw;'
+			>
+			<img id='imgparalaxright'
+				class='imgparalax'
+				src="./images/orang-menabung-kanan-01.png"
+				alt=""
+				>
+		</ParallaxLayer>
 
-			{#if index == 0}
-				<!-- Halaman 1 -->
-				<!-- Artboard: smallplus-1 -->
-				<div id="g-Bisa-Ular-smallplus-1" class="g-artboard" style="max-width: 509px;max-height: 1113px" data-aspect-ratio="0.457" data-min-width="0" data-max-width="509"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 218.75% 0;"></div>
-				<img id="g-Bisa-Ular-smallplus-1-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-smallplus-1.png"/>
-				</div>
-
-				<!-- Artboard: submedium-1 -->
-				<div id="g-Bisa-Ular-submedium-1" class="g-artboard" style="min-width: 510px;max-width: 689px;max-height: 1081px" data-aspect-ratio="0.638" data-min-width="510" data-max-width="689"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 156.8627% 0;"></div>
-				<img id="g-Bisa-Ular-submedium-1-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-submedium-1.png"/>
-				</div>
-
-				<!-- Artboard: medium-1 -->
-				<div id="g-Bisa-Ular-medium-1" class="g-artboard" style="min-width: 690px;max-width: 919px;max-height: 1364px" data-aspect-ratio="0.674" data-min-width="690" data-max-width="919"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 148.4058% 0;"></div>
-				<img id="g-Bisa-Ular-medium-1-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-medium-1.png"/>
-				</div>
-
-				<!-- Artboard: large-1 -->
-				<div id="g-Bisa-Ular-large-1" class="g-artboard" style="min-width: 920px;max-width: 1399px;max-height: 1399px" data-aspect-ratio="1" data-min-width="920" data-max-width="1399"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 100% 0;"></div>
-				<img id="g-Bisa-Ular-large-1-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-large-1.png"/>
-				</div>
-
-				<!-- Artboard: xlarge-1 -->
-				<div id="g-Bisa-Ular-xlarge-1" class="g-artboard" style="min-width: 1400px;" data-aspect-ratio="1.778" data-min-width="1400"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 56.25% 0;"></div>
-				<img id="g-Bisa-Ular-xlarge-1-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-xlarge-1.png"/>
-				</div>
-
-
-			{:else if index == 1}
-				<!-- Halaman 2 -->
-				<!-- Artboard: smallplus-2 -->
-				<div id="g-Bisa-Ular-smallplus-2" class="g-artboard" style="max-width: 509px;max-height: 1113px" data-aspect-ratio="0.457" data-min-width="0" data-max-width="509"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 218.75% 0;"></div>
-				<img id="g-Bisa-Ular-smallplus-2-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-smallplus-2.png"/>
-				</div>
-
-				<!-- Artboard: submedium-2 -->
-				<div id="g-Bisa-Ular-submedium-2" class="g-artboard" style="min-width: 510px;max-width: 689px;max-height: 1081px" data-aspect-ratio="0.638" data-min-width="510" data-max-width="689"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 156.8627% 0;"></div>
-				<img id="g-Bisa-Ular-submedium-2-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-submedium-2.png"/>
-				</div>
-
-				<!-- Artboard: medium-2 -->
-				<div id="g-Bisa-Ular-medium-2" class="g-artboard" style="min-width: 690px;max-width: 919px;max-height: 1364px" data-aspect-ratio="0.674" data-min-width="690" data-max-width="919"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 148.4058% 0;"></div>
-				<img id="g-Bisa-Ular-medium-2-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-medium-2.png"/>
-				</div>
-
-				<!-- Artboard: large-2 -->
-				<div id="g-Bisa-Ular-large-2" class="g-artboard" style="min-width: 920px;max-width: 1399px;max-height: 1399px" data-aspect-ratio="1" data-min-width="920" data-max-width="1399"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 100% 0;"></div>
-				<img id="g-Bisa-Ular-large-2-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-large-2.png"/>
-				</div>
-
-				<!-- Artboard: xlarge-2 -->
-				<div id="g-Bisa-Ular-xlarge-2" class="g-artboard" style="min-width: 1400px;" data-aspect-ratio="1.778" data-min-width="1400"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 56.25% 0;"></div>
-				<img id="g-Bisa-Ular-xlarge-2-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-xlarge-2.png"/>
-				</div>
-
-
-			{:else if index == 2}
-				<!-- Halaman 3 -->
-				<!-- Artboard: smallplus-3 -->
-				<div id="g-Bisa-Ular-smallplus-3" class="g-artboard" style="max-width: 509px;max-height: 1113px" data-aspect-ratio="0.457" data-min-width="0" data-max-width="509"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 218.75% 0;"></div>
-				<img id="g-Bisa-Ular-smallplus-3-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-smallplus-3.png"/>
-				</div>
-
-				<!-- Artboard: submedium-3 -->
-				<div id="g-Bisa-Ular-submedium-3" class="g-artboard" style="min-width: 510px;max-width: 689px;max-height: 1081px" data-aspect-ratio="0.638" data-min-width="510" data-max-width="689"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 156.8627% 0;"></div>
-				<img id="g-Bisa-Ular-submedium-3-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-submedium-3.png"/>
-				</div>
-
-				<!-- Artboard: medium-3 -->
-				<div id="g-Bisa-Ular-medium-3" class="g-artboard" style="min-width: 690px;max-width: 919px;max-height: 1364px" data-aspect-ratio="0.674" data-min-width="690" data-max-width="919"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 148.4058% 0;"></div>
-				<img id="g-Bisa-Ular-medium-3-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-medium-3.png"/>
-				</div>
-
-				<!-- Artboard: large-3 -->
-				<div id="g-Bisa-Ular-large-3" class="g-artboard" style="min-width: 920px;max-width: 1399px;max-height: 1399px" data-aspect-ratio="1" data-min-width="920" data-max-width="1399"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 100% 0;"></div>
-				<img id="g-Bisa-Ular-large-3-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-large-3.png"/>
-				</div>
-
-				<!-- Artboard: xlarge-3 -->
-				<div id="g-Bisa-Ular-xlarge-3" class="g-artboard" style="min-width: 1400px;" data-aspect-ratio="1.778" data-min-width="1400"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 56.25% 0;"></div>
-				<img id="g-Bisa-Ular-xlarge-3-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-xlarge-3.png"/>
-				</div>
-
-
-			{:else if index == 3}
-				<!-- Halaman 4 -->
-				<!-- Artboard: smallplus-4 -->
-				<div id="g-Bisa-Ular-smallplus-4" class="g-artboard" style="max-width: 509px;max-height: 1113px" data-aspect-ratio="0.457" data-min-width="0" data-max-width="509"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 218.75% 0;"></div>
-				<img id="g-Bisa-Ular-smallplus-4-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-smallplus-4.png"/>
-				</div>
-
-				<!-- Artboard: submedium-4 -->
-				<div id="g-Bisa-Ular-submedium-4" class="g-artboard" style="min-width: 510px;max-width: 689px;max-height: 1081px" data-aspect-ratio="0.638" data-min-width="510" data-max-width="689"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 156.8627% 0;"></div>
-				<img id="g-Bisa-Ular-submedium-4-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-submedium-4.png"/>
-				</div>
-
-				<!-- Artboard: medium-4 -->
-				<div id="g-Bisa-Ular-medium-4" class="g-artboard" style="min-width: 690px;max-width: 919px;max-height: 1364px" data-aspect-ratio="0.674" data-min-width="690" data-max-width="919"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 148.4058% 0;"></div>
-				<img id="g-Bisa-Ular-medium-4-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-medium-4.png"/>
-				</div>
-
-				<!-- Artboard: large-4 -->
-				<div id="g-Bisa-Ular-large-4" class="g-artboard" style="min-width: 920px;max-width: 1399px;max-height: 1399px" data-aspect-ratio="1" data-min-width="920" data-max-width="1399"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 100% 0;"></div>
-				<img id="g-Bisa-Ular-large-4-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-large-4.png"/>
-				</div>
-
-				<!-- Artboard: xlarge-4 -->
-				<div id="g-Bisa-Ular-xlarge-4" class="g-artboard" style="min-width: 1400px;" data-aspect-ratio="1.778" data-min-width="1400"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 56.25% 0;"></div>
-				<img id="g-Bisa-Ular-xlarge-4-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-xlarge-4.png"/>
-				</div>
+		<!-- SECTION 1-->
+		<ParallaxLayer offset={2.6} rate={0}
+			style='display: flex;z-index:2'
+			>
 			
-			{:else if index == 4}
-				<!-- Halaman 5 -->
-				<!-- Artboard: smallplus-5 -->
-				<div id="g-Bisa-Ular-smallplus-5" class="g-artboard" style="max-width: 509px;max-height: 1113px" data-aspect-ratio="0.457" data-min-width="0" data-max-width="509"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 218.75% 0;"></div>
-				<img id="g-Bisa-Ular-smallplus-5-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-smallplus-5.png"/>
-				</div>
-
-				<!-- Artboard: submedium-5 -->
-				<div id="g-Bisa-Ular-submedium-5" class="g-artboard" style="min-width: 510px;max-width: 689px;max-height: 1081px" data-aspect-ratio="0.638" data-min-width="510" data-max-width="689"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 156.8627% 0;"></div>
-				<img id="g-Bisa-Ular-submedium-5-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-submedium-5.png"/>
-				</div>
-
-				<!-- Artboard: medium-5 -->
-				<div id="g-Bisa-Ular-medium-5" class="g-artboard" style="min-width: 690px;max-width: 919px;max-height: 1364px" data-aspect-ratio="0.674" data-min-width="690" data-max-width="919"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 148.4058% 0;"></div>
-				<img id="g-Bisa-Ular-medium-5-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-medium-5.png"/>
-				</div>
-
-				<!-- Artboard: large-5 -->
-				<div id="g-Bisa-Ular-large-5" class="g-artboard" style="min-width: 920px;max-width: 1399px;max-height: 1399px" data-aspect-ratio="1" data-min-width="920" data-max-width="1399"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 100% 0;"></div>
-				<img id="g-Bisa-Ular-large-5-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-large-5.png"/>
-				</div>
-
-				<!-- Artboard: xlarge-5 -->
-				<div id="g-Bisa-Ular-xlarge-5" class="g-artboard" style="min-width: 1400px;" data-aspect-ratio="1.778" data-min-width="1400"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 56.25% 0;"></div>
-				<img id="g-Bisa-Ular-xlarge-5-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-xlarge-5.png"/>
-				</div>
-
+			<p class="paralaxtext">
+				... dan hanya <strong>10,7%</strong> yang digunakan untuk menabung <em><a style='color:hsl(210, 100%, 60%)' href='https://cdn.idntimes.com/content-documents/indonesia-millennial-report-2019-by-idn-times.pdf'>(Indonesia Millenial Report 2019)</a></em>
+			</p>
+		</ParallaxLayer>
+		<ParallaxLayer offset={2} rate={0}
+			style='display: flex;z-index:2'
+			>
 			
-			{:else if index == 5}
-				<!-- Halaman 6 -->
-				<!-- Artboard: smallplus-6 -->
-				<div id="g-Bisa-Ular-smallplus-6" class="g-artboard" style="max-width: 509px;max-height: 1113px" data-aspect-ratio="0.457" data-min-width="0" data-max-width="509"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 218.75% 0;"></div>
-				<img id="g-Bisa-Ular-smallplus-6-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-smallplus-6.png"/>
-				</div>
-
-				<!-- Artboard: submedium-6 -->
-				<div id="g-Bisa-Ular-submedium-6" class="g-artboard" style="min-width: 510px;max-width: 689px;max-height: 1081px" data-aspect-ratio="0.638" data-min-width="510" data-max-width="689"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 156.8627% 0;"></div>
-				<img id="g-Bisa-Ular-submedium-6-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-submedium-6.png"/>
-				</div>
-
-				<!-- Artboard: medium-6 -->
-				<div id="g-Bisa-Ular-medium-6" class="g-artboard" style="min-width: 690px;max-width: 919px;max-height: 1364px" data-aspect-ratio="0.674" data-min-width="690" data-max-width="919"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 148.4058% 0;"></div>
-				<img id="g-Bisa-Ular-medium-6-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-medium-6.png"/>
-				</div>
-
-				<!-- Artboard: large-6 -->
-				<div id="g-Bisa-Ular-large-6" class="g-artboard" style="min-width: 920px;max-width: 1399px;max-height: 1399px" data-aspect-ratio="1" data-min-width="920" data-max-width="1399"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 100% 0;"></div>
-				<img id="g-Bisa-Ular-large-6-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-large-6.png"/>
-				</div>
-
-				<!-- Artboard: xlarge-6 -->
-				<div id="g-Bisa-Ular-xlarge-6" class="g-artboard" style="min-width: 1400px;" data-aspect-ratio="1.778" data-min-width="1400"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 56.25% 0;"></div>
-				<img id="g-Bisa-Ular-xlarge-6-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-xlarge-6.png"/>
-				</div>
-			{:else if index == 6}
-				<!-- Halaman 7 -->
-				<!-- Artboard: smallplus-7 -->
-				<div id="g-Bisa-Ular-smallplus-7" class="g-artboard" style="max-width: 509px;max-height: 1113px" data-aspect-ratio="0.457" data-min-width="0" data-max-width="509"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 218.75% 0;"></div>
-				<img id="g-Bisa-Ular-smallplus-7-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-smallplus-7.png"/>
-				</div>
-
-				<!-- Artboard: submedium-7 -->
-				<div id="g-Bisa-Ular-submedium-7" class="g-artboard" style="min-width: 510px;max-width: 689px;max-height: 1081px" data-aspect-ratio="0.638" data-min-width="510" data-max-width="689"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 156.8627% 0;"></div>
-				<img id="g-Bisa-Ular-submedium-7-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-submedium-7.png"/>
-				</div>
-
-				<!-- Artboard: medium-7 -->
-				<div id="g-Bisa-Ular-medium-7" class="g-artboard" style="min-width: 690px;max-width: 919px;max-height: 1364px" data-aspect-ratio="0.674" data-min-width="690" data-max-width="919"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 148.4058% 0;"></div>
-				<img id="g-Bisa-Ular-medium-7-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-medium-7.png"/>
-				</div>
-
-				<!-- Artboard: large-7 -->
-				<div id="g-Bisa-Ular-large-7" class="g-artboard" style="min-width: 920px;max-width: 1399px;max-height: 1399px" data-aspect-ratio="1" data-min-width="920" data-max-width="1399"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 100% 0;"></div>
-				<img id="g-Bisa-Ular-large-7-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-large-7.png"/>
-				</div>
-
-				<!-- Artboard: xlarge-7 -->
-				<div id="g-Bisa-Ular-xlarge-7" class="g-artboard" style="min-width: 1400px;" data-aspect-ratio="1.778" data-min-width="1400"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 56.25% 0;"></div>
-				<img id="g-Bisa-Ular-xlarge-7-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-xlarge-7.png"/>
-				</div>
-			{:else if index == 7}
-				<!-- Halaman 8 -->
-				<!-- Artboard: smallplus-8 -->
-				<div id="g-Bisa-Ular-smallplus-8" class="g-artboard" style="max-width: 509px;max-height: 1113px" data-aspect-ratio="0.457" data-min-width="0" data-max-width="509"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 218.75% 0;"></div>
-				<img id="g-Bisa-Ular-smallplus-8-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-smallplus-8.png"/>
-				</div>
-
-				<!-- Artboard: submedium-8 -->
-				<div id="g-Bisa-Ular-submedium-8" class="g-artboard" style="min-width: 510px;max-width: 689px;max-height: 1081px" data-aspect-ratio="0.638" data-min-width="510" data-max-width="689"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 156.8627% 0;"></div>
-				<img id="g-Bisa-Ular-submedium-8-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-submedium-8.png"/>
-				</div>
-
-				<!-- Artboard: medium-8 -->
-				<div id="g-Bisa-Ular-medium-8" class="g-artboard" style="min-width: 690px;max-width: 919px;max-height: 1364px" data-aspect-ratio="0.674" data-min-width="690" data-max-width="919"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 148.4058% 0;"></div>
-				<img id="g-Bisa-Ular-medium-8-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-medium-8.png"/>
-				</div>
-
-				<!-- Artboard: large-8 -->
-				<div id="g-Bisa-Ular-large-8" class="g-artboard" style="min-width: 920px;max-width: 1399px;max-height: 1399px" data-aspect-ratio="1" data-min-width="920" data-max-width="1399"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 100% 0;"></div>
-				<img id="g-Bisa-Ular-large-8-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-large-8.png"/>
-				</div>
-
-				<!-- Artboard: xlarge-8 -->
-				<div id="g-Bisa-Ular-xlarge-8" class="g-artboard" style="min-width: 1400px;" data-aspect-ratio="1.778" data-min-width="1400"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 56.25% 0;"></div>
-				<img id="g-Bisa-Ular-xlarge-8-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-xlarge-8.png"/>
-				</div>
-			{:else if index == 8}
-				<!-- Halaman 9 -->
-				<!-- Artboard: smallplus-9 -->
-				<div id="g-Bisa-Ular-smallplus-9" class="g-artboard" style="max-width: 509px;max-height: 1113px" data-aspect-ratio="0.457" data-min-width="0" data-max-width="509"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 218.75% 0;"></div>
-				<img id="g-Bisa-Ular-smallplus-9-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-smallplus-9.png"/>
-				</div>
-
-				<!-- Artboard: submedium-9 -->
-				<div id="g-Bisa-Ular-submedium-9" class="g-artboard" style="min-width: 510px;max-width: 689px;max-height: 1081px" data-aspect-ratio="0.638" data-min-width="510" data-max-width="689"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 156.8627% 0;"></div>
-				<img id="g-Bisa-Ular-submedium-9-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-submedium-9.png"/>
-				</div>
-
-				<!-- Artboard: medium-9 -->
-				<div id="g-Bisa-Ular-medium-9" class="g-artboard" style="min-width: 690px;max-width: 919px;max-height: 1364px" data-aspect-ratio="0.674" data-min-width="690" data-max-width="919"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 148.4058% 0;"></div>
-				<img id="g-Bisa-Ular-medium-9-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-medium-9.png"/>
-				</div>
-
-				<!-- Artboard: large-9 -->
-				<div id="g-Bisa-Ular-large-9" class="g-artboard" style="min-width: 920px;max-width: 1399px;max-height: 1399px" data-aspect-ratio="1" data-min-width="920" data-max-width="1399"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 100% 0;"></div>
-				<img id="g-Bisa-Ular-large-9-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-large-9.png"/>
-				</div>
-
-				<!-- Artboard: xlarge-9 -->
-				<div id="g-Bisa-Ular-xlarge-9" class="g-artboard" style="min-width: 1400px;" data-aspect-ratio="1.778" data-min-width="1400"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 56.25% 0;"></div>
-				<img id="g-Bisa-Ular-xlarge-9-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-xlarge-9.png"/>
-				</div>
-			{:else if index >= 9}
-				<!-- Halaman 10 -->
-				<!-- Artboard: smallplus-10 -->
-				<div id="g-Bisa-Ular-smallplus-10" class="g-artboard" style="max-width: 509px;max-height: 1113px" data-aspect-ratio="0.457" data-min-width="0" data-max-width="509"
-				style:opacity={offset <= 0.2 && index == 9 ? offset : 1}>
-				<div style="padding: 0 0 218.75% 0;"></div>
-				<img id="g-Bisa-Ular-smallplus-10-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-smallplus-10.png"/>
-				</div>
-
-				<!-- Artboard: submedium-10 -->
-				<div id="g-Bisa-Ular-submedium-10" class="g-artboard" style="min-width: 510px;max-width: 689px;max-height: 1081px" data-aspect-ratio="0.638" data-min-width="510" data-max-width="689"
-				style:opacity={offset <= 0.2 && index == 9 ? offset : 1}>
-				<div style="padding: 0 0 156.8627% 0;"></div>
-				<img id="g-Bisa-Ular-submedium-10-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-submedium-10.png"/>
-				</div>
-
-				<!-- Artboard: medium-10 -->
-				<div id="g-Bisa-Ular-medium-10" class="g-artboard" style="min-width: 690px;max-width: 919px;max-height: 1364px" data-aspect-ratio="0.674" data-min-width="690" data-max-width="919"
-				style:opacity={offset <= 0.2 && index == 9 ? offset : 1}>
-				<div style="padding: 0 0 148.4058% 0;"></div>
-				<img id="g-Bisa-Ular-medium-10-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-medium-10.png"/>
-				</div>
-
-				<!-- Artboard: large-10 -->
-				<div id="g-Bisa-Ular-large-10" class="g-artboard" style="min-width: 920px;max-width: 1399px;max-height: 1399px" data-aspect-ratio="1" data-min-width="920" data-max-width="1399"
-				style:opacity={offset <= 0.2 && index == 9 ? offset : 1}>
-				<div style="padding: 0 0 100% 0;"></div>
-				<img id="g-Bisa-Ular-large-10-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-large-10.png"/>
-				</div>
-
-				<!-- Artboard: xlarge-10 -->
-				<div id="g-Bisa-Ular-xlarge-10" class="g-artboard" style="min-width: 1400px;" data-aspect-ratio="1.778" data-min-width="1400"
-				style:opacity={offset <= 0.2 && index == 9 ? offset : 1}>
-				<div style="padding: 0 0 56.25% 0;"></div>
-				<img id="g-Bisa-Ular-xlarge-10-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-xlarge-10.png"/>
-				</div>
-			{/if}
-			</div>
-		</div>
-
-		<div slot="foreground" >
-			<section></section>
-			<section>
-				<p>
-					Lima hari sebelum ulang tahunnya yang ke-13, pada Januari 2020, Martinus menggembala sapi-sapi ternaknya di sebuah ladang di Kabupaten Lembata, Nusa Tenggara Timur (NTT).
-				</p>
-			</section>
-			<section>
-				<p>
-					Namun, a menginjak dan digigit seekor ular berbisa langka bernama ilmiah <em>daboia ruselli siamensis</em> . Ular ini termasuk golongan <em>viperia ruselli</em> yang hanya hidup di beberapa wilayah Indonesia Tengah, antara lain Pulau Flores, Pulau Komodo, NTT, Adonara, Ende, dan Pulau Solor.
-				</p>
-			</section>
-			<section>
-				<p>
-					Dalam hitungan jam setelah terkena gigitan, ia mengalami gagal ginjal, kegagalan pernapasan, dan pendarahan di hampir semua organ tubuhnya. Dengan kata lain, nyawanya sedang di ujung tanduk.
-				</p>
-			</section>
-			<section>
-				<p>
-					Kabar tersebut sampai kepada Tri Maharani pada 14 Januari 2020, doktor lulusan Universitas Brawijaya Malang yang menjabat sebagai Presiden Indonesia Toksinologi.
-				</p>
-			</section>
-			<section>
-				<p>
-					Dalam kondisi semacam itu, menurut Maha, pasien harus mendapatkan antivenom atau anti bisa ular yang tepat. Masalahnya, antivenom untuk daboia ruselli siamensis tak tersedia di Indonesia. Kementerian Kesehatan dan PT Bio Farma pun tak bisa menyanggupi menyediakannya untuk keperluan penyembuhan Martinus.  
-				</p>
-			</section>
-			<section>
-				<p>
-					Mujur, sekali lagi, masih berkawan dengan Martinus. Maha memiliki koneksi khusus dengan salah satu profesor yang menangani gigitan ular berbisa dari Queen Sabovana Memorial Institute Thailand.
-				</p>
-			</section>
-			<section>
-				<p>
-					Profesor tersebut menyanggupi membantu Maha mendapatkan antivenom untuk mengobati Martinus. Keesokan harinya, Maha langsung terbang ke Bangkok, Thailand dan bertemu profesor tersebut. Ia membeli 12 vial antivenom untuk ular daboia ruselli siamensis melalui perantara kenalannya itu. Harga per vialnya mencapai ratusan dollar Amerika Serikat. Semua ia beli dengan uang pribadi. 
-				</p>
-			</section>
-			<section>
-				<p>
-					Usai mendapat antivenom tersebut, Maha langsung berangkat ke Lembata. Lantaran tak ada pesawat yang langsung menuju Lembata, ia mesti transit terlebih dulu sehari di Surabaya untuk kemudian terbang menuju Kupang. Dari Kupang, ia melakukan perjalanan darat ke Lembata.
-				</p>
-			</section>
-			<section>
-				<p>
-					Maha tiba di Lembata pada hari kelima usai Martinus tergigit ular. Ia langsung menyuntikkan antivenom tersebut ke tubuh Martinus dan mengawasi langsung perkembangan kesehatannya selama lebih kurang 12 jam.
-				</p>
-			</section>
-			<section>
-				<p>
-					Tepat pukul 12 malam hari itu, saat usia Martinus resmi bertambah, kondisinya membaik. Pendarahan di organ-organ penting mulai berhenti. Ginjalnya pun membaik. Kini, ia telah sembuh dan menjalani hidup normal kembali.
-				</p>
-			</section>
-		</div>
-	</Scroller>
-
-	<div class="divider"></div>
+			<p class='paralaxtext'>
+				<strong>51,1%</strong> pendapatan habis untuk kebutuhan bulanan...
+			</p>
+		</ParallaxLayer>
+		
+		<ParallaxLayer offset={2.2} rate={0}>
+			<img style='width:100%;' src="./images/duit-menabung-01.png"
+				alt=""
+			>
+		</ParallaxLayer>
+		
+	</Parallax>
 
 	<Paragraph
-		--font-color ='#f9f9e1'
+		--font-color ={fontColor}
+		subjudul='Betulkah generasi muda enggan menabung?'
 		para={[
-		'Kelangkaan antivenom di Indonesia cukup mengkhawatirkan jika dibandingkan dengan jumlah kasus tahunan gigitan ular berbisa. Sepanjang sepuluh tahun ke belakang, berdasarkan laporan dari rumah sakit dan fasilitas Kesehatan lain, Maha mencatat sebanyak 135 ribu kasus gigitan ular di Indonesia per tahun.',
-		'Dari jumlah kasus tersebut, rasio kematian korban mencapai 10% atau lebih 13.500 orang. Angka tersebut jauh dari standar Organisasi Kesehatan Dunia (WHO) bahwa rasio kematian maksimal di suatu wilayah adalah 2%.',
-		'Data tersebut sebetulnya tak bisa menjadi gambaran utuh atas kasus gigitan ular di Indonesia. Pasalnya, tak ada catatan resmi dari pemerintah terkait persoalan kesehatan serius ini. Maka, menurut Maha, bisa jadi jumlah kasus dan kematian lebih dari angka tersebut.'
+		'Namun survei-survei di atas tidak menunjukkan seberapa penting milenial (dan juga gen Z) memandang tabungan.',
+		'Beberapa artikel malah menyudutkan generasi muda sebagai generasi yang boros, enggan menabung, dan tak mungkin punya properti.'
 		]}
 	/>
+
+	<Image
+		img = {[{
+			url:'./images/celengan-babi-01.png',
+			title:'Asal-usul gosip'
+		}]}
+	/>
+
+	<Paragraph
+		--font-color ={fontColor}
+		para={[
+		"Oleh karena itu, saya mengadakan survei super kasar <a href='https://twitter.com/kimjongann/status/1381848736553308166'>lewat polling Twitter</a>. Polling ini ditujukan untuk pengguna Twitter berusia 21-30 tahun dan tidak meliputi variabel gender, domisili, status pekerjaan, kelas ekonomi, dan pendapatan per bulan.",
+		"Karena ada jeda beberapa menit di tiap cuitan, ada disproporsi responden. Tapi tak apa lah ya, toh ini hanya gambaran yang sangat kasar."
+		]}
+	/>
+
+	<section class='poll'>
+		<div class="poll-item">
+			<p>kalian yang umurnya 21-30 tahun, punya tabungan gak? bisa dalam bentuk emergency fund, tabungan beli barang, tabungan sisaan duit gaji/bulanan, dll?</p>
+			<div class="top vote-bar" style='width:75.7%'>penting banget<span class='span-percent'><strong> 75.7%</strong></span></div>
+			<div class="vote-bar" style='width:24.3%'>penting  <span class='span-percent'><strong> 24.3%</strong></span></div>
+			<p class='vote'>255 votes - Final results</p>
+		</div>
+		<div class="poll-item">
+			<p>menurut kalian punya tabungan itu penting atau ga?</p>
+			<div class="top vote-bar" style='width:77.7%'>penting banget  <span class='span-percent'><strong> 77.7%</strong></span></div>
+			<div class="vote-bar" style='width:22.3%'>penting  <span class='span-percent'><strong> 22.3%</strong></span></div>
+			<div class="vote-bar" style='width:2%'>nggak terlalu penting  <span class='span-percent'><strong> 0%</strong></span></div>
+			<div class="vote-bar" style='width:2%'>nggak penting  <span class='span-percent'><strong> 0%</strong></span></div>
+			<p class='vote'>175 votes - Final results</p>
+		</div>
+		<div class="poll-item">
+			<p>apakah kalian rutin menabung?</p>
+			<div class="top vote-bar" style='width:57.7%'>ya, setiap bulan  <span class='span-percent'><strong> 57.7%</strong></span></div>
+			<div class="vote-bar" style='width:34.3%'>kadang kalo ada sisa  <span class='span-percent'><strong> 34.3%</strong></span></div>
+			<div class="vote-bar" style='width:8%'>tidak  <span class='span-percent'><strong>8%</strong></span></div>
+			<p class='vote'>175 votes - Final results</p>
+		</div>
+		<div class="poll-item">
+			<p>buat yg milih kadang nabung/tidak nabung, kenapa kalian enggak nabung?</p>
+			<div class="top vote-bar" style='width:50.6%'>gaji mepet  <span class='span-percent'><strong> 50.6%</strong></span></div>
+			<div class="vote-bar" style='width:32.6%'>generasi sandwich  <span class='span-percent'><strong> 32.6%</strong></span></div>
+			<div class="vote-bar" style='width:16.9%'>lainnya, tolong di-reply  <span class='span-percent'><strong> 16.9%</strong></span></div>
+			<p class='vote'>89 votes - Final results</p>
+		</div>
+	</section>
+
+	<Paragraph
+		--font-color ={fontColor}
+		subjudul='Mereka & Tabungan'
+	/>
+	
+	<Tabungan
+		data={[
+			{
+				nama:'Maria',
+				umur:'28',
+				menabung:'Iya dan tidak banyak',
+				domisili:'Belanda',
+				alasan:'Habis karena pindahan dan menganggur',
+				profesi:'Software Developer',
+				catatan:'Nanti nabung lagi setelah mendapat gaji pertama',
+				celengan:true
+			},
+			{
+				nama:'Reza',
+				umur:'24',
+				menabung:'Iya',
+				domisili:'Jakarta',
+				alasan:'Sisa dari keperluan bayar tagihan, untuk dana darurat',
+				profesi:'Pegawai pemerintahan',
+				catatan:'Uang berlebih untuk investasi di crypto',
+				celengan:true
+			},
+			{
+				nama:'Lia',
+				umur:'23',
+				menabung:'Tidak',
+				domisili:'Surabaya',
+				alasan:'Tanggungan besar',
+				profesi:'UI/UX Designer',
+				catatan:'Stress membuat hidup lebih konsumtif',
+				celengan:false
+			},
+			{
+				nama:'Bim',
+				umur:'29',
+				menabung:'Iya tapi begitu kecil dan sulit sekali',
+				domisili:'Bandung',
+				alasan:'Gaji kecil dan baru saja dipecat',
+				profesi:'Menganggur',
+				catatan:'Biaya hidup begitu tinggi',
+				celengan:false
+			},
+			{
+				nama:'Adira',
+				umur:'27',
+				menabung:'Iya tapi tidak tau',
+				domisili:'Jakarta',
+				alasan:'Istri mengidap ODGJ dan marah apabila ditanya soal keuangan',
+				profesi:'Pegawai swasta',
+				catatan:'Pernah sakit dan tidak ditanggung BPJS maupun asuransi kantor, terpaksa menggunakan kartu kredit',
+				celengan:false
+			}
+		]}
+	/>
+
+	<Paragraph
+		--font-color ={fontColor}
+		subjudul='Lebih dari Sekadar Boros'
+		para={[
+		'Dari cerita-cerita di atas bisa dilihat bahwa penting bagi generasi muda untuk paham tabungan. Namun faktor-faktor seperti besaran biaya hidup sehari-hari relatif ke pendapatan, tanggungan penyakit fisik/mental, baik pribadi maupun orang lain, tanggungan keluarga (<em>sandwich generation</em>), gaji mepet, dan <em>self-reward</em> memainkan peran besar dalam menentukan kemampuan menabung mereka.',
+		"Persoalan gaji mepet menjadi penyebab nomor satu anak muda sulit menabung. Dibandingkan dengan generasi sebelumnya, generasi saat ini mengalami kenaikan biaya hidup yang tinggi. Riset <a href='https://lifepal.co.id/media/ump-2021-apa-cukup-penuhi-pengeluaran-bulanan-saat-ini/'>Lifepal</a> menunjukkan ada sepuluh provinsi Indonesia yang pengeluaran rata-rata per-kapitanya melebihi UMP 2021. Kebetulan para informan tinggal di daerah yang disebutkan oleh riset ini, yaitu DKI Jakarta, Jawa Timur, dan Jawa Barat.",
+		'Besarnya pengeluaran relatif dengan UMP yang cenderung kecil menyebabkan kesempatan untuk menabung semakin tipis. Tak hanya itu, faktor generasi sandwich dan kesehatan juga berperan besar.'
+		]}
+	/>
+
+	<div class="data">
+		<h1>26%</h1>
+		<p><em>Sandwich generation</em> berusia 26-29 tahun</p>
+	</div>
+
+	<Image
+		img = {[{
+			url:'./images/sandwich-generation-01.png',
+			title:'Sandwich Generation'
+		}]}
+	/>
+
+	<div class="data">
+		<h1>54%</h1>
+		<p>Bekerja sebagai pegawai kantoran</p>
+	</div>
+
+	<Paragraph
+		--font-color ={fontColor}
+		para={[
+		'Sayangnya, survei ini tidak menunjukkan seberapa banyak orang yang menjadi generasi sandwich. Padahal pandemi membuat kondisi ekonomi banyak orang lebih rentan sehingga memaksa mereka yang punya lebih banyak penghasilan untuk membantu yang tidak punya. Ditambah lagi, banyak yang tidak bisa mengatakan “tidak” ke kebutuhan orangtua karena kultur bakti anak yang sangat kuat.',
+		"Kebutuhan kesehatan juga menjadi faktor penting. Survei yang sama menunjukkan generasi kebutuhan kesehatan selama pandemi semakin tinggi. Memang ada BPJS dan asuransi swasta, tapi perlindungannya terbatas. Ada beberapa penyakit, termasuk penyakit kejiwaan, yang perawatannya tidak dicover oleh BPJS. Atau mereka kurang puas dengan pelayanan BPJS sehingga memilih untuk membayar sendiri atau menggunakan asuransi swasta yang lebih mahal.",
+		'Terakhir adalah <em>self-reward</em>. Banyak media yang mengkritik generasi milenial sebagai generasi yang boros. Mereka lebih suka bersenang-senang dan membeli pengalaman seperti liburan atau mencoba hal baru dibanding berinvestasi.',
+		"Namun tuduhan-tuduhan ini tidak beralasan. <em>Self-reward</em> adalah mekanisme beradaptasi mereka ketika menghadapi stres tinggi. Meskipun stres berat, banyak yang <a href='https://www2.deloitte.com/content/dam/Deloitte/global/Documents/About-Deloitte/gx-deloitte-2021-mental-health-millennials-white-paper.pdf'>memilih untuk terus bekerja</a> dan menyembunyikan kondisi mental mereka dari kantor. <em>Self-reward</em> dengan makan enak, belanja barang mahal, dan liburan menjadi sarana pemulihan batin. Selain menyenangkan, kegiatan ini juga tidak menimbulkan stigma seperti pergi ke psikolog atau psikiater.",
+		"Kultur <em>self-reward</em> tak hanya muncul di anak muda Indonesia. Korea Selatan lebih dulu menamai praktek ini dengan sebutan <a href='https://foreignpolicy.com/2019/07/04/why-young-koreans-love-to-splurge-shibal-biyong-millennial-fuck-it-expense/'><em>shibal-biyong</em></a> alias “biaya <em>bodo amat</em>”. Tanggal tua tapi kamu pengen makan sushi karena stres kerja? <em>Shibal-biyong</em>. Ingin ngopi cantik di cafe? <em>Shibal-biyong</em>. Sekilas boros dan melawan logika, tapi <em>shibal-biyong</em> justru memaksimalkan fungsi uang untuk kebutuhan jangka pendek. Buat apa repot-repot menabung beli rumah kalau menabung 10 tahun saja tidak cukup untuk DP rumah?",
+		"Dari sini jelas bahwa stereotip anak muda tidak mau menabung adalah salah. Mereka paham akan pentingnya tabungan, tapi faktor-faktor luar membuat mereka kesulitan untuk melakukannya. Faktor seperti generasi <em>sandwich</em>, gaji mepet, dan mahalnya biaya hidup serta tempat tinggal bukanlah masalah individual yang bisa diselesaikan hanya dengan kerja lebih keras. Perlu solusi sistematis berupa kebijakan yang lebih ramah pekerja muda dan program bantuan untuk mengurangi beban generasi <em>sandwich</em>."
+		]}
+	/>
+
+	
 	<Credit
 		--fontfamily1={fontfamily1}
 		--font-color = {fontColor}
-		{ source } { credit }
-	/>
-	<Foot 
-		--fontfamily1={fontfamily1}
-		--font-color = {fontColor}
-		--bgColorDark = {colorBrandDarkBlue}
+		{ credit }
 	/>
 </main>
 
 <style>
+	.data {
+		color:hsl(207, 100%, 25%);
+		text-align:center;
+		width:50%;
+		max-width:300px;
+		margin:0 auto;
+		white-space: normal;
+	}
+	.data>h1 {
+		margin-bottom: 0.25rem;
+		margin-top: 0.25rem;
+		font-size: 4rem;
+		font-family: 'Azeret Mono', monospace;
+	}
+	.data>p {
+		margin-top: 0.25rem;
+		font-family: 'Roboto', sans-serif;
+	}
+	.span-percent {
+		margin-left:1rem
+	}
+	.vote-bar {
+		background-color: hsl(210, 6%, 21%);
+		height:2rem;
+		width:100px;
+		margin-bottom:0.5rem;
+		border-radius:0.1rem;
+		color:white;
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		padding-left:0.5rem;
+		font-size: 0.8rem;
+		white-space: nowrap;
+	}
+	.top {
+		background-color: hsl(204, 72%, 31%);
+	}
+	.poll {
+        font-family: 'Roboto';
+        width:90%;
+        max-width: 650px;
+        margin: 4rem auto 4rem auto;
+        text-align: left;
+		white-space: normal;
+    }
+	.poll-item {
+		background-color: black;
+		color: white;
+		padding:1rem;
+		margin-top:0.5rem;
+		margin-bottom:0.5rem;
+		border-radius:0.5rem;
+	}
+	.vote {
+		font-size:0.7rem;
+		color: hsl(0,0%,50%)
+	}
+	.imgparalax {
+		width:50%;
+		position: absolute;
+	}
+	.paralaxtext {
+		padding:1rem;
+		background-color: hsl(207, 100%, 25%);
+		width:80%;
+        max-width: 650px;
+        margin: 0 auto 0 auto;
+		height: fit-content;
+        text-align: left;
+		border-radius: 1rem;
+		font-family: 'Roboto-Mono', monospace;
+		white-space: normal;
+		color:white;
+	}
 	.divider {
 		height:0.2rem;
 		width:60%;
@@ -594,31 +436,31 @@
 	}
 	@media only screen and (max-width:509px) {
 		main {
-			background-image: url('../images/_Dilema Anak Muda- Menabung Atau Tidak Menabung__smallplus 1.png');
+			background-image: url('./images/_Dilema Anak Muda- Menabung Atau Tidak Menabung__smallplus 1.png');
 		}
 	}
 
 	@media only screen and (min-width:510px) and (max-width:689px) {
 		main {
-			background-image: url('../images/_Dilema Anak Muda- Menabung Atau Tidak Menabung__submedium 1.png');
+			background-image: url('./images/_Dilema Anak Muda- Menabung Atau Tidak Menabung__submedium 1.png');
 		}
 	}
 
 	@media only screen and (min-width:690px) and (max-width:919px) {
 		main {
-			background-image: url('../images/_Dilema Anak Muda- Menabung Atau Tidak Menabung__medium 1.png');
+			background-image: url('./images/_Dilema Anak Muda- Menabung Atau Tidak Menabung__medium 1.png');
 		}
 	}
 
 	@media only screen and (min-width:920px) and (max-width:1399px) {
 		main {
-			background-image: url('../images/_Dilema Anak Muda- Menabung Atau Tidak Menabung__large 1.png');
+			background-image: url('./images/_Dilema Anak Muda- Menabung Atau Tidak Menabung__large 1.png');
 		}
 	}
 
 	@media only screen and (min-width:1400px) {
 		main {
-			background-image: url('../images/_Dilema Anak Muda- Menabung Atau Tidak Menabung__xlarge 1.png');
+			background-image: url('./images/_Dilema Anak Muda- Menabung Atau Tidak Menabung__xlarge 1.png');
 		}
 	}
 	/* main {

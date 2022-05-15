@@ -1,10 +1,12 @@
 <script>
-    // export let subjudul;
+    export let subjudul;
     export let para = [];
 </script>
 
 <section>
-    <!-- <h3>{ subjudul }</h3> -->
+    {#if subjudul}
+        <h3>{ subjudul }</h3>
+    {/if}
     {#each para as p}
         <p>{@html p}</p>
     {/each}
@@ -18,12 +20,14 @@
         margin: 4rem auto 4rem auto;
         text-align: left;
     }
-    /* h3{
+    h3{
         font-weight: 700;
         font-size: 1.5rem;
         line-height: 2.4rem;
         text-align: center;
-    } */
+        font-family: 'Azeret Mono', monospace;
+        white-space: normal;
+    } 
     p {
         font-size:1.1rem;
         line-height: 1.8rem;
