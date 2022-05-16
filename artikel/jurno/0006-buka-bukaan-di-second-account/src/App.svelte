@@ -5,13 +5,14 @@
 	import Quote from './Quote.svelte';
 	import Image from './Image.svelte';
 	import Credit from './Credit.svelte';
-	import Foot from './Foot.svelte'
+	import Foot from './Foot.svelte';
+	import Followers from './Followers.svelte';
 
 	//Main Font
 	let fontfamily1 = "Roboto Mono"
 
 	//Main Color
-	let fontColor = '#f9f9e1'
+	let fontColor = 'white'
 
 	//Secondary Dark Color
 	let colorBrandDarkBlue = "#242053"
@@ -25,26 +26,22 @@
 	let bottom = 1;
 
 	// styling variables
-	let mainBackground='#761fff'	
-	let headerBackground='#761fff'
+	let mainBackground='#15202b'	
+	let headerBackground='#15202b'
 	let titleColor='#f9f9e1'
 	let subtitleColor='#f9f9e1'
 	let subheadColor='#f9f9e1'
 
 	let height
 
-	let subhead = ['Indonesia adalah salah satu negara dengan jumlah jenis ular berbisa terbanyak di dunia. Totalnya 77 jenis yang terbagi ke dalam tiga famili: <em>elapidae</em>, <em>viperidae</em>, & <em>colubridae</em>',
-
-	'Namun,  sampai saat ini Indonesia hanya memiliki stok antivenom untuk 8-10 jenis ular berbisa. Masih ada 67 jenis ular berbisa lain yang tak punya antivenom. Jumlah tersebut lebih sedikit dari Australia yang masing-masing memiliki antivenom untuk 7-12 jenis ular dan Thailand yang punya 12-20 antivenom.',
-
-	'Sedangkan jumlah ular berbisa di Indonesia jauh lebih banyak dibandingkan Australia dan Malaysia yang masing-masing hanya 20 jenis. Sementara di dunia terdapat 320 jenis ular berbisa yang mematikan, menurut WHO. Artinya, 24 persen di antara berada di negeri ini.'
-	]
-
 	let credit =[{
 		role : 'Penulis',
-		name : 'Lorem Ipsum'
+		name : 'Ann Putri'
 		}]
-	let source = 'Sed nec pellentesque massa. Vestibulum eu sem ut dolor placerat ultricies at sit amet massa'
+	
+	let subhead = [
+		"Punya second account ngga?"
+	]
 
 </script>
 
@@ -56,7 +53,8 @@
 	
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Fondamento:ital@0;1&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Neucha&display=swap" rel="stylesheet">
 </svelte:head>
 
 <main style="background-color: {mainBackground}">
@@ -65,35 +63,7 @@
 	/>
 	<div class="headerilustrasi" style="margin-top:{height}px;">
 		<div id="g-Bisa-Ular-box" class="ai2html">
-			<!-- Artboard: smallplus-cover -->
-			<div id="g-Bisa-Ular-smallplus-cover" class="g-artboard" style="max-width: 509px;max-height: 509px" data-aspect-ratio="1" data-min-width="0" data-max-width="509">
-			<div style="padding: 0 0 100% 0;"></div>
-			<img id="g-Bisa-Ular-smallplus-cover-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-smallplus-cover.png"/>
-			</div>
-				
-			<!-- Artboard: submedium-cover -->
-			<div id="g-Bisa-Ular-submedium-cover" class="g-artboard" style="min-width: 510px;max-width: 689px;max-height: 432px" data-aspect-ratio="1.594" data-min-width="510" data-max-width="689">
-			<div style="padding: 0 0 62.7451% 0;"></div>
-			<img id="g-Bisa-Ular-submedium-cover-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-submedium-cover.png"/>
-			</div>
-				
-			<!-- Artboard: medium-cover -->
-			<div id="g-Bisa-Ular-medium-cover" class="g-artboard" style="min-width: 690px;max-width: 919px;max-height: 426px" data-aspect-ratio="2.156" data-min-width="690" data-max-width="919">
-			<div style="padding: 0 0 46.3768% 0;"></div>
-			<img id="g-Bisa-Ular-medium-cover-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-medium-cover.png"/>
-			</div>
-				
-			<!-- Artboard: large-cover -->
-			<div id="g-Bisa-Ular-large-cover" class="g-artboard" style="min-width: 920px;max-width: 1399px;max-height: 485px" data-aspect-ratio="2.884" data-min-width="920" data-max-width="1399">
-			<div style="padding: 0 0 34.6739% 0;"></div>
-				<img id="g-Bisa-Ular-large-cover-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-large-cover.png"/>
-			</div>
-				
-			<!-- Artboard: xlarge-cover -->
-			<div id="g-Bisa-Ular-xlarge-cover" class="g-artboard" style="min-width: 1400px;" data-aspect-ratio="4.466" data-min-width="1400">
-			<div style="padding: 0 0 22.3929% 0;"></div>
-				<img id="g-Bisa-Ular-xlarge-cover-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-xlarge-cover.png"/>
-			</div>
+			
 		</div>
 	</div>	
 	
@@ -106,484 +76,135 @@
 
 		fullHeader={false}
 
-		title='Bisa Ular'
-
-		subhead={subhead}
+		title='Buka-bukaan di Second Account'
 		
+		{subhead}
 
-		author='Ahsan Ridhoi'
-		date=''		
+		author='Ann Putri'
+		date='14 Mei 2022'		
 	/>
-
-	<div class="divider"></div>
-
-	<Scroller
-		{top}
-		{threshold}
-		{bottom}
-		bind:count
-		bind:index
-		bind:offset
-		bind:progress
-	>
-		<div slot="background">
-			<div id="g-Bisa-Ular-box" class="ai2html">
-
-			{#if index == 0}
-				<!-- Halaman 1 -->
-				<!-- Artboard: smallplus-1 -->
-				<div id="g-Bisa-Ular-smallplus-1" class="g-artboard" style="max-width: 509px;max-height: 1113px" data-aspect-ratio="0.457" data-min-width="0" data-max-width="509"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 218.75% 0;"></div>
-				<img id="g-Bisa-Ular-smallplus-1-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-smallplus-1.png"/>
-				</div>
-
-				<!-- Artboard: submedium-1 -->
-				<div id="g-Bisa-Ular-submedium-1" class="g-artboard" style="min-width: 510px;max-width: 689px;max-height: 1081px" data-aspect-ratio="0.638" data-min-width="510" data-max-width="689"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 156.8627% 0;"></div>
-				<img id="g-Bisa-Ular-submedium-1-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-submedium-1.png"/>
-				</div>
-
-				<!-- Artboard: medium-1 -->
-				<div id="g-Bisa-Ular-medium-1" class="g-artboard" style="min-width: 690px;max-width: 919px;max-height: 1364px" data-aspect-ratio="0.674" data-min-width="690" data-max-width="919"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 148.4058% 0;"></div>
-				<img id="g-Bisa-Ular-medium-1-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-medium-1.png"/>
-				</div>
-
-				<!-- Artboard: large-1 -->
-				<div id="g-Bisa-Ular-large-1" class="g-artboard" style="min-width: 920px;max-width: 1399px;max-height: 1399px" data-aspect-ratio="1" data-min-width="920" data-max-width="1399"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 100% 0;"></div>
-				<img id="g-Bisa-Ular-large-1-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-large-1.png"/>
-				</div>
-
-				<!-- Artboard: xlarge-1 -->
-				<div id="g-Bisa-Ular-xlarge-1" class="g-artboard" style="min-width: 1400px;" data-aspect-ratio="1.778" data-min-width="1400"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 56.25% 0;"></div>
-				<img id="g-Bisa-Ular-xlarge-1-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-xlarge-1.png"/>
-				</div>
-
-
-			{:else if index == 1}
-				<!-- Halaman 2 -->
-				<!-- Artboard: smallplus-2 -->
-				<div id="g-Bisa-Ular-smallplus-2" class="g-artboard" style="max-width: 509px;max-height: 1113px" data-aspect-ratio="0.457" data-min-width="0" data-max-width="509"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 218.75% 0;"></div>
-				<img id="g-Bisa-Ular-smallplus-2-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-smallplus-2.png"/>
-				</div>
-
-				<!-- Artboard: submedium-2 -->
-				<div id="g-Bisa-Ular-submedium-2" class="g-artboard" style="min-width: 510px;max-width: 689px;max-height: 1081px" data-aspect-ratio="0.638" data-min-width="510" data-max-width="689"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 156.8627% 0;"></div>
-				<img id="g-Bisa-Ular-submedium-2-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-submedium-2.png"/>
-				</div>
-
-				<!-- Artboard: medium-2 -->
-				<div id="g-Bisa-Ular-medium-2" class="g-artboard" style="min-width: 690px;max-width: 919px;max-height: 1364px" data-aspect-ratio="0.674" data-min-width="690" data-max-width="919"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 148.4058% 0;"></div>
-				<img id="g-Bisa-Ular-medium-2-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-medium-2.png"/>
-				</div>
-
-				<!-- Artboard: large-2 -->
-				<div id="g-Bisa-Ular-large-2" class="g-artboard" style="min-width: 920px;max-width: 1399px;max-height: 1399px" data-aspect-ratio="1" data-min-width="920" data-max-width="1399"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 100% 0;"></div>
-				<img id="g-Bisa-Ular-large-2-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-large-2.png"/>
-				</div>
-
-				<!-- Artboard: xlarge-2 -->
-				<div id="g-Bisa-Ular-xlarge-2" class="g-artboard" style="min-width: 1400px;" data-aspect-ratio="1.778" data-min-width="1400"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 56.25% 0;"></div>
-				<img id="g-Bisa-Ular-xlarge-2-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-xlarge-2.png"/>
-				</div>
-
-
-			{:else if index == 2}
-				<!-- Halaman 3 -->
-				<!-- Artboard: smallplus-3 -->
-				<div id="g-Bisa-Ular-smallplus-3" class="g-artboard" style="max-width: 509px;max-height: 1113px" data-aspect-ratio="0.457" data-min-width="0" data-max-width="509"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 218.75% 0;"></div>
-				<img id="g-Bisa-Ular-smallplus-3-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-smallplus-3.png"/>
-				</div>
-
-				<!-- Artboard: submedium-3 -->
-				<div id="g-Bisa-Ular-submedium-3" class="g-artboard" style="min-width: 510px;max-width: 689px;max-height: 1081px" data-aspect-ratio="0.638" data-min-width="510" data-max-width="689"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 156.8627% 0;"></div>
-				<img id="g-Bisa-Ular-submedium-3-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-submedium-3.png"/>
-				</div>
-
-				<!-- Artboard: medium-3 -->
-				<div id="g-Bisa-Ular-medium-3" class="g-artboard" style="min-width: 690px;max-width: 919px;max-height: 1364px" data-aspect-ratio="0.674" data-min-width="690" data-max-width="919"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 148.4058% 0;"></div>
-				<img id="g-Bisa-Ular-medium-3-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-medium-3.png"/>
-				</div>
-
-				<!-- Artboard: large-3 -->
-				<div id="g-Bisa-Ular-large-3" class="g-artboard" style="min-width: 920px;max-width: 1399px;max-height: 1399px" data-aspect-ratio="1" data-min-width="920" data-max-width="1399"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 100% 0;"></div>
-				<img id="g-Bisa-Ular-large-3-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-large-3.png"/>
-				</div>
-
-				<!-- Artboard: xlarge-3 -->
-				<div id="g-Bisa-Ular-xlarge-3" class="g-artboard" style="min-width: 1400px;" data-aspect-ratio="1.778" data-min-width="1400"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 56.25% 0;"></div>
-				<img id="g-Bisa-Ular-xlarge-3-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-xlarge-3.png"/>
-				</div>
-
-
-			{:else if index == 3}
-				<!-- Halaman 4 -->
-				<!-- Artboard: smallplus-4 -->
-				<div id="g-Bisa-Ular-smallplus-4" class="g-artboard" style="max-width: 509px;max-height: 1113px" data-aspect-ratio="0.457" data-min-width="0" data-max-width="509"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 218.75% 0;"></div>
-				<img id="g-Bisa-Ular-smallplus-4-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-smallplus-4.png"/>
-				</div>
-
-				<!-- Artboard: submedium-4 -->
-				<div id="g-Bisa-Ular-submedium-4" class="g-artboard" style="min-width: 510px;max-width: 689px;max-height: 1081px" data-aspect-ratio="0.638" data-min-width="510" data-max-width="689"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 156.8627% 0;"></div>
-				<img id="g-Bisa-Ular-submedium-4-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-submedium-4.png"/>
-				</div>
-
-				<!-- Artboard: medium-4 -->
-				<div id="g-Bisa-Ular-medium-4" class="g-artboard" style="min-width: 690px;max-width: 919px;max-height: 1364px" data-aspect-ratio="0.674" data-min-width="690" data-max-width="919"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 148.4058% 0;"></div>
-				<img id="g-Bisa-Ular-medium-4-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-medium-4.png"/>
-				</div>
-
-				<!-- Artboard: large-4 -->
-				<div id="g-Bisa-Ular-large-4" class="g-artboard" style="min-width: 920px;max-width: 1399px;max-height: 1399px" data-aspect-ratio="1" data-min-width="920" data-max-width="1399"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 100% 0;"></div>
-				<img id="g-Bisa-Ular-large-4-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-large-4.png"/>
-				</div>
-
-				<!-- Artboard: xlarge-4 -->
-				<div id="g-Bisa-Ular-xlarge-4" class="g-artboard" style="min-width: 1400px;" data-aspect-ratio="1.778" data-min-width="1400"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 56.25% 0;"></div>
-				<img id="g-Bisa-Ular-xlarge-4-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-xlarge-4.png"/>
-				</div>
-			
-			{:else if index == 4}
-				<!-- Halaman 5 -->
-				<!-- Artboard: smallplus-5 -->
-				<div id="g-Bisa-Ular-smallplus-5" class="g-artboard" style="max-width: 509px;max-height: 1113px" data-aspect-ratio="0.457" data-min-width="0" data-max-width="509"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 218.75% 0;"></div>
-				<img id="g-Bisa-Ular-smallplus-5-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-smallplus-5.png"/>
-				</div>
-
-				<!-- Artboard: submedium-5 -->
-				<div id="g-Bisa-Ular-submedium-5" class="g-artboard" style="min-width: 510px;max-width: 689px;max-height: 1081px" data-aspect-ratio="0.638" data-min-width="510" data-max-width="689"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 156.8627% 0;"></div>
-				<img id="g-Bisa-Ular-submedium-5-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-submedium-5.png"/>
-				</div>
-
-				<!-- Artboard: medium-5 -->
-				<div id="g-Bisa-Ular-medium-5" class="g-artboard" style="min-width: 690px;max-width: 919px;max-height: 1364px" data-aspect-ratio="0.674" data-min-width="690" data-max-width="919"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 148.4058% 0;"></div>
-				<img id="g-Bisa-Ular-medium-5-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-medium-5.png"/>
-				</div>
-
-				<!-- Artboard: large-5 -->
-				<div id="g-Bisa-Ular-large-5" class="g-artboard" style="min-width: 920px;max-width: 1399px;max-height: 1399px" data-aspect-ratio="1" data-min-width="920" data-max-width="1399"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 100% 0;"></div>
-				<img id="g-Bisa-Ular-large-5-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-large-5.png"/>
-				</div>
-
-				<!-- Artboard: xlarge-5 -->
-				<div id="g-Bisa-Ular-xlarge-5" class="g-artboard" style="min-width: 1400px;" data-aspect-ratio="1.778" data-min-width="1400"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 56.25% 0;"></div>
-				<img id="g-Bisa-Ular-xlarge-5-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-xlarge-5.png"/>
-				</div>
-
-			
-			{:else if index == 5}
-				<!-- Halaman 6 -->
-				<!-- Artboard: smallplus-6 -->
-				<div id="g-Bisa-Ular-smallplus-6" class="g-artboard" style="max-width: 509px;max-height: 1113px" data-aspect-ratio="0.457" data-min-width="0" data-max-width="509"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 218.75% 0;"></div>
-				<img id="g-Bisa-Ular-smallplus-6-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-smallplus-6.png"/>
-				</div>
-
-				<!-- Artboard: submedium-6 -->
-				<div id="g-Bisa-Ular-submedium-6" class="g-artboard" style="min-width: 510px;max-width: 689px;max-height: 1081px" data-aspect-ratio="0.638" data-min-width="510" data-max-width="689"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 156.8627% 0;"></div>
-				<img id="g-Bisa-Ular-submedium-6-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-submedium-6.png"/>
-				</div>
-
-				<!-- Artboard: medium-6 -->
-				<div id="g-Bisa-Ular-medium-6" class="g-artboard" style="min-width: 690px;max-width: 919px;max-height: 1364px" data-aspect-ratio="0.674" data-min-width="690" data-max-width="919"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 148.4058% 0;"></div>
-				<img id="g-Bisa-Ular-medium-6-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-medium-6.png"/>
-				</div>
-
-				<!-- Artboard: large-6 -->
-				<div id="g-Bisa-Ular-large-6" class="g-artboard" style="min-width: 920px;max-width: 1399px;max-height: 1399px" data-aspect-ratio="1" data-min-width="920" data-max-width="1399"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 100% 0;"></div>
-				<img id="g-Bisa-Ular-large-6-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-large-6.png"/>
-				</div>
-
-				<!-- Artboard: xlarge-6 -->
-				<div id="g-Bisa-Ular-xlarge-6" class="g-artboard" style="min-width: 1400px;" data-aspect-ratio="1.778" data-min-width="1400"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 56.25% 0;"></div>
-				<img id="g-Bisa-Ular-xlarge-6-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-xlarge-6.png"/>
-				</div>
-			{:else if index == 6}
-				<!-- Halaman 7 -->
-				<!-- Artboard: smallplus-7 -->
-				<div id="g-Bisa-Ular-smallplus-7" class="g-artboard" style="max-width: 509px;max-height: 1113px" data-aspect-ratio="0.457" data-min-width="0" data-max-width="509"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 218.75% 0;"></div>
-				<img id="g-Bisa-Ular-smallplus-7-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-smallplus-7.png"/>
-				</div>
-
-				<!-- Artboard: submedium-7 -->
-				<div id="g-Bisa-Ular-submedium-7" class="g-artboard" style="min-width: 510px;max-width: 689px;max-height: 1081px" data-aspect-ratio="0.638" data-min-width="510" data-max-width="689"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 156.8627% 0;"></div>
-				<img id="g-Bisa-Ular-submedium-7-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-submedium-7.png"/>
-				</div>
-
-				<!-- Artboard: medium-7 -->
-				<div id="g-Bisa-Ular-medium-7" class="g-artboard" style="min-width: 690px;max-width: 919px;max-height: 1364px" data-aspect-ratio="0.674" data-min-width="690" data-max-width="919"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 148.4058% 0;"></div>
-				<img id="g-Bisa-Ular-medium-7-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-medium-7.png"/>
-				</div>
-
-				<!-- Artboard: large-7 -->
-				<div id="g-Bisa-Ular-large-7" class="g-artboard" style="min-width: 920px;max-width: 1399px;max-height: 1399px" data-aspect-ratio="1" data-min-width="920" data-max-width="1399"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 100% 0;"></div>
-				<img id="g-Bisa-Ular-large-7-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-large-7.png"/>
-				</div>
-
-				<!-- Artboard: xlarge-7 -->
-				<div id="g-Bisa-Ular-xlarge-7" class="g-artboard" style="min-width: 1400px;" data-aspect-ratio="1.778" data-min-width="1400"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 56.25% 0;"></div>
-				<img id="g-Bisa-Ular-xlarge-7-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-xlarge-7.png"/>
-				</div>
-			{:else if index == 7}
-				<!-- Halaman 8 -->
-				<!-- Artboard: smallplus-8 -->
-				<div id="g-Bisa-Ular-smallplus-8" class="g-artboard" style="max-width: 509px;max-height: 1113px" data-aspect-ratio="0.457" data-min-width="0" data-max-width="509"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 218.75% 0;"></div>
-				<img id="g-Bisa-Ular-smallplus-8-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-smallplus-8.png"/>
-				</div>
-
-				<!-- Artboard: submedium-8 -->
-				<div id="g-Bisa-Ular-submedium-8" class="g-artboard" style="min-width: 510px;max-width: 689px;max-height: 1081px" data-aspect-ratio="0.638" data-min-width="510" data-max-width="689"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 156.8627% 0;"></div>
-				<img id="g-Bisa-Ular-submedium-8-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-submedium-8.png"/>
-				</div>
-
-				<!-- Artboard: medium-8 -->
-				<div id="g-Bisa-Ular-medium-8" class="g-artboard" style="min-width: 690px;max-width: 919px;max-height: 1364px" data-aspect-ratio="0.674" data-min-width="690" data-max-width="919"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 148.4058% 0;"></div>
-				<img id="g-Bisa-Ular-medium-8-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-medium-8.png"/>
-				</div>
-
-				<!-- Artboard: large-8 -->
-				<div id="g-Bisa-Ular-large-8" class="g-artboard" style="min-width: 920px;max-width: 1399px;max-height: 1399px" data-aspect-ratio="1" data-min-width="920" data-max-width="1399"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 100% 0;"></div>
-				<img id="g-Bisa-Ular-large-8-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-large-8.png"/>
-				</div>
-
-				<!-- Artboard: xlarge-8 -->
-				<div id="g-Bisa-Ular-xlarge-8" class="g-artboard" style="min-width: 1400px;" data-aspect-ratio="1.778" data-min-width="1400"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 56.25% 0;"></div>
-				<img id="g-Bisa-Ular-xlarge-8-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-xlarge-8.png"/>
-				</div>
-			{:else if index == 8}
-				<!-- Halaman 9 -->
-				<!-- Artboard: smallplus-9 -->
-				<div id="g-Bisa-Ular-smallplus-9" class="g-artboard" style="max-width: 509px;max-height: 1113px" data-aspect-ratio="0.457" data-min-width="0" data-max-width="509"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 218.75% 0;"></div>
-				<img id="g-Bisa-Ular-smallplus-9-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-smallplus-9.png"/>
-				</div>
-
-				<!-- Artboard: submedium-9 -->
-				<div id="g-Bisa-Ular-submedium-9" class="g-artboard" style="min-width: 510px;max-width: 689px;max-height: 1081px" data-aspect-ratio="0.638" data-min-width="510" data-max-width="689"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 156.8627% 0;"></div>
-				<img id="g-Bisa-Ular-submedium-9-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-submedium-9.png"/>
-				</div>
-
-				<!-- Artboard: medium-9 -->
-				<div id="g-Bisa-Ular-medium-9" class="g-artboard" style="min-width: 690px;max-width: 919px;max-height: 1364px" data-aspect-ratio="0.674" data-min-width="690" data-max-width="919"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 148.4058% 0;"></div>
-				<img id="g-Bisa-Ular-medium-9-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-medium-9.png"/>
-				</div>
-
-				<!-- Artboard: large-9 -->
-				<div id="g-Bisa-Ular-large-9" class="g-artboard" style="min-width: 920px;max-width: 1399px;max-height: 1399px" data-aspect-ratio="1" data-min-width="920" data-max-width="1399"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 100% 0;"></div>
-				<img id="g-Bisa-Ular-large-9-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-large-9.png"/>
-				</div>
-
-				<!-- Artboard: xlarge-9 -->
-				<div id="g-Bisa-Ular-xlarge-9" class="g-artboard" style="min-width: 1400px;" data-aspect-ratio="1.778" data-min-width="1400"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 56.25% 0;"></div>
-				<img id="g-Bisa-Ular-xlarge-9-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-xlarge-9.png"/>
-				</div>
-			{:else if index >= 9}
-				<!-- Halaman 10 -->
-				<!-- Artboard: smallplus-10 -->
-				<div id="g-Bisa-Ular-smallplus-10" class="g-artboard" style="max-width: 509px;max-height: 1113px" data-aspect-ratio="0.457" data-min-width="0" data-max-width="509"
-				style:opacity={offset <= 0.2 && index == 9 ? offset : 1}>
-				<div style="padding: 0 0 218.75% 0;"></div>
-				<img id="g-Bisa-Ular-smallplus-10-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-smallplus-10.png"/>
-				</div>
-
-				<!-- Artboard: submedium-10 -->
-				<div id="g-Bisa-Ular-submedium-10" class="g-artboard" style="min-width: 510px;max-width: 689px;max-height: 1081px" data-aspect-ratio="0.638" data-min-width="510" data-max-width="689"
-				style:opacity={offset <= 0.2 && index == 9 ? offset : 1}>
-				<div style="padding: 0 0 156.8627% 0;"></div>
-				<img id="g-Bisa-Ular-submedium-10-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-submedium-10.png"/>
-				</div>
-
-				<!-- Artboard: medium-10 -->
-				<div id="g-Bisa-Ular-medium-10" class="g-artboard" style="min-width: 690px;max-width: 919px;max-height: 1364px" data-aspect-ratio="0.674" data-min-width="690" data-max-width="919"
-				style:opacity={offset <= 0.2 && index == 9 ? offset : 1}>
-				<div style="padding: 0 0 148.4058% 0;"></div>
-				<img id="g-Bisa-Ular-medium-10-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-medium-10.png"/>
-				</div>
-
-				<!-- Artboard: large-10 -->
-				<div id="g-Bisa-Ular-large-10" class="g-artboard" style="min-width: 920px;max-width: 1399px;max-height: 1399px" data-aspect-ratio="1" data-min-width="920" data-max-width="1399"
-				style:opacity={offset <= 0.2 && index == 9 ? offset : 1}>
-				<div style="padding: 0 0 100% 0;"></div>
-				<img id="g-Bisa-Ular-large-10-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-large-10.png"/>
-				</div>
-
-				<!-- Artboard: xlarge-10 -->
-				<div id="g-Bisa-Ular-xlarge-10" class="g-artboard" style="min-width: 1400px;" data-aspect-ratio="1.778" data-min-width="1400"
-				style:opacity={offset <= 0.2 && index == 9 ? offset : 1}>
-				<div style="padding: 0 0 56.25% 0;"></div>
-				<img id="g-Bisa-Ular-xlarge-10-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-xlarge-10.png"/>
-				</div>
-			{/if}
-			</div>
-		</div>
-
-		<div slot="foreground" >
-			<section></section>
-			<section>
-				<p>
-					Lima hari sebelum ulang tahunnya yang ke-13, pada Januari 2020, Martinus menggembala sapi-sapi ternaknya di sebuah ladang di Kabupaten Lembata, Nusa Tenggara Timur (NTT).
-				</p>
-			</section>
-			<section>
-				<p>
-					Namun, a menginjak dan digigit seekor ular berbisa langka bernama ilmiah <em>daboia ruselli siamensis</em> . Ular ini termasuk golongan <em>viperia ruselli</em> yang hanya hidup di beberapa wilayah Indonesia Tengah, antara lain Pulau Flores, Pulau Komodo, NTT, Adonara, Ende, dan Pulau Solor.
-				</p>
-			</section>
-			<section>
-				<p>
-					Dalam hitungan jam setelah terkena gigitan, ia mengalami gagal ginjal, kegagalan pernapasan, dan pendarahan di hampir semua organ tubuhnya. Dengan kata lain, nyawanya sedang di ujung tanduk.
-				</p>
-			</section>
-			<section>
-				<p>
-					Kabar tersebut sampai kepada Tri Maharani pada 14 Januari 2020, doktor lulusan Universitas Brawijaya Malang yang menjabat sebagai Presiden Indonesia Toksinologi.
-				</p>
-			</section>
-			<section>
-				<p>
-					Dalam kondisi semacam itu, menurut Maha, pasien harus mendapatkan antivenom atau anti bisa ular yang tepat. Masalahnya, antivenom untuk daboia ruselli siamensis tak tersedia di Indonesia. Kementerian Kesehatan dan PT Bio Farma pun tak bisa menyanggupi menyediakannya untuk keperluan penyembuhan Martinus.  
-				</p>
-			</section>
-			<section>
-				<p>
-					Mujur, sekali lagi, masih berkawan dengan Martinus. Maha memiliki koneksi khusus dengan salah satu profesor yang menangani gigitan ular berbisa dari Queen Sabovana Memorial Institute Thailand.
-				</p>
-			</section>
-			<section>
-				<p>
-					Profesor tersebut menyanggupi membantu Maha mendapatkan antivenom untuk mengobati Martinus. Keesokan harinya, Maha langsung terbang ke Bangkok, Thailand dan bertemu profesor tersebut. Ia membeli 12 vial antivenom untuk ular daboia ruselli siamensis melalui perantara kenalannya itu. Harga per vialnya mencapai ratusan dollar Amerika Serikat. Semua ia beli dengan uang pribadi. 
-				</p>
-			</section>
-			<section>
-				<p>
-					Usai mendapat antivenom tersebut, Maha langsung berangkat ke Lembata. Lantaran tak ada pesawat yang langsung menuju Lembata, ia mesti transit terlebih dulu sehari di Surabaya untuk kemudian terbang menuju Kupang. Dari Kupang, ia melakukan perjalanan darat ke Lembata.
-				</p>
-			</section>
-			<section>
-				<p>
-					Maha tiba di Lembata pada hari kelima usai Martinus tergigit ular. Ia langsung menyuntikkan antivenom tersebut ke tubuh Martinus dan mengawasi langsung perkembangan kesehatannya selama lebih kurang 12 jam.
-				</p>
-			</section>
-			<section>
-				<p>
-					Tepat pukul 12 malam hari itu, saat usia Martinus resmi bertambah, kondisinya membaik. Pendarahan di organ-organ penting mulai berhenti. Ginjalnya pun membaik. Kini, ia telah sembuh dan menjalani hidup normal kembali.
-				</p>
-			</section>
-		</div>
-	</Scroller>
 
 	<div class="divider"></div>
 
 	<Paragraph
 		--font-color ='#f9f9e1'
 		para={[
-		'Kelangkaan antivenom di Indonesia cukup mengkhawatirkan jika dibandingkan dengan jumlah kasus tahunan gigitan ular berbisa. Sepanjang sepuluh tahun ke belakang, berdasarkan laporan dari rumah sakit dan fasilitas Kesehatan lain, Maha mencatat sebanyak 135 ribu kasus gigitan ular di Indonesia per tahun.',
-		'Dari jumlah kasus tersebut, rasio kematian korban mencapai 10% atau lebih 13.500 orang. Angka tersebut jauh dari standar Organisasi Kesehatan Dunia (WHO) bahwa rasio kematian maksimal di suatu wilayah adalah 2%.',
-		'Data tersebut sebetulnya tak bisa menjadi gambaran utuh atas kasus gigitan ular di Indonesia. Pasalnya, tak ada catatan resmi dari pemerintah terkait persoalan kesehatan serius ini. Maka, menurut Maha, bisa jadi jumlah kasus dan kematian lebih dari angka tersebut.'
+			"Kalau kamu mengerti pertanyaan di atas, selamat, kamu adalah satu dari generasi muda yang rutin menggunakan Instagram. Media sosial berbasis gambar ini “memaksa” kita untuk terus menunjukkan sisi terbaik kita. Akibatnya kita merasa harus terus mengkurasi <em>feed</em> sebaik mungkin.",
+			"Sebagian anak muda merasa tekanan ini sangat menyesakkan sehingga mereka “kabur” ke akun kedua mereka. Akun yang kerap disebut sebagai <em>second account</em> atau <em>fake Instagram</em> (finsta) ini sengaja dibuat anonim dan privat. Fenomena ini sangat menarik sampai-sampai Rugun Sirait. Hasilnya adalah artikel jurnal berjudul “Spectatorial Sisterhood: Relasi Sosial Pengguna Second Account di Instagram”."
 		]}
 	/>
+
+	<Image />
+
+	<Paragraph
+		--font-color ='#f9f9e1'
+		subjudul = '<em>Performative Self</em> vs <em>Authentic Self</em> di Media Sosial'
+		para={[
+			"Dalam percakapan kami, Rugun mengatakan artikel jurnal ini adalah skripsinya yang di-<em>recycle</em>. Penelitian Rugun melibatkan lima responden perempuan berusia 20-23 tahun. Awalnya responden tidak meliputi perempuan saja. Namun, setelah melihat kondisi lapangan, ia mengerucutkan semua responden ke perempuan. Menurutnya, perempuan punya lapisan pengalaman unik akibat ekspresi mereka di ruang publik lebih dikekang dibandingkan laki-laki. Ditambah ia juga merasa kesulitan karena kurang punya akses ke <em>second account</em> laki-laki."
+		]}
+	/>
+
+	<Image />
+
+	<Paragraph
+		--font-color ='#f9f9e1'
+		para={[
+			"Second account muncul karena ketiadaan privasi sekaligus munculnya tekanan untuk tampil sesempurna mungkin. Oleh karenanya <em>first account</em> atau akun utama merupakan “<em>performed selves</em>”, imaji khusus publik yang terkurasi.",
+			"Namun ketidakaslian imaji diri dan sempitnya ekspresi diri yang diperbolehkan dalam akun utama membuat sebagian anak muda merasa tidak nyaman.",
+			"Dari sinilah <em>second account</em> lahir sebagai tempat ekspresi diri yang bebas, otentik, dan paling penting, privat alias <em>authentic self<?em>."
+
+		]}
+	/>
+
+	<Paragraph
+		--font-color ='#f9f9e1'
+		para={[
+			"Berbekal <em>second account</em> miliknya, Rugun memposisikan diri sebagai pengguna second account, mengobservasi second account teman-teman sekaligus respondennya dari jarak aman. Dalam menganalisa fenomena ini, Rugun menggunakan konsep “<em>spectatorial girlfriendship</em>” dan “<em>common girlfriend experience</em>”.",
+			"“<em>Spectatorial girlfriendship</em>” adalah konsep yang dicetuskan Akane Kanai (2019) dan digunakan untuk memahami simbol-simbol konstruksi femininitas antar perempuan yang tergambar dalam unggahan-unggahan media sosial mereka. Mode pertemanan ini bisa terjadi apabila para perempuan sudah memahami simbol-simbol dalam teks, visual, dan respons antara pengguna perempuan dengan para pengikutnya. <em>Spectatorial girlfriendship</em> terjadi di <em>first account</em>, di mana perempuan mengkurasi dirinya sendiri agar bisa tampil sempurna dan berkompetisi di pasar kerja.",
+			"Sedangkan “<em>common girlfriend experience</em>” adalah pengalaman umum yang dibagikan oleh sesama perempuan. Pengalaman-pengalaman yang bersifat tidak sempurna, memalukan, dan <em>nyeleneh</em> ini kemudian dituangkan di <em>second account</em>. Bisa dibilang hanya di <em>second account</em> para perempuan bisa menjadi diri mereka yang otentik tanpa embel-embel imaji perempuan ideal.",
+		]}
+	/>
+
+	<Image />
+
+	<Paragraph
+		--font-color ='#f9f9e1'
+		subjudul='Berbagi Pengalaman Intim'
+		para={[
+			"Menurut Rugun, pertemanan intim yang dibolehkan masuk ke <em>second account</em> adalah pertemanan IRL (<em>In Real Life</em>) atau dunia nyata. Ini karena relasi luring dianggap lebih terpercaya, sehingga <em>second account</em> menjadi tempat berkumpul teman-teman dekat yang hanya bisa bersua lewat media sosial. Keluarga dan teman kerja cenderung tidak dimasukkan ke <em>second account</em> karena persona yang ditampilkan di <em>second account</em> tidak sejalan dengan persona yang ditampilkan ke mereka.",
+			"Apabila imaji di <em>first account</em> dibuat sesempurna mungkin, maka di <em>second account</em> kebalikannya. Nada humor yang menjelekkan diri sendiri sering digunakan untuk menyoroti kekurangan sekaligus sebagai cara untuk <em>relatable</em>. Tak hanya itu, guyonan ini juga berfungsi untuk menandakan kedekatan.",
+			"Natasha, contohnya, menggunakan <em>second account</em> untuk menunjukkan sisi dirinya yang suka mengeluh lewat humor yang merendahkan diri. Humor mencela juga digunakan oleh pengikut yang terdiri dari teman-teman dekat ketika merespon unggahan di <em>second account</em>. Hal serupa juga dilakukan Silfi, responden lainnya. Ia mengunggah foto dengan pose dan caption sok imut untuk menandakan bahwa dirinya baik-baik saja setelah mengalami <em>mental breakdown</em> beberapa hari lalu.",
+			"Sensitifnya isu yang diposting di <em>second account</em> membuat para pemiliknya menekan angka <em>followers</em> sekecil mungkin. Apabila di akun utama mereka memiliki ratusan hingga ribuan pengikut, maka <em>second account</em> kebalikannya.",
+			"Hal ini diilustrasikan oleh Rugun lewat jumlah <em>followers</em> para responden:",
+		]}
+	/>
+	
+	<Followers 
+		data={[
+			{
+				nama:'Silfi',
+				follower:69
+			},
+			{
+				nama:'Natasha',
+				follower:55
+			},
+			{
+				nama:'Brenda',
+				follower:31
+			},
+			{
+				nama:'Fransiska',
+				follower:24
+			},
+			{
+				nama:'Tabitha',
+				follower:21
+			}
+		]}
+	/>
+
+	<Paragraph
+		--font-color ='#f9f9e1'
+		para={[
+			"Hanya orang-orang terpercaya dan sudah dikenal lama oleh pemilik yang dibolehkan mengikuti <em>second account</em>. Fitur “kunci akun” Instagram membuat pemilik bisa mengkurasi siapa yang boleh mengikuti dan melihat isi akun. Berdasarkan pengakuan responden, para pengikut umumnya adalah teman dekat sejak SMP-SMA hingga dari masa kuliah. Dalam beberapa kasus, sebagian memperbolehkan pasangan dan anggota keluarga untuk mengikuti akun mereka."
+		]}
+	/>
+
+	<Image />
+
+	<Paragraph
+		--font-color ='#f9f9e1'
+		para={[
+			"Kepercayaan menjadi token terpenting karena <em>second account</em> merupakan ruang aman para penggunanya. Mengklik tombol “<em>follow</em>” berarti meneken kontrak kepercayaan bahwa apa yang terjadi di <em>second account</em> tetap ada di <em>second account</em>.",
+			"Sayangnya ada beberapa pihak tak bertanggung jawab yang membeberkan isi akun mereka ke publik. Tak ada yang bisa dilakukan selain menegur pelaku dan menendangnya dari akun pribadi.",
+			"Di bagian akhir tulisan, Rugun mempertanyakan “rasa aman” yang didapatkan dari <em>second account</em>. Untuk menjawabnya ia beralih ke McRobbie (2015) yang menyatakan orang-orang melarikan diri dari tatapan publik tanpa henti di akun pertama. Sayang ia tidak mengelaborasikan lebih lanjut tentang rasa waswas yang dirasakan responden soal pembeberan isi <em>second account</em> ke orang luar. Padahal, hal ini cukup krusial mengingat orang-orang menggunakan <em>second account</em> karena isu privasi."
+		]}
+	/>
+
+	<Image />
+
+	<Paragraph
+		--font-color ='#f9f9e1'
+		para={[
+			"Rugun menyimpulkan fenomena <em>second account</em> di kalangan perempuan sebagai <em>spectatorial sisterhood</em> alias relasi spektatorial antara persaudaraan perempuan. Menurutnya, relasi yang terbangun antara pemilik dan pengikut merupakan relasi intim yang penuh kepercayaan dan bersifat dua arah. Kedekatan dan dinamika relasi antara pemilik akun dengan pengikutnya terasa seperti persaudaraan. "
+		]}
+	/>
+
+
 	<Credit
 		--fontfamily1={fontfamily1}
 		--font-color = {fontColor}
-		{ source } { credit }
+		{ credit }
 	/>
-	<Foot 
-		--fontfamily1={fontfamily1}
-		--font-color = {fontColor}
-		--bgColorDark = {colorBrandDarkBlue}
-	/>
+
 </main>
 
 <style>
 	.divider {
 		height:0.2rem;
 		width:60%;
-		background-color:#f9f9e1 ;
+		background-color:#f6efa6 ;
 		margin:2rem auto;
 		border-radius: 0.1rem;
 	}

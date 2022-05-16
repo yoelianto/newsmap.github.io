@@ -33,9 +33,11 @@
                 <div class="author">Oleh <strong>{ author }</strong></div>
                 <div class="tanggal">{ date }</div>
             </aside>
+            {#if subhead}
             {#each subhead as sub}
                     <div class="subhead">{@html sub}</div>
             {/each}
+            {/if}
         </div>
     </section>
 {/if}
@@ -79,8 +81,8 @@
         font-weight: 700;
         font-size: 3.1rem;
         margin: 0 auto 3rem auto;
-        font-family: 'Fondamento', cursive;
-        letter-spacing: 0.1em;
+        font-family: 'Neucha', cursive;
+        white-space: normal;
     }
     .subtitle {
         margin: -1rem auto 3rem auto;
@@ -89,13 +91,18 @@
         line-height: 3rem;
     }
     .subhead {
+        color: var(--headerBackground);
+        background-color: var(--subheadColor);
         font-weight: 300;
         margin: 0 auto 1.2rem auto;
         max-width: 700px;
         line-height: 1.8rem;
         font-family: 'Roboto Mono', monospace;
-        color: var(--subheadColor);
         white-space: normal;
+        padding:1rem;
+        border-radius: 0.5rem;
+        font-size:1.5rem;
+        width:fit-content;
     }
     .credit {
         width:100%;

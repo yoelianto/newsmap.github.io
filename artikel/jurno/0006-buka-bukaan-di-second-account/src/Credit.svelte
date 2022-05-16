@@ -18,7 +18,9 @@
     {/each} 
     
     <br>
+    {#if source}
     Sumber: { source }<br>
+    {/if}
 
 </section>
 
