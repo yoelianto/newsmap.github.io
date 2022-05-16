@@ -20,13 +20,14 @@
         margin: 4rem auto 4rem auto;
         text-align: left;
     }
-    h3{
+    h3 {
         font-weight: 700;
         font-size: 1.5rem;
         line-height: 2.4rem;
         text-align: center;
-        font-family: 'Roboto Mono';
-        color:hsl(217, 65%, 67%)
+        font-family: 'Roboto Mono', monospace;
+        color:hsl(217, 65%, 67%);
+        white-space:normal;
     }
     p {
         font-size:1.1rem;

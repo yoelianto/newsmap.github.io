@@ -83,7 +83,7 @@
         margin: 0 auto 3rem auto;
         font-family: 'Koulen', sans-serif;
         letter-spacing: 0;
-        line-height: 2rem;
+        line-height: 3.5rem;
         white-space: normal;
     }
     .subtitle {
