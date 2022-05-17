@@ -399,9 +399,12 @@
 </svg>
 <svg id='pala-koceng' bind:this={el} class='build' >
 </svg>
-<button class="snapshot" on:click={save}>
+<!--
+    <button class="snapshot" on:click={save}>
     <Fa icon={faCameraAlt} size='1.2x'/>
-</button>
+    </button>
+-->
+
 </div>
 
 
