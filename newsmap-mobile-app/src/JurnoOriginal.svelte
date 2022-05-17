@@ -12,7 +12,7 @@
     import { fileText, undo, times } from 'svelte-awesome/icons';
 
     const fetchData = (async () => {
-        const result = await get(ihttp.URI_ARTICLE_LIST, {size: 3});
+        const result = await get(ihttp.URI_ARTICLE_LIST, {size: 5});
         return await result.data;
     })()
 
@@ -154,10 +154,10 @@
             data-dragging='false'
             data-status="{i === 0 ? 'current' : 'waiting' }"
             id={i}
-            style="z-index:{3-i};
+            style="z-index:{5-i};
                 transform:{width < height && width < 991 ? `translate(${i * 10}px, ${i * 10}px)` : `translate(0px, 0px)`}">
                 <a class="card-link" href={`/article/${d.slug}`} use:link>
-                    <div class="card" style="z-index:{3-i}">
+                    <div class="card" style="z-index:{5-i}">
                         <img class="thumb" src={`${process['env']['URL_IMAGE']}article/${d.thumbnail}`} alt="" >
                         <div class="bottom"></div>
                     <div class="inner-card">

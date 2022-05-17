@@ -50,6 +50,7 @@
 <style>
     .container {
         width:88%;
+        max-width:650px;
         margin:0 auto;
     }
     h1 {
