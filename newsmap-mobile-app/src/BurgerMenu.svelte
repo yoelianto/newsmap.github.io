@@ -28,9 +28,6 @@
             <a href={`/about/`} use:link>
                 <p>Tentang Kami</p>
             </a>
-            <a href={`/contact/`} use:link>
-                <p>Kontak</p>
-            </a>
             <a href={`/redaksi/`} use:link>
                 <p>Redaksi</p>
             </a>
