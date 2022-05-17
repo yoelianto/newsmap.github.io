@@ -31,13 +31,13 @@
         card.style.transform = `translate(${position.x}px) rotate(${position.x * 0.05}deg)`
         card.style.transition =`transform 100ms ease-in-out`
 
-        if (card.id < 2) {
+        if (card.id < 4) {
             card.nextElementSibling.setAttribute('data-status', 'current');
-        } else if (card.id == 2) {
+        } else if (card.id == 4) {
             let swipe = document.querySelectorAll('.swipe')
             swipe.forEach((item, index) => {
                 item.style.transition =`transform 0ms ease-in-out`
-                item.style.transform = `translate(${index*10}px, ${index*10}px) rotate(0deg)`
+                item.style.transform = `translate(${index*5}px, ${index*5}px) rotate(0deg)`
                 item.setAttribute('data-status', 'waiting')                    
             })
             swipe[0].setAttribute('data-status', 'current')
@@ -102,13 +102,13 @@
                     event.target.style.transition =
                     `transform 100ms ease-in-out`
                     
-                    if (event.target.id < 2) {
+                    if (event.target.id < 4) {
                         event.target.nextElementSibling.setAttribute('data-status', 'current');
-                    } else if (event.target.id == 2) {
+                    } else if (event.target.id == 4) {
                         let swipe = document.querySelectorAll('.swipe')
                         swipe.forEach((item, index) => {
                             item.style.transition =`transform 0ms ease-in-out`
-                            item.style.transform = `translate(${index*10}px, ${index*10}px) rotate(0deg)`
+                            item.style.transform = `translate(${index*5}px, ${index*5}px) rotate(0deg)`
                             item.setAttribute('data-status', 'waiting')                    
                         })
                         swipe[0].setAttribute('data-status', 'current')
@@ -155,7 +155,7 @@
             data-status="{i === 0 ? 'current' : 'waiting' }"
             id={i}
             style="z-index:{5-i};
-                transform:{width < height && width < 991 ? `translate(${i * 10}px, ${i * 10}px)` : `translate(0px, 0px)`}">
+                transform:{width < height && width < 991 ? `translate(${i * 5}px, ${i * 5}px)` : `translate(0px, 0px)`}">
                 <a class="card-link" href={`/article/${d.slug}`} use:link>
                     <div class="card" style="z-index:{5-i}">
                         <img class="thumb" src={`${process['env']['URL_IMAGE']}article/${d.thumbnail}`} alt="" >
