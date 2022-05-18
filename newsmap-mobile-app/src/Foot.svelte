@@ -36,7 +36,7 @@
                                 <img class='imgthumb'
                                 src={`${process["env"]["URL_IMAGE"]}${thumbnailFolder}/${d.thumbnail}`}
                                 title={d.title} alt={d.title}
-                                onError={(e) => {e.target.onerror = null;e.target.src = process["env"]["NO_IMAGE"];}} />
+                                onerror={`this.onerror=null;this.src='${process['env']['NO_IMAGE']}';`} />
                             </div>
                             <div class="credit">
                                 <p class="author">{d.author_name}</p> <!-- harusnya {d.author_name}-->
@@ -137,6 +137,9 @@
         }
         .title {
             margin-left: 0;
+        }
+        .imgthumb {
+            width:160px;
         }
 	}
 	@media only screen /*small*/

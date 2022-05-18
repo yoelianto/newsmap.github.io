@@ -45,7 +45,7 @@
     }
     section {
         display: flex;
-        margin-left: 6%;
+        margin-left: 12%;
         margin-right: 6%;
         align-items: center;
         justify-content: space-between;
