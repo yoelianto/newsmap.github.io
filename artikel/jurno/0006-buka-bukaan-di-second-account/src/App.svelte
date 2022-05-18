@@ -58,9 +58,6 @@
 </svelte:head>
 
 <main style="background-color: {mainBackground}">
-	<Head 
-		bind:height = {height}
-	/>
 	<div class="headerilustrasi" style="margin-top:{height}px;">
 		<div id="g-Buka-Bukaan-di-Second-Account_19-box" class="ai2html">
 			<!-- Artboard: smallplus-cover -->
