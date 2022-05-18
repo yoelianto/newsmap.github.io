@@ -12,7 +12,7 @@
   const type = 'deduktif';
 
   const fetchData = (async () => {
-    const result = await get(`${ihttp.URI_ARTICLE_DETAIL}/${slug}`);
+    const result = await get(`${ihttp.URI_DEDUKTIF_DETAIL}/${slug}`);
     return await result;
   });
 

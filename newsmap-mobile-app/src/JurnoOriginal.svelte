@@ -339,7 +339,7 @@
             justify-content: space-evenly;
         }
         .card {
-            width:18vw;
+            width:13vw;
             height:35vw;
             position: relative;
             left: 0;
