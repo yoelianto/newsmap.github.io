@@ -41,22 +41,16 @@
     @media only screen /*xtrasmall*/
 	and (max-width: 575px) {
         img {
-            margin: 1.25vw;
-            height:7.5vw;
-        }
-        .container {
-            height:10vw;
+            margin:0.3rem auto;
+            height:25px;
         }
 	}
 	@media only screen /*small*/
 	and (min-width: 576px)
 	and (max-width: 767px) {
         img {
-            margin: 1.25vw;
-            height:7.5vw;
-        }
-        .container {
-            height:10vw;
+            margin: 1vw;
+            height:7vw;
         }
 	}
 	@media only screen /*medium*/
@@ -66,9 +60,6 @@
             margin: 1vw;
             height:7vw;
         }
-        .container {
-            height:9vw;
-        }
 	}
 	@media only screen /*large*/
 	and (min-width: 992px)
@@ -77,18 +68,12 @@
             margin: 1vw;
             height:7vw;
         }
-        .container {
-            height:9vw;
-        }
 	}
 	@media only screen /*xtralarge*/
 	and (min-width: 1200px) {
         img {
             margin:0.5vw;
             height:2.5vw;
-        }
-        .container {
-            height:3.5vw;
         }
 	}
 </style>

@@ -62,7 +62,7 @@
 		bind:height = {height}
 	/>
 	<div class="headerilustrasi" style="margin-top:{height}px;">
-		<div id="#g-Buka-Bukaan-di-Second-Account_19-box" class="ai2html">
+		<div id="g-Buka-Bukaan-di-Second-Account_19-box" class="ai2html">
 			<!-- Artboard: smallplus-cover -->
 			<div id="g-Buka-Bukaan-di-Second-Account_19-smallplus-cover" class="g-artboard" data-aspect-ratio="1" data-min-width="0" data-max-width="509">
 			<img style="width:100%" id="g-Buka-Bukaan-di-Second-Account_19-smallplus-cover-img" class="g-aiImg" alt="" src="./images/Buka-Bukaan-di-Second-Account_19-smallplus-cover.png"/>
@@ -162,7 +162,7 @@
 		]}
 	/>
 
-	<div id="#g-Buka-Bukaan-di-Second-Account_19-box" class="ai2html">
+	<div id="g-Buka-Bukaan-di-Second-Account_19-box" class="ai2html">
 		<!-- Artboard: smallplus-3 -->
 		<div id="g-Buka-Bukaan-di-Second-Account_19-smallplus-3" class="g-artboard" data-aspect-ratio="0.457" data-min-width="0" data-max-width="509">
 			<img style='width:100%;position:relative' id="g-Buka-Bukaan-di-Second-Account_19-smallplus-3-img" class="g-aiImg" alt="" src="./images/Buka-Bukaan-di-Second-Account_19-smallplus-3.png"/>
@@ -191,13 +191,13 @@
 				<p class="g-pstyle1">Privat</p>
 			</div>
 			<div id="g-ai15-9" class="g-Layer_1 g-aiAbs g-aiPointText" style="position:absolute;top:65.5356%;margin-top:-32.7px;left:6.8692%;width:135px;">
-			<p style:margin={0} class="g-pstyle2">Spectatorial</p>
-			<p style:margin={0} class="g-pstyle2">Girlfriend</p>
+			<p style="margin:0" class="g-pstyle2">Spectatorial</p>
+			<p style="margin:0" class="g-pstyle2">Girlfriend</p>
 				</div>
 			<div id="g-ai15-10" class="g-Layer_1 g-aiAbs g-aiPointText" style="position:absolute;top:67.7512%;margin-top:-48.3px;right:6.7517%;width:123px;">
-				<p style:margin={0} class="g-pstyle3">Common</p>
-				<p style:margin={0} class="g-pstyle3">Girlfriend</p>
-				<p style:margin={0} class="g-pstyle3">Experience</p>
+				<p style="margin:0" class="g-pstyle3">Common</p>
+				<p style="margin:0" class="g-pstyle3">Girlfriend</p>
+				<p style="margin:0" class="g-pstyle3">Experience</p>
 			</div>
 		</div>
 		
@@ -205,75 +205,75 @@
 			<div id="g-Buka-Bukaan-di-Second-Account_19-submedium-3" class="g-artboard"  data-aspect-ratio="0.638" data-min-width="510" data-max-width="689">
 		<div style=""></div>
 				<img style="width:100%"id="g-Buka-Bukaan-di-Second-Account_19-submedium-3-img" class="g-aiImg" alt="" src="./images/Buka-Bukaan-di-Second-Account_19-submedium-3.png"/>
-				<div id="g-ai16-1" style:position='absolute'class="g-Layer_1 g-aiAbs g-aiPointText" style="top:16.8008%;margin-top:-13.4px;left:9.9198%;width:119px;">
+				<div id="g-ai16-1" class="g-Layer_1 g-aiAbs g-aiPointText" style="position:absolute;top:16.8008%;margin-top:-13.4px;left:9.9198%;width:119px;">
 					<p class="g-pstyle0">First account</p>
 				</div>
-				<div id="g-ai16-2" style:position='absolute'class="g-Layer_1 g-aiAbs g-aiPointText" style="top:16.8008%;margin-top:-13.4px;right:9.9544%;width:136px;">
+				<div id="g-ai16-2" class="g-Layer_1 g-aiAbs g-aiPointText" style="position:absolute;top:16.8008%;margin-top:-13.4px;right:9.9544%;width:136px;">
 					<p class="g-pstyle1">Second account</p>
 				</div>
-				<div id="g-ai16-3" style:position='absolute'class="g-Layer_1 g-aiAbs g-aiPointText" style="top:21.9258%;margin-top:-13.4px;left:9.9198%;width:134px;">
+				<div id="g-ai16-3" class="g-Layer_1 g-aiAbs g-aiPointText" style="position:absolute;top:21.9258%;margin-top:-13.4px;left:9.9198%;width:134px;">
 					<p class="g-pstyle0">Mengkurasi diri</p>
 				</div>
-				<div id="g-ai16-4" style:position='absolute'class="g-Layer_1 g-aiAbs g-aiPointText" style="top:21.9258%;margin-top:-13.4px;right:9.8709%;width:165px;">
+				<div id="g-ai16-4" class="g-Layer_1 g-aiAbs g-aiPointText" style="position:absolute;top:21.9258%;margin-top:-13.4px;right:9.8709%;width:165px;">
 					<p class="g-pstyle1">Mengkurasi audiens</p>
 				</div>
-				<div id="g-ai16-5" style:position='absolute'class="g-Layer_1 g-aiAbs g-aiPointText" style="top:27.0508%;margin-top:-13.4px;left:9.9198%;width:94px;">
+				<div id="g-ai16-5" class="g-Layer_1 g-aiAbs g-aiPointText" style="position:absolute;top:27.0508%;margin-top:-13.4px;left:9.9198%;width:94px;">
 					<p class="g-pstyle0">Terkekang</p>
 				</div>
-				<div id="g-ai16-6" style:position='absolute'class="g-Layer_1 g-aiAbs g-aiPointText" style="top:27.0508%;margin-top:-13.4px;right:9.9789%;width:89px;">
+				<div id="g-ai16-6" class="g-Layer_1 g-aiAbs g-aiPointText" style="position:absolute;top:27.0508%;margin-top:-13.4px;right:9.9789%;width:89px;">
 					<p class="g-pstyle1">Ekspresif</p>
 				</div>
-				<div id="g-ai16-7" style:position='absolute'class="g-Layer_1 g-aiAbs g-aiPointText" style="top:32.1758%;margin-top:-13.4px;left:9.9198%;width:65px;">
+				<div id="g-ai16-7" class="g-Layer_1 g-aiAbs g-aiPointText" style="position:absolute;top:32.1758%;margin-top:-13.4px;left:9.9198%;width:65px;">
 					<p class="g-pstyle0">Publik</p>
 				</div>
-				<div id="g-ai16-8" style:position='absolute'class="g-Layer_1 g-aiAbs g-aiPointText" style="top:32.1758%;margin-top:-13.4px;right:9.8817%;width:66px;">
+				<div id="g-ai16-8" class="g-Layer_1 g-aiAbs g-aiPointText" style="position:absolute;top:32.1758%;margin-top:-13.4px;right:9.8817%;width:66px;">
 					<p class="g-pstyle1">Privat</p>
 				</div>
-				<div id="g-ai16-9" style:position='absolute'class="g-Layer_1 g-aiAbs g-aiPointText" style="top:70.7187%;margin-top:-32.7px;left:5.1926%;width:135px;">
-					<p style:margin={0} class="g-pstyle2">Spectatorial</p>
+				<div id="g-ai16-9" class="g-Layer_1 g-aiAbs g-aiPointText" style="position:absolute;top:70.7187%;margin-top:-32.7px;left:5.1926%;width:135px;">
+					<p style="margin:0" class="g-pstyle2">Spectatorial</p>
 					<p class="g-pstyle2">Girlfriend</p>
 				</div>
-				<div id="g-ai16-10" style:position='absolute'class="g-Layer_1 g-aiAbs g-aiPointText" style="top:72.6573%;margin-top:-48.3px;right:5.1187%;width:123px;">
-					<p style:margin={0} class="g-pstyle3">Common</p>
-					<p style:margin={0} class="g-pstyle3">Girlfriend</p>
-					<p style:margin={0} class="g-pstyle3">Experience</p>
+				<div id="g-ai16-10" class="g-Layer_1 g-aiAbs g-aiPointText" style="position:absolute;top:72.6573%;margin-top:-48.3px;right:5.1187%;width:123px;">
+					<p style="margin:0" class="g-pstyle3">Common</p>
+					<p style="margin:0" class="g-pstyle3">Girlfriend</p>
+					<p style="margin:0" class="g-pstyle3">Experience</p>
 				</div>
 			</div>
 		
 			<!-- Artboard: medium-3 -->
-			<div id="g-Buka-Bukaan-di-Second-Account_19-medium-3" class="g-artboard"style:position='absolute' data-aspect-ratio="0.674" data-min-width="690" data-max-width="919">
+			<div id="g-Buka-Bukaan-di-Second-Account_19-medium-3" class="g-artboard" data-aspect-ratio="0.674" data-min-width="690" data-max-width="919">
 		<div style=""></div>
 				<img style="width:100%"id="g-Buka-Bukaan-di-Second-Account_19-medium-3-img" class="g-aiImg" alt="" src="./images/Buka-Bukaan-di-Second-Account_19-medium-3.png"/>
-				<div id="g-ai17-1" style:position='absolute'class="g-Layer_1 g-aiAbs g-aiPointText" style="top:17.2492%;margin-top:-45.6px;left:11.0144%;width:179px;">
-					<p style:margin={0} class="g-pstyle0">Spectatorial</p>
-					<p style:margin={0} class="g-pstyle0">Girlfriend</p>
+				<div id="g-ai17-1" class="g-Layer_1 g-aiAbs g-aiPointText" style="position:absolute;top:17.2492%;margin-top:-45.6px;left:11.0144%;width:179px;">
+					<p style="margin:0" class="g-pstyle0">Spectatorial</p>
+					<p style="margin:0" class="g-pstyle0">Girlfriend</p>
 				</div>
-				<div id="g-ai17-2" style:position='absolute'class="g-Layer_1 g-aiAbs g-aiPointText" style="top:17.2492%;margin-top:-45.6px;right:11.0756%;width:261px;">
-					<p style:margin={0} class="g-pstyle1">Common Girlfriend</p>
-					<p style:margin={0} class="g-pstyle1">Experience</p>
+				<div id="g-ai17-2" class="g-Layer_1 g-aiAbs g-aiPointText" style="position:absolute;top:17.2492%;margin-top:-45.6px;right:11.0756%;width:261px;">
+					<p style="margin:0" class="g-pstyle1">Common Girlfriend</p>
+					<p style="margin:0" class="g-pstyle1">Experience</p>
 				</div>
-				<div id="g-ai17-3" style:position='absolute'class="g-Layer_1 g-aiAbs g-aiPointText" style="top:26.5045%;margin-top:-13.4px;left:10.8836%;width:119px;">
+				<div id="g-ai17-3" class="g-Layer_1 g-aiAbs g-aiPointText" style="position:absolute;top:26.5045%;margin-top:-13.4px;left:10.8836%;width:119px;">
 					<p class="g-pstyle2">First account</p>
 				</div>
-				<div id="g-ai17-4" style:position='absolute'class="g-Layer_1 g-aiAbs g-aiPointText" style="top:26.5045%;margin-top:-13.4px;right:10.9075%;width:136px;">
+				<div id="g-ai17-4" class="g-Layer_1 g-aiAbs g-aiPointText" style="position:absolute;top:26.5045%;margin-top:-13.4px;right:10.9075%;width:136px;">
 					<p class="g-pstyle3">Second account</p>
 				</div>
-				<div id="g-ai17-5" style:position='absolute'class="g-Layer_1 g-aiAbs g-aiPointText" style="top:30.5084%;margin-top:-13.4px;left:10.8836%;width:134px;">
+				<div id="g-ai17-5" class="g-Layer_1 g-aiAbs g-aiPointText" style="position:absolute;top:30.5084%;margin-top:-13.4px;left:10.8836%;width:134px;">
 					<p class="g-pstyle2">Mengkurasi diri</p>
 				</div>
-				<div id="g-ai17-6" style:position='absolute'class="g-Layer_1 g-aiAbs g-aiPointText" style="top:30.5084%;margin-top:-13.4px;right:10.8458%;width:165px;">
+				<div id="g-ai17-6" class="g-Layer_1 g-aiAbs g-aiPointText" style="position:absolute;top:30.5084%;margin-top:-13.4px;right:10.8458%;width:165px;">
 					<p class="g-pstyle3">Mengkurasi audiens</p>
 				</div>
-				<div id="g-ai17-7" style:position='absolute'class="g-Layer_1 g-aiAbs g-aiPointText" style="top:34.5123%;margin-top:-13.4px;left:10.8836%;width:94px;">
+				<div id="g-ai17-7" class="g-Layer_1 g-aiAbs g-aiPointText" style="position:absolute;top:34.5123%;margin-top:-13.4px;left:10.8836%;width:94px;">
 					<p class="g-pstyle2">Terkekang</p>
 				</div>
-				<div id="g-ai17-8" style:position='absolute'class="g-Layer_1 g-aiAbs g-aiPointText" style="top:34.5123%;margin-top:-13.4px;right:10.9256%;width:89px;">
+				<div id="g-ai17-8" class="g-Layer_1 g-aiAbs g-aiPointText" style="position:absolute;top:34.5123%;margin-top:-13.4px;right:10.9256%;width:89px;">
 					<p class="g-pstyle3">Ekspresif</p>
 				</div>
-				<div id="g-ai17-9" style:position='absolute'class="g-Layer_1 g-aiAbs g-aiPointText" style="top:38.5162%;margin-top:-13.4px;left:10.8836%;width:65px;">
+				<div id="g-ai17-9" class="g-Layer_1 g-aiAbs g-aiPointText" style="position:absolute;top:38.5162%;margin-top:-13.4px;left:10.8836%;width:65px;">
 					<p class="g-pstyle2">Publik</p>
 				</div>
-				<div id="g-ai17-10" style:position='absolute'class="g-Layer_1 g-aiAbs g-aiPointText" style="top:38.5162%;margin-top:-13.4px;right:10.8537%;width:66px;">
+				<div id="g-ai17-10" class="g-Layer_1 g-aiAbs g-aiPointText" style="position:absolute;top:38.5162%;margin-top:-13.4px;right:10.8537%;width:66px;">
 					<p class="g-pstyle3">Privat</p>
 				</div>
 			</div>
@@ -282,36 +282,36 @@
 			<div id="g-Buka-Bukaan-di-Second-Account_19-large-3" class="g-artboard" data-aspect-ratio="1" data-min-width="920" data-max-width="1399">
 		<div style=""></div>
 				<img style="width:100%" id="g-Buka-Bukaan-di-Second-Account_19-large-3-img" class="g-aiImg" alt="" src="./images/Buka-Bukaan-di-Second-Account_19-large-3.png"/>
-				<div id="g-ai18-1" style:position='absolute'class="g-Layer_1 g-aiAbs g-aiPointText" style="top:21.1206%;margin-top:-64.3px;left:8.8384%;width:243px;">
-					<p style:margin={0} class="g-pstyle0">Spectatorial</p>
-					<p style:margin={0} class="g-pstyle0">Girlfriend</p>
+				<div id="g-ai18-1" class="g-Layer_1 g-aiAbs g-aiPointText" style="position:absolute;top:21.1206%;margin-top:-64.3px;left:8.8384%;width:243px;">
+					<p style="margin:0" class="g-pstyle0">Spectatorial</p>
+					<p style="margin:0" class="g-pstyle0">Girlfriend</p>
 				</div>
-				<div id="g-ai18-2" style:position='absolute'class="g-Layer_1 g-aiAbs g-aiPointText" style="top:21.1206%;margin-top:-64.3px;right:8.8443%;width:359px;">
-					<p style:margin={0} class="g-pstyle1">Common Girlfriend</p>
-					<p style:margin={0} class="g-pstyle1">Experience</p>
+				<div id="g-ai18-2" class="g-Layer_1 g-aiAbs g-aiPointText" style="position:absolute;top:21.1206%;margin-top:-64.3px;right:8.8443%;width:359px;">
+					<p style="margin:0" class="g-pstyle1">Common Girlfriend</p>
+					<p style="margin:0" class="g-pstyle1">Experience</p>
 				</div>
-				<div id="g-ai18-3" style:position='absolute'class="g-Layer_1 g-aiAbs g-aiPointText" style="top:35.5497%;margin-top:-19.1px;left:8.7009%;width:159px;">
+				<div id="g-ai18-3" class="g-Layer_1 g-aiAbs g-aiPointText" style="position:absolute;top:35.5497%;margin-top:-19.1px;left:8.7009%;width:159px;">
 					<p class="g-pstyle2">First account</p>
 				</div>
-				<div id="g-ai18-4" style:position='absolute'class="g-Layer_1 g-aiAbs g-aiPointText" style="top:35.5497%;margin-top:-19.1px;right:8.6699%;width:183px;">
+				<div id="g-ai18-4" class="g-Layer_1 g-aiAbs g-aiPointText" style="position:absolute;top:35.5497%;margin-top:-19.1px;right:8.6699%;width:183px;">
 					<p class="g-pstyle3">Second account</p>
 				</div>
-				<div id="g-ai18-5" style:position='absolute'class="g-Layer_1 g-aiAbs g-aiPointText" style="top:41.854%;margin-top:-19.1px;left:8.7009%;width:180px;">
+				<div id="g-ai18-5" class="g-Layer_1 g-aiAbs g-aiPointText" style="position:absolute;top:41.854%;margin-top:-19.1px;left:8.7009%;width:180px;">
 					<p class="g-pstyle2">Mengkurasi diri</p>
 				</div>
-				<div id="g-ai18-6" style:position='absolute'class="g-Layer_1 g-aiAbs g-aiPointText" style="top:41.854%;margin-top:-19.1px;right:8.6943%;width:223px;">
+				<div id="g-ai18-6" class="g-Layer_1 g-aiAbs g-aiPointText" style="position:absolute;top:41.854%;margin-top:-19.1px;right:8.6943%;width:223px;">
 					<p class="g-pstyle3">Mengkurasi audiens</p>
 				</div>
-				<div id="g-ai18-7" style:position='absolute'class="g-Layer_1 g-aiAbs g-aiPointText" style="top:48.0497%;margin-top:-19.1px;left:8.7009%;width:123px;">
+				<div id="g-ai18-7" class="g-Layer_1 g-aiAbs g-aiPointText" style="position:absolute;top:48.0497%;margin-top:-19.1px;left:8.7009%;width:123px;">
 					<p class="g-pstyle2">Terkekang</p>
 				</div>
-				<div id="g-ai18-8" style:position='absolute'class="g-Layer_1 g-aiAbs g-aiPointText" style="top:48.0497%;margin-top:-19.1px;right:8.6711%;width:117px;">
+				<div id="g-ai18-8" class="g-Layer_1 g-aiAbs g-aiPointText" style="position:absolute;top:48.0497%;margin-top:-19.1px;right:8.6711%;width:117px;">
 					<p class="g-pstyle3">Ekspresif</p>
 				</div>
-				<div id="g-ai18-9" style:position='absolute'class="g-Layer_1 g-aiAbs g-aiPointText" style="top:54.354%;margin-top:-19.1px;left:8.7009%;width:82px;">
+				<div id="g-ai18-9" class="g-Layer_1 g-aiAbs g-aiPointText" style="position:absolute;top:54.354%;margin-top:-19.1px;left:8.7009%;width:82px;">
 					<p class="g-pstyle2">Publik</p>
 				</div>
-				<div id="g-ai18-10"style:position='absolute' class="g-Layer_1 g-aiAbs g-aiPointText" style="top:54.354%;margin-top:-19.1px;right:8.6629%;width:84px;">
+				<div id="g-ai18-10" class="g-Layer_1 g-aiAbs g-aiPointText" style="position:absolute;top:54.354%;margin-top:-19.1px;right:8.6629%;width:84px;">
 					<p class="g-pstyle3">Privat</p>
 				</div>
 			</div>
@@ -320,36 +320,36 @@
 			<div id="g-Buka-Bukaan-di-Second-Account_19-xlarge-3" class="g-artboard" data-aspect-ratio="1.778" data-min-width="1400">
 		<div style=""></div>
 				<img style="width:100%"id="g-Buka-Bukaan-di-Second-Account_19-xlarge-3-img" class="g-aiImg" alt="" src="./images/Buka-Bukaan-di-Second-Account_19-xlarge-3.png"/>
-				<div id="g-ai19-1" style:position='absolute' class="g-Layer_1 g-aiAbs g-aiPointText" style="top:20.1028%;margin-top:-64.3px;left:9.951%;width:243px;">
-					<p style:margin={0} class="g-pstyle0">Spectatorial</p>
-					<p style:margin={0} class="g-pstyle0">Girlfriend</p>
+				<div id="g-ai19-1"  class="g-Layer_1 g-aiAbs g-aiPointText" style="position:absolute;top:20.1028%;margin-top:-64.3px;left:9.951%;width:243px;">
+					<p style="margin:0" class="g-pstyle0">Spectatorial</p>
+					<p style="margin:0" class="g-pstyle0">Girlfriend</p>
 				</div>
-				<div id="g-ai19-2" style:position='absolute' class="g-Layer_1 g-aiAbs g-aiPointText" style="top:20.1028%;margin-top:-64.3px;right:9.9548%;width:359px;">
-					<p style:margin={0} class="g-pstyle1">Common Girlfriend</p>
-					<p style:margin={0} class="g-pstyle1">Experience</p>
+				<div id="g-ai19-2"  class="g-Layer_1 g-aiAbs g-aiPointText" style="position:absolute;top:20.1028%;margin-top:-64.3px;right:9.9548%;width:359px;">
+					<p style="margin:0" class="g-pstyle1">Common Girlfriend</p>
+					<p style="margin:0" class="g-pstyle1">Experience</p>
 				</div>
-				<div id="g-ai19-3" style:position='absolute' class="g-Layer_1 g-aiAbs g-aiPointText" style="top:37.3406%;margin-top:-19.1px;left:9.8606%;width:159px;">
+				<div id="g-ai19-3" class="g-Layer_1 g-aiAbs g-aiPointText" style="position:absolute;top:37.3406%;margin-top:-19.1px;left:9.8606%;width:159px;">
 					<p class="g-pstyle2">First account</p>
 				</div>
-				<div id="g-ai19-4" style:position='absolute' class="g-Layer_1 g-aiAbs g-aiPointText" style="top:37.3406%;margin-top:-19.1px;right:9.8402%;width:183px;">
+				<div id="g-ai19-4"  class="g-Layer_1 g-aiAbs g-aiPointText" style="position:absolute;top:37.3406%;margin-top:-19.1px;right:9.8402%;width:183px;">
 					<p class="g-pstyle3">Second account</p>
 				</div>
-				<div id="g-ai19-5" style:position='absolute' class="g-Layer_1 g-aiAbs g-aiPointText" style="top:44.7057%;margin-top:-19.1px;left:9.8606%;width:180px;">
+				<div id="g-ai19-5"  class="g-Layer_1 g-aiAbs g-aiPointText" style="position:absolute;top:44.7057%;margin-top:-19.1px;left:9.8606%;width:180px;">
 					<p class="g-pstyle2">Mengkurasi diri</p>
 				</div>
-				<div id="g-ai19-6" style:position='absolute' class="g-Layer_1 g-aiAbs g-aiPointText" style="top:44.7057%;margin-top:-19.1px;right:9.8562%;width:223px;">
+				<div id="g-ai19-6"  class="g-Layer_1 g-aiAbs g-aiPointText" style="position:absolute;top:44.7057%;margin-top:-19.1px;right:9.8562%;width:223px;">
 					<p class="g-pstyle3">Mengkurasi audiens</p>
 				</div>
-				<div id="g-ai19-7" style:position='absolute' class="g-Layer_1 g-aiAbs g-aiPointText" style="top:51.9438%;margin-top:-19.1px;left:9.8606%;width:123px;">
+				<div id="g-ai19-7"  class="g-Layer_1 g-aiAbs g-aiPointText" style="position:absolute;top:51.9438%;margin-top:-19.1px;left:9.8606%;width:123px;">
 					<p class="g-pstyle2">Terkekang</p>
 				</div>
-				<div id="g-ai19-8" style:position='absolute' class="g-Layer_1 g-aiAbs g-aiPointText" style="top:51.9438%;margin-top:-19.1px;right:9.841%;width:117px;">
+				<div id="g-ai19-8"  class="g-Layer_1 g-aiAbs g-aiPointText" style="position:absolute;top:51.9438%;margin-top:-19.1px;right:9.841%;width:117px;">
 					<p class="g-pstyle3">Ekspresif</p>
 				</div>
-				<div id="g-ai19-9" style:position='absolute' class="g-Layer_1 g-aiAbs g-aiPointText" style="top:59.3088%;margin-top:-19.1px;left:9.8606%;width:82px;">
+				<div id="g-ai19-9"  class="g-Layer_1 g-aiAbs g-aiPointText" style="position:absolute;top:59.3088%;margin-top:-19.1px;left:9.8606%;width:82px;">
 					<p class="g-pstyle2">Publik</p>
 				</div>
-				<div id="g-ai19-10" style:position='absolute' class="g-Layer_1 g-aiAbs g-aiPointText" style="top:59.3088%;margin-top:-19.1px;right:9.8356%;width:84px;">
+				<div id="g-ai19-10"  class="g-Layer_1 g-aiAbs g-aiPointText" style="position:absolute;top:59.3088%;margin-top:-19.1px;right:9.8356%;width:84px;">
 					<p class="g-pstyle3">Privat</p>
 				</div>
 			</div>
@@ -450,34 +450,6 @@
 		background-color:#f6efa6 ;
 		margin:2rem auto;
 		border-radius: 0.1rem;
-	}
-
-	[slot="background"] {
-		/* background-color: rgba(255,62,0,0.05); */
-		height: 100vh;
-		/* border-top: 2px solid #ff3e00;
-		border-bottom: 2px solid #ff3e00; */
-		font-size: 1.4em;
-		overflow: hidden;
-	}
-
-	[slot="foreground"] section {
-		height: 80vh;
-		color: white;
-		padding: 1em;
-		margin: 0 0 2em 0;
-	}
-
-	[slot="foreground"] p {
-		padding:1rem;
-		background-color: black;
-		width:90%;
-        max-width: 650px;
-        margin: 0 auto 0 auto;
-        text-align: left;
-		border-radius: 1rem;
-		font-family: 'Roboto-Mono', monospace;
-		white-space: normal;
 	}
 	/* main {
 		text-align: center;

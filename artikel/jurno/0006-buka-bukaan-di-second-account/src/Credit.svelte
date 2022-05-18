@@ -8,7 +8,9 @@
     <div class="section-bar"></div>
     {#each credit as person}
         <div class="profile" id="p1">
-            <div class="profpic"></div>
+            <div class="profpic">
+                <img src="./images/{person.name}.png" alt={person.name}>
+            </div>
             <div class="profname">
                 <div class="role">{ person.role }</div>
                 <div class="name">{ person.name}</div>
