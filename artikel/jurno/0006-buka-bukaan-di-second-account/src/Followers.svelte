@@ -1,7 +1,8 @@
 <script>
     export let data =[{
         nama:'',
-        follower:null
+        follower:null,
+        img:''
     }]
 </script>
 
@@ -14,7 +15,7 @@
         <div class="bottom">
             <div class="left">
                 <div class="img">
-                    <img src="" alt="">
+                    <img src={d.img} alt={d.nama}>
                 </div>
             </div>
             <div class="right">
@@ -67,10 +68,22 @@
         font-weight: bold;
     }
     .img {
-        background-color: grey;
+        background-color: white;
+        border:4px solid transparent;
+        background: linear-gradient(to right, rgb(255, 153, 0), darkorchid) border-box;
         width:100%;
         height:100%;
         border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    img {
+        background-color:#f6efa6;
+        width:92%;
+        height:92%;
+        border-radius: 50%;
+        border:4px solid white;
     }
     .top {
         border-bottom: 1px solid grey;

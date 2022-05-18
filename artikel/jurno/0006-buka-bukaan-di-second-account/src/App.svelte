@@ -62,8 +62,35 @@
 		bind:height = {height}
 	/>
 	<div class="headerilustrasi" style="margin-top:{height}px;">
-		<div id="g-Bisa-Ular-box" class="ai2html">
-			
+		<div id="#g-Buka-Bukaan-di-Second-Account_19-box" class="ai2html">
+			<!-- Artboard: smallplus-cover -->
+			<div id="g-Buka-Bukaan-di-Second-Account_19-smallplus-cover" class="g-artboard" data-aspect-ratio="1" data-min-width="0" data-max-width="509">
+			<img style="width:100%" id="g-Buka-Bukaan-di-Second-Account_19-smallplus-cover-img" class="g-aiImg" alt="" src="./images/Buka-Bukaan-di-Second-Account_19-smallplus-cover.png"/>
+			</div>
+
+			<!-- Artboard: submedium-cover -->
+			<div id="g-Buka-Bukaan-di-Second-Account_19-submedium-cover" class="g-artboard"  data-aspect-ratio="1.594" data-min-width="510" data-max-width="689">
+			<div style=""></div>
+			<img style="width:100%"  id="g-Buka-Bukaan-di-Second-Account_19-submedium-cover-img" class="g-aiImg" alt="" src="./images/Buka-Bukaan-di-Second-Account_19-submedium-cover.png"/>
+			</div>
+
+			<!-- Artboard: medium-cover -->
+			<div id="g-Buka-Bukaan-di-Second-Account_19-medium-cover" class="g-artboard"  data-aspect-ratio="2.156" data-min-width="690" data-max-width="919">
+			<div style=""></div>
+			<img style="width:100%"  id="g-Buka-Bukaan-di-Second-Account_19-medium-cover-img" class="g-aiImg" alt="" src="./images/Buka-Bukaan-di-Second-Account_19-medium-cover.png"/>
+			</div>
+
+			<!-- Artboard: large-cover -->
+			<div id="g-Buka-Bukaan-di-Second-Account_19-large-cover" class="g-artboard"  data-aspect-ratio="2.884" data-min-width="920" data-max-width="1399">
+			<div style=""></div>
+			<img style="width:100%"  id="g-Buka-Bukaan-di-Second-Account_19-large-cover-img" class="g-aiImg" alt="" src="./images/Buka-Bukaan-di-Second-Account_19-large-cover.png"/>
+			</div>
+
+			<!-- Artboard: xlarge-cover -->
+			<div id="g-Buka-Bukaan-di-Second-Account_19-xlarge-cover" class="g-artboard"  data-aspect-ratio="4.466" data-min-width="1400">
+			<div style=""></div>
+			<img style="width:100%" id="g-Buka-Bukaan-di-Second-Account_19-xlarge-cover-img" class="g-aiImg" alt="" src="./images/Buka-Bukaan-di-Second-Account_19-xlarge-cover.png"/>
+			</div>
 		</div>
 	</div>	
 	
@@ -94,7 +121,12 @@
 		]}
 	/>
 
-	<Image />
+	<Image 
+	img = {[{
+        url: './images/buka-bukaan-di-second-account_xlarge-1.png',
+        title: 'Performative Self vs Authentic Self di Media Sosial'
+    }]}
+	/>
 
 	<Paragraph
 		--font-color ='#f9f9e1'
@@ -104,7 +136,12 @@
 		]}
 	/>
 
-	<Image />
+	<Image 
+	img = {[{
+        url: './images/buka-bukaan-di-second-account_xlarge-2.png',
+        title: 'Performative Self vs Authentic Self di Media Sosial'
+    }]}
+	/>
 
 	<Paragraph
 		--font-color ='#f9f9e1'
@@ -125,7 +162,198 @@
 		]}
 	/>
 
-	<Image />
+	<div id="#g-Buka-Bukaan-di-Second-Account_19-box" class="ai2html">
+		<!-- Artboard: smallplus-3 -->
+		<div id="g-Buka-Bukaan-di-Second-Account_19-smallplus-3" class="g-artboard" data-aspect-ratio="0.457" data-min-width="0" data-max-width="509">
+			<img style='width:100%;position:relative' id="g-Buka-Bukaan-di-Second-Account_19-smallplus-3-img" class="g-aiImg" alt="" src="./images/Buka-Bukaan-di-Second-Account_19-smallplus-3.png"/>
+			<div id="g-ai15-1" class="g-Layer_1 g-aiAbs g-aiPointText" style="position:absolute;top:18.0692%;margin-top:-9.5px;left:14.0588%;width:90px;">
+				<p class="g-pstyle0">First account</p>
+			</div>
+			<div id="g-ai15-2" class="g-Layer_1 g-aiAbs g-aiPointText" style="position:absolute;top:18.0692%;margin-top:-9.5px;right:14.0302%;width:102px;">
+				<p class="g-pstyle1">Second account</p>
+			</div>
+			<div id="g-ai15-3" class="g-Layer_1 g-aiAbs g-aiPointText" style="position:absolute;top:21.3549%;margin-top:-9.5px;left:14.0588%;width:100px;">
+				<p class="g-pstyle0">Mengkurasi diri</p>
+			</div>
+			<div id="g-ai15-4" class="g-Layer_1 g-aiAbs g-aiPointText" style="position:absolute;top:21.3549%;margin-top:-9.5px;right:14.0308%;width:122px;">
+				<p class="g-pstyle1">Mengkurasi audiens</p>
+			</div>
+			<div id="g-ai15-5" class="g-Layer_1 g-aiAbs g-aiPointText" style="position:absolute;top:24.6406%;margin-top:-9.5px;left:14.0588%;width:72px;">
+				<p class="g-pstyle0">Terkekang</p>
+			</div>
+			<div id="g-ai15-6" class="g-Layer_1 g-aiAbs g-aiPointText" style="position:absolute;top:24.6406%;margin-top:-9.5px;right:14.0887%;width:69px;">
+				<p class="g-pstyle1">Ekspresif</p>
+			</div>
+			<div id="g-ai15-7" class="g-Layer_1 g-aiAbs g-aiPointText" style="position:absolute;top:27.9263%;margin-top:-9.5px;left:14.0588%;width:52px;">
+				<p class="g-pstyle0">Publik</p>
+			</div>
+			<div id="g-ai15-8" class="g-Layer_1 g-aiAbs g-aiPointText" style="position:absolute;top:27.9263%;margin-top:-9.5px;right:13.949%;width:53px;">
+				<p class="g-pstyle1">Privat</p>
+			</div>
+			<div id="g-ai15-9" class="g-Layer_1 g-aiAbs g-aiPointText" style="position:absolute;top:65.5356%;margin-top:-32.7px;left:6.8692%;width:135px;">
+			<p style:margin={0} class="g-pstyle2">Spectatorial</p>
+			<p style:margin={0} class="g-pstyle2">Girlfriend</p>
+				</div>
+			<div id="g-ai15-10" class="g-Layer_1 g-aiAbs g-aiPointText" style="position:absolute;top:67.7512%;margin-top:-48.3px;right:6.7517%;width:123px;">
+				<p style:margin={0} class="g-pstyle3">Common</p>
+				<p style:margin={0} class="g-pstyle3">Girlfriend</p>
+				<p style:margin={0} class="g-pstyle3">Experience</p>
+			</div>
+		</div>
+		
+			<!-- Artboard: submedium-3 -->
+			<div id="g-Buka-Bukaan-di-Second-Account_19-submedium-3" class="g-artboard"  data-aspect-ratio="0.638" data-min-width="510" data-max-width="689">
+		<div style=""></div>
+				<img style="width:100%"id="g-Buka-Bukaan-di-Second-Account_19-submedium-3-img" class="g-aiImg" alt="" src="./images/Buka-Bukaan-di-Second-Account_19-submedium-3.png"/>
+				<div id="g-ai16-1" style:position='absolute'class="g-Layer_1 g-aiAbs g-aiPointText" style="top:16.8008%;margin-top:-13.4px;left:9.9198%;width:119px;">
+					<p class="g-pstyle0">First account</p>
+				</div>
+				<div id="g-ai16-2" style:position='absolute'class="g-Layer_1 g-aiAbs g-aiPointText" style="top:16.8008%;margin-top:-13.4px;right:9.9544%;width:136px;">
+					<p class="g-pstyle1">Second account</p>
+				</div>
+				<div id="g-ai16-3" style:position='absolute'class="g-Layer_1 g-aiAbs g-aiPointText" style="top:21.9258%;margin-top:-13.4px;left:9.9198%;width:134px;">
+					<p class="g-pstyle0">Mengkurasi diri</p>
+				</div>
+				<div id="g-ai16-4" style:position='absolute'class="g-Layer_1 g-aiAbs g-aiPointText" style="top:21.9258%;margin-top:-13.4px;right:9.8709%;width:165px;">
+					<p class="g-pstyle1">Mengkurasi audiens</p>
+				</div>
+				<div id="g-ai16-5" style:position='absolute'class="g-Layer_1 g-aiAbs g-aiPointText" style="top:27.0508%;margin-top:-13.4px;left:9.9198%;width:94px;">
+					<p class="g-pstyle0">Terkekang</p>
+				</div>
+				<div id="g-ai16-6" style:position='absolute'class="g-Layer_1 g-aiAbs g-aiPointText" style="top:27.0508%;margin-top:-13.4px;right:9.9789%;width:89px;">
+					<p class="g-pstyle1">Ekspresif</p>
+				</div>
+				<div id="g-ai16-7" style:position='absolute'class="g-Layer_1 g-aiAbs g-aiPointText" style="top:32.1758%;margin-top:-13.4px;left:9.9198%;width:65px;">
+					<p class="g-pstyle0">Publik</p>
+				</div>
+				<div id="g-ai16-8" style:position='absolute'class="g-Layer_1 g-aiAbs g-aiPointText" style="top:32.1758%;margin-top:-13.4px;right:9.8817%;width:66px;">
+					<p class="g-pstyle1">Privat</p>
+				</div>
+				<div id="g-ai16-9" style:position='absolute'class="g-Layer_1 g-aiAbs g-aiPointText" style="top:70.7187%;margin-top:-32.7px;left:5.1926%;width:135px;">
+					<p style:margin={0} class="g-pstyle2">Spectatorial</p>
+					<p class="g-pstyle2">Girlfriend</p>
+				</div>
+				<div id="g-ai16-10" style:position='absolute'class="g-Layer_1 g-aiAbs g-aiPointText" style="top:72.6573%;margin-top:-48.3px;right:5.1187%;width:123px;">
+					<p style:margin={0} class="g-pstyle3">Common</p>
+					<p style:margin={0} class="g-pstyle3">Girlfriend</p>
+					<p style:margin={0} class="g-pstyle3">Experience</p>
+				</div>
+			</div>
+		
+			<!-- Artboard: medium-3 -->
+			<div id="g-Buka-Bukaan-di-Second-Account_19-medium-3" class="g-artboard"style:position='absolute' data-aspect-ratio="0.674" data-min-width="690" data-max-width="919">
+		<div style=""></div>
+				<img style="width:100%"id="g-Buka-Bukaan-di-Second-Account_19-medium-3-img" class="g-aiImg" alt="" src="./images/Buka-Bukaan-di-Second-Account_19-medium-3.png"/>
+				<div id="g-ai17-1" style:position='absolute'class="g-Layer_1 g-aiAbs g-aiPointText" style="top:17.2492%;margin-top:-45.6px;left:11.0144%;width:179px;">
+					<p style:margin={0} class="g-pstyle0">Spectatorial</p>
+					<p style:margin={0} class="g-pstyle0">Girlfriend</p>
+				</div>
+				<div id="g-ai17-2" style:position='absolute'class="g-Layer_1 g-aiAbs g-aiPointText" style="top:17.2492%;margin-top:-45.6px;right:11.0756%;width:261px;">
+					<p style:margin={0} class="g-pstyle1">Common Girlfriend</p>
+					<p style:margin={0} class="g-pstyle1">Experience</p>
+				</div>
+				<div id="g-ai17-3" style:position='absolute'class="g-Layer_1 g-aiAbs g-aiPointText" style="top:26.5045%;margin-top:-13.4px;left:10.8836%;width:119px;">
+					<p class="g-pstyle2">First account</p>
+				</div>
+				<div id="g-ai17-4" style:position='absolute'class="g-Layer_1 g-aiAbs g-aiPointText" style="top:26.5045%;margin-top:-13.4px;right:10.9075%;width:136px;">
+					<p class="g-pstyle3">Second account</p>
+				</div>
+				<div id="g-ai17-5" style:position='absolute'class="g-Layer_1 g-aiAbs g-aiPointText" style="top:30.5084%;margin-top:-13.4px;left:10.8836%;width:134px;">
+					<p class="g-pstyle2">Mengkurasi diri</p>
+				</div>
+				<div id="g-ai17-6" style:position='absolute'class="g-Layer_1 g-aiAbs g-aiPointText" style="top:30.5084%;margin-top:-13.4px;right:10.8458%;width:165px;">
+					<p class="g-pstyle3">Mengkurasi audiens</p>
+				</div>
+				<div id="g-ai17-7" style:position='absolute'class="g-Layer_1 g-aiAbs g-aiPointText" style="top:34.5123%;margin-top:-13.4px;left:10.8836%;width:94px;">
+					<p class="g-pstyle2">Terkekang</p>
+				</div>
+				<div id="g-ai17-8" style:position='absolute'class="g-Layer_1 g-aiAbs g-aiPointText" style="top:34.5123%;margin-top:-13.4px;right:10.9256%;width:89px;">
+					<p class="g-pstyle3">Ekspresif</p>
+				</div>
+				<div id="g-ai17-9" style:position='absolute'class="g-Layer_1 g-aiAbs g-aiPointText" style="top:38.5162%;margin-top:-13.4px;left:10.8836%;width:65px;">
+					<p class="g-pstyle2">Publik</p>
+				</div>
+				<div id="g-ai17-10" style:position='absolute'class="g-Layer_1 g-aiAbs g-aiPointText" style="top:38.5162%;margin-top:-13.4px;right:10.8537%;width:66px;">
+					<p class="g-pstyle3">Privat</p>
+				</div>
+			</div>
+		
+			<!-- Artboard: large-3 -->
+			<div id="g-Buka-Bukaan-di-Second-Account_19-large-3" class="g-artboard" data-aspect-ratio="1" data-min-width="920" data-max-width="1399">
+		<div style=""></div>
+				<img style="width:100%" id="g-Buka-Bukaan-di-Second-Account_19-large-3-img" class="g-aiImg" alt="" src="./images/Buka-Bukaan-di-Second-Account_19-large-3.png"/>
+				<div id="g-ai18-1" style:position='absolute'class="g-Layer_1 g-aiAbs g-aiPointText" style="top:21.1206%;margin-top:-64.3px;left:8.8384%;width:243px;">
+					<p style:margin={0} class="g-pstyle0">Spectatorial</p>
+					<p style:margin={0} class="g-pstyle0">Girlfriend</p>
+				</div>
+				<div id="g-ai18-2" style:position='absolute'class="g-Layer_1 g-aiAbs g-aiPointText" style="top:21.1206%;margin-top:-64.3px;right:8.8443%;width:359px;">
+					<p style:margin={0} class="g-pstyle1">Common Girlfriend</p>
+					<p style:margin={0} class="g-pstyle1">Experience</p>
+				</div>
+				<div id="g-ai18-3" style:position='absolute'class="g-Layer_1 g-aiAbs g-aiPointText" style="top:35.5497%;margin-top:-19.1px;left:8.7009%;width:159px;">
+					<p class="g-pstyle2">First account</p>
+				</div>
+				<div id="g-ai18-4" style:position='absolute'class="g-Layer_1 g-aiAbs g-aiPointText" style="top:35.5497%;margin-top:-19.1px;right:8.6699%;width:183px;">
+					<p class="g-pstyle3">Second account</p>
+				</div>
+				<div id="g-ai18-5" style:position='absolute'class="g-Layer_1 g-aiAbs g-aiPointText" style="top:41.854%;margin-top:-19.1px;left:8.7009%;width:180px;">
+					<p class="g-pstyle2">Mengkurasi diri</p>
+				</div>
+				<div id="g-ai18-6" style:position='absolute'class="g-Layer_1 g-aiAbs g-aiPointText" style="top:41.854%;margin-top:-19.1px;right:8.6943%;width:223px;">
+					<p class="g-pstyle3">Mengkurasi audiens</p>
+				</div>
+				<div id="g-ai18-7" style:position='absolute'class="g-Layer_1 g-aiAbs g-aiPointText" style="top:48.0497%;margin-top:-19.1px;left:8.7009%;width:123px;">
+					<p class="g-pstyle2">Terkekang</p>
+				</div>
+				<div id="g-ai18-8" style:position='absolute'class="g-Layer_1 g-aiAbs g-aiPointText" style="top:48.0497%;margin-top:-19.1px;right:8.6711%;width:117px;">
+					<p class="g-pstyle3">Ekspresif</p>
+				</div>
+				<div id="g-ai18-9" style:position='absolute'class="g-Layer_1 g-aiAbs g-aiPointText" style="top:54.354%;margin-top:-19.1px;left:8.7009%;width:82px;">
+					<p class="g-pstyle2">Publik</p>
+				</div>
+				<div id="g-ai18-10"style:position='absolute' class="g-Layer_1 g-aiAbs g-aiPointText" style="top:54.354%;margin-top:-19.1px;right:8.6629%;width:84px;">
+					<p class="g-pstyle3">Privat</p>
+				</div>
+			</div>
+		
+			<!-- Artboard: xlarge-3 -->
+			<div id="g-Buka-Bukaan-di-Second-Account_19-xlarge-3" class="g-artboard" data-aspect-ratio="1.778" data-min-width="1400">
+		<div style=""></div>
+				<img style="width:100%"id="g-Buka-Bukaan-di-Second-Account_19-xlarge-3-img" class="g-aiImg" alt="" src="./images/Buka-Bukaan-di-Second-Account_19-xlarge-3.png"/>
+				<div id="g-ai19-1" style:position='absolute' class="g-Layer_1 g-aiAbs g-aiPointText" style="top:20.1028%;margin-top:-64.3px;left:9.951%;width:243px;">
+					<p style:margin={0} class="g-pstyle0">Spectatorial</p>
+					<p style:margin={0} class="g-pstyle0">Girlfriend</p>
+				</div>
+				<div id="g-ai19-2" style:position='absolute' class="g-Layer_1 g-aiAbs g-aiPointText" style="top:20.1028%;margin-top:-64.3px;right:9.9548%;width:359px;">
+					<p style:margin={0} class="g-pstyle1">Common Girlfriend</p>
+					<p style:margin={0} class="g-pstyle1">Experience</p>
+				</div>
+				<div id="g-ai19-3" style:position='absolute' class="g-Layer_1 g-aiAbs g-aiPointText" style="top:37.3406%;margin-top:-19.1px;left:9.8606%;width:159px;">
+					<p class="g-pstyle2">First account</p>
+				</div>
+				<div id="g-ai19-4" style:position='absolute' class="g-Layer_1 g-aiAbs g-aiPointText" style="top:37.3406%;margin-top:-19.1px;right:9.8402%;width:183px;">
+					<p class="g-pstyle3">Second account</p>
+				</div>
+				<div id="g-ai19-5" style:position='absolute' class="g-Layer_1 g-aiAbs g-aiPointText" style="top:44.7057%;margin-top:-19.1px;left:9.8606%;width:180px;">
+					<p class="g-pstyle2">Mengkurasi diri</p>
+				</div>
+				<div id="g-ai19-6" style:position='absolute' class="g-Layer_1 g-aiAbs g-aiPointText" style="top:44.7057%;margin-top:-19.1px;right:9.8562%;width:223px;">
+					<p class="g-pstyle3">Mengkurasi audiens</p>
+				</div>
+				<div id="g-ai19-7" style:position='absolute' class="g-Layer_1 g-aiAbs g-aiPointText" style="top:51.9438%;margin-top:-19.1px;left:9.8606%;width:123px;">
+					<p class="g-pstyle2">Terkekang</p>
+				</div>
+				<div id="g-ai19-8" style:position='absolute' class="g-Layer_1 g-aiAbs g-aiPointText" style="top:51.9438%;margin-top:-19.1px;right:9.841%;width:117px;">
+					<p class="g-pstyle3">Ekspresif</p>
+				</div>
+				<div id="g-ai19-9" style:position='absolute' class="g-Layer_1 g-aiAbs g-aiPointText" style="top:59.3088%;margin-top:-19.1px;left:9.8606%;width:82px;">
+					<p class="g-pstyle2">Publik</p>
+				</div>
+				<div id="g-ai19-10" style:position='absolute' class="g-Layer_1 g-aiAbs g-aiPointText" style="top:59.3088%;margin-top:-19.1px;right:9.8356%;width:84px;">
+					<p class="g-pstyle3">Privat</p>
+				</div>
+			</div>
+	</div>
 
 	<Paragraph
 		--font-color ='#f9f9e1'
@@ -143,23 +371,28 @@
 		data={[
 			{
 				nama:'Silfi',
-				follower:69
+				follower:69,
+				img:'./images/profil-01.png'
 			},
 			{
 				nama:'Natasha',
-				follower:55
+				follower:55,
+				img:'./images/profil-02.png'
 			},
 			{
 				nama:'Brenda',
-				follower:31
+				follower:31,
+				img:'./images/profil-03.png'
 			},
 			{
 				nama:'Fransiska',
-				follower:24
+				follower:24,
+				img:'./images/profil-04.png'
 			},
 			{
 				nama:'Tabitha',
-				follower:21
+				follower:21,
+				img:'./images/profil-05.png'
 			}
 		]}
 	/>
@@ -171,7 +404,12 @@
 		]}
 	/>
 
-	<Image />
+	<Image 
+	img = {[{
+        url: './images/buka-bukaan-di-second-account_xlarge-4.png',
+        title: 'Performative Self vs Authentic Self di Media Sosial'
+    }]}
+	/>
 
 	<Paragraph
 		--font-color ='#f9f9e1'
@@ -182,7 +420,12 @@
 		]}
 	/>
 
-	<Image />
+	<Image 
+	img = {[{
+        url: './images/buka-bukaan-di-second-account_xlarge-5.png',
+        title: 'Performative Self vs Authentic Self di Media Sosial'
+    }]}
+	/>
 
 	<Paragraph
 		--font-color ='#f9f9e1'
@@ -262,593 +505,379 @@
 	.g-artboard {
 		transition: opacity 100ms ease-in-out;
 	}
-	#g-Bisa-Ular-box ,
-	#g-Bisa-Ular-box .g-artboard {
+	#g-Buka-Bukaan-di-Second-Account_19-box ,
+	#g-Buka-Bukaan-di-Second-Account_19-box .g-artboard {
 		margin:0 auto;
 	}
-	#g-Bisa-Ular-box .g-aiImg {
+	#g-Buka-Bukaan-di-Second-Account_19-box p {
+		margin:0;
+	}
+	#g-Buka-Bukaan-di-Second-Account_19-box .g-aiAbs {
+		z-index:10;
+		position:absolute;
+	}
+	#g-Buka-Bukaan-di-Second-Account_19-box .g-aiImg {
 		position:absolute;
 		top:0;
 		display:block;
 		width:100% !important;
 	}
-	#g-Bisa-Ular-smallplus-cover {
+	#g-Buka-Bukaan-di-Second-Account_19-box .g-aiSymbol {
+		position: absolute;
+		box-sizing: border-box;
+	}
+	#g-Buka-Bukaan-di-Second-Account_19-box .g-aiPointText p { white-space: nowrap; }
+	#g-Buka-Bukaan-di-Second-Account_19-smallplus-cover {
 		position:relative;
 		overflow:hidden;
 	}
-	#g-Bisa-Ular-submedium-cover {
+	#g-Buka-Bukaan-di-Second-Account_19-submedium-cover {
 		position:relative;
 		overflow:hidden;
 	}
-	#g-Bisa-Ular-medium-cover {
+	#g-Buka-Bukaan-di-Second-Account_19-medium-cover {
 		position:relative;
 		overflow:hidden;
 	}
-	#g-Bisa-Ular-large-cover {
+	#g-Buka-Bukaan-di-Second-Account_19-large-cover {
 		position:relative;
 		overflow:hidden;
 	}
-	#g-Bisa-Ular-xlarge-cover {
+	#g-Buka-Bukaan-di-Second-Account_19-xlarge-cover {
 		position:relative;
 		overflow:hidden;
 	}
-	#g-Bisa-Ular-smallplus-1 {
+	#g-Buka-Bukaan-di-Second-Account_19-smallplus-3 {
 		position:relative;
 		overflow:hidden;
 	}
-	#g-Bisa-Ular-submedium-1 {
+	#g-Buka-Bukaan-di-Second-Account_19-smallplus-3 p {
+		font-family: 'Neucha', cursive;
+		font-weight:500;
+		line-height:17px;
+		height:auto;
+		opacity:1;
+		letter-spacing:0em;
+		font-size:14px;
+		text-align:left;
+		color:rgb(21,32,43);
+		text-transform:none;
+		padding-bottom:0;
+		padding-top:0;
+		mix-blend-mode:normal;
+		font-style:normal;
+		position:static;
+	}
+	#g-Buka-Bukaan-di-Second-Account_19-smallplus-3 .g-pstyle0 {
+		height:17px;
+	}
+	#g-Buka-Bukaan-di-Second-Account_19-smallplus-3 .g-pstyle1 {
+		height:17px;
+		text-align:right;
+	}
+	#g-Buka-Bukaan-di-Second-Account_19-smallplus-3 .g-pstyle2 {
+		line-height:31px;
+		height:31px;
+		font-size:26px;
+		color:rgb(255,255,255);
+	}
+	#g-Buka-Bukaan-di-Second-Account_19-smallplus-3 .g-pstyle3 {
+		line-height:31px;
+		height:31px;
+		font-size:26px;
+		text-align:right;
+		color:rgb(255,255,255);
+	}
+	#g-Buka-Bukaan-di-Second-Account_19-submedium-3 {
 		position:relative;
 		overflow:hidden;
 	}
-	#g-Bisa-Ular-medium-1 {
+	#g-Buka-Bukaan-di-Second-Account_19-submedium-3 p {
+		font-family: 'Neucha', cursive;
+		font-weight:500;
+		line-height:24px;
+		height:auto;
+		opacity:1;
+		letter-spacing:0em;
+		font-size:20px;
+		text-align:left;
+		color:rgb(21,32,43);
+		text-transform:none;
+		padding-bottom:0;
+		padding-top:0;
+		mix-blend-mode:normal;
+		font-style:normal;
+		position:static;
+	}
+	#g-Buka-Bukaan-di-Second-Account_19-submedium-3 .g-pstyle0 {
+		height:24px;
+	}
+	#g-Buka-Bukaan-di-Second-Account_19-submedium-3 .g-pstyle1 {
+		height:24px;
+		text-align:right;
+	}
+	#g-Buka-Bukaan-di-Second-Account_19-submedium-3 .g-pstyle2 {
+		line-height:31px;
+		height:31px;
+		font-size:26px;
+		color:rgb(255,255,255);
+	}
+	#g-Buka-Bukaan-di-Second-Account_19-submedium-3 .g-pstyle3 {
+		line-height:31px;
+		height:31px;
+		font-size:26px;
+		text-align:right;
+		color:rgb(255,255,255);
+	}
+	#g-Buka-Bukaan-di-Second-Account_19-medium-3 {
 		position:relative;
 		overflow:hidden;
 	}
-	#g-Bisa-Ular-large-1 {
+	#g-Buka-Bukaan-di-Second-Account_19-medium-3 p {
+		font-family: 'Neucha', cursive;
+		font-weight:500;
+		line-height:24px;
+		height:auto;
+		opacity:1;
+		letter-spacing:0em;
+		font-size:20px;
+		text-align:left;
+		color:rgb(21,32,43);
+		text-transform:none;
+		padding-bottom:0;
+		padding-top:0;
+		mix-blend-mode:normal;
+		font-style:normal;
+		position:static;
+	}
+	#g-Buka-Bukaan-di-Second-Account_19-medium-3 .g-pstyle0 {
+		line-height:43px;
+		height:43px;
+		font-size:36px;
+	}
+	#g-Buka-Bukaan-di-Second-Account_19-medium-3 .g-pstyle1 {
+		line-height:43px;
+		height:43px;
+		font-size:36px;
+		text-align:right;
+	}
+	#g-Buka-Bukaan-di-Second-Account_19-medium-3 .g-pstyle2 {
+		height:24px;
+	}
+	#g-Buka-Bukaan-di-Second-Account_19-medium-3 .g-pstyle3 {
+		height:24px;
+		text-align:right;
+	}
+	#g-Buka-Bukaan-di-Second-Account_19-large-3 {
 		position:relative;
 		overflow:hidden;
 	}
-	#g-Bisa-Ular-xlarge-1 {
+	#g-Buka-Bukaan-di-Second-Account_19-large-3 p {
+		font-family: 'Neucha', cursive;
+		font-weight:500;
+		line-height:34px;
+		height:auto;
+		opacity:1;
+		letter-spacing:0em;
+		font-size:28px;
+		text-align:left;
+		color:rgb(21,32,43);
+		text-transform:none;
+		padding-bottom:0;
+		padding-top:0;
+		mix-blend-mode:normal;
+		font-style:normal;
+		position:static;
+	}
+	#g-Buka-Bukaan-di-Second-Account_19-large-3 .g-pstyle0 {
+		line-height:61px;
+		height:61px;
+		font-size:51px;
+	}
+	#g-Buka-Bukaan-di-Second-Account_19-large-3 .g-pstyle1 {
+		line-height:61px;
+		height:61px;
+		font-size:51px;
+		text-align:right;
+	}
+	#g-Buka-Bukaan-di-Second-Account_19-large-3 .g-pstyle2 {
+		height:34px;
+	}
+	#g-Buka-Bukaan-di-Second-Account_19-large-3 .g-pstyle3 {
+		height:34px;
+		text-align:right;
+	}
+	#g-Buka-Bukaan-di-Second-Account_19-xlarge-3 {
 		position:relative;
 		overflow:hidden;
 	}
-	#g-Bisa-Ular-smallplus-2 {
-		position:relative;
-		overflow:hidden;
+	#g-Buka-Bukaan-di-Second-Account_19-xlarge-3 p {
+		font-family: 'Neucha', cursive;
+		font-weight:500;
+		line-height:34px;
+		height:auto;
+		opacity:1;
+		letter-spacing:0em;
+		font-size:28px;
+		text-align:left;
+		color:rgb(21,32,43);
+		text-transform:none;
+		padding-bottom:0;
+		padding-top:0;
+		mix-blend-mode:normal;
+		font-style:normal;
+		position:static;
 	}
-	#g-Bisa-Ular-submedium-2 {
-		position:relative;
-		overflow:hidden;
+	#g-Buka-Bukaan-di-Second-Account_19-xlarge-3 .g-pstyle0 {
+		line-height:61px;
+		height:61px;
+		font-size:51px;
 	}
-	#g-Bisa-Ular-medium-2 {
-		position:relative;
-		overflow:hidden;
+	#g-Buka-Bukaan-di-Second-Account_19-xlarge-3 .g-pstyle1 {
+		line-height:61px;
+		height:61px;
+		font-size:51px;
+		text-align:right;
 	}
-	#g-Bisa-Ular-large-2 {
-		position:relative;
-		overflow:hidden;
+	#g-Buka-Bukaan-di-Second-Account_19-xlarge-3 .g-pstyle2 {
+		height:34px;
 	}
-	#g-Bisa-Ular-xlarge-2 {
-		position:relative;
-		overflow:hidden;
-	}
-	#g-Bisa-Ular-smallplus-3 {
-		position:relative;
-		overflow:hidden;
-	}
-	#g-Bisa-Ular-submedium-3 {
-		position:relative;
-		overflow:hidden;
-	}
-	#g-Bisa-Ular-medium-3 {
-		position:relative;
-		overflow:hidden;
-	}
-	#g-Bisa-Ular-large-3 {
-		position:relative;
-		overflow:hidden;
-	}
-	#g-Bisa-Ular-xlarge-3 {
-		position:relative;
-		overflow:hidden;
-	}
-	#g-Bisa-Ular-smallplus-4 {
-		position:relative;
-		overflow:hidden;
-	}
-	#g-Bisa-Ular-submedium-4 {
-		position:relative;
-		overflow:hidden;
-	}
-	#g-Bisa-Ular-medium-4 {
-		position:relative;
-		overflow:hidden;
-	}
-	#g-Bisa-Ular-large-4 {
-		position:relative;
-		overflow:hidden;
-	}
-	#g-Bisa-Ular-xlarge-4 {
-		position:relative;
-		overflow:hidden;
-	}
-	#g-Bisa-Ular-smallplus-5 {
-		position:relative;
-		overflow:hidden;
-	}
-	#g-Bisa-Ular-submedium-5 {
-		position:relative;
-		overflow:hidden;
-	}
-	#g-Bisa-Ular-medium-5 {
-		position:relative;
-		overflow:hidden;
-	}
-	#g-Bisa-Ular-large-5 {
-		position:relative;
-		overflow:hidden;
-	}
-	#g-Bisa-Ular-xlarge-5 {
-		position:relative;
-		overflow:hidden;
-	}
-	#g-Bisa-Ular-smallplus-6 {
-		position:relative;
-		overflow:hidden;
-	}
-	#g-Bisa-Ular-submedium-6 {
-		position:relative;
-		overflow:hidden;
-	}
-	#g-Bisa-Ular-medium-6 {
-		position:relative;
-		overflow:hidden;
-	}
-	#g-Bisa-Ular-large-6 {
-		position:relative;
-		overflow:hidden;
-	}
-	#g-Bisa-Ular-xlarge-6 {
-		position:relative;
-		overflow:hidden;
-	}
-	#g-Bisa-Ular-smallplus-7 {
-		position:relative;
-		overflow:hidden;
-	}
-	#g-Bisa-Ular-submedium-7 {
-		position:relative;
-		overflow:hidden;
-	}
-	#g-Bisa-Ular-medium-7 {
-		position:relative;
-		overflow:hidden;
-	}
-	#g-Bisa-Ular-large-7 {
-		position:relative;
-		overflow:hidden;
-	}
-	#g-Bisa-Ular-xlarge-7 {
-		position:relative;
-		overflow:hidden;
-	}
-	#g-Bisa-Ular-smallplus-8 {
-		position:relative;
-		overflow:hidden;
-	}
-	#g-Bisa-Ular-submedium-8 {
-		position:relative;
-		overflow:hidden;
-	}
-	#g-Bisa-Ular-medium-8 {
-		position:relative;
-		overflow:hidden;
-	}
-	#g-Bisa-Ular-large-8 {
-		position:relative;
-		overflow:hidden;
-	}
-	#g-Bisa-Ular-xlarge-8 {
-		position:relative;
-		overflow:hidden;
-	}
-	#g-Bisa-Ular-smallplus-9 {
-		position:relative;
-		overflow:hidden;
-	}
-	#g-Bisa-Ular-submedium-9 {
-		position:relative;
-		overflow:hidden;
-	}
-	#g-Bisa-Ular-medium-9 {
-		position:relative;
-		overflow:hidden;
-	}
-	#g-Bisa-Ular-large-9 {
-		position:relative;
-		overflow:hidden;
-	}
-	#g-Bisa-Ular-xlarge-9 {
-		position:relative;
-		overflow:hidden;
-	}
-	#g-Bisa-Ular-smallplus-10 {
-		position:relative;
-		overflow:hidden;
-	}
-	#g-Bisa-Ular-submedium-10 {
-		position:relative;
-		overflow:hidden;
-	}
-	#g-Bisa-Ular-medium-10 {
-		position:relative;
-		overflow:hidden;
-	}
-	#g-Bisa-Ular-large-10 {
-		position:relative;
-		overflow:hidden;
-	}
-	#g-Bisa-Ular-xlarge-10 {
-		position:relative;
-		overflow:hidden;
+	#g-Buka-Bukaan-di-Second-Account_19-xlarge-3 .g-pstyle3 {
+		height:34px;
+		text-align:right;
 	}
 
 	@media only screen and (max-width:509px) {
-		#g-Bisa-Ular-xlarge-cover,
-		#g-Bisa-Ular-xlarge-1,
-		#g-Bisa-Ular-xlarge-2,
-		#g-Bisa-Ular-xlarge-3,
-		#g-Bisa-Ular-xlarge-4,
-		#g-Bisa-Ular-xlarge-5,
-		#g-Bisa-Ular-xlarge-6,
-		#g-Bisa-Ular-xlarge-7,
-		#g-Bisa-Ular-xlarge-8,
-		#g-Bisa-Ular-xlarge-9,
-		#g-Bisa-Ular-xlarge-10 {
+		#g-Buka-Bukaan-di-Second-Account_19-xlarge-cover,
+		#g-Buka-Bukaan-di-Second-Account_19-xlarge-3 {
 			display:none;
 		}
 
-		#g-Bisa-Ular-large-cover,
-		#g-Bisa-Ular-large-1,
-		#g-Bisa-Ular-large-2,
-		#g-Bisa-Ular-large-3,
-		#g-Bisa-Ular-large-4,
-		#g-Bisa-Ular-large-5,
-		#g-Bisa-Ular-large-6,
-		#g-Bisa-Ular-large-7,
-		#g-Bisa-Ular-large-8,
-		#g-Bisa-Ular-large-9,
-		#g-Bisa-Ular-large-10 {
+		#g-Buka-Bukaan-di-Second-Account_19-large-cover,
+		#g-Buka-Bukaan-di-Second-Account_19-large-3 {
 			display:none;
 		}
 
-		#g-Bisa-Ular-medium-cover,
-		#g-Bisa-Ular-medium-1,
-		#g-Bisa-Ular-medium-2,
-		#g-Bisa-Ular-medium-3,
-		#g-Bisa-Ular-medium-4,
-		#g-Bisa-Ular-medium-5,
-		#g-Bisa-Ular-medium-6,
-		#g-Bisa-Ular-medium-7,
-		#g-Bisa-Ular-medium-8,
-		#g-Bisa-Ular-medium-9,
-		#g-Bisa-Ular-medium-10 {
+		#g-Buka-Bukaan-di-Second-Account_19-medium-cover,
+		#g-Buka-Bukaan-di-Second-Account_19-medium-3 {
 			display:none;
 		}
 
-		#g-Bisa-Ular-submedium-cover,
-		#g-Bisa-Ular-submedium-1,
-		#g-Bisa-Ular-submedium-2,
-		#g-Bisa-Ular-submedium-3,
-		#g-Bisa-Ular-submedium-4,
-		#g-Bisa-Ular-submedium-5,
-		#g-Bisa-Ular-submedium-6,
-		#g-Bisa-Ular-submedium-7,
-		#g-Bisa-Ular-submedium-8,
-		#g-Bisa-Ular-submedium-9,
-		#g-Bisa-Ular-submedium-10 {
+		#g-Buka-Bukaan-di-Second-Account_19-submedium-cover,
+		#g-Buka-Bukaan-di-Second-Account_19-submedium-3 {
 			display:none;
 		}
 
-		#g-Bisa-Ular-smallplus-cover,
-		#g-Bisa-Ular-smallplus-1,
-		#g-Bisa-Ular-smallplus-2,
-		#g-Bisa-Ular-smallplus-3,
-		#g-Bisa-Ular-smallplus-4,
-		#g-Bisa-Ular-smallplus-5,
-		#g-Bisa-Ular-smallplus-6,
-		#g-Bisa-Ular-smallplus-7,
-		#g-Bisa-Ular-smallplus-8,
-		#g-Bisa-Ular-smallplus-9,
-		#g-Bisa-Ular-smallplus-10 {
+		#g-Buka-Bukaan-di-Second-Account_19-smallplus-cover,
+		#g-Buka-Bukaan-di-Second-Account_19-smallplus-3 {
 			display:block;
 		}
 	}
 
 	@media only screen and (min-width:510px) and (max-width:689px) {
-		#g-Bisa-Ular-xlarge-cover,
-		#g-Bisa-Ular-xlarge-1,
-		#g-Bisa-Ular-xlarge-2,
-		#g-Bisa-Ular-xlarge-3,
-		#g-Bisa-Ular-xlarge-4,
-		#g-Bisa-Ular-xlarge-5,
-		#g-Bisa-Ular-xlarge-6,
-		#g-Bisa-Ular-xlarge-7,
-		#g-Bisa-Ular-xlarge-8,
-		#g-Bisa-Ular-xlarge-9,
-		#g-Bisa-Ular-xlarge-10 {
+		#g-Buka-Bukaan-di-Second-Account_19-xlarge-cover,
+		#g-Buka-Bukaan-di-Second-Account_19-xlarge-3 {
 			display:none;
 		}
 
-		#g-Bisa-Ular-large-cover,
-		#g-Bisa-Ular-large-1,
-		#g-Bisa-Ular-large-2,
-		#g-Bisa-Ular-large-3,
-		#g-Bisa-Ular-large-4,
-		#g-Bisa-Ular-large-5,
-		#g-Bisa-Ular-large-6,
-		#g-Bisa-Ular-large-7,
-		#g-Bisa-Ular-large-8,
-		#g-Bisa-Ular-large-9,
-		#g-Bisa-Ular-large-10 {
+		#g-Buka-Bukaan-di-Second-Account_19-large-cover,
+		#g-Buka-Bukaan-di-Second-Account_19-large-3 {
 			display:none;
 		}
 
-		#g-Bisa-Ular-medium-cover,
-		#g-Bisa-Ular-medium-1,
-		#g-Bisa-Ular-medium-2,
-		#g-Bisa-Ular-medium-3,
-		#g-Bisa-Ular-medium-4,
-		#g-Bisa-Ular-medium-5,
-		#g-Bisa-Ular-medium-6,
-		#g-Bisa-Ular-medium-7,
-		#g-Bisa-Ular-medium-8,
-		#g-Bisa-Ular-medium-9,
-		#g-Bisa-Ular-medium-10 {
+		#g-Buka-Bukaan-di-Second-Account_19-medium-cover,
+		#g-Buka-Bukaan-di-Second-Account_19-medium-3 {
 			display:none;
 		}
 
-		#g-Bisa-Ular-submedium-cover,
-		#g-Bisa-Ular-submedium-1,
-		#g-Bisa-Ular-submedium-2,
-		#g-Bisa-Ular-submedium-3,
-		#g-Bisa-Ular-submedium-4,
-		#g-Bisa-Ular-submedium-5,
-		#g-Bisa-Ular-submedium-6,
-		#g-Bisa-Ular-submedium-7,
-		#g-Bisa-Ular-submedium-8,
-		#g-Bisa-Ular-submedium-9,
-		#g-Bisa-Ular-submedium-10 {
+		#g-Buka-Bukaan-di-Second-Account_19-submedium-cover,
+		#g-Buka-Bukaan-di-Second-Account_19-submedium-3 {
 			display:block;
 		}
 
-		#g-Bisa-Ular-smallplus-cover,
-		#g-Bisa-Ular-smallplus-1,
-		#g-Bisa-Ular-smallplus-2,
-		#g-Bisa-Ular-smallplus-3,
-		#g-Bisa-Ular-smallplus-4,
-		#g-Bisa-Ular-smallplus-5,
-		#g-Bisa-Ular-smallplus-6,
-		#g-Bisa-Ular-smallplus-7,
-		#g-Bisa-Ular-smallplus-8,
-		#g-Bisa-Ular-smallplus-9,
-		#g-Bisa-Ular-smallplus-10 {
+		#g-Buka-Bukaan-di-Second-Account_19-smallplus-cover,
+		#g-Buka-Bukaan-di-Second-Account_19-smallplus-3 {
 			display:none;
 		}
 	}
 
 	@media only screen and (min-width:690px) and (max-width:919px) {
-		#g-Bisa-Ular-xlarge-cover,
-		#g-Bisa-Ular-xlarge-1,
-		#g-Bisa-Ular-xlarge-2,
-		#g-Bisa-Ular-xlarge-3,
-		#g-Bisa-Ular-xlarge-4,
-		#g-Bisa-Ular-xlarge-5,
-		#g-Bisa-Ular-xlarge-6,
-		#g-Bisa-Ular-xlarge-7,
-		#g-Bisa-Ular-xlarge-8,
-		#g-Bisa-Ular-xlarge-9,
-		#g-Bisa-Ular-xlarge-10 {
+		#g-Buka-Bukaan-di-Second-Account_19-xlarge-cover,
+		#g-Buka-Bukaan-di-Second-Account_19-xlarge-3 {
 			display:none;
 		}
 
-		#g-Bisa-Ular-large-cover,
-		#g-Bisa-Ular-large-1,
-		#g-Bisa-Ular-large-2,
-		#g-Bisa-Ular-large-3,
-		#g-Bisa-Ular-large-4,
-		#g-Bisa-Ular-large-5,
-		#g-Bisa-Ular-large-6,
-		#g-Bisa-Ular-large-7,
-		#g-Bisa-Ular-large-8,
-		#g-Bisa-Ular-large-9,
-		#g-Bisa-Ular-large-10 {
+		#g-Buka-Bukaan-di-Second-Account_19-large-cover,
+		#g-Buka-Bukaan-di-Second-Account_19-large-3 {
 			display:none;
 		}
 
-		#g-Bisa-Ular-medium-cover,
-		#g-Bisa-Ular-medium-1,
-		#g-Bisa-Ular-medium-2,
-		#g-Bisa-Ular-medium-3,
-		#g-Bisa-Ular-medium-4,
-		#g-Bisa-Ular-medium-5,
-		#g-Bisa-Ular-medium-6,
-		#g-Bisa-Ular-medium-7,
-		#g-Bisa-Ular-medium-8,
-		#g-Bisa-Ular-medium-9,
-		#g-Bisa-Ular-medium-10 {
+		#g-Buka-Bukaan-di-Second-Account_19-medium-cover,
+		#g-Buka-Bukaan-di-Second-Account_19-medium-3 {
 			display:block;
 		}
 
-		#g-Bisa-Ular-submedium-cover,
-		#g-Bisa-Ular-submedium-1,
-		#g-Bisa-Ular-submedium-2,
-		#g-Bisa-Ular-submedium-3,
-		#g-Bisa-Ular-submedium-4,
-		#g-Bisa-Ular-submedium-5,
-		#g-Bisa-Ular-submedium-6,
-		#g-Bisa-Ular-submedium-7,
-		#g-Bisa-Ular-submedium-8,
-		#g-Bisa-Ular-submedium-9,
-		#g-Bisa-Ular-submedium-10 {
+		#g-Buka-Bukaan-di-Second-Account_19-submedium-cover,
+		#g-Buka-Bukaan-di-Second-Account_19-submedium-3 {
 			display:none;
 		}
 
-		#g-Bisa-Ular-smallplus-cover,
-		#g-Bisa-Ular-smallplus-1,
-		#g-Bisa-Ular-smallplus-2,
-		#g-Bisa-Ular-smallplus-3,
-		#g-Bisa-Ular-smallplus-4,
-		#g-Bisa-Ular-smallplus-5,
-		#g-Bisa-Ular-smallplus-6,
-		#g-Bisa-Ular-smallplus-7,
-		#g-Bisa-Ular-smallplus-8,
-		#g-Bisa-Ular-smallplus-9,
-		#g-Bisa-Ular-smallplus-10 {
+		#g-Buka-Bukaan-di-Second-Account_19-smallplus-cover,
+		#g-Buka-Bukaan-di-Second-Account_19-smallplus-3 {
 			display:none;
 		}
 	}
 
 	@media only screen and (min-width:920px) and (max-width:1399px) {
-		#g-Bisa-Ular-xlarge-cover,
-		#g-Bisa-Ular-xlarge-1,
-		#g-Bisa-Ular-xlarge-2,
-		#g-Bisa-Ular-xlarge-3,
-		#g-Bisa-Ular-xlarge-4,
-		#g-Bisa-Ular-xlarge-5,
-		#g-Bisa-Ular-xlarge-6,
-		#g-Bisa-Ular-xlarge-7,
-		#g-Bisa-Ular-xlarge-8,
-		#g-Bisa-Ular-xlarge-9,
-		#g-Bisa-Ular-xlarge-10 {
+		#g-Buka-Bukaan-di-Second-Account_19-xlarge-cover,
+		#g-Buka-Bukaan-di-Second-Account_19-xlarge-3 {
 			display:none;
 		}
 
-		#g-Bisa-Ular-large-cover,
-		#g-Bisa-Ular-large-1,
-		#g-Bisa-Ular-large-2,
-		#g-Bisa-Ular-large-3,
-		#g-Bisa-Ular-large-4,
-		#g-Bisa-Ular-large-5,
-		#g-Bisa-Ular-large-6,
-		#g-Bisa-Ular-large-7,
-		#g-Bisa-Ular-large-8,
-		#g-Bisa-Ular-large-9,
-		#g-Bisa-Ular-large-10 {
+		#g-Buka-Bukaan-di-Second-Account_19-large-cover,
+		#g-Buka-Bukaan-di-Second-Account_19-large-3 {
 			display:block;
 		}
 
-		#g-Bisa-Ular-medium-cover,
-		#g-Bisa-Ular-medium-1,
-		#g-Bisa-Ular-medium-2,
-		#g-Bisa-Ular-medium-3,
-		#g-Bisa-Ular-medium-4,
-		#g-Bisa-Ular-medium-5,
-		#g-Bisa-Ular-medium-6,
-		#g-Bisa-Ular-medium-7,
-		#g-Bisa-Ular-medium-8,
-		#g-Bisa-Ular-medium-9,
-		#g-Bisa-Ular-medium-10 {
+		#g-Buka-Bukaan-di-Second-Account_19-medium-cover,
+		#g-Buka-Bukaan-di-Second-Account_19-medium-3 {
 			display:none;
 		}
 
-		#g-Bisa-Ular-submedium-cover,
-		#g-Bisa-Ular-submedium-1,
-		#g-Bisa-Ular-submedium-2,
-		#g-Bisa-Ular-submedium-3,
-		#g-Bisa-Ular-submedium-4,
-		#g-Bisa-Ular-submedium-5,
-		#g-Bisa-Ular-submedium-6,
-		#g-Bisa-Ular-submedium-7,
-		#g-Bisa-Ular-submedium-8,
-		#g-Bisa-Ular-submedium-9,
-		#g-Bisa-Ular-submedium-10 {
+		#g-Buka-Bukaan-di-Second-Account_19-submedium-cover,
+		#g-Buka-Bukaan-di-Second-Account_19-submedium-3 {
 			display:none;
 		}
 
-		#g-Bisa-Ular-smallplus-cover,
-		#g-Bisa-Ular-smallplus-1,
-		#g-Bisa-Ular-smallplus-2,
-		#g-Bisa-Ular-smallplus-3,
-		#g-Bisa-Ular-smallplus-4,
-		#g-Bisa-Ular-smallplus-5,
-		#g-Bisa-Ular-smallplus-6,
-		#g-Bisa-Ular-smallplus-7,
-		#g-Bisa-Ular-smallplus-8,
-		#g-Bisa-Ular-smallplus-9,
-		#g-Bisa-Ular-smallplus-10 {
+		#g-Buka-Bukaan-di-Second-Account_19-smallplus-cover,
+		#g-Buka-Bukaan-di-Second-Account_19-smallplus-3 {
 			display:none;
 		}
 	}
 
 	@media only screen and (min-width:1400px) {
-		#g-Bisa-Ular-xlarge-cover,
-		#g-Bisa-Ular-xlarge-1,
-		#g-Bisa-Ular-xlarge-2,
-		#g-Bisa-Ular-xlarge-3,
-		#g-Bisa-Ular-xlarge-4,
-		#g-Bisa-Ular-xlarge-5,
-		#g-Bisa-Ular-xlarge-6,
-		#g-Bisa-Ular-xlarge-7,
-		#g-Bisa-Ular-xlarge-8,
-		#g-Bisa-Ular-xlarge-9,
-		#g-Bisa-Ular-xlarge-10 {
+		#g-Buka-Bukaan-di-Second-Account_19-xlarge-cover,
+		#g-Buka-Bukaan-di-Second-Account_19-xlarge-3 {
 			display:block;
 		}
 
-		#g-Bisa-Ular-large-cover,
-		#g-Bisa-Ular-large-1,
-		#g-Bisa-Ular-large-2,
-		#g-Bisa-Ular-large-3,
-		#g-Bisa-Ular-large-4,
-		#g-Bisa-Ular-large-5,
-		#g-Bisa-Ular-large-6,
-		#g-Bisa-Ular-large-7,
-		#g-Bisa-Ular-large-8,
-		#g-Bisa-Ular-large-9,
-		#g-Bisa-Ular-large-10 {
+		#g-Buka-Bukaan-di-Second-Account_19-large-cover,
+		#g-Buka-Bukaan-di-Second-Account_19-large-3 {
 			display:none;
 		}
 
-		#g-Bisa-Ular-medium-cover,
-		#g-Bisa-Ular-medium-1,
-		#g-Bisa-Ular-medium-2,
-		#g-Bisa-Ular-medium-3,
-		#g-Bisa-Ular-medium-4,
-		#g-Bisa-Ular-medium-5,
-		#g-Bisa-Ular-medium-6,
-		#g-Bisa-Ular-medium-7,
-		#g-Bisa-Ular-medium-8,
-		#g-Bisa-Ular-medium-9,
-		#g-Bisa-Ular-medium-10 {
+		#g-Buka-Bukaan-di-Second-Account_19-medium-cover,
+		#g-Buka-Bukaan-di-Second-Account_19-medium-3 {
 			display:none;
 		}
 
-		#g-Bisa-Ular-submedium-cover,
-		#g-Bisa-Ular-submedium-1,
-		#g-Bisa-Ular-submedium-2,
-		#g-Bisa-Ular-submedium-3,
-		#g-Bisa-Ular-submedium-4,
-		#g-Bisa-Ular-submedium-5,
-		#g-Bisa-Ular-submedium-6,
-		#g-Bisa-Ular-submedium-7,
-		#g-Bisa-Ular-submedium-8,
-		#g-Bisa-Ular-submedium-9,
-		#g-Bisa-Ular-submedium-10 {
+		#g-Buka-Bukaan-di-Second-Account_19-submedium-cover,
+		#g-Buka-Bukaan-di-Second-Account_19-submedium-3 {
 			display:none;
 		}
 
-		#g-Bisa-Ular-smallplus-cover,
-		#g-Bisa-Ular-smallplus-1,
-		#g-Bisa-Ular-smallplus-2,
-		#g-Bisa-Ular-smallplus-3,
-		#g-Bisa-Ular-smallplus-4,
-		#g-Bisa-Ular-smallplus-5,
-		#g-Bisa-Ular-smallplus-6,
-		#g-Bisa-Ular-smallplus-7,
-		#g-Bisa-Ular-smallplus-8,
-		#g-Bisa-Ular-smallplus-9,
-		#g-Bisa-Ular-smallplus-10 {
+		#g-Buka-Bukaan-di-Second-Account_19-smallplus-cover,
+		#g-Buka-Bukaan-di-Second-Account_19-smallplus-3 {
 			display:none;
 		}
 	}

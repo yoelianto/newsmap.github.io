@@ -1,16 +1,27 @@
 <script>
-    // export let subjudul;
+    export let subjudul;
     export let para = [];
 </script>
 
 <section>
-    <!-- <h3>{ subjudul }</h3> -->
+    {#if subjudul}
+    <h3>{@html subjudul }</h3>
+    <div class="divider"></div>
+    {/if}
+    
     {#each para as p}
         <p>{@html p}</p>
     {/each}
 </section>
 
 <style>
+    .divider {
+		height:0.2rem;
+		width:50%;
+		background-color:#f6efa6;
+		margin:1rem auto 2rem auto;
+		border-radius: 0.1rem;
+	}
     section {
         font-family: 'Roboto';
         width:90%;
@@ -18,12 +29,16 @@
         margin: 4rem auto 4rem auto;
         text-align: left;
     }
-    /* h3{
+    h3{
         font-weight: 700;
-        font-size: 1.5rem;
+        font-size: 2rem;
         line-height: 2.4rem;
         text-align: center;
-    } */
+        font-family: 'Neucha', cursive;
+        color:#f9f9e1;
+        white-space: normal;
+        margin-bottom: 0.5rem;
+    } 
     p {
         font-size:1.1rem;
         line-height: 1.8rem;

@@ -140,11 +140,11 @@
 
 	<Image 
 		img = {[{
-			url:'a',
-			title:'a'
+			url:'./images/capture_tilik.jpg',
+			title:'Potongan adegan dari film Tilik (2018)'
 		}]}
-		imageTitle = 'lorem ipsum'
-		imageSource = 'lorem ipsum'
+		imageTitle = 'Potongan adegan dari film Tilik (2018)'
+		imageSource = 'Ravacana Films'
 		/>
 
 	<Paragraph
