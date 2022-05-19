@@ -61,7 +61,7 @@
     .container {
         width:90%;
         max-width: 650px;
-        margin: 1rem auto 1rem auto;
+        margin: 0 auto 1rem auto;
         text-align: left;
         padding-bottom: 4rem;
         padding-top: 1rem;

@@ -106,6 +106,10 @@
 </nav>
 
 <style>
+    a {
+        color:#fafafa !important;
+        text-decoration: none !important;
+    }
     .vert {
         border-left: 1px solid white;
         height:20px;
