@@ -76,12 +76,14 @@
         margin: 0 auto 3rem auto;
         font-family: 'Black Han Sans', sans-serif;
         letter-spacing: 0.1em;
+        white-space: normal;
     }
     .subtitle {
         margin: -1rem auto 3rem auto;
         color: var(--subtitleColor);
         font-size: 1.8rem;
         line-height: 3rem;
+        white-space: normal;
     }
     .subhead {
         font-weight: 300;
@@ -90,6 +92,7 @@
         line-height: 1.8rem;
         font-family: 'Roboto Mono', monospace;
         color: var(--subheadColor);
+        white-space: normal;
     }
     .credit {
         width:100%;

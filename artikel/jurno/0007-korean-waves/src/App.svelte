@@ -23,15 +23,8 @@
 
 	let credit =[{
 		role : 'Penulis',
-		name : 'Lorem Ipsum'
-		},{
-		role : 'Editor',
-		name : 'Lorem Ipsum'
-		},{
-		role : 'Periset',
-		name : 'Lorem Ipsum'
+		name : 'Ann Putri'
 		}]
-	let source = 'Sed nec pellentesque massa. Vestibulum eu sem ut dolor placerat ultricies at sit amet massa'
 
 	// let scrollytelling = [
 	// 	'Presiden Moon Jae-in kerap membawa grup-grup kpop sebagai pendamping diplomatisnya;',
@@ -61,12 +54,6 @@
 		<div id="g-ai0-1" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:8.6136%;margin-top:-15.3px;left:49.966%;margin-left:-120px;width:240px;">
 			<p class="g-pstyle0">KOREAN WAVES</p>
 		</div>
-		<div id="g-ai0-2" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:18.5861%;margin-top:-72.1px;left:29.2279%;margin-left:-62px;width:124px;">
-			<p class="g-pstyle1">한</p>
-		</div>
-		<div id="g-ai0-3" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:18.5861%;margin-top:-72.1px;left:70.6763%;margin-left:-62.5px;width:125px;">
-			<p class="g-pstyle1">류</p>
-		</div>
 	</div>
 
 	<!-- Artboard: submedium-cover -->
@@ -75,12 +62,6 @@
 		<img id="g-Korean-Waves-submedium-cover-img" class="g-aiImg" alt="" src="./images/Korean-Waves-submedium-cover.png"/>
 		<div id="g-ai1-1" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:8.7591%;margin-top:-27.1px;left:50.0031%;margin-left:-203.5px;width:407px;">
 			<p class="g-pstyle0">KOREAN WAVES</p>
-		</div>
-		<div id="g-ai1-2" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:24.0663%;margin-top:-127.5px;left:27.0127%;margin-left:-101px;width:202px;">
-			<p class="g-pstyle1">한</p>
-		</div>
-		<div id="g-ai1-3" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:24.0663%;margin-top:-127.5px;left:72.8175%;margin-left:-101.5px;width:203px;">
-			<p class="g-pstyle1">류</p>
 		</div>
 	</div>
 
@@ -91,12 +72,6 @@
 		<div id="g-ai2-1" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:7.9464%;margin-top:-37.4px;left:49.9641%;margin-left:-274px;width:548px;">
 			<p class="g-pstyle0">KOREAN WAVES</p>
 		</div>
-		<div id="g-ai2-2" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:24.3176%;margin-top:-174px;left:26.7502%;margin-left:-134px;width:268px;">
-			<p class="g-pstyle1">한</p>
-		</div>
-		<div id="g-ai2-3" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:24.3176%;margin-top:-174px;left:73.0985%;margin-left:-135px;width:270px;">
-			<p class="g-pstyle1">류</p>
-		</div>
 	</div>
 
 	<!-- Artboard: large-cover -->
@@ -106,12 +81,6 @@
 		<div id="g-ai3-1" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:8.9005%;margin-top:-45.9px;left:50.0203%;margin-left:-338.5px;width:677px;">
 			<p class="g-pstyle0">KOREAN WAVES</p>
 		</div>
-		<div id="g-ai3-2" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:31.5001%;margin-top:-216.8px;left:27.4754%;margin-left:-163.5px;width:327px;">
-			<p class="g-pstyle1">한</p>
-		</div>
-		<div id="g-ai3-3" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:31.5001%;margin-top:-216.8px;left:70.7239%;margin-left:-165px;width:330px;">
-			<p class="g-pstyle1">류</p>
-		</div>
 	</div>
 
 	<!-- Artboard: xlarge-cover -->
@@ -120,12 +89,6 @@
 		<img id="g-Korean-Waves-xlarge-cover-img" class="g-aiImg" alt="" src="./images/Korean-Waves-xlarge-cover.png"/>
 		<div id="g-ai4-1" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:12.3028%;margin-top:-45.9px;left:50.0134%;margin-left:-338.5px;width:677px;">
 			<p class="g-pstyle0">KOREAN WAVES</p>
-		</div>
-		<div id="g-ai4-2" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:38.8319%;margin-top:-216.8px;left:35.7217%;margin-left:-163.5px;width:327px;">
-			<p class="g-pstyle1">한</p>
-		</div>
-		<div id="g-ai4-3" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:38.8319%;margin-top:-216.8px;left:64.1422%;margin-left:-165px;width:330px;">
-			<p class="g-pstyle1">류</p>
 		</div>
 	</div>
 	</div>
@@ -144,8 +107,8 @@
 
 		Namun yang membuat kpop jauh lebih menarik dari dunia hiburan lainnya adalah dukungan negara yang begitu besar.'
 
-		author='Volutpat Sapien'
-		date=''		
+		author='Ann Putri'
+		date='10 Mei 2022'		
 	/>
 
 	<div class="divider"></div>
@@ -499,7 +462,7 @@
 	/>
 	<Credit 
 		--font-color ='#f9f9e1'
-		{ source } { credit }
+		{ credit }
 	/>
 </main>
 

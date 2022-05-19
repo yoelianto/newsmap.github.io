@@ -1,13 +1,17 @@
 <script>
+
     export let credit=[];
     export let source;
+
 </script>
 
 <section>
     <div class="section-bar"></div>
     {#each credit as person}
         <div class="profile" id="p1">
-            <div class="profpic"></div>
+            <div class="profpic">
+                <img src="./images/{person.name}.png" alt={person.name}>
+            </div>
             <div class="profname">
                 <div class="role">{ person.role }</div>
                 <div class="name">{ person.name}</div>
@@ -17,7 +21,10 @@
     {/each} 
     
     <br>
+    {#if source}
     Sumber: { source }<br>
+    {/if}
+    
 
 </section>
 
@@ -29,6 +36,7 @@ section {
     width:90%;
     max-width: 650px;
     margin: auto;
+    padding-bottom: 2rem;
 }
 
 .profile {
@@ -36,7 +44,16 @@ section {
     width: 80%;
     margin: auto;
 }
-
+img {
+    width:100%;
+    border-radius: 50%;
+}
+.role {
+    font-family: 'Roboto', sans-serif;
+}
+.name {
+    font-family: 'Roboto Mono', monospace;
+}
 .profile > div {
     margin:1rem;
 }
@@ -54,7 +71,7 @@ section {
 
 .name {
     font-size: 2rem;
-    font-family: "Noto Sans", sans-serif;
+    font-family: var(--fontfamily1);
     font-weight: 700;
 }
 
@@ -102,7 +119,7 @@ section {
     
     .name {
         font-size: 1.2rem;
-        font-family: "Noto Sans", sans-serif;
+        font-family: "Roboto Mono", monospace;
         font-weight: 700;
     }
 
