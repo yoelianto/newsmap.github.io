@@ -25,7 +25,6 @@
 
     const fetchData = (async () => {
         const result = await get(ihttp.URI_NEWS_TOP_ENTITY, {size:size, from:yesterday, to:today});
-        console.log(result)
         //percentage calculation
         result.data.forEach((data) => {
             data.percent = Math.ceil((data.positive-data.negative-data.neutral)/(data.positive+data.negative+data.neutral)*100)
@@ -38,7 +37,6 @@
                 data.color = "hsl(0, 82%, 64%)"
             }
         });
-        console.log(result.data)
         return await result.data;
     })()
 

@@ -5,14 +5,12 @@
 
     const fetchData = (async () => {
         const result = await get(ihttp.URI_LAST_TOPIC, { size: 10 });
-        // console.log(result.data)
         result.data.forEach((d) => {
             d.width = Math.random() * 10 + 15
         })
         return await result.data;
     })()
 
-     $: console.log(fetchData)
 
     export let margin;
 </script>

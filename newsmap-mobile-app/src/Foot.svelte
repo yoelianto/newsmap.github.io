@@ -1,7 +1,6 @@
 <script>
 
     export let data = {}
-    console.log('footer', data)
 
     import { get } from "./api";
     import { link } from "svelte-spa-router";
@@ -11,11 +10,9 @@
     export let type = null;
     export let thumbnailFolder = "";
 
-    console.log(type)
 
     const fetchData = (async () => {
         const result = await get(uri, params);
-        console.log(result)
         return await result.data;
     });
 

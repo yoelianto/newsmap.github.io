@@ -363,10 +363,7 @@
 
     function save() {
         let a = document.querySelector('#pala-koceng')
-        console.log(a)
-        console.log(container)
         html2canvas(a).then(canvas => {
-            console.log(canvas)
         container.appendChild(canvas)
     }); 
     }

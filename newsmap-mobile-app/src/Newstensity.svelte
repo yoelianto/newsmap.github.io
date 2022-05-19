@@ -85,7 +85,6 @@
         let statement = statementlist.data
 
         let allResult = [{...filter,result2,...result3, statement}]
-        console.log(allResult)
         return allResult
     })
 
@@ -103,9 +102,7 @@
         })
 
         let news = newsList.data
-        //console.log(statResult)
         let allResult = [...filter, news, ...result.data ]
-        console.log(allResult)
         return allResult
     })
     

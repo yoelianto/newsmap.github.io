@@ -6,7 +6,6 @@
 
     const fetchData = (async () => {
         const result = await get(ihttp.URI_SETTING, { group:'about' });
-        console.log(result)
         return await result;
     });
 

@@ -15,13 +15,13 @@
 
     const fetchData = (async () => {
         const result = await get(`${ihttp.URI_ARTICLE_DETAIL}/${slug}`);
-        console.log(result)
         return await result;
     });
     let height;
     let page= 'artikel'
 
     url = document.location.href
+    let urlReplace = url.replace('#/','')
 
     $: slug, fetchData().then((data) => {return title = data.title})
 
