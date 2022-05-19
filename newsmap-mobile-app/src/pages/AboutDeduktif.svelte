@@ -3,6 +3,7 @@
     import * as ihttp from "../constants/initialHttp";
     import Head from '../Head.svelte';
     import Footer from '../Footer.svelte';
+    import { afterUpdate } from 'svelte';
 
     const fetchData = (async () => {
         const result = await get(ihttp.URI_SETTING, { group:'about' });
@@ -12,10 +13,19 @@
     let height;
     let page= 'indeksdeduktif'
 
+    afterUpdate(()=> {
+        for(const element of document.body.querySelectorAll('main')) {
+			if(element.nextElementSibling) {
+				element.nextElementSibling.remove();
+			}
+		}
+        animateScroll.scrollToTop()
+    })
+
 </script>
 
 <svelte:head>
-    <title>Tentang Kami</title>
+    <title>Tentang Deduktif</title>
 </svelte:head>
 <main>
     <Head 

@@ -3,7 +3,7 @@
     import * as ihttp from "../constants/initialHttp";
     import Head from '../Head.svelte'
     import * as animateScroll from 'svelte-scrollto'
-    import {onMount} from 'svelte';
+    import {afterUpdate,onMount} from 'svelte';
     import { link } from "svelte-spa-router";
 
     let height
@@ -32,13 +32,24 @@
     onMount(()=>{
         animateScroll.scrollToTop()
     })
+    
+    afterUpdate(()=> {
+        for(const element of document.body.querySelectorAll('main')) {
+			if(element.nextElementSibling) {
+				element.nextElementSibling.remove();
+			}
+		}
+        animateScroll.scrollToTop()
+    })
+
 </script>
 
 <svelte:head>
     <title>Deduktif - Indeks</title>
 </svelte:head>
 
-<Head 
+<main>
+    <Head 
     bind:height
     bind:page
     />
@@ -86,6 +97,8 @@
     <p>an error occured</p>
     {/await}
 </article>
+</main>
+
 
 <style>
     .placeholder {
