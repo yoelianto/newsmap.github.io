@@ -53,7 +53,7 @@ const move = direction => {
 
     <div class="slider-container">
         <div class="slider" style="transform: translateX({offset}px);">
-            {#if title != 'INFOGRAM'}
+            {#if title != 'INFOSIGHT'}
             {#await fetchData}
                 {#each placeholder as d}
                     <div class="news">
@@ -77,7 +77,7 @@ const move = direction => {
             {:catch error}
                 <p>An error occurred!</p>
             {/await}
-            {:else if title === 'INFOGRAM'}
+            {:else if title === 'INFOSIGHT'}
             {#await fetchInfogramData}
                 {#each placeholder as d}
                     <div class="news">

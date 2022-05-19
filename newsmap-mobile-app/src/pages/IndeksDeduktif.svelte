@@ -33,7 +33,7 @@
 </script>
 
 <svelte:head>
-    <title>Infogram - Indeks</title>
+    <title>Deduktif - Indeks</title>
 </svelte:head>
 
 <Head 
