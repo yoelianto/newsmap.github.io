@@ -31,7 +31,7 @@
 </script>
 
 <svelte:head>
-    <title>Infogram - Indeks</title>
+    <title>Infosight - Indeks</title>
 </svelte:head>
 
 <Head 
@@ -39,9 +39,9 @@
     page='indeks'
     />
 <article style="margin-top:{height}px">
-    <h1>INFOGRAM</h1>
+    <h1>INFOSIGHT</h1>
     <form>
-        <input type="search" placeholder="Cari Artikel Infogram..." bind:value={searchValue}>
+        <input type="search" placeholder="Cari Artikel Infosight..." bind:value={searchValue}>
         <button type="submit" on:click={search}>Search</button>
     </form>
     {#await dataPromise}

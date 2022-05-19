@@ -39,7 +39,7 @@
                     <p>Deduktif</p>
                 </a>
                 <a href={`/infogram/`} use:link>
-                    <p>Infogram</p>
+                    <p>Infosight</p>
                 </a>
     
                 
@@ -74,7 +74,7 @@
         </div>
         <div class="bottom">
             <p>
-                Nestara Teknologi Teradata <Fa icon={faCopyright} /> {dateString}
+                PT Ide Digital Inventura <Fa icon={faCopyright} /> {dateString}
             </p>
         </div>
     </section>

@@ -156,7 +156,7 @@
 			--color-brand-darkblue={colorBrandDarkBlue}
 		/>
 		<News 
-			title='INFOGRAM'  
+			title='INFOSIGHT'  
 			--fontfamily1 ={fontfamily1}
 			--fontfamily2={fontfamily2}
 			params={params}
