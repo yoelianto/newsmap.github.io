@@ -61,31 +61,32 @@
 	<div class="headerilustrasi" style="margin-top:{height}px;">
 		<div id="g-Buka-Bukaan-di-Second-Account_19-box" class="ai2html">
 			<!-- Artboard: smallplus-cover -->
-			<div id="g-Buka-Bukaan-di-Second-Account_19-smallplus-cover" class="g-artboard" data-aspect-ratio="1" data-min-width="0" data-max-width="509">
+			<div style="height:fit-content" id="g-Buka-Bukaan-di-Second-Account_19-smallplus-cover" class="g-artboard" data-aspect-ratio="1" data-min-width="0" data-max-width="509">
+			<div style="padding: 0 0 100% 0;"></div>
 			<img style="width:100%" id="g-Buka-Bukaan-di-Second-Account_19-smallplus-cover-img" class="g-aiImg" alt="" src="./images/Buka-Bukaan-di-Second-Account_19-smallplus-cover.png"/>
 			</div>
 
 			<!-- Artboard: submedium-cover -->
 			<div id="g-Buka-Bukaan-di-Second-Account_19-submedium-cover" class="g-artboard"  data-aspect-ratio="1.594" data-min-width="510" data-max-width="689">
-			<div style=""></div>
+			<div style="padding: 0 0 {100/1.594}% 0;"></div>
 			<img style="width:100%"  id="g-Buka-Bukaan-di-Second-Account_19-submedium-cover-img" class="g-aiImg" alt="" src="./images/Buka-Bukaan-di-Second-Account_19-submedium-cover.png"/>
 			</div>
 
 			<!-- Artboard: medium-cover -->
 			<div id="g-Buka-Bukaan-di-Second-Account_19-medium-cover" class="g-artboard"  data-aspect-ratio="2.156" data-min-width="690" data-max-width="919">
-			<div style=""></div>
+			<div style="padding: 0 0 {100/2.156}% 0;"></div>
 			<img style="width:100%"  id="g-Buka-Bukaan-di-Second-Account_19-medium-cover-img" class="g-aiImg" alt="" src="./images/Buka-Bukaan-di-Second-Account_19-medium-cover.png"/>
 			</div>
 
 			<!-- Artboard: large-cover -->
 			<div id="g-Buka-Bukaan-di-Second-Account_19-large-cover" class="g-artboard"  data-aspect-ratio="2.884" data-min-width="920" data-max-width="1399">
-			<div style=""></div>
+			<div style="padding: 0 0 {100/2.884}% 0;"></div>
 			<img style="width:100%"  id="g-Buka-Bukaan-di-Second-Account_19-large-cover-img" class="g-aiImg" alt="" src="./images/Buka-Bukaan-di-Second-Account_19-large-cover.png"/>
 			</div>
 
 			<!-- Artboard: xlarge-cover -->
 			<div id="g-Buka-Bukaan-di-Second-Account_19-xlarge-cover" class="g-artboard"  data-aspect-ratio="4.466" data-min-width="1400">
-			<div style=""></div>
+			<div style="padding: 0 0 {100/4.466}% 0;"></div>
 			<img style="width:100%" id="g-Buka-Bukaan-di-Second-Account_19-xlarge-cover-img" class="g-aiImg" alt="" src="./images/Buka-Bukaan-di-Second-Account_19-xlarge-cover.png"/>
 			</div>
 		</div>

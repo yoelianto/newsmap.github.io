@@ -53,6 +53,10 @@ section {
     height: 100px;
     border-radius: 50%;
 }
+img {
+    width:100%;
+    border-radius: 50%;
+}
 
 .profname {
     margin-left: 30px!important;
