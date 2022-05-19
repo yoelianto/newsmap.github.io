@@ -85,6 +85,7 @@ figure {
 }
 
 .quotes-right {
+    width:90%;
     max-width:500px;    
     display: flex;
     flex-direction: column;
@@ -125,6 +126,7 @@ figure {
     font-size: 1.2rem;
     font-weight: 400;
     color: hsl(212, 18%, 19%);
+    white-space: normal;
 }
 
 .quotes-bold {
@@ -135,6 +137,7 @@ figure {
     padding: 0.5rem;
     /*background-color: lightsteelblue;*/
     padding-left: 1rem;
+    white-space: normal;
 }
 @media screen and (max-width: 689px) {
 

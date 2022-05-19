@@ -81,6 +81,7 @@
         font-size: 3rem;
         margin: 0 auto 1rem auto;
         font-family: 'Mulish', sans-serif;
+        white-space: normal;
     }
     .subtitle {
         margin: 0rem auto 3rem auto;
