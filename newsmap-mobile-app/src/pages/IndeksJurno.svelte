@@ -3,7 +3,8 @@
     import * as ihttp from "../constants/initialHttp";
     import Head from '../Head.svelte'
     import * as animateScroll from 'svelte-scrollto'
-    import {onMount} from 'svelte'
+    import {onMount} from 'svelte';
+    import { link } from "svelte-spa-router";
 
     let height
     let placeholder = [1,2,3,4,5,6]
@@ -61,10 +62,10 @@
     {:then data}
         {#if data.length > 0}
         {#each data as d}
-        <a style='cursor:pointer' href='/'>
+        <a style='cursor:pointer' href={`/article/${d.slug}`} use:link>
             <div class="article">
                 <div class="left">
-                    <img src={`${process['env']['URL_IMAGE']}news/${d.thumbnail}`} alt={d.title} />
+                    <img src={`${process['env']['URL_IMAGE']}article/${d.thumbnail}`} alt={d.title} />
                 </div>
                 <div class="credit">
                     <p class="author">{d.author_name}</p>

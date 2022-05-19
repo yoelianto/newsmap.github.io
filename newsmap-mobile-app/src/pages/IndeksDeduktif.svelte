@@ -3,7 +3,8 @@
     import * as ihttp from "../constants/initialHttp";
     import Head from '../Head.svelte'
     import * as animateScroll from 'svelte-scrollto'
-    import {onMount} from 'svelte'
+    import {onMount} from 'svelte';
+    import { link } from "svelte-spa-router";
 
     let height
 
@@ -62,7 +63,7 @@
     {:then data}
         {#if data.length > 0}
         {#each data as d}
-        <a style='cursor:pointer' href='/'>
+        <a style='cursor:pointer' href={`/deduktif/${d.slug}`} use:link>
             <div class="article">
                 <div class="left">
                     <img src={`${process['env']['URL_IMAGE']}deduktif/${d.thumbnail}`} alt={d.title} />
