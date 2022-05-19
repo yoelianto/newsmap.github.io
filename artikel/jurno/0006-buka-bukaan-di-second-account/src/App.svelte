@@ -492,10 +492,6 @@
 		display:block;
 		width:100% !important;
 	}
-	#g-Buka-Bukaan-di-Second-Account_19-box .g-aiSymbol {
-		position: absolute;
-		box-sizing: border-box;
-	}
 	#g-Buka-Bukaan-di-Second-Account_19-box .g-aiPointText p { white-space: nowrap; }
 	#g-Buka-Bukaan-di-Second-Account_19-smallplus-cover {
 		position:relative;

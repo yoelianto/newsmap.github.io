@@ -6,6 +6,7 @@
 	import Quote from './Quote.svelte';
 	import Image from './Image.svelte';
 	import Credit from './Credit.svelte';
+	import Timeline from './Timeline.svelte';
 
 	//Main Font
 	let fontfamily1 = "Roboto Mono"
@@ -608,6 +609,38 @@
 		"Pandemi memang memukul bisnis kartu kredit. BI sebetulnya telah berusaha mengungkit kinerja bisnis kartu kredit melalui pemangkasan suku bunga. Tercatat BI dua kali melakukan hal itu, yakni pada 1 Mei 2020 dengan memangkas batas atas suku bunga dari 2,25% menjadi 2% dan pada 1 Juli 2021 menjadi 1,75%.",
 		"Kendatipun, kebijakan BI tersebut rupanya belum mampu mengungkit bisnis kartu kredit secara signifikan. Sepanjang 2021 volume transaksi hanya naik 3% dibandingkan tahun sebelumnya menjadi 281,90 juta kali. Nilai transaksi hanya naik 2% sepanjang 2021 dibandingkan tahun sebelumnya menjadi Rp244.515,98 miliar.",
 		"Melempemnya industri kartu kredit inilah yang barangkali menjadi alasan Citibank menghentikan lini bisnis consumer banking pada April tahun lalu, setelah beroperasi lebih kurang 53 tahun sejak 1968.  Kartu kredit adalah jualan utama Citibank di pasar ritel nasabah. Citibank adalah perusahaan pertama yang mengenalkan kartu kredit ke masyarakat Indonesia pada 1989 lalu."
+		]}
+	/>
+
+	<Timeline
+		list={[
+			{
+				tahun:'1968',
+				berita:'Citibank hadir di Indonesia',
+				img:'./images/Icon 1.png',
+				opacity:0.5
+			},
+			{
+				tahun:'1989',
+				berita:'Kartu kredit pertama di Indonesia',
+				detail:'Citibank hadir sebagai pionir sebagai perusahaan pertama yang mengenalkan kartu kredit ke pasar ritel nasabah masyarakat Indonesia',
+				img:'./images/Icon 2.png',
+				opacity:0.5
+			},
+			{
+				tahun:'2019',
+				berita:'Bank dengan pengedar kartu kredit terbesar',
+				detail:'Reputasi tersebut berdasarkan 1,2 Juta kartu yang diedarkan, menobatkan Citibank sebagai bank dengan distribusi kartu kredit terbesar di Indonesia',
+				img:'./images/Icon 3.png',
+				opacity:0.5
+			},
+			{
+				tahun:'2021',
+				berita:'Menghentikan Lini Bisnis Consumer Banking',
+				detail:'Melempemnya industri kartu kredit menjadi alasan Citibank menutup lini bisnis tersebut dan berfokus ke kredit insitutional yang lebih potensial',
+				img:'./images/Icon 4.png',
+				opacity:0.5
+			}
 		]}
 	/>
 
