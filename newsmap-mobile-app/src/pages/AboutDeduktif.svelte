@@ -4,6 +4,7 @@
     import Head from '../Head.svelte';
     import Footer from '../Footer.svelte';
     import { afterUpdate } from 'svelte';
+    import * as animateScroll from "svelte-scrollto";
 
     const fetchData = (async () => {
         const result = await get(ihttp.URI_SETTING, { group:'about' });
