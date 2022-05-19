@@ -155,6 +155,13 @@
 			--fontfamily2={fontfamily2}
 			--color-brand-darkblue={colorBrandDarkBlue}
 		/>
+		<div class="discord-container">
+			<h1 class='title'>KLUB SOSIAL JURNO</h1>
+
+			<iframe class='discord' title='Klub Sosial Jurno' src="https://discord.com/widget?id=947748065794736168&theme=dark" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+		</div>
+		
+		
 		<News 
 			title='INFOSIGHT'  
 			--fontfamily1 ={fontfamily1}
@@ -202,6 +209,22 @@
 </main>
 
 <style>
+	.title {
+        font-family: 'Roboto Mono', monospace;
+        font-weight:700;
+        font-size:1.5rem;
+        color: #242053;
+    }
+	.discord-container {
+		width:88%;
+		max-width: 650px;
+		
+		margin: 0 auto;
+	}
+	.discord {
+		width:100%;
+		height: 400px;
+	}
 	main {
 		margin: 0 auto;
 		overflow-x: hidden;	
@@ -231,6 +254,14 @@
 		.headlines {
 			flex-direction: column;
 		}
+		.title {
+            font-size:2rem;
+        }
+		.discord-container {
+            max-width:900px;
+            width:90%;
+            margin:1rem auto;
+        }
 	}
 	@media only screen /*medium*/
 	and (min-width: 768px)
@@ -238,17 +269,42 @@
 		.headlines {
 			flex-direction: column;
 		}
+		.title {
+            font-size:2rem;
+        }
+		.discord-container {
+            max-width:900px;
+            width:90%;
+            margin:1rem auto;
+        }
 	}
 	@media only screen /*large*/
 	and (min-width: 992px)
 	and (max-width: 1199px) {
-
+		.title {
+            font-size:2rem;
+        }
+		.discord-container {
+            max-width:800px;
+            width:80%;
+            margin:1rem auto;
+        }
 	}
 	@media only screen /*xtralarge*/
 	and (min-width: 1200px) {
 		.headlines {
 			margin-top:8vw;
 		}
+		.title {
+            font-size:2rem;
+            margin-left:0;
+            margin-bottom:1rem;
+        }
+        .discord-container {
+            max-width:1100px;
+            width:70.4%;
+            margin:1rem auto 0 auto;
+        }
 	}
 
 </style>

@@ -14,6 +14,8 @@
     import AboutUs from "./pages/AboutUs.svelte";
     import Contact from "./pages/Contact.svelte";
     import Redaksi from "./pages/Redaksi.svelte";
+    import RedaksiDeduktif from "./pages/RedaksiDeduktif.svelte";
+    import AboutDeduktif from "./pages/AboutDeduktif.svelte";
     import Fa from 'svelte-fa'
     import { faSpinner } from '@fortawesome/free-solid-svg-icons'
 
@@ -27,6 +29,8 @@
         "/about/": AboutUs,
         "/contact/":Contact,
         "/redaksi/":Redaksi,
+        "/deduktif/redaksi/":RedaksiDeduktif,
+        "/deduktif/about/":AboutDeduktif,
         "/article/:slug/:custom?": JurnoDetail,
         "/deduktif/:slug/:custom?": DeduktifDetail,
         "/rewara/:slug/:custom?": RewaraDetail,

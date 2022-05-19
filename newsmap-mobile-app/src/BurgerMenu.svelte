@@ -6,6 +6,7 @@
     import { link } from "svelte-spa-router";
 
     export let burgerIn = false
+    export let page
 
     const burgerMenuOut = () => {
         burgerIn = false
@@ -13,6 +14,7 @@
 </script>
 
 <nav style='left:{ burgerIn ? '0px' : '-160px'}'>
+    {#if page == 'indeks'}
     <section>
         <div
             class="close"
@@ -78,6 +80,115 @@
             </div>
         </div>
     </section>
+    {:else if page == 'deduktif'}
+    <section>
+        <div
+            class="close"
+            on:click={burgerMenuOut}
+        >
+            <Icon
+                data={angleLeft}
+                style='color:#fafafa'
+                scale ={1.5}
+            />
+        </div>
+        <div class="menu">
+            <a href={`/deduktif/`} use:link>
+                <p>Laporan</p>
+            </a>
+            <a href={`/deduktif/about`} use:link>
+                <p>Tentang Kami</p>
+            </a>
+            <a href={`/deduktif/redaksi`} use:link>
+                <p>Redaksi</p>
+            </a>
+
+            <hr class='rounded'>
+            
+            <div class="sosmed">
+                <a href='https://www.instagram.com/jurnoid/'> <!-- INSTAGRAM LINK HERE -->
+                    <div class="sm ig">
+                        <Fa icon={faInstagram} />
+                    </div>
+                </a>
+                <a href=''> <!-- FACEBOOK LINK HERE -->
+                    <div class="sm fb">
+                        <Fa icon={faFacebook} />
+                    </div>
+                </a>
+                <a href='https://twitter.com/jurno_id' > <!-- TWITTER LINK HERE -->
+                    <div class="sm tw">
+                        <Fa icon={faTwitter} />
+                    </div>
+                </a>
+                <a href='https://www.youtube.com/channel/UCSGTUIGbrpONOTayMXAIcqw'> <!-- YOUTUBE LINK HERE -->
+                    <div class="sm yt">
+                        <Fa icon={faYoutube} />
+                    </div>
+                </a>
+                <a href='www.tiktok.com/@jurnoid'> <!-- TIKTOK LINK HERE -->
+                    <div class="sm tt">
+                        <Fa icon={faTiktok} />
+                    </div>
+                </a> 
+            </div>
+        </div>
+    </section>
+    {:else if page == 'indeksdeduktif'}
+    <section>
+        <div
+            class="close"
+            on:click={burgerMenuOut}
+        >
+            <Icon
+                data={angleLeft}
+                style='color:#fafafa'
+                scale ={1.5}
+            />
+        </div>
+        <div class="menu">
+            <a href={`/deduktif/`} use:link>
+                <p>Laporan</p>
+            </a>
+            <a href={`/deduktif/about`} use:link>
+                <p>Tentang Kami</p>
+            </a>
+            <a href={`/deduktif/redaksi`} use:link>
+                <p>Redaksi</p>
+            </a>
+
+            <hr class='rounded'>
+            
+            <div class="sosmed">
+                <a href='https://www.instagram.com/jurnoid/'> <!-- INSTAGRAM LINK HERE -->
+                    <div class="sm ig">
+                        <Fa icon={faInstagram} />
+                    </div>
+                </a>
+                <a href=''> <!-- FACEBOOK LINK HERE -->
+                    <div class="sm fb">
+                        <Fa icon={faFacebook} />
+                    </div>
+                </a>
+                <a href='https://twitter.com/jurno_id' > <!-- TWITTER LINK HERE -->
+                    <div class="sm tw">
+                        <Fa icon={faTwitter} />
+                    </div>
+                </a>
+                <a href='https://www.youtube.com/channel/UCSGTUIGbrpONOTayMXAIcqw'> <!-- YOUTUBE LINK HERE -->
+                    <div class="sm yt">
+                        <Fa icon={faYoutube} />
+                    </div>
+                </a>
+                <a href='www.tiktok.com/@jurnoid'> <!-- TIKTOK LINK HERE -->
+                    <div class="sm tt">
+                        <Fa icon={faTiktok} />
+                    </div>
+                </a> 
+            </div>
+        </div>
+    </section>
+    {/if}
 </nav>
 
 <style>

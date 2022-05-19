@@ -76,7 +76,7 @@
         const result = await get(ihttp.URI_NEWS_TOP_ENTITY, { size:10, from:yesterday, to:today})
         const result2 = await get(ihttp.URI_ENTITY_PROFILE, { entity_id:id });
         const result3 = await get(ihttp.URI_ENTITY_VOICES, { from:yesterday, to:today, entity_id:id });
-        const statementlist = await get(ihttp.URI_NEWS_STATEMENT_LIST, { from:yesterday, to:today, size:5, entities:id })
+        const statementlist = await get(ihttp.URI_NEWS_STATEMENT_LIST, { from:yesterday, to:today, size:20, entities:id })
 
         let filter = result.data.filter((data) => {
              return data.id == id
@@ -165,10 +165,10 @@
                 </section>
                 <section>
                     <h3>News List</h3>
-                    <div class="inner-section">
+                    <div class="inner-section" id='newslist'>
 
                         <div class="news-container">
-                            {#each data[1].slice(0,4) as d}
+                            {#each data[1] as d}
                             <a href={d.source_url}>
                                 <p style='color:hsl(0,0%,50%);font-size:0.8rem'>{d.media}</p>
                                 <div class="news-tab">
@@ -274,14 +274,18 @@
             {/each}
             <section>
                 <h3>Statement List</h3>
-                <div class="inner-section">
-                    <div class="siema" style='width:90%' use:siema>
-                        {#each data[0]['statement'].slice(0,4) as d}
+                <div class="inner-section" id='statementlist'>
+
+                    <div class="news-container">
+                        {#each data[0]['statement'] as d}
                         <a href={d.sourceUrl} >
                             <div class="statement">
                                 <p style='color:hsl(0,0%,50%);font-size:0.8rem'>{d.media}</p>
                                 <div class="news-tab">
-                                    <p class='news-title'>{d.statement_text}</p>
+                                    <div>
+                                        <p class='news-title'>{d.statement_text}</p>
+                                        <p class='statement-entity'>{d.statement_entity}</p>
+                                    </div>
                                     <p class="sentiment"
                                         style='background-color:{d.statement_sentiment == 'positive' ? '#242053' : d.statement_sentiment == 'neutral' ? 'hsl(0,0%,50%)' : '#ef5959' }'>{d.statement_sentiment}</p>
                                 </div>
@@ -289,24 +293,7 @@
                         </a>
                         {/each}
                     </div>
-                </div>
-                <div class='bullet'>
-                    {#each data[0]['statement'].slice(0,4) as d, i}
-                        <input 
-                            bind:this={radioSlider}
-                            type="radio" 
-                            id={i} name="slider-radio" 
-                            value={i}
-                            checked = { select == i }
-                            on:click= {() => {slider.goTo(i); select = slider.currentSlide;}}
-                        >
-                    {/each}
-                    <button class='stm-btn stm-prev' on:click={prev}>
-                        <Fa icon={faAngleLeft}/>
-                    </button>
-                    <button class='stm-btn stm-next' on:click={next}>
-                        <Fa icon={faAngleRight}/>
-                    </button>
+                        
                 </div>
                     
             </section>
@@ -326,30 +313,6 @@
 </article>
 
 <style>
-    .bullet {
-		width:100%;
-		display:flex;
-		justify-content:center;
-	}
-	input {
-		-webkit-appearance: none;
-		-moz-appearance: none;
-		appearance: none;
-
-		border-radius: 50%;
-		width: 8px;
-		height: 8px;
-		
-		background-color:lightgrey;
-		transition: 0.2s all linear;
-		margin-right: 5px;
-
-		position: relative;
-		top: 4px;
-	}
-	input:checked {
-		background-color:grey;
-	}
     .news-container {
         display: flex;
         flex-direction: column;
@@ -360,22 +323,6 @@
         margin-right:1rem;
         white-space: normal;
         width:90%;
-    }
-    .stm-btn {
-        position: absolute;
-        background-color: hsl(0,0%,50%);
-        color: white;
-        width:1rem;
-        height:1rem;
-        padding: 0;
-        font-size: 0.5rem;
-        border-radius: 50%;
-    }
-    .stm-prev {
-        left:10%;
-    }
-    .stm-next {
-        right:10%;
     }
     .news-tab {
         width:100%;
@@ -392,16 +339,20 @@
         margin-left: 1rem;
         height: fit-content;
     }
+    .statement-entity {
+        font-size: 0.8rem;
+        font-family: var(--fontfamily2);
+        margin-top:0;
+        margin-bottom: 0.8rem;
+        color:hsl(0,0%,50%);
+        white-space: normal;
+    }
     .news-title {
         font-size: 0.8rem;
         font-family: var(--fontfamily2);
         font-weight: 500;
-        margin-bottom: 0.8rem;
+        margin-bottom: 0.2rem;
         color:black;
-        text-overflow: ellipsis;
-        display: -webkit-box !important;
-        -webkit-line-clamp: 6;
-        -webkit-box-orient: vertical;
         white-space: normal;
     }
     .person {
@@ -540,6 +491,14 @@
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
+    }
+    .inner-section#newslist {
+        overflow-y: scroll;
+        height:250px;
+    }
+    .inner-section#statementlist {
+        overflow-y: scroll;
+        height:150px;
     }
     .right {
         width:45%;

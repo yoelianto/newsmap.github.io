@@ -5,6 +5,8 @@
     import { link } from "svelte-spa-router";
     import {onMount} from 'svelte'
 
+    export let page
+
     let now = new Date(), year;
 	let dateString;
 	
@@ -15,11 +17,12 @@
 	})
 </script>
 
-<footer>
-    <div class="divider"></div>
-    <section>
+<footer style="background-color:{page == 'indeksdeduktif' ? '#333' : '#ededed'}">
+    <div class="divider" style="background-color:{page == 'indeksdeduktif' ? '#050505' : '#fafafa'}"></div>
+    <section style="background-color:{page == 'indeksdeduktif' ? '#333' : '#ededed'}">
         <div class="menu">
             <div class="left">
+                {#if page != 'indeksdeduktif'}
                 <a href={`/about/`} use:link>
                     <p>Tentang Kami</p>
                 </a>
@@ -29,9 +32,21 @@
                 <a href=''> <!-- DISCORD LINK HERE -->
                     <p>Klub Sosial Jurno</p>
                 </a>
+                {:else}
+                <a href={`/deduktif/`} use:link>
+                    <p>Laporan</p>
+                </a>
+                <a href={`/deduktif/about/`} use:link>
+                    <p>Tentang Kami</p>
+                </a>
+                <a href={`/deduktif/redaksi/`} use:link>
+                    <p>Redaksi</p>
+                </a>
+                {/if}
             </div>
 
             <div class="right">
+                {#if page != 'indeksdeduktif'}
                 <a href={`/article/`} use:link>
                     <p>Jurno Original</p>
                 </a>
@@ -41,8 +56,9 @@
                 <a href={`/infogram/`} use:link>
                     <p>Infosight</p>
                 </a>
+                {/if}
     
-                
+                {#if page != 'indeksdeduktif'}
                 <div class="sosmed">
                     <a href='https://www.instagram.com/jurnoid/'> <!-- INSTAGRAM LINK HERE -->
                         <div class="sm ig">
@@ -70,31 +86,64 @@
                         </div>
                     </a> 
                 </div>
+                {:else}
+                <div class="sosmed">
+                    <a href='https://www.instagram.com/jurnoid/'> <!-- INSTAGRAM LINK HERE -->
+                        <div class="sm ig">
+                            <Fa icon={faInstagram} />
+                        </div>
+                    </a>
+                    <a href=''> <!-- FACEBOOK LINK HERE -->
+                        <div class="sm fb">
+                            <Fa icon={faFacebook} />
+                        </div>
+                    </a>
+                    <a href='https://twitter.com/jurno_id' > <!-- TWITTER LINK HERE -->
+                        <div class="sm tw">
+                            <Fa icon={faTwitter} />
+                        </div>
+                    </a>
+                    <a href='https://www.youtube.com/channel/UCSGTUIGbrpONOTayMXAIcqw'> <!-- YOUTUBE LINK HERE -->
+                        <div class="sm yt">
+                            <Fa icon={faYoutube} />
+                        </div>
+                    </a>
+                    <a href='www.tiktok.com/@jurnoid'> <!-- TIKTOK LINK HERE -->
+                        <div class="sm tt">
+                            <Fa icon={faTiktok} />
+                        </div>
+                    </a> 
+                </div>
+                {/if}
             </div>
         </div>
         <div class="bottom">
-            <p>
-                PT Ide Digital Inventura <Fa icon={faCopyright} /> {dateString}
-            </p>
+            {#if page == 'indeksdeduktif'}
+                <p>
+                    PT Deduktif Warta Mardika <Fa icon={faCopyright} /> {dateString}
+                </p>
+            {:else}
+                <p>
+                    PT Ide Digital Inventura <Fa icon={faCopyright} /> {dateString}
+                </p>
+            {/if}
+           
         </div>
     </section>
-
 </footer>
 
 <style>
     footer {
         width:100%;
-        background-color: hsl(0,0%,93%);
         padding-bottom: 120px;
         position: relative;
     }
     .divider {
-        background-color: var(--color-brand-white);
         width:100%;
         height:3rem;
         border-radius: 0 0 2rem 2rem;
         position: absolute;
-        top:-1rem;
+        top:-1.01rem;
     }
     .bottom {
         margin-top: 2rem;

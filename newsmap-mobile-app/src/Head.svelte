@@ -4,6 +4,7 @@
     import { createEventDispatcher } from 'svelte';
     import BurgerMenu from './BurgerMenu.svelte';
     import Search from './Search.svelte';
+    import { link } from "svelte-spa-router";
 
     const dispatch = createEventDispatcher()
 
@@ -24,6 +25,7 @@
 <!-- LEFT -->
 <BurgerMenu
     bind:burgerIn
+    bind:page
     --color-brand-dark-blue= {colorBrandDarkBlue}
     --color-brand-white = {colorBrandWhite}
     --color-brand-red = {colorBrandRed}
@@ -34,40 +36,93 @@
     bind:searchValue
 />
 <nav>
-    <div class="container" bind:clientHeight={height}>
-        <div class="header-logo" style='justify-content:{page =='artikel' ? 'flex-start' : 'space-between'}'>
-            {#if page == 'artikel'}
-                <a href='/'>
-                    <img src="./images/logo-jurno-web.svg" alt="Logo Jurno Website">
-                </a>
-            {/if}
-            {#if page == 'deduktif'}
-                <a href='/'>
-                    <img src="./images/logo-jurno-web.svg" alt="Logo Jurno Website">
-                </a>
-            {/if}
-            {#if page == 'indeks'}
-                <div class="before" on:click={()=> {burgerIn = true}}>
-                    <Icon data={bars} />
-                </div>
-                <a href='/'>
-                    <img src="./images/logo-jurno-web.svg" alt="Logo Jurno Website">
-                </a>
-                <div class="after" on:click={()=> {searchIn = true}}>
-                    <Icon data={search} />
-                </div>
-            {/if}
-            
+    {#if page == 'artikel' || 'indeks'}
+        <div class="container" style="background-color:#fafafa}" bind:clientHeight={height}>
+            <div class="header-logo" style='justify-content:{page =='artikel' ? 'flex-start' : 'space-between'}'>
+                {#if page == 'artikel'}
+                    <a href='/'>
+                        <img src="./images/logo-jurno-web.svg" alt="Logo Jurno Website">
+                    </a>
+                {/if}
+                {#if page == 'indeks'}
+                    <div class="before" on:click={()=> {burgerIn = true}}>
+                        <Icon data={bars} />
+                    </div>
+                    <a href='/'>
+                        <img src="./images/logo-jurno-web.svg" alt="Logo Jurno Website">
+                    </a>
+                    <div class="after" on:click={()=> {searchIn = true}}>
+                        <Icon data={search} />
+                    </div>
+                {/if}
+                
+            </div>
         </div>
-    </div>    
+    {/if}
+    {#if page == 'deduktif' }
+        <div class="container"
+            style="background-color:#050505;
+                display:flex;
+                justify-content:space-between;
+                flex-direction:row"
+            bind:clientHeight={height}>
+            <div class="deduktif-logo" style="margin-left:6%">
+                <a href='/'>
+                    <img src="./images/deduktif.svg" alt="Logo Deduktif Website"
+                    style="filter: invert(54%) sepia(65%) saturate(1029%) hue-rotate(318deg) brightness(87%) contrast(114%);">
+                </a>
+            </div>
+            <div class="deduktif-menu" style="margin-right:6%">
+                <a href='/deduktif/' use:link>
+                    Laporan
+                </a>
+                <div class="vert"></div>
+                <a href='/deduktif/about/' use:link>
+                    Tentang Kami
+                </a>
+                <div class="vert"></div>
+                <a href='/deduktif/redaksi/' use:link>
+                    Redaksi
+                </a>
+            </div>
+        </div>
+    {/if}
+    {#if page == 'indeksdeduktif'}
+        <div class="container" style="background-color:#050505" bind:clientHeight={height}>
+            <div class="header-logo" style='justify-content:{page =='artikel' ? 'flex-start' : 'space-between'}'>
+                    <div class="before" on:click={()=> {burgerIn = true}}>
+                        <Icon data={bars} style='color:#fafafa'/>
+                    </div>
+                    <a href='/'>
+                        <img src="./images/deduktif.svg" alt="Logo Deduktif Website"
+                    style="filter: invert(54%) sepia(65%) saturate(1029%) hue-rotate(318deg) brightness(87%) contrast(114%);">
+                    </a>
+                    <div class="after" on:click={()=> {searchIn = true}}>
+                        <Icon data={search} style='color:#fafafa'/>
+                    </div>
+            </div>
+        </div>
+    {/if}
 </nav>
 
 <style>
+    .vert {
+        border-left: 1px solid white;
+        height:20px;
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+    }
     nav {
         z-index: 999;
         background-color: #fafafa;
         position: fixed;
         top: 0;
+    }
+    .deduktif-menu {
+        font-family: 'Roboto Mono', monospace;
+        font-size: 0.6rem;
+        display: flex;
+        align-items: center;
     }
     .header-logo{
         width: 88%;

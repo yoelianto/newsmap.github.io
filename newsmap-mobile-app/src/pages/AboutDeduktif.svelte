@@ -10,22 +10,22 @@
     });
 
     let height;
-    let page= 'indeks'
+    let page= 'indeksdeduktif'
 
 </script>
 
 <svelte:head>
     <title>Tentang Kami</title>
 </svelte:head>
-
-<Head 
+<main>
+    <Head 
     bind:height = {height}
     bind:page
 />
 
 <div class="container" style='margin-top:{height}px'>
 
-    <h1>Tentang Jurno</h1>
+    <h1>Tentang Deduktif</h1>
 
     <div class="content">
         {#await fetchData()}
@@ -38,20 +38,28 @@
     </div>
 
 </div>
+</main>
+
 
 <Footer 
     --color-brand-dark-blue = '#242053'
     --color-brand-white = "#fafafa"
     --fontfamily2 = 'Roboto'
+    bind:page
 />
 
 
 <style>
+    main {
+        background-color:#050505;
+        
+    }
     .container {
         width:88%;
         max-width:650px;
         margin:0 auto;
-        padding-bottom: 1rem;
+        color:#fafafa;
+        padding-bottom:1rem;
         padding-top:0.5rem;
     }
     h1 {

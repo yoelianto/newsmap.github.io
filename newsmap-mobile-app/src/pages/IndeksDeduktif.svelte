@@ -8,6 +8,8 @@
 
     let height
 
+    let page = 'indeksdeduktif'
+
     let placeholder = [1,2,3,4,5,6]
     let searchValue
 
@@ -38,7 +40,7 @@
 
 <Head 
     bind:height
-    page='indeks'
+    bind:page
     />
 <article style="margin-top:{height}px">
     <h1>DEDUKTIF</h1>
@@ -114,9 +116,12 @@
         font-weight:700;
         font-size:1.5rem;
         margin-left: 6%;
+        color:#fafafa;
     }
     article {
         width:100%;
+        height:100%;
+        background-color: #050505;
     }
     form {
         margin-left: 6%;
@@ -124,10 +129,11 @@
         font-size: 0.8rem;
         border-radius: 2rem;
         display: flex;
-        border:1px solid black;
+        border:1px solid #fafafa;
         margin-bottom: 1rem;
         justify-content: space-between;
         align-items: center;
+        background-color: #fafafa;
     }
     input[type="search"] {
         border: none;
@@ -169,6 +175,7 @@
         display: flex;
         flex-direction: column;
         white-space: normal;
+        color:#fafafa;
     }
     img {
         aspect-ratio: 4/3;

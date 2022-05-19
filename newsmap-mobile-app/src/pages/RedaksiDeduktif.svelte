@@ -10,77 +10,61 @@
     });
 
     let height;
-    let page= 'indeks'
+    let page= 'indeksdeduktif'
 
 </script>
 
 <svelte:head>
     <title>Redaksi</title>
 </svelte:head>
-
-<Head 
+<main>
+    <Head 
     bind:height = {height}
     bind:page
 />
 
 <div class="container" style='margin-top:{height}px'>
 
-    <h1>Redaksi Jurno</h1>
+    <h1>Redaksi Deduktif</h1>
 
     <div class="content">
         <br>
-        <h3><strong>Komisaris</strong></h3>
-        <p>Nur Samsi</p>
+        <h3><strong>Pemimpin Redaksi</strong></h3>
+        <p>Sapto Anggoro</p>
         <br>
-        <h3><strong>Direktur</strong></h3>
+        <h3><strong>Dewan Redaksi</strong></h3>
         <p>Teguh Budi Santoso</p>
+        <p>Nurul Qomariyah</p>
         <br>
-        <h3><strong>Manajer Eksekutif</strong></h3>
-        <p>Arlian Buana</p>
+        <h3><strong>Redaktur</strong></h3>
+        <p>Nurul Qomariyah</p>
         <br>
-        <h3><strong>Creative Technologist</strong></h3>
-        <p>Sabda Armandio</p>
-        <br>
-        <h3><strong>Editor</strong></h3>
-        <p>Ann Putri</p>
-        <br>
-        <h3><strong>Program dan Komunitas</strong></h3>
-        <p>Windu Jusuf</p>
-        <br>
-        <h3><strong>Social Media Officer</strong></h3>
-        <p>Alya Faradisa</p>
-        <p>Riesti F</p>
-        <br>
-        <h3><strong>Graphic Director</strong></h3>
-        <p>Louis Lugas</p>
-        <br>
-        <h3><strong>Graphic Storyboard</strong></h3>
-        <p>Faiz</p>
-        <br>
-        <h3><strong>Graphic Designer</strong></h3>
-        <p>Rangga Putrawicaksana</p>
-        <p>William Handoko</p>
-        <br>
-        <h3><strong>Video Editor</strong></h3>
-        <p>Eric F</p>
-        <p>Hamim Septian</p>
-        <p>Achmad</p>
-        <p>Riva Rais</p>
+        <h3><strong>Redaksi</strong></h3>
+        <p>Fajar Regal</p>
+        <p>Ahsan Ridhoi</p>
     </div>
 
 </div>
+</main>
+
 
 <Footer 
     --color-brand-dark-blue = '#242053'
     --color-brand-white = "#fafafa"
     --fontfamily2 = 'Roboto'
+    bind:page
 />
 
 
 <style>
+    main {
+        background-color: #050505;
+        
+    }
     .container {
         width:88%;
         margin:0 auto;
+        color: #fafafa;
         padding-bottom:1rem;
         padding-top:0.5rem;
     }
@@ -99,7 +83,6 @@
     }
     h3 {
         margin-bottom: 0.5rem;
-        margin-top: 0;
     }
 
 </style>
