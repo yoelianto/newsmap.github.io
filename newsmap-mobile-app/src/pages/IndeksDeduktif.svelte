@@ -101,9 +101,6 @@
 
 
 <style>
-    main {
-        height:100%;
-    }
     .placeholder {
         background-color: hsl(0, 0%, 88%);
     }
@@ -136,7 +133,6 @@
     }
     main {
         width:100%;
-        height:100%;
         background-color: #050505;
     }
     article {

@@ -76,8 +76,6 @@
     }
     main {
         background-color:#050505;
-        height:100%;
-        
     }
     .container {
         width:88%;

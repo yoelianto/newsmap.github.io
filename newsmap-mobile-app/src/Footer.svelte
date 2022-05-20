@@ -47,18 +47,18 @@
 
             <div class="right">
                 {#if page != 'indeksdeduktif'}
-                <a href={`/article/`} use:link>
-                    <p>Jurno Original</p>
-                </a>
-                <a href={`/deduktif/`} use:link>
-                    <p>Deduktif</p>
-                </a>
-                <a href={`/infogram/`} use:link>
-                    <p>Infosight</p>
-                </a>
+                    <a href={`/article/`} use:link>
+                        <p>Jurno Original</p>
+                    </a>
+                    <a href={`/deduktif/`} use:link>
+                        <p>Deduktif</p>
+                    </a>
+                    <a href={`/infosight/`} use:link>
+                        <p>Infosight</p>
+                    </a>
                 {/if}
     
-                {#if page != 'indeksdeduktif'}
+                {#if page == 'indeksdeduktif'}
                 <div class="sosmed">
                     <a href='https://twitter.com/deduktifid' > <!-- TWITTER LINK HERE -->
                         <div class="sm tw">
@@ -146,9 +146,11 @@
     }
     .menu {
         width:90%;
+        max-width:450px;
         display: flex;
         flex-direction: row;
-        margin-left:20px;
+        margin-left:auto;
+        margin-right:auto;
         justify-content: space-between;
     }
     .sosmed {
