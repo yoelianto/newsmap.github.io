@@ -10,6 +10,10 @@ export function validURL(str) {
 }
 
 export function truncText(text, length = 100) {
+    if (text === undefined) {
+        return '';
+    }
+
     return text !== null && text.length > length ? text.substring(0, length) + '...' : text;
 }
 

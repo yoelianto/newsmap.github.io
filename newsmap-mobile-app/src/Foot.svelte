@@ -1,7 +1,6 @@
 <script>
 
     import { get } from "./api";
-    import { link } from "svelte-spa-router";
     import Fa from 'svelte-fa'
     import { faSpinner, faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons'
 
@@ -20,9 +19,9 @@
 
 </script>
 
-<nav class="footer" style='background-color:{bgFooter}'>
+<nav class="footer" style='background-color:#{bgFooter}'>
     <div class="container">
-        <p class="title" style='color:{txtFooter}'>Artikel Lainnya</p>
+        <p class="title" style='color:#{txtFooter}'>Artikel Lainnya</p>
         <div class="slider-container">
                 {#await fetchData()}
                 <div class="placeholder-container">
@@ -30,7 +29,7 @@
                 </div>
                 {:then data}
                     {#each data as d}
-                    <a href={`/${type}/${d.slug}`} class='newspart' use:link>
+                    <a href={`/${type}/${d.slug}/`} class='newspart'>
                         <div class="news">
                             <div class="images">
                                 <!--  -->
@@ -39,7 +38,7 @@
                                 title={d.title} alt={d.title}
                                 onerror={`this.onerror=null;this.src='${process['env']['NO_IMAGE']}';`} />
                             </div>
-                            <div class="credit" style='color:{txtFooter}'>
+                            <div class="credit" style='color:#{txtFooter}; text-decoration:none;'>
                                 <p class="author">{d.author_name}</p> <!-- harusnya {d.author_name}-->
                                 <p class="article-title">
                                     {d.title}

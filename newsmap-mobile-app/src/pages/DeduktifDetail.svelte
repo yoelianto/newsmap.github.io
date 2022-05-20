@@ -52,6 +52,7 @@
       ...data,
       type,
       thumbnail: process["env"]["URL_IMAGE"] + type + "/" + data.thumbnail,
+      thumbnail_social: data.thumbnail_social === undefined ? '' : process["env"]["URL_IMAGE"] + type + "/" + data.thumbnail_social,
       footer: {
           uri: ihttp.URI_DEDUKTIF_LIST,
           params: { except: data.id, size: 3 },

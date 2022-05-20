@@ -47,6 +47,7 @@
         data={{
             ...data,
             thumbnail: process["env"]["URL_IMAGE"] + "rewara/" + data.thumbnail,
+            thumbnail_social: data.thumbnail_social === undefined ? '' : process["env"]["URL_IMAGE"] + type + "/" + data.thumbnail_social,
             type: 'rewara'
         }}
     />
