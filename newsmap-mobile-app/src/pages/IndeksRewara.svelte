@@ -66,7 +66,7 @@
         <a style='cursor:pointer' href={`/rewara/${d.slug}`}>
             <div class="article">
                 <div class="left">
-                    <img src={`${process['env']['URL_IMAGE']}rewara/${d.thumbnail}`} alt={d.title} />
+                    <img src={`${process['env']['URL_IMAGE']}images/rewara/${d.thumbnail}`} alt={d.title} />
                 </div>
                 <div class="credit">
                     <p class="author">Rewara</p>
