@@ -69,6 +69,8 @@
     main {
         background-color: #050505;
         height: 100%;
+        padding-top:1rem;
+        margin-bottom: -0.25rem;
         
     }
     .container {

@@ -76,6 +76,8 @@
     }
     main {
         background-color:#050505;
+        padding-top:1rem;
+        margin-bottom: -0.25rem;
     }
     .container {
         width:88%;

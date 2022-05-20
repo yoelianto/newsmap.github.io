@@ -27,8 +27,8 @@
 
     let shorts = [
          {
-             url:"https://youtube.com/embed/Jm5s6N0R0pM",
-             title:"This is the best first project for programmers 👩‍💻 #technology #programming #software #career"
+             url:"https://www.youtube.com/watch?v=GNG6xdbxTfA",
+             title:"Gimana Sih Kalau Polisi Dibantu Artificial Intelligence?"
          },
         ]
     </script>
