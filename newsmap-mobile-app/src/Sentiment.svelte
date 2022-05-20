@@ -14,8 +14,8 @@
     export let id
     let w = document.body.clientWidth
     let size
-    if (w < 768) {size = 10}
-    else if (w > 767) {size = 5}
+    if (w < 768) {size = 11}
+    else if (w > 767) {size = 6}
     let placeholder = [1,2,3,4,5]
 
     function forward(event) {
