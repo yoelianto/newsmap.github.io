@@ -35,7 +35,12 @@
 
 {#if data.is_custom_html}
     {#if data.footer !== undefined}
-        <Foot {...data.footer} type={data.type} />
+        <Foot
+            {...data.footer}
+            type={data.type}    
+            bgFooter = {data.footer_background_color}
+            txtFooter= {data.article_background_color}
+        />
     {/if}
 {:else}
     <main class="content-section">
@@ -87,7 +92,10 @@
                     </section>
                     
                     {#if data.footer !== undefined}
-                        <Foot {...data.footer} type={data.type} />
+                        <Foot
+                            {...data.footer}
+                            type={data.type}
+                        />
                     {/if}
                 </article>
                                       

@@ -10,6 +10,8 @@
     export let type = null;
     export let thumbnailFolder = "";
 
+    export let bgFooter, txtFooter
+
 
     const fetchData = (async () => {
         const result = await get(uri, params);
@@ -18,9 +20,9 @@
 
 </script>
 
-<nav class="footer">
+<nav class="footer" style='background-color:{bgFooter}'>
     <div class="container">
-        <p class="title">Artikel Lainnya</p>
+        <p class="title" style='color:{txtFooter}'>Artikel Lainnya</p>
         <div class="slider-container">
                 {#await fetchData()}
                 <div class="placeholder-container">
@@ -37,7 +39,7 @@
                                 title={d.title} alt={d.title}
                                 onerror={`this.onerror=null;this.src='${process['env']['NO_IMAGE']}';`} />
                             </div>
-                            <div class="credit">
+                            <div class="credit" style='color:{txtFooter}'>
                                 <p class="author">{d.author_name}</p> <!-- harusnya {d.author_name}-->
                                 <p class="article-title">
                                     {d.title}
@@ -67,6 +69,7 @@
         color: hsl(0,0%,50%);
     }
     nav {
+        margin-top: -1rem;
         width:100%;
         background-color: #fafafa;
     }
