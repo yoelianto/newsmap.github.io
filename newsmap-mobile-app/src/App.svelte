@@ -147,10 +147,6 @@
 			--color-brand-red={colorBrandRed}
 		/>
 		<Deduktif 
-			title="Menelusuri Indahnya Jalur Pantai Pangandaran"
-			author = {author}
-			authorprofileimage = {authorprofileimage}
-			authorprofilealt = {author}
 			--fontfamily1={fontfamily1}
 			--fontfamily2={fontfamily2}
 			--color-brand-darkblue={colorBrandDarkBlue}

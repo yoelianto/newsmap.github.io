@@ -31,6 +31,133 @@
         <link rel="stylesheet" href={`./${data.type}/${data.slug}/bundle.css`} />
         <script src={`./${data.type}/${data.slug}/bundle.js`}></script>
     {/if}
+    <meta data-n-head="true" data-hid="charset" charset="utf-8" />
+    <meta
+        data-n-head="true"
+        data-hid="mobile-web-app-capable"
+        name="mobile-web-app-capable"
+        content="yes"
+    />
+    <meta
+        data-n-head="true"
+        data-hid="description"
+        name="description"
+        content=""
+    />
+    <meta
+        data-n-head="true"
+        http-equiv="x-ua-compatiable"
+        content="IE=edge,chrome=1"
+    />
+    <meta
+        data-n-head="true"
+        name="title"
+        content={data.title}
+    />
+    <meta
+        data-n-head="true"
+        name="googlebot-news"
+        content="index,follow"
+    />
+    <meta data-n-head="true" name="googlebot" content="index,follow" /><meta
+        data-n-head="true"
+        name="robots"
+        content="index,follow"
+    />
+    <meta
+        data-n-head="true"
+        name="robots"
+        content="max-snippet:50, max-image-preview:large"
+    />
+    <meta data-n-head="true" name="language" content="id" /><meta
+        data-n-head="true"
+        name="geo.country"
+        content="id"
+    />
+    <meta data-n-head="true" name="geo.placename" content="Indonesia" /><meta
+        data-n-head="true"
+        http-equiv="content-language"
+        content="In-Id"
+    />
+    <meta
+        data-n-head="true"
+        property="og:image"
+        content={data.thumbnail_social}
+    />
+    <meta data-n-head="true" property="og:locale" content="id_ID" /><meta
+        data-n-head="true"
+        property="og:type"
+        content="article"
+    />
+    <meta
+        data-n-head="true"
+        property="og:title"
+        content={data.title}
+    />
+    <!-- <meta
+        data-n-head="true"
+        property="og:url"
+        content="https://tirto.id/setelah-ada-gocorp-sampai-kapan-mau-reimburse-uang-transport-gr65"
+    />
+    <meta
+        data-n-head="true"
+        data-hid="description_fb"
+        property="og:description"
+        content="Kendaraan operasional tak bisa dipisahkan dari keseharian para pekerja dan pelaku usaha."
+    /> -->
+    <!-- <meta
+        data-n-head="true"
+        property="og:image:type"
+        content="image/jpg"
+    /> -->
+    <meta data-n-head="true" property="og:image:width" content="600" /><meta
+        data-n-head="true"
+        property="og:image:height"
+        content="315"
+    />
+    <meta
+        data-n-head="true"
+        property="og:site_name"
+        content="jurno.id"
+    />
+    <!-- <meta
+        data-n-head="true"
+        property="article:author"
+        content="https://www.facebook.com/TirtoID"
+        itemprop="author"
+    /> -->
+    <meta
+        data-n-head="true"
+        name="twitter:card"
+        content="summary_large_image"
+    />
+    <meta
+        data-n-head="true"
+        data-hid="description_tw"
+        name="twitter:description"
+        content=""
+    />
+    <meta
+        data-n-head="true"
+        name="twitter:image"
+        content={data.thumbnail_social}
+    />
+    <meta
+        data-n-head="true"
+        name="twitter:image:src"
+        content={data.thumbnail_social}
+    />
+    <meta
+        data-n-head="true"
+        name="thumbnail"
+        content={data.thumbnail_social}
+    />
+    <meta
+        data-n-head="true"
+        data-hid="viewport"
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
 </svelte:head>
 
 {#if data.is_custom_html}
