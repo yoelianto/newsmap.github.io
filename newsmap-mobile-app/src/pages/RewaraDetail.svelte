@@ -6,6 +6,8 @@
     import * as animateScroll from 'svelte-scrollto'
     import {onMount} from 'svelte'
     import Share from '../Share.svelte'
+    import Fa from 'svelte-fa'
+    import { faSpinner, faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons'
 
     let height;
     let url, title;
@@ -29,7 +31,9 @@
 </script>
 
 {#await fetchData()}
-    <p>...waiting</p>
+    <div class="placeholder-container">
+        <Fa icon={faSpinner} size="3x" pulse />
+    </div>
 {:then data}
     <Head 
     bind:height = {height}

@@ -70,7 +70,6 @@
 
     let dataPromise, entityPromise
 
-    export let params = {}
 
     const fetchData = (async () => {
         const result = await get(ihttp.URI_NEWS_TOP_ENTITY, { size:10, from:yesterday, to:today})

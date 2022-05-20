@@ -63,11 +63,16 @@
 
 <style>
     .placeholder-container {
-        background-color: #050505;
-        width:100vw;
+        width:100vh;
         height:100vh;
-        position:fixed;
-        z-index:9999;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 0.8rem;
+        background-color: #050505;
+        position: fixed;
+        z-index: 99999;
+        color: hsl(0,0%,50%);
     }
     main {
         background-color:#050505;

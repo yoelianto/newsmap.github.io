@@ -2,6 +2,8 @@
     import { get } from "./api";
     import * as ihttp from './constants/initialHttp';
     import {fixSpotifyLink} from './helper';
+    import Fa from 'svelte-fa'
+    import { faSpinner, faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons'
 
     const fetchData = (async () => {
         const result = await get(ihttp.URI_SPOTIFY_LIST, {size: 10});
@@ -45,7 +47,9 @@
     <div class="album-container">
         <div class="album">
             {#await fetchData}
-            <p>...waiting</p>
+            <div class="placeholder-container">
+                <Fa icon={faSpinner} size="3x" pulse />
+            </div>
             {:then data}
                 {#each {length: 3} as _, i}
                     {#if data[i].link !== undefined}
@@ -87,6 +91,16 @@
 
 
 <style>
+    .placeholder-container {
+        width:100%;
+        height:100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 0.8rem;
+        background-color: transparent;
+        color: hsl(0,0%,50%);
+    }
     .container {
         margin-top:1.5rem;
         padding-bottom: 2rem;
