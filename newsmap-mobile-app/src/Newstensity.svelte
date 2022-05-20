@@ -119,82 +119,82 @@
 </svelte:head>
 <article style:left='{moveIn ? `0` : `${width}px`}' >
     {#if type == 'topic'}
-    {#if topicId != undefined}
-        <div class="top">
-            <div class="close" on:click={forward}>
-                <Icon data={angleLeft} scale={2} />
-            </div>
-            {#await entityPromise}
-                <div class="keywords">
-                    {#each keywordPlaceholder as d}
-                        <div class='placeholder keyword' style='width:{Math.random() * 50 + 100}px'></div>
-                    {/each}
+        {#if topicId != undefined}
+            <div class="top">
+                <div class="close" on:click={forward}>
+                    <Icon data={angleLeft} scale={2} />
                 </div>
-                {:then data}
+                {#await entityPromise}
                     <div class="keywords">
-                        {#each data[0].keywords as d}
-                            <div class='keyword'>{d}</div>
+                        {#each keywordPlaceholder as d}
+                            <div class='placeholder keyword' style='width:{Math.random() * 50 + 100}px'></div>
                         {/each}
                     </div>
-                {:catch error}
-                <p style='margin-left:5%'>An error occured</p>
-            {/await}           
-        </div>
-        <div class="bottom">
-            {#await entityPromise}
-                <div class="placeholder-container">
-                    <Fa icon={faSpinner} size="3x" pulse />
-                </div>
-            {:then data}
-                <section>
-                    <h3>Newsmaker</h3>
-                    <div class="inner-section" style='justify-content:center'>
-                        {#each data as d}
-                        {#if d.name != undefined}
-                        <div class="person">
-                            <div class="imgperson">
-                                <img
-                                    src={d.thumbnail != null ? d.thumbnail : './images/logo-jurno-web.svg'}
-                                    alt={d.name}>
-                            </div>
-                            <p>{d.name}</p>
-                        </div>
-                        {/if}
-                        {/each}
-                    </div>
-                </section>
-                <section>
-                    <h3>News List</h3>
-                    <div class="inner-section" id='newslist'>
-
-                        <div class="news-container">
-                            {#each data[1] as d}
-                            <a href={d.source_url}>
-                                <p style='color:hsl(0,0%,50%);font-size:0.8rem'>{d.media}</p>
-                                <div class="news-tab">
-                                    <p class='news-title'>{d.title}</p>
-                                    <p class="sentiment"
-                                        style='background-color:{d.sentiment == 'positive' ? '#242053' : d.sentiment == 'neutral' ? 'hsl(0,0%,50%)' : '#ef5959' }'>
-                                        {d.sentiment}
-                                    </p>
-                                </div>
-                            </a>
+                    {:then data}
+                        <div class="keywords">
+                            {#each data[0].keywords as d}
+                                <div class='keyword'>{d}</div>
                             {/each}
                         </div>
-
+                    {:catch error}
+                    <p style='margin-left:5%'>An error occured</p>
+                {/await}           
+            </div>
+            <div class="bottom">
+                {#await entityPromise}
+                    <div class="placeholder-container">
+                        <Fa icon={faSpinner} size="3x" pulse />
                     </div>
-                </section>
-            {:catch error}
-                <p>an error occured</p>
-            {/await}
-        </div>
-        <div class="foot">
-            <button>
-                Selengkapnya
-            </button>
-        </div>
+                {:then data}
+                    <section>
+                        <h3>Newsmaker</h3>
+                        <div class="inner-section" style='justify-content:center'>
+                            {#each data as d}
+                            {#if d.name != undefined}
+                            <div class="person">
+                                <div class="imgperson">
+                                    <img
+                                        src={d.thumbnail != null ? d.thumbnail : './images/logo-jurno-web.svg'}
+                                        alt={d.name}>
+                                </div>
+                                <p>{d.name}</p>
+                            </div>
+                            {/if}
+                            {/each}
+                        </div>
+                    </section>
+                    <section>
+                        <h3>News List</h3>
+                        <div class="inner-section" id='newslist'>
 
-        {/if}
+                            <div class="news-container">
+                                {#each data[1] as d}
+                                <a href={d.source_url}>
+                                    <p style='color:hsl(0,0%,50%);font-size:0.8rem'>{d.media}</p>
+                                    <div class="news-tab">
+                                        <p class='news-title'>{d.title}</p>
+                                        <p class="sentiment"
+                                            style='background-color:{d.sentiment == 'positive' ? '#242053' : d.sentiment == 'neutral' ? 'hsl(0,0%,50%)' : '#ef5959' }'>
+                                            {d.sentiment}
+                                        </p>
+                                    </div>
+                                </a>
+                                {/each}
+                            </div>
+
+                        </div>
+                    </section>
+                {:catch error}
+                    <p>an error occured</p>
+                {/await}
+            </div>
+            <div class="foot">
+                <button>
+                    Selengkapnya
+                </button>
+            </div>
+
+            {/if}
     {/if}
 
     <!----------------------------------------------------------------------->
@@ -316,7 +316,7 @@
     .news-container {
         display: flex;
         flex-direction: column;
-        width: 90%;
+        width: 100%;
         white-space: normal;
     }
     .statement {
@@ -360,9 +360,10 @@
         flex-direction: column;
         margin-left: 0.25rem;
         margin-right:0.25rem;
+        width:15%;
     }
     .person p {
-        width: 15vw;
+        width: 100%;
         white-space:normal;
         font-family: var(--fontfamily2);
         font-size: 0.6rem;
@@ -370,8 +371,8 @@
         margin-top: 0.5rem;
     }
     .imgperson {
-        width: 15vw;
-        height: 15vw;
+        width: 100%;
+        aspect-ratio: 1/1;
         overflow: hidden;
         background-color: hsl(0, 0%, 88%);
         border-radius: 50%;
@@ -380,10 +381,11 @@
         width: 100%;
     }
     .keywords {
-        margin-left: 5%;
         display: flex;
-        width:90vw;
+        width:80vw;
+        max-width:650px;
         flex-wrap: wrap;
+        margin:0 auto;
     }
     .placeholder.keyword {
         height:0.8rem;
@@ -444,9 +446,21 @@
     }
     .detail {
         font-family: var(--fontfamily2);
-        margin-left: 5%;
+        width:80%;
+        max-width:650px;
+        margin:0 auto;
         padding-bottom: 1rem;
         font-size: 0.8rem;
+    }
+    h1 {
+        width:80%;
+        max-width:650px;
+        margin:0.5rem auto;
+    }
+    h3 {
+        width:80%;
+        max-width:650px;
+        margin:0.5rem auto;
     }
     article {
         position: fixed;
@@ -470,9 +484,13 @@
     }
     .close {
         padding-top: 1rem;
+        cursor: pointer;
     }
     section {
-        width:100%;
+        margin-left: auto;
+        margin-right: auto;
+        width:80%;
+        max-width:650px;
         margin-top: 0.5rem;
         margin-bottom: 0.5rem;
         border-radius: 1rem;
@@ -482,6 +500,7 @@
     }
     .profile {
         width:45%;
+        max-width: 150px;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -495,10 +514,18 @@
     .inner-section#newslist {
         overflow-y: scroll;
         height:250px;
+        width:80%;
+        max-width: 650px;
+        margin-left: auto;
+        margin-right: auto;
     }
     .inner-section#statementlist {
         overflow-y: scroll;
         height:150px;
+        width:80%;
+        max-width: 650px;
+        margin-left: auto;
+        margin-right: auto;
     }
     .right {
         width:45%;
@@ -533,5 +560,38 @@
         background-color: var(--color-brand-red);
         color: #fafafa;
     }
+    .inner-section::-webkit-scrollbar {
+	    width: 0.5em;
+    }
 
+    .inner-section::-webkit-scrollbar-thumb {
+        background-color: #A4D9D2;
+        border-radius: 0.25em;
+    }
+    @media only screen /*large*/
+	and (min-width: 992px)
+	and (max-width: 1199px) {
+        .right {
+            flex-direction: row;
+            justify-content: space-around;
+            text-align: center;
+            align-items: center;
+        }
+        .percent{
+            font-size: 2.5rem;
+        }
+	}
+	@media only screen /*xtralarge*/
+	and (min-width: 1200px) {
+        .right {
+            flex-direction: row;
+            justify-content: space-around;
+            text-align: center;
+            align-items: center;
+        }
+        .percent{
+            font-size: 3rem;
+        }
+
+	}
 </style>
