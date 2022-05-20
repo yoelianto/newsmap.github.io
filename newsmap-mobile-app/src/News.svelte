@@ -90,7 +90,7 @@ const move = direction => {
                 {#each data as d}
                 <a href={d.link}>
                     <div class="news">
-                        <img class='imgthumb' src={`${process['env']['URL_IMAGE']}infogram/${d.thumbnail}`} alt={d.title} />
+                        <img class='imgthumb' src={`${process['env']['URL_IMAGE']}/images/infogram/${d.thumbnail}`} alt={d.title} />
                         <p class="author">{d.author}</p>
                         <p class="article-title">
                             {@html truncText(d.title, truncNum)}
