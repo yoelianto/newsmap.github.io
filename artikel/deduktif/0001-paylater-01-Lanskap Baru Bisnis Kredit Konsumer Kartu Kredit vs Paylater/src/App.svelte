@@ -58,7 +58,7 @@
 	<link href="https://fonts.googleapis.com/css2?family=Coiny&display=swap" rel="stylesheet">
 </svelte:head>
 
-<main style="background-color: {mainBackground};">
+<main style="background-color: {mainBackground};padding-top:40px">
 	<div class="headerilustrasi">
 		<div id="g-Lanskap-Baru-Bisnis-Kredit-Konsumer--Kartu-Kredit-vs-Paylater_-1-box" class="ai2html">
 

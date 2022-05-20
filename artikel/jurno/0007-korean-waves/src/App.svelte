@@ -45,7 +45,7 @@
 	<link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 </svelte:head>
 
-<main style="background-color: {mainBackground}">
+<main style="background-color: {mainBackground}" >
 	<div id="g-Korean-Waves-box" class="ai2html">
 		<!-- Artboard: smallplus-cover -->
 <div id="g-Korean-Waves-smallplus-cover" class="g-artboard" style="max-width: 509px;max-height: 1113px" data-aspect-ratio="0.457" data-min-width="0" data-max-width="509">
@@ -500,6 +500,7 @@
         text-align: left;
 		border-radius: 1rem;
 		font-family: 'Roboto-Mono', monospace;
+		white-space:normal;
 	}
 	/* main {
 		text-align: center;
