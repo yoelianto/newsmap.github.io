@@ -1,7 +1,6 @@
 <script>
 
     import { get } from "./api";
-    import { link } from "svelte-spa-router";
     import Fa from 'svelte-fa'
     import { faSpinner, faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons'
 
@@ -30,7 +29,7 @@
                 </div>
                 {:then data}
                     {#each data as d}
-                    <a href={`/${type}/${d.slug}`} class='newspart' use:link>
+                    <a href={`/${type}/${d.slug}/`} class='newspart'>
                         <div class="news">
                             <div class="images">
                                 <!--  -->

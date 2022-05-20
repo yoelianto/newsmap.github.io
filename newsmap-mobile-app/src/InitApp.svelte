@@ -31,9 +31,9 @@
         "/redaksi/":Redaksi,
         "/deduktif/redaksi/":RedaksiDeduktif,
         "/deduktif/about/":AboutDeduktif,
-        "/article/:slug/:custom?": JurnoDetail,
-        "/deduktif/:slug/:custom?": DeduktifDetail,
-        "/rewara/:slug/:custom?": RewaraDetail,
+        "/article/:slug/": JurnoDetail,
+        "/deduktif/:slug/": DeduktifDetail,
+        "/rewara/:slug/": RewaraDetail,
         "*": NotFound,
     };
 </script>
