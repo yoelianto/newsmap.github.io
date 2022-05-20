@@ -645,6 +645,20 @@
 	/>
 
 	<Paragraph
+		--font-color={fontColor}
+		para={[
+			"Ekonom Institute for Development of Economics and Finance (INDEF), Bhima Yudhistira menilai lambatnya pertumbuhan bisnis kartu kredit terpengaruh penurunan sektor ritel konvensional seperti mal dan restoran yang menjadi pasar utamanya."
+		]}
+	/>
+
+	<Quote
+		quotes={[
+			"Penurunan bahkan sebelum pandemi. Dengan adanya pandemi, penurunan semakin dalam"]}
+		person='Bhima Yudhistira'
+		credential='Ekonom Institute for Development of Economics and Finance (INDEF)'
+	/>
+
+	<Paragraph
 		--font-color ={fontColor}
 		para={[
 		"Mengacu kepada survei penjualan eceran BI yang menjadi indikator sektor ritel, penurunan memang sudah terlihat pada Desember 2019. Liburan Natal dan Tahun baru tak mampu mengerek Indeks Penjualan Riil (IPR) bulan tersebut yang tercatat turun 0,5% secara tahunan (<em>year on year</em>/YoY). Kelompok barang perlengkapan rumah tangga, misalnya hanya tumbuh tipis 4,9%.",

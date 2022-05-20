@@ -27,7 +27,6 @@
     <figure>        
         <div class="quotes-right">
             <div class="quotes-symbol">""</div>
-            <div class="quotes-tri"></div>
             <div class="quotes">
                 {#each quotes as quote}
                     <p>{@html quote }</p>
