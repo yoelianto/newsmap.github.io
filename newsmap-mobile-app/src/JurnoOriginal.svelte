@@ -162,7 +162,7 @@
                 transform:{width < height && width < 991 ? `translate(${i * 5}px, ${i * 5}px)` : `translate(0px, 0px)`}">
                 <a class="card-link" href={`/article/${d.slug}`} use:link>
                     <div class="card" style="z-index:{5-i}">
-                        <img class="thumb" src={`${process['env']['URL_IMAGE']}article/${d.thumbnail}`} alt="" >
+                        <img class="thumb" src={`${process['env']['URL_IMAGE']}images/article/${d.thumbnail}`} alt="" >
                         <div class="bottom"></div>
                     <div class="inner-card">
                         <div class="sub-title">oleh {d.author_name}</div>

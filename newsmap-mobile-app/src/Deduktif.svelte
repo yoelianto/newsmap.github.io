@@ -42,7 +42,7 @@
             <div class="contentbot">
                 <div class="left">
                     <div class="profile">
-                        <img class="authorprofile" src={`${process['env']['URL_IMAGE']}/author/${d.author_image}`} onerror={`this.onerror=null;this.src='${process['env']['NO_IMAGE']}';`} alt="author profile">
+                        <img class="authorprofile" src={`${process['env']['URL_IMAGE']}/images/author/${d.author_image}`} onerror={`this.onerror=null;this.src='${process['env']['NO_IMAGE']}';`} alt="author profile">
                     </div>
                 </div>
                 <div class="right">
@@ -54,7 +54,7 @@
             <div class="contenttop">
                 
                 <div class="headline">
-                    <img class="header" src={`${process['env']['URL_IMAGE']}/deduktif/${d.thumbnail}`} onerror={`this.onerror=null;this.src='${process['env']['NO_IMAGE']}';`} alt={d.title} >
+                    <img class="header" src={`${process['env']['URL_IMAGE']}/images/deduktif/${d.thumbnail}`} onerror={`this.onerror=null;this.src='${process['env']['NO_IMAGE']}';`} alt={d.title} >
                     
                     <div class="headerbottom"></div>
                         <div class="detail">
