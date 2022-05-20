@@ -20,9 +20,9 @@
 
 </script>
 
-<nav class="footer" style='background-color:{bgFooter}'>
+<nav class="footer" style='background-color:#{bgFooter}'>
     <div class="container">
-        <p class="title" style='color:{txtFooter}'>Artikel Lainnya</p>
+        <p class="title" style='color:#{txtFooter}'>Artikel Lainnya</p>
         <div class="slider-container">
                 {#await fetchData()}
                 <div class="placeholder-container">
