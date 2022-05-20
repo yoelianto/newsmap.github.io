@@ -59,7 +59,7 @@
 	<Head 
 		bind:height = {height}
 	/>
-	<div class="headerilustrasi" style="margin-top:{height}px;">
+	<div class="headerilustrasi" style="padding-top:{height}px;background-color:{titleColor}">
 		<div id="g-Bapak-Rumah-Tangga_19-box" class="ai2html">
 			<!-- Artboard: smallplus-cover -->
 			<div id="g-Bapak-Rumah-Tangga_19-smallplus-cover" class="g-artboard" style="max-width: 509px;max-height: 509px" data-aspect-ratio="1" data-min-width="0" data-max-width="509">
@@ -614,10 +614,6 @@
 		display:block;
 		width:100% !important;
 	}
-	#g-Bapak-Rumah-Tangga_19-box .g-aiSymbol {
-		position: absolute;
-		box-sizing: border-box;
-	}
 	#g-Bapak-Rumah-Tangga_19-box .g-aiPointText p { white-space: nowrap; }
 	#g-Bapak-Rumah-Tangga_19-smallplus-cover {
 		position:relative;
@@ -938,8 +934,7 @@
 		#g-Bapak-Rumah-Tangga_19-xlarge-4,
 		#g-Bapak-Rumah-Tangga_19-xlarge-5,
 		#g-Bapak-Rumah-Tangga_19-xlarge-6,
-		#g-Bapak-Rumah-Tangga_19-xlarge-7,
-		#g-Bapak-Rumah-Tangga_19-xlarge-8 {
+		#g-Bapak-Rumah-Tangga_19-xlarge-7{
 			display:none;
 		}
 
