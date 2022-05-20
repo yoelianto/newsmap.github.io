@@ -46,7 +46,7 @@
                 <Fa icon={faSpinner} size="3x" pulse />
             </div>
         {:then data}
-            {@html data[0].value}
+            {@html data[1].value}
         {:catch error}
             <p>An error occurred!</p>
         {/await}
@@ -83,7 +83,7 @@
         width:88%;
         max-width:650px;
         margin:0 auto;
-        color:#fafafa;
+        color:#fafafa !important;
         padding-bottom:1rem;
         padding-top:0.5rem;
     }
@@ -95,6 +95,7 @@
         font-family: 'Roboto';
         width: 100%;
         white-space: normal;
+        color:#fafafa !important; 
     }
 
 </style>

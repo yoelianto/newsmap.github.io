@@ -153,8 +153,7 @@
 		/>
 		<div class="discord-container">
 			<h1 class='title'>KLUB SOSIAL JURNO</h1>
-
-			<iframe title='discord' class='discord'src="https://discord.com/widget?id=947748065794736168&theme=dark" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+			<img class='klub' src="./images/Discord-Invitation-Web.png" alt="Klub Sosial Jurno">
 		</div>
 		
 		
@@ -206,6 +205,13 @@
 </main>
 
 <style>
+	.klub {
+		width:100%;
+		border-radius: 0.5rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
 	.title {
         font-family: 'Roboto Mono', monospace;
         font-weight:700;
@@ -214,7 +220,7 @@
     }
 	.discord-container {
 		width:88%;
-		max-width: 650px;
+		max-width: 1100px;
 		
 		margin: 0 auto;
 	}
@@ -285,6 +291,8 @@
             max-width:800px;
             width:80%;
             margin:1rem auto;
+			height: 400px;
+			
         }
 	}
 	@media only screen /*xtralarge*/
