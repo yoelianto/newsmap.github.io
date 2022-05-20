@@ -134,10 +134,15 @@
         margin-left: 6%;
         color:#fafafa;
     }
-    article {
+    main {
         width:100%;
         height:100%;
         background-color: #050505;
+    }
+    article {
+        width:88%;
+        max-width: 650px;
+        margin: 0 auto;
     }
     form {
         margin-left: 6%;

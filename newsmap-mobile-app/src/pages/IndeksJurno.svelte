@@ -85,6 +85,11 @@
 </article>
 
 <style>
+    article {
+        width:88%;
+        max-width: 650px;
+        margin: 0 auto;
+    }
     .placeholder {
         background-color: hsl(0, 0%, 88%);
     }

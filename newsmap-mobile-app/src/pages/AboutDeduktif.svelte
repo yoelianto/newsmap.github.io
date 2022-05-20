@@ -5,6 +5,8 @@
     import Footer from '../Footer.svelte';
     import { afterUpdate } from 'svelte';
     import * as animateScroll from "svelte-scrollto";
+    import Fa from 'svelte-fa'
+    import { faSpinner, faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons';
 
     const fetchData = (async () => {
         const result = await get(ihttp.URI_SETTING, { group:'about' });
@@ -40,7 +42,9 @@
 
     <div class="content">
         {#await fetchData()}
-        <p>waiting...</p>
+            <div class="placeholder-container">
+                <Fa icon={faSpinner} size="3x" pulse />
+            </div>
         {:then data}
             {@html data[0].value}
         {:catch error}
@@ -58,6 +62,13 @@
 </main>
 
 <style>
+    .placeholder-container {
+        background-color: #050505;
+        width:100vw;
+        height:100vh;
+        position:fixed;
+        z-index:9999;
+    }
     main {
         background-color:#050505;
         height:100%;

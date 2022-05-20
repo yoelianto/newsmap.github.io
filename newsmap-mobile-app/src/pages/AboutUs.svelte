@@ -3,6 +3,8 @@
     import * as ihttp from "../constants/initialHttp";
     import Head from '../Head.svelte';
     import Footer from '../Footer.svelte';
+    import Fa from 'svelte-fa'
+    import { faSpinner, faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons';
 
     const fetchData = (async () => {
         const result = await get(ihttp.URI_SETTING, { group:'about' });
@@ -29,7 +31,9 @@
 
     <div class="content">
         {#await fetchData()}
-        <p>waiting...</p>
+            <div class="placeholder-container">
+                <Fa icon={faSpinner} size="3x" pulse />
+            </div>
         {:then data}
             {@html data[0].value}
         {:catch error}
@@ -47,6 +51,13 @@
 
 
 <style>
+    .placeholder-container {
+        background-color: #fafafa;
+        width:100vw;
+        height:100vh;
+        position:fixed;
+        z-index:9999;
+    }
     .container {
         width:88%;
         max-width:650px;
