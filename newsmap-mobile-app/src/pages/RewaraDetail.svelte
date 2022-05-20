@@ -15,7 +15,7 @@
     const slug = params.slug;
 
     const fetchData = (async () => {
-        const result = await get(ihttp.URI_REWARA_DETAIL, { slug });
+        const result = await get(`${ihttp.URI_REWARA_DETAIL}/${slug}`);
         return await result;
     });
 

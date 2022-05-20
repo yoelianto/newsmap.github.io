@@ -68,7 +68,7 @@
     let fgColor2 = 'hsl(244, 30%, 70%)'
     let fgColor3 = 'hsl(0, 82%, 64%)'
 
-    let dataPromise, entityPromise, sosmed
+    let dataPromise, entityPromise
 
     export let params = {}
 
@@ -107,8 +107,7 @@
     })
     
 
-    $: id, dataPromise = fetchData()
-    $: topicId, entityPromise = fetchEntity()
+
 
 </script>
 
@@ -124,7 +123,7 @@
                 <div class="close" on:click={forward}>
                     <Icon data={angleLeft} scale={2} />
                 </div>
-                {#await entityPromise}
+                {#await fetchEntity()}
                     <div class="keywords">
                         {#each keywordPlaceholder as d}
                             <div class='placeholder keyword' style='width:{Math.random() * 50 + 100}px'></div>
@@ -141,7 +140,7 @@
                 {/await}           
             </div>
             <div class="bottom">
-                {#await entityPromise}
+                {#await fetchEntity()}
                     <div class="placeholder-container">
                         <Fa icon={faSpinner} size="3x" pulse />
                     </div>
@@ -206,7 +205,7 @@
                 <Icon data={angleLeft} scale={2} />
             </div>
 
-            {#await dataPromise}
+            {#await fetchData()}
                 <h1 class='placeholder'></h1>
                 <h3 class='placeholder'></h3>
                 <div class="detail">
@@ -227,7 +226,7 @@
             {/await}
         </div>
         <div class="bottom">
-            {#await dataPromise}
+            {#await fetchData()}
                 <div class="placeholder-container">
                     <Fa icon={faSpinner} size="3x" pulse />
                 </div>
