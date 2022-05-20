@@ -38,7 +38,7 @@
                                 title={d.title} alt={d.title}
                                 onerror={`this.onerror=null;this.src='${process['env']['NO_IMAGE']}';`} />
                             </div>
-                            <div class="credit" style='color:{txtFooter}'>
+                            <div class="credit" style='color:#{txtFooter}; text-decoration:none;'>
                                 <p class="author">{d.author_name}</p> <!-- harusnya {d.author_name}-->
                                 <p class="article-title">
                                     {d.title}
