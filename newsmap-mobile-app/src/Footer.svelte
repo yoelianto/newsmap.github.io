@@ -53,8 +53,8 @@
                     <a href={`/deduktif/`} use:link>
                         <p>Deduktif</p>
                     </a>
-                    <a href={`/infosight/`} use:link>
-                        <p>Infosight</p>
+                    <a href={`/paralaks/`} use:link>
+                        <p>Paralaks</p>
                     </a>
                 {/if}
     

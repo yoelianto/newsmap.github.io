@@ -39,9 +39,9 @@
     page='indeks'
     />
 <article style="margin-top:{height}px">
-    <h1>INFOSIGHT</h1>
+    <h1>PARALAKS</h1>
     <form>
-        <input type="search" placeholder="Cari Artikel Infosight..." bind:value={searchValue}>
+        <input type="search" placeholder="Cari Artikel Paralaks..." bind:value={searchValue}>
         <button type="submit" on:click={search}>Search</button>
     </form>
     {#await dataPromise}

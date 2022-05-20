@@ -25,7 +25,7 @@
         "/deduktif/": IndeksDeduktif,
         "/rewara/": IndeksRewara,
         "/search/": IndeksCari,
-        "/infosight/": IndeksInfogram,
+        "/paralaks/": IndeksInfogram,
         "/about/": AboutUs,
         "/contact/":Contact,
         "/redaksi/":Redaksi,

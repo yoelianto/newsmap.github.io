@@ -105,7 +105,12 @@
         return allResult
     })
     
-
+    $: if (id) {
+        dataPromise = fetchData()
+    }
+    $: if (topicId) {
+        entityPromise = fetchEntity()
+    } 
 
 
 </script>
@@ -122,7 +127,7 @@
                 <div class="close" on:click={forward}>
                     <Icon data={angleLeft} scale={2} />
                 </div>
-                {#await fetchEntity()}
+                {#await entityPromise}
                     <div class="keywords">
                         {#each keywordPlaceholder as d}
                             <div class='placeholder keyword' style='width:{Math.random() * 50 + 100}px'></div>
@@ -139,7 +144,7 @@
                 {/await}           
             </div>
             <div class="bottom">
-                {#await fetchEntity()}
+                {#await entityPromise}
                     <div class="placeholder-container">
                         <Fa icon={faSpinner} size="3x" pulse />
                     </div>
@@ -204,7 +209,7 @@
                 <Icon data={angleLeft} scale={2} />
             </div>
 
-            {#await fetchData()}
+            {#await dataPromise}
                 <h1 class='placeholder'></h1>
                 <h3 class='placeholder'></h3>
                 <div class="detail">
@@ -225,7 +230,7 @@
             {/await}
         </div>
         <div class="bottom">
-            {#await fetchData()}
+            {#await dataPromise}
                 <div class="placeholder-container">
                     <Fa icon={faSpinner} size="3x" pulse />
                 </div>
