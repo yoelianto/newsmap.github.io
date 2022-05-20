@@ -45,8 +45,8 @@
             <a href={`/deduktif/`} use:link>
                 <p>Deduktif</p>
             </a>
-            <a href={`/infogram/`} use:link>
-                <p>Infogram</p>
+            <a href={`/infosight/`} use:link>
+                <p>Infosight</p>
             </a>
 
             <hr class='rounded'>
@@ -119,6 +119,7 @@
         <div
             class="close"
             on:click={burgerMenuOut}
+            style='cursor:pointer'
         >
             <Icon
                 data={angleLeft}
