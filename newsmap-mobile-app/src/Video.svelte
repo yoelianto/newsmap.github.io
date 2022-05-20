@@ -6,48 +6,39 @@
         return await response.json()
         })()
 
+    // let shorts = [
+    //     {
+    //         url:"https://youtube.com/embed/Jm5s6N0R0pM",
+    //         title:"This is the best first project for programmers 👩‍💻 #technology #programming #software #career"
+    //     },
+    //     {
+    //         url:"https://youtube.com/embed/8mvNzU7DpO4",
+    //         title:"If You Don’t Understand Short Circuiting Your App Will Break"
+    //     },
+    //     {
+    //         url:"https://youtube.com/embed/AZGuWPhuyrg",
+    //         title:"Terrifying Aztec Death Whistle"
+    //     },
+    //     {
+    //         url:"https://youtube.com/embed/a_tCJbHmtKs",
+    //         title:"this lamp makes you colorblind"
+    //     }
+    // ]
+
     let shorts = [
-        {
-            url:"https://www.youtube.com/embed/NpmK3cW9MU4",
-            title:"Why Deadpool's Skin Doesn't REGENERATE? #Shorts"
-        },
-        {
-            url:"https://youtube.com/embed/Jm5s6N0R0pM",
-            title:"This is the best first project for programmers 👩‍💻 #technology #programming #software #career"
-        },
-        {
-            url:"https://youtube.com/embed/8mvNzU7DpO4",
-            title:"If You Don’t Understand Short Circuiting Your App Will Break"
-        },
-        {
-            url:"https://youtube.com/embed/AZGuWPhuyrg",
-            title:"Terrifying Aztec Death Whistle"
-        },
-        {
-            url:"https://youtube.com/embed/a_tCJbHmtKs",
-            title:"this lamp makes you colorblind"
-        }
-    ]
+         {
+             url:"https://youtube.com/embed/Jm5s6N0R0pM",
+             title:"This is the best first project for programmers 👩‍💻 #technology #programming #software #career"
+         },
+        ]
     </script>
     
     <div class="container">
         <h4 class="title">{title}</h4>
-        <div class="slider-container">
-            <div class="slider">
-                <!-- {#await fetchImage}
-                <p>...waiting</p>
-                {:then data} -->
-                    {#each shorts as short}
-                        <div class="news">
-                            <iframe class="imgthumb" src={short.url} title={short.title} frameborder=0 allowfullscreen></iframe>
-                            <!-- <p class="article-title">{short.title}</p> -->
-                        </div>
-                        
-                    {/each}
-                <!-- {:catch error}
-                    <p>An error occurred!</p>
-                {/await} -->
-            </div>
+        <div class="video">
+            {#each shorts as short}
+                <iframe class='youtube' src={short.url} title={short.title} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            {/each}
         </div>
     </div>
     
@@ -59,6 +50,19 @@
             font-size:1.5rem;
             margin-left: 6%;
             color: #242053;
+        }
+        .video {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .youtube {
+            width:80%;
+            aspect-ratio: 16/9;
+        }
+        .container {
+            margin-bottom:2rem;
         }
         .slider-container {
             overflow-x: scroll;
@@ -152,7 +156,7 @@
             .container {
                 max-width:800px;
                 width:80%;
-                margin:1rem auto;
+                margin:3rem auto;
             }
             .imgthumb {
                 width:18vw;
@@ -172,7 +176,7 @@
             .container {
                 max-width:1100px;
                 width:70.4%;
-                margin:1rem auto 0 auto;
+                margin:1rem auto 3rem auto;
             }
             .imgthumb {
                 width:18vw;

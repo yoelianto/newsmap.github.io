@@ -343,7 +343,7 @@
         }
         .container {
             width: 70.4%;
-            margin:0 auto;
+            margin:3rem auto;
         }
         .inner-container {
             display: flex;

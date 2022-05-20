@@ -154,12 +154,12 @@
 		<div class="discord-container">
 			<h1 class='title'>KLUB SOSIAL JURNO</h1>
 
-			<iframe class='discord' title='Klub Sosial Jurno' src="https://discord.com/widget?id=947748065794736168&theme=dark" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+			<iframe title='discord' class='discord'src="https://discord.com/widget?id=947748065794736168&theme=dark" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
 		</div>
 		
 		
 		<News 
-			title='INFOSIGHT'  
+			title='PARALAKS'  
 			--fontfamily1 ={fontfamily1}
 			--fontfamily2={fontfamily2}
 			params={params}
@@ -185,11 +185,12 @@
 			--fontfamily2={fontfamily2}
 			params={paramsDaerah}
 		/>
-		<Rewara
+
+		<!-- <Rewara
 			title='REWARA'  
 			--fontfamily1 ={fontfamily1}
 			--fontfamily2={fontfamily2}
-		/>
+		/> -->
 
 		<Footer 
 			--color-brand-dark-blue = {colorBrandDarkBlue}

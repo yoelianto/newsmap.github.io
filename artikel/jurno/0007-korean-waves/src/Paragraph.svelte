@@ -33,6 +33,7 @@
         margin-inline-start: 0px;
         margin-inline-end: 0px;
         color:var(--font-color);
+        white-space: normal;
     }
     @media only screen and (max-width: 800px) {
         section {

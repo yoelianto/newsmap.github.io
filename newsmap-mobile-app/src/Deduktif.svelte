@@ -271,7 +271,7 @@
         .container {
             max-width:1100px;
             width:70.4%;
-            margin:calc(18vw + 5rem) auto 1rem auto;
+            margin:calc(18vw + 5rem) auto 3rem auto;
             height:25vw;
         }
         .author {

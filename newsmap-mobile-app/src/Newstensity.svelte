@@ -247,24 +247,30 @@
                         />
                     </div>
                     <div class="right">
-                        <div class="data pos">
-                            <p>positive</p>
-                            <p class='percent positive' style:color={fgColor1}>
-                                {Math.abs(Math.ceil((parseInt(d[0].positive))/(parseInt(d[0].positive)+parseInt(d[0].negative)+parseInt(d[0].neutral))*100))}%
-                            </p>
+                        <div class="percentage">
+                            <div class="data pos">
+                                <p>positive</p>
+                                <p class='percent positive' style:color={fgColor1}>
+                                    {Math.abs(Math.ceil((parseInt(d[0].positive))/(parseInt(d[0].positive)+parseInt(d[0].negative)+parseInt(d[0].neutral))*100))}%
+                                </p>
+                            </div>
+                            <div class="data neg">
+                                <p>negative</p>
+                                <p class='percent negative' style:color={fgColor3}>
+                                    {Math.abs(Math.ceil((parseInt(d[0].negative))/(parseInt(d[0].positive)+parseInt(d[0].negative)+parseInt(d[0].neutral))*100))}%
+                                </p>
+                            </div>
+                            <div class="data neu">
+                                <p>neutral</p>
+                                <p class='percent neutral' style:color={fgColor2}>
+                                    {Math.abs(Math.ceil((parseInt(d[0].neutral))/(parseInt(d[0].positive)+parseInt(d[0].negative)+parseInt(d[0].neutral))*100))}%
+                                </p>
+                            </div>
                         </div>
-                        <div class="data neg">
-                            <p>negative</p>
-                            <p class='percent negative' style:color={fgColor3}>
-                                {Math.abs(Math.ceil((parseInt(d[0].negative))/(parseInt(d[0].positive)+parseInt(d[0].negative)+parseInt(d[0].neutral))*100))}%
-                            </p>
+                        <div class="persepsi">
+                            Persentase diambil dari besaran persepsi publik yang ada di sosial media.
                         </div>
-                        <div class="data neu">
-                            <p>neutral</p>
-                            <p class='percent neutral' style:color={fgColor2}>
-                                {Math.abs(Math.ceil((parseInt(d[0].neutral))/(parseInt(d[0].positive)+parseInt(d[0].negative)+parseInt(d[0].neutral))*100))}%
-                            </p>
-                        </div>
+                        
                     </div>
                 </div>
                 
@@ -582,6 +588,11 @@
 	@media only screen /*xtralarge*/
 	and (min-width: 1200px) {
         .right {
+            flex-direction: column;
+            
+        }
+        .percentage {
+            display: flex;
             flex-direction: row;
             justify-content: space-around;
             text-align: center;
@@ -589,6 +600,10 @@
         }
         .percent{
             font-size: 3rem;
+        }
+        .persepsi {
+            width:100%;
+            white-space: normal;
         }
 
 	}
