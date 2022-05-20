@@ -106,31 +106,11 @@
             <hr class='rounded'>
             
             <div class="sosmed">
-                <a href='https://www.instagram.com/jurnoid/'> <!-- INSTAGRAM LINK HERE -->
-                    <div class="sm ig">
-                        <Fa icon={faInstagram} />
-                    </div>
-                </a>
-                <a href=''> <!-- FACEBOOK LINK HERE -->
-                    <div class="sm fb">
-                        <Fa icon={faFacebook} />
-                    </div>
-                </a>
-                <a href='https://twitter.com/jurno_id' > <!-- TWITTER LINK HERE -->
+                <a href='https://twitter.com/deduktifid' > <!-- TWITTER LINK HERE -->
                     <div class="sm tw">
                         <Fa icon={faTwitter} />
                     </div>
                 </a>
-                <a href='https://www.youtube.com/channel/UCSGTUIGbrpONOTayMXAIcqw'> <!-- YOUTUBE LINK HERE -->
-                    <div class="sm yt">
-                        <Fa icon={faYoutube} />
-                    </div>
-                </a>
-                <a href='www.tiktok.com/@jurnoid'> <!-- TIKTOK LINK HERE -->
-                    <div class="sm tt">
-                        <Fa icon={faTiktok} />
-                    </div>
-                </a> 
             </div>
         </div>
     </section>
@@ -160,31 +140,11 @@
             <hr class='rounded'>
             
             <div class="sosmed">
-                <a href='https://www.instagram.com/jurnoid/'> <!-- INSTAGRAM LINK HERE -->
-                    <div class="sm ig">
-                        <Fa icon={faInstagram} />
-                    </div>
-                </a>
-                <a href=''> <!-- FACEBOOK LINK HERE -->
-                    <div class="sm fb">
-                        <Fa icon={faFacebook} />
-                    </div>
-                </a>
-                <a href='https://twitter.com/jurno_id' > <!-- TWITTER LINK HERE -->
+                <a href='https://twitter.com/deduktifid' > <!-- TWITTER LINK HERE -->
                     <div class="sm tw">
                         <Fa icon={faTwitter} />
                     </div>
                 </a>
-                <a href='https://www.youtube.com/channel/UCSGTUIGbrpONOTayMXAIcqw'> <!-- YOUTUBE LINK HERE -->
-                    <div class="sm yt">
-                        <Fa icon={faYoutube} />
-                    </div>
-                </a>
-                <a href='www.tiktok.com/@jurnoid'> <!-- TIKTOK LINK HERE -->
-                    <div class="sm tt">
-                        <Fa icon={faTiktok} />
-                    </div>
-                </a> 
             </div>
         </div>
     </section>
