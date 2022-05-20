@@ -65,7 +65,7 @@
         <a style='cursor:pointer' href='/'>
             <div class="article">
                 <div class="left">
-                    <img src={`${process['env']['URL_IMAGE']}${d.type == 'jurno' ? 'article' : d.type}/${d.thumbnail}`} alt={d.title} />
+                    <img src={`${process['env']['URL_IMAGE']}images/${d.type == 'jurno' ? 'article' : d.type}/${d.thumbnail}`} alt={d.title} />
                 </div>
                 <div class="credit">
                     <p class='type'>{d.type ? d.type : 'news'}</p>

@@ -79,7 +79,7 @@
         <a style='cursor:pointer' href={`/deduktif/${d.slug}`} use:link>
             <div class="article">
                 <div class="left">
-                    <img src={`${process['env']['URL_IMAGE']}deduktif/${d.thumbnail}`} alt={d.title} />
+                    <img src={`${process['env']['URL_IMAGE']}images/deduktif/${d.thumbnail}`} alt={d.title} />
                 </div>
                 <div class="credit">
                     <p class="author">{d.author_name}</p>
