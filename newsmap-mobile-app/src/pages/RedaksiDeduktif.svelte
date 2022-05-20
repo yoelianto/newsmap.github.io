@@ -57,20 +57,18 @@
     </div>
 
 </div>
-</main>
-
-
 <Footer 
     --color-brand-dark-blue = '#242053'
     --color-brand-white = "#fafafa"
     --fontfamily2 = 'Roboto'
     bind:page
 />
-
+</main>
 
 <style>
     main {
         background-color: #050505;
+        height: 100%;
         
     }
     .container {

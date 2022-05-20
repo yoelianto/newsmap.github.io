@@ -101,6 +101,9 @@
 
 
 <style>
+    main {
+        height:100%;
+    }
     .placeholder {
         background-color: hsl(0, 0%, 88%);
     }
