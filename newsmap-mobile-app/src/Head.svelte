@@ -159,6 +159,9 @@
         img {
             margin: 1.25vw;
         }
+        .deduktif-menu {
+            font-size: 0.6rem;
+        }
 	}
 	@media only screen /*medium*/
 	and (min-width: 768px)
@@ -166,6 +169,9 @@
         img {
             margin: 1vw;
             height:7vw;
+        }
+        .deduktif-menu {
+            font-size: 0.8rem;
         }
 
 	}
@@ -176,6 +182,9 @@
             margin: 1vw;
             height:7vw;
         }
+        .deduktif-menu {
+            font-size: 1rem;
+        }
 
 	}
 	@media only screen /*xtralarge*/
@@ -183,6 +192,9 @@
         img {
             margin:0.5vw;
             height:2.5vw;
+        }
+        .deduktif-menu {
+            font-size: 1rem;
         }
 
 	}

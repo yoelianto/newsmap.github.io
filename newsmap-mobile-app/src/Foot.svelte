@@ -38,7 +38,7 @@
                                 title={d.title} alt={d.title}
                                 onerror={`this.onerror=null;this.src='${process['env']['NO_IMAGE']}';`} />
                             </div>
-                            <div class="credit" style='color:#{txtFooter}; text-decoration:none;'>
+                            <div class="credit" style='color:#{txtFooter};'>
                                 <p class="author">{d.author_name}</p> <!-- harusnya {d.author_name}-->
                                 <p class="article-title">
                                     {d.title}
@@ -128,7 +128,10 @@
         margin: 0;
     }
     .credit {
-        color: black;
+        text-decoration: none !important;
+    }
+    .credit:hover {
+        text-decoration: none !important;
     }
 
     @media only screen /*xtrasmall*/
