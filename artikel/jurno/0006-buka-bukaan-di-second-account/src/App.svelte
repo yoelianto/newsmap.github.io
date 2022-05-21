@@ -201,7 +201,7 @@
 		
 			<!-- Artboard: submedium-3 -->
 			<div id="g-Buka-Bukaan-di-Second-Account_19-submedium-3" class="g-artboard"  data-aspect-ratio="0.638" data-min-width="510" data-max-width="689">
-				<div style=""></div>
+				<div style="padding: 0 0 {100/0.638}% 0"></div>
 				<img style="width:100%"id="g-Buka-Bukaan-di-Second-Account_19-submedium-3-img" class="g-aiImg" alt="" src="./images/Buka-Bukaan-di-Second-Account_19-submedium-3.png"/>
 				<div id="g-ai16-1" class="g-Layer_1 g-aiAbs g-aiPointText" style="position:absolute;top:16.8008%;margin-top:-13.4px;left:9.9198%;width:119px;">
 					<p class="g-pstyle0">First account</p>
@@ -240,7 +240,7 @@
 		
 			<!-- Artboard: medium-3 -->
 			<div id="g-Buka-Bukaan-di-Second-Account_19-medium-3" class="g-artboard" data-aspect-ratio="0.674" data-min-width="690" data-max-width="919">
-				<div style=""></div>
+				<div style="padding: 0 0 {100/0.674}% 0"></div>
 				<img style="width:100%"id="g-Buka-Bukaan-di-Second-Account_19-medium-3-img" class="g-aiImg" alt="" src="./images/Buka-Bukaan-di-Second-Account_19-medium-3.png"/>
 				<div id="g-ai17-1" class="g-Layer_1 g-aiAbs g-aiPointText" style="position:absolute;top:17.2492%;margin-top:-45.6px;left:11.0144%;width:179px;">
 					<p style="margin:0" class="g-pstyle0">Spectatorial</p>
@@ -278,7 +278,7 @@
 		
 			<!-- Artboard: large-3 -->
 			<div id="g-Buka-Bukaan-di-Second-Account_19-large-3" class="g-artboard" data-aspect-ratio="1" data-min-width="920" data-max-width="1399">
-				<div style=""></div>
+				<div style="padding: 0 0 {100/1}% 0"></div>
 				<img style="width:100%" id="g-Buka-Bukaan-di-Second-Account_19-large-3-img" class="g-aiImg" alt="" src="./images/Buka-Bukaan-di-Second-Account_19-large-3.png"/>
 				<div id="g-ai18-1" class="g-Layer_1 g-aiAbs g-aiPointText" style="position:absolute;top:21.1206%;margin-top:-64.3px;left:8.8384%;width:243px;">
 					<p style="margin:0" class="g-pstyle0">Spectatorial</p>
@@ -316,7 +316,7 @@
 		
 			<!-- Artboard: xlarge-3 -->
 			<div id="g-Buka-Bukaan-di-Second-Account_19-xlarge-3" class="g-artboard" data-aspect-ratio="1.778" data-min-width="1400">
-				<div style=""></div>
+				<div style="padding: 0 0 {100/1.778}% 0"></div>
 				<img style="width:100%"id="g-Buka-Bukaan-di-Second-Account_19-xlarge-3-img" class="g-aiImg" alt="" src="./images/Buka-Bukaan-di-Second-Account_19-xlarge-3.png"/>
 				<div id="g-ai19-1"  class="g-Layer_1 g-aiAbs g-aiPointText" style="position:absolute;top:20.1028%;margin-top:-64.3px;left:9.951%;width:243px;">
 					<p style="margin:0" class="g-pstyle0">Spectatorial</p>
