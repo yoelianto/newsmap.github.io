@@ -27,7 +27,7 @@
 
     let shorts = [
          {
-             url:"https://www.youtube.com/watch?v=GNG6xdbxTfA",
+             url:"https://www.youtube.com/embed/GNG6xdbxTfA",
              title:"Gimana Sih Kalau Polisi Dibantu Artificial Intelligence?"
          },
         ]
