@@ -549,6 +549,7 @@
         flex-direction: column;
     }
     p {
+        font-size: 0.6rem;
         margin-top: 0;
         margin-bottom: 0;
     }
@@ -558,7 +559,7 @@
         font-family: var(--fontfamily2);
     }
     .percent {
-        font-size: 1.5rem;
+        font-size: 1rem;
         font-weight: 800;
         font-family: var(--fontfamily1);
     }
@@ -596,6 +597,9 @@
         .percent{
             font-size: 2.5rem;
         }
+        p {
+            font-size: 0.8rem;
+        }
 	}
 	@media only screen /*xtralarge*/
 	and (min-width: 1200px) {
@@ -616,6 +620,9 @@
         .persepsi {
             width:100%;
             white-space: normal;
+            font-size: 0.8rem;
+        }
+        p {
             font-size: 0.8rem;
         }
 
