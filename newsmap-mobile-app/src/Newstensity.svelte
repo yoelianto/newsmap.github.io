@@ -379,6 +379,11 @@
         text-align: center;
         margin-top: 0.5rem;
     }
+    .persepsi {
+            width:100%;
+            white-space: normal;
+            font-size: 0.6rem;
+        }
     .imgperson {
         width: 100%;
         aspect-ratio: 1/1;
@@ -465,11 +470,13 @@
         width:80%;
         max-width:650px;
         margin:0.5rem auto;
+        white-space: normal;
     }
     h3 {
         width:80%;
         max-width:650px;
         margin:0.5rem auto;
+        white-space: normal;
     }
     article {
         position: fixed;
@@ -609,6 +616,7 @@
         .persepsi {
             width:100%;
             white-space: normal;
+            font-size: 0.8rem;
         }
 
 	}
