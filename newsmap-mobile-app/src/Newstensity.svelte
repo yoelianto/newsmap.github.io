@@ -72,7 +72,7 @@
 
 
     const fetchData = (async () => {
-        const result = await get(ihttp.URI_NEWS_TOP_ENTITY, { size:10, from:yesterday, to:today})
+        const result = await get(ihttp.URI_NEWS_TOP_ENTITY, { size:15, from:yesterday, to:today})
         const result2 = await get(ihttp.URI_ENTITY_PROFILE, { entity_id:id });
         const result3 = await get(ihttp.URI_ENTITY_VOICES, { from:yesterday, to:today, entity_id:id });
         const statementlist = await get(ihttp.URI_NEWS_STATEMENT_LIST, { from:yesterday, to:today, size:20, entities:id })
