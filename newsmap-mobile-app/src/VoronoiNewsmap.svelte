@@ -29,11 +29,11 @@
 
     let w = document.body.clientWidth;
     let h = document.body.clientHeight;
-    let width, placeholder, container
+    let width, placeholder, container;
 
     const fetchData = (async () => {
         const result = await get(ihttp.URI_LAST_TOPIC, { from:yesterday, to:today, size: 18 });
-        placeholder.style.display = 'none'
+        placeholder.style.display = 'none';
         return result.data;
     })()
 

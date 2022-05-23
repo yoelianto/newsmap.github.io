@@ -29,6 +29,12 @@
          dataPromise = searchData()
      }
 
+    const submit = (event) => {
+        if (event.key === 'Enter') {
+            dataPromise = searchData()
+        }
+    }
+
 </script>
 
 <svelte:head>
@@ -41,10 +47,10 @@
      />
 <article style="margin-top:{height}px">
     <h1>JURNO ORIGINAL</h1>
-    <form>
-        <input type="search" placeholder="Cari Artikel Jurno..." bind:value={searchValue}>
+    <!-- <form> -->
+        <input type="search" placeholder="Cari Artikel Jurno..." on:keydown={submit} bind:value={searchValue}>
         <button type="submit" on:click={search}>Search</button>
-    </form>
+    <!-- </form> -->
     {#await dataPromise}
         {#each placeholder as d}
         <div class="article">

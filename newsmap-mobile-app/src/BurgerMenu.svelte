@@ -3,7 +3,7 @@
     import { angleLeft } from 'svelte-awesome/icons';
     import Fa from 'svelte-fa'
     import { faTiktok, faInstagram, faTwitter, faFacebook, faYoutube } from '@fortawesome/free-brands-svg-icons'
-    import { link } from "svelte-spa-router";
+    import { url } from '@roxi/routify'
 
     export let burgerIn = false
     export let page
@@ -27,10 +27,10 @@
             />
         </div>
         <div class="menu">
-            <a href={`/about/`} use:link>
+            <a href={$url('/about')}>
                 <p>Tentang Kami</p>
             </a>
-            <a href={`/redaksi/`} use:link>
+            <a href={$url('/redaksi')}>
                 <p>Redaksi</p>
             </a>
             <a href=''> <!-- DISCORD LINK HERE -->
@@ -39,13 +39,13 @@
 
             <hr class='rounded'>
 
-            <a href={`/article/`} use:link>
+            <a href={$url('/article')}>
                 <p>Jurno Original</p>
             </a>
-            <a href={`/deduktif/`} use:link>
+            <a href={$url('/deduktif')}>
                 <p>Deduktif</p>
             </a>
-            <a href={`/paralaks/`} use:link>
+            <a href={$url('/paralaks')}>
                 <p>Paralaks</p>
             </a>
 
@@ -93,13 +93,13 @@
             />
         </div>
         <div class="menu">
-            <a href={`/deduktif/`} use:link>
+            <a href={$url('/deduktif')}>
                 <p>Laporan</p>
             </a>
-            <a href={`/deduktif/about`} use:link>
+            <a href={$url('/deduktif/about')}>
                 <p>Tentang Kami</p>
             </a>
-            <a href={`/deduktif/redaksi`} use:link>
+            <a href={$url('/deduktif/redaksi')}>
                 <p>Redaksi</p>
             </a>
 
@@ -128,13 +128,13 @@
             />
         </div>
         <div class="menu">
-            <a href={`/deduktif/`} use:link>
+            <a href={$url('/deduktif')}>
                 <p>Laporan</p>
             </a>
-            <a href={`/deduktif/about`} use:link>
+            <a href={$url('/deduktif/about')}>
                 <p>Tentang Kami</p>
             </a>
-            <a href={`/deduktif/redaksi`} use:link>
+            <a href={$url('/deduktif/redaksi')}>
                 <p>Redaksi</p>
             </a>
 
