@@ -2,7 +2,6 @@
     import Fa from 'svelte-fa'
     import { faTiktok, faInstagram, faTwitter, faFacebook, faYoutube } from '@fortawesome/free-brands-svg-icons'
     import { faCopyright } from '@fortawesome/free-solid-svg-icons'
-    import { link } from "svelte-spa-router";
     import {onMount} from 'svelte'
 
     export let page
@@ -23,23 +22,23 @@
         <div class="menu">
             <div class="left">
                 {#if page != 'indeksdeduktif'}
-                <a href={`/about/`} use:link>
+                <a href={`/about/`}>
                     <p>Tentang Kami</p>
                 </a>
-                <a href={`/redaksi/`} use:link>
+                <a href={`/redaksi/`}>
                     <p>Redaksi</p>
                 </a>
                 <a href=''> <!-- DISCORD LINK HERE -->
                     <p>Klub Sosial Jurno</p>
                 </a>
                 {:else}
-                <a href={`/deduktif/`} use:link>
+                <a href={`/deduktif/`}>
                     <p>Laporan</p>
                 </a>
-                <a href={`/deduktif/about/`} use:link>
+                <a href={`/deduktif/about/`}>
                     <p>Tentang Kami</p>
                 </a>
-                <a href={`/deduktif/redaksi/`} use:link>
+                <a href={`/deduktif/redaksi/`}>
                     <p>Redaksi</p>
                 </a>
                 {/if}
@@ -47,13 +46,13 @@
 
             <div class="right">
                 {#if page != 'indeksdeduktif'}
-                    <a href={`/article/`} use:link>
+                    <a href={`/article/`}>
                         <p>Jurno Original</p>
                     </a>
-                    <a href={`/deduktif/`} use:link>
+                    <a href={`/deduktif/`}>
                         <p>Deduktif</p>
                     </a>
-                    <a href={`/paralaks/`} use:link>
+                    <a href={`/paralaks/`}>
                         <p>Paralaks</p>
                     </a>
                 {/if}

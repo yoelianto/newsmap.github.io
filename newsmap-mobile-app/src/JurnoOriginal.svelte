@@ -1,5 +1,4 @@
 <script context="module">
-    import { link } from "svelte-spa-router";
     import interact from 'interactjs';
     import Fa from 'svelte-fa'
     import { faSpinner, faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons'
@@ -160,7 +159,7 @@
             id={i}
             style="z-index:{5-i};
                 transform:{width < height && width < 991 ? `translate(${i * 5}px, ${i * 5}px)` : `translate(0px, 0px)`}">
-                <a class="card-link" href={`/article/${d.slug}`} use:link>
+                <a class="card-link" href={`/article/${d.slug}/`}>
                     <div class="card" style="z-index:{5-i}">
                         <img class="thumb" src={`${process['env']['URL_IMAGE']}images/article/${d.thumbnail}`} alt="" >
                         <div class="bottom"></div>
