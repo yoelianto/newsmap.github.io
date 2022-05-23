@@ -22,8 +22,14 @@
 
     let dataPromise = fetchData()
     const search = () => {
-         dataPromise = searchData()
-     }    
+        dataPromise = searchData()
+    }
+
+    const submit = (event) => {
+        if (event.key === 'Enter') {
+            dataPromise = searchData()
+        }
+    }
 
     onMount(()=>{
         animateScroll.scrollToTop()
@@ -40,10 +46,10 @@
     />
 <article style="margin-top:{height}px">
     <h1>PARALAKS</h1>
-    <form>
-        <input type="search" placeholder="Cari Artikel Paralaks..." bind:value={searchValue}>
+    <!-- <form> -->
+        <input type="search" placeholder="Cari Artikel Paralaks..." on:keydown={submit} bind:value={searchValue}>
         <button type="submit" on:click={search}>Search</button>
-    </form>
+    <!-- </form> -->
     {#await dataPromise}
         {#each placeholder as d}
         <div class="article">
