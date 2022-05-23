@@ -66,6 +66,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        flex-direction: column;
     }
 	svg {
 		display: block;
