@@ -4,3 +4,8 @@
 rollup.config.js
 
 .DS_Store
+
+/.routify
+/public/article
+/public/deduktif
+/public/dist

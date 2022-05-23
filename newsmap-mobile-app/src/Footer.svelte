@@ -3,6 +3,7 @@
     import { faTiktok, faInstagram, faTwitter, faFacebook, faYoutube } from '@fortawesome/free-brands-svg-icons'
     import { faCopyright } from '@fortawesome/free-solid-svg-icons'
     import {onMount} from 'svelte'
+    import { url } from '@roxi/routify'
 
     export let page
 
@@ -22,23 +23,23 @@
         <div class="menu">
             <div class="left">
                 {#if page != 'indeksdeduktif'}
-                <a href={`/about`}>
+                <a href={$url('/about')}>
                     <p>Tentang Kami</p>
                 </a>
-                <a href={`/redaksi`}>
+                <a href={$url('/redaksi')}>
                     <p>Redaksi</p>
                 </a>
                 <a href=''> <!-- DISCORD LINK HERE -->
                     <p>Klub Sosial Jurno</p>
                 </a>
                 {:else}
-                <a href={`/deduktif`}>
+                <a href={$url('/deduktif')}>
                     <p>Laporan</p>
                 </a>
-                <a href={`/deduktif/about`}>
+                <a href={$url('/deduktif/about')}>
                     <p>Tentang Kami</p>
                 </a>
-                <a href={`/deduktif/redaksi`}>
+                <a href={$url('/deduktif/redaksi')}>
                     <p>Redaksi</p>
                 </a>
                 {/if}
@@ -46,13 +47,13 @@
 
             <div class="right">
                 {#if page != 'indeksdeduktif'}
-                    <a href={`/article`}>
+                    <a href={$url('/article')}>
                         <p>Jurno Original</p>
                     </a>
-                    <a href={`/deduktif`}>
+                    <a href={$url('/deduktif')}>
                         <p>Deduktif</p>
                     </a>
-                    <a href={`/paralaks`}>
+                    <a href={$url('/paralaks')}>
                         <p>Paralaks</p>
                     </a>
                 {/if}
