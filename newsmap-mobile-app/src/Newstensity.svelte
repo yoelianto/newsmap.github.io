@@ -189,11 +189,11 @@
                     <p>an error occured</p>
                 {/await}
             </div>
-            <div class="foot">
+            <!-- <div class="foot">
                 <button>
                     Selengkapnya
                 </button>
-            </div>
+            </div> -->
 
             {/if}
     {/if}
@@ -309,11 +309,11 @@
                 <p>an error occured</p>
             {/await}
         </div>
-        <div class="foot">
+        <!-- <div class="foot">
             <button>
                 Selengkapnya
             </button>
-        </div>
+        </div> -->
 
         {/if}
     {/if}
