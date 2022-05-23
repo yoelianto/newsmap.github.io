@@ -89,8 +89,6 @@
 
 
     const fetchEntity = (async () => {
-        console.log('topicId', topicId)
-        console.log('newsId', newsId)
         const topicResult = await get(ihttp.URI_LAST_TOPIC, {_id:topicId})
         const result = await get(ihttp.URI_NEWS_TOP_ENTITY, { from:yesterday, to:today, topic_id:topicId, type:'person' });
         const newsList = await get(ihttp.URI_NEWS_LIST, { topic_id:topicId, from:yesterday, to:today })
