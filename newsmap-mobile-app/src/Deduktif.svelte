@@ -58,7 +58,7 @@
                     <div class="headerbottom"></div>
                         <div class="detail">
                             <div class="author">oleh {d.author_name}</div>
-                            <a href={`/deduktif/${d.slug}/`}>
+                            <a href={`/deduktif/${d.slug}`}>
                                 <div class="title">{d.title}</div>  
                             </a>
                         </div>

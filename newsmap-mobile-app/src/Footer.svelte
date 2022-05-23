@@ -22,23 +22,23 @@
         <div class="menu">
             <div class="left">
                 {#if page != 'indeksdeduktif'}
-                <a href={`/about/`}>
+                <a href={`/about`}>
                     <p>Tentang Kami</p>
                 </a>
-                <a href={`/redaksi/`}>
+                <a href={`/redaksi`}>
                     <p>Redaksi</p>
                 </a>
                 <a href=''> <!-- DISCORD LINK HERE -->
                     <p>Klub Sosial Jurno</p>
                 </a>
                 {:else}
-                <a href={`/deduktif/`}>
+                <a href={`/deduktif`}>
                     <p>Laporan</p>
                 </a>
-                <a href={`/deduktif/about/`}>
+                <a href={`/deduktif/about`}>
                     <p>Tentang Kami</p>
                 </a>
-                <a href={`/deduktif/redaksi/`}>
+                <a href={`/deduktif/redaksi`}>
                     <p>Redaksi</p>
                 </a>
                 {/if}
@@ -46,13 +46,13 @@
 
             <div class="right">
                 {#if page != 'indeksdeduktif'}
-                    <a href={`/article/`}>
+                    <a href={`/article`}>
                         <p>Jurno Original</p>
                     </a>
-                    <a href={`/deduktif/`}>
+                    <a href={`/deduktif`}>
                         <p>Deduktif</p>
                     </a>
-                    <a href={`/paralaks/`}>
+                    <a href={`/paralaks`}>
                         <p>Paralaks</p>
                     </a>
                 {/if}
