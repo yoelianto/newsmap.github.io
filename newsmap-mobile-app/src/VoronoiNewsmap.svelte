@@ -152,6 +152,8 @@
             }
 
             let polygons = state.polygons;
+            console.log(polygons)
+            
 
             let container = d3.select(el)
                 .attr('width', width)
@@ -177,7 +179,7 @@
             .append('g')
             .classed('labels', true)
 
-            cells
+            let polygon = cells
             .selectAll('.voronoi')
             .data(polygons)
             .enter()
@@ -223,109 +225,70 @@
             .selectAll('.label')
             .data(polygons)
             .enter()
-            .append('text')
+            .append('foreignObject')
+            .attr('width',(d) => {
+                let xpoly=[]
+                d.forEach(arr => {
+                    xpoly.push(arr[0])
+                    })
+                let xmaxpoly = Math.max(...xpoly)
+                let xminpoly = Math.min(...xpoly)
+                let wcell = xmaxpoly-xminpoly
+                return wcell
+                }
+            )
+            .attr('height',(d) => {
+                let ypoly=[]
+                d.forEach(arr => {
+                    ypoly.push(arr[1])
+                    })
+                let ymaxpoly = Math.max(...ypoly)
+                let yminpoly = Math.min(...ypoly)
+                let hcell = ymaxpoly-yminpoly
+                return hcell
+                }
+            )
+            .attr('x', (d) => {
+                let xpoly=[]
+                d.forEach(arr => {
+                    xpoly.push(arr[0])
+                    })
+                let xminpoly = Math.min(...xpoly)
+                
+                return xminpoly
+                })
+            .attr('y', (d) => {
+                let ypoly=[]
+                d.forEach(arr => {
+                    ypoly.push(arr[1])
+                    })
+                let yminpoly = Math.min(...ypoly)
+                return yminpoly
+                })
+            .append('xhtml:div')
+            .attr("xmlns","http://www.w3.org/1999/xhtml")
+            .style('display','flex')
+            .style('justify-content','center')
+            .style('align-items','center')
+            .style('text-align', 'center')
+            .style('white-space', 'normal')
+            .style('height','100%')
+            .style('width','80%')
+            .style('margin','auto')
             .classed('label', true)
             .style("cursor", "pointer")
-            .text((d) => {
+            .html((d) => {
                 if (d.site.originalObject.data.originalData.weight >= 2) {
-                    return d.site.originalObject.data.originalData.keywords[0]
+                    return d.site.originalObject.data.originalData.title
                 }
             })
-            .style('fill', 'white')
+            .style('color', 'white')
             .attr('text-anchor', 'middle')
             .attr('x', (d) => {
                 return d.site.x
             })
             .attr('y', (d) => {
                 return d.site.y
-            })
-            .style('font-size', (d) => {
-                if (d.site.originalObject.data.originalData.weight == 4) {
-                    return '1.5rem'
-                } else if (d.site.originalObject.data.originalData.weight == 3) {
-                    return '1rem'
-                } else {
-                    return '0.5rem'
-                }
-            })
-            .style('font-weight', (d) => {
-                if (d.site.originalObject.data.originalData.weight == 4) {
-                    return '700'
-                } else if (d.site.originalObject.data.originalData.weight == 3) {
-                    return '500'
-                } else {
-                    return '300'
-                }
-            })
-            .on('click', (d)=> {
-                topicId =  d.srcElement.__data__.site.originalObject.data.originalData._id
-                newsId = d.srcElement.__data__.site.originalObject.data.originalData.topic_id
-                dispatch('modalIn')
-            })
-
-            text
-            .selectAll('.secondarylabel')
-            .data(polygons)
-            .enter()
-            .append('text')
-            .classed('secondarylabel', true)
-            .style("cursor", "pointer")
-            .text((d) => {
-                if (d.site.originalObject.data.originalData.weight >= 3) {
-                    return d.site.originalObject.data.originalData.keywords[1]
-                }
-            })
-            .style('fill', 'white')
-            .attr('text-anchor', 'middle')
-            .attr('x', (d) => {
-                return d.site.x
-            })
-            .attr('y', (d) => {
-                return d.site.y + (d.site.originalObject.data.originalData.weight * 5)
-            })
-            .style('font-size', (d) => {
-                if (d.site.originalObject.data.originalData.weight == 4) {
-                    return '1rem'
-                } else if (d.site.originalObject.data.originalData.weight == 3) {
-                    return '0.6rem'
-                } else {
-                    return '0.4rem'
-                }
-            })
-            .style('font-weight', (d) => {
-                if (d.site.originalObject.data.originalData.weight == 4) {
-                    return '700'
-                } else if (d.site.originalObject.data.originalData.weight == 3) {
-                    return '500'
-                } else {
-                    return '300'
-                }
-            })
-            .on('click', (d)=> {
-                topicId =  d.srcElement.__data__.site.originalObject.data.originalData._id
-                newsId = d.srcElement.__data__.site.originalObject.data.originalData.topic_id
-                dispatch('modalIn')
-            })
-
-            text
-            .selectAll('.tersierlabel')
-            .data(polygons)
-            .enter()
-            .append('text')
-            .classed('tersierlabel', true)
-            .style("cursor", "pointer")
-            .text((d) => {
-                if (d.site.originalObject.data.originalData.weight >= 3) {
-                    return d.site.originalObject.data.originalData.keywords[2]
-                }
-            })
-            .style('fill', 'white')
-            .attr('text-anchor', 'middle')
-            .attr('x', (d) => {
-                return d.site.x
-            })
-            .attr('y', (d) => {
-                return d.site.y + (d.site.originalObject.data.originalData.weight * 5 * 1.7)
             })
             .style('font-size', (d) => {
                 if (d.site.originalObject.data.originalData.weight == 4) {
@@ -379,7 +342,7 @@
     width={w > h ? 0.65 * h : 0.95 * w}
     height={w > h ? 0.65 * h : 0.95 * w}
     viewBox = "0 0 100 100">
-    <path bind:this={catanchor} fill='hsl(0, 0%, 88%)' class="cls-1" d="M94.6,14.335v3.81l-.09,4.17-.19,4.65-.31,5.31-.3,4.3-.45,5.47-.54,5.6,.22,1.07,.59,4.55,.08,4.58-.4,4.54-.83,4.46-1.31,4.34-1.76,4.16-2.16,3.95-2.53,3.7-2.93,3.38-3.25,3.05-3.53,2.71-3.76,2.35-3.98,1.93-4.14,1.53-4.27,1.11-4.36,.69-4.38,.26-4.38-.26-4.36-.69-4.26-1.11-4.15-1.53-3.98-1.93-3.76-2.35-3.52-2.71-3.26-3.05-2.92-3.38-2.54-3.7-2.16-3.95-1.75-4.16-1.31-4.34-.84-4.46-.4-4.54,.08-4.58,.6-4.55,.21-1.07-.53-5.6-.45-5.47-.31-4.3-.31-5.31-.19-4.65-.08-4.17v-3.81l.15-3.65,.22-2.8,.32-2.46,.5-1.95,.14-.41,.14-.4,.15-.4,.18-.38,.2-.39,.25-.33,.3-.35,.34-.28,.37-.23,.41-.17,.43-.11,.43-.02h.43l.42,.05,.41,.08,.39,.12,.38,.14,.36,.17s1.29,.71,1.58,.86c.03,.02,.05,.03,.05,.03l2.48,1.9,1.56,1.47,1.68,1.81,1.54,1.8,1.73,2.13,1.47,1.91,1.43,1.91,1.02,1.43,1.34,1.95,1.1,1.67,2.98-1.38,4.28-1.57,4.39-1.2,4.49-.76,4.53-.29,4.53,.29,4.5,.76,4.39,1.2,4.27,1.57,2.98,1.38,1.11-1.67,1.34-1.95,1.02-1.43,1.42-1.91,1.48-1.91,1.72-2.13,1.55-1.8,1.68-1.81,1.56-1.47,2.47-1.9,.06-.03c.28-.15,1.58-.86,1.58-.86l.36-.17,.38-.14,.39-.12,.4-.08,.42-.05h.43l.44,.02,.43,.11,.4,.17,.38,.23,.34,.28,.29,.35,.26,.33,.2,.39,.18,.38,.15,.4,.14,.4,.13,.41,.5,1.95,.33,2.46,.22,2.8,.15,3.65h0Z"/>
+        
 
     <path bind:this={circleanchor} fill='hsl(0, 0%, 88%)' class="cls-1" d="M91.153,57.13c0,22.372-18.411,40.502-41.123,40.502S8.917,79.503,8.917,57.13c0-7.001,1.806-13.594,4.981-19.343,2.865-5.176,6.836-9.662,11.614-13.167,6.846-5.011,15.333-7.982,24.518-7.982s17.624,2.952,24.47,7.943c4.768,3.486,8.739,7.953,11.614,13.099,3.214,5.778,5.04,12.4,5.04,19.45Z"/>
 
