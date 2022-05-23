@@ -4,7 +4,7 @@
     import { createEventDispatcher } from 'svelte';
     import BurgerMenu from './BurgerMenu.svelte';
     import Search from './Search.svelte';
-    import { link } from "svelte-spa-router";
+    import { url } from '@roxi/routify'
 
     const dispatch = createEventDispatcher()
 
@@ -40,7 +40,7 @@
         <div class="container" style="background-color:#fafafa}" bind:clientHeight={height}>
             <div class="header-logo" style='justify-content:{page =='artikel' ? 'flex-start' : 'space-between'}'>
                 {#if page == 'artikel'}
-                    <a href='/'>
+                    <a href={$url('/')}>
                         <img src="./images/logo-jurno-web.svg" alt="Logo Jurno Website">
                     </a>
                 {/if}
@@ -48,7 +48,7 @@
                     <div class="before" on:click={()=> {burgerIn = true}} style="cursor:pointer">
                         <Icon data={bars} />
                     </div>
-                    <a href='/'>
+                    <a href={$url('/')}>
                         <img src="./images/logo-jurno-web.svg" alt="Logo Jurno Website">
                     </a>
                     <div class="after" on:click={()=> {searchIn = true}} style="cursor:pointer">
@@ -67,21 +67,21 @@
                 flex-direction:row"
             bind:clientHeight={height}>
             <div class="deduktif-logo" style="margin-left:6%">
-                <a href='/'>
+                <a href={$url('/')}>
                     <img src="./images/deduktif.svg" alt="Logo Deduktif Website"
                     style="filter: invert(54%) sepia(65%) saturate(1029%) hue-rotate(318deg) brightness(87%) contrast(114%);">
                 </a>
             </div>
             <div class="deduktif-menu" style="margin-right:6%">
-                <a href='/deduktif/' use:link>
+                <a href={$url('/deduktif')}>
                     Laporan
                 </a>
                 <div class="vert"></div>
-                <a href='/deduktif/about/' use:link>
+                <a href={$url('/deduktif/about')}>
                     Tentang Kami
                 </a>
                 <div class="vert"></div>
-                <a href='/deduktif/redaksi/' use:link>
+                <a href={$url('/deduktif/redaksi')}>
                     Redaksi
                 </a>
             </div>
@@ -93,7 +93,7 @@
                     <div class="before" on:click={()=> {burgerIn = true}} style="cursor:pointer">
                         <Icon data={bars} style='color:#fafafa'/>
                     </div>
-                    <a href='/'>
+                    <a href={$url('/')}>
                         <img src="./images/deduktif.svg" alt="Logo Deduktif Website"
                     style="filter: invert(54%) sepia(65%) saturate(1029%) hue-rotate(318deg) brightness(87%) contrast(114%);">
                     </a>
