@@ -1,17 +1,17 @@
 <script>
-	import Head from './Head.svelte';
 	import Header from './Header.svelte';
 	import Paragraph from './Paragraph.svelte';
+	import List from './List.svelte'
 	import Quote from './Quote.svelte';
 	import Image from './Image.svelte';
 	import Credit from './Credit.svelte';
-	import Foot from './Foot.svelte'
+	import Typo from './Typo.svelte';
 
 	//Main Font
 	let fontfamily1 = "Roboto Mono"
 
 	//Main Color
-	let fontColor = '#f9f9e1'
+	let fontColor = '#1e1e1e'
 
 	//Secondary Dark Color
 	let colorBrandDarkBlue = "#242053"
@@ -25,27 +25,20 @@
 	let bottom = 1;
 
 	// styling variables
-	let mainBackground='#761fff'	
-	let headerBackground='#761fff'
-	let titleColor='#f9f9e1'
-	let subtitleColor='#f9f9e1'
-	let subheadColor='#f9f9e1'
+	let mainBackground='#fffae6'	
+	let headerBackground='hsl(0,0%,100%)'
+	let titleColor='#1e1e1e'
+	let subtitleColor='hsl(200,43%,50%)'
+	let subheadColor='hsl(0,0%,0%)'
 
 	let height
 
-	let subhead = ['Indonesia adalah salah satu negara dengan jumlah jenis ular berbisa terbanyak di dunia. Totalnya 77 jenis yang terbagi ke dalam tiga famili: <em>elapidae</em>, <em>viperidae</em>, & <em>colubridae</em>',
-
-	'Namun,  sampai saat ini Indonesia hanya memiliki stok antivenom untuk 8-10 jenis ular berbisa. Masih ada 67 jenis ular berbisa lain yang tak punya antivenom. Jumlah tersebut lebih sedikit dari Australia yang masing-masing memiliki antivenom untuk 7-12 jenis ular dan Thailand yang punya 12-20 antivenom.',
-
-	'Sedangkan jumlah ular berbisa di Indonesia jauh lebih banyak dibandingkan Australia dan Malaysia yang masing-masing hanya 20 jenis. Sementara di dunia terdapat 320 jenis ular berbisa yang mematikan, menurut WHO. Artinya, 24 persen di antara berada di negeri ini.'
-	]
-
 	let credit =[{
 		role : 'Penulis',
-		name : 'Lorem Ipsum'
+		name : 'Ann Putri'
 		}]
-	let source = 'Sed nec pellentesque massa. Vestibulum eu sem ut dolor placerat ultricies at sit amet massa'
-
+	
+	let speed = 2
 </script>
 
 <svelte:head>
@@ -56,46 +49,10 @@
 	
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Fondamento:ital@0;1&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Josefin+Slab:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
 </svelte:head>
 
 <main style="background-color: {mainBackground}">
-	<Head 
-		bind:height = {height}
-	/>
-	<div class="headerilustrasi" style="margin-top:{height}px;">
-		<div id="g-Bisa-Ular-box" class="ai2html">
-			<!-- Artboard: smallplus-cover -->
-			<div id="g-Bisa-Ular-smallplus-cover" class="g-artboard" style="max-width: 509px;max-height: 509px" data-aspect-ratio="1" data-min-width="0" data-max-width="509">
-			<div style="padding: 0 0 100% 0;"></div>
-			<img id="g-Bisa-Ular-smallplus-cover-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-smallplus-cover.png"/>
-			</div>
-				
-			<!-- Artboard: submedium-cover -->
-			<div id="g-Bisa-Ular-submedium-cover" class="g-artboard" style="min-width: 510px;max-width: 689px;max-height: 432px" data-aspect-ratio="1.594" data-min-width="510" data-max-width="689">
-			<div style="padding: 0 0 62.7451% 0;"></div>
-			<img id="g-Bisa-Ular-submedium-cover-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-submedium-cover.png"/>
-			</div>
-				
-			<!-- Artboard: medium-cover -->
-			<div id="g-Bisa-Ular-medium-cover" class="g-artboard" style="min-width: 690px;max-width: 919px;max-height: 426px" data-aspect-ratio="2.156" data-min-width="690" data-max-width="919">
-			<div style="padding: 0 0 46.3768% 0;"></div>
-			<img id="g-Bisa-Ular-medium-cover-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-medium-cover.png"/>
-			</div>
-				
-			<!-- Artboard: large-cover -->
-			<div id="g-Bisa-Ular-large-cover" class="g-artboard" style="min-width: 920px;max-width: 1399px;max-height: 485px" data-aspect-ratio="2.884" data-min-width="920" data-max-width="1399">
-			<div style="padding: 0 0 34.6739% 0;"></div>
-				<img id="g-Bisa-Ular-large-cover-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-large-cover.png"/>
-			</div>
-				
-			<!-- Artboard: xlarge-cover -->
-			<div id="g-Bisa-Ular-xlarge-cover" class="g-artboard" style="min-width: 1400px;" data-aspect-ratio="4.466" data-min-width="1400">
-			<div style="padding: 0 0 22.3929% 0;"></div>
-				<img id="g-Bisa-Ular-xlarge-cover-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-xlarge-cover.png"/>
-			</div>
-		</div>
-	</div>	
 	
 
 	<Header 
@@ -106,16 +63,53 @@
 
 		fullHeader={false}
 
-		title='Bisa Ular'
+		title='Makin Canggih<br>Makin Terasing<br>Makin Kesepian'
 
-		subhead={subhead}
-		
+		subhead={['Semua kebutuhan kita, terutama kebutuhan untuk berkomunikasi dengan manusia lain, sekarang bisa diakses hanya dalam beberapa klik. Tapi kenapa kita makin merasa kesepian?']}
 
-		author='Ahsan Ridhoi'
-		date=''		
+		author='Ann Putri'
+		date='15 Mei 2022'		
 	/>
 
 	<div class="divider"></div>
+
+	<Paragraph
+		--font-color ={fontColor}
+		subjudul='Anatomi Kesepian'
+		para={[
+		"Ketakutan akan kesendirian sudah ada <a href='https://www.cnnindonesia.com/gaya-hidup/20200420164136-289-495357/kisah-nabi-adam-as-manusia-pertama-yang-diciptakan-allah'>sejak cerita penciptaan Adam dan Hawa</a>. Tuhan memerintahkan manusia untuk berpasangan, beranak-pinak, dan menjaga relasi dengan keluarga, tetangga, dan teman. Merasa seorang sendiri merupakan pertanda bahwa cahaya kasih Tuhan tak lagi bersinar di dalam hati.",
+		"Kesendirian pun dianggap asing dan menakutkan. Para pendeta sering menggunakan fenomena sendirian di tempat yang jauh dari pertolongan Ilahi seperti kuburan dan neraka untuk menakut-nakuti umat.",
+		"Secara etimologi, kesepian atau <em>loneliness</em> baru memasuki kosa kata bahasa Inggris di tahun 1600-an lewat karya Shakespeare, Hamlet. Mereka yang menerima ide kesendirian dengan tangan terbuka adalah para filsuf. Aristoteles, Montaigne, dan Nietzsche menganggap kesendirian sebagai keutamaan (<em>virtue</em>). Dalam kesendirian, manusia bisa merasakan kebebasan dan merenungi hidup beserta maknanya."
+		]}
+	/>
+
+	<Typo 
+		text='Meskipun kesendirian dianggap sebagai aspek kehidupan yang berharga, kesepian sebisa mungkin dihindari.'
+	/>
+
+	<Paragraph
+		--font-color ={fontColor}
+		para={[
+		"Lalu apa yang membedakan kesepian dengan kesendirian? Secara kasar, seseorang secara sadar memilih untuk menyendiri. Sementara kesepian lahir dari <a href='https://link.springer.com/content/pdf/10.1007%2FBF01278458.pdf'>kurangnya kedekatan emosional dan fisik yang bermakna</a>.",
+		"Menariknya, naiknya penggunaan kata kesepian diikuti dengan Revolusi Industri. Modernisasi tak hanya mengubah lanskap industri, tapi juga lanskap sosial kita. Jam kerja naik pesat menjadi 14-16 jam/hari, sebelum akhirnya diturunkan menjadi 8 jam/hari."
+		]}
+	/>
+
+	<Image
+		img = {[{
+			url:'./images/2. Illus 2.png',
+			title:'Ilustrasi kesendirian'
+		}]}
+	/>
+
+
+	<Paragraph
+		--font-color ={fontColor}
+		para={[
+		"Namun penurunan jam kerja tidak serta-merta membuat kita lebih sering bersosialisasi. Justru kultur sosial menjadi lebih individualistis yang kemudian berimbas ke formasi keluarga. Orang-orang dari negara maju lebih memilih untuk kumpul kebo daripada menikah. Kalaupun menikah, mereka melakukannya <a href='https://www.nytimes.com/2018/05/29/well/mind/millennials-love-marriage-sex-relationships-dating.html'>di usia yang lebih tua</a>, punya anak sedikit atau <a href='https://www.economist.com/international/2017/07/27/the-rise-of-childlessness'>tidak sama sekali</a>. Anak muda di Jepang bahkan lebih ekstrim: <a href='https://japantoday.com/category/features/kuchikomi/young-people-losing-interest-in-sex-but-why'>mereka tidak tertarik untuk pacaran, apalagi berhubungan seks</a>.",
+		"Naiknya kerja ke tangga prioritas manusia modern juga membuat kita memiliki lebih sedikit teman curhat dibandingkan dulu."
+		]}
+	/>
 
 	<Scroller
 		{top}
@@ -125,457 +119,111 @@
 		bind:index
 		bind:offset
 		bind:progress
-	>
+		>
 		<div slot="background">
-			<div id="g-Bisa-Ular-box" class="ai2html">
-
-			{#if index == 0}
-				<!-- Halaman 1 -->
-				<!-- Artboard: smallplus-1 -->
-				<div id="g-Bisa-Ular-smallplus-1" class="g-artboard" style="max-width: 509px;max-height: 1113px" data-aspect-ratio="0.457" data-min-width="0" data-max-width="509"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 218.75% 0;"></div>
-				<img id="g-Bisa-Ular-smallplus-1-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-smallplus-1.png"/>
+			<div
+				style:height='100vh'>
+					<div
+						style:position='absolute'
+						style:right='{offset * 50}vw'
+						style:top='0'>
+						<img src="./images/3. Illus Away.png" alt="">
+					</div>
+					<div
+						style:position='absolute'
+						style:top='0'
+						style:right='-25vw'>
+						<img src="./images/3. Illus Crowd.png" alt="">
 				</div>
-
-				<!-- Artboard: submedium-1 -->
-				<div id="g-Bisa-Ular-submedium-1" class="g-artboard" style="min-width: 510px;max-width: 689px;max-height: 1081px" data-aspect-ratio="0.638" data-min-width="510" data-max-width="689"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 156.8627% 0;"></div>
-				<img id="g-Bisa-Ular-submedium-1-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-submedium-1.png"/>
-				</div>
-
-				<!-- Artboard: medium-1 -->
-				<div id="g-Bisa-Ular-medium-1" class="g-artboard" style="min-width: 690px;max-width: 919px;max-height: 1364px" data-aspect-ratio="0.674" data-min-width="690" data-max-width="919"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 148.4058% 0;"></div>
-				<img id="g-Bisa-Ular-medium-1-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-medium-1.png"/>
-				</div>
-
-				<!-- Artboard: large-1 -->
-				<div id="g-Bisa-Ular-large-1" class="g-artboard" style="min-width: 920px;max-width: 1399px;max-height: 1399px" data-aspect-ratio="1" data-min-width="920" data-max-width="1399"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 100% 0;"></div>
-				<img id="g-Bisa-Ular-large-1-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-large-1.png"/>
-				</div>
-
-				<!-- Artboard: xlarge-1 -->
-				<div id="g-Bisa-Ular-xlarge-1" class="g-artboard" style="min-width: 1400px;" data-aspect-ratio="1.778" data-min-width="1400"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 56.25% 0;"></div>
-				<img id="g-Bisa-Ular-xlarge-1-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-xlarge-1.png"/>
-				</div>
-
-
-			{:else if index == 1}
-				<!-- Halaman 2 -->
-				<!-- Artboard: smallplus-2 -->
-				<div id="g-Bisa-Ular-smallplus-2" class="g-artboard" style="max-width: 509px;max-height: 1113px" data-aspect-ratio="0.457" data-min-width="0" data-max-width="509"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 218.75% 0;"></div>
-				<img id="g-Bisa-Ular-smallplus-2-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-smallplus-2.png"/>
-				</div>
-
-				<!-- Artboard: submedium-2 -->
-				<div id="g-Bisa-Ular-submedium-2" class="g-artboard" style="min-width: 510px;max-width: 689px;max-height: 1081px" data-aspect-ratio="0.638" data-min-width="510" data-max-width="689"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 156.8627% 0;"></div>
-				<img id="g-Bisa-Ular-submedium-2-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-submedium-2.png"/>
-				</div>
-
-				<!-- Artboard: medium-2 -->
-				<div id="g-Bisa-Ular-medium-2" class="g-artboard" style="min-width: 690px;max-width: 919px;max-height: 1364px" data-aspect-ratio="0.674" data-min-width="690" data-max-width="919"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 148.4058% 0;"></div>
-				<img id="g-Bisa-Ular-medium-2-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-medium-2.png"/>
-				</div>
-
-				<!-- Artboard: large-2 -->
-				<div id="g-Bisa-Ular-large-2" class="g-artboard" style="min-width: 920px;max-width: 1399px;max-height: 1399px" data-aspect-ratio="1" data-min-width="920" data-max-width="1399"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 100% 0;"></div>
-				<img id="g-Bisa-Ular-large-2-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-large-2.png"/>
-				</div>
-
-				<!-- Artboard: xlarge-2 -->
-				<div id="g-Bisa-Ular-xlarge-2" class="g-artboard" style="min-width: 1400px;" data-aspect-ratio="1.778" data-min-width="1400"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 56.25% 0;"></div>
-				<img id="g-Bisa-Ular-xlarge-2-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-xlarge-2.png"/>
-				</div>
-
-
-			{:else if index == 2}
-				<!-- Halaman 3 -->
-				<!-- Artboard: smallplus-3 -->
-				<div id="g-Bisa-Ular-smallplus-3" class="g-artboard" style="max-width: 509px;max-height: 1113px" data-aspect-ratio="0.457" data-min-width="0" data-max-width="509"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 218.75% 0;"></div>
-				<img id="g-Bisa-Ular-smallplus-3-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-smallplus-3.png"/>
-				</div>
-
-				<!-- Artboard: submedium-3 -->
-				<div id="g-Bisa-Ular-submedium-3" class="g-artboard" style="min-width: 510px;max-width: 689px;max-height: 1081px" data-aspect-ratio="0.638" data-min-width="510" data-max-width="689"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 156.8627% 0;"></div>
-				<img id="g-Bisa-Ular-submedium-3-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-submedium-3.png"/>
-				</div>
-
-				<!-- Artboard: medium-3 -->
-				<div id="g-Bisa-Ular-medium-3" class="g-artboard" style="min-width: 690px;max-width: 919px;max-height: 1364px" data-aspect-ratio="0.674" data-min-width="690" data-max-width="919"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 148.4058% 0;"></div>
-				<img id="g-Bisa-Ular-medium-3-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-medium-3.png"/>
-				</div>
-
-				<!-- Artboard: large-3 -->
-				<div id="g-Bisa-Ular-large-3" class="g-artboard" style="min-width: 920px;max-width: 1399px;max-height: 1399px" data-aspect-ratio="1" data-min-width="920" data-max-width="1399"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 100% 0;"></div>
-				<img id="g-Bisa-Ular-large-3-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-large-3.png"/>
-				</div>
-
-				<!-- Artboard: xlarge-3 -->
-				<div id="g-Bisa-Ular-xlarge-3" class="g-artboard" style="min-width: 1400px;" data-aspect-ratio="1.778" data-min-width="1400"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 56.25% 0;"></div>
-				<img id="g-Bisa-Ular-xlarge-3-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-xlarge-3.png"/>
-				</div>
-
-
-			{:else if index == 3}
-				<!-- Halaman 4 -->
-				<!-- Artboard: smallplus-4 -->
-				<div id="g-Bisa-Ular-smallplus-4" class="g-artboard" style="max-width: 509px;max-height: 1113px" data-aspect-ratio="0.457" data-min-width="0" data-max-width="509"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 218.75% 0;"></div>
-				<img id="g-Bisa-Ular-smallplus-4-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-smallplus-4.png"/>
-				</div>
-
-				<!-- Artboard: submedium-4 -->
-				<div id="g-Bisa-Ular-submedium-4" class="g-artboard" style="min-width: 510px;max-width: 689px;max-height: 1081px" data-aspect-ratio="0.638" data-min-width="510" data-max-width="689"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 156.8627% 0;"></div>
-				<img id="g-Bisa-Ular-submedium-4-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-submedium-4.png"/>
-				</div>
-
-				<!-- Artboard: medium-4 -->
-				<div id="g-Bisa-Ular-medium-4" class="g-artboard" style="min-width: 690px;max-width: 919px;max-height: 1364px" data-aspect-ratio="0.674" data-min-width="690" data-max-width="919"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 148.4058% 0;"></div>
-				<img id="g-Bisa-Ular-medium-4-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-medium-4.png"/>
-				</div>
-
-				<!-- Artboard: large-4 -->
-				<div id="g-Bisa-Ular-large-4" class="g-artboard" style="min-width: 920px;max-width: 1399px;max-height: 1399px" data-aspect-ratio="1" data-min-width="920" data-max-width="1399"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 100% 0;"></div>
-				<img id="g-Bisa-Ular-large-4-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-large-4.png"/>
-				</div>
-
-				<!-- Artboard: xlarge-4 -->
-				<div id="g-Bisa-Ular-xlarge-4" class="g-artboard" style="min-width: 1400px;" data-aspect-ratio="1.778" data-min-width="1400"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 56.25% 0;"></div>
-				<img id="g-Bisa-Ular-xlarge-4-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-xlarge-4.png"/>
-				</div>
-			
-			{:else if index == 4}
-				<!-- Halaman 5 -->
-				<!-- Artboard: smallplus-5 -->
-				<div id="g-Bisa-Ular-smallplus-5" class="g-artboard" style="max-width: 509px;max-height: 1113px" data-aspect-ratio="0.457" data-min-width="0" data-max-width="509"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 218.75% 0;"></div>
-				<img id="g-Bisa-Ular-smallplus-5-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-smallplus-5.png"/>
-				</div>
-
-				<!-- Artboard: submedium-5 -->
-				<div id="g-Bisa-Ular-submedium-5" class="g-artboard" style="min-width: 510px;max-width: 689px;max-height: 1081px" data-aspect-ratio="0.638" data-min-width="510" data-max-width="689"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 156.8627% 0;"></div>
-				<img id="g-Bisa-Ular-submedium-5-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-submedium-5.png"/>
-				</div>
-
-				<!-- Artboard: medium-5 -->
-				<div id="g-Bisa-Ular-medium-5" class="g-artboard" style="min-width: 690px;max-width: 919px;max-height: 1364px" data-aspect-ratio="0.674" data-min-width="690" data-max-width="919"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 148.4058% 0;"></div>
-				<img id="g-Bisa-Ular-medium-5-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-medium-5.png"/>
-				</div>
-
-				<!-- Artboard: large-5 -->
-				<div id="g-Bisa-Ular-large-5" class="g-artboard" style="min-width: 920px;max-width: 1399px;max-height: 1399px" data-aspect-ratio="1" data-min-width="920" data-max-width="1399"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 100% 0;"></div>
-				<img id="g-Bisa-Ular-large-5-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-large-5.png"/>
-				</div>
-
-				<!-- Artboard: xlarge-5 -->
-				<div id="g-Bisa-Ular-xlarge-5" class="g-artboard" style="min-width: 1400px;" data-aspect-ratio="1.778" data-min-width="1400"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 56.25% 0;"></div>
-				<img id="g-Bisa-Ular-xlarge-5-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-xlarge-5.png"/>
-				</div>
-
-			
-			{:else if index == 5}
-				<!-- Halaman 6 -->
-				<!-- Artboard: smallplus-6 -->
-				<div id="g-Bisa-Ular-smallplus-6" class="g-artboard" style="max-width: 509px;max-height: 1113px" data-aspect-ratio="0.457" data-min-width="0" data-max-width="509"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 218.75% 0;"></div>
-				<img id="g-Bisa-Ular-smallplus-6-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-smallplus-6.png"/>
-				</div>
-
-				<!-- Artboard: submedium-6 -->
-				<div id="g-Bisa-Ular-submedium-6" class="g-artboard" style="min-width: 510px;max-width: 689px;max-height: 1081px" data-aspect-ratio="0.638" data-min-width="510" data-max-width="689"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 156.8627% 0;"></div>
-				<img id="g-Bisa-Ular-submedium-6-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-submedium-6.png"/>
-				</div>
-
-				<!-- Artboard: medium-6 -->
-				<div id="g-Bisa-Ular-medium-6" class="g-artboard" style="min-width: 690px;max-width: 919px;max-height: 1364px" data-aspect-ratio="0.674" data-min-width="690" data-max-width="919"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 148.4058% 0;"></div>
-				<img id="g-Bisa-Ular-medium-6-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-medium-6.png"/>
-				</div>
-
-				<!-- Artboard: large-6 -->
-				<div id="g-Bisa-Ular-large-6" class="g-artboard" style="min-width: 920px;max-width: 1399px;max-height: 1399px" data-aspect-ratio="1" data-min-width="920" data-max-width="1399"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 100% 0;"></div>
-				<img id="g-Bisa-Ular-large-6-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-large-6.png"/>
-				</div>
-
-				<!-- Artboard: xlarge-6 -->
-				<div id="g-Bisa-Ular-xlarge-6" class="g-artboard" style="min-width: 1400px;" data-aspect-ratio="1.778" data-min-width="1400"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 56.25% 0;"></div>
-				<img id="g-Bisa-Ular-xlarge-6-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-xlarge-6.png"/>
-				</div>
-			{:else if index == 6}
-				<!-- Halaman 7 -->
-				<!-- Artboard: smallplus-7 -->
-				<div id="g-Bisa-Ular-smallplus-7" class="g-artboard" style="max-width: 509px;max-height: 1113px" data-aspect-ratio="0.457" data-min-width="0" data-max-width="509"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 218.75% 0;"></div>
-				<img id="g-Bisa-Ular-smallplus-7-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-smallplus-7.png"/>
-				</div>
-
-				<!-- Artboard: submedium-7 -->
-				<div id="g-Bisa-Ular-submedium-7" class="g-artboard" style="min-width: 510px;max-width: 689px;max-height: 1081px" data-aspect-ratio="0.638" data-min-width="510" data-max-width="689"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 156.8627% 0;"></div>
-				<img id="g-Bisa-Ular-submedium-7-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-submedium-7.png"/>
-				</div>
-
-				<!-- Artboard: medium-7 -->
-				<div id="g-Bisa-Ular-medium-7" class="g-artboard" style="min-width: 690px;max-width: 919px;max-height: 1364px" data-aspect-ratio="0.674" data-min-width="690" data-max-width="919"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 148.4058% 0;"></div>
-				<img id="g-Bisa-Ular-medium-7-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-medium-7.png"/>
-				</div>
-
-				<!-- Artboard: large-7 -->
-				<div id="g-Bisa-Ular-large-7" class="g-artboard" style="min-width: 920px;max-width: 1399px;max-height: 1399px" data-aspect-ratio="1" data-min-width="920" data-max-width="1399"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 100% 0;"></div>
-				<img id="g-Bisa-Ular-large-7-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-large-7.png"/>
-				</div>
-
-				<!-- Artboard: xlarge-7 -->
-				<div id="g-Bisa-Ular-xlarge-7" class="g-artboard" style="min-width: 1400px;" data-aspect-ratio="1.778" data-min-width="1400"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 56.25% 0;"></div>
-				<img id="g-Bisa-Ular-xlarge-7-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-xlarge-7.png"/>
-				</div>
-			{:else if index == 7}
-				<!-- Halaman 8 -->
-				<!-- Artboard: smallplus-8 -->
-				<div id="g-Bisa-Ular-smallplus-8" class="g-artboard" style="max-width: 509px;max-height: 1113px" data-aspect-ratio="0.457" data-min-width="0" data-max-width="509"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 218.75% 0;"></div>
-				<img id="g-Bisa-Ular-smallplus-8-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-smallplus-8.png"/>
-				</div>
-
-				<!-- Artboard: submedium-8 -->
-				<div id="g-Bisa-Ular-submedium-8" class="g-artboard" style="min-width: 510px;max-width: 689px;max-height: 1081px" data-aspect-ratio="0.638" data-min-width="510" data-max-width="689"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 156.8627% 0;"></div>
-				<img id="g-Bisa-Ular-submedium-8-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-submedium-8.png"/>
-				</div>
-
-				<!-- Artboard: medium-8 -->
-				<div id="g-Bisa-Ular-medium-8" class="g-artboard" style="min-width: 690px;max-width: 919px;max-height: 1364px" data-aspect-ratio="0.674" data-min-width="690" data-max-width="919"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 148.4058% 0;"></div>
-				<img id="g-Bisa-Ular-medium-8-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-medium-8.png"/>
-				</div>
-
-				<!-- Artboard: large-8 -->
-				<div id="g-Bisa-Ular-large-8" class="g-artboard" style="min-width: 920px;max-width: 1399px;max-height: 1399px" data-aspect-ratio="1" data-min-width="920" data-max-width="1399"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 100% 0;"></div>
-				<img id="g-Bisa-Ular-large-8-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-large-8.png"/>
-				</div>
-
-				<!-- Artboard: xlarge-8 -->
-				<div id="g-Bisa-Ular-xlarge-8" class="g-artboard" style="min-width: 1400px;" data-aspect-ratio="1.778" data-min-width="1400"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 56.25% 0;"></div>
-				<img id="g-Bisa-Ular-xlarge-8-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-xlarge-8.png"/>
-				</div>
-			{:else if index == 8}
-				<!-- Halaman 9 -->
-				<!-- Artboard: smallplus-9 -->
-				<div id="g-Bisa-Ular-smallplus-9" class="g-artboard" style="max-width: 509px;max-height: 1113px" data-aspect-ratio="0.457" data-min-width="0" data-max-width="509"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 218.75% 0;"></div>
-				<img id="g-Bisa-Ular-smallplus-9-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-smallplus-9.png"/>
-				</div>
-
-				<!-- Artboard: submedium-9 -->
-				<div id="g-Bisa-Ular-submedium-9" class="g-artboard" style="min-width: 510px;max-width: 689px;max-height: 1081px" data-aspect-ratio="0.638" data-min-width="510" data-max-width="689"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 156.8627% 0;"></div>
-				<img id="g-Bisa-Ular-submedium-9-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-submedium-9.png"/>
-				</div>
-
-				<!-- Artboard: medium-9 -->
-				<div id="g-Bisa-Ular-medium-9" class="g-artboard" style="min-width: 690px;max-width: 919px;max-height: 1364px" data-aspect-ratio="0.674" data-min-width="690" data-max-width="919"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 148.4058% 0;"></div>
-				<img id="g-Bisa-Ular-medium-9-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-medium-9.png"/>
-				</div>
-
-				<!-- Artboard: large-9 -->
-				<div id="g-Bisa-Ular-large-9" class="g-artboard" style="min-width: 920px;max-width: 1399px;max-height: 1399px" data-aspect-ratio="1" data-min-width="920" data-max-width="1399"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 100% 0;"></div>
-				<img id="g-Bisa-Ular-large-9-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-large-9.png"/>
-				</div>
-
-				<!-- Artboard: xlarge-9 -->
-				<div id="g-Bisa-Ular-xlarge-9" class="g-artboard" style="min-width: 1400px;" data-aspect-ratio="1.778" data-min-width="1400"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 56.25% 0;"></div>
-				<img id="g-Bisa-Ular-xlarge-9-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-xlarge-9.png"/>
-				</div>
-			{:else if index >= 9}
-				<!-- Halaman 10 -->
-				<!-- Artboard: smallplus-10 -->
-				<div id="g-Bisa-Ular-smallplus-10" class="g-artboard" style="max-width: 509px;max-height: 1113px" data-aspect-ratio="0.457" data-min-width="0" data-max-width="509"
-				style:opacity={offset <= 0.2 && index == 9 ? offset : 1}>
-				<div style="padding: 0 0 218.75% 0;"></div>
-				<img id="g-Bisa-Ular-smallplus-10-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-smallplus-10.png"/>
-				</div>
-
-				<!-- Artboard: submedium-10 -->
-				<div id="g-Bisa-Ular-submedium-10" class="g-artboard" style="min-width: 510px;max-width: 689px;max-height: 1081px" data-aspect-ratio="0.638" data-min-width="510" data-max-width="689"
-				style:opacity={offset <= 0.2 && index == 9 ? offset : 1}>
-				<div style="padding: 0 0 156.8627% 0;"></div>
-				<img id="g-Bisa-Ular-submedium-10-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-submedium-10.png"/>
-				</div>
-
-				<!-- Artboard: medium-10 -->
-				<div id="g-Bisa-Ular-medium-10" class="g-artboard" style="min-width: 690px;max-width: 919px;max-height: 1364px" data-aspect-ratio="0.674" data-min-width="690" data-max-width="919"
-				style:opacity={offset <= 0.2 && index == 9 ? offset : 1}>
-				<div style="padding: 0 0 148.4058% 0;"></div>
-				<img id="g-Bisa-Ular-medium-10-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-medium-10.png"/>
-				</div>
-
-				<!-- Artboard: large-10 -->
-				<div id="g-Bisa-Ular-large-10" class="g-artboard" style="min-width: 920px;max-width: 1399px;max-height: 1399px" data-aspect-ratio="1" data-min-width="920" data-max-width="1399"
-				style:opacity={offset <= 0.2 && index == 9 ? offset : 1}>
-				<div style="padding: 0 0 100% 0;"></div>
-				<img id="g-Bisa-Ular-large-10-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-large-10.png"/>
-				</div>
-
-				<!-- Artboard: xlarge-10 -->
-				<div id="g-Bisa-Ular-xlarge-10" class="g-artboard" style="min-width: 1400px;" data-aspect-ratio="1.778" data-min-width="1400"
-				style:opacity={offset <= 0.2 && index == 9 ? offset : 1}>
-				<div style="padding: 0 0 56.25% 0;"></div>
-				<img id="g-Bisa-Ular-xlarge-10-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-xlarge-10.png"/>
-				</div>
-			{/if}
 			</div>
 		</div>
 
-		<div slot="foreground" >
-			<section></section>
-			<section>
-				<p>
-					Lima hari sebelum ulang tahunnya yang ke-13, pada Januari 2020, Martinus menggembala sapi-sapi ternaknya di sebuah ladang di Kabupaten Lembata, Nusa Tenggara Timur (NTT).
-				</p>
-			</section>
-			<section>
-				<p>
-					Namun, a menginjak dan digigit seekor ular berbisa langka bernama ilmiah <em>daboia ruselli siamensis</em> . Ular ini termasuk golongan <em>viperia ruselli</em> yang hanya hidup di beberapa wilayah Indonesia Tengah, antara lain Pulau Flores, Pulau Komodo, NTT, Adonara, Ende, dan Pulau Solor.
-				</p>
-			</section>
-			<section>
-				<p>
-					Dalam hitungan jam setelah terkena gigitan, ia mengalami gagal ginjal, kegagalan pernapasan, dan pendarahan di hampir semua organ tubuhnya. Dengan kata lain, nyawanya sedang di ujung tanduk.
-				</p>
-			</section>
-			<section>
-				<p>
-					Kabar tersebut sampai kepada Tri Maharani pada 14 Januari 2020, doktor lulusan Universitas Brawijaya Malang yang menjabat sebagai Presiden Indonesia Toksinologi.
-				</p>
-			</section>
-			<section>
-				<p>
-					Dalam kondisi semacam itu, menurut Maha, pasien harus mendapatkan antivenom atau anti bisa ular yang tepat. Masalahnya, antivenom untuk daboia ruselli siamensis tak tersedia di Indonesia. Kementerian Kesehatan dan PT Bio Farma pun tak bisa menyanggupi menyediakannya untuk keperluan penyembuhan Martinus.  
-				</p>
-			</section>
-			<section>
-				<p>
-					Mujur, sekali lagi, masih berkawan dengan Martinus. Maha memiliki koneksi khusus dengan salah satu profesor yang menangani gigitan ular berbisa dari Queen Sabovana Memorial Institute Thailand.
-				</p>
-			</section>
-			<section>
-				<p>
-					Profesor tersebut menyanggupi membantu Maha mendapatkan antivenom untuk mengobati Martinus. Keesokan harinya, Maha langsung terbang ke Bangkok, Thailand dan bertemu profesor tersebut. Ia membeli 12 vial antivenom untuk ular daboia ruselli siamensis melalui perantara kenalannya itu. Harga per vialnya mencapai ratusan dollar Amerika Serikat. Semua ia beli dengan uang pribadi. 
-				</p>
-			</section>
-			<section>
-				<p>
-					Usai mendapat antivenom tersebut, Maha langsung berangkat ke Lembata. Lantaran tak ada pesawat yang langsung menuju Lembata, ia mesti transit terlebih dulu sehari di Surabaya untuk kemudian terbang menuju Kupang. Dari Kupang, ia melakukan perjalanan darat ke Lembata.
-				</p>
-			</section>
-			<section>
-				<p>
-					Maha tiba di Lembata pada hari kelima usai Martinus tergigit ular. Ia langsung menyuntikkan antivenom tersebut ke tubuh Martinus dan mengawasi langsung perkembangan kesehatannya selama lebih kurang 12 jam.
-				</p>
-			</section>
-			<section>
-				<p>
-					Tepat pukul 12 malam hari itu, saat usia Martinus resmi bertambah, kondisinya membaik. Pendarahan di organ-organ penting mulai berhenti. Ginjalnya pun membaik. Kini, ia telah sembuh dan menjalani hidup normal kembali.
+		<div slot="foreground">
+			<section
+				style:background-color='transparent'
+				style:display='flex'
+				style:justify-content='center'
+				style:align-items='center'>
+				<p style:color='white' style:background-color='#1e1e1e'>
+					Mengenai pertemanan, masyarakat Amerika Serikat menunjukkan kebanyakan orang hanya memiliki 2 teman curhat, turun dari 3 pada tahun 1980-an
 				</p>
 			</section>
 		</div>
 	</Scroller>
 
-	<div class="divider"></div>
-
 	<Paragraph
-		--font-color ='#f9f9e1'
+		--font-color ={fontColor}
 		para={[
-		'Kelangkaan antivenom di Indonesia cukup mengkhawatirkan jika dibandingkan dengan jumlah kasus tahunan gigitan ular berbisa. Sepanjang sepuluh tahun ke belakang, berdasarkan laporan dari rumah sakit dan fasilitas Kesehatan lain, Maha mencatat sebanyak 135 ribu kasus gigitan ular di Indonesia per tahun.',
-		'Dari jumlah kasus tersebut, rasio kematian korban mencapai 10% atau lebih 13.500 orang. Angka tersebut jauh dari standar Organisasi Kesehatan Dunia (WHO) bahwa rasio kematian maksimal di suatu wilayah adalah 2%.',
-		'Data tersebut sebetulnya tak bisa menjadi gambaran utuh atas kasus gigitan ular di Indonesia. Pasalnya, tak ada catatan resmi dari pemerintah terkait persoalan kesehatan serius ini. Maka, menurut Maha, bisa jadi jumlah kasus dan kematian lebih dari angka tersebut.'
+		"Turunnya jumlah teman curhat menunjukkan kita semakin kekurangan jaringan pendukung emosional. Berkurangnya—atau bahkan ketiadaannya—jaring pendukung ini mengkhawatirkan karena bisa mengarah ke naiknya tingkat stres dan tentu saja, kesepian yang bisa merambat ke penyakit-penyakit berbahaya."
 		]}
 	/>
+
+	<Paragraph
+		--font-color ={fontColor}
+		subjudul = 'Teknologi penyebab kesepian?'
+		para={[
+		"Penelitian-penelitian awal soal kesepian di kalangan anak muda <a href='https://research.fb.com/wp-content/uploads/2016/11/growing-closer-on-facebook-changes-in-tie-strength-through-site-use.pdf'>menunjuk media sosial dan kemajuan teknologi sebagai biang kerok</a>. Ini karena anak-anak muda menggantikan komunikasi tatap wajah ke komunikasi daring yang dianggap lebih “kosong”.",
+		"Pendapat ini disanggah oleh <a href='https://journals.sagepub.com/doi/abs/10.1177/1745691617713052?journalCode=ppsa'>Nowland, dkk</a>, yang menyatakan bahwa tingkat kesepian ditentukan oleh cara seseorang menggunakan media sosial. Orang-orang yang menggunakan media sosial secara aktif untuk memelihara dan membentuk pertemanan baru melaporkan rasa kesepian yang lebih rendah dibanding mereka yang pasif. Ini karena orang-orang yang kesepian cenderung menarik diri dan pasif, baik di dunia nyata maupun dunia maya.",
+		"Isu kesepian ini harus dilihat dengan konteks dan gambaran yang lebih besar. Kemunculan teknologi dan Revolusi Industri meningkatkan rasa kesepian masyarakat. Sekilas teknologi yang membuat kita kesepian, kan? Tapi pelaku sebenarnya adalah ketidaksetaraan dan meningkatnya jurang kemakmuran.",
+		"Awal dekade industrialisasi memang ditandai oleh tingginya ketimpangan ekonomi. Namun <a href='https://sci-hub.se/https://www.sciencedirect.com/science/article/abs/pii/S0014498399907131'>ketidaksetaraan ini mulai menurun</a> kala negara-negara industrial mulai menerima tenaga kerja asing dan demokratisasi pemerintahan yang mendistribusikan kekuasaan dari bangsawan ke masyarakat. Hal ini bisa dicapai berkat keberadaan serikat-serikat buruh dan para politikus sosialis yang mendorong kebijakan pajak tanah yang tinggi, penggratisan sekolah untuk publik, peraturan yang melindungi dan memihak tenaga kerja, serta nasionalisasi fasilitas publik.",
+		"Ketika semua kebutuhan dasar sudah terpenuhi, orang-orang bisa lebih fokus membentuk hubungan yang bermakna. Kesepian bisa ditekan dan orang-orang bisa hidup dengan lebih bahagia."
+		]}
+	/>
+
+	<Scroller
+		{top}
+		{threshold}
+		{bottom}
+		bind:count
+		bind:index
+		bind:offset
+		bind:progress
+		>
+		<div slot="background">
+			<div style:height='100vh'
+				style:clip-path='inset(5% 5%)'>
+				<img 
+					style:width='{offset * speed + 90}vw'
+					style:height='{offset * speed + 90}vh'
+					style:position='absolute'
+					style:left='{(10 - ( offset * speed))/2}vw'
+					style:top='{(10 - ( offset * speed))/2}vh'
+					src="./images/1. Background.png" alt="">
+					<div
+						style:position='absolute'
+						style:left='{offset * 5}vw'
+						style:top='0'>
+						<img src="./images/1. Shadow.png" alt="">
+					</div>
+					<div
+						style:position='absolute'
+						style:top='0'
+						style:right='{offset * 5}vw'>
+						<img src="./images/1. Person.png" alt="">
+				</div>
+			</div>
+		</div>
+
+		<div slot="foreground">
+			<section style:background-color='transparent'></section>
+		</div>
+	</Scroller>
+
+	<Paragraph
+		--font-color ={fontColor}
+		para={[
+		"Sayang, periode emas kehidupan manusia ini hanya bertahan sebentar. Ketidaksetaraan kembali menyeruak sejak dekade 1970-an bersama dengan lesunya partai-partai kiri dan kelahiran neoliberalisme. Pemerintah lebih memilih lepas tangan dan membiarkan tangan tak terlihat kapitalisme bekerja. Fasilitas-fasilitas dasar yang dulunya dibiayai oleh negara diambil alih oleh perusahaan swasta. Tentu ini memaksa kita untuk lebih fokus mencari uang alih-alih membangun koneksi sosial yang suportif.",
+		"Sebagai obat penawar, sebagian dari kita memilih membuka Tinder, menggeser ratusan foto orang layaknya membeli barang di <em>marketplace</em>. Kalau semesta mengizinkan, kita bisa <em>match</em> dengan orang yang kita ‘sukai’, mengobrol untuk mengetes kecocokan, melanjutkan hubungan ke kasur lalu berakhir di-<em>ghosting</em>. Ada pula yang menghabiskan uang untuk <a href='https://www.theatlantic.com/business/archive/2013/08/the-loneliness-loop-why-feeling-sad-makes-us-shop-and-shopping-makes-us-sad/278443/>berbelanja demi mengenyahkan rasa kesepian</a>. Lainnya memutuskan untuk <a href='https://www.vice.com/en/article/pkeqvk/young-people-loneliness-drugs-alcohol'>mabuk atau teler</a> tiap malam supaya tidak ingat kalau kesepian.",
+		"Namun apakah usaha-usaha ini bisa sukses? Sayangnya tidak. Kamu tidak bisa bertukar pikiran dengan botol Jagermeister, jam tangan Dior, sepatu Gucci, atau laptop ROG karena mereka benda mati. Kamu juga tidak bisa memaksa hubungan dengan pasangan Tinder kalau mereka hanya ingin hubungan sementara atau <em>chemistry</em> kalian berdua berhenti di kasur saja.",
+		"Satu-satunya obat untuk kesepian adalah membangun relasi yang dalam dan bermakna dengan manusia lain. Tapi solusi ini pun hanya bisa benar-benar bekerja apabila kita mengubah sistem kehidupan kita agar lebih mengakomodasi hubungan sosial yang berarti."
+		]}
+	/>
+
+
 	<Credit
 		--fontfamily1={fontfamily1}
 		--font-color = {fontColor}
-		{ source } { credit }
-	/>
-	<Foot 
-		--fontfamily1={fontfamily1}
-		--font-color = {fontColor}
-		--bgColorDark = {colorBrandDarkBlue}
+		{ credit }
 	/>
 </main>
 
@@ -583,7 +231,7 @@
 	.divider {
 		height:0.2rem;
 		width:60%;
-		background-color:#f9f9e1 ;
+		background-color:#1e1e1e;
 		margin:2rem auto;
 		border-radius: 0.1rem;
 	}
@@ -598,20 +246,20 @@
 	}
 
 	[slot="foreground"] section {
-		height: 80vh;
-		color: white;
+		height: 300vh;
+		color: hsl(200,43%,34%);
 		padding: 1em;
 		margin: 0 0 2em 0;
+		border-radius: 1rem;
 	}
 
 	[slot="foreground"] p {
 		padding:1rem;
-		background-color: black;
+		background-color: hsl(0, 76%, 97%);
 		width:90%;
         max-width: 650px;
-        margin: 0 auto 0 auto;
+        margin: 0 auto 0 auto !important;
         text-align: left;
-		border-radius: 1rem;
 		font-family: 'Roboto-Mono', monospace;
 		white-space: normal;
 	}
@@ -638,598 +286,6 @@
 	/* --------------------------------------------------------------------------------------------------------------------------------------- */
 	/* Custom Scrollytelling Style */
 	/* --------------------------------------------------------------------------------------------------------------------------------------- */
-	.g-artboard {
-		transition: opacity 100ms ease-in-out;
-	}
-	#g-Bisa-Ular-box ,
-	#g-Bisa-Ular-box .g-artboard {
-		margin:0 auto;
-	}
-	#g-Bisa-Ular-box .g-aiImg {
-		position:absolute;
-		top:0;
-		display:block;
-		width:100% !important;
-	}
-	#g-Bisa-Ular-smallplus-cover {
-		position:relative;
-		overflow:hidden;
-	}
-	#g-Bisa-Ular-submedium-cover {
-		position:relative;
-		overflow:hidden;
-	}
-	#g-Bisa-Ular-medium-cover {
-		position:relative;
-		overflow:hidden;
-	}
-	#g-Bisa-Ular-large-cover {
-		position:relative;
-		overflow:hidden;
-	}
-	#g-Bisa-Ular-xlarge-cover {
-		position:relative;
-		overflow:hidden;
-	}
-	#g-Bisa-Ular-smallplus-1 {
-		position:relative;
-		overflow:hidden;
-	}
-	#g-Bisa-Ular-submedium-1 {
-		position:relative;
-		overflow:hidden;
-	}
-	#g-Bisa-Ular-medium-1 {
-		position:relative;
-		overflow:hidden;
-	}
-	#g-Bisa-Ular-large-1 {
-		position:relative;
-		overflow:hidden;
-	}
-	#g-Bisa-Ular-xlarge-1 {
-		position:relative;
-		overflow:hidden;
-	}
-	#g-Bisa-Ular-smallplus-2 {
-		position:relative;
-		overflow:hidden;
-	}
-	#g-Bisa-Ular-submedium-2 {
-		position:relative;
-		overflow:hidden;
-	}
-	#g-Bisa-Ular-medium-2 {
-		position:relative;
-		overflow:hidden;
-	}
-	#g-Bisa-Ular-large-2 {
-		position:relative;
-		overflow:hidden;
-	}
-	#g-Bisa-Ular-xlarge-2 {
-		position:relative;
-		overflow:hidden;
-	}
-	#g-Bisa-Ular-smallplus-3 {
-		position:relative;
-		overflow:hidden;
-	}
-	#g-Bisa-Ular-submedium-3 {
-		position:relative;
-		overflow:hidden;
-	}
-	#g-Bisa-Ular-medium-3 {
-		position:relative;
-		overflow:hidden;
-	}
-	#g-Bisa-Ular-large-3 {
-		position:relative;
-		overflow:hidden;
-	}
-	#g-Bisa-Ular-xlarge-3 {
-		position:relative;
-		overflow:hidden;
-	}
-	#g-Bisa-Ular-smallplus-4 {
-		position:relative;
-		overflow:hidden;
-	}
-	#g-Bisa-Ular-submedium-4 {
-		position:relative;
-		overflow:hidden;
-	}
-	#g-Bisa-Ular-medium-4 {
-		position:relative;
-		overflow:hidden;
-	}
-	#g-Bisa-Ular-large-4 {
-		position:relative;
-		overflow:hidden;
-	}
-	#g-Bisa-Ular-xlarge-4 {
-		position:relative;
-		overflow:hidden;
-	}
-	#g-Bisa-Ular-smallplus-5 {
-		position:relative;
-		overflow:hidden;
-	}
-	#g-Bisa-Ular-submedium-5 {
-		position:relative;
-		overflow:hidden;
-	}
-	#g-Bisa-Ular-medium-5 {
-		position:relative;
-		overflow:hidden;
-	}
-	#g-Bisa-Ular-large-5 {
-		position:relative;
-		overflow:hidden;
-	}
-	#g-Bisa-Ular-xlarge-5 {
-		position:relative;
-		overflow:hidden;
-	}
-	#g-Bisa-Ular-smallplus-6 {
-		position:relative;
-		overflow:hidden;
-	}
-	#g-Bisa-Ular-submedium-6 {
-		position:relative;
-		overflow:hidden;
-	}
-	#g-Bisa-Ular-medium-6 {
-		position:relative;
-		overflow:hidden;
-	}
-	#g-Bisa-Ular-large-6 {
-		position:relative;
-		overflow:hidden;
-	}
-	#g-Bisa-Ular-xlarge-6 {
-		position:relative;
-		overflow:hidden;
-	}
-	#g-Bisa-Ular-smallplus-7 {
-		position:relative;
-		overflow:hidden;
-	}
-	#g-Bisa-Ular-submedium-7 {
-		position:relative;
-		overflow:hidden;
-	}
-	#g-Bisa-Ular-medium-7 {
-		position:relative;
-		overflow:hidden;
-	}
-	#g-Bisa-Ular-large-7 {
-		position:relative;
-		overflow:hidden;
-	}
-	#g-Bisa-Ular-xlarge-7 {
-		position:relative;
-		overflow:hidden;
-	}
-	#g-Bisa-Ular-smallplus-8 {
-		position:relative;
-		overflow:hidden;
-	}
-	#g-Bisa-Ular-submedium-8 {
-		position:relative;
-		overflow:hidden;
-	}
-	#g-Bisa-Ular-medium-8 {
-		position:relative;
-		overflow:hidden;
-	}
-	#g-Bisa-Ular-large-8 {
-		position:relative;
-		overflow:hidden;
-	}
-	#g-Bisa-Ular-xlarge-8 {
-		position:relative;
-		overflow:hidden;
-	}
-	#g-Bisa-Ular-smallplus-9 {
-		position:relative;
-		overflow:hidden;
-	}
-	#g-Bisa-Ular-submedium-9 {
-		position:relative;
-		overflow:hidden;
-	}
-	#g-Bisa-Ular-medium-9 {
-		position:relative;
-		overflow:hidden;
-	}
-	#g-Bisa-Ular-large-9 {
-		position:relative;
-		overflow:hidden;
-	}
-	#g-Bisa-Ular-xlarge-9 {
-		position:relative;
-		overflow:hidden;
-	}
-	#g-Bisa-Ular-smallplus-10 {
-		position:relative;
-		overflow:hidden;
-	}
-	#g-Bisa-Ular-submedium-10 {
-		position:relative;
-		overflow:hidden;
-	}
-	#g-Bisa-Ular-medium-10 {
-		position:relative;
-		overflow:hidden;
-	}
-	#g-Bisa-Ular-large-10 {
-		position:relative;
-		overflow:hidden;
-	}
-	#g-Bisa-Ular-xlarge-10 {
-		position:relative;
-		overflow:hidden;
-	}
-
-	@media only screen and (max-width:509px) {
-		#g-Bisa-Ular-xlarge-cover,
-		#g-Bisa-Ular-xlarge-1,
-		#g-Bisa-Ular-xlarge-2,
-		#g-Bisa-Ular-xlarge-3,
-		#g-Bisa-Ular-xlarge-4,
-		#g-Bisa-Ular-xlarge-5,
-		#g-Bisa-Ular-xlarge-6,
-		#g-Bisa-Ular-xlarge-7,
-		#g-Bisa-Ular-xlarge-8,
-		#g-Bisa-Ular-xlarge-9,
-		#g-Bisa-Ular-xlarge-10 {
-			display:none;
-		}
-
-		#g-Bisa-Ular-large-cover,
-		#g-Bisa-Ular-large-1,
-		#g-Bisa-Ular-large-2,
-		#g-Bisa-Ular-large-3,
-		#g-Bisa-Ular-large-4,
-		#g-Bisa-Ular-large-5,
-		#g-Bisa-Ular-large-6,
-		#g-Bisa-Ular-large-7,
-		#g-Bisa-Ular-large-8,
-		#g-Bisa-Ular-large-9,
-		#g-Bisa-Ular-large-10 {
-			display:none;
-		}
-
-		#g-Bisa-Ular-medium-cover,
-		#g-Bisa-Ular-medium-1,
-		#g-Bisa-Ular-medium-2,
-		#g-Bisa-Ular-medium-3,
-		#g-Bisa-Ular-medium-4,
-		#g-Bisa-Ular-medium-5,
-		#g-Bisa-Ular-medium-6,
-		#g-Bisa-Ular-medium-7,
-		#g-Bisa-Ular-medium-8,
-		#g-Bisa-Ular-medium-9,
-		#g-Bisa-Ular-medium-10 {
-			display:none;
-		}
-
-		#g-Bisa-Ular-submedium-cover,
-		#g-Bisa-Ular-submedium-1,
-		#g-Bisa-Ular-submedium-2,
-		#g-Bisa-Ular-submedium-3,
-		#g-Bisa-Ular-submedium-4,
-		#g-Bisa-Ular-submedium-5,
-		#g-Bisa-Ular-submedium-6,
-		#g-Bisa-Ular-submedium-7,
-		#g-Bisa-Ular-submedium-8,
-		#g-Bisa-Ular-submedium-9,
-		#g-Bisa-Ular-submedium-10 {
-			display:none;
-		}
-
-		#g-Bisa-Ular-smallplus-cover,
-		#g-Bisa-Ular-smallplus-1,
-		#g-Bisa-Ular-smallplus-2,
-		#g-Bisa-Ular-smallplus-3,
-		#g-Bisa-Ular-smallplus-4,
-		#g-Bisa-Ular-smallplus-5,
-		#g-Bisa-Ular-smallplus-6,
-		#g-Bisa-Ular-smallplus-7,
-		#g-Bisa-Ular-smallplus-8,
-		#g-Bisa-Ular-smallplus-9,
-		#g-Bisa-Ular-smallplus-10 {
-			display:block;
-		}
-	}
-
-	@media only screen and (min-width:510px) and (max-width:689px) {
-		#g-Bisa-Ular-xlarge-cover,
-		#g-Bisa-Ular-xlarge-1,
-		#g-Bisa-Ular-xlarge-2,
-		#g-Bisa-Ular-xlarge-3,
-		#g-Bisa-Ular-xlarge-4,
-		#g-Bisa-Ular-xlarge-5,
-		#g-Bisa-Ular-xlarge-6,
-		#g-Bisa-Ular-xlarge-7,
-		#g-Bisa-Ular-xlarge-8,
-		#g-Bisa-Ular-xlarge-9,
-		#g-Bisa-Ular-xlarge-10 {
-			display:none;
-		}
-
-		#g-Bisa-Ular-large-cover,
-		#g-Bisa-Ular-large-1,
-		#g-Bisa-Ular-large-2,
-		#g-Bisa-Ular-large-3,
-		#g-Bisa-Ular-large-4,
-		#g-Bisa-Ular-large-5,
-		#g-Bisa-Ular-large-6,
-		#g-Bisa-Ular-large-7,
-		#g-Bisa-Ular-large-8,
-		#g-Bisa-Ular-large-9,
-		#g-Bisa-Ular-large-10 {
-			display:none;
-		}
-
-		#g-Bisa-Ular-medium-cover,
-		#g-Bisa-Ular-medium-1,
-		#g-Bisa-Ular-medium-2,
-		#g-Bisa-Ular-medium-3,
-		#g-Bisa-Ular-medium-4,
-		#g-Bisa-Ular-medium-5,
-		#g-Bisa-Ular-medium-6,
-		#g-Bisa-Ular-medium-7,
-		#g-Bisa-Ular-medium-8,
-		#g-Bisa-Ular-medium-9,
-		#g-Bisa-Ular-medium-10 {
-			display:none;
-		}
-
-		#g-Bisa-Ular-submedium-cover,
-		#g-Bisa-Ular-submedium-1,
-		#g-Bisa-Ular-submedium-2,
-		#g-Bisa-Ular-submedium-3,
-		#g-Bisa-Ular-submedium-4,
-		#g-Bisa-Ular-submedium-5,
-		#g-Bisa-Ular-submedium-6,
-		#g-Bisa-Ular-submedium-7,
-		#g-Bisa-Ular-submedium-8,
-		#g-Bisa-Ular-submedium-9,
-		#g-Bisa-Ular-submedium-10 {
-			display:block;
-		}
-
-		#g-Bisa-Ular-smallplus-cover,
-		#g-Bisa-Ular-smallplus-1,
-		#g-Bisa-Ular-smallplus-2,
-		#g-Bisa-Ular-smallplus-3,
-		#g-Bisa-Ular-smallplus-4,
-		#g-Bisa-Ular-smallplus-5,
-		#g-Bisa-Ular-smallplus-6,
-		#g-Bisa-Ular-smallplus-7,
-		#g-Bisa-Ular-smallplus-8,
-		#g-Bisa-Ular-smallplus-9,
-		#g-Bisa-Ular-smallplus-10 {
-			display:none;
-		}
-	}
-
-	@media only screen and (min-width:690px) and (max-width:919px) {
-		#g-Bisa-Ular-xlarge-cover,
-		#g-Bisa-Ular-xlarge-1,
-		#g-Bisa-Ular-xlarge-2,
-		#g-Bisa-Ular-xlarge-3,
-		#g-Bisa-Ular-xlarge-4,
-		#g-Bisa-Ular-xlarge-5,
-		#g-Bisa-Ular-xlarge-6,
-		#g-Bisa-Ular-xlarge-7,
-		#g-Bisa-Ular-xlarge-8,
-		#g-Bisa-Ular-xlarge-9,
-		#g-Bisa-Ular-xlarge-10 {
-			display:none;
-		}
-
-		#g-Bisa-Ular-large-cover,
-		#g-Bisa-Ular-large-1,
-		#g-Bisa-Ular-large-2,
-		#g-Bisa-Ular-large-3,
-		#g-Bisa-Ular-large-4,
-		#g-Bisa-Ular-large-5,
-		#g-Bisa-Ular-large-6,
-		#g-Bisa-Ular-large-7,
-		#g-Bisa-Ular-large-8,
-		#g-Bisa-Ular-large-9,
-		#g-Bisa-Ular-large-10 {
-			display:none;
-		}
-
-		#g-Bisa-Ular-medium-cover,
-		#g-Bisa-Ular-medium-1,
-		#g-Bisa-Ular-medium-2,
-		#g-Bisa-Ular-medium-3,
-		#g-Bisa-Ular-medium-4,
-		#g-Bisa-Ular-medium-5,
-		#g-Bisa-Ular-medium-6,
-		#g-Bisa-Ular-medium-7,
-		#g-Bisa-Ular-medium-8,
-		#g-Bisa-Ular-medium-9,
-		#g-Bisa-Ular-medium-10 {
-			display:block;
-		}
-
-		#g-Bisa-Ular-submedium-cover,
-		#g-Bisa-Ular-submedium-1,
-		#g-Bisa-Ular-submedium-2,
-		#g-Bisa-Ular-submedium-3,
-		#g-Bisa-Ular-submedium-4,
-		#g-Bisa-Ular-submedium-5,
-		#g-Bisa-Ular-submedium-6,
-		#g-Bisa-Ular-submedium-7,
-		#g-Bisa-Ular-submedium-8,
-		#g-Bisa-Ular-submedium-9,
-		#g-Bisa-Ular-submedium-10 {
-			display:none;
-		}
-
-		#g-Bisa-Ular-smallplus-cover,
-		#g-Bisa-Ular-smallplus-1,
-		#g-Bisa-Ular-smallplus-2,
-		#g-Bisa-Ular-smallplus-3,
-		#g-Bisa-Ular-smallplus-4,
-		#g-Bisa-Ular-smallplus-5,
-		#g-Bisa-Ular-smallplus-6,
-		#g-Bisa-Ular-smallplus-7,
-		#g-Bisa-Ular-smallplus-8,
-		#g-Bisa-Ular-smallplus-9,
-		#g-Bisa-Ular-smallplus-10 {
-			display:none;
-		}
-	}
-
-	@media only screen and (min-width:920px) and (max-width:1399px) {
-		#g-Bisa-Ular-xlarge-cover,
-		#g-Bisa-Ular-xlarge-1,
-		#g-Bisa-Ular-xlarge-2,
-		#g-Bisa-Ular-xlarge-3,
-		#g-Bisa-Ular-xlarge-4,
-		#g-Bisa-Ular-xlarge-5,
-		#g-Bisa-Ular-xlarge-6,
-		#g-Bisa-Ular-xlarge-7,
-		#g-Bisa-Ular-xlarge-8,
-		#g-Bisa-Ular-xlarge-9,
-		#g-Bisa-Ular-xlarge-10 {
-			display:none;
-		}
-
-		#g-Bisa-Ular-large-cover,
-		#g-Bisa-Ular-large-1,
-		#g-Bisa-Ular-large-2,
-		#g-Bisa-Ular-large-3,
-		#g-Bisa-Ular-large-4,
-		#g-Bisa-Ular-large-5,
-		#g-Bisa-Ular-large-6,
-		#g-Bisa-Ular-large-7,
-		#g-Bisa-Ular-large-8,
-		#g-Bisa-Ular-large-9,
-		#g-Bisa-Ular-large-10 {
-			display:block;
-		}
-
-		#g-Bisa-Ular-medium-cover,
-		#g-Bisa-Ular-medium-1,
-		#g-Bisa-Ular-medium-2,
-		#g-Bisa-Ular-medium-3,
-		#g-Bisa-Ular-medium-4,
-		#g-Bisa-Ular-medium-5,
-		#g-Bisa-Ular-medium-6,
-		#g-Bisa-Ular-medium-7,
-		#g-Bisa-Ular-medium-8,
-		#g-Bisa-Ular-medium-9,
-		#g-Bisa-Ular-medium-10 {
-			display:none;
-		}
-
-		#g-Bisa-Ular-submedium-cover,
-		#g-Bisa-Ular-submedium-1,
-		#g-Bisa-Ular-submedium-2,
-		#g-Bisa-Ular-submedium-3,
-		#g-Bisa-Ular-submedium-4,
-		#g-Bisa-Ular-submedium-5,
-		#g-Bisa-Ular-submedium-6,
-		#g-Bisa-Ular-submedium-7,
-		#g-Bisa-Ular-submedium-8,
-		#g-Bisa-Ular-submedium-9,
-		#g-Bisa-Ular-submedium-10 {
-			display:none;
-		}
-
-		#g-Bisa-Ular-smallplus-cover,
-		#g-Bisa-Ular-smallplus-1,
-		#g-Bisa-Ular-smallplus-2,
-		#g-Bisa-Ular-smallplus-3,
-		#g-Bisa-Ular-smallplus-4,
-		#g-Bisa-Ular-smallplus-5,
-		#g-Bisa-Ular-smallplus-6,
-		#g-Bisa-Ular-smallplus-7,
-		#g-Bisa-Ular-smallplus-8,
-		#g-Bisa-Ular-smallplus-9,
-		#g-Bisa-Ular-smallplus-10 {
-			display:none;
-		}
-	}
-
-	@media only screen and (min-width:1400px) {
-		#g-Bisa-Ular-xlarge-cover,
-		#g-Bisa-Ular-xlarge-1,
-		#g-Bisa-Ular-xlarge-2,
-		#g-Bisa-Ular-xlarge-3,
-		#g-Bisa-Ular-xlarge-4,
-		#g-Bisa-Ular-xlarge-5,
-		#g-Bisa-Ular-xlarge-6,
-		#g-Bisa-Ular-xlarge-7,
-		#g-Bisa-Ular-xlarge-8,
-		#g-Bisa-Ular-xlarge-9,
-		#g-Bisa-Ular-xlarge-10 {
-			display:block;
-		}
-
-		#g-Bisa-Ular-large-cover,
-		#g-Bisa-Ular-large-1,
-		#g-Bisa-Ular-large-2,
-		#g-Bisa-Ular-large-3,
-		#g-Bisa-Ular-large-4,
-		#g-Bisa-Ular-large-5,
-		#g-Bisa-Ular-large-6,
-		#g-Bisa-Ular-large-7,
-		#g-Bisa-Ular-large-8,
-		#g-Bisa-Ular-large-9,
-		#g-Bisa-Ular-large-10 {
-			display:none;
-		}
-
-		#g-Bisa-Ular-medium-cover,
-		#g-Bisa-Ular-medium-1,
-		#g-Bisa-Ular-medium-2,
-		#g-Bisa-Ular-medium-3,
-		#g-Bisa-Ular-medium-4,
-		#g-Bisa-Ular-medium-5,
-		#g-Bisa-Ular-medium-6,
-		#g-Bisa-Ular-medium-7,
-		#g-Bisa-Ular-medium-8,
-		#g-Bisa-Ular-medium-9,
-		#g-Bisa-Ular-medium-10 {
-			display:none;
-		}
-
-		#g-Bisa-Ular-submedium-cover,
-		#g-Bisa-Ular-submedium-1,
-		#g-Bisa-Ular-submedium-2,
-		#g-Bisa-Ular-submedium-3,
-		#g-Bisa-Ular-submedium-4,
-		#g-Bisa-Ular-submedium-5,
-		#g-Bisa-Ular-submedium-6,
-		#g-Bisa-Ular-submedium-7,
-		#g-Bisa-Ular-submedium-8,
-		#g-Bisa-Ular-submedium-9,
-		#g-Bisa-Ular-submedium-10 {
-			display:none;
-		}
-
-		#g-Bisa-Ular-smallplus-cover,
-		#g-Bisa-Ular-smallplus-1,
-		#g-Bisa-Ular-smallplus-2,
-		#g-Bisa-Ular-smallplus-3,
-		#g-Bisa-Ular-smallplus-4,
-		#g-Bisa-Ular-smallplus-5,
-		#g-Bisa-Ular-smallplus-6,
-		#g-Bisa-Ular-smallplus-7,
-		#g-Bisa-Ular-smallplus-8,
-		#g-Bisa-Ular-smallplus-9,
-		#g-Bisa-Ular-smallplus-10 {
-			display:none;
-		}
-	}
+	
 
 </style>

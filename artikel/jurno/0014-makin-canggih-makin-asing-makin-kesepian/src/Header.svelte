@@ -7,7 +7,7 @@
     <section>
         <div class="full-header-img">
             <div class="title-section">
-                <div class="title">{ title }</div>
+                <div class="title">{@html title }</div>
                 <div class="subtitle">{ subtitle }</div>
                 {#each subhead as sub}
                     <div class="subhead">
@@ -27,15 +27,19 @@
     <section>
 
         <div class="title-section">
-            <div class="title">{ title }</div>
-            <!-- <div class="subtitle">{ subtitle }</div> -->
+            <div class="title">{@html title }</div>
+            {#if subtitle}
+            <div class="subtitle">{@html subtitle }</div>
+            {/if}
             <aside class="credit">
                 <div class="author">Oleh <strong>{ author }</strong></div>
                 <div class="tanggal">{ date }</div>
             </aside>
+            {#if subhead}
             {#each subhead as sub}
                     <div class="subhead">{@html sub}</div>
             {/each}
+            {/if}
         </div>
     </section>
 {/if}
@@ -43,9 +47,9 @@
 <style>
     .title-section {
         width:90%;
-        
         max-width: 600px;
-        margin: 3rem auto 5rem auto;
+        margin: 0 auto 5rem auto;
+        padding-top:100px;
         text-align: center;
         z-index: 1;
         color: var(--titleColor);
@@ -77,15 +81,15 @@
     }
     .title {
         font-weight: 700;
-        font-size: 3.1rem;
-        margin: 0 auto 3rem auto;
-        font-family: 'Fondamento', cursive;
-        letter-spacing: 0.1em;
+        font-size: 4rem;
+        margin: 0 auto 1rem auto;
+        font-family: 'Josefin Slab', serif;
     }
     .subtitle {
         margin: -1rem auto 3rem auto;
         color: var(--subtitleColor);
-        font-size: 1.8rem;
+        font-family: 'Nanum Pen Script', cursive;
+        font-size: 4rem;
         line-height: 3rem;
     }
     .subhead {
@@ -108,11 +112,11 @@
 
     @media only screen and (max-width:420px) {
         .title {
-            font-size:2rem;
+            font-size:3rem;
             margin: 0 auto 0.5rem auto;
         }
         .subtitle {
-            font-size: 1.4rem;
+            font-size: 3rem;
             margin: 0 auto 1rem auto;
         }
         .subhead {

@@ -16,8 +16,9 @@ body {
 }
 
 a {
-	color: rgb(0,100,200);
-	text-decoration: none;
+	color: #1e1e1e;
+	text-decoration: underline;
+	font-weight: 600;
 }
 
 a:hover {
