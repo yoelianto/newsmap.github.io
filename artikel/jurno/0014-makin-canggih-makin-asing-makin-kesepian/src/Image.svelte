@@ -10,7 +10,6 @@
 
 	onMount(() => {
 		len = img.length;
-		console.log(img, len)
 	})
 	
 </script>
@@ -47,8 +46,6 @@
     } */
 
     img {
-        max-height:500px;
-        max-width:500px;
         margin-bottom: 1rem;
     }
     .source {

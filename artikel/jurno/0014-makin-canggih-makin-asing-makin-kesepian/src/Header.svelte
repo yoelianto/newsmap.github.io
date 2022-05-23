@@ -129,7 +129,7 @@
             height:100vw;
         } */
         .title-section {
-            margin: 1rem auto 2rem auto;
+            margin: 0 auto 2rem auto;
         }
     }
 

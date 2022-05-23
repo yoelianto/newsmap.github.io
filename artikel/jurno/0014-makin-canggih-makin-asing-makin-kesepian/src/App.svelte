@@ -32,6 +32,7 @@
 	let subheadColor='hsl(0,0%,0%)'
 
 	let height
+	let w, h
 
 	let credit =[{
 		role : 'Penulis',
@@ -40,6 +41,8 @@
 	
 	let speed = 2
 </script>
+
+<svelte:window bind:innerHeight={h} bind:innerWidth={w}></svelte:window>
 
 <svelte:head>
 	<meta
@@ -125,15 +128,17 @@
 				style:height='100vh'>
 					<div
 						style:position='absolute'
+						style:width='100vw'
 						style:right='{offset * 50}vw'
-						style:top='0'>
-						<img src="./images/3. Illus Away.png" alt="">
+						style:top={w > 450 ? '0' : '30vh'}>
+						<img src="./images/3. Illus Away.png" alt="" style:width='100%'>
 					</div>
 					<div
 						style:position='absolute'
-						style:top='0'
+						style:width='100vw'
+						style:top={w > 450 ? '0' : '30vh'}
 						style:right='-25vw'>
-						<img src="./images/3. Illus Crowd.png" alt="">
+						<img src="./images/3. Illus Crowd.png" alt="" style:width='100%'>
 				</div>
 			</div>
 		</div>
@@ -191,15 +196,15 @@
 					src="./images/1. Background.png" alt="">
 					<div
 						style:position='absolute'
-						style:left='{offset * 5}vw'
-						style:top='0'>
-						<img src="./images/1. Shadow.png" alt="">
+						style:left='{offset * 7}vw'
+						style:bottom='0'>
+						<img style:width="100vw"src="./images/1. Shadow.png" alt="">
 					</div>
 					<div
 						style:position='absolute'
-						style:top='0'
-						style:right='{offset * 5}vw'>
-						<img src="./images/1. Person.png" alt="">
+						style:bottom='0'
+						style:right='{offset * 7}vw'>
+						<img style:width="100vw" src="./images/1. Person.png" alt="">
 				</div>
 			</div>
 		</div>
