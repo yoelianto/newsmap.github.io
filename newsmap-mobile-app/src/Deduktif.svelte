@@ -4,7 +4,6 @@
     import { get } from "./api";
     import * as ihttp from './constants/initialHttp';
     import {truncText, stringToDom} from './helper';
-    import { link } from "svelte-spa-router";
     import Fa from 'svelte-fa'
     import { faSpinner, faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons'
 
@@ -59,7 +58,7 @@
                     <div class="headerbottom"></div>
                         <div class="detail">
                             <div class="author">oleh {d.author_name}</div>
-                            <a href={`/deduktif/${d.slug}`} use:link>
+                            <a href={`/deduktif/${d.slug}`}>
                                 <div class="title">{d.title}</div>  
                             </a>
                         </div>
