@@ -4,6 +4,7 @@
     import Head from '../../Head.svelte'
     import * as animateScroll from 'svelte-scrollto'
     import {afterUpdate,onMount} from 'svelte';
+    import { url } from '@roxi/routify'
 
     let height
 
@@ -75,7 +76,7 @@
     {:then data}
         {#if data.length > 0}
         {#each data as d}
-        <a style='cursor:pointer' href={`/deduktif/${d.slug}`}>
+        <a style='cursor:pointer' href={$url('/deduktif/:slug', {slug: d.slug})}>
             <div class="article">
                 <div class="left">
                     <img src={`${process['env']['URL_IMAGE']}images/deduktif/${d.thumbnail}`} alt={d.title} />

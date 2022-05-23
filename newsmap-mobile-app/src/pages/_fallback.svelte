@@ -1,5 +1,5 @@
 <script>
-    import { link } from "svelte-spa-router";
+    import { url } from '@roxi/routify'
 </script>
 
 <div class="container">
@@ -50,7 +50,7 @@
 
         <h1>We are sorry!</h1>
         <h3>The page not found.</h3>
-        <a href="/" use:link style="color: black;">
+        <a href={$url('/')} style="color: black;">
             <button>Home</button>
         </a>
       
