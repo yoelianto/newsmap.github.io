@@ -152,6 +152,8 @@
             }
 
             let polygons = state.polygons;
+            console.log(polygons)
+            
 
             let container = d3.select(el)
                 .attr('width', width)
@@ -177,7 +179,7 @@
             .append('g')
             .classed('labels', true)
 
-            cells
+            let polygon = cells
             .selectAll('.voronoi')
             .data(polygons)
             .enter()
@@ -223,109 +225,70 @@
             .selectAll('.label')
             .data(polygons)
             .enter()
-            .append('text')
+            .append('foreignObject')
+            .attr('width',(d) => {
+                let xpoly=[]
+                d.forEach(arr => {
+                    xpoly.push(arr[0])
+                    })
+                let xmaxpoly = Math.max(...xpoly)
+                let xminpoly = Math.min(...xpoly)
+                let wcell = xmaxpoly-xminpoly
+                return wcell
+                }
+            )
+            .attr('height',(d) => {
+                let ypoly=[]
+                d.forEach(arr => {
+                    ypoly.push(arr[1])
+                    })
+                let ymaxpoly = Math.max(...ypoly)
+                let yminpoly = Math.min(...ypoly)
+                let hcell = ymaxpoly-yminpoly
+                return hcell
+                }
+            )
+            .attr('x', (d) => {
+                let xpoly=[]
+                d.forEach(arr => {
+                    xpoly.push(arr[0])
+                    })
+                let xminpoly = Math.min(...xpoly)
+                
+                return xminpoly
+                })
+            .attr('y', (d) => {
+                let ypoly=[]
+                d.forEach(arr => {
+                    ypoly.push(arr[1])
+                    })
+                let yminpoly = Math.min(...ypoly)
+                return yminpoly
+                })
+            .append('xhtml:div')
+            .attr("xmlns","http://www.w3.org/1999/xhtml")
+            .style('display','flex')
+            .style('justify-content','center')
+            .style('align-items','center')
+            .style('text-align', 'center')
+            .style('white-space', 'normal')
+            .style('height','100%')
+            .style('width','80%')
+            .style('margin','auto')
             .classed('label', true)
             .style("cursor", "pointer")
-            .text((d) => {
+            .html((d) => {
                 if (d.site.originalObject.data.originalData.weight >= 2) {
-                    return d.site.originalObject.data.originalData.keywords[0]
+                    return d.site.originalObject.data.originalData.title
                 }
             })
-            .style('fill', 'white')
+            .style('color', 'white')
             .attr('text-anchor', 'middle')
             .attr('x', (d) => {
                 return d.site.x
             })
             .attr('y', (d) => {
                 return d.site.y
-            })
-            .style('font-size', (d) => {
-                if (d.site.originalObject.data.originalData.weight == 4) {
-                    return '1.5rem'
-                } else if (d.site.originalObject.data.originalData.weight == 3) {
-                    return '1rem'
-                } else {
-                    return '0.5rem'
-                }
-            })
-            .style('font-weight', (d) => {
-                if (d.site.originalObject.data.originalData.weight == 4) {
-                    return '700'
-                } else if (d.site.originalObject.data.originalData.weight == 3) {
-                    return '500'
-                } else {
-                    return '300'
-                }
-            })
-            .on('click', (d)=> {
-                topicId =  d.srcElement.__data__.site.originalObject.data.originalData._id
-                newsId = d.srcElement.__data__.site.originalObject.data.originalData.topic_id
-                dispatch('modalIn')
-            })
-
-            text
-            .selectAll('.secondarylabel')
-            .data(polygons)
-            .enter()
-            .append('text')
-            .classed('secondarylabel', true)
-            .style("cursor", "pointer")
-            .text((d) => {
-                if (d.site.originalObject.data.originalData.weight >= 3) {
-                    return d.site.originalObject.data.originalData.keywords[1]
-                }
-            })
-            .style('fill', 'white')
-            .attr('text-anchor', 'middle')
-            .attr('x', (d) => {
-                return d.site.x
-            })
-            .attr('y', (d) => {
-                return d.site.y + (d.site.originalObject.data.originalData.weight * 5)
-            })
-            .style('font-size', (d) => {
-                if (d.site.originalObject.data.originalData.weight == 4) {
-                    return '1rem'
-                } else if (d.site.originalObject.data.originalData.weight == 3) {
-                    return '0.6rem'
-                } else {
-                    return '0.4rem'
-                }
-            })
-            .style('font-weight', (d) => {
-                if (d.site.originalObject.data.originalData.weight == 4) {
-                    return '700'
-                } else if (d.site.originalObject.data.originalData.weight == 3) {
-                    return '500'
-                } else {
-                    return '300'
-                }
-            })
-            .on('click', (d)=> {
-                topicId =  d.srcElement.__data__.site.originalObject.data.originalData._id
-                newsId = d.srcElement.__data__.site.originalObject.data.originalData.topic_id
-                dispatch('modalIn')
-            })
-
-            text
-            .selectAll('.tersierlabel')
-            .data(polygons)
-            .enter()
-            .append('text')
-            .classed('tersierlabel', true)
-            .style("cursor", "pointer")
-            .text((d) => {
-                if (d.site.originalObject.data.originalData.weight >= 3) {
-                    return d.site.originalObject.data.originalData.keywords[2]
-                }
-            })
-            .style('fill', 'white')
-            .attr('text-anchor', 'middle')
-            .attr('x', (d) => {
-                return d.site.x
-            })
-            .attr('y', (d) => {
-                return d.site.y + (d.site.originalObject.data.originalData.weight * 5 * 1.7)
             })
             .style('font-size', (d) => {
                 if (d.site.originalObject.data.originalData.weight == 4) {
