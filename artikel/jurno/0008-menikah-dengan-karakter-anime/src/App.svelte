@@ -397,7 +397,7 @@
 	<Paragraph
 		--font-color ={fontColor}
 		para={[
-		"Selain menjalani hubungan parasosial, Kondo kemungkinan juga mengidap <a href='https://www.fastcompany.com/90303947/digisexuality-is-stepping-out-of-the-closet-keep-an-open-mind'><em>digisexual</em> gelombang kedua</a>. Memang Hatsune Miku yang dimiliki oleh Kondo belum mencapai ke titik itu. Namun intensitas perasaan Kondo, ditambah <a href='https://www.ndtv.com/world-news/2d-characters-cant-cheat-age-or-die-japanese-man-marries-a-hologram-of-hatsune-miku-1945838>ketidaktertarikannya untuk berhubungan dengan perempuan nyata</a> membuatnya bisa dimasukkan ke kategori ini."
+		"Selain menjalani hubungan parasosial, Kondo kemungkinan juga mengidap <a href='https://www.fastcompany.com/90303947/digisexuality-is-stepping-out-of-the-closet-keep-an-open-mind'><em>digisexual</em> gelombang kedua</a>. Memang Hatsune Miku yang dimiliki oleh Kondo belum mencapai ke titik itu. Namun intensitas perasaan Kondo, ditambah <a href='https://www.ndtv.com/world-news/2d-characters-cant-cheat-age-or-die-japanese-man-marries-a-hologram-of-hatsune-miku-1945838'>ketidaktertarikannya untuk berhubungan dengan perempuan nyata</a> membuatnya bisa dimasukkan ke kategori ini."
 		]}
 	/>
 
