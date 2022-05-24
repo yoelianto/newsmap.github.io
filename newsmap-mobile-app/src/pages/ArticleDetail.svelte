@@ -27,9 +27,9 @@
 <svelte:head>
     <title>{data.title}</title>
     {#if data.is_custom_html}
-        <link rel="stylesheet" href={`./${data.type}/${data.slug}/global.css`} />
-        <link rel="stylesheet" href={`./${data.type}/${data.slug}/bundle.css`} />
-        <script src={`./${data.type}/${data.slug}/bundle.js`}></script>
+        <link rel="stylesheet" href={`/${data.type}/${data.slug}/global.css`} />
+        <link rel="stylesheet" href={`/${data.type}/${data.slug}/bundle.css`} />
+        <script src={`/${data.type}/${data.slug}/bundle.js`}></script>
     {/if}
     <meta data-n-head="true" data-hid="charset" charset="utf-8" />
     <meta

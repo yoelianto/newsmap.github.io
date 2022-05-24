@@ -1,7 +1,6 @@
 <script>
     import Icon from 'svelte-awesome';
     import { angleRight } from 'svelte-awesome/icons';
-    import { link } from "svelte-spa-router";
     import { createEventDispatcher } from 'svelte';
 
     export let searchIn = false
@@ -15,7 +14,7 @@
 
 <nav style='right:{ searchIn ? '0px' : '-100vw'}'>
     <section>
-        <form action='/#/search?keywords={searchValue}'>
+        <form action='/search?keywords={searchValue}'>
             <input type="search" placeholder="Cari Artikel..." bind:value ={searchValue}>
             <button type="submit">Search</button>
         </form>

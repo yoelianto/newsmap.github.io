@@ -1,6 +1,4 @@
 <script>
-    let deduktifurl = "https://deduktif.id/";
-
     import { get } from "./api";
     import * as ihttp from './constants/initialHttp';
     import {truncText, stringToDom} from './helper';
@@ -58,7 +56,7 @@
                     <div class="headerbottom"></div>
                         <div class="detail">
                             <div class="author">oleh {d.author_name}</div>
-                            <a href={`/deduktif/${d.slug}`}>
+                            <a href={`${process['env']['URL_DEDUKTIF']}/deduktif/${d.slug}`}>
                                 <div class="title">{d.title}</div>  
                             </a>
                         </div>

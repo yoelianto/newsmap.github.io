@@ -82,7 +82,7 @@
     {:then data}
         {#if data.length > 0}
         {#each data as d}
-        <a style='cursor:pointer' href={$url('/deduktif/:slug', {slug: d.slug})}>
+        <a style='cursor:pointer' href={`${process['env']['URL_DEDUKTIF']}/deduktif/${d.slug}/`}>
             <div class="article">
                 <div class="left">
                     <img src={`${process['env']['URL_IMAGE']}images/deduktif/${d.thumbnail}`} alt={d.title} />
