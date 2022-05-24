@@ -1,5 +1,4 @@
 <script>
-    import { link } from "svelte-spa-router";
     import { get } from "./api";
     import * as ihttp from './constants/initialHttp';
     import {truncText, stringToDom} from './helper';
@@ -25,7 +24,7 @@
                         <Fa icon={faSpinner} size="3x" pulse />
                     </div>
                 {:then rewara}
-                <a href={`/rewara/${rewara[0].slug}`} use:link>
+                <a href={`/rewara/${rewara[0].slug}`}>
                     <div class="firstnews">
                         <img class='imgthumb' src={rewara[0].thumbnail ? `${process['env']['URL_IMAGE']}images/rewara/${rewara[0].thumbnail}` : ''} onerror={`this.onerror=null;this.src='${process['env']['NO_IMAGE']}';`} alt={rewara[0].title} />
                         <p class="article-title" id='first-article'>{rewara[0].title}</p>
@@ -35,7 +34,7 @@
                     <ul class="othernews">
                         {#each {length: 4} as _, i}
                         {#if rewara[i+1] !== undefined}
-                        <a href={`/rewara/${rewara[i+1].slug}`} use:link>
+                        <a href={`/rewara/${rewara[i+1].slug}`}>
                             <li class="news">
                                 <p class="article-title">{rewara[i+1].title}</p>
                                 <p class="excerpt">
