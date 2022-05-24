@@ -59,7 +59,7 @@ img {
 }
 
 .profpic {
-    background-color: rgb(200,200,200);
+    background-color: black;
     width:100px;
     height: 100px;
     border-radius: 50%;
@@ -76,7 +76,7 @@ img {
 }
 
 .profile-bar {
-    background-color: rgb(200,200,200);
+    background-color: black;
     width:100%;
     height:2px;
     max-width: 650px;
@@ -84,7 +84,7 @@ img {
 }
 
 .section-bar {
-    background-color: rgb(200,200,200);
+    background-color: black;
     width:100%;
     height:4px;
     max-width: 650px;

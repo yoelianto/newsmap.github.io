@@ -85,11 +85,12 @@
         line-height: 4rem;
     }
     .subtitle {
-        margin: -1rem auto 3rem auto;
+        margin: 0.5rem auto 3rem auto;
         color: var(--subtitleColor);
-        font-family: 'Nanum Pen Script', cursive;
-        font-size: 4rem;
+        font-family: 'Quicksand', sans-serif;
+        font-size: 2rem;
         line-height: 3rem;
+        white-space: normal;
     }
     .subhead {
         font-weight: 300;
@@ -111,12 +112,14 @@
 
     @media only screen and (max-width:420px) {
         .title {
-            font-size:3rem;
+            font-size:2rem;
             margin: 0 auto 0.5rem auto;
+            line-height: 2rem;
         }
         .subtitle {
-            font-size: 3rem;
+            font-size: 1.5rem;
             margin: 0 auto 1rem auto;
+            line-height: 1.5rem;
         }
         .subhead {
             margin-top: 1.5rem;

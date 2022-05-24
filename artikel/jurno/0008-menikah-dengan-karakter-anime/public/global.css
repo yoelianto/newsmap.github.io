@@ -16,8 +16,8 @@ body {
 }
 
 a {
-	color: rgb(0,100,200);
-	text-decoration: underline;
+	color: #148ba6;
+	font-weight: bold;
 }
 
 a:hover {
@@ -25,7 +25,7 @@ a:hover {
 }
 
 a:visited {
-	color: rgb(0,80,160);
+	color: #148ba6;
 }
 
 label {

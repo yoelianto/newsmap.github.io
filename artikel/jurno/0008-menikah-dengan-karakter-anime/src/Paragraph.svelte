@@ -25,8 +25,8 @@
         font-size: 1.5rem;
         line-height: 2.4rem;
         text-align: center;
-        font-family: 'Roboto Mono', monospace;
-        color:hsl(217, 65%, 67%);
+        font-family: 'Carter One', monospace;
+        color:#148ba6;
         white-space:normal;
     }
     p {
