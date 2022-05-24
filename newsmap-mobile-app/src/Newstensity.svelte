@@ -270,9 +270,9 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="persepsi">
+                        <!-- <div class="persepsi">
                             Persentase diambil dari besaran persepsi publik yang ada di sosial media.
-                        </div>
+                        </div> -->
                         
                     </div>
                 </div>
