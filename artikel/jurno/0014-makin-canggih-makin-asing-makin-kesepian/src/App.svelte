@@ -125,31 +125,31 @@
 		>
 		<div slot="background">
 			<div
-				style:height='100vh'>
+				style="height:100vh">
 					<div
-						style:position='absolute'
-						style:width='100vw'
-						style:right='{offset * 50}vw'
-						style:top={w > 450 ? '0' : '30vh'}>
-						<img src="./images/03-away.png" alt="" style:width='100%'>
+						style="position:absolute;
+							width:100vw;
+							right:{offset * 50}vw;
+							top:{w > 450 ? '0' : '30vh'}">
+						<img src="./images/03-away.png" alt="Away" style='width:100%'>
 					</div>
 					<div
-						style:position='absolute'
-						style:width='100vw'
-						style:top={w > 450 ? '0' : '30vh'}
-						style:right='-25vw'>
-						<img src="./images/03-crowd.png" alt="" style:width='100%'>
+						style="position:absolute;
+							width:100vw;
+							right:-25vw;
+							top:{w > 450 ? '0' : '30vh'}">
+						<img src="./images/03-crowd.png" alt="Crowd" style='width:100%'>
 				</div>
 			</div>
 		</div>
 
 		<div slot="foreground">
 			<section
-				style:background-color='transparent'
-				style:display='flex'
-				style:justify-content='center'
-				style:align-items='center'>
-				<p style:color='white' style:background-color='#1e1e1e'>
+				style="background-color:transparent;
+					display:flex;
+					justify-content:center;
+					align-items:center;">
+				<p style="color:white; background-color:#1e1e1e">
 					Mengenai pertemanan, masyarakat Amerika Serikat menunjukkan kebanyakan orang hanya memiliki 2 teman curhat, turun dari 3 pada tahun 1980-an
 				</p>
 			</section>
@@ -185,32 +185,33 @@
 		bind:progress
 		>
 		<div slot="background">
-			<div style:height='100vh'
-				style:clip-path='inset(5% 5%)'>
-				<img 
-					style:width='{offset * speed + 90}vw'
-					style:height='{offset * speed + 90}vh'
-					style:position='absolute'
-					style:left='{(10 - ( offset * speed))/2}vw'
-					style:top='{(10 - ( offset * speed))/2}vh'
-					src="./images/01-background.png" alt="">
+			<div
+				style="height:100vh;
+					clip-path:inset(5% 5%)">
+				<img
+					style="width:{offset * speed + 90}vw;
+						height:{offset * speed + 90}vh;
+						position:absolute;
+						left:{(10 - (offset * speed))/2}vw;
+						top:{(10 - (offset * speed))/2}vh;"
+					src="./images/01-background.png" alt="Background">
 					<div
-						style:position='absolute'
-						style:left='{offset * 7}vw'
-						style:bottom='0'>
-						<img style:width="100vw"src="./images/01-shadow.png" alt="">
+						style="position:absolute;
+							left:{offset * 7}vw;
+							bottom:0;">
+						<img style="width:100vw" src="./images/01-shadow.png" alt="Shadow">
 					</div>
 					<div
-						style:position='absolute'
-						style:bottom='0'
-						style:right='{offset * 7}vw'>
-						<img style:width="100vw" src="./images/01-person.png" alt="">
+					style="position:absolute;
+						right:{offset * 7}vw;
+						bottom:0;">
+						<img style="width:100vw" src="./images/01-person.png" alt="Person">
 				</div>
 			</div>
 		</div>
 
 		<div slot="foreground">
-			<section style:background-color='transparent'></section>
+			<section style='background-color:transparent'></section>
 		</div>
 	</Scroller>
 
