@@ -1,17 +1,16 @@
 <script>
-	import Head from './Head.svelte';
 	import Header from './Header.svelte';
 	import Paragraph from './Paragraph.svelte';
+	import List from './List.svelte'
 	import Quote from './Quote.svelte';
 	import Image from './Image.svelte';
 	import Credit from './Credit.svelte';
-	import Foot from './Foot.svelte'
 
 	//Main Font
 	let fontfamily1 = "Roboto Mono"
 
 	//Main Color
-	let fontColor = '#f9f9e1'
+	let fontColor = 'hsl(200,43%,34%)'
 
 	//Secondary Dark Color
 	let colorBrandDarkBlue = "#242053"
@@ -25,26 +24,19 @@
 	let bottom = 1;
 
 	// styling variables
-	let mainBackground='#761fff'	
-	let headerBackground='#761fff'
-	let titleColor='#f9f9e1'
-	let subtitleColor='#f9f9e1'
-	let subheadColor='#f9f9e1'
+	let mainBackground='hsl(0,0%,100%)'	
+	let headerBackground='hsl(0,0%,100%)'
+	let titleColor='hsl(200,43%,34%)'
+	let subtitleColor='hsl(200,43%,50%)'
+	let subheadColor='hsl(0,0%,0%)'
 
 	let height
 
-	let subhead = ['Indonesia adalah salah satu negara dengan jumlah jenis ular berbisa terbanyak di dunia. Totalnya 77 jenis yang terbagi ke dalam tiga famili: <em>elapidae</em>, <em>viperidae</em>, & <em>colubridae</em>',
-
-	'Namun,  sampai saat ini Indonesia hanya memiliki stok antivenom untuk 8-10 jenis ular berbisa. Masih ada 67 jenis ular berbisa lain yang tak punya antivenom. Jumlah tersebut lebih sedikit dari Australia yang masing-masing memiliki antivenom untuk 7-12 jenis ular dan Thailand yang punya 12-20 antivenom.',
-
-	'Sedangkan jumlah ular berbisa di Indonesia jauh lebih banyak dibandingkan Australia dan Malaysia yang masing-masing hanya 20 jenis. Sementara di dunia terdapat 320 jenis ular berbisa yang mematikan, menurut WHO. Artinya, 24 persen di antara berada di negeri ini.'
-	]
-
 	let credit =[{
 		role : 'Penulis',
-		name : 'Lorem Ipsum'
+		name : 'Ann Putri'
 		}]
-	let source = 'Sed nec pellentesque massa. Vestibulum eu sem ut dolor placerat ultricies at sit amet massa'
+	let source = ''
 
 </script>
 
@@ -56,46 +48,77 @@
 	
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Fondamento:ital@0;1&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Squada+One&display=swap" rel="stylesheet">
 </svelte:head>
 
 <main style="background-color: {mainBackground}">
-	<Head 
-		bind:height = {height}
-	/>
 	<div class="headerilustrasi" style="margin-top:{height}px;">
-		<div id="g-Bisa-Ular-box" class="ai2html">
-			<!-- Artboard: smallplus-cover -->
-			<div id="g-Bisa-Ular-smallplus-cover" class="g-artboard" style="max-width: 509px;max-height: 509px" data-aspect-ratio="1" data-min-width="0" data-max-width="509">
+		<div id="g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-box" class="ai2html">
+			<!-- Artboard: cover_smallplus -->
+			<div id="g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-cover_smallplus" class="g-artboard" style="max-width: 320px;max-height: 320px" data-aspect-ratio="1" data-min-width="0" data-max-width="509">
 			<div style="padding: 0 0 100% 0;"></div>
-			<img id="g-Bisa-Ular-smallplus-cover-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-smallplus-cover.png"/>
+			<img id="g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-cover_smallplus-img" class="g-aiImg" alt="" src="./images/_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-cover_smallplus.png"/>
+			<div id="g-ai0-1" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:20.4089%;margin-top:-11.3px;left:70.696%;margin-left:-40.5px;width:81px;">
+			<p class="g-pstyle0">c anu tuh</p>
+			<p class="g-pstyle0">wawawa</p>
+			</div>
+			<div id="g-ai0-2" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:56.9687%;margin-top:-5.3px;left:20.8739%;margin-left:-31px;width:62px;">
+			<p class="g-pstyle0">y emg,,</p>
+			</div>
 			</div>
 				
-			<!-- Artboard: submedium-cover -->
-			<div id="g-Bisa-Ular-submedium-cover" class="g-artboard" style="min-width: 510px;max-width: 689px;max-height: 432px" data-aspect-ratio="1.594" data-min-width="510" data-max-width="689">
-			<div style="padding: 0 0 62.7451% 0;"></div>
-			<img id="g-Bisa-Ular-submedium-cover-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-submedium-cover.png"/>
+			<!-- Artboard: cover_submedium -->
+			<div id="g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-cover_submedium" class="g-artboard" style="width:510px; height:320px;" data-aspect-ratio="1.594" data-min-width="510" data-max-width="689">
+			<div style="padding: 0 0 {100/1.594}% 0;"></div>
+			<img id="g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-cover_submedium-img" class="g-aiImg" alt="" src="./images/_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-cover_submedium.png"/>
+			<div id="g-ai1-1" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:20.4089%;margin-top:-11.3px;left:62.9857%;margin-left:-40.5px;width:81px;">
+			<p class="g-pstyle0">c anu tuh</p>
+			<p class="g-pstyle0">wawawa</p>
+			</div>
+			<div id="g-ai1-2" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:56.9687%;margin-top:-5.3px;left:31.7248%;margin-left:-31px;width:62px;">
+			<p class="g-pstyle0">y emg,,</p>
+			</div>
 			</div>
 				
-			<!-- Artboard: medium-cover -->
-			<div id="g-Bisa-Ular-medium-cover" class="g-artboard" style="min-width: 690px;max-width: 919px;max-height: 426px" data-aspect-ratio="2.156" data-min-width="690" data-max-width="919">
-			<div style="padding: 0 0 46.3768% 0;"></div>
-			<img id="g-Bisa-Ular-medium-cover-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-medium-cover.png"/>
+			<!-- Artboard: cover_medium -->
+			<div id="g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-cover_medium" class="g-artboard" style="width:690px; height:320px;" data-aspect-ratio="2.156" data-min-width="690" data-max-width="919">
+			<div style="padding: 0 0 {100/2.156}% 0;"></div>
+			<img id="g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-cover_medium-img" class="g-aiImg" alt="" src="./images/_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-cover_medium.png"/>
+			<div id="g-ai2-1" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:20.4089%;margin-top:-11.3px;left:59.5981%;margin-left:-40.5px;width:81px;">
+			<p class="g-pstyle0">c anu tuh</p>
+			<p class="g-pstyle0">wawawa</p>
+			</div>
+			<div id="g-ai2-2" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:56.9687%;margin-top:-5.3px;left:36.4922%;margin-left:-31px;width:62px;">
+			<p class="g-pstyle0">y emg,,</p>
+			</div>
 			</div>
 				
-			<!-- Artboard: large-cover -->
-			<div id="g-Bisa-Ular-large-cover" class="g-artboard" style="min-width: 920px;max-width: 1399px;max-height: 485px" data-aspect-ratio="2.884" data-min-width="920" data-max-width="1399">
-			<div style="padding: 0 0 34.6739% 0;"></div>
-				<img id="g-Bisa-Ular-large-cover-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-large-cover.png"/>
+			<!-- Artboard: cover_large -->
+			<div id="g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-cover_large" class="g-artboard" style="width:920px; height:319px;" data-aspect-ratio="2.884" data-min-width="920" data-max-width="1399">
+			<div style="padding: 0 0 {100/2.884}% 0;"></div>
+			<img id="g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-cover_large-img" class="g-aiImg" alt="" src="./images/_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-cover_large.png"/>
+			<div id="g-ai3-1" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:20.1594%;margin-top:-11.3px;left:57.1985%;margin-left:-40.5px;width:81px;">
+			<p class="g-pstyle0">c anu tuh</p>
+			<p class="g-pstyle0">wawawa</p>
+			</div>
+			<div id="g-ai3-2" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:56.8338%;margin-top:-5.3px;left:39.8692%;margin-left:-31px;width:62px;">
+			<p class="g-pstyle0">y emg,,</p>
+			</div>
 			</div>
 				
-			<!-- Artboard: xlarge-cover -->
-			<div id="g-Bisa-Ular-xlarge-cover" class="g-artboard" style="min-width: 1400px;" data-aspect-ratio="4.466" data-min-width="1400">
-			<div style="padding: 0 0 22.3929% 0;"></div>
-				<img id="g-Bisa-Ular-xlarge-cover-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-xlarge-cover.png"/>
+			<!-- Artboard: cover_xlarge_5 -->
+			<div id="g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-cover_xlarge_5" class="g-artboard" style="width:1400px; height:313.5px;" data-aspect-ratio="4.466" data-min-width="1400">
+			<div style="padding: 0 0 {100/4.466}% 0;"></div>
+			<img id="g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-cover_xlarge_5-img" class="g-aiImg" alt="" src="./images/_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-cover_xlarge_5.png"/>
+			<div id="g-ai4-1" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:20.832%;margin-top:-11.3px;left:54.7305%;margin-left:-40.5px;width:81px;">
+			<p class="g-pstyle0">c anu tuh</p>
+			<p class="g-pstyle0">wawawa</p>
 			</div>
-		</div>
-	</div>	
+			<div id="g-ai4-2" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:58.1499%;margin-top:-5.3px;left:43.3426%;margin-left:-31px;width:62px;">
+			<p class="g-pstyle0">y emg,,</p>
+			</div>
+			</div>
 	
 
 	<Header 
@@ -106,476 +129,112 @@
 
 		fullHeader={false}
 
-		title='Bisa Ular'
+		title='Bergosip di Kantor'
+		subtitle='Positif/Negatif?'	
 
-		subhead={subhead}
-		
-
-		author='Ahsan Ridhoi'
-		date=''		
+		author='Ann Putri'
+		date='11 Mei 2022'		
 	/>
 
 	<div class="divider"></div>
 
-	<Scroller
-		{top}
-		{threshold}
-		{bottom}
-		bind:count
-		bind:index
-		bind:offset
-		bind:progress
-	>
-		<div slot="background">
-			<div id="g-Bisa-Ular-box" class="ai2html">
-
-			{#if index == 0}
-				<!-- Halaman 1 -->
-				<!-- Artboard: smallplus-1 -->
-				<div id="g-Bisa-Ular-smallplus-1" class="g-artboard" style="max-width: 509px;max-height: 1113px" data-aspect-ratio="0.457" data-min-width="0" data-max-width="509"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 218.75% 0;"></div>
-				<img id="g-Bisa-Ular-smallplus-1-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-smallplus-1.png"/>
-				</div>
-
-				<!-- Artboard: submedium-1 -->
-				<div id="g-Bisa-Ular-submedium-1" class="g-artboard" style="min-width: 510px;max-width: 689px;max-height: 1081px" data-aspect-ratio="0.638" data-min-width="510" data-max-width="689"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 156.8627% 0;"></div>
-				<img id="g-Bisa-Ular-submedium-1-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-submedium-1.png"/>
-				</div>
-
-				<!-- Artboard: medium-1 -->
-				<div id="g-Bisa-Ular-medium-1" class="g-artboard" style="min-width: 690px;max-width: 919px;max-height: 1364px" data-aspect-ratio="0.674" data-min-width="690" data-max-width="919"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 148.4058% 0;"></div>
-				<img id="g-Bisa-Ular-medium-1-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-medium-1.png"/>
-				</div>
-
-				<!-- Artboard: large-1 -->
-				<div id="g-Bisa-Ular-large-1" class="g-artboard" style="min-width: 920px;max-width: 1399px;max-height: 1399px" data-aspect-ratio="1" data-min-width="920" data-max-width="1399"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 100% 0;"></div>
-				<img id="g-Bisa-Ular-large-1-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-large-1.png"/>
-				</div>
-
-				<!-- Artboard: xlarge-1 -->
-				<div id="g-Bisa-Ular-xlarge-1" class="g-artboard" style="min-width: 1400px;" data-aspect-ratio="1.778" data-min-width="1400"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 56.25% 0;"></div>
-				<img id="g-Bisa-Ular-xlarge-1-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-xlarge-1.png"/>
-				</div>
-
-
-			{:else if index == 1}
-				<!-- Halaman 2 -->
-				<!-- Artboard: smallplus-2 -->
-				<div id="g-Bisa-Ular-smallplus-2" class="g-artboard" style="max-width: 509px;max-height: 1113px" data-aspect-ratio="0.457" data-min-width="0" data-max-width="509"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 218.75% 0;"></div>
-				<img id="g-Bisa-Ular-smallplus-2-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-smallplus-2.png"/>
-				</div>
-
-				<!-- Artboard: submedium-2 -->
-				<div id="g-Bisa-Ular-submedium-2" class="g-artboard" style="min-width: 510px;max-width: 689px;max-height: 1081px" data-aspect-ratio="0.638" data-min-width="510" data-max-width="689"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 156.8627% 0;"></div>
-				<img id="g-Bisa-Ular-submedium-2-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-submedium-2.png"/>
-				</div>
-
-				<!-- Artboard: medium-2 -->
-				<div id="g-Bisa-Ular-medium-2" class="g-artboard" style="min-width: 690px;max-width: 919px;max-height: 1364px" data-aspect-ratio="0.674" data-min-width="690" data-max-width="919"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 148.4058% 0;"></div>
-				<img id="g-Bisa-Ular-medium-2-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-medium-2.png"/>
-				</div>
-
-				<!-- Artboard: large-2 -->
-				<div id="g-Bisa-Ular-large-2" class="g-artboard" style="min-width: 920px;max-width: 1399px;max-height: 1399px" data-aspect-ratio="1" data-min-width="920" data-max-width="1399"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 100% 0;"></div>
-				<img id="g-Bisa-Ular-large-2-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-large-2.png"/>
-				</div>
-
-				<!-- Artboard: xlarge-2 -->
-				<div id="g-Bisa-Ular-xlarge-2" class="g-artboard" style="min-width: 1400px;" data-aspect-ratio="1.778" data-min-width="1400"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 56.25% 0;"></div>
-				<img id="g-Bisa-Ular-xlarge-2-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-xlarge-2.png"/>
-				</div>
-
-
-			{:else if index == 2}
-				<!-- Halaman 3 -->
-				<!-- Artboard: smallplus-3 -->
-				<div id="g-Bisa-Ular-smallplus-3" class="g-artboard" style="max-width: 509px;max-height: 1113px" data-aspect-ratio="0.457" data-min-width="0" data-max-width="509"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 218.75% 0;"></div>
-				<img id="g-Bisa-Ular-smallplus-3-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-smallplus-3.png"/>
-				</div>
-
-				<!-- Artboard: submedium-3 -->
-				<div id="g-Bisa-Ular-submedium-3" class="g-artboard" style="min-width: 510px;max-width: 689px;max-height: 1081px" data-aspect-ratio="0.638" data-min-width="510" data-max-width="689"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 156.8627% 0;"></div>
-				<img id="g-Bisa-Ular-submedium-3-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-submedium-3.png"/>
-				</div>
-
-				<!-- Artboard: medium-3 -->
-				<div id="g-Bisa-Ular-medium-3" class="g-artboard" style="min-width: 690px;max-width: 919px;max-height: 1364px" data-aspect-ratio="0.674" data-min-width="690" data-max-width="919"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 148.4058% 0;"></div>
-				<img id="g-Bisa-Ular-medium-3-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-medium-3.png"/>
-				</div>
-
-				<!-- Artboard: large-3 -->
-				<div id="g-Bisa-Ular-large-3" class="g-artboard" style="min-width: 920px;max-width: 1399px;max-height: 1399px" data-aspect-ratio="1" data-min-width="920" data-max-width="1399"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 100% 0;"></div>
-				<img id="g-Bisa-Ular-large-3-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-large-3.png"/>
-				</div>
-
-				<!-- Artboard: xlarge-3 -->
-				<div id="g-Bisa-Ular-xlarge-3" class="g-artboard" style="min-width: 1400px;" data-aspect-ratio="1.778" data-min-width="1400"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 56.25% 0;"></div>
-				<img id="g-Bisa-Ular-xlarge-3-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-xlarge-3.png"/>
-				</div>
-
-
-			{:else if index == 3}
-				<!-- Halaman 4 -->
-				<!-- Artboard: smallplus-4 -->
-				<div id="g-Bisa-Ular-smallplus-4" class="g-artboard" style="max-width: 509px;max-height: 1113px" data-aspect-ratio="0.457" data-min-width="0" data-max-width="509"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 218.75% 0;"></div>
-				<img id="g-Bisa-Ular-smallplus-4-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-smallplus-4.png"/>
-				</div>
-
-				<!-- Artboard: submedium-4 -->
-				<div id="g-Bisa-Ular-submedium-4" class="g-artboard" style="min-width: 510px;max-width: 689px;max-height: 1081px" data-aspect-ratio="0.638" data-min-width="510" data-max-width="689"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 156.8627% 0;"></div>
-				<img id="g-Bisa-Ular-submedium-4-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-submedium-4.png"/>
-				</div>
-
-				<!-- Artboard: medium-4 -->
-				<div id="g-Bisa-Ular-medium-4" class="g-artboard" style="min-width: 690px;max-width: 919px;max-height: 1364px" data-aspect-ratio="0.674" data-min-width="690" data-max-width="919"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 148.4058% 0;"></div>
-				<img id="g-Bisa-Ular-medium-4-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-medium-4.png"/>
-				</div>
-
-				<!-- Artboard: large-4 -->
-				<div id="g-Bisa-Ular-large-4" class="g-artboard" style="min-width: 920px;max-width: 1399px;max-height: 1399px" data-aspect-ratio="1" data-min-width="920" data-max-width="1399"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 100% 0;"></div>
-				<img id="g-Bisa-Ular-large-4-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-large-4.png"/>
-				</div>
-
-				<!-- Artboard: xlarge-4 -->
-				<div id="g-Bisa-Ular-xlarge-4" class="g-artboard" style="min-width: 1400px;" data-aspect-ratio="1.778" data-min-width="1400"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 56.25% 0;"></div>
-				<img id="g-Bisa-Ular-xlarge-4-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-xlarge-4.png"/>
-				</div>
-			
-			{:else if index == 4}
-				<!-- Halaman 5 -->
-				<!-- Artboard: smallplus-5 -->
-				<div id="g-Bisa-Ular-smallplus-5" class="g-artboard" style="max-width: 509px;max-height: 1113px" data-aspect-ratio="0.457" data-min-width="0" data-max-width="509"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 218.75% 0;"></div>
-				<img id="g-Bisa-Ular-smallplus-5-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-smallplus-5.png"/>
-				</div>
-
-				<!-- Artboard: submedium-5 -->
-				<div id="g-Bisa-Ular-submedium-5" class="g-artboard" style="min-width: 510px;max-width: 689px;max-height: 1081px" data-aspect-ratio="0.638" data-min-width="510" data-max-width="689"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 156.8627% 0;"></div>
-				<img id="g-Bisa-Ular-submedium-5-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-submedium-5.png"/>
-				</div>
-
-				<!-- Artboard: medium-5 -->
-				<div id="g-Bisa-Ular-medium-5" class="g-artboard" style="min-width: 690px;max-width: 919px;max-height: 1364px" data-aspect-ratio="0.674" data-min-width="690" data-max-width="919"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 148.4058% 0;"></div>
-				<img id="g-Bisa-Ular-medium-5-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-medium-5.png"/>
-				</div>
-
-				<!-- Artboard: large-5 -->
-				<div id="g-Bisa-Ular-large-5" class="g-artboard" style="min-width: 920px;max-width: 1399px;max-height: 1399px" data-aspect-ratio="1" data-min-width="920" data-max-width="1399"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 100% 0;"></div>
-				<img id="g-Bisa-Ular-large-5-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-large-5.png"/>
-				</div>
-
-				<!-- Artboard: xlarge-5 -->
-				<div id="g-Bisa-Ular-xlarge-5" class="g-artboard" style="min-width: 1400px;" data-aspect-ratio="1.778" data-min-width="1400"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 56.25% 0;"></div>
-				<img id="g-Bisa-Ular-xlarge-5-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-xlarge-5.png"/>
-				</div>
-
-			
-			{:else if index == 5}
-				<!-- Halaman 6 -->
-				<!-- Artboard: smallplus-6 -->
-				<div id="g-Bisa-Ular-smallplus-6" class="g-artboard" style="max-width: 509px;max-height: 1113px" data-aspect-ratio="0.457" data-min-width="0" data-max-width="509"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 218.75% 0;"></div>
-				<img id="g-Bisa-Ular-smallplus-6-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-smallplus-6.png"/>
-				</div>
-
-				<!-- Artboard: submedium-6 -->
-				<div id="g-Bisa-Ular-submedium-6" class="g-artboard" style="min-width: 510px;max-width: 689px;max-height: 1081px" data-aspect-ratio="0.638" data-min-width="510" data-max-width="689"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 156.8627% 0;"></div>
-				<img id="g-Bisa-Ular-submedium-6-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-submedium-6.png"/>
-				</div>
-
-				<!-- Artboard: medium-6 -->
-				<div id="g-Bisa-Ular-medium-6" class="g-artboard" style="min-width: 690px;max-width: 919px;max-height: 1364px" data-aspect-ratio="0.674" data-min-width="690" data-max-width="919"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 148.4058% 0;"></div>
-				<img id="g-Bisa-Ular-medium-6-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-medium-6.png"/>
-				</div>
-
-				<!-- Artboard: large-6 -->
-				<div id="g-Bisa-Ular-large-6" class="g-artboard" style="min-width: 920px;max-width: 1399px;max-height: 1399px" data-aspect-ratio="1" data-min-width="920" data-max-width="1399"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 100% 0;"></div>
-				<img id="g-Bisa-Ular-large-6-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-large-6.png"/>
-				</div>
-
-				<!-- Artboard: xlarge-6 -->
-				<div id="g-Bisa-Ular-xlarge-6" class="g-artboard" style="min-width: 1400px;" data-aspect-ratio="1.778" data-min-width="1400"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 56.25% 0;"></div>
-				<img id="g-Bisa-Ular-xlarge-6-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-xlarge-6.png"/>
-				</div>
-			{:else if index == 6}
-				<!-- Halaman 7 -->
-				<!-- Artboard: smallplus-7 -->
-				<div id="g-Bisa-Ular-smallplus-7" class="g-artboard" style="max-width: 509px;max-height: 1113px" data-aspect-ratio="0.457" data-min-width="0" data-max-width="509"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 218.75% 0;"></div>
-				<img id="g-Bisa-Ular-smallplus-7-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-smallplus-7.png"/>
-				</div>
-
-				<!-- Artboard: submedium-7 -->
-				<div id="g-Bisa-Ular-submedium-7" class="g-artboard" style="min-width: 510px;max-width: 689px;max-height: 1081px" data-aspect-ratio="0.638" data-min-width="510" data-max-width="689"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 156.8627% 0;"></div>
-				<img id="g-Bisa-Ular-submedium-7-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-submedium-7.png"/>
-				</div>
-
-				<!-- Artboard: medium-7 -->
-				<div id="g-Bisa-Ular-medium-7" class="g-artboard" style="min-width: 690px;max-width: 919px;max-height: 1364px" data-aspect-ratio="0.674" data-min-width="690" data-max-width="919"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 148.4058% 0;"></div>
-				<img id="g-Bisa-Ular-medium-7-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-medium-7.png"/>
-				</div>
-
-				<!-- Artboard: large-7 -->
-				<div id="g-Bisa-Ular-large-7" class="g-artboard" style="min-width: 920px;max-width: 1399px;max-height: 1399px" data-aspect-ratio="1" data-min-width="920" data-max-width="1399"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 100% 0;"></div>
-				<img id="g-Bisa-Ular-large-7-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-large-7.png"/>
-				</div>
-
-				<!-- Artboard: xlarge-7 -->
-				<div id="g-Bisa-Ular-xlarge-7" class="g-artboard" style="min-width: 1400px;" data-aspect-ratio="1.778" data-min-width="1400"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 56.25% 0;"></div>
-				<img id="g-Bisa-Ular-xlarge-7-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-xlarge-7.png"/>
-				</div>
-			{:else if index == 7}
-				<!-- Halaman 8 -->
-				<!-- Artboard: smallplus-8 -->
-				<div id="g-Bisa-Ular-smallplus-8" class="g-artboard" style="max-width: 509px;max-height: 1113px" data-aspect-ratio="0.457" data-min-width="0" data-max-width="509"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 218.75% 0;"></div>
-				<img id="g-Bisa-Ular-smallplus-8-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-smallplus-8.png"/>
-				</div>
-
-				<!-- Artboard: submedium-8 -->
-				<div id="g-Bisa-Ular-submedium-8" class="g-artboard" style="min-width: 510px;max-width: 689px;max-height: 1081px" data-aspect-ratio="0.638" data-min-width="510" data-max-width="689"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 156.8627% 0;"></div>
-				<img id="g-Bisa-Ular-submedium-8-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-submedium-8.png"/>
-				</div>
-
-				<!-- Artboard: medium-8 -->
-				<div id="g-Bisa-Ular-medium-8" class="g-artboard" style="min-width: 690px;max-width: 919px;max-height: 1364px" data-aspect-ratio="0.674" data-min-width="690" data-max-width="919"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 148.4058% 0;"></div>
-				<img id="g-Bisa-Ular-medium-8-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-medium-8.png"/>
-				</div>
-
-				<!-- Artboard: large-8 -->
-				<div id="g-Bisa-Ular-large-8" class="g-artboard" style="min-width: 920px;max-width: 1399px;max-height: 1399px" data-aspect-ratio="1" data-min-width="920" data-max-width="1399"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 100% 0;"></div>
-				<img id="g-Bisa-Ular-large-8-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-large-8.png"/>
-				</div>
-
-				<!-- Artboard: xlarge-8 -->
-				<div id="g-Bisa-Ular-xlarge-8" class="g-artboard" style="min-width: 1400px;" data-aspect-ratio="1.778" data-min-width="1400"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 56.25% 0;"></div>
-				<img id="g-Bisa-Ular-xlarge-8-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-xlarge-8.png"/>
-				</div>
-			{:else if index == 8}
-				<!-- Halaman 9 -->
-				<!-- Artboard: smallplus-9 -->
-				<div id="g-Bisa-Ular-smallplus-9" class="g-artboard" style="max-width: 509px;max-height: 1113px" data-aspect-ratio="0.457" data-min-width="0" data-max-width="509"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 218.75% 0;"></div>
-				<img id="g-Bisa-Ular-smallplus-9-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-smallplus-9.png"/>
-				</div>
-
-				<!-- Artboard: submedium-9 -->
-				<div id="g-Bisa-Ular-submedium-9" class="g-artboard" style="min-width: 510px;max-width: 689px;max-height: 1081px" data-aspect-ratio="0.638" data-min-width="510" data-max-width="689"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 156.8627% 0;"></div>
-				<img id="g-Bisa-Ular-submedium-9-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-submedium-9.png"/>
-				</div>
-
-				<!-- Artboard: medium-9 -->
-				<div id="g-Bisa-Ular-medium-9" class="g-artboard" style="min-width: 690px;max-width: 919px;max-height: 1364px" data-aspect-ratio="0.674" data-min-width="690" data-max-width="919"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 148.4058% 0;"></div>
-				<img id="g-Bisa-Ular-medium-9-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-medium-9.png"/>
-				</div>
-
-				<!-- Artboard: large-9 -->
-				<div id="g-Bisa-Ular-large-9" class="g-artboard" style="min-width: 920px;max-width: 1399px;max-height: 1399px" data-aspect-ratio="1" data-min-width="920" data-max-width="1399"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 100% 0;"></div>
-				<img id="g-Bisa-Ular-large-9-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-large-9.png"/>
-				</div>
-
-				<!-- Artboard: xlarge-9 -->
-				<div id="g-Bisa-Ular-xlarge-9" class="g-artboard" style="min-width: 1400px;" data-aspect-ratio="1.778" data-min-width="1400"
-				style:opacity={offset <= 0.2 ? offset : offset <= 0.8 ? 1 : 1 - offset}>
-				<div style="padding: 0 0 56.25% 0;"></div>
-				<img id="g-Bisa-Ular-xlarge-9-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-xlarge-9.png"/>
-				</div>
-			{:else if index >= 9}
-				<!-- Halaman 10 -->
-				<!-- Artboard: smallplus-10 -->
-				<div id="g-Bisa-Ular-smallplus-10" class="g-artboard" style="max-width: 509px;max-height: 1113px" data-aspect-ratio="0.457" data-min-width="0" data-max-width="509"
-				style:opacity={offset <= 0.2 && index == 9 ? offset : 1}>
-				<div style="padding: 0 0 218.75% 0;"></div>
-				<img id="g-Bisa-Ular-smallplus-10-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-smallplus-10.png"/>
-				</div>
-
-				<!-- Artboard: submedium-10 -->
-				<div id="g-Bisa-Ular-submedium-10" class="g-artboard" style="min-width: 510px;max-width: 689px;max-height: 1081px" data-aspect-ratio="0.638" data-min-width="510" data-max-width="689"
-				style:opacity={offset <= 0.2 && index == 9 ? offset : 1}>
-				<div style="padding: 0 0 156.8627% 0;"></div>
-				<img id="g-Bisa-Ular-submedium-10-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-submedium-10.png"/>
-				</div>
-
-				<!-- Artboard: medium-10 -->
-				<div id="g-Bisa-Ular-medium-10" class="g-artboard" style="min-width: 690px;max-width: 919px;max-height: 1364px" data-aspect-ratio="0.674" data-min-width="690" data-max-width="919"
-				style:opacity={offset <= 0.2 && index == 9 ? offset : 1}>
-				<div style="padding: 0 0 148.4058% 0;"></div>
-				<img id="g-Bisa-Ular-medium-10-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-medium-10.png"/>
-				</div>
-
-				<!-- Artboard: large-10 -->
-				<div id="g-Bisa-Ular-large-10" class="g-artboard" style="min-width: 920px;max-width: 1399px;max-height: 1399px" data-aspect-ratio="1" data-min-width="920" data-max-width="1399"
-				style:opacity={offset <= 0.2 && index == 9 ? offset : 1}>
-				<div style="padding: 0 0 100% 0;"></div>
-				<img id="g-Bisa-Ular-large-10-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-large-10.png"/>
-				</div>
-
-				<!-- Artboard: xlarge-10 -->
-				<div id="g-Bisa-Ular-xlarge-10" class="g-artboard" style="min-width: 1400px;" data-aspect-ratio="1.778" data-min-width="1400"
-				style:opacity={offset <= 0.2 && index == 9 ? offset : 1}>
-				<div style="padding: 0 0 56.25% 0;"></div>
-				<img id="g-Bisa-Ular-xlarge-10-img" class="g-aiImg" alt="" src="./images/Bisa-Ular-xlarge-10.png"/>
-				</div>
-			{/if}
-			</div>
-		</div>
-
-		<div slot="foreground" >
-			<section></section>
-			<section>
-				<p>
-					Lima hari sebelum ulang tahunnya yang ke-13, pada Januari 2020, Martinus menggembala sapi-sapi ternaknya di sebuah ladang di Kabupaten Lembata, Nusa Tenggara Timur (NTT).
-				</p>
-			</section>
-			<section>
-				<p>
-					Namun, a menginjak dan digigit seekor ular berbisa langka bernama ilmiah <em>daboia ruselli siamensis</em> . Ular ini termasuk golongan <em>viperia ruselli</em> yang hanya hidup di beberapa wilayah Indonesia Tengah, antara lain Pulau Flores, Pulau Komodo, NTT, Adonara, Ende, dan Pulau Solor.
-				</p>
-			</section>
-			<section>
-				<p>
-					Dalam hitungan jam setelah terkena gigitan, ia mengalami gagal ginjal, kegagalan pernapasan, dan pendarahan di hampir semua organ tubuhnya. Dengan kata lain, nyawanya sedang di ujung tanduk.
-				</p>
-			</section>
-			<section>
-				<p>
-					Kabar tersebut sampai kepada Tri Maharani pada 14 Januari 2020, doktor lulusan Universitas Brawijaya Malang yang menjabat sebagai Presiden Indonesia Toksinologi.
-				</p>
-			</section>
-			<section>
-				<p>
-					Dalam kondisi semacam itu, menurut Maha, pasien harus mendapatkan antivenom atau anti bisa ular yang tepat. Masalahnya, antivenom untuk daboia ruselli siamensis tak tersedia di Indonesia. Kementerian Kesehatan dan PT Bio Farma pun tak bisa menyanggupi menyediakannya untuk keperluan penyembuhan Martinus.  
-				</p>
-			</section>
-			<section>
-				<p>
-					Mujur, sekali lagi, masih berkawan dengan Martinus. Maha memiliki koneksi khusus dengan salah satu profesor yang menangani gigitan ular berbisa dari Queen Sabovana Memorial Institute Thailand.
-				</p>
-			</section>
-			<section>
-				<p>
-					Profesor tersebut menyanggupi membantu Maha mendapatkan antivenom untuk mengobati Martinus. Keesokan harinya, Maha langsung terbang ke Bangkok, Thailand dan bertemu profesor tersebut. Ia membeli 12 vial antivenom untuk ular daboia ruselli siamensis melalui perantara kenalannya itu. Harga per vialnya mencapai ratusan dollar Amerika Serikat. Semua ia beli dengan uang pribadi. 
-				</p>
-			</section>
-			<section>
-				<p>
-					Usai mendapat antivenom tersebut, Maha langsung berangkat ke Lembata. Lantaran tak ada pesawat yang langsung menuju Lembata, ia mesti transit terlebih dulu sehari di Surabaya untuk kemudian terbang menuju Kupang. Dari Kupang, ia melakukan perjalanan darat ke Lembata.
-				</p>
-			</section>
-			<section>
-				<p>
-					Maha tiba di Lembata pada hari kelima usai Martinus tergigit ular. Ia langsung menyuntikkan antivenom tersebut ke tubuh Martinus dan mengawasi langsung perkembangan kesehatannya selama lebih kurang 12 jam.
-				</p>
-			</section>
-			<section>
-				<p>
-					Tepat pukul 12 malam hari itu, saat usia Martinus resmi bertambah, kondisinya membaik. Pendarahan di organ-organ penting mulai berhenti. Ginjalnya pun membaik. Kini, ia telah sembuh dan menjalani hidup normal kembali.
-				</p>
-			</section>
-		</div>
-	</Scroller>
-
-	<div class="divider"></div>
+	<Image 
+		img = {[{
+			url:'./images/capture_tilik.jpg',
+			title:'Potongan adegan dari film Tilik (2018)'
+		}]}
+		imageTitle = 'Potongan adegan dari film Tilik (2018)'
+		imageSource = 'Ravacana Films'
+		/>
 
 	<Paragraph
-		--font-color ='#f9f9e1'
+		--font-color ={fontColor}
 		para={[
-		'Kelangkaan antivenom di Indonesia cukup mengkhawatirkan jika dibandingkan dengan jumlah kasus tahunan gigitan ular berbisa. Sepanjang sepuluh tahun ke belakang, berdasarkan laporan dari rumah sakit dan fasilitas Kesehatan lain, Maha mencatat sebanyak 135 ribu kasus gigitan ular di Indonesia per tahun.',
-		'Dari jumlah kasus tersebut, rasio kematian korban mencapai 10% atau lebih 13.500 orang. Angka tersebut jauh dari standar Organisasi Kesehatan Dunia (WHO) bahwa rasio kematian maksimal di suatu wilayah adalah 2%.',
-		'Data tersebut sebetulnya tak bisa menjadi gambaran utuh atas kasus gigitan ular di Indonesia. Pasalnya, tak ada catatan resmi dari pemerintah terkait persoalan kesehatan serius ini. Maka, menurut Maha, bisa jadi jumlah kasus dan kematian lebih dari angka tersebut.'
+		"Potongan di atas adalah cuplikan dialog <a href='https://www.youtube.com/watch?v=GAyvgz8_zV8'>Tilik (2018)</a> besutan Wahyu Agung Prasetyo. Film yang viral pada 2020 ini tak hanya berhasil menggambarkan kehidupan kampung di Yogyakarta, tapi juga membuka banyak diskusi. Salah satunya tentang <a href='https://medium.com/binokular/menilik-tilik-dan-julidan-netizen-a623a0afa430'>stereotip perempuan dan bergosip</a>.",
+		'Di <em>Tilik</em>, gosip digambarkan sebagai suatu hal yang negatif. Benarkah?'
 		]}
 	/>
+
+
+	<Paragraph
+		--font-color ={fontColor}
+		subjudul = 'Menilik Asal-usul Gosip'
+		para={[
+		"Gosip sebetulnya memiliki sejarah panjang. Robin Dunbar, antropolog sekaligus psikolog evolusioner berteori bahwa gosip yang kita lakukan sekarang merupakan versi manusia dari perawatan diri para primata. Para primata saling menggaruk punggung satu sama lain sebagai cara untuk memperkuat hubungan sosial.",
+		'Primata kemudian berkembang menjadi <em>hominid</em>, lalu berkembang lagi menjadi <em>homo</em> atau manusia purba. Berbeda dengan sepupu hominid lainnya, manusia purba jauh lebih cerdas dan sosial. Kehidupan berkelompok mereka jauh lebih besar sehingga dicarilah cara lain yang lebih efisien untuk bersosialisasi. Gosip pun akhirnya menjadi pelumas dan perekat hubungan sosial paling tokcer.'
+		]}
+	/>
+
+	<Image
+		img = {[{
+			url:'./images/asal-usul-gosip-01.png',
+			title:'Asal-usul gosip'
+		}]}
+	/>
+
+	<Paragraph
+		--font-color ={fontColor}
+		para={[
+		"Seiring waktu, manusia membentuk kelompok yang jauh lebih besar dengan tatanan sosial yang lebih rumit pula. Gosip yang awalnya bisa mendekatkan hubungan, malah menghancurkannya. Jadilah agama melarang gosip. Kitab Talmud adalah yang pertama <a href='https://www.reviewofreligions.org/32748/world-faiths-slander-gossip-foul-speech/'>melarang membicarakan hal-hal buruk</a> soal orang lain. Ajaran ini juga disebutkan di Alkitab dan Al Qur’an.",
+		"Lalu kenapa gosip erat kaitannya dengan perempuan? Kemungkinan karena para <a href='https://wordhistories.net/2017/02/04/gossip/'>ibu-ibu abad ke-17</a> yang sedang menunggu kelahiran anaknya sering membicarakan suami, keluarga, dan tetangga mereka—ya pokoknya orang-orang yang tak ada di ruangan itu—bersama para suster dan bidan. Maklum, menunggu anak lahir butuh waktu berjam-jam sampai berhari-hari, jadi apa lagi yang bisa mereka lakukan selain <em>ghibah</em>?",
+		"Kebiasaan mereka ini akhirnya disebut sebagai “gosip”. Saking seringnya kata ini digunakan, kata “gosip” sampai digunakan di Alkitab versi Raja James, menggantikan istilah “pembisik” (<em>whisperer</em>) dan “pembawa cerita” (<em>talebearer</em>) yang umumnya memiliki konotasi negatif.",
+		"Pandangan negatif soal gosip terus eksis hingga sekarang. Pandangan negatif soal gosip paling terlihat di lingkungan kantor. Ini karena gosip, menurut orang-orang <em>Human Resources</em>, adalah <a href='https://www.syntrio.com/blog/the-negative-impact-of-gossip-in-the-workplace/'>penyebab utama</a> kondisi kantor yang tidak kondusif. Gosip dianggap memantik konflik, mengikis kepercayaan antar pegawai, menurunkan moral, serta menghambat kerja tim. Lebih pentingnya lagi, gosip kantor juga <a href='https://hbr.org/2018/10/stop-complaining-about-your-colleagues-behind-their-backs?utm_medium=social&utm_campaign=hbr&utm_source=twitter&tpcc=orgsocial_edit'>merusak usaha untuk membuat sistem komunikasi yang sehat</a>, profesional, dan terbuka di tempat kerja. Tak mengherankan kalau <a href='https://www.shrm.org/resourcesandtools/hr-topics/employee-relations/pages/office-gossip-policies.aspx'>ada yang menyebut</a> gosip sebagai bentuk kekerasan di tempat kerja.",
+		"Tapi, seperti layaknya gosip, kita juga perlu mempertanyakan klaim itu. Apa betul semua jenis gosip di kantor 100% berbahaya?"
+		]}
+	/>
+
+	<Paragraph
+		--font-color ={fontColor}
+		subjudul = 'Mematahkan Mitos dan Prasangka Tentang Gosip'
+		para={[
+		"Penelitian-penelitian empiris sebelumnya tentang gosip justru mematahkan mitos seputar gosip. Penelitian terbaru yang dilakukan oleh <a href='https://journals.sagepub.com/doi/abs/10.1177/1948550619837000?journalCode=sppa'>Robbins dan Karan (2020)</a> dengan responden mahasiswa S1 berbagai universitas Amerika Serikat menunjukkan sekaligus mengkonfirmasi ulang bahwa ⅔ gosip bernada netral atau bahkan positif."
+		]}
+	/>
+
+	<Image
+		img = {[{
+			url:'./images/mitos-dan-prasangka-gosip-01.png',
+			title:'Mitos dan Prasangka Gosip'
+		}]}
+	/>
+
+	<Paragraph
+		--font-color ={fontColor}
+		para={[
+		"Penelitian ini  juga mematahkan pandangan bahwa hanya perempuan yang bergosip, laki-laki juga begitu"
+		]}
+	/>
+	<List
+		--font-color ={fontColor}
+		list={[
+		"Perempuan cenderung lebih sering bergosip tapi bernada netral",
+		"Laki-laki lebih sedikit bergosip tapi nadanya lebih negatif daripada perempuan",
+		"Orang-orang ekstrovert cenderung lebih suka bergosip dibanding yang introvert",
+		"Orang-orang belajar norma sosial lewat bergosip.",
+		"Anak-anak muda lebih sering bergosip buruk dibanding orang-orang tua",
+		]}
+	/>
+
+	<Paragraph
+		--font-color ={fontColor}
+		para={[
+		"Karena mayoritas bersifat netral, gosip menjadi sarana yang tepat untuk mengumpulkan informasi di ruang kerja. Tak hanya itu, gosip juga membuat kita bisa mengetahui apa saja yang terjadi ketika waktu dan perhatian kita disedot oleh pekerjaan. Bayangkan, Anda sedang istirahat makan siang di <em>pantry</em> sambil membicarakan kebiasaan si anu yang sering telat kirim pekerjaan di Slack. Perilaku seperti ini bukan hanya menyindir si anu, tapi juga sebagai bentuk kontrol sosial supaya orang-orang di situ tidak melakukan hal yang sama."
+		
+		]}
+	/>
+
+	<Paragraph
+		--font-color ={fontColor}
+		para={[
+		"Akhir kata, gosip tidak selalu buruk—selama tidak menjelek-jelekkan seseorang atau sampai menyakiti hati. Gosip juga bisa menjadi penanda bahwa ada sesuatu yang salah di suatu lingkungan. Orang-orang yang menjadi korban perundungan atau pelecehan cenderung menceritakan kejadiannya ke orang lain dengan janji anonimitas. Sayang keuntungan ini juga bisa disalahgunakan oleh orang-orang untuk merundung atau menyudutkan seseorang.",
+		"Jadi bijaklah ketika bergosip, ya."
+		]}
+	/>
+
 	<Credit
 		--fontfamily1={fontfamily1}
 		--font-color = {fontColor}
-		{ source } { credit }
-	/>
-	<Foot 
-		--fontfamily1={fontfamily1}
-		--font-color = {fontColor}
-		--bgColorDark = {colorBrandDarkBlue}
+		{ credit }
 	/>
 </main>
 
@@ -583,7 +242,7 @@
 	.divider {
 		height:0.2rem;
 		width:60%;
-		background-color:#f9f9e1 ;
+		background-color:hsl(217, 65%, 67%) ;
 		margin:2rem auto;
 		border-radius: 0.1rem;
 	}
@@ -599,19 +258,19 @@
 
 	[slot="foreground"] section {
 		height: 80vh;
-		color: white;
+		color: hsl(200,43%,34%);
 		padding: 1em;
 		margin: 0 0 2em 0;
+		border-radius: 1rem;
 	}
 
 	[slot="foreground"] p {
 		padding:1rem;
-		background-color: black;
+		background-color: hsl(0, 76%, 97%);
 		width:90%;
         max-width: 650px;
-        margin: 0 auto 0 auto;
+        margin: 0 auto 0 auto !important;
         text-align: left;
-		border-radius: 1rem;
 		font-family: 'Roboto-Mono', monospace;
 		white-space: normal;
 	}
@@ -638,596 +297,833 @@
 	/* --------------------------------------------------------------------------------------------------------------------------------------- */
 	/* Custom Scrollytelling Style */
 	/* --------------------------------------------------------------------------------------------------------------------------------------- */
-	.g-artboard {
-		transition: opacity 100ms ease-in-out;
-	}
-	#g-Bisa-Ular-box ,
-	#g-Bisa-Ular-box .g-artboard {
+	#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-box ,
+	#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-box .g-artboard {
 		margin:0 auto;
 	}
-	#g-Bisa-Ular-box .g-aiImg {
+	#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-box p {
+		margin:0;
+	}
+	#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-box .g-aiAbs {
+		position:absolute;
+	}
+	#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-box .g-aiImg {
 		position:absolute;
 		top:0;
 		display:block;
 		width:100% !important;
 	}
-	#g-Bisa-Ular-smallplus-cover {
+	#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-box .g-aiSymbol {
+		position: absolute;
+		box-sizing: border-box;
+	}
+	#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-box .g-aiPointText p { white-space: nowrap; }
+	#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-cover_smallplus {
 		position:relative;
 		overflow:hidden;
 	}
-	#g-Bisa-Ular-submedium-cover {
+	#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-cover_smallplus p {
+		font-family: 'Nanum Pen Script', cursive;
+		font-weight:500;
+		line-height:12px;
+		height:auto;
+		opacity:1;
+		letter-spacing:0em;
+		font-size:16px;
+		text-align:left;
+		color:rgb(50,75,89);
+		text-transform:none;
+		padding-bottom:0;
+		padding-top:0;
+		mix-blend-mode:normal;
+		font-style:normal;
+		position:static;
+	}
+	#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-cover_smallplus .g-pstyle0 {
+		height:12px;
+		text-align:center;
+	}
+	#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-cover_submedium {
 		position:relative;
 		overflow:hidden;
 	}
-	#g-Bisa-Ular-medium-cover {
+	#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-cover_submedium p {
+		font-family: 'Nanum Pen Script', cursive;
+		font-weight:500;
+		line-height:12px;
+		height:auto;
+		opacity:1;
+		letter-spacing:0em;
+		font-size:16px;
+		text-align:left;
+		color:rgb(50,75,89);
+		text-transform:none;
+		padding-bottom:0;
+		padding-top:0;
+		mix-blend-mode:normal;
+		font-style:normal;
+		position:static;
+	}
+	#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-cover_submedium .g-pstyle0 {
+		height:12px;
+		text-align:center;
+	}
+	#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-cover_medium {
 		position:relative;
 		overflow:hidden;
 	}
-	#g-Bisa-Ular-large-cover {
+	#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-cover_medium p {
+		font-family: 'Nanum Pen Script', cursive;
+		font-weight:500;
+		line-height:12px;
+		height:auto;
+		opacity:1;
+		letter-spacing:0em;
+		font-size:16px;
+		text-align:left;
+		color:rgb(50,75,89);
+		text-transform:none;
+		padding-bottom:0;
+		padding-top:0;
+		mix-blend-mode:normal;
+		font-style:normal;
+		position:static;
+	}
+	#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-cover_medium .g-pstyle0 {
+		height:12px;
+		text-align:center;
+	}
+	#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-cover_large {
 		position:relative;
 		overflow:hidden;
 	}
-	#g-Bisa-Ular-xlarge-cover {
+	#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-cover_large p {
+		font-family: 'Nanum Pen Script', cursive;
+		font-weight:500;
+		line-height:12px;
+		height:auto;
+		opacity:1;
+		letter-spacing:0em;
+		font-size:16px;
+		text-align:left;
+		color:rgb(50,75,89);
+		text-transform:none;
+		padding-bottom:0;
+		padding-top:0;
+		mix-blend-mode:normal;
+		font-style:normal;
+		position:static;
+	}
+	#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-cover_large .g-pstyle0 {
+		height:12px;
+		text-align:center;
+	}
+	#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-cover_xlarge_5 {
 		position:relative;
 		overflow:hidden;
 	}
-	#g-Bisa-Ular-smallplus-1 {
+	#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-cover_xlarge_5 p {
+		font-family: 'Nanum Pen Script', cursive;
+		font-weight:500;
+		line-height:12px;
+		height:auto;
+		opacity:1;
+		letter-spacing:0em;
+		font-size:16px;
+		text-align:left;
+		color:rgb(50,75,89);
+		text-transform:none;
+		padding-bottom:0;
+		padding-top:0;
+		mix-blend-mode:normal;
+		font-style:normal;
+		position:static;
+	}
+	#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-cover_xlarge_5 .g-pstyle0 {
+		height:12px;
+		text-align:center;
+	}
+	#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-smallplus_1 {
 		position:relative;
 		overflow:hidden;
 	}
-	#g-Bisa-Ular-submedium-1 {
+	#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-submedium_1 {
 		position:relative;
 		overflow:hidden;
 	}
-	#g-Bisa-Ular-medium-1 {
+	#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-medium_1 {
 		position:relative;
 		overflow:hidden;
 	}
-	#g-Bisa-Ular-large-1 {
+	#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-large_1 {
 		position:relative;
 		overflow:hidden;
 	}
-	#g-Bisa-Ular-xlarge-1 {
+	#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-xlarge_1 {
 		position:relative;
 		overflow:hidden;
 	}
-	#g-Bisa-Ular-smallplus-2 {
+	#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-smallplus_2 {
 		position:relative;
 		overflow:hidden;
 	}
-	#g-Bisa-Ular-submedium-2 {
+	#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-smallplus_2 p {
+		font-family: 'Nanum Pen Script', cursive;
+		font-weight:500;
+		line-height:17px;
+		height:auto;
+		opacity:1;
+		letter-spacing:0em;
+		font-size:23px;
+		text-align:left;
+		color:rgb(50,75,89);
+		text-transform:none;
+		padding-bottom:0;
+		padding-top:0;
+		mix-blend-mode:normal;
+		font-style:normal;
+		position:static;
+	}
+	#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-smallplus_2 .g-pstyle0 {
+		height:17px;
+		text-align:center;
+	}
+	#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-submedium_2 {
 		position:relative;
 		overflow:hidden;
 	}
-	#g-Bisa-Ular-medium-2 {
+	#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-submedium_2 p {
+		font-family: 'Nanum Pen Script', cursive;
+		font-weight:500;
+		line-height:18px;
+		height:auto;
+		opacity:1;
+		letter-spacing:0em;
+		font-size:25px;
+		text-align:left;
+		color:rgb(50,75,89);
+		text-transform:none;
+		padding-bottom:0;
+		padding-top:0;
+		mix-blend-mode:normal;
+		font-style:normal;
+		position:static;
+	}
+	#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-submedium_2 .g-pstyle0 {
+		line-height:20px;
+		height:20px;
+		font-size:27px;
+		text-align:center;
+	}
+	#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-submedium_2 .g-pstyle1 {
+		height:18px;
+		text-align:center;
+	}
+	#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-medium_2 {
 		position:relative;
 		overflow:hidden;
 	}
-	#g-Bisa-Ular-large-2 {
+	#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-medium_2 p {
+		font-family: 'Nanum Pen Script', cursive;
+		font-weight:500;
+		line-height:24px;
+		height:auto;
+		opacity:1;
+		letter-spacing:0em;
+		font-size:32px;
+		text-align:left;
+		color:rgb(50,75,89);
+		text-transform:none;
+		padding-bottom:0;
+		padding-top:0;
+		mix-blend-mode:normal;
+		font-style:normal;
+		position:static;
+	}
+	#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-medium_2 .g-pstyle0 {
+		line-height:25px;
+		height:25px;
+		font-size:34px;
+		text-align:center;
+	}
+	#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-medium_2 .g-pstyle1 {
+		height:24px;
+		text-align:center;
+	}
+	#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-large_2 {
 		position:relative;
 		overflow:hidden;
 	}
-	#g-Bisa-Ular-xlarge-2 {
+	#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-large_2 p {
+		font-family: 'Nanum Pen Script', cursive;
+		font-weight:500;
+		line-height:24px;
+		height:auto;
+		opacity:1;
+		letter-spacing:0em;
+		font-size:32px;
+		text-align:left;
+		color:rgb(50,75,89);
+		text-transform:none;
+		padding-bottom:0;
+		padding-top:0;
+		mix-blend-mode:normal;
+		font-style:normal;
+		position:static;
+	}
+	#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-large_2 .g-pstyle0 {
+		line-height:25px;
+		height:25px;
+		font-size:34px;
+		text-align:center;
+	}
+	#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-large_2 .g-pstyle1 {
+		height:24px;
+		text-align:center;
+	}
+	#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-xlarge_2 {
 		position:relative;
 		overflow:hidden;
 	}
-	#g-Bisa-Ular-smallplus-3 {
+	#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-xlarge_2 p {
+		font-weight:500;
+		line-height:31px;
+		height:auto;
+		opacity:1;
+		letter-spacing:0em;
+		font-size:42px;
+		text-align:left;
+		color:rgb(50,75,89);
+		text-transform:none;
+		padding-bottom:0;
+		padding-top:0;
+		mix-blend-mode:normal;
+		font-style:normal;
+		position:static;
+	}
+	#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-xlarge_2 .g-pstyle0 {
+		line-height:32px;
+		height:32px;
+		font-size:44px;
+		text-align:center;
+	}
+	#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-xlarge_2 .g-pstyle1 {
+		height:31px;
+		text-align:center;
+	}
+	#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-smallplus_3 {
 		position:relative;
 		overflow:hidden;
 	}
-	#g-Bisa-Ular-submedium-3 {
+	#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-smallplus_3 p {
+		font-family: 'Nanum Pen Script', cursive;
+		font-weight:500;
+		line-height:17px;
+		height:auto;
+		opacity:1;
+		letter-spacing:0em;
+		font-size:13px;
+		text-align:left;
+		color:rgb(50,75,89);
+		text-transform:none;
+		padding-bottom:0;
+		padding-top:0;
+		mix-blend-mode:normal;
+		font-style:normal;
+		position:static;
+	}
+	#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-smallplus_3 .g-pstyle0 {
+		height:17px;
+		text-align:center;
+	}
+	#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-submedium_3 {
 		position:relative;
 		overflow:hidden;
 	}
-	#g-Bisa-Ular-medium-3 {
+	#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-submedium_3 p {
+		font-family: 'Nanum Pen Script', cursive;
+		font-weight:500;
+		line-height:26px;
+		height:auto;
+		opacity:1;
+		letter-spacing:0em;
+		font-size:20px;
+		text-align:left;
+		color:rgb(50,75,89);
+		text-transform:none;
+		padding-bottom:0;
+		padding-top:0;
+		mix-blend-mode:normal;
+		font-style:normal;
+		position:static;
+	}
+	#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-submedium_3 .g-pstyle0 {
+		height:26px;
+		text-align:center;
+	}
+	#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-medium_3 {
 		position:relative;
 		overflow:hidden;
 	}
-	#g-Bisa-Ular-large-3 {
+	#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-medium_3 p {
+		font-family: 'Nanum Pen Script', cursive;
+		font-weight:500;
+		line-height:34px;
+		height:auto;
+		opacity:1;
+		letter-spacing:0em;
+		font-size:26px;
+		text-align:left;
+		color:rgb(50,75,89);
+		text-transform:none;
+		padding-bottom:0;
+		padding-top:0;
+		mix-blend-mode:normal;
+		font-style:normal;
+		position:static;
+	}
+	#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-medium_3 .g-pstyle0 {
+		height:34px;
+		text-align:center;
+	}
+	#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-large_3 {
 		position:relative;
 		overflow:hidden;
 	}
-	#g-Bisa-Ular-xlarge-3 {
+	#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-large_3 p {
+		font-family: 'Nanum Pen Script', cursive;
+		font-weight:500;
+		line-height:40px;
+		height:auto;
+		opacity:1;
+		letter-spacing:0em;
+		font-size:31px;
+		text-align:left;
+		color:rgb(50,75,89);
+		text-transform:none;
+		padding-bottom:0;
+		padding-top:0;
+		mix-blend-mode:normal;
+		font-style:normal;
+		position:static;
+	}
+	#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-large_3 .g-pstyle0 {
+		height:40px;
+		text-align:center;
+	}
+	#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-xlarge_3 {
 		position:relative;
 		overflow:hidden;
 	}
-	#g-Bisa-Ular-smallplus-4 {
+	#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-xlarge_3 p {
+		font-family: 'Nanum Pen Script', cursive;
+		font-weight:500;
+		line-height:36px;
+		height:auto;
+		opacity:1;
+		letter-spacing:0em;
+		font-size:27px;
+		text-align:left;
+		color:rgb(50,75,89);
+		text-transform:none;
+		padding-bottom:0;
+		padding-top:0;
+		mix-blend-mode:normal;
+		font-style:normal;
+		position:static;
+	}
+	#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-xlarge_3 .g-pstyle0 {
+		height:36px;
+		text-align:center;
+	}
+	#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-smallplus_4 {
 		position:relative;
 		overflow:hidden;
 	}
-	#g-Bisa-Ular-submedium-4 {
+	#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-submedium_4 {
 		position:relative;
 		overflow:hidden;
 	}
-	#g-Bisa-Ular-medium-4 {
+	#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-medium_4 {
 		position:relative;
 		overflow:hidden;
 	}
-	#g-Bisa-Ular-large-4 {
+	#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-large_4 {
 		position:relative;
 		overflow:hidden;
 	}
-	#g-Bisa-Ular-xlarge-4 {
+	#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-xlarge_4 {
 		position:relative;
 		overflow:hidden;
 	}
-	#g-Bisa-Ular-smallplus-5 {
+	#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-smallplus_5 {
 		position:relative;
 		overflow:hidden;
 	}
-	#g-Bisa-Ular-submedium-5 {
+	#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-smallplus_5 p {
+		font-family: 'Nanum Pen Script', cursive;
+		font-weight:500;
+		line-height:15px;
+		height:auto;
+		opacity:1;
+		letter-spacing:0em;
+		font-size:20px;
+		text-align:left;
+		color:rgb(50,75,89);
+		text-transform:none;
+		padding-bottom:0;
+		padding-top:0;
+		mix-blend-mode:normal;
+		font-style:normal;
+		position:static;
+	}
+	#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-smallplus_5 .g-pstyle0 {
+		height:15px;
+		text-align:center;
+	}
+	#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-submedium_5 {
 		position:relative;
 		overflow:hidden;
 	}
-	#g-Bisa-Ular-medium-5 {
+	#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-submedium_5 p {
+		font-family: 'Nanum Pen Script', cursive;
+		font-weight:500;
+		line-height:24px;
+		height:auto;
+		opacity:1;
+		letter-spacing:0em;
+		font-size:33px;
+		text-align:left;
+		color:rgb(50,75,89);
+		text-transform:none;
+		padding-bottom:0;
+		padding-top:0;
+		mix-blend-mode:normal;
+		font-style:normal;
+		position:static;
+	}
+	#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-submedium_5 .g-pstyle0 {
+		height:24px;
+		text-align:center;
+	}
+	#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-medium_5 {
 		position:relative;
 		overflow:hidden;
 	}
-	#g-Bisa-Ular-large-5 {
+	#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-medium_5 p {
+		font-family: 'Nanum Pen Script', cursive;
+		font-weight:500;
+		line-height:30px;
+		height:auto;
+		opacity:1;
+		letter-spacing:0em;
+		font-size:41px;
+		text-align:left;
+		color:rgb(50,75,89);
+		text-transform:none;
+		padding-bottom:0;
+		padding-top:0;
+		mix-blend-mode:normal;
+		font-style:normal;
+		position:static;
+	}
+	#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-medium_5 .g-pstyle0 {
+		height:30px;
+		text-align:center;
+	}
+	#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-large_5 {
 		position:relative;
 		overflow:hidden;
 	}
-	#g-Bisa-Ular-xlarge-5 {
+	#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-large_5 p {
+		font-family: 'Nanum Pen Script', cursive;
+		font-weight:500;
+		line-height:37px;
+		height:auto;
+		opacity:1;
+		letter-spacing:0em;
+		font-size:50px;
+		text-align:left;
+		color:rgb(50,75,89);
+		text-transform:none;
+		padding-bottom:0;
+		padding-top:0;
+		mix-blend-mode:normal;
+		font-style:normal;
+		position:static;
+	}
+	#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-large_5 .g-pstyle0 {
+		height:37px;
+		text-align:center;
+	}
+	#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-xlarge_5 {
 		position:relative;
 		overflow:hidden;
 	}
-	#g-Bisa-Ular-smallplus-6 {
-		position:relative;
-		overflow:hidden;
+	#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-xlarge_5 p {
+		font-family: 'Nanum Pen Script', cursive;
+		font-weight:500;
+		line-height:37px;
+		height:auto;
+		opacity:1;
+		letter-spacing:0em;
+		font-size:50px;
+		text-align:left;
+		color:rgb(50,75,89);
+		text-transform:none;
+		padding-bottom:0;
+		padding-top:0;
+		mix-blend-mode:normal;
+		font-style:normal;
+		position:static;
 	}
-	#g-Bisa-Ular-submedium-6 {
-		position:relative;
-		overflow:hidden;
-	}
-	#g-Bisa-Ular-medium-6 {
-		position:relative;
-		overflow:hidden;
-	}
-	#g-Bisa-Ular-large-6 {
-		position:relative;
-		overflow:hidden;
-	}
-	#g-Bisa-Ular-xlarge-6 {
-		position:relative;
-		overflow:hidden;
-	}
-	#g-Bisa-Ular-smallplus-7 {
-		position:relative;
-		overflow:hidden;
-	}
-	#g-Bisa-Ular-submedium-7 {
-		position:relative;
-		overflow:hidden;
-	}
-	#g-Bisa-Ular-medium-7 {
-		position:relative;
-		overflow:hidden;
-	}
-	#g-Bisa-Ular-large-7 {
-		position:relative;
-		overflow:hidden;
-	}
-	#g-Bisa-Ular-xlarge-7 {
-		position:relative;
-		overflow:hidden;
-	}
-	#g-Bisa-Ular-smallplus-8 {
-		position:relative;
-		overflow:hidden;
-	}
-	#g-Bisa-Ular-submedium-8 {
-		position:relative;
-		overflow:hidden;
-	}
-	#g-Bisa-Ular-medium-8 {
-		position:relative;
-		overflow:hidden;
-	}
-	#g-Bisa-Ular-large-8 {
-		position:relative;
-		overflow:hidden;
-	}
-	#g-Bisa-Ular-xlarge-8 {
-		position:relative;
-		overflow:hidden;
-	}
-	#g-Bisa-Ular-smallplus-9 {
-		position:relative;
-		overflow:hidden;
-	}
-	#g-Bisa-Ular-submedium-9 {
-		position:relative;
-		overflow:hidden;
-	}
-	#g-Bisa-Ular-medium-9 {
-		position:relative;
-		overflow:hidden;
-	}
-	#g-Bisa-Ular-large-9 {
-		position:relative;
-		overflow:hidden;
-	}
-	#g-Bisa-Ular-xlarge-9 {
-		position:relative;
-		overflow:hidden;
-	}
-	#g-Bisa-Ular-smallplus-10 {
-		position:relative;
-		overflow:hidden;
-	}
-	#g-Bisa-Ular-submedium-10 {
-		position:relative;
-		overflow:hidden;
-	}
-	#g-Bisa-Ular-medium-10 {
-		position:relative;
-		overflow:hidden;
-	}
-	#g-Bisa-Ular-large-10 {
-		position:relative;
-		overflow:hidden;
-	}
-	#g-Bisa-Ular-xlarge-10 {
-		position:relative;
-		overflow:hidden;
+	#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-xlarge_5 .g-pstyle0 {
+		height:37px;
+		text-align:center;
 	}
 
 	@media only screen and (max-width:509px) {
-		#g-Bisa-Ular-xlarge-cover,
-		#g-Bisa-Ular-xlarge-1,
-		#g-Bisa-Ular-xlarge-2,
-		#g-Bisa-Ular-xlarge-3,
-		#g-Bisa-Ular-xlarge-4,
-		#g-Bisa-Ular-xlarge-5,
-		#g-Bisa-Ular-xlarge-6,
-		#g-Bisa-Ular-xlarge-7,
-		#g-Bisa-Ular-xlarge-8,
-		#g-Bisa-Ular-xlarge-9,
-		#g-Bisa-Ular-xlarge-10 {
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-cover_xlarge_5,
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-xlarge_1,
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-xlarge_2,
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-xlarge_3,
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-xlarge_4,
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-xlarge_5 {
 			display:none;
 		}
 
-		#g-Bisa-Ular-large-cover,
-		#g-Bisa-Ular-large-1,
-		#g-Bisa-Ular-large-2,
-		#g-Bisa-Ular-large-3,
-		#g-Bisa-Ular-large-4,
-		#g-Bisa-Ular-large-5,
-		#g-Bisa-Ular-large-6,
-		#g-Bisa-Ular-large-7,
-		#g-Bisa-Ular-large-8,
-		#g-Bisa-Ular-large-9,
-		#g-Bisa-Ular-large-10 {
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-cover_large,
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-large_1,
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-large_2,
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-large_3,
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-large_4,
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-large_5 {
 			display:none;
 		}
 
-		#g-Bisa-Ular-medium-cover,
-		#g-Bisa-Ular-medium-1,
-		#g-Bisa-Ular-medium-2,
-		#g-Bisa-Ular-medium-3,
-		#g-Bisa-Ular-medium-4,
-		#g-Bisa-Ular-medium-5,
-		#g-Bisa-Ular-medium-6,
-		#g-Bisa-Ular-medium-7,
-		#g-Bisa-Ular-medium-8,
-		#g-Bisa-Ular-medium-9,
-		#g-Bisa-Ular-medium-10 {
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-cover_medium,
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-medium_1,
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-medium_2,
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-medium_3,
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-medium_4,
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-medium_5{
 			display:none;
 		}
 
-		#g-Bisa-Ular-submedium-cover,
-		#g-Bisa-Ular-submedium-1,
-		#g-Bisa-Ular-submedium-2,
-		#g-Bisa-Ular-submedium-3,
-		#g-Bisa-Ular-submedium-4,
-		#g-Bisa-Ular-submedium-5,
-		#g-Bisa-Ular-submedium-6,
-		#g-Bisa-Ular-submedium-7,
-		#g-Bisa-Ular-submedium-8,
-		#g-Bisa-Ular-submedium-9,
-		#g-Bisa-Ular-submedium-10 {
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-cover_submedium,
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-submedium_1,
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-submedium_2,
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-submedium_3,
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-submedium_4,
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-submedium_5 {
 			display:none;
 		}
 
-		#g-Bisa-Ular-smallplus-cover,
-		#g-Bisa-Ular-smallplus-1,
-		#g-Bisa-Ular-smallplus-2,
-		#g-Bisa-Ular-smallplus-3,
-		#g-Bisa-Ular-smallplus-4,
-		#g-Bisa-Ular-smallplus-5,
-		#g-Bisa-Ular-smallplus-6,
-		#g-Bisa-Ular-smallplus-7,
-		#g-Bisa-Ular-smallplus-8,
-		#g-Bisa-Ular-smallplus-9,
-		#g-Bisa-Ular-smallplus-10 {
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-cover_smallplus,
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-smallplus_1,
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-smallplus_2,
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-smallplus_3,
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-smallplus_4,
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-smallplus_5 {
 			display:block;
 		}
 	}
 
 	@media only screen and (min-width:510px) and (max-width:689px) {
-		#g-Bisa-Ular-xlarge-cover,
-		#g-Bisa-Ular-xlarge-1,
-		#g-Bisa-Ular-xlarge-2,
-		#g-Bisa-Ular-xlarge-3,
-		#g-Bisa-Ular-xlarge-4,
-		#g-Bisa-Ular-xlarge-5,
-		#g-Bisa-Ular-xlarge-6,
-		#g-Bisa-Ular-xlarge-7,
-		#g-Bisa-Ular-xlarge-8,
-		#g-Bisa-Ular-xlarge-9,
-		#g-Bisa-Ular-xlarge-10 {
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-cover_xlarge_5,
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-xlarge_1,
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-xlarge_2,
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-xlarge_3,
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-xlarge_4,
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-xlarge_5{
 			display:none;
 		}
 
-		#g-Bisa-Ular-large-cover,
-		#g-Bisa-Ular-large-1,
-		#g-Bisa-Ular-large-2,
-		#g-Bisa-Ular-large-3,
-		#g-Bisa-Ular-large-4,
-		#g-Bisa-Ular-large-5,
-		#g-Bisa-Ular-large-6,
-		#g-Bisa-Ular-large-7,
-		#g-Bisa-Ular-large-8,
-		#g-Bisa-Ular-large-9,
-		#g-Bisa-Ular-large-10 {
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-cover_large,
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-large_1,
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-large_2,
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-large_3,
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-large_4,
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-large_5 {
 			display:none;
 		}
 
-		#g-Bisa-Ular-medium-cover,
-		#g-Bisa-Ular-medium-1,
-		#g-Bisa-Ular-medium-2,
-		#g-Bisa-Ular-medium-3,
-		#g-Bisa-Ular-medium-4,
-		#g-Bisa-Ular-medium-5,
-		#g-Bisa-Ular-medium-6,
-		#g-Bisa-Ular-medium-7,
-		#g-Bisa-Ular-medium-8,
-		#g-Bisa-Ular-medium-9,
-		#g-Bisa-Ular-medium-10 {
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-cover_medium,
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-medium_1,
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-medium_2,
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-medium_3,
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-medium_4,
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-medium_5 {
 			display:none;
 		}
 
-		#g-Bisa-Ular-submedium-cover,
-		#g-Bisa-Ular-submedium-1,
-		#g-Bisa-Ular-submedium-2,
-		#g-Bisa-Ular-submedium-3,
-		#g-Bisa-Ular-submedium-4,
-		#g-Bisa-Ular-submedium-5,
-		#g-Bisa-Ular-submedium-6,
-		#g-Bisa-Ular-submedium-7,
-		#g-Bisa-Ular-submedium-8,
-		#g-Bisa-Ular-submedium-9,
-		#g-Bisa-Ular-submedium-10 {
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-cover_submedium,
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-submedium_1,
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-submedium_2,
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-submedium_3,
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-submedium_4,
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-submedium_5{
 			display:block;
 		}
 
-		#g-Bisa-Ular-smallplus-cover,
-		#g-Bisa-Ular-smallplus-1,
-		#g-Bisa-Ular-smallplus-2,
-		#g-Bisa-Ular-smallplus-3,
-		#g-Bisa-Ular-smallplus-4,
-		#g-Bisa-Ular-smallplus-5,
-		#g-Bisa-Ular-smallplus-6,
-		#g-Bisa-Ular-smallplus-7,
-		#g-Bisa-Ular-smallplus-8,
-		#g-Bisa-Ular-smallplus-9,
-		#g-Bisa-Ular-smallplus-10 {
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-cover_smallplus,
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-smallplus_1,
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-smallplus_2,
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-smallplus_3,
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-smallplus_4,
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-smallplus_5
+		 {
 			display:none;
 		}
 	}
 
 	@media only screen and (min-width:690px) and (max-width:919px) {
-		#g-Bisa-Ular-xlarge-cover,
-		#g-Bisa-Ular-xlarge-1,
-		#g-Bisa-Ular-xlarge-2,
-		#g-Bisa-Ular-xlarge-3,
-		#g-Bisa-Ular-xlarge-4,
-		#g-Bisa-Ular-xlarge-5,
-		#g-Bisa-Ular-xlarge-6,
-		#g-Bisa-Ular-xlarge-7,
-		#g-Bisa-Ular-xlarge-8,
-		#g-Bisa-Ular-xlarge-9,
-		#g-Bisa-Ular-xlarge-10 {
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-cover_xlarge_5,
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-xlarge_1,
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-xlarge_2,
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-xlarge_3,
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-xlarge_4,
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-xlarge_5
+		 {
 			display:none;
 		}
 
-		#g-Bisa-Ular-large-cover,
-		#g-Bisa-Ular-large-1,
-		#g-Bisa-Ular-large-2,
-		#g-Bisa-Ular-large-3,
-		#g-Bisa-Ular-large-4,
-		#g-Bisa-Ular-large-5,
-		#g-Bisa-Ular-large-6,
-		#g-Bisa-Ular-large-7,
-		#g-Bisa-Ular-large-8,
-		#g-Bisa-Ular-large-9,
-		#g-Bisa-Ular-large-10 {
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-cover_large,
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-large_1,
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-large_2,
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-large_3,
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-large_4,
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-large_5
+		 {
 			display:none;
 		}
 
-		#g-Bisa-Ular-medium-cover,
-		#g-Bisa-Ular-medium-1,
-		#g-Bisa-Ular-medium-2,
-		#g-Bisa-Ular-medium-3,
-		#g-Bisa-Ular-medium-4,
-		#g-Bisa-Ular-medium-5,
-		#g-Bisa-Ular-medium-6,
-		#g-Bisa-Ular-medium-7,
-		#g-Bisa-Ular-medium-8,
-		#g-Bisa-Ular-medium-9,
-		#g-Bisa-Ular-medium-10 {
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-cover_medium,
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-medium_1,
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-medium_2,
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-medium_3,
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-medium_4,
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-medium_5
+		{
 			display:block;
 		}
 
-		#g-Bisa-Ular-submedium-cover,
-		#g-Bisa-Ular-submedium-1,
-		#g-Bisa-Ular-submedium-2,
-		#g-Bisa-Ular-submedium-3,
-		#g-Bisa-Ular-submedium-4,
-		#g-Bisa-Ular-submedium-5,
-		#g-Bisa-Ular-submedium-6,
-		#g-Bisa-Ular-submedium-7,
-		#g-Bisa-Ular-submedium-8,
-		#g-Bisa-Ular-submedium-9,
-		#g-Bisa-Ular-submedium-10 {
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-cover_submedium,
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-submedium_1,
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-submedium_2,
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-submedium_3,
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-submedium_4,
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-submedium_5
+		 {
 			display:none;
 		}
 
-		#g-Bisa-Ular-smallplus-cover,
-		#g-Bisa-Ular-smallplus-1,
-		#g-Bisa-Ular-smallplus-2,
-		#g-Bisa-Ular-smallplus-3,
-		#g-Bisa-Ular-smallplus-4,
-		#g-Bisa-Ular-smallplus-5,
-		#g-Bisa-Ular-smallplus-6,
-		#g-Bisa-Ular-smallplus-7,
-		#g-Bisa-Ular-smallplus-8,
-		#g-Bisa-Ular-smallplus-9,
-		#g-Bisa-Ular-smallplus-10 {
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-cover_smallplus,
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-smallplus_1,
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-smallplus_2,
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-smallplus_3,
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-smallplus_4,
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-smallplus_5
+		 {
 			display:none;
 		}
 	}
 
 	@media only screen and (min-width:920px) and (max-width:1399px) {
-		#g-Bisa-Ular-xlarge-cover,
-		#g-Bisa-Ular-xlarge-1,
-		#g-Bisa-Ular-xlarge-2,
-		#g-Bisa-Ular-xlarge-3,
-		#g-Bisa-Ular-xlarge-4,
-		#g-Bisa-Ular-xlarge-5,
-		#g-Bisa-Ular-xlarge-6,
-		#g-Bisa-Ular-xlarge-7,
-		#g-Bisa-Ular-xlarge-8,
-		#g-Bisa-Ular-xlarge-9,
-		#g-Bisa-Ular-xlarge-10 {
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-cover_xlarge_5,
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-xlarge_1,
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-xlarge_2,
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-xlarge_3,
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-xlarge_4,
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-xlarge_5
+		{
 			display:none;
 		}
 
-		#g-Bisa-Ular-large-cover,
-		#g-Bisa-Ular-large-1,
-		#g-Bisa-Ular-large-2,
-		#g-Bisa-Ular-large-3,
-		#g-Bisa-Ular-large-4,
-		#g-Bisa-Ular-large-5,
-		#g-Bisa-Ular-large-6,
-		#g-Bisa-Ular-large-7,
-		#g-Bisa-Ular-large-8,
-		#g-Bisa-Ular-large-9,
-		#g-Bisa-Ular-large-10 {
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-cover_large,
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-large_1,
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-large_2,
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-large_3,
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-large_4,
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-large_5
+		 {
 			display:block;
 		}
 
-		#g-Bisa-Ular-medium-cover,
-		#g-Bisa-Ular-medium-1,
-		#g-Bisa-Ular-medium-2,
-		#g-Bisa-Ular-medium-3,
-		#g-Bisa-Ular-medium-4,
-		#g-Bisa-Ular-medium-5,
-		#g-Bisa-Ular-medium-6,
-		#g-Bisa-Ular-medium-7,
-		#g-Bisa-Ular-medium-8,
-		#g-Bisa-Ular-medium-9,
-		#g-Bisa-Ular-medium-10 {
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-cover_medium,
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-medium_1,
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-medium_2,
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-medium_3,
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-medium_4,
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-medium_5
+		{
 			display:none;
 		}
 
-		#g-Bisa-Ular-submedium-cover,
-		#g-Bisa-Ular-submedium-1,
-		#g-Bisa-Ular-submedium-2,
-		#g-Bisa-Ular-submedium-3,
-		#g-Bisa-Ular-submedium-4,
-		#g-Bisa-Ular-submedium-5,
-		#g-Bisa-Ular-submedium-6,
-		#g-Bisa-Ular-submedium-7,
-		#g-Bisa-Ular-submedium-8,
-		#g-Bisa-Ular-submedium-9,
-		#g-Bisa-Ular-submedium-10 {
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-cover_submedium,
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-submedium_1,
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-submedium_2,
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-submedium_3,
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-submedium_4,
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-submedium_5
+		 {
 			display:none;
 		}
 
-		#g-Bisa-Ular-smallplus-cover,
-		#g-Bisa-Ular-smallplus-1,
-		#g-Bisa-Ular-smallplus-2,
-		#g-Bisa-Ular-smallplus-3,
-		#g-Bisa-Ular-smallplus-4,
-		#g-Bisa-Ular-smallplus-5,
-		#g-Bisa-Ular-smallplus-6,
-		#g-Bisa-Ular-smallplus-7,
-		#g-Bisa-Ular-smallplus-8,
-		#g-Bisa-Ular-smallplus-9,
-		#g-Bisa-Ular-smallplus-10 {
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-cover_smallplus,
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-smallplus_1,
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-smallplus_2,
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-smallplus_3,
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-smallplus_4,
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-smallplus_5
+		 {
 			display:none;
 		}
 	}
 
 	@media only screen and (min-width:1400px) {
-		#g-Bisa-Ular-xlarge-cover,
-		#g-Bisa-Ular-xlarge-1,
-		#g-Bisa-Ular-xlarge-2,
-		#g-Bisa-Ular-xlarge-3,
-		#g-Bisa-Ular-xlarge-4,
-		#g-Bisa-Ular-xlarge-5,
-		#g-Bisa-Ular-xlarge-6,
-		#g-Bisa-Ular-xlarge-7,
-		#g-Bisa-Ular-xlarge-8,
-		#g-Bisa-Ular-xlarge-9,
-		#g-Bisa-Ular-xlarge-10 {
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-cover_xlarge_5,
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-xlarge_1,
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-xlarge_2,
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-xlarge_3,
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-xlarge_4,
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-xlarge_5 {
 			display:block;
 		}
 
-		#g-Bisa-Ular-large-cover,
-		#g-Bisa-Ular-large-1,
-		#g-Bisa-Ular-large-2,
-		#g-Bisa-Ular-large-3,
-		#g-Bisa-Ular-large-4,
-		#g-Bisa-Ular-large-5,
-		#g-Bisa-Ular-large-6,
-		#g-Bisa-Ular-large-7,
-		#g-Bisa-Ular-large-8,
-		#g-Bisa-Ular-large-9,
-		#g-Bisa-Ular-large-10 {
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-cover_large,
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-large_1,
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-large_2,
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-large_3,
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-large_4,
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-large_5 {
 			display:none;
 		}
 
-		#g-Bisa-Ular-medium-cover,
-		#g-Bisa-Ular-medium-1,
-		#g-Bisa-Ular-medium-2,
-		#g-Bisa-Ular-medium-3,
-		#g-Bisa-Ular-medium-4,
-		#g-Bisa-Ular-medium-5,
-		#g-Bisa-Ular-medium-6,
-		#g-Bisa-Ular-medium-7,
-		#g-Bisa-Ular-medium-8,
-		#g-Bisa-Ular-medium-9,
-		#g-Bisa-Ular-medium-10 {
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-cover_medium,
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-medium_1,
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-medium_2,
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-medium_3,
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-medium_4,
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-medium_5 {
 			display:none;
 		}
 
-		#g-Bisa-Ular-submedium-cover,
-		#g-Bisa-Ular-submedium-1,
-		#g-Bisa-Ular-submedium-2,
-		#g-Bisa-Ular-submedium-3,
-		#g-Bisa-Ular-submedium-4,
-		#g-Bisa-Ular-submedium-5,
-		#g-Bisa-Ular-submedium-6,
-		#g-Bisa-Ular-submedium-7,
-		#g-Bisa-Ular-submedium-8,
-		#g-Bisa-Ular-submedium-9,
-		#g-Bisa-Ular-submedium-10 {
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-cover_submedium,
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-submedium_1,
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-submedium_2,
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-submedium_3,
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-submedium_4,
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-submedium_5 {
 			display:none;
 		}
 
-		#g-Bisa-Ular-smallplus-cover,
-		#g-Bisa-Ular-smallplus-1,
-		#g-Bisa-Ular-smallplus-2,
-		#g-Bisa-Ular-smallplus-3,
-		#g-Bisa-Ular-smallplus-4,
-		#g-Bisa-Ular-smallplus-5,
-		#g-Bisa-Ular-smallplus-6,
-		#g-Bisa-Ular-smallplus-7,
-		#g-Bisa-Ular-smallplus-8,
-		#g-Bisa-Ular-smallplus-9,
-		#g-Bisa-Ular-smallplus-10 {
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-cover_smallplus,
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-smallplus_1,
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-smallplus_2,
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-smallplus_3,
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-smallplus_4,
+		#g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-smallplus_5 {
 			display:none;
 		}
 	}
