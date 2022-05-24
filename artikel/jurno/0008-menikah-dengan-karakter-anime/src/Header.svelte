@@ -80,7 +80,9 @@
         font-weight: 700;
         font-size: 4rem;
         margin: 0 auto 1rem auto;
-        font-family: 'Squada One', cursive;
+        font-family: 'Carter One', cursive;
+        white-space: normal;
+        line-height: 4rem;
     }
     .subtitle {
         margin: -1rem auto 3rem auto;

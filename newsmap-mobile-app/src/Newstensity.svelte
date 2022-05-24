@@ -2,7 +2,7 @@
     import { get } from "./api";
     import * as ihttp from './constants/initialHttp';
     import Icon from 'svelte-awesome';
-    import { angleLeft } from 'svelte-awesome/icons';
+    import { angleLeft, angleRight } from 'svelte-awesome/icons';
     import { createEventDispatcher } from 'svelte';
     import PieChart from "./PieChart.svelte";
     import Fa from 'svelte-fa'
@@ -123,7 +123,7 @@
         {#if topicId != undefined}
             <div class="top">
                 <div class="close" on:click={forward}>
-                    <Icon data={angleLeft} scale={2} />
+                    <Icon data={angleRight} scale={2} />
                 </div>
                 {#await entityPromise}
                     <div class="keywords">
@@ -189,11 +189,11 @@
                     <p>an error occured</p>
                 {/await}
             </div>
-            <!-- <div class="foot">
-                <button>
-                    Selengkapnya
+            <div class="foot">
+                <button on:click={forward}>
+                    Tutup
                 </button>
-            </div> -->
+            </div>
 
             {/if}
     {/if}
@@ -204,7 +204,7 @@
         {#if id != undefined}
         <div class="top">
             <div class="close" on:click={forward}>
-                <Icon data={angleLeft} scale={2} />
+                <Icon data={angleRight} scale={2} />
             </div>
 
             {#await dataPromise}
@@ -309,11 +309,11 @@
                 <p>an error occured</p>
             {/await}
         </div>
-        <!-- <div class="foot">
-            <button>
-                Selengkapnya
+        <div class="foot">
+            <button on:click={forward}>
+                Tutup
             </button>
-        </div> -->
+        </div>
 
         {/if}
     {/if}
@@ -574,6 +574,7 @@
         border-radius: 0.25rem;
         background-color: var(--color-brand-red);
         color: #fafafa;
+        cursor: pointer;
     }
     .inner-section::-webkit-scrollbar {
 	    width: 0.5em;

@@ -48,77 +48,13 @@
 	
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=Squada+One&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Carter+One&display=swap" rel="stylesheet">
 </svelte:head>
 
 <main style="background-color: {mainBackground}">
 	<div class="headerilustrasi" style="margin-top:{height}px;">
-		<div id="g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-box" class="ai2html">
-			<!-- Artboard: cover_smallplus -->
-			<div id="g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-cover_smallplus" class="g-artboard" style="max-width: 320px;max-height: 320px" data-aspect-ratio="1" data-min-width="0" data-max-width="509">
-			<div style="padding: 0 0 100% 0;"></div>
-			<img id="g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-cover_smallplus-img" class="g-aiImg" alt="" src="./images/_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-cover_smallplus.png"/>
-			<div id="g-ai0-1" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:20.4089%;margin-top:-11.3px;left:70.696%;margin-left:-40.5px;width:81px;">
-			<p class="g-pstyle0">c anu tuh</p>
-			<p class="g-pstyle0">wawawa</p>
-			</div>
-			<div id="g-ai0-2" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:56.9687%;margin-top:-5.3px;left:20.8739%;margin-left:-31px;width:62px;">
-			<p class="g-pstyle0">y emg,,</p>
-			</div>
-			</div>
-				
-			<!-- Artboard: cover_submedium -->
-			<div id="g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-cover_submedium" class="g-artboard" style="width:510px; height:320px;" data-aspect-ratio="1.594" data-min-width="510" data-max-width="689">
-			<div style="padding: 0 0 {100/1.594}% 0;"></div>
-			<img id="g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-cover_submedium-img" class="g-aiImg" alt="" src="./images/_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-cover_submedium.png"/>
-			<div id="g-ai1-1" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:20.4089%;margin-top:-11.3px;left:62.9857%;margin-left:-40.5px;width:81px;">
-			<p class="g-pstyle0">c anu tuh</p>
-			<p class="g-pstyle0">wawawa</p>
-			</div>
-			<div id="g-ai1-2" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:56.9687%;margin-top:-5.3px;left:31.7248%;margin-left:-31px;width:62px;">
-			<p class="g-pstyle0">y emg,,</p>
-			</div>
-			</div>
-				
-			<!-- Artboard: cover_medium -->
-			<div id="g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-cover_medium" class="g-artboard" style="width:690px; height:320px;" data-aspect-ratio="2.156" data-min-width="690" data-max-width="919">
-			<div style="padding: 0 0 {100/2.156}% 0;"></div>
-			<img id="g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-cover_medium-img" class="g-aiImg" alt="" src="./images/_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-cover_medium.png"/>
-			<div id="g-ai2-1" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:20.4089%;margin-top:-11.3px;left:59.5981%;margin-left:-40.5px;width:81px;">
-			<p class="g-pstyle0">c anu tuh</p>
-			<p class="g-pstyle0">wawawa</p>
-			</div>
-			<div id="g-ai2-2" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:56.9687%;margin-top:-5.3px;left:36.4922%;margin-left:-31px;width:62px;">
-			<p class="g-pstyle0">y emg,,</p>
-			</div>
-			</div>
-				
-			<!-- Artboard: cover_large -->
-			<div id="g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-cover_large" class="g-artboard" style="width:920px; height:319px;" data-aspect-ratio="2.884" data-min-width="920" data-max-width="1399">
-			<div style="padding: 0 0 {100/2.884}% 0;"></div>
-			<img id="g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-cover_large-img" class="g-aiImg" alt="" src="./images/_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-cover_large.png"/>
-			<div id="g-ai3-1" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:20.1594%;margin-top:-11.3px;left:57.1985%;margin-left:-40.5px;width:81px;">
-			<p class="g-pstyle0">c anu tuh</p>
-			<p class="g-pstyle0">wawawa</p>
-			</div>
-			<div id="g-ai3-2" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:56.8338%;margin-top:-5.3px;left:39.8692%;margin-left:-31px;width:62px;">
-			<p class="g-pstyle0">y emg,,</p>
-			</div>
-			</div>
-				
-			<!-- Artboard: cover_xlarge_5 -->
-			<div id="g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-cover_xlarge_5" class="g-artboard" style="width:1400px; height:313.5px;" data-aspect-ratio="4.466" data-min-width="1400">
-			<div style="padding: 0 0 {100/4.466}% 0;"></div>
-			<img id="g-_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-cover_xlarge_5-img" class="g-aiImg" alt="" src="./images/_Bergosip-di-Kantor--Positif-Atau-Negatif_-Final-cover_xlarge_5.png"/>
-			<div id="g-ai4-1" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:20.832%;margin-top:-11.3px;left:54.7305%;margin-left:-40.5px;width:81px;">
-			<p class="g-pstyle0">c anu tuh</p>
-			<p class="g-pstyle0">wawawa</p>
-			</div>
-			<div id="g-ai4-2" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:58.1499%;margin-top:-5.3px;left:43.3426%;margin-left:-31px;width:62px;">
-			<p class="g-pstyle0">y emg,,</p>
-			</div>
-			</div>
+
+	</div>
 	
 
 	<Header 
@@ -129,11 +65,11 @@
 
 		fullHeader={false}
 
-		title='Bergosip di Kantor'
-		subtitle='Positif/Negatif?'	
+		title='Menikah dengan Karakter Anime:'
+		subtitle='Ketika Ide Lebih Menarik Daripada Karakter Nyata'	
 
 		author='Ann Putri'
-		date='11 Mei 2022'		
+		date='16 Mei 2022'		
 	/>
 
 	<div class="divider"></div>
