@@ -49,18 +49,16 @@
                 </div>
             </div>
             <div class="contenttop">
-                
-                <div class="headline">
-                    <img class="header" src={`${process['env']['URL_IMAGE']}/images/deduktif/${d.thumbnail}`} onerror={`this.onerror=null;this.src='${process['env']['NO_IMAGE']}';`} alt={d.title} >
-                    
-                    <div class="headerbottom"></div>
+                <a href={`${process['env']['URL_DEDUKTIF']}/deduktif/${d.slug}`} target="_blank">
+                    <div class="headline">
+                        <img class="header" src={`${process['env']['URL_IMAGE']}/images/deduktif/${d.thumbnail}`} onerror={`this.onerror=null;this.src='${process['env']['NO_IMAGE']}';`} alt={d.title} >
+                        <div class="headerbottom"></div>
                         <div class="detail">
-                            <div class="author">oleh {d.author_name}</div>
-                            <a href={`${process['env']['URL_DEDUKTIF']}/deduktif/${d.slug}`}>
-                                <div class="title">{d.title}</div>  
-                            </a>
+                            <div class="author">oleh {d.author_name}</div>                        
+                            <div class="title">{d.title}</div>  
                         </div>
-                </div>
+                    </div>
+                </a>
             </div>
         </div>
     </div>

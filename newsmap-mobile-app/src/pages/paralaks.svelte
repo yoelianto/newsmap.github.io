@@ -37,7 +37,8 @@
 </script>
 
 <svelte:head>
-    <title>Infosight - Indeks</title>
+    <title>Paralaks - Indeks</title>
+
 </svelte:head>
 
 <Head 

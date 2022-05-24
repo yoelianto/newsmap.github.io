@@ -37,6 +37,7 @@
 
 <svelte:head>
     <title>Rewara - Indeks</title>
+
 </svelte:head>
 
 <Head 

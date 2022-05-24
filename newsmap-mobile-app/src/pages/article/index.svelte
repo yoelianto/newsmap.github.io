@@ -39,6 +39,7 @@
 
 <svelte:head>
     <title>Jurno Original - Indeks</title>
+
 </svelte:head>
 
 <Head 

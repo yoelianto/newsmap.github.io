@@ -32,6 +32,10 @@
   })
 </script>
 
+<svelte:head>
+
+</svelte:head>
+
 {#await fetchData()}
     <div class="placeholder-container">
         <Fa icon={faSpinner} size="3x" pulse />

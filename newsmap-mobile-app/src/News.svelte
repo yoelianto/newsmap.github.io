@@ -64,7 +64,7 @@ const move = direction => {
                 {/each}
             {:then data}
                 {#each data as d}
-                <a href={d.source_url}>
+                <a href={d.source_url} target="_blank">
                     <div class="news">
                         <img class='imgthumb' src={d.origin_images} alt={d.title} />
                         <p class="author">{d.media}</p>
@@ -88,7 +88,7 @@ const move = direction => {
                 {/each}
             {:then data}
                 {#each data as d}
-                <a href={d.link}>
+                <a href={d.link} target="_blank">
                     <div class="news">
                         <img class='imgthumb' src={`${process['env']['URL_IMAGE']}/images/infogram/${d.thumbnail}`} alt={d.title} />
                         <p class="author">{d.author}</p>
