@@ -56,10 +56,7 @@
 </svelte:head>
 
 <main style="background-color: {mainBackground}">
-	<Head 
-		bind:height = {height}
-	/>
-	<div class="headerilustrasi" style="padding-top:{height}px;background-color:{titleColor}">
+	<div class="headerilustrasi" style="padding-top:3rem;background-color:{titleColor}">
 		<div id="g-Bapak-Rumah-Tangga_19-box" class="ai2html">
 			<!-- Artboard: smallplus-cover -->
 			<div id="g-Bapak-Rumah-Tangga_19-smallplus-cover" class="g-artboard" style="max-width: 509px;max-height: 509px" data-aspect-ratio="1" data-min-width="0" data-max-width="509">
