@@ -70,9 +70,6 @@
 </svelte:head>
 
 <main style="background-color: {mainBackground};padding-top:3rem;">
-	<Head 
-		bind:height = {height}
-	/>
 
 	<Header 
 		--headerBackground={headerBackground}
