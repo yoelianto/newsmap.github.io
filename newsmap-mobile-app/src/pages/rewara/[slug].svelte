@@ -29,9 +29,6 @@
   })
 </script>
 
-<svelte:head>
-
-</svelte:head>
 
 {#await fetchData()}
     <div class="placeholder-container">
