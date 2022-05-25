@@ -115,7 +115,7 @@
 		--font-color ='#f9f9e1'
 		para={[
 			"Kalau kamu mengerti pertanyaan di atas, selamat, kamu adalah satu dari generasi muda yang rutin menggunakan Instagram. Media sosial berbasis gambar ini “memaksa” kita untuk terus menunjukkan sisi terbaik kita. Akibatnya kita merasa harus terus mengkurasi <em>feed</em> sebaik mungkin.",
-			"Sebagian anak muda merasa tekanan ini sangat menyesakkan sehingga mereka “kabur” ke akun kedua mereka. Akun yang kerap disebut sebagai <em>second account</em> atau <em>fake Instagram</em> (finsta) ini sengaja dibuat anonim dan privat. Fenomena ini sangat menarik sampai-sampai Rugun Sirait. Hasilnya adalah artikel jurnal berjudul “Spectatorial Sisterhood: Relasi Sosial Pengguna Second Account di Instagram”."
+			"Sebagian anak muda merasa tekanan ini sangat menyesakkan sehingga mereka “kabur” ke akun kedua mereka. Akun yang kerap disebut sebagai <em>second account</em> atau <em>fake Instagram</em> (finsta) ini sengaja dibuat anonim dan privat. Fenomena ini sangat menarik bagi Rugun Sirait sampai-sampai ia menelitinya. Hasilnya adalah artikel jurnal berjudul “Spectatorial Sisterhood: Relasi Sosial Pengguna Second Account di Instagram”."
 		]}
 	/>
 
@@ -146,7 +146,7 @@
 		para={[
 			"Second account muncul karena ketiadaan privasi sekaligus munculnya tekanan untuk tampil sesempurna mungkin. Oleh karenanya <em>first account</em> atau akun utama merupakan “<em>performed selves</em>”, imaji khusus publik yang terkurasi.",
 			"Namun ketidakaslian imaji diri dan sempitnya ekspresi diri yang diperbolehkan dalam akun utama membuat sebagian anak muda merasa tidak nyaman.",
-			"Dari sinilah <em>second account</em> lahir sebagai tempat ekspresi diri yang bebas, otentik, dan paling penting, privat alias <em>authentic self<?em>."
+			"Dari sinilah <em>second account</em> lahir sebagai tempat ekspresi diri yang bebas, otentik, dan paling penting, privat alias <em>authentic self</em>."
 
 		]}
 	/>
@@ -357,9 +357,9 @@
 		--font-color ='#f9f9e1'
 		subjudul='Berbagi Pengalaman Intim'
 		para={[
-			"Menurut Rugun, pertemanan intim yang dibolehkan masuk ke <em>second account</em> adalah pertemanan IRL (<em>In Real Life</em>) atau dunia nyata. Ini karena relasi luring dianggap lebih terpercaya, sehingga <em>second account</em> menjadi tempat berkumpul teman-teman dekat yang hanya bisa bersua lewat media sosial. Keluarga dan teman kerja cenderung tidak dimasukkan ke <em>second account</em> karena persona yang ditampilkan di <em>second account</em> tidak sejalan dengan persona yang ditampilkan ke mereka.",
+			"Menurut Rugun, pertemanan intim yang dibolehkan masuk ke <em>second account</em> adalah pertemanan IRL (<em>In Real Life</em>) atau dunia nyata. Karena relasi luring dianggap lebih terpercaya, sehingga <em>second account</em> menjadi tempat berkumpul teman-teman dekat yang hanya bisa bersua lewat media sosial. Keluarga dan teman kerja cenderung tidak dimasukkan ke <em>second account</em> karena persona yang ditampilkan di <em>second account</em> tidak sejalan dengan persona yang ditampilkan ke mereka.",
 			"Apabila imaji di <em>first account</em> dibuat sesempurna mungkin, maka di <em>second account</em> kebalikannya. Nada humor yang menjelekkan diri sendiri sering digunakan untuk menyoroti kekurangan sekaligus sebagai cara untuk <em>relatable</em>. Tak hanya itu, guyonan ini juga berfungsi untuk menandakan kedekatan.",
-			"Natasha, contohnya, menggunakan <em>second account</em> untuk menunjukkan sisi dirinya yang suka mengeluh lewat humor yang merendahkan diri. Humor mencela juga digunakan oleh pengikut yang terdiri dari teman-teman dekat ketika merespon unggahan di <em>second account</em>. Hal serupa juga dilakukan Silfi, responden lainnya. Ia mengunggah foto dengan pose dan caption sok imut untuk menandakan bahwa dirinya baik-baik saja setelah mengalami <em>mental breakdown</em> beberapa hari lalu.",
+			"Natasha, salah satu responden Rugun, menggunakan <em>second account</em> untuk menunjukkan sisi dirinya yang suka mengeluh lewat humor yang merendahkan diri. Humor mencela juga digunakan oleh pengikut yang terdiri dari teman-teman dekat ketika merespon unggahan di <em>second account</em>. Hal serupa juga dilakukan Silfi, responden lainnya. Ia mengunggah foto dengan pose dan caption sok imut untuk menandakan bahwa dirinya baik-baik saja setelah mengalami <em>mental breakdown</em> beberapa hari lalu.",
 			"Sensitifnya isu yang diposting di <em>second account</em> membuat para pemiliknya menekan angka <em>followers</em> sekecil mungkin. Apabila di akun utama mereka memiliki ratusan hingga ribuan pengikut, maka <em>second account</em> kebalikannya.",
 			"Hal ini diilustrasikan oleh Rugun lewat jumlah <em>followers</em> para responden:",
 		]}
