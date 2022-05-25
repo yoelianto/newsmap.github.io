@@ -110,8 +110,8 @@
 		--font-color ={fontColor}
 		subjudul = 'Selamat Tinggal Manusia, Halo Karakter Anime'
 		para={[
-		"Percaya atau tidak, kejadian ini benar-benar terjadi. Adalah Akihiko Kondo, seorang pekerja kantoran yang <a href='https://www.youtube.com/watch?v=dtu4t_Zc3d4'>menikahi idola virtual Hatsune Miku</a> pada November 2018. Sang pekerja kantoran dilaporkan berpacaran dengan Miku 10 tahun sebelum memutuskan untuk menikahinya dalam acara yang dihadiri 39 orang. Meskipun mahal (ia harus merogoh kocek sebesar 2 juta yen atau sekitar Rp229 juta) dan tidak diakui negara, ia sangat bahagia dengan keputusannya.",
-		"Banyak yang menganggap aneh pernikahan Kondo. <a href='https://twitter.com/AFP/status/1061894564762464256'>Keluarganya tidak mau menghadiri pernikahannya</a>. Ia mendapat banyak komentar miring di internet. Namun hal-hal ini tidak membuatnya gentar—ia justru terus <a href='https://twitter.com/akihikokondosk'>mengupdate kehidupan percintaannya ke Twitter</a>. Kisah Kondo menginspirasi banyak otaku untuk menikahi pacar dua dimensi."
+		"Percaya atau tidak, kejadian ini benar-benar terjadi. Adalah Akihiko Kondo, seorang pekerja kantoran yang <a target='_blank' href='https://www.youtube.com/watch?v=dtu4t_Zc3d4'>menikahi idola virtual Hatsune Miku</a> pada November 2018. Sang pekerja kantoran dilaporkan berpacaran dengan Miku 10 tahun sebelum memutuskan untuk menikahinya dalam acara yang dihadiri 39 orang. Meskipun mahal (ia harus merogoh kocek sebesar 2 juta yen atau sekitar Rp229 juta) dan tidak diakui negara, ia sangat bahagia dengan keputusannya.",
+		"Banyak yang menganggap aneh pernikahan Kondo. <a target='_blank' href='https://twitter.com/AFP/status/1061894564762464256'>Keluarganya tidak mau menghadiri pernikahannya</a>. Ia mendapat banyak komentar miring di internet. Namun hal-hal ini tidak membuatnya gentar—ia justru terus <a target='_blank' href='https://twitter.com/akihikokondosk'>mengupdate kehidupan percintaannya ke Twitter</a>. Kisah Kondo menginspirasi banyak otaku untuk menikahi pacar dua dimensi."
 		]}
 	/>
 
@@ -153,9 +153,9 @@
 		para={[
 		"Kenapa Kondo memilih untuk menikah dengan karakter yang tak nyata? Jawabannya tak jauh dari isu perundungan. Hobi Kondo sebagai otaku anime membuatnya dikucilkan oleh teman-temannya sejak masa sekolah.",
 		"Perundungan ini terus berlanjut di tempat kerja. Dua kolega perempuannya, satu berusia sebaya dan satunya lagi jauh lebih tua, merundungnya sampai ia keluar dari pekerjaan. Saking depresinya ia mengurung diri di kamar selama dua tahun. Di masa kelam itu, ia menemukan video menyanyi Hatsune Miku. ",
-		"“Mendengar lagu-lagunya membuatku emosional. Bagaimana ia menari, bergerak, dan berbicara membuatku merasakan sesuatu. Hatiku tergerak lagi,” ucapnya ke <a href='https://www.bbc.com/news/stories-49343280'>BBC</a>. Perasaan Kondo ke Miku begitu kuat sampai-sampai ia merasa telah menjalin hubungan romantis dengannya. Hubungan ini pula yang membangun kepercayaan dirinya untuk kembali ke kantor.",
+		"“Mendengar lagu-lagunya membuatku emosional. Bagaimana ia menari, bergerak, dan berbicara membuatku merasakan sesuatu. Hatiku tergerak lagi,” ucapnya ke <a target='_blank' href='https://www.bbc.com/news/stories-49343280'>BBC</a>. Perasaan Kondo ke Miku begitu kuat sampai-sampai ia merasa telah menjalin hubungan romantis dengannya. Hubungan ini pula yang membangun kepercayaan dirinya untuk kembali ke kantor.",
 		"Begitu kuat perasaan Kondo ke Miku hingga ia memberanikan diri untuk membuat pernikahannya dengan Miku publik dan dihadiri oleh 39 orang—simbolisasi untuk nama Miku yang bisa dibaca sebagai 39 dalam bahasa Jepang.",
-		"Kondo sadar keputusannya aneh, tapi ia melakukan ini karena ingin mendukung orang-orang yang bernasib sama dengannya. Dan ia tidak sepenuhnya salah; Gatebox, perusahaan yang membuat hologram Miku, telah <a href='https://nypost.com/2018/11/13/i-married-my-16-year-old-hologram-because-she-cant-cheat-or-age/>menjual 3.700 “sertifikat pernikahan” ke konsumen</a> yang ingin menikahi karakter fiksi. ",
+		"Kondo sadar keputusannya aneh, tapi ia melakukan ini karena ingin mendukung orang-orang yang bernasib sama dengannya. Dan ia tidak sepenuhnya salah; Gatebox, perusahaan yang membuat hologram Miku, telah <a target='_blank' href='https://nypost.com/2018/11/13/i-married-my-16-year-old-hologram-because-she-cant-cheat-or-age'>menjual 3.700 “sertifikat pernikahan” ke konsumen</a> yang ingin menikahi karakter fiksi. ",
 		"Ini membuktikan Kondo tidak sendiri. Dengan sampel sebanyak ini, apa yang dilakukan Kondo dan 3.700 orang lainnya sama nyatanya dengan perasaan pasangan konvensional. Namun, fenomena ini juga menimbulkan pertanyaan baru; kenapa dan bagaimana orang-orang bisa jatuh cinta pada sesuatu yang tidak nyata?"
 		]}
 	/>
@@ -196,7 +196,7 @@
 		--font-color ={fontColor}
 		subjudul='Hubungan Parasosial'
 		para={[
-		"Istilah ini pertama kali dicetuskan oleh <a href='https://www.tandfonline.com/doi/abs/10.1080/00332747.1956.11023049'>Horton dan Wohl pada 1965</a>. Mereka mengatakan hubungan ini mungkin terjadi karena media baru seperti TV dan radio memberikan ilusi kehadiran orang lain yang tak bisa diberikan media tulis. Orang-orang kota yang kesepian dan kesulitan berteman akhirnya menjalin hubungan dengan para karakter di radio dan TV. ",
+		"Istilah ini pertama kali dicetuskan oleh <a target='_blank' href='https://www.tandfonline.com/doi/abs/10.1080/00332747.1956.11023049'>Horton dan Wohl pada 1965</a>. Mereka mengatakan hubungan ini mungkin terjadi karena media baru seperti TV dan radio memberikan ilusi kehadiran orang lain yang tak bisa diberikan media tulis. Orang-orang kota yang kesepian dan kesulitan berteman akhirnya menjalin hubungan dengan para karakter di radio dan TV. ",
 		"Disebut sebagai hubungan parasosial karena hubungan yang dibangun antara sang aktor (persona dalam bahasa Horton dan Wohl) di TV dengan penonton hanya bersifat satu arah. Para penontonlah yang membangun narasi dan fantasi akan persona yang mereka lihat. Dan karena hubungan ini tidak nyata, tidak akan ada timbal balik emosi antara keduanya.",
 		"Meski begitu, banyak orang yang nyaman dengan tipe hubungan ini. Ketiadaan timbal balik yang seharusnya membuat hubungan tersebut terasa hampa, justru dicari atau bahkan dipertahankan. Mereka bisa terus mendapatkan hal-hal positif dari persona yang digandrungi, terlindungi dari hal-hal negatif yang sudah pasti ada di hubungan normal.",
 		"Perkembangan teknologi membuat hubungan parasosial semakin menjamur. Penelitian yang dilakukan oleh Theran, dkk (2010) menunjukkan banyak remaja perempuan memiliki ketertarikan dengan karakter fiksi dari film atau acara TV bergenre romansa. Ada pula yang membangun koneksi erat dengan persona idola, seperti para fans idola Kpop."
@@ -397,7 +397,7 @@
 	<Paragraph
 		--font-color ={fontColor}
 		para={[
-		"Selain menjalani hubungan parasosial, Kondo kemungkinan juga mengidap <a href='https://www.fastcompany.com/90303947/digisexuality-is-stepping-out-of-the-closet-keep-an-open-mind'><em>digisexual</em> gelombang kedua</a>. Memang Hatsune Miku yang dimiliki oleh Kondo belum mencapai ke titik itu. Namun intensitas perasaan Kondo, ditambah <a href='https://www.ndtv.com/world-news/2d-characters-cant-cheat-age-or-die-japanese-man-marries-a-hologram-of-hatsune-miku-1945838'>ketidaktertarikannya untuk berhubungan dengan perempuan nyata</a> membuatnya bisa dimasukkan ke kategori ini."
+		"Selain menjalani hubungan parasosial, Kondo kemungkinan juga mengidap <a target='_blank' href='https://www.fastcompany.com/90303947/digisexuality-is-stepping-out-of-the-closet-keep-an-open-mind'><em>digisexual</em> gelombang kedua</a>. Memang Hatsune Miku yang dimiliki oleh Kondo belum mencapai ke titik itu. Namun intensitas perasaan Kondo, ditambah <a target='_blank' href='https://www.ndtv.com/world-news/2d-characters-cant-cheat-age-or-die-japanese-man-marries-a-hologram-of-hatsune-miku-1945838'>ketidaktertarikannya untuk berhubungan dengan perempuan nyata</a> membuatnya bisa dimasukkan ke kategori ini."
 		]}
 	/>
 
@@ -406,7 +406,7 @@
 		subjudul='Karnivora & Herbivora'
 		para={[
 		"Kondo adalah manifestasi dari pengasingan yang ia alami sejak masa remaja. Lebih dari itu, Kondo adalah hasil dari masyarakat yang tak lagi percaya dengan pernikahan. Masyarakat Jepang yang patriarkis menempatkan perempuan sebagai warga kelas dua; tugas mereka hanya mengurus rumah tangga dan memberikan anak bagi sang suami yang bekerja mencari nafkah.",
-		"Namun, standar usang ini justru membuat pasangan-pasangan muda Jepang sulit menikah. Sebagai gambaran, sekitar 40% pekerja Jepang sekarang merupakan <a href='https://www.theatlantic.com/business/archive/2017/07/japan-mystery-low-birth-rate/534291/'>pekerja serabutan</a> yang tak memiliki asuransi dan jaring pengaman lainnya. Sialnya, hanya 20% pekerja serabutan yang bisa mendapatkan pekerjaan permanen."
+		"Namun, standar usang ini justru membuat pasangan-pasangan muda Jepang sulit menikah. Sebagai gambaran, sekitar 40% pekerja Jepang sekarang merupakan <a target='_blank' href='https://www.theatlantic.com/business/archive/2017/07/japan-mystery-low-birth-rate/534291/'>pekerja serabutan</a> yang tak memiliki asuransi dan jaring pengaman lainnya. Sialnya, hanya 20% pekerja serabutan yang bisa mendapatkan pekerjaan permanen."
 		
 		]}
 	/>
@@ -466,7 +466,7 @@
 	<Paragraph
 		--font-color ={fontColor}
 		para={[
-		"Kerentanan ekonomi ini melahirkan fenomena kebudayaan baru: <a href='https://slate.com/news-and-politics/2009/06/japan-panics-about-the-rise-of-herbivores-young-men-who-shun-sex-don-t-spend-money-and-like-taking-walks.html'>perempuan ‘karnivora' dan laki-laki 'herbivora’</a>. Disebut begitu karena para perempuan bertingkah seperti karnivora: dominan dan lebih mengutamakan kehidupan mereka sendiri alih-alih tunduk ke tekanan masyarakat untuk menikah. Sementara laki-laki yang lebih memilih untuk submisif, tidak mau berhubungan seks, dan merasa cukup dengan kehidupan mereka disebut ‘herbivora’. ",
+		"Kerentanan ekonomi ini melahirkan fenomena kebudayaan baru: <a target='_blank' href='https://slate.com/news-and-politics/2009/06/japan-panics-about-the-rise-of-herbivores-young-men-who-shun-sex-don-t-spend-money-and-like-taking-walks.html'>perempuan ‘karnivora' dan laki-laki 'herbivora’</a>. Disebut begitu karena para perempuan bertingkah seperti karnivora: dominan dan lebih mengutamakan kehidupan mereka sendiri alih-alih tunduk ke tekanan masyarakat untuk menikah. Sementara laki-laki yang lebih memilih untuk submisif, tidak mau berhubungan seks, dan merasa cukup dengan kehidupan mereka disebut ‘herbivora’. ",
 		"Sebagian lelaki herbivora beralih ke cinta virtual seperti Kondo. Alasannya sederhana: perempuan fiksi tidak bisa bohong, tidak mungkin selingkuh, dan yang terpenting, bisa mereka bentuk sesuai dengan keinginan. Pada akhirnya yang dicintai bukanlah suatu hal yang konkret, tapi sebuah ide yang tak bisa melawan."
 		]}
 	/>
