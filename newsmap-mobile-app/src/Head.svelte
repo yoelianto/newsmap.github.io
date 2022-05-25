@@ -9,7 +9,7 @@
     const dispatch = createEventDispatcher()
 
     export let height
-    export let page
+    export let page, subpage
     export let burgerIn, searchIn, searchValue
 
     let colorBrandWhite = "#fafafa",
@@ -94,8 +94,13 @@
                         <Icon data={bars} style='color:#fafafa'/>
                     </div>
                     <a href={$url('/')}>
-                        <img src="./images/deduktif.svg" alt="Logo Deduktif Website"
-                    style="filter: invert(54%) sepia(65%) saturate(1029%) hue-rotate(318deg) brightness(87%) contrast(114%);">
+                        {#if subpage}
+                            <img src="../images/deduktif.svg" alt="Logo Deduktif Website"
+                        style="filter: invert(54%) sepia(65%) saturate(1029%) hue-rotate(318deg) brightness(87%) contrast(114%);">
+                        {:else}
+                            <img src="./images/deduktif.svg" alt="Logo Deduktif Website"
+                        style="filter: invert(54%) sepia(65%) saturate(1029%) hue-rotate(318deg) brightness(87%) contrast(114%);">
+                        {/if}
                     </a>
                     <div class="after" on:click={()=> {searchIn = true}} style="cursor:pointer">
                         <Icon data={search} style='color:#fafafa'/>

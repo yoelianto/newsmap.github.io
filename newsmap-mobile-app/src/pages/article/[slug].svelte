@@ -2,7 +2,8 @@
     import { get } from "../../api";
     import * as ihttp from "../../constants/initialHttp";
     import ArticleDetail from "../ArticleDetail.svelte";
-    import Head from '../../Head.svelte'
+    import Head from '../../Head.svelte';
+    import Foot from '../../Foot.svelte';
     import * as animateScroll from 'svelte-scrollto'
     import {onMount} from 'svelte';
     import Share from '../../Share.svelte'

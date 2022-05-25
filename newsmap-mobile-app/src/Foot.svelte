@@ -3,7 +3,7 @@
     import { get } from "./api";
     import Fa from 'svelte-fa'
     import { faSpinner, faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons'
-    import { url } from '@roxi/routify'
+    import { url, goto } from '@roxi/routify'
 
     export let uri = null;
     export let params = {};
@@ -30,7 +30,7 @@
                 </div>
                 {:then data}
                     {#each data as d}
-                    <a href={$url(`/${type}/${d.slug}`)} class='newspart'>
+                    <a href={$url('/:artype/:slug', {artype: type, slug: d.slug})} class='newspart'>
                         <div class="news">
                             <div class="images">
                                 <!--  -->

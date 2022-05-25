@@ -201,9 +201,12 @@
         color:var(--color-brand-dark-blue)
     }
     a{
-        color:var(--color-brand-white)
+        color:var(--color-brand-white);
+        text-decoration:none !important;
+        font-weight: 400 !important;
     }
     a:hover {
-        color:var(--color-brand-dark-blue)
+        text-decoration:none !important;
+        font-weight: 400 !important;
     }
 </style>

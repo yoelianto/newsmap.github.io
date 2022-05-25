@@ -88,8 +88,7 @@
 
 <style>
     main {
-        background-color: #050505;
-        height: 100%;
+        background-color: #fafafa;
         padding-top:1rem;
         margin-bottom: -0.25rem;
         
@@ -97,7 +96,6 @@
     .container {
         width:88%;
         margin:0 auto;
-        color: #fafafa;
         padding-bottom:1rem;
         padding-top:0.5rem;
     }

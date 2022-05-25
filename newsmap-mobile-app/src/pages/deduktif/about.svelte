@@ -15,6 +15,7 @@
 
     let height;
     let page= 'indeksdeduktif'
+    let subpage = 'about'
 
     afterUpdate(()=> {
         for(const element of document.body.querySelectorAll('main')) {
@@ -34,6 +35,7 @@
     <Head 
     bind:height = {height}
     bind:page
+    bind:subpage
 />
 
 <div class="container" style='margin-top:{height}px'>
