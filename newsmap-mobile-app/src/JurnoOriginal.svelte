@@ -1,7 +1,5 @@
 <script context="module">
     import interact from 'interactjs';
-    import Fa from 'svelte-fa'
-    import { faSpinner, faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons'
     
 </script>
 
@@ -11,9 +9,44 @@
     import { onMount } from 'svelte'
     import Icon from 'svelte-awesome';
     import { fileText, undo, times } from 'svelte-awesome/icons';
+    import Siema from 'siema'
+    import Fa from 'svelte-fa'
+    import { faSpinner, faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons'
+    
+
+    let slider; 
+
+    const prevSiema = () => {
+		if (!slider) return;
+		slider.prev()
+		select = slider.currentSlide;
+	}
+
+	const nextSiema = () => {
+		if (!slider) return;
+		slider.next()
+		select = slider.currentSlide;
+	}
+
+    const siema = (node, options) => {
+        slider = new Siema({
+                selector: '.siema',
+                duration: 200,
+                easing: 'ease-in-out',
+                perPage: 5,
+                startIndex: 0,
+                draggable: false,
+                multipleDrag: true,
+                threshold: 20,
+                loop: true,
+                rtl: false,
+                onInit: () => {},
+                onChange: () => {},
+        }); //end Siema constructor
+    }
 
     const fetchData = (async () => {
-        const result = await get(ihttp.URI_ARTICLE_LIST, {size: 5});
+        const result = await get(ihttp.URI_ARTICLE_LIST, {size: 8});
         return await result.data;
     })()
 
@@ -32,13 +65,13 @@
         card.style.transform = `translate(${position.x}px) rotate(${position.x * 0.05}deg)`
         card.style.transition =`transform 100ms ease-in-out`
 
-        if (card.id < 4) {
+        if (card.id < 7) {
             card.nextElementSibling.setAttribute('data-status', 'current');
-        } else if (card.id == 4) {
+        } else if (card.id == 7) {
             let swipe = document.querySelectorAll('.swipe')
             swipe.forEach((item, index) => {
                 item.style.transition =`transform 0ms ease-in-out`
-                item.style.transform = `translate(${index*5}px, ${index*5}px) rotate(0deg)`
+                item.style.transform = `translate(${index*2}px, ${index*2}px) rotate(0deg)`
                 item.setAttribute('data-status', 'waiting')                    
             })
             swipe[0].setAttribute('data-status', 'current')
@@ -56,7 +89,7 @@
         
         card.setAttribute('data-status', 'current')
         position.x = 0
-        card.style.transform = `translate(${card.id * 10}px, ${card.id * 10}px) rotate(0deg)`
+        card.style.transform = `translate(${card.id * 2}px, ${card.id * 2}px) rotate(0deg)`
         card.style.transition =`transform 100ms ease-in-out`
 
         card.nextElementSibling.setAttribute('data-status', 'waiting');
@@ -103,13 +136,13 @@
                     event.target.style.transition =
                     `transform 100ms ease-in-out`
                     
-                    if (event.target.id < 4) {
+                    if (event.target.id < 7) {
                         event.target.nextElementSibling.setAttribute('data-status', 'current');
-                    } else if (event.target.id == 4) {
+                    } else if (event.target.id == 7) {
                         let swipe = document.querySelectorAll('.swipe')
                         swipe.forEach((item, index) => {
                             item.style.transition =`transform 0ms ease-in-out`
-                            item.style.transform = `translate(${index*5}px, ${index*5}px) rotate(0deg)`
+                            item.style.transform = `translate(${index*2}px, ${index*2}px) rotate(0deg)`
                             item.setAttribute('data-status', 'waiting')                    
                         })
                         swipe[0].setAttribute('data-status', 'current')
@@ -149,27 +182,27 @@
         </div>
     {:then data}
 
-    <div class="inner-container">
+    <div class="inner-container {height < width && width >= 768 ? 'siema' : ''}" use:siema={height < width && width >= 768}>
         
         {#each data as d, i}
 
-        <div class='swipe'
-            data-dragging='false'
-            data-status="{i === 0 ? 'current' : 'waiting' }"
-            id={i}
-            style="z-index:{5-i};
-                transform:{width < height && width < 991 ? `translate(${i * 5}px, ${i * 5}px)` : `translate(0px, 0px)`}">
-                <a class="card-link" href={`/article/${d.slug}/`}>
-                    <div class="card" style="z-index:{5-i}">
-                        <img class="thumb" src={`${process['env']['URL_IMAGE']}images/article/${d.thumbnail}`} alt="" >
-                        <div class="bottom"></div>
-                    <div class="inner-card">
-                        <div class="sub-title">oleh {d.author_name}</div>
-                        <div class="card-title">{d.title}</div>
+            <div class='swipe'
+                data-dragging='false'
+                data-status="{i === 0 ? 'current' : 'waiting' }"
+                id={i}
+                style="z-index:{8-i};
+                    transform:{width < height && width < 991 ? `translate(${i * 2}px, ${i * 2}px)` : `translate(0px, 0px)`}">
+                    <a class="card-link" href={`/article/${d.slug}/`}>
+                        <div class="card" style="z-index:{8-i}">
+                            <img class="thumb" src={`${process['env']['URL_IMAGE']}images/article/${d.thumbnail}`} alt="" >
+                            <div class="bottom"></div>
+                        <div class="inner-card">
+                            <div class="sub-title">oleh {d.author_name}</div>
+                            <div class="card-title">{d.title}</div>
+                        </div>
                     </div>
-                </div>
-            </a>
-        </div>
+                </a>
+            </div>
 
         {/each}
     </div>
@@ -188,6 +221,15 @@
             <Icon data={fileText} scale={1.5}/>
         </button>
     </div>
+    <div class="navigation" style:display={width > height && width >= 768 ? 'flex' : 'none'}>
+        <button on:click={prevSiema}>
+            <Fa icon={faAngleLeft} size="2x" />
+        </button>
+        <button on:click={nextSiema}>
+            <Fa icon={faAngleRight} size="2x" />
+        </button>
+    </div>
+    
 </div>
 
 <style>
@@ -230,7 +272,7 @@
     .card {
         width:50vw;
         height:88vw;
-        background-color: steelblue;
+        background-color: grey;
         border-radius:0.5rem;
         display: flex;
         justify-content: center;
@@ -250,6 +292,13 @@
         display: flex;
         border-radius: 50px;
         justify-content: center;
+        
+    }
+    .navigation {
+        width:100%;
+        justify-content: space-between;
+        position: absolute;
+        top:50%;
     }
     button {
         width:50px;
@@ -258,6 +307,7 @@
         margin:0.25rem;
         background-color: #fafafa;
         color: var(--color-brand-red);
+        cursor: pointer;
     }
     .inner-card {
         position: absolute;
@@ -331,6 +381,27 @@
             margin:1rem auto;
         }
 
+        .inner-container {
+            display: block;
+            height:65vh;
+        }
+        .card {
+            height:60vh;
+            width:200px;
+            position: relative;
+            left: 0;
+            filter: grayscale(0.5);
+            transition: filter 400ms ease-in-out;
+        }
+        .card:hover {
+            filter:grayscale(0);
+        }
+
+        .swipe {
+            height: 60vh;
+            margin:1rem;
+        }
+
 	}
 	@media only screen /*xtralarge*/
 	and (min-width: 1200px) {
@@ -345,14 +416,12 @@
             margin:3rem auto;
         }
         .inner-container {
-            display: flex;
-            flex-direction: row;
-            height: 35vw;
-            justify-content: space-evenly;
+            display: block;
+            height:65vh;
         }
         .card {
-            width:13vw;
-            height:35vw;
+            height:60vh;
+            width:200px;
             position: relative;
             left: 0;
             filter: grayscale(0.5);
@@ -363,7 +432,8 @@
         }
 
         .swipe {
-            height: 80vh;
+            height: 60vh;
+            margin:1rem;
         }
         
 	}
