@@ -43,17 +43,17 @@
         <h3><strong>Direktur</strong></h3>
         <p>Teguh Budi Santoso</p>
         <br>
-        <h3><strong>Manajer Eksekutif</strong></h3>
+        <h3><strong>Pawang Konten</strong></h3>
         <p>Arlian Buana</p>
         <br>
         <h3><strong>Creative Technologist</strong></h3>
         <p>Sabda Armandio</p>
         <br>
-        <h3><strong>Editor</strong></h3>
-        <p>Ann Putri</p>
-        <br>
         <h3><strong>Program dan Komunitas</strong></h3>
         <p>Windu Jusuf</p>
+        <br>
+        <h3><strong>Penulis</strong></h3>
+        <p>Ann Putri</p>
         <br>
         <h3><strong>Social Media Officer</strong></h3>
         <p>Alya Faradisa</p>
