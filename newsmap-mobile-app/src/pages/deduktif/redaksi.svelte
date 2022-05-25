@@ -52,8 +52,11 @@
         <p>Nurul Qomariyah</p>
         <br>
         <h3><strong>Redaksi</strong></h3>
-        <p>Fajar Regal</p>
+        <p>Fajar Nugraha</p>
         <p>Ahsan Ridhoi</p>
+        <br>
+        <h3><strong>Graphic</strong></h3>
+        <p>Louis Lugas</p>
     </div>
 
 </div>

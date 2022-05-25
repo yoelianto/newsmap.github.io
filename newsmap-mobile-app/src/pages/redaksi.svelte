@@ -63,7 +63,7 @@
         <p>Louis Lugas</p>
         <br>
         <h3><strong>Graphic Storyboard</strong></h3>
-        <p>Faiz</p>
+        <p>Aliffaiz Achmad</p>
         <br>
         <h3><strong>Graphic Designer</strong></h3>
         <p>Rangga Putrawicaksana</p>
