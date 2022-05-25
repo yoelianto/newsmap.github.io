@@ -33,7 +33,7 @@
             <a href={$url('/redaksi')}>
                 <p>Redaksi</p>
             </a>
-            <a href=''> <!-- DISCORD LINK HERE -->
+            <a href='https://discord.gg/klubsosialjurno'> <!-- DISCORD LINK HERE -->
                 <p>Klub Sosial Jurno</p>
             </a>
 

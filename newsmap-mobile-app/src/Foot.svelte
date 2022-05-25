@@ -30,7 +30,7 @@
                 </div>
                 {:then data}
                     {#each data as d}
-                    <a href={`/${type}/${d.slug}`} class='newspart'>
+                    <a href={$url(`/${type}/${d.slug}`)} class='newspart'>
                         <div class="news">
                             <div class="images">
                                 <!--  -->

@@ -87,6 +87,17 @@
 </script>
 
 <svelte:head>
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-E6560Z79CY"></script>
+	<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+
+	gtag('config', 'G-E6560Z79CY');
+	</script>
+
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	
 </svelte:head>
@@ -151,7 +162,9 @@
 		/>
 		<div class="discord-container">
 			<h1 class='title'>KLUB SOSIAL JURNO</h1>
-			<img class='klub' src="./images/Discord-Invitation-Web.png" alt="Klub Sosial Jurno">
+			<a href='https://discord.gg/klubsosialjurno'>
+				<img class='klub' src="./images/Discord-Invitation-Web.png" alt="Klub Sosial Jurno">
+			</a>
 		</div>
 		
 		

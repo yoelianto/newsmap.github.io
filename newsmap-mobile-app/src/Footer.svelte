@@ -139,10 +139,11 @@
         width:100%;
         font-size: 0.8rem;
         font-family: var(--fontfamily2);
-        color: hsl(0,0%,50%);
+        color: hsl(0,0%,50%) !important;
         white-space: normal;
         margin-top: 0.5rem;
         margin-bottom: 0.5rem;
+        text-decoration: none !important;
     }
     .menu {
         width:90%;
@@ -156,11 +157,11 @@
     .sosmed {
         margin-top: 1rem;
         display: flex;
-        color: hsl(0,0%,50%);
+        color: hsl(0,0%,50%) !important;
     }
     .sm {
         margin-right: 0.5rem;
-        color:hsl(0,0%,50%);
+        color:hsl(0,0%,50%) !important;
     }
     .left {
         width:45%;
@@ -173,9 +174,6 @@
         color:var(--color-brand-dark-blue)
     }
     a{
-        color:var(--color-brand-white)
-    }
-    a:hover {
-        color:var(--color-brand-dark-blue)
+        text-decoration: none !important;
     }
 </style>
