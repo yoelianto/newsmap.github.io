@@ -1,8 +1,8 @@
 <script>
-    import { get } from "../../api";
-    import * as ihttp from "../../constants/initialHttp";
-    import Head from '../../Head.svelte';
-    import Footer from '../../Footer.svelte';
+    import { get } from "../api";
+    import * as ihttp from "../constants/initialHttp";
+    import Head from '../Head.svelte';
+    import Footer from '../Footer.svelte';
     import {afterUpdate} from 'svelte';
     import * as animateScroll from "svelte-scrollto";
 
