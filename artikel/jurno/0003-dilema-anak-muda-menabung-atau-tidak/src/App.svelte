@@ -79,8 +79,8 @@
 
 		fullHeader={false}
 
-		title='Dilema Anak Muda'
-		subtitle='Menabung atau Tidak?'
+		title='Menabung Atau Tidak Menabung'
+		subtitle='Jangan Atur-atur Aing'
 
 		author='Ann Putri'
 		date='12 Mei 2022'
@@ -91,7 +91,7 @@
 	<Paragraph
 		--font-color ={fontColor}
 		para={[
-		'Sejak kecil kita sudah dididik untuk menabung. Namun, peribahasa “hemat pangkal kaya” nampaknya tak lagi relevan.',
+		'Sejak kecil kita sudah dididik untuk menabung. Namun, peribahasa “hemat pangkal kaya” tampaknya tak lagi relevan.',
 		"Generasi milenial dan Z dari berbagai negara mengaku kesulitan menabung. Anak muda Korea Selatan bahkan <a class='link-article' target='_blank' href='https://foreignpolicy.com/2019/07/04/why-young-koreans-love-to-splurge-shibal-biyong-millennial-fuck-it-expense/'>lebih memilih foya-foya</a> ketimbang menabung."
 		]}
 	/>
@@ -155,7 +155,7 @@
 
 	<Paragraph
 		--font-color ={fontColor}
-		subjudul='Betulkah generasi muda enggan menabung?'
+		subjudul='Betulkah Generasi Muda Enggan Menabung?'
 		para={[
 		'Namun survei-survei di atas tidak menunjukkan seberapa penting milenial (dan juga gen Z) memandang tabungan.',
 		'Beberapa artikel malah menyudutkan generasi muda sebagai generasi yang boros, enggan menabung, dan tak mungkin punya properti.'
@@ -172,7 +172,7 @@
 	<Paragraph
 		--font-color ={fontColor}
 		para={[
-		"Oleh karena itu, saya mengadakan survei super kasar <a class='link-article' target='_blank' href='https://twitter.com/kimjongann/status/1381848736553308166'>lewat polling Twitter</a>. Polling ini ditujukan untuk pengguna Twitter berusia 21-30 tahun dan tidak meliputi variabel gender, domisili, status pekerjaan, kelas ekonomi, dan pendapatan per bulan.",
+		"Saya mengadakan survei kecil <a class='link-article' target='_blank' href='https://twitter.com/kimjongann/status/1381848736553308166'>lewat polling Twitter</a>. Polling ini ditujukan untuk pengguna Twitter berusia 21-30 tahun dan tidak meliputi variabel gender, domisili, status pekerjaan, kelas ekonomi, dan pendapatan per bulan.",
 		"Karena ada jeda beberapa menit di tiap cuitan, ada disproporsi responden. Tapi tak apa lah ya, toh ini hanya gambaran yang sangat kasar."
 		]}
 	/>
@@ -272,7 +272,7 @@
 		--font-color ={fontColor}
 		subjudul='Lebih dari Sekadar Boros'
 		para={[
-		'Dari cerita-cerita di atas bisa dilihat bahwa penting bagi generasi muda untuk paham tabungan. Namun faktor-faktor seperti besaran biaya hidup sehari-hari relatif ke pendapatan, tanggungan penyakit fisik/mental, baik pribadi maupun orang lain, tanggungan keluarga (<em>sandwich generation</em>), gaji mepet, dan <em>self-reward</em> memainkan peran besar dalam menentukan kemampuan menabung mereka.',
+		'Dari cerita-cerita di atas bisa dilihat bahwa generasi muda sebenarnya menganggap penting tabungan. Namun faktor-faktor seperti besaran biaya hidup sehari-hari relatif ke pendapatan, tanggungan penyakit fisik/mental, baik pribadi maupun orang lain, tanggungan keluarga (<em>sandwich generation</em>), gaji mepet, dan <em>self-reward</em> memainkan peran besar dalam menentukan kemampuan menabung mereka.',
 		"Persoalan gaji mepet menjadi penyebab nomor satu anak muda sulit menabung. Dibandingkan dengan generasi sebelumnya, generasi saat ini mengalami kenaikan biaya hidup yang tinggi. Riset <a class='link-article' target='_blank' href='https://lifepal.co.id/media/ump-2021-apa-cukup-penuhi-pengeluaran-bulanan-saat-ini/'>Lifepal</a> menunjukkan ada sepuluh provinsi Indonesia yang pengeluaran rata-rata per-kapitanya melebihi UMP 2021. Kebetulan para informan tinggal di daerah yang disebutkan oleh riset ini, yaitu DKI Jakarta, Jawa Timur, dan Jawa Barat.",
 		'Besarnya pengeluaran relatif dengan UMP yang cenderung kecil menyebabkan kesempatan untuk menabung semakin tipis. Tak hanya itu, faktor generasi sandwich dan kesehatan juga berperan besar.'
 		]}
@@ -298,8 +298,8 @@
 	<Paragraph
 		--font-color ={fontColor}
 		para={[
-		'Sayangnya, survei ini tidak menunjukkan seberapa banyak orang yang menjadi generasi sandwich. Padahal pandemi membuat kondisi ekonomi banyak orang lebih rentan sehingga memaksa mereka yang punya lebih banyak penghasilan untuk membantu yang tidak punya. Ditambah lagi, banyak yang tidak bisa mengatakan “tidak” ke kebutuhan orangtua karena kultur bakti anak yang sangat kuat.',
-		"Kebutuhan kesehatan juga menjadi faktor penting. Survei yang sama menunjukkan generasi kebutuhan kesehatan selama pandemi semakin tinggi. Memang ada BPJS dan asuransi swasta, tapi perlindungannya terbatas. Ada beberapa penyakit, termasuk penyakit kejiwaan, yang perawatannya tidak dicover oleh BPJS. Atau mereka kurang puas dengan pelayanan BPJS sehingga memilih untuk membayar sendiri atau menggunakan asuransi swasta yang lebih mahal.",
+		'Sayangnya, survei ini tidak menunjukkan seberapa banyak orang yang menjadi generasi sandwich. Padahal pandemi membuat kondisi ekonomi banyak orang lebih rentan sehingga memaksa mereka yang punya lebih banyak penghasilan untuk membantu yang tidak punya. Ditambah lagi, banyak yang tidak bisa mengatakan “tidak” untuk kebutuhan orang tua karena kultur bakti anak yang sangat kuat.',
+		"Kebutuhan kesehatan juga menjadi faktor penting. Survei yang sama menunjukkan generasi kebutuhan kesehatan selama pandemi semakin tinggi. Memang ada BPJS dan asuransi swasta, tapi perlindungannya terbatas. Ada beberapa penyakit, termasuk penyakit kejiwaan, yang perawatannya tidak dikover oleh BPJS. Atau mereka kurang puas dengan pelayanan BPJS sehingga memilih untuk membayar sendiri atau menggunakan asuransi swasta yang lebih mahal.",
 		'Terakhir adalah <em>self-reward</em>. Banyak media yang mengkritik generasi milenial sebagai generasi yang boros. Mereka lebih suka bersenang-senang dan membeli pengalaman seperti liburan atau mencoba hal baru dibanding berinvestasi.',
 		"Namun tuduhan-tuduhan ini tidak beralasan. <em>Self-reward</em> adalah mekanisme beradaptasi mereka ketika menghadapi stres tinggi. Meskipun stres berat, banyak yang <a class='link-article' target='_blank' href='https://www2.deloitte.com/content/dam/Deloitte/global/Documents/About-Deloitte/gx-deloitte-2021-mental-health-millennials-white-paper.pdf'>memilih untuk terus bekerja</a> dan menyembunyikan kondisi mental mereka dari kantor. <em>Self-reward</em> dengan makan enak, belanja barang mahal, dan liburan menjadi sarana pemulihan batin. Selain menyenangkan, kegiatan ini juga tidak menimbulkan stigma seperti pergi ke psikolog atau psikiater.",
 		"Kultur <em>self-reward</em> tak hanya muncul di anak muda Indonesia. Korea Selatan lebih dulu menamai praktek ini dengan sebutan <a class='link-article' target='_blank' href='https://foreignpolicy.com/2019/07/04/why-young-koreans-love-to-splurge-shibal-biyong-millennial-fuck-it-expense/'><em>shibal-biyong</em></a> alias “biaya <em>bodo amat</em>”. Tanggal tua tapi kamu pengen makan sushi karena stres kerja? <em>Shibal-biyong</em>. Ingin ngopi cantik di cafe? <em>Shibal-biyong</em>. Sekilas boros dan melawan logika, tapi <em>shibal-biyong</em> justru memaksimalkan fungsi uang untuk kebutuhan jangka pendek. Buat apa repot-repot menabung beli rumah kalau menabung 10 tahun saja tidak cukup untuk DP rumah?",
