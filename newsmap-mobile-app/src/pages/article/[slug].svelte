@@ -36,20 +36,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 </svelte:head>
 
+<Head 
+    bind:height = {height}
+    bind:page
+/>
 
-{#await fetchData()}
+{#await fetchData()} <!-- hanya untuk konten -->
     <div class="placeholder-container">
         <Fa icon={faSpinner} size="3x" pulse />
     </div>
 {:then data}
-    <Head 
-    bind:height = {height}
-    bind:page
-    />
-    <Share 
-        bind:url
-        bind:title
-    />
     <ArticleDetail
         data={{
             ...data,
@@ -62,6 +58,19 @@
             thumbnail: process["env"]["URL_IMAGE"] + type + "/" + data.thumbnail,
             thumbnail_social: data.thumbnail_social === undefined ? '' : process["env"]["URL_IMAGE"] + type + "/" + data.thumbnail_social,
         }}
+    />
+{:catch error}
+    <p>An error occurred!</p>
+{/await}
+
+{#await fetchData()} <!-- hanya footer & tombol share -->
+    <div class="placeholder-container">
+        <Fa icon={faSpinner} size="3x" pulse />
+    </div>
+{:then data}
+    <Share 
+        bind:url
+        bind:title
     />
     <Foot
         uri = {ihttp.URI_ARTICLE_LIST}
