@@ -393,7 +393,7 @@
 			</section>
 			<section>
 				<p>
-					<a style='color:#ffe7aa;font-weight:bold' href='https://repository.uchastings.edu/cgi/viewcontent.cgi?article=1232&context=hwlj'>Tuntutan feminis</a> agar laki-laki lebih banyak berpartisipasi dalam urusan rumah tangga
+					<a class='link-article' target='_blank' style='color:#ffe7aa;font-weight:bold' href='https://repository.uchastings.edu/cgi/viewcontent.cgi?article=1232&context=hwlj'>Tuntutan feminis</a> agar laki-laki lebih banyak berpartisipasi dalam urusan rumah tangga
 				</p>
 			</section>
 			<section>
@@ -530,6 +530,18 @@
 </main>
 
 <style>
+	.link-article {
+		color: rgb(0,100,200);
+		text-decoration: underline;
+	}
+
+	.link-article:hover {
+		text-decoration: underline;
+	}
+
+	.link-article:visited {
+		color: rgb(0,80,160);
+	}
 	.page {
 		transition: opacity 100ms ease-in-out;
 	}
