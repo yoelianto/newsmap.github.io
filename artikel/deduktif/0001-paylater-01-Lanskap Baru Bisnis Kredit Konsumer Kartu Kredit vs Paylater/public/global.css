@@ -15,19 +15,6 @@ body {
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 }
 
-a {
-	color: hsl(76, 69%, 41%);
-	text-decoration: underline;
-}
-
-a:hover {
-	text-decoration: underline;
-}
-
-a:visited {
-	color:hsl(76, 69%, 41%);
-}
-
 label {
 	display: block;
 }

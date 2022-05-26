@@ -665,7 +665,7 @@
 		"Pada Desember 2020, IPR tercatat anjlok lebih dalam dengan kontraksi sebesar 19,2% (YoY). Angka ini pun lebih dalam dari bulan sebelumnya yang kontraksi 16,3% (YoY). Penurunan pada akhir tahun lalu paling terpengaruh di kelompok makanan, minuman, dan tembakau sebesar minus 10,3% (YoY) dan sandang minus 59,7% (YoY).",
 		"Kontraksi IPR berlanjut pada Januari 2021 yang tercatat minus 16,4% (YoY). Penurunan terdalam pun masih pada kelompok sandang sebesar minus 46,3% (YoY) dan makanan, minuman, dan tembakan yang minus 7% (YoY).",
 		"Dalam laporannya, BI menyebut kontraksi yang berlanjut pada awal 2021 lalu lantaran penurunan permintaan konsumen setelah libur Natal dan Tahun Baru. Khususnya terimbas pembatasan pemberlakuan kegiatan masyarakat (PPKM) oleh pemerintah.",
-		"Merujuk laporan KPMG pada 2019 bertajuk <a href='https://assets.kpmg/content/dam/kpmg/id/pdf/2017/01/id-retail-payments-in-indonesia.pdf'>Retail Payments in Indonesia: Who Will Drive the Cashles Revolution?</a>, salah satu penyebab lambatnya penetrasi kartu kredit di Indonesia adalah pengetatan regulasi dari BI. Hanya penduduk berpenghasilan di atas Rp 3 juta yang bisa mengajukan kepemilikan kartu kredit.",
+		"Merujuk laporan KPMG pada 2019 bertajuk <a class='link-article' target='_blank' href='https://assets.kpmg/content/dam/kpmg/id/pdf/2017/01/id-retail-payments-in-indonesia.pdf'>Retail Payments in Indonesia: Who Will Drive the Cashles Revolution?</a>, salah satu penyebab lambatnya penetrasi kartu kredit di Indonesia adalah pengetatan regulasi dari BI. Hanya penduduk berpenghasilan di atas Rp 3 juta yang bisa mengajukan kepemilikan kartu kredit.",
 		"Kebijakan yang efektif berjalan pada 2015 tersebut bertujuan menjaga tingkat kredit macet atau <em>non performing loan</em> (NPL) stabil. Rasio NPL yang bagus menurut BI adalah di bawah 5%, berujuk Peraturan Bank Indonesia No 6/10/PBI tahun 2004.",
 		"Begitu juga lantaran aturan yang mengharuskan penyedia kartu kredit menyerahkan rincian transaksi, termasuk identitas pribadi pengguna ke kantor pajak. Hal ini membuat masyarakat kurang tertarik menggunakan kartu kredit memperhatikan keamanan data pribadi. Aturan ini berlaku efektif pada 2016 lalu."
 		]}
@@ -1355,7 +1355,7 @@
 	<Paragraph
 		--font-color ={fontColor}
 		para={[
-		"Berdasarkan Indonesia Paylater Ecosystem Report 2021 dari DSInnovate, <em>paylater</em> berada di bawah Peraturan Otoritas Jasa Keuangan Nomor 29/POJK.05/2014 tentang Penyelenggaraan Usaha Perusahaan Pembiayaan. Hal ini lantaran platform <em>paylater</em> berinduk kepada perusahaan pembiayaan, misalnya Shopee Paylater yang di bawah <a href='https://commerce-finance.com/faq'>PT Commerce Finance</a>.",
+		"Berdasarkan Indonesia Paylater Ecosystem Report 2021 dari DSInnovate, <em>paylater</em> berada di bawah Peraturan Otoritas Jasa Keuangan Nomor 29/POJK.05/2014 tentang Penyelenggaraan Usaha Perusahaan Pembiayaan. Hal ini lantaran platform <em>paylater</em> berinduk kepada perusahaan pembiayaan, misalnya Shopee Paylater yang di bawah <a class='link-article' target='_blank' href='https://commerce-finance.com/faq'>PT Commerce Finance</a>.",
 		"Aturan ini pula membedakan <em>paylater</em> dengan pinjaman online atau P2P <em>lending</em> yang operasionalnya di bawah Peraturan OJK Nomor 77/POJK.01/2016 tentang Layanan Pinjam Meminjam Uang Berbasis Teknologi Informasi.",
 		"Laporan tersebut juga mencatat rentang suku bunga 11 platform ternama di negeri ini yakni dari 0% sampai 4%. Kemudian, 10 dari 11 platform itu  bekerja sama dengan e-Commerce. Kredivo adalah yang terbanyak. Platform ini bekerja sama dengan 8 dari 10 e-Commerce ternama di negeri ini seperti e-commerce ternama di Indonesia, yakni: Tokopedia, Bukalapak, Lazada, Blibli, JD.ID, Zalora, Sociolla dan Bhinneka.",
 		"<em>paylater</em> juga tercatat terkoneksi dengan platform <em>ride hailing</em> dan <em>online travel agent</em> (OTA), seperti Gopaylater dengan Gojek dan TravelokaPaylater dengan Traveloka."
@@ -1604,10 +1604,10 @@
 		"Meski demikian, Indina berpendapat <em>paylater</em> tak akan menggantikan kartu kredit. Sebaliknya, kedua sistem pembayaran tersebut justru bisa saling melengkapi.",
 		"“Karena segmennya yang berbeda, kartu kredit dan <em>paylater</em> akan saling melengkapi. Namun, dengan keunggulan <em>user experience</em> yang lebih mudah dan cepat, kami optimistis paylater akan menjawab kebutuhan konsumen dan tumbuh semakin cepat dari waktu ke waktu,” kata Indina. ",
 		"Perbedaan segmentasi pasar kartu kredit dan <em>paylater</em> paling menonjol pada demografi penggunanya. Pengguna kartu kredit adalah masyarakat kelas menengah atas dan berpenghasilan stabil, mengingat syarat ketat mempunyai kartu kredit harus berpenghasilan di atas Rp 3 juta. ",
-		"Penggunaan kartu kredit juga lebih banyak untuk transaksi mahal, seperti halnya untuk pariwisata. Direktur Consumer Banking PT CIMB Niaga TBK, Lani Darmawan menyatakan, bisnis kartu kredit tersuruk selama pandemi lantaran transaksi pariwisata yang tergolong “<em>ticket size besar</em>” tak ada selama pandemi, seperti dilansir <a href='https://finansial.bisnis.com/read/20200623/90/1256651/terdampak-pandemi-bagaimana-prospek-bisnis-kartu-kredit>Bisnis Indonesia</a>. ",
+		"Penggunaan kartu kredit juga lebih banyak untuk transaksi mahal, seperti halnya untuk pariwisata. Direktur Consumer Banking PT CIMB Niaga TBK, Lani Darmawan menyatakan, bisnis kartu kredit tersuruk selama pandemi lantaran transaksi pariwisata yang tergolong “<em>ticket size besar</em>” tak ada selama pandemi, seperti dilansir <a class='link-article' target='_blank' href='https://finansial.bisnis.com/read/20200623/90/1256651/terdampak-pandemi-bagaimana-prospek-bisnis-kartu-kredit>Bisnis Indonesia</a>. ",
 		"Sementara, pengguna <em>paylater</em> adalah masyarakat kelas ekonomi menengah bawah, sebagaimana tercermin dari pengguna Kredivo. Indina menyatakan, pengguna Kredivo dominan berusia 20-35 tahun, baru bekerja, berdomisili di Jabodetabek, dan <em>underbanked</em>. Ia menyatakan, 60% dari total pengguna mendapatkan akses kredit pertama dari Kredivo. ",
 		"Kerja sama dengan perbankan untuk saling melengkapi sudah dilakukan Kredivo. Indina menyatakan, saat ini platform tempatnya bekerja telah bergandengan dengan Standard Chartered Bank Indonesia, Bank DBS Indonesia, dan PermataBank untuk penyaluran kredit dan memperluas layanan lembaga-lembaga perbankan tersebut. ",
-		"Wujud kredit digital yang terbentuk dari kerja sama tersebut, misalnya nasabah Bank DBS Indonesia kini bisa mengajukan kredit melalui aplikasi DBS dan mendapat persetujuan beserta limit hanya dalam 60 detik. Kredit digital DBS ini pun bisa digunakan bertransaksi di <em>e-commerce</em> dan <em>e-wallet</em> dengan tingkat suku bunga kredit bank. Nasabah pun tetap mendapat kartu <a href='https://newssetup.kontan.co.id/news/dianggap-menjanjikan-perbankan-ramai-ramai-merilis-kartu-kredit-digital?page=all'>kredit fisik</a>.",
+		"Wujud kredit digital yang terbentuk dari kerja sama tersebut, misalnya nasabah Bank DBS Indonesia kini bisa mengajukan kredit melalui aplikasi DBS dan mendapat persetujuan beserta limit hanya dalam 60 detik. Kredit digital DBS ini pun bisa digunakan bertransaksi di <em>e-commerce</em> dan <em>e-wallet</em> dengan tingkat suku bunga kredit bank. Nasabah pun tetap mendapat kartu <a class='link-article' target='_blank' href='https://newssetup.kontan.co.id/news/dianggap-menjanjikan-perbankan-ramai-ramai-merilis-kartu-kredit-digital?page=all'>kredit fisik</a>.",
 		"“Selain itu, dengan menggunakan Flexi Card, kartu fisik hasil kerjasama antara Kredivo dan Bank Sahabat Sampoerna, pengguna dapat berbelanja di jutaan <em>merchant offline</em> di seluruh Indonesia yang memiliki mesin EDC dengan jaringan GPN menggunakan limit Kredivo,” kata Indina.",
 		"Kerja sama lain dalam catatan kami dilakukan Traveloka Paylater dengan BNI meluncurkan Virtual Card Number (VCN). Layanan baru ini memberi plafon kredit dari Rp 5 juta-Rp 50 juta yang bisa digunakan nasabah bertransaksi di e-Commerce dengan jangka cicilan hingga 12 bulan dan berbunga rendah.",
 		"Indodana, platform paylater di bawah PT Artha Dana Teknologi, juga bekerja sama dengan Bank Jago–bank digital jelmaan Bank Artos milik bankir kawakan Jerry NG. Kerja sama keduanya dalam bentuk kesepakatan fasilitas pendanaan dengan skema pinjaman (channeling).  ",
@@ -1644,6 +1644,19 @@
 </main>
 
 <style>
+
+	.link-article {
+		color: hsl(76, 69%, 41%);
+		text-decoration: underline;
+	}
+
+	.link-article:hover {
+		text-decoration: underline;
+	}
+
+	.link-article:visited {
+		color:hsl(76, 69%, 41%);
+	}
 	.divider {
 		height:0.2rem;
 		width:60%;
