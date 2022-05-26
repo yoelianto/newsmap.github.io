@@ -80,7 +80,7 @@
 		--font-color ={fontColor}
 		subjudul='Anatomi Kesepian'
 		para={[
-		"Ketakutan akan kesendirian sudah ada <a href='https://www.cnnindonesia.com/gaya-hidup/20200420164136-289-495357/kisah-nabi-adam-as-manusia-pertama-yang-diciptakan-allah'>sejak cerita penciptaan Adam dan Hawa</a>. Tuhan memerintahkan manusia untuk berpasangan, beranak-pinak, dan menjaga relasi dengan keluarga, tetangga, dan teman. Merasa seorang sendiri merupakan pertanda bahwa cahaya kasih Tuhan tak lagi bersinar di dalam hati.",
+		"Ketakutan akan kesendirian sudah ada <a class='link-article' target='_blank' href='https://www.cnnindonesia.com/gaya-hidup/20200420164136-289-495357/kisah-nabi-adam-as-manusia-pertama-yang-diciptakan-allah'>sejak cerita penciptaan Adam dan Hawa</a>. Tuhan memerintahkan manusia untuk berpasangan, beranak-pinak, dan menjaga relasi dengan keluarga, tetangga, dan teman. Merasa seorang sendiri merupakan pertanda bahwa cahaya kasih Tuhan tak lagi bersinar di dalam hati.",
 		"Kesendirian pun dianggap asing dan menakutkan. Para pendeta sering menggunakan fenomena sendirian di tempat yang jauh dari pertolongan Ilahi seperti kuburan dan neraka untuk menakut-nakuti umat.",
 		"Secara etimologi, kesepian atau <em>loneliness</em> baru memasuki kosa kata bahasa Inggris di tahun 1600-an lewat karya Shakespeare, Hamlet. Mereka yang menerima ide kesendirian dengan tangan terbuka adalah para filsuf. Aristoteles, Montaigne, dan Nietzsche menganggap kesendirian sebagai keutamaan (<em>virtue</em>). Dalam kesendirian, manusia bisa merasakan kebebasan dan merenungi hidup beserta maknanya."
 		]}
@@ -93,7 +93,7 @@
 	<Paragraph
 		--font-color ={fontColor}
 		para={[
-		"Lalu apa yang membedakan kesepian dengan kesendirian? Secara kasar, seseorang secara sadar memilih untuk menyendiri. Sementara kesepian lahir dari <a href='https://link.springer.com/content/pdf/10.1007%2FBF01278458.pdf'>kurangnya kedekatan emosional dan fisik yang bermakna</a>.",
+		"Lalu apa yang membedakan kesepian dengan kesendirian? Secara kasar, seseorang secara sadar memilih untuk menyendiri. Sementara kesepian lahir dari <a class='link-article' target='_blank' href='https://link.springer.com/content/pdf/10.1007%2FBF01278458.pdf'>kurangnya kedekatan emosional dan fisik yang bermakna</a>.",
 		"Menariknya, naiknya penggunaan kata kesepian diikuti dengan Revolusi Industri. Modernisasi tak hanya mengubah lanskap industri, tapi juga lanskap sosial kita. Jam kerja naik pesat menjadi 14-16 jam/hari, sebelum akhirnya diturunkan menjadi 8 jam/hari."
 		]}
 	/>
@@ -109,7 +109,7 @@
 	<Paragraph
 		--font-color ={fontColor}
 		para={[
-		"Namun penurunan jam kerja tidak serta-merta membuat kita lebih sering bersosialisasi. Justru kultur sosial menjadi lebih individualistis yang kemudian berimbas ke formasi keluarga. Orang-orang dari negara maju lebih memilih untuk kumpul kebo daripada menikah. Kalaupun menikah, mereka melakukannya <a href='https://www.nytimes.com/2018/05/29/well/mind/millennials-love-marriage-sex-relationships-dating.html'>di usia yang lebih tua</a>, punya anak sedikit atau <a href='https://www.economist.com/international/2017/07/27/the-rise-of-childlessness'>tidak sama sekali</a>. Anak muda di Jepang bahkan lebih ekstrim: <a href='https://japantoday.com/category/features/kuchikomi/young-people-losing-interest-in-sex-but-why'>mereka tidak tertarik untuk pacaran, apalagi berhubungan seks</a>.",
+		"Namun penurunan jam kerja tidak serta-merta membuat kita lebih sering bersosialisasi. Justru kultur sosial menjadi lebih individualistis yang kemudian berimbas ke formasi keluarga. Orang-orang dari negara maju lebih memilih untuk kumpul kebo daripada menikah. Kalaupun menikah, mereka melakukannya <a class='link-article' target='_blank' href='https://www.nytimes.com/2018/05/29/well/mind/millennials-love-marriage-sex-relationships-dating.html'>di usia yang lebih tua</a>, punya anak sedikit atau <a class='link-article' target='_blank' href='https://www.economist.com/international/2017/07/27/the-rise-of-childlessness'>tidak sama sekali</a>. Anak muda di Jepang bahkan lebih ekstrim: <a class='link-article' target='_blank' href='https://japantoday.com/category/features/kuchikomi/young-people-losing-interest-in-sex-but-why'>mereka tidak tertarik untuk pacaran, apalagi berhubungan seks</a>.",
 		"Naiknya kerja ke tangga prioritas manusia modern juga membuat kita memiliki lebih sedikit teman curhat dibandingkan dulu."
 		]}
 	/>
@@ -167,10 +167,10 @@
 		--font-color ={fontColor}
 		subjudul = 'Teknologi penyebab kesepian?'
 		para={[
-		"Penelitian-penelitian awal soal kesepian di kalangan anak muda <a href='https://research.fb.com/wp-content/uploads/2016/11/growing-closer-on-facebook-changes-in-tie-strength-through-site-use.pdf'>menunjuk media sosial dan kemajuan teknologi sebagai biang kerok</a>. Ini karena anak-anak muda menggantikan komunikasi tatap wajah ke komunikasi daring yang dianggap lebih “kosong”.",
-		"Pendapat ini disanggah oleh <a href='https://journals.sagepub.com/doi/abs/10.1177/1745691617713052?journalCode=ppsa'>Nowland, dkk</a>, yang menyatakan bahwa tingkat kesepian ditentukan oleh cara seseorang menggunakan media sosial. Orang-orang yang menggunakan media sosial secara aktif untuk memelihara dan membentuk pertemanan baru melaporkan rasa kesepian yang lebih rendah dibanding mereka yang pasif. Ini karena orang-orang yang kesepian cenderung menarik diri dan pasif, baik di dunia nyata maupun dunia maya.",
+		"Penelitian-penelitian awal soal kesepian di kalangan anak muda <a class='link-article' target='_blank' href='https://research.fb.com/wp-content/uploads/2016/11/growing-closer-on-facebook-changes-in-tie-strength-through-site-use.pdf'>menunjuk media sosial dan kemajuan teknologi sebagai biang kerok</a>. Ini karena anak-anak muda menggantikan komunikasi tatap wajah ke komunikasi daring yang dianggap lebih “kosong”.",
+		"Pendapat ini disanggah oleh <a class='link-article' target='_blank' href='https://journals.sagepub.com/doi/abs/10.1177/1745691617713052?journalCode=ppsa'>Nowland, dkk</a>, yang menyatakan bahwa tingkat kesepian ditentukan oleh cara seseorang menggunakan media sosial. Orang-orang yang menggunakan media sosial secara aktif untuk memelihara dan membentuk pertemanan baru melaporkan rasa kesepian yang lebih rendah dibanding mereka yang pasif. Ini karena orang-orang yang kesepian cenderung menarik diri dan pasif, baik di dunia nyata maupun dunia maya.",
 		"Isu kesepian ini harus dilihat dengan konteks dan gambaran yang lebih besar. Kemunculan teknologi dan Revolusi Industri meningkatkan rasa kesepian masyarakat. Sekilas teknologi yang membuat kita kesepian, kan? Tapi pelaku sebenarnya adalah ketidaksetaraan dan meningkatnya jurang kemakmuran.",
-		"Awal dekade industrialisasi memang ditandai oleh tingginya ketimpangan ekonomi. Namun <a href='https://sci-hub.se/https://www.sciencedirect.com/science/article/abs/pii/S0014498399907131'>ketidaksetaraan ini mulai menurun</a> kala negara-negara industrial mulai menerima tenaga kerja asing dan demokratisasi pemerintahan yang mendistribusikan kekuasaan dari bangsawan ke masyarakat. Hal ini bisa dicapai berkat keberadaan serikat-serikat buruh dan para politikus sosialis yang mendorong kebijakan pajak tanah yang tinggi, penggratisan sekolah untuk publik, peraturan yang melindungi dan memihak tenaga kerja, serta nasionalisasi fasilitas publik.",
+		"Awal dekade industrialisasi memang ditandai oleh tingginya ketimpangan ekonomi. Namun <a class='link-article' target='_blank' href='https://sci-hub.se/https://www.sciencedirect.com/science/article/abs/pii/S0014498399907131'>ketidaksetaraan ini mulai menurun</a> kala negara-negara industrial mulai menerima tenaga kerja asing dan demokratisasi pemerintahan yang mendistribusikan kekuasaan dari bangsawan ke masyarakat. Hal ini bisa dicapai berkat keberadaan serikat-serikat buruh dan para politikus sosialis yang mendorong kebijakan pajak tanah yang tinggi, penggratisan sekolah untuk publik, peraturan yang melindungi dan memihak tenaga kerja, serta nasionalisasi fasilitas publik.",
 		"Ketika semua kebutuhan dasar sudah terpenuhi, orang-orang bisa lebih fokus membentuk hubungan yang bermakna. Kesepian bisa ditekan dan orang-orang bisa hidup dengan lebih bahagia."
 		]}
 	/>
@@ -219,7 +219,7 @@
 		--font-color ={fontColor}
 		para={[
 		"Sayang, periode emas kehidupan manusia ini hanya bertahan sebentar. Ketidaksetaraan kembali menyeruak sejak dekade 1970-an bersama dengan lesunya partai-partai kiri dan kelahiran neoliberalisme. Pemerintah lebih memilih lepas tangan dan membiarkan tangan tak terlihat kapitalisme bekerja. Fasilitas-fasilitas dasar yang dulunya dibiayai oleh negara diambil alih oleh perusahaan swasta. Tentu ini memaksa kita untuk lebih fokus mencari uang alih-alih membangun koneksi sosial yang suportif.",
-		"Sebagai obat penawar, sebagian dari kita memilih membuka Tinder, menggeser ratusan foto orang layaknya membeli barang di <em>marketplace</em>. Kalau semesta mengizinkan, kita bisa <em>match</em> dengan orang yang kita ‘sukai’, mengobrol untuk mengetes kecocokan, melanjutkan hubungan ke kasur lalu berakhir di-<em>ghosting</em>. Ada pula yang menghabiskan uang untuk <a href='https://www.theatlantic.com/business/archive/2013/08/the-loneliness-loop-why-feeling-sad-makes-us-shop-and-shopping-makes-us-sad/278443/>berbelanja demi mengenyahkan rasa kesepian</a>. Lainnya memutuskan untuk <a href='https://www.vice.com/en/article/pkeqvk/young-people-loneliness-drugs-alcohol'>mabuk atau teler</a> tiap malam supaya tidak ingat kalau kesepian.",
+		"Sebagai obat penawar, sebagian dari kita memilih membuka Tinder, menggeser ratusan foto orang layaknya membeli barang di <em>marketplace</em>. Kalau semesta mengizinkan, kita bisa <em>match</em> dengan orang yang kita ‘sukai’, mengobrol untuk mengetes kecocokan, melanjutkan hubungan ke kasur lalu berakhir di-<em>ghosting</em>. Ada pula yang menghabiskan uang untuk <a class='link-article' target='_blank' href='https://www.theatlantic.com/business/archive/2013/08/the-loneliness-loop-why-feeling-sad-makes-us-shop-and-shopping-makes-us-sad/278443/>berbelanja demi mengenyahkan rasa kesepian</a>. Lainnya memutuskan untuk <a class='link-article' target='_blank' href='https://www.vice.com/en/article/pkeqvk/young-people-loneliness-drugs-alcohol'>mabuk atau teler</a> tiap malam supaya tidak ingat kalau kesepian.",
 		"Namun apakah usaha-usaha ini bisa sukses? Sayangnya tidak. Kamu tidak bisa bertukar pikiran dengan botol Jagermeister, jam tangan Dior, sepatu Gucci, atau laptop ROG karena mereka benda mati. Kamu juga tidak bisa memaksa hubungan dengan pasangan Tinder kalau mereka hanya ingin hubungan sementara atau <em>chemistry</em> kalian berdua berhenti di kasur saja.",
 		"Satu-satunya obat untuk kesepian adalah membangun relasi yang dalam dan bermakna dengan manusia lain. Tapi solusi ini pun hanya bisa benar-benar bekerja apabila kita mengubah sistem kehidupan kita agar lebih mengakomodasi hubungan sosial yang berarti."
 		]}
@@ -234,6 +234,20 @@
 </main>
 
 <style>
+
+	.link-article {
+		color: #1e1e1e;
+		text-decoration: underline;
+		font-weight: 600;
+	}
+
+	.link-article:hover {
+		text-decoration: underline;
+	}
+
+	.link-article:visited {
+		color: #1e1e1e;
+	}
 	.divider {
 		height:0.2rem;
 		width:60%;
