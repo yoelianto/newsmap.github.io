@@ -18,11 +18,17 @@
         return await result.data;
     });
 
+    let changePage = (e) => {
+        console.log(e)
+        window.location.href = e.path[3].href
+        return false
+    }
+
 </script>
 
 <nav class="footer" style='background-color:#{bgFooter}'>
     <div class="container">
-        <p class="title" style='color:#{txtFooter}'>Artikel Lainnya</p>
+        <p class="title" style='color:#{txtFooter} !important;'>Artikel Lainnya</p>
         <div class="slider-container">
                 {#await fetchData()}
                 <div class="placeholder-container">
@@ -30,7 +36,8 @@
                 </div>
                 {:then data}
                     {#each data as d}
-                    <a href={$url('/:artype/:slug', {artype: type, slug: d.slug})} class='newspart'>
+                    <a href={`/${type}/${d.slug}`} on:click={changePage}
+                    class='newspart' style="text-decoration:none !important">
                         <div class="news">
                             <div class="images">
                                 <!--  -->

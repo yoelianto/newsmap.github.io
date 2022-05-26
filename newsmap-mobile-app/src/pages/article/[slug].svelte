@@ -63,6 +63,14 @@
             thumbnail_social: data.thumbnail_social === undefined ? '' : process["env"]["URL_IMAGE"] + type + "/" + data.thumbnail_social,
         }}
     />
+    <Foot
+        uri = {ihttp.URI_ARTICLE_LIST}
+        params = {{except:data.id, size:3}}
+        thumbnailFolder= "article"
+        {type} 
+        bgFooter = {data.footer_background_color}
+        txtFooter= {data.article_background_color}
+    />
 {:catch error}
     <p>An error occurred!</p>
 {/await}

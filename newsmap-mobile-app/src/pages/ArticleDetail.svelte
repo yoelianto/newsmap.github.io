@@ -162,12 +162,12 @@
 
 {#if data.is_custom_html}
     {#if data.footer !== undefined}
-        <Foot
+        <!-- <Foot
             {...data.footer}
             type={data.type}    
             bgFooter = {data.footer_background_color}
             txtFooter= {data.article_background_color}
-        />
+        /> -->
     {/if}
 {:else}
     <main class="content-section">
