@@ -31,7 +31,7 @@
 	let subtitleColor='black'
 	let subheadColor='black'
 
-	let subhead = ['“Bapak pergi ke kantor. Ibu pergi ke pasar” adalah kalimat standar yang sering saya temui di buku pelajaran sekolah. Namun 12 tahun setelahnya, ternyata peran gender tersebut berubah: ibu pergi ke kantor, bapak mengurus rumah.',
+	let subhead = ['“Bapak pergi ke kantor. Ibu pergi ke pasar” adalah kalimat standar yang sering kita temui di buku pelajaran sekolah. Namun sekarang, ternyata peran gender tersebut berubah: ibu pergi ke kantor, bapak mengurus rumah.',
 	'<br>',
 	'Ada apa gerangan?']
 
@@ -100,7 +100,7 @@
 		fullHeader={false}
 		subhead = {subhead}
 
-		title='Mungkinkah Menjadi Bapak Rumah Tangga?'	
+		title='Cita-citaku Menjadi Bapak Rumah Tangga'	
 
 		author='Ann Putri'
 		date='13 Mei 2022'
@@ -410,8 +410,8 @@
 		--font-color ='black'
 		subjudul='Stigma Terhadap Bapak Rumah Tangga'
 		para={[
-		"Meskipun bapak yang rajin ngemong anak dan keluarga mulai menjadi tren, kebijakan cuti dan stigma masyarakat masih menghalangi mereka. Di Indonesia sendiri cuti melahirkan untuk bapak hanya dua hari. Ini kontras dengan cuti melahirkan untuk ibu yang berdurasi tiga bulan, menandakan bahwa urusan anak masih urusan eksklusif para ibu.",
-		'Stigma masyarakat terhadap bapak yang mengurus keluarga juga masih kencang. Mereka kerap dianggap aneh, pengangguran, atau gagal sebagai laki-laki karena tidak bekerja. Tentu stigma ini datang dari peran gender yang mengharuskan laki-laki sebagai pemimpin keluarga dan pencari nafkah utama.',
+		"Meskipun bapak yang rajin <em>ngemong</em> anak dan keluarga mulai menjadi tren, kebijakan cuti dan stigma masyarakat masih menghalangi mereka. Di Indonesia sendiri cuti melahirkan untuk bapak <a class='link-article' target='_blank' href='https://nasional.tempo.co/read/1446586/suami-punya-hak-cuti-saat-istri-melahirkan-pengusaha-tak-izinkan-bisa-dipidana'>hanya dua hari</a>. Ini kontras dengan cuti melahirkan untuk ibu yang berdurasi tiga bulan, menandakan bahwa urusan anak masih urusan eksklusif para ibu.",
+		'Stigma masyarakat terhadap bapak yang mengurus keluarga masih sangat melekat. Mereka kerap dianggap aneh, pengangguran, atau gagal sebagai laki-laki karena tidak bekerja. Tentu stigma ini datang dari peran gender yang mengharuskan laki-laki sebagai pemimpin keluarga dan pencari nafkah utama.',
 		'Padahal kenyataannya sekarang perempuan memiliki tingkat pendidikan dan jenjang karier yang lebih tinggi dari laki-laki. Sehingga bukan tidak mungkin tren bapak rumah tangga akan terus naik di masa depan.'
 		]}
 	/>
