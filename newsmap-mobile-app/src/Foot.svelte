@@ -19,7 +19,7 @@
     });
 
     let changePage = (e) => {
-        window.location.href = e.path[3].href
+        window.location.pathname = e.path[3].attributes[0].value
         return false
     }
 
@@ -35,24 +35,24 @@
                 </div>
                 {:then data}
                     {#each data as d}
-                    <a href={`/${type}/${d.slug}`} on:click={changePage}
-                    class='newspart' style="text-decoration:none !important">
-                        <div class="news">
-                            <div class="images">
-                                <!--  -->
-                                <img class='imgthumb'
-                                src={`${process["env"]["URL_IMAGE"]}images/${thumbnailFolder}/${d.thumbnail}`}
-                                title={d.title} alt={d.title}
-                                onerror={`this.onerror=null;this.src='${process['env']['NO_IMAGE']}';`} />
-                            </div>
-                            <div class="credit" style='color:#{txtFooter};'>
-                                <p class="author">{d.author_name}</p> <!-- harusnya {d.author_name}-->
-                                <p class="article-title">
-                                    {d.title}
-                                </p>
+                        <div data-link={`/${type}/${d.slug}`} on:click={changePage} 
+                        class='newspart' style="text-decoration:none !important">
+                            <div class="news">
+                                <div class="images">
+                                    <!--  -->
+                                    <img class='imgthumb'
+                                    src={`${process["env"]["URL_IMAGE"]}images/${thumbnailFolder}/${d.thumbnail}`}
+                                    title={d.title} alt={d.title}
+                                    onerror={`this.onerror=null;this.src='${process['env']['NO_IMAGE']}';`} />
+                                </div>
+                                <div class="credit" style='color:#{txtFooter};'>
+                                    <p class="author">{d.author_name}</p> <!-- harusnya {d.author_name}-->
+                                    <p class="article-title">
+                                        {d.title}
+                                    </p>
+                                </div>
                             </div>
                         </div>
-                    </a>
                     {/each}
                 {:catch error}
                     <p>An error occurred!</p>
@@ -90,6 +90,8 @@
     }
     .newspart {
         width:30%;
+        text-decoration: none !important;
+        cursor: pointer;
     }
     .title {
         font-family: 'Roboto Mono';
