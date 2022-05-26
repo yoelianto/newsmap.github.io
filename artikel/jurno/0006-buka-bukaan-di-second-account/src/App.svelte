@@ -442,6 +442,18 @@
 </main>
 
 <style>
+	.link-article {
+		color: rgb(0,100,200);
+		text-decoration: none;
+	}
+
+	.link-article:hover {
+		text-decoration: underline;
+	}
+
+	.link-article:visited {
+		color: rgb(0,80,160);
+	}
 	.divider {
 		height:0.2rem;
 		width:60%;
