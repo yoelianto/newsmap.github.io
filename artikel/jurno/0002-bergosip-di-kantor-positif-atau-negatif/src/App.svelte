@@ -150,7 +150,7 @@
 	<Paragraph
 		--font-color ={fontColor}
 		para={[
-		"Potongan di atas adalah cuplikan dialog <a href='https://www.youtube.com/watch?v=GAyvgz8_zV8'>Tilik (2018)</a> besutan Wahyu Agung Prasetyo. Film yang viral pada 2020 ini tak hanya berhasil menggambarkan kehidupan kampung di Yogyakarta, tapi juga membuka banyak diskusi. Salah satunya tentang <a href='https://medium.com/binokular/menilik-tilik-dan-julidan-netizen-a623a0afa430'>stereotip perempuan dan bergosip</a>.",
+		"Potongan di atas adalah cuplikan dialog <a class='link-article' target='_blank' href='https://www.youtube.com/watch?v=GAyvgz8_zV8'>Tilik (2018)</a> besutan Wahyu Agung Prasetyo. Film yang viral pada 2020 ini tak hanya berhasil menggambarkan kehidupan kampung di Yogyakarta, tapi juga membuka banyak diskusi. Salah satunya tentang <a class='link-article' target='_blank' href='https://medium.com/binokular/menilik-tilik-dan-julidan-netizen-a623a0afa430'>stereotip perempuan dan bergosip</a>.",
 		'Di <em>Tilik</em>, gosip digambarkan sebagai suatu hal yang negatif. Benarkah?'
 		]}
 	/>
@@ -175,10 +175,10 @@
 	<Paragraph
 		--font-color ={fontColor}
 		para={[
-		"Seiring waktu, manusia membentuk kelompok yang jauh lebih besar dengan tatanan sosial yang lebih rumit pula. Gosip yang awalnya bisa mendekatkan hubungan, malah menghancurkannya. Jadilah agama melarang gosip. Kitab Talmud adalah yang pertama <a href='https://www.reviewofreligions.org/32748/world-faiths-slander-gossip-foul-speech/'>melarang membicarakan hal-hal buruk</a> soal orang lain. Ajaran ini juga disebutkan di Alkitab dan Al Qur’an.",
-		"Lalu kenapa gosip erat kaitannya dengan perempuan? Kemungkinan karena para <a href='https://wordhistories.net/2017/02/04/gossip/'>ibu-ibu abad ke-17</a> yang sedang menunggu kelahiran anaknya sering membicarakan suami, keluarga, dan tetangga mereka—ya pokoknya orang-orang yang tak ada di ruangan itu—bersama para suster dan bidan. Maklum, menunggu anak lahir butuh waktu berjam-jam sampai berhari-hari, jadi apa lagi yang bisa mereka lakukan selain <em>ghibah</em>?",
+		"Seiring waktu, manusia membentuk kelompok yang jauh lebih besar dengan tatanan sosial yang lebih rumit pula. Gosip yang awalnya bisa mendekatkan hubungan, malah menghancurkannya. Jadilah agama melarang gosip. Kitab Talmud adalah yang pertama <a class='link-article' target='_blank' href='https://www.reviewofreligions.org/32748/world-faiths-slander-gossip-foul-speech/'>melarang membicarakan hal-hal buruk</a> soal orang lain. Ajaran ini juga disebutkan di Alkitab dan Al Qur’an.",
+		"Lalu kenapa gosip erat kaitannya dengan perempuan? Kemungkinan karena para <a class='link-article' target='_blank' href='https://wordhistories.net/2017/02/04/gossip/'>ibu-ibu abad ke-17</a> yang sedang menunggu kelahiran anaknya sering membicarakan suami, keluarga, dan tetangga mereka—ya pokoknya orang-orang yang tak ada di ruangan itu—bersama para suster dan bidan. Maklum, menunggu anak lahir butuh waktu berjam-jam sampai berhari-hari, jadi apa lagi yang bisa mereka lakukan selain <em>ghibah</em>?",
 		"Kebiasaan mereka ini akhirnya disebut sebagai “gosip”. Saking seringnya kata ini digunakan, kata “gosip” sampai digunakan di Alkitab versi Raja James, menggantikan istilah “pembisik” (<em>whisperer</em>) dan “pembawa cerita” (<em>talebearer</em>) yang umumnya memiliki konotasi negatif.",
-		"Pandangan negatif soal gosip terus eksis hingga sekarang. Pandangan negatif soal gosip paling terlihat di lingkungan kantor. Ini karena gosip, menurut orang-orang <em>Human Resources</em>, adalah <a href='https://www.syntrio.com/blog/the-negative-impact-of-gossip-in-the-workplace/'>penyebab utama</a> kondisi kantor yang tidak kondusif. Gosip dianggap memantik konflik, mengikis kepercayaan antar pegawai, menurunkan moral, serta menghambat kerja tim. Lebih pentingnya lagi, gosip kantor juga <a href='https://hbr.org/2018/10/stop-complaining-about-your-colleagues-behind-their-backs?utm_medium=social&utm_campaign=hbr&utm_source=twitter&tpcc=orgsocial_edit'>merusak usaha untuk membuat sistem komunikasi yang sehat</a>, profesional, dan terbuka di tempat kerja. Tak mengherankan kalau <a href='https://www.shrm.org/resourcesandtools/hr-topics/employee-relations/pages/office-gossip-policies.aspx'>ada yang menyebut</a> gosip sebagai bentuk kekerasan di tempat kerja.",
+		"Pandangan negatif soal gosip terus eksis hingga sekarang. Pandangan negatif soal gosip paling terlihat di lingkungan kantor. Ini karena gosip, menurut orang-orang <em>Human Resources</em>, adalah <a class='link-article' target='_blank' href='https://www.syntrio.com/blog/the-negative-impact-of-gossip-in-the-workplace/'>penyebab utama</a> kondisi kantor yang tidak kondusif. Gosip dianggap memantik konflik, mengikis kepercayaan antar pegawai, menurunkan moral, serta menghambat kerja tim. Lebih pentingnya lagi, gosip kantor juga <a class='link-article' target='_blank' href='https://hbr.org/2018/10/stop-complaining-about-your-colleagues-behind-their-backs?utm_medium=social&utm_campaign=hbr&utm_source=twitter&tpcc=orgsocial_edit'>merusak usaha untuk membuat sistem komunikasi yang sehat</a>, profesional, dan terbuka di tempat kerja. Tak mengherankan kalau <a class='link-article' target='_blank' href='https://www.shrm.org/resourcesandtools/hr-topics/employee-relations/pages/office-gossip-policies.aspx'>ada yang menyebut</a> gosip sebagai bentuk kekerasan di tempat kerja.",
 		"Tapi, seperti layaknya gosip, kita juga perlu mempertanyakan klaim itu. Apa betul semua jenis gosip di kantor 100% berbahaya?"
 		]}
 	/>
@@ -187,7 +187,7 @@
 		--font-color ={fontColor}
 		subjudul = 'Mematahkan Mitos dan Prasangka Tentang Gosip'
 		para={[
-		"Penelitian-penelitian empiris sebelumnya tentang gosip justru mematahkan mitos seputar gosip. Penelitian terbaru yang dilakukan oleh <a href='https://journals.sagepub.com/doi/abs/10.1177/1948550619837000?journalCode=sppa'>Robbins dan Karan (2020)</a> dengan responden mahasiswa S1 berbagai universitas Amerika Serikat menunjukkan sekaligus mengkonfirmasi ulang bahwa ⅔ gosip bernada netral atau bahkan positif."
+		"Penelitian-penelitian empiris sebelumnya tentang gosip justru mematahkan mitos seputar gosip. Penelitian terbaru yang dilakukan oleh <a class='link-article' target='_blank' href='https://journals.sagepub.com/doi/abs/10.1177/1948550619837000?journalCode=sppa'>Robbins dan Karan (2020)</a> dengan responden mahasiswa S1 berbagai universitas Amerika Serikat menunjukkan sekaligus mengkonfirmasi ulang bahwa ⅔ gosip bernada netral atau bahkan positif."
 		]}
 	/>
 
@@ -239,6 +239,18 @@
 </main>
 
 <style>
+	.link-article {
+		color: rgb(0,100,200);
+		text-decoration: underline;
+	}
+
+	.link-article:hover {
+		text-decoration: underline;
+	}
+
+	.link-article:visited {
+		color: rgb(0,80,160);
+	}
 	.divider {
 		height:0.2rem;
 		width:60%;
