@@ -19,7 +19,6 @@
     });
 
     let changePage = (e) => {
-        console.log(e)
         window.location.href = e.path[3].href
         return false
     }

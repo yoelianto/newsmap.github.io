@@ -152,7 +152,6 @@
             }
 
             let polygons = state.polygons;
-            console.log(polygons)
             
 
             let container = d3.select(el)
