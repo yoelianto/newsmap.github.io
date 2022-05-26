@@ -405,12 +405,12 @@
 			</section>
 			<section>
 				<p> <!-- 2 -->
-					Tapi nyatanya kisah commuting saya hanyalah ujung kuku pengalaman commuting pekerja Jabodetabek. Menggunakan kendaraan pribadi atau transportasi umum, para komuter bisa <a href='https://properti.kompas.com/read/2017/04/18/231254421/komuter.bodetabek.habiskan.waktu.sekitar.4.jam.di.jalan?page=all'>menghabiskan 4-6 jam</a> di jalan.
+					Tapi nyatanya kisah commuting saya hanyalah ujung kuku pengalaman commuting pekerja Jabodetabek. Menggunakan kendaraan pribadi atau transportasi umum, para komuter bisa <a class='link-article' href='https://properti.kompas.com/read/2017/04/18/231254421/komuter.bodetabek.habiskan.waktu.sekitar.4.jam.di.jalan?page=all'>menghabiskan 4-6 jam</a> di jalan.
 				</p>
 			</section>
 			<section>
 				<p> <!-- 3 -->
-					Kemacetan luar biasa menjadi penyebab utama lamanya waktu tempuh para pekerja. Kemacetan ini tak hanya disebabkan oleh <a href='https://jakarta.bisnis.com/read/20150216/77/403389/tiap-hari-ada-13-juta-penglaju-asal-bodetabek-berkegiatan-di-jakarta'>1,3 juta pekerja dari Bodetabek</a>, tapi juga karena lebih banyak orang memilih kendaraan pribadi dibanding transportasi umum.
+					Kemacetan luar biasa menjadi penyebab utama lamanya waktu tempuh para pekerja. Kemacetan ini tak hanya disebabkan oleh <a class='link-article' href='https://jakarta.bisnis.com/read/20150216/77/403389/tiap-hari-ada-13-juta-penglaju-asal-bodetabek-berkegiatan-di-jakarta'>1,3 juta pekerja dari Bodetabek</a>, tapi juga karena lebih banyak orang memilih kendaraan pribadi dibanding transportasi umum.
 				</p>
 			</section>
 			<section>
@@ -420,7 +420,7 @@
 			</section>
 			<section>
 				<p> <!-- 5 -->
-					Sayang, tren kemacetan Jakarta nampaknya tidak akan berkurang. Melihat statistik kendaraan DKI Jakarta tahun 2019, pertumbuhan pengguna sepeda motor mencapai 2,94 persen per tahun sedangkan pengguna mobil 4,04 persen per tahun. Tren ini juga diperburuk oleh pandemi karena <a href='https://databoks.katadata.co.id/datapublish/2021/01/27/publik-cenderung-gunakan-kendaraan-pribadi-saat-pandemi'>orang-orang memilih kendaraan pribadi</a> dibanding transportasi umum.
+					Sayang, tren kemacetan Jakarta nampaknya tidak akan berkurang. Melihat statistik kendaraan DKI Jakarta tahun 2019, pertumbuhan pengguna sepeda motor mencapai 2,94 persen per tahun sedangkan pengguna mobil 4,04 persen per tahun. Tren ini juga diperburuk oleh pandemi karena <a class='link-article' href='https://databoks.katadata.co.id/datapublish/2021/01/27/publik-cenderung-gunakan-kendaraan-pribadi-saat-pandemi'>orang-orang memilih kendaraan pribadi</a> dibanding transportasi umum.
 				</p>
 			</section>
 			<section>
@@ -447,7 +447,7 @@
 			</section>
 			<section>
 				<p> <!-- 9 -->
-					Efek commuting jarak jauh ke kesehatan mental juga diteliti oleh <a href='http://eab.sagepub.com/content/46/5/609'>Feng dan Boyle (2013)</a>. Hasilnya menunjukkan commuting di atas 1 jam memiliki efek buruk ke kesehatan mental, khususnya pelaju perempuan. Resiko gangguan mental tertinggi terjadi pada ibu tunggal yang harus melaju 30 sampai lebih dari 60 menit. Ini kontras dengan perempuan tidak punya anak dengan waktu laju yang sama. Pendeknya, melaju konsisten membuat ibu beresiko mengalami gangguan mental lebih tinggi dari perempuan tidak punya anak.
+					Efek commuting jarak jauh ke kesehatan mental juga diteliti oleh <a class='link-article' href='http://eab.sagepub.com/content/46/5/609'>Feng dan Boyle (2013)</a>. Hasilnya menunjukkan commuting di atas 1 jam memiliki efek buruk ke kesehatan mental, khususnya pelaju perempuan. Resiko gangguan mental tertinggi terjadi pada ibu tunggal yang harus melaju 30 sampai lebih dari 60 menit. Ini kontras dengan perempuan tidak punya anak dengan waktu laju yang sama. Pendeknya, melaju konsisten membuat ibu beresiko mengalami gangguan mental lebih tinggi dari perempuan tidak punya anak.
 				</p>
 			</section>
 			<section>
@@ -460,10 +460,10 @@
 					<strong>Masa depan Commuting pasca-pandemi</strong>
 				</p>
 				<p>
-					Mengingat bekerja dari rumah sudah menjadi tren dan <a href='https://jpi.or.id/city-after-the-pandemic/#work'>55,6% pekerja Jakarta</a> berharap bisa bergantian WFH dan WFO bahkan setelah pandemi selesai. Bukan tidak mungkin pola penggunaan transportasi dan ruang umum akan berubah secara permanen. 
+					Mengingat bekerja dari rumah sudah menjadi tren dan <a class='link-article' href='https://jpi.or.id/city-after-the-pandemic/#work'>55,6% pekerja Jakarta</a> berharap bisa bergantian WFH dan WFO bahkan setelah pandemi selesai. Bukan tidak mungkin pola penggunaan transportasi dan ruang umum akan berubah secara permanen. 
 				</p>
 				<p>
-					Menurunnya jumlah pekerja yang perlu melaju setiap hari tentunya akan memperingan tingkat kemacetan. Namun, mengingat banyak orang masih ragu untuk menggunakan transportasi umum, bukan berarti kemacetan akan hilang. Bisa saja kemacetan semakin buruk karena orang berbondong-bondong membeli kendaraan pribadi, seperti yang diprediksikan oleh <a href='https://www.bbc.com/worklife/article/20201202-why-our-reliance-on-cars-could-start-booming'>BBC</a>.
+					Menurunnya jumlah pekerja yang perlu melaju setiap hari tentunya akan memperingan tingkat kemacetan. Namun, mengingat banyak orang masih ragu untuk menggunakan transportasi umum, bukan berarti kemacetan akan hilang. Bisa saja kemacetan semakin buruk karena orang berbondong-bondong membeli kendaraan pribadi, seperti yang diprediksikan oleh <a class='link-article' href='https://www.bbc.com/worklife/article/20201202-why-our-reliance-on-cars-could-start-booming'>BBC</a>.
 				</p>
 			</section>
 			<section>
@@ -473,7 +473,7 @@
 			</section>
 			<section>
 				<p> <!-- 13 -->
-					Hal yang bisa dilakukan adalah membuat sistem pre-booking kursi lewat aplikasi seperti yang dilakukan Tiongkok. Memberikan informasi lengkap tentang jumlah kursi dan bus yang tersedia lewat aplikasi seperti yang dilakukan Australia dan <a href='https://ggwash.org/view/64291/real-time-signs-reduce-train-crowding'>Inggris</a> juga bisa menjadi alternatif. Selain itu pemerintah kota juga harus mempertimbangkan membuat penyambung antar moda transportasi yang mudah diakses.
+					Hal yang bisa dilakukan adalah membuat sistem pre-booking kursi lewat aplikasi seperti yang dilakukan Tiongkok. Memberikan informasi lengkap tentang jumlah kursi dan bus yang tersedia lewat aplikasi seperti yang dilakukan Australia dan <a class='link-article' href='https://ggwash.org/view/64291/real-time-signs-reduce-train-crowding'>Inggris</a> juga bisa menjadi alternatif. Selain itu pemerintah kota juga harus mempertimbangkan membuat penyambung antar moda transportasi yang mudah diakses.
 				</p>
 			</section>
 		</div>
@@ -495,6 +495,17 @@
 </main>
 
 <style>
+	.link-article {
+		color: rgb(0,100,200);
+		text-decoration: none;
+	}
+	.link-article:hover {
+		text-decoration: underline;
+	}
+
+	.link-article:visited {
+		color: rgb(0,80,160);
+	}
 	.divider {
 		height:0.2rem;
 		width:60%;
