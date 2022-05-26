@@ -467,7 +467,7 @@
 		--font-color ={fontColor}
 		para={[
 		"Kerentanan ekonomi ini melahirkan fenomena kebudayaan baru: <a class='link-article' target='_blank' href='https://slate.com/news-and-politics/2009/06/japan-panics-about-the-rise-of-herbivores-young-men-who-shun-sex-don-t-spend-money-and-like-taking-walks.html'>perempuan ‘karnivora' dan laki-laki 'herbivora’</a>. Disebut begitu karena para perempuan bertingkah seperti karnivora: dominan dan lebih mengutamakan kehidupan mereka sendiri alih-alih tunduk kepada tekanan masyarakat untuk menikah. Sementara laki-laki yang lebih memilih untuk submisif, tidak mau berhubungan seks, dan merasa cukup dengan kehidupan mereka disebut ‘herbivora’.",
-		"Sebagian lelaki herbivora beralih ke cinta virtual seperti Kondo. Alasannya sederhana: perempuan fiksi tidak bisa bohong, tidak mungkin selingkuh, dan yang terpenting, bisa mereka bentuk sesuai dengan keinginan. Pada akhirnya yang dicintai bukanlah suatu hal yang konkret, tapi sebuah ide yang tak bisa melawan."
+		"Sebagian lelaki herbivora beralih ke cinta virtual seperti Kondo. Alasannya sederhana: perempuan fiksi tidak bisa bohong, tidak mungkin selingkuh, dan yang terpenting, bisa mereka bentuk sesuai dengan keinginan. Pada akhirnya yang dicintai bukanlah suatu hal yang konkret, tapi sebuah ide yang-tak-bisa-melawan."
 		]}
 	/>
 
