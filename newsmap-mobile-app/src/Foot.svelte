@@ -32,12 +32,9 @@
         return await filter;
     });
 
-    let articleLink
-
-    // let changePage = (e) => {
-    //     window.location.pathname = e.path[3].attributes[0].value
-    //     return false
-    // }
+    let changePage = (e) => {
+        window.location.pathname = e.path[3].attributes[0].value
+    }
 
 </script>
 
@@ -51,7 +48,7 @@
                 </div>
                 {:then data}
                     {#each data as d}
-                        <div bind:this={articleLink} data-link={`/${type}/${d.slug}`} on:click={() => { window.location.pathname = articleLink.getAttribute('data-link');return false}} 
+                        <div data-link={`/${type}/${d.slug}`} on:click={changePage} 
                         class='newspart' style="text-decoration:none !important">
                             <div class="news">
                                 <div class="images">
