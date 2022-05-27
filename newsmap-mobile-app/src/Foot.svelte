@@ -33,7 +33,7 @@
     });
 
     let changePage = (e) => {
-        window.location.pathname = e.path[3].attributes[0].value
+        window.location.pathname = e.target.getAttribute('data-link')
     }
 
 </script>
@@ -50,17 +50,17 @@
                     {#each data as d}
                         <div data-link={`/${type}/${d.slug}`} on:click={changePage} 
                         class='newspart' style="text-decoration:none !important">
-                            <div class="news">
-                                <div class="images">
+                            <div class="news" data-link={`/${type}/${d.slug}`}>
+                                <div class="images" data-link={`/${type}/${d.slug}`}>
                                     <!--  -->
-                                    <img class='imgthumb'
+                                    <img class='imgthumb' data-link={`/${type}/${d.slug}`}
                                     src={`${process["env"]["URL_IMAGE"]}images/${thumbnailFolder}/${d.thumbnail_social}`}
                                     title={d.title} alt={d.title}
                                     onerror={`this.onerror=null;this.src='${process['env']['NO_IMAGE']}';`} />
                                 </div>
-                                <div class="credit" style='color:#{txtFooter};'>
-                                    <p class="author">{d.author_name}</p> <!-- harusnya {d.author_name}-->
-                                    <p class="article-title">
+                                <div class="credit" style='color:#{txtFooter};' data-link={`/${type}/${d.slug}`}>
+                                    <p class="author" data-link={`/${type}/${d.slug}`}>{d.author_name}</p> <!-- harusnya {d.author_name}-->
+                                    <p class="article-title" data-link={`/${type}/${d.slug}`}>
                                         {d.title}
                                     </p>
                                 </div>
