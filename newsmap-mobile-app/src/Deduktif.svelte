@@ -49,7 +49,7 @@
                 </div>
             </div>
             <div class="contenttop">
-                <a href={`${process['env']['URL_DEDUKTIF']}/deduktif/${d.slug}`} target="_blank">
+                <a class='deduktif-link' href={`${process['env']['URL_DEDUKTIF']}/deduktif/${d.slug}`} target="_blank">
                     <div class="headline">
                         <img class="header" src={`${process['env']['URL_IMAGE']}/images/deduktif/${d.thumbnail}`} onerror={`this.onerror=null;this.src='${process['env']['NO_IMAGE']}';`} alt={d.title} >
                         <div class="headerbottom"></div>
@@ -74,6 +74,15 @@
 
 
 <style>
+    a.deduktif-link {
+        text-decoration: none !important;
+    }
+    a.deduktif-link:hover {
+        text-decoration: none !important;
+    }
+    a.deduktif-link:active {
+        text-decoration: none !important;
+    }
     .placeholder-container {
         width:100%;
         height:100%;
