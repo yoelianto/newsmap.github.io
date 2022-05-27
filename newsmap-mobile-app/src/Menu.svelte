@@ -20,7 +20,7 @@
     <div class="container"  class:moveDown={showMenu}>
         <div class="menubar">
             {#each menus as list, key}
-            <a href={list.link}>
+            <a class='menu-link' href={list.link}>
                 <div class="menu" class:selected ="{list.active === true}">
                     <div class="circle">
                         <img src={list.source} alt={list.menu}>
@@ -38,6 +38,15 @@
 
 
 <style>
+    a.menu-link {
+        text-decoration: none !important;
+    }
+    a.menu-link:hover {
+        text-decoration: none !important;
+    }
+    a.menu-link:active {
+        text-decoration: none !important;
+    }
     nav {
         position: fixed;
         bottom:0;

@@ -82,7 +82,7 @@
     {:then data}
         {#if data.length > 0}
         {#each data as d}
-        <a style='cursor:pointer' href={`${process['env']['URL_DEDUKTIF']}/deduktif/${d.slug}/`}>
+        <a class='indeks-link' style='cursor:pointer' href={`${process['env']['URL_DEDUKTIF']}/deduktif/${d.slug}/`}>
             <div class="article">
                 <div class="left">
                     <img src={`${process['env']['URL_IMAGE']}images/deduktif/${d.thumbnail}`} alt={d.title} />
@@ -107,6 +107,15 @@
 
 
 <style>
+    a.indeks-link {
+        text-decoration: none !important;
+    }
+    a.indeks-link:hover {
+        text-decoration: none !important;
+    }
+    a.indeks-link:active {
+        text-decoration: none !important;
+    }
     .placeholder {
         background-color: hsl(0, 0%, 88%);
     }

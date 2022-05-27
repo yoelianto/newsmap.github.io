@@ -64,7 +64,7 @@ const move = direction => {
                 {/each}
             {:then data}
                 {#each data as d}
-                <a href={d.source_url} target="_blank">
+                <a class="news-link" href={d.source_url} target="_blank">
                     <div class="news">
                         <img class='imgthumb' src={d.origin_images} alt={d.title} />
                         <p class="author">{d.media}</p>
@@ -88,7 +88,7 @@ const move = direction => {
                 {/each}
             {:then data}
                 {#each data as d}
-                <a href={d.link} target="_blank">
+                <a class='news-link' href={d.link} target="_blank">
                     <div class="news">
                         <img class='imgthumb' src={`${process['env']['URL_IMAGE']}/images/infogram/${d.thumbnail}`} alt={d.title} />
                         <p class="author">{d.author}</p>
@@ -119,6 +119,15 @@ const move = direction => {
 
 
 <style>
+    a.news-link {
+        text-decoration: none !important;
+    }
+    a.news-link:hover {
+        text-decoration: none !important;
+    }
+    a.news-link:active {
+        text-decoration: none !important;
+    }
     .title {
         font-family: var(--fontfamily1);
         font-weight:700;

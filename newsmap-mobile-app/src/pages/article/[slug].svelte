@@ -5,11 +5,12 @@
     import Head from '../../Head.svelte';
     import Foot from '../../Foot.svelte';
     import * as animateScroll from 'svelte-scrollto'
-    import {onMount} from 'svelte';
+    import { onMount } from 'svelte';
     import Share from '../../Share.svelte'
     import Fa from 'svelte-fa'
     import { faSpinner, faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons'
-    import { params } from '@roxi/routify'
+    import { params } from '@roxi/routify';
+    import { fade } from 'svelte/transition';
 
     const slug = $params.slug;
     const type = "article";
@@ -42,7 +43,8 @@
 />
 
 {#await fetchData()} <!-- hanya untuk konten -->
-    <div class="placeholder-container">
+    <div class="placeholder-container"
+    transition:fade="{{duration:50, delay:2000}}">
         <Fa icon={faSpinner} size="3x" pulse />
     </div>
 {:then data}
@@ -64,7 +66,8 @@
 {/await}
 
 {#await fetchData()} <!-- hanya footer & tombol share -->
-    <div class="placeholder-container">
+    <div class="placeholder-container footer-placeholder"
+    transition:fade="{{duration:50, delay:2000}}">
         <Fa icon={faSpinner} size="3x" pulse />
     </div>
 {:then data}
@@ -72,7 +75,8 @@
         bind:url
         bind:title
     />
-    <Foot
+    <nav in:fade="{{duration:50, delay:3000}}">
+        <Foot
         uri = {ihttp.URI_ARTICLE_LIST}
         params = {{except:data.id, size:3}}
         thumbnailFolder= "article"
@@ -80,6 +84,8 @@
         bgFooter = {data.footer_background_color}
         txtFooter= {data.article_background_color}
     />
+    </nav>
+    
 {:catch error}
     <p>An error occurred!</p>
 {/await}
@@ -96,5 +102,9 @@
         position: fixed;
         z-index: 99999;
         color: hsl(0,0%,50%);
+    }
+
+    .footer-placeholder {
+        background-color: transparent !important;
     }
 </style>

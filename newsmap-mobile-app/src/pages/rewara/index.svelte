@@ -70,7 +70,7 @@
     {:then data}
     {#if data.length > 0}
         {#each data as d}
-        <a style='cursor:pointer' href={`/rewara/${d.slug}`}>
+        <a class='indeks-link' style='cursor:pointer' href={`/rewara/${d.slug}`}>
             <div class="article">
                 <div class="left">
                     <img src={`${process['env']['URL_IMAGE']}images/rewara/${d.thumbnail}`} alt={d.title} />
@@ -93,6 +93,15 @@
 </article>
 
 <style>
+    a.indeks-link {
+        text-decoration: none !important;
+    }
+    a.indeks-link:hover {
+        text-decoration: none !important;
+    }
+    a.indeks-link:active {
+        text-decoration: none !important;
+    }
     article {
         width:88%;
         max-width: 650px;

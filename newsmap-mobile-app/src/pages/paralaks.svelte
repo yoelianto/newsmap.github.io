@@ -68,7 +68,7 @@
     {:then data}
         {#if data.length > 0}
         {#each data as d}
-        <a style='cursor:pointer' href={d.link}>
+        <a class='indeks-link' style='cursor:pointer' href={d.link}>
             <div class="article">
                 <div class="left">
                     <img src={`${process['env']['URL_IMAGE']}images/infogram/${d.thumbnail}`} alt={d.title} />
@@ -91,6 +91,15 @@
 </article>
 
 <style>
+    a.indeks-link {
+        text-decoration: none !important;
+    }
+    a.indeks-link:hover {
+        text-decoration: none !important;
+    }
+    a.indeks-link:active {
+        text-decoration: none !important;
+    }
     article {
         width:88%;
         max-width: 650px;

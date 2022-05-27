@@ -272,7 +272,7 @@
             .style('text-align', 'center')
             .style('white-space', 'normal')
             .style('height','100%')
-            .style('width','70%')
+            .style('width','60%')
             .style('margin','auto')
             .classed('label', true)
             .style("cursor", "pointer")

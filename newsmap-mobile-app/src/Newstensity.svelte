@@ -170,7 +170,7 @@
 
                             <div class="news-container">
                                 {#each data[1] as d}
-                                <a href={d.source_url}>
+                                <a class='newstensity-link' href={d.source_url}>
                                     <p style='color:hsl(0,0%,50%);font-size:0.8rem'>{d.media}</p>
                                     <div class="news-tab">
                                         <p class='news-title'>{d.title}</p>
@@ -285,7 +285,7 @@
 
                     <div class="news-container">
                         {#each data[0]['statement'] as d}
-                        <a href={d.sourceUrl} >
+                        <a class='statement-link' href={d.sourceUrl} >
                             <div class="statement">
                                 <p style='color:hsl(0,0%,50%);font-size:0.8rem'>{d.media}</p>
                                 <div class="news-tab">
@@ -320,6 +320,24 @@
 </article>
 
 <style>
+    a.newstensity-link {
+        text-decoration: none !important;
+    }
+    a.newstensity-link:hover {
+        text-decoration: none !important;
+    }
+    a.newstensity-link:active {
+        text-decoration: none !important;
+    }
+    a.statement-link {
+        text-decoration: none !important;
+    }
+    a.statement-link:hover {
+        text-decoration: none !important;
+    }
+    a.statement-link:active {
+        text-decoration: none !important;
+    }
     .news-container {
         display: flex;
         flex-direction: column;

@@ -71,7 +71,7 @@ export default {
 			dedupe: ['svelte']
 		}),
 		commonjs({
-			namedExports: { 'svelte-hammer': ['Hammer', 'pan', 'pinch', 'press', 'rotate', 'swipe', 'tap'] }
+			namedExports: { 'svelte-hammer': ['Hammer', 'pan', 'pinch', 'press', 'rotate', 'swipe', 'tap']}
 		}),
 
 		// In dev mode, call `npm run start` once
