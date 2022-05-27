@@ -24,12 +24,16 @@
     //         title:"this lamp makes you colorblind"
     //     }
     // ]
-
+    
     let shorts = [
          {
              url:"https://www.youtube.com/embed/GNG6xdbxTfA",
              title:"Gimana Sih Kalau Polisi Dibantu Artificial Intelligence?"
          },
+         {
+             url:"https://www.youtube.com/embed/ItaAJjRDblM",
+             title:"Kipas Angin yang Mengubah Dunia | Spill the Tech"
+         }
         ]
     </script>
     
@@ -54,11 +58,13 @@
         .video {
             width: 100%;
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
+            flex-direction: row;
+            margin: 0 auto;
         }
         .youtube {
-            width:80%;
+            width:45%;
             aspect-ratio: 16/9;
         }
         .container {
@@ -106,7 +112,14 @@
 
         @media only screen /*xtrasmall*/
         and (max-width: 575px) {
-
+            .video {
+                flex-direction: column;
+                width:88%
+            }
+            .youtube {
+                width:100%;
+                margin-bottom: 1rem;
+            }
 
         }
         @media only screen /*small*/
@@ -127,6 +140,14 @@
             .slider {
                 margin-left: 0;
             }
+            .video {
+                flex-direction: column;
+                width:88%
+            }
+            .youtube {
+                width:100%;
+                margin-bottom: 1rem;
+            }
         }
         @media only screen /*medium*/
         and (min-width: 768px)
@@ -145,6 +166,13 @@
             }
             .slider {
                 margin-left: 0;
+            }
+            .video {
+                flex-direction: row;
+            }
+            .youtube {
+                width:47%;
+                margin-bottom: 1rem;
             }
         }
         @media only screen /*large*/
@@ -165,6 +193,13 @@
             .slider {
                 margin-left: 0;
             }
+            .video {
+                flex-direction: row;
+            }
+            .youtube {
+                width:48%;
+                margin-bottom: 1rem;
+            }
         }
         @media only screen /*xtralarge*/
         and (min-width: 1200px) {
@@ -184,6 +219,13 @@
             }
             .slider {
                 margin-left: 0;
+            }
+            .video {
+                flex-direction: row;
+            }
+            .youtube {
+                width:49%;
+                margin-bottom: 1rem;
             }
         }
     </style>
