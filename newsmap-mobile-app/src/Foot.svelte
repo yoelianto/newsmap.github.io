@@ -18,10 +18,10 @@
         return await result.data;
     });
 
-    let changePage = (e) => {
-        window.location.pathname = e.path[3].attributes[0].value
-        return false
-    }
+    // let changePage = (e) => {
+    //     window.location.pathname = e.path[3].attributes[0].value
+    //     return false
+    // }
 
 </script>
 
@@ -35,7 +35,7 @@
                 </div>
                 {:then data}
                     {#each data as d}
-                        <div data-link={`/${type}/${d.slug}`} on:click={changePage} 
+                        <div data-link={`/${type}/${d.slug}`} on:click={(e) => {window.location.pathname = e.path[3].attributes[0].value;return false}} 
                         class='newspart' style="text-decoration:none !important">
                             <div class="news">
                                 <div class="images">
