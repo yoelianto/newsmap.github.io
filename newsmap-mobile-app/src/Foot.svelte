@@ -41,7 +41,7 @@
                                 <div class="images">
                                     <!--  -->
                                     <img class='imgthumb'
-                                    src={`${process["env"]["URL_IMAGE"]}images/${thumbnailFolder}/${d.thumbnail}`}
+                                    src={`${process["env"]["URL_IMAGE"]}images/${thumbnailFolder}/${d.thumbnail_social}`}
                                     title={d.title} alt={d.title}
                                     onerror={`this.onerror=null;this.src='${process['env']['NO_IMAGE']}';`} />
                                 </div>
