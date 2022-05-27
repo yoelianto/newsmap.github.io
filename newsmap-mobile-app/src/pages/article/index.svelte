@@ -72,7 +72,7 @@
         <a class='indeks-link' style='cursor:pointer' href={$url('/article/:slug/', {slug: d.slug})}>
             <div class="article">
                 <div class="left">
-                    <img src={`${process['env']['URL_IMAGE']}images/article/${d.thumbnail}`} alt={d.title} />
+                    <img src={`${process['env']['URL_IMAGE']}images/article/${d.thumbnail_social}`} alt={d.title} />
                 </div>
                 <div class="credit">
                     <p class="author">{d.author_name}</p>
