@@ -8,7 +8,9 @@
   import Share from '../../Share.svelte'
   import Fa from 'svelte-fa'
   import { faSpinner, faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons'
-  import { params } from '@roxi/routify'
+  import { params } from '@roxi/routify';
+  import Foot from '../../Foot.svelte';
+  import { fade } from 'svelte/transition';
 
   const slug = $params.slug;
   const type = 'deduktif';
@@ -32,38 +34,52 @@
 
 </script>
 
+<Head 
+bind:height = {height}
+bind:page
+/>
 
-
-{#await fetchData()}
-  <div class="placeholder-container">
+{#await fetchData()} <!-- hanya untuk konten deduktif -->
+  <div class="placeholder-container"
+  transition:fade="{{duration:50, delay:2000}}">
     <Fa icon={faSpinner} size="3x" pulse />
   </div>
 {:then data}
-  <Head 
-    bind:height = {height}
-    bind:page
-  />
-  <Share 
-    bind:url
-    bind:title
-  />
   <ArticleDetail
     data={{
       ...data,
       type,
       thumbnail: process["env"]["URL_IMAGE"] + type + "/" + data.thumbnail,
       thumbnail_social: data.thumbnail_social === undefined ? '' : process["env"]["URL_IMAGE"] + type + "/" + data.thumbnail_social,
-      footer: {
-          uri: ihttp.URI_DEDUKTIF_LIST,
-          params: { except: data.id, size: 3 },
-          thumbnailFolder: "news",
-      }
     }}
-  />
-  
-  
+  />  
 {:catch error}
   <p>An error occurred!</p>
+{/await}
+
+{#await fetchData()} <!-- hanya footer & tombol share -->
+    <div class="placeholder-container footer-placeholder"
+    transition:fade="{{duration:50, delay:2000}}">
+        <Fa icon={faSpinner} size="3x" pulse />
+    </div>
+{:then data}
+    <Share 
+        bind:url
+        bind:title
+    />
+    <nav in:fade="{{duration:50, delay:3000}}">
+        <Foot
+        uri = {ihttp.URI_DEDUKTIF_LIST}
+        params = {{except:data.id, size:3}}
+        thumbnailFolder= "news"
+        {type} 
+        bgFooter = {data.footer_background_color}
+        txtFooter= {data.article_background_color}
+    />
+    </nav>
+    
+{:catch error}
+    <p>An error occurred!</p>
 {/await}
 
 <style>
@@ -78,5 +94,9 @@
         position: fixed;
         z-index: 99999;
         color: hsl(0,0%,50%);
+    }
+
+    .footer-placeholder {
+        background-color: transparent !important;
     }
 </style>

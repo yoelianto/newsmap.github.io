@@ -42,7 +42,7 @@
     bind:page
 />
 
-{#await fetchData()} <!-- hanya untuk konten -->
+{#await fetchData()} <!-- hanya untuk konten jurno original -->
     <div class="placeholder-container"
     transition:fade="{{duration:50, delay:2000}}">
         <Fa icon={faSpinner} size="3x" pulse />
@@ -52,11 +52,6 @@
         data={{
             ...data,
             type,
-            footer: {
-                uri: ihttp.URI_ARTICLE_LIST,
-                params: { except: data.id, size: 3 },
-                thumbnailFolder: "article",
-            },
             thumbnail: process["env"]["URL_IMAGE"] + type + "/" + data.thumbnail,
             thumbnail_social: data.thumbnail_social === undefined ? '' : process["env"]["URL_IMAGE"] + type + "/" + data.thumbnail_social,
         }}
