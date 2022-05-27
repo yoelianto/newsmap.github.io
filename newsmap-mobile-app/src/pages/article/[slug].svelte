@@ -73,7 +73,7 @@
     <nav in:fade="{{duration:50, delay:3000}}">
         <Foot
         uri = {ihttp.URI_ARTICLE_LIST}
-        params = {{except:data.id, size:3}}
+        params = {{ except:data.id }}
         thumbnailFolder= "article"
         {type} 
         bgFooter = {data.footer_background_color}

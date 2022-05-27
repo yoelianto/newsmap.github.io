@@ -15,7 +15,21 @@
 
     const fetchData = (async () => {
         const result = await get(uri, params);
-        return await result.data;
+        let len = result.data.length
+        let arr = [];
+        
+        while(arr.length < 4){
+            let r = Math.floor(Math.random() * len);
+            if(arr.indexOf(r) === -1) arr.push(r);
+        }
+
+        let filter = [] 
+
+        arr.forEach((d) => {
+            filter.push(result.data[d])
+        })
+        
+        return await filter;
     });
 
     // let changePage = (e) => {
@@ -35,7 +49,7 @@
                 </div>
                 {:then data}
                     {#each data as d}
-                        <div data-link={`/${type}/${d.slug}`} on:click={(e) => {window.location.pathname = e.path[3].attributes[0].value;return false}} 
+                        <div data-link={`/${type}/${d.slug}`} on:click={(e) => { window.location.pathname = e.path[3].attributes[0].value;return false}} 
                         class='newspart' style="text-decoration:none !important">
                             <div class="news">
                                 <div class="images">
@@ -112,7 +126,7 @@
     .images {
         width: 160px;
         height: 125px;
-        background-color: indianred;
+        background-color: grey;
         border-radius:0.5rem;
     }
     .imgthumb {
