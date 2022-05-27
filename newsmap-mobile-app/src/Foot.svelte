@@ -33,7 +33,9 @@
     });
 
     let changePage = (e) => {
-        window.location.pathname = e.target.getAttribute('data-link')
+         const path = e.path || (e.composedPath && e.composedPath());
+         window.location.pathname = path[3].attributes[0].value
+         return false
     }
 
 </script>
