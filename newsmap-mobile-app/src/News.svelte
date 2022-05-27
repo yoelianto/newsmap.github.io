@@ -17,15 +17,15 @@ if (screenWidth > 1024) {
 
 let placeholder = [1,2,3,4,5,6,7,8,9,10]
 
-const fetchData = (async () => {
+const fetchData = async () => {
     const result = await get(ihttp.URI_NEWS_LIST, {...params, media_type: 'print,online'});
     return await result.data;
-})()
+}
 
-const fetchInfogramData = (async () => {
+const fetchInfogramData = async () => {
     const result = await get(ihttp.URI_INFOGRAM_LIST, {size: 10});
     return await result.data;
-})()
+}
 
 const paginationFactor = sliderWidth;
 const totalPaginationPixels = Math.floor(paginationFactor / scrollBy) ;
@@ -54,7 +54,7 @@ const move = direction => {
     <div class="slider-container">
         <div class="slider" style="transform: translateX({offset}px);">
             {#if title != 'PARALAKS'}
-            {#await fetchData}
+            {#await fetchData()}
                 {#each placeholder as d}
                     <div class="news">
                         <div class='placeholder imgthumb'>Loading...</div>
@@ -78,7 +78,7 @@ const move = direction => {
                 <p>An error occurred!</p>
             {/await}
             {:else if title === 'PARALAKS'}
-            {#await fetchInfogramData}
+            {#await fetchInfogramData()}
                 {#each placeholder as d}
                     <div class="news">
                         <div class='placeholder imgthumb'>Loading...</div>
