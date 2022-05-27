@@ -100,6 +100,7 @@
         text-align: center;
         color:var(--color-brand-red);
         cursor: pointer;
+        font-family: var(--fontfamily3) !important;
     }
     .header-menu {
         display: flex;
@@ -116,7 +117,7 @@
     }
 
     h4 {
-        font-family: var(--fontfamily3);
+        font-family: var(--fontfamily3) !important;
         font-size:1rem;
         font-weight:700; 
         margin: 0.2rem 1rem;

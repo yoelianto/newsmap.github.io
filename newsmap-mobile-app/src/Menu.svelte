@@ -82,7 +82,7 @@
         cursor: pointer;
     }
     .menutext{
-        font-family: var(--fontfamily3);
+        font-family: var(--fontfamily3) !important;
         font-weight: 700;
         font-size: 0.8rem;
         margin-top: 0.2rem;
