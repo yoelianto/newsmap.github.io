@@ -266,7 +266,7 @@
                             <div class="data neu">
                                 <p>neutral</p>
                                 <p class='percent neutral' style:color={fgColor2}>
-                                    {Math.abs(Math.ceil((parseInt(d[0].neutral))/(parseInt(d[0].positive)+parseInt(d[0].negative)+parseInt(d[0].neutral))*100))}%
+                                    {100-((Math.abs(Math.ceil((parseInt(d[0].positive))/(parseInt(d[0].positive)+parseInt(d[0].negative)+parseInt(d[0].neutral))*100)))+(Math.abs(Math.ceil((parseInt(d[0].negative))/(parseInt(d[0].positive)+parseInt(d[0].negative)+parseInt(d[0].neutral))*100))))}%
                                 </p>
                             </div>
                         </div>
