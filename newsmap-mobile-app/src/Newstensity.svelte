@@ -64,9 +64,9 @@
     export let type
 
     let profilewidth
-    let fgColor1 = 'hsl(244, 30%, 30%)'
-    let fgColor2 = 'hsl(244, 30%, 70%)'
-    let fgColor3 = 'hsl(0, 82%, 64%)'
+    let fgColor1 = 'hsl(244, 30%, 30%)' //positive blue
+    let fgColor2 = 'hsl(244, 30%, 70%)' //neutral blue
+    let fgColor3 = 'hsl(0, 82%, 64%)' //negative red
 
     let dataPromise, entityPromise
 
@@ -244,7 +244,7 @@
                             percent3 = {Math.abs(Math.ceil((parseInt(d[0].negative))/(parseInt(d[0].positive)+parseInt(d[0].negative)+parseInt(d[0].neutral))*100))}
                             imagelink = {d[0].thumbnail}
                             size = {profilewidth}
-                            bind:fgColor1
+                            bind:fgColor1 
                             bind:fgColor2
                             bind:fgColor3
                         />
