@@ -162,9 +162,8 @@
 		/>
 		<div class="discord-container">
 			<h1 class='title'>KLUB SOSIAL JURNO</h1>
-			<a href='https://discord.gg/klubsosialjurno'>
-				<img class='klub' src="./images/Discord-Invitation-Web.png" alt="Klub Sosial Jurno">
-			</a>
+			<iframe class='klub' title='klub sosial jurno' src="https://e.widgetbot.io/channels/947748065794736168/962057473357934603" height="600" width="800">
+			</iframe>
 		</div>
 		
 		
@@ -222,6 +221,7 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		height: 50vh;
 	}
 	.title {
         font-family: 'Roboto Mono', monospace;
@@ -235,10 +235,10 @@
 		
 		margin: 0 auto;
 	}
-	.discord {
+	/* .discord {
 		width:100%;
 		height: 400px;
-	}
+	} */
 	main {
 		margin: 0 auto;
 		overflow-x: hidden;	
