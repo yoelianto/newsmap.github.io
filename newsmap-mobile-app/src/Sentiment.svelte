@@ -32,9 +32,12 @@
             if (data.percent > 0) {
                 data.sentiment = "positive"
                 data.color = "hsl(244, 30%, 30%)"
-            } else {
+            } else if (data.percent < 0) {
                 data.sentiment = "negative"
                 data.color = "hsl(0, 82%, 64%)"
+            } else if (data.percent === 0) {
+                data.sentiment = "neutral"
+                data.color = "hsl(244, 30%, 70%)"
             }
         });
         return await result.data;
