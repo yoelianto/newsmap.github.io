@@ -20,7 +20,8 @@
 
     function forward(event) {
         dispatch('modalIn')
-        id = event.path[2].dataset.id
+        const path = event.path || (event.composedPath && event.composedPath());
+        id = path[2].dataset.id
     }
 
     const fetchData = (async () => {
